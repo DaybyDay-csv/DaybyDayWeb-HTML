@@ -90,8 +90,9 @@
   top: calc(100% + 8px);
   left: 50%;
   transform: translateX(-50%) translateY(8px);
-  min-width: 220px;
+  min-width: min(680px, 90vw);
   max-width: 90vw;
+  overflow-x: auto;
   background: rgba(14, 14, 17, 0.95);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
@@ -102,20 +103,9 @@
   z-index: 1000;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.nav-dropdown:hover .nav-dropdown-content { 
+.nav-dropdown:hover .nav-dropdown-content {
   opacity: 1;
   visibility: visible;
-  transform: translateX(-50%) translateY(0);
-}
-
-/* Mega Menu for Servicios - viewport-safe with clamp */
-.nav-dropdown-content.mega {
-  min-width: min(680px, 90vw);
-  max-width: min(680px, 90vw);
-  left: 50%;
-  transform: translateX(-50%) translateY(8px);
-}
-.nav-dropdown:hover .nav-dropdown-content.mega {
   transform: translateX(-50%) translateY(0);
 }
 
