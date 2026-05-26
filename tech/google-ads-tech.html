@@ -1,17 +1,81 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Ads | DayByDay Consulting</title>
-  <meta name="description" content="Google Ads. Google Ads. Search, Shopping, Performance Max.">
+  <title>Google Ads | Stack Tech | DayByDay Consulting</title>
+  <meta name="description" content="Google Ads: Search, Shopping, Performance Max y YouTube. Configuración del pixel, conversionesenhanced y Audience Manager.">
   <meta name="robots" content="index, follow">
   <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
   <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root {
+      --accent-color: #6366f1;
+    }
+    .hero-badge {
+      background: #6366f11a;
+      border: 1px solid #6366f140;
+      color: #6366f1;
+    }
+    .feature-icon, .hero-stat-icon {
+      background: linear-gradient(135deg, #6366f1, #6366f1cc);
+    }
+    .stat-box .value {
+      background: linear-gradient(135deg, #6366f1, #6366f1cc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .cta-box::before {
+      background: radial-gradient(ellipse 50% 60% at 50% 0%, #6366f120 0%, transparent 60%);
+    }
+    .feature-tag {
+      background: #6366f11a;
+      border: 1px solid #6366f133;
+      color: #6366f1;
+    }
+  </style>
 </head>
 <body>
-  <nav class="main-nav">
+
+  <div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+  <aside class="file-tree-sidebar" id="sidebar">
+    <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+    <div class="file-tree-section">
+      <div class="file-tree-section-title">Secciones</div>
+      <a href="/" class="file-tree-item">Inicio</a>
+      <a href="/problema.html" class="file-tree-item">Problema</a>
+      <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
+      <a href="/resultados.html" class="file-tree-item">Resultados</a>
+      <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
+    </div>
+    <div class="file-tree-section">
+      <div class="file-tree-section-title">Paid Media</div>
+      <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
+      <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
+      <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
+      <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
+    </div>
+    <div class="file-tree-section">
+      <div class="file-tree-section-title">Automation & AI</div>
+      <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
+      <a href="/analytics.html" class="file-tree-item">Analytics</a>
+      <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
+    </div>
+    <div class="file-tree-section">
+      <div class="file-tree-section-title">Stack Tech</div>
+      <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
+      <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
+      <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+    </div>
+  </aside>
+
+
+<nav class="main-nav">
     <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
       <ul class="nav-links">
@@ -63,89 +127,162 @@
       </ul>
     </div>
   </nav>
+
   <div style="height:64px;"></div>
 
-  <section class="hero" style="padding: 8rem 0 4rem;">
-    <div class="container">
-      <span class="badge" style="background:var(--bg-card);border:1px solid var(--border);">Paid Media</span>
-      <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; margin: 1rem 0;">Google Ads</h1>
-      <p class="subtitle" style="font-size: 1.25rem; color: var(--text-secondary); max-width: 650px; margin: 0 auto; line-height: 1.7;">Google Ads. Search, Shopping, Performance Max.</p>
+  <div class="page-wrapper">
+    <div class="bg-orbs">
+      <div class="bg-orb bg-orb-1"></div>
+      <div class="bg-orb bg-orb-2"></div>
+      <div class="bg-orb bg-orb-3"></div>
+      <div class="bg-orb bg-orb-4"></div>
     </div>
-  </section>
+    <div class="tech-dots"></div>
+    <div class="tech-grid"></div>
 
-  <section class="section" style="padding: 3rem 0;">
     <div class="container">
-      <h2 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 2rem; text-align: center;">Qué included</h2>
-      <div class="grid-2" style="display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); max-width: 900px; margin: 0 auto;">
-                      <div class="card">
-                <h3>Search Ads</h3>
-                <p>Included en este servicio.</p>
-              </div>
-              <div class="card">
-                <h3>Shopping</h3>
-                <p>Included en este servicio.</p>
-              </div>
-              <div class="card">
-                <h3>Performance Max</h3>
-                <p>Included en este servicio.</p>
-              </div>
-              <div class="card">
-                <h3>Display</h3>
-                <p>Included en este servicio.</p>
-              </div>
-              <div class="card">
-                <h3>YouTube</h3>
-                <p>Included en este servicio.</p>
-              </div>
-              <div class="card">
-                <h3>RLSA</h3>
-                <p>Included en este servicio.</p>
-              </div>
-
+      <div class="breadcrumb">
+        <a href="/">Inicio</a><span>/</span><a href="/#servicios">Servicios</a><span>/</span><a href="/google-ads.html">Google Ads</a><span>/</span><span style="color:var(--text-secondary)">Stack Tech</span>
       </div>
     </div>
-  </section>
 
-  <section class="section section-dark" style="padding: 3rem 0; background: var(--bg-secondary);">
-    <div class="container">
-      <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem;">Stack Relacionado</h2>
-      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-        <a href="/tech/ga4.html" style="padding:0.5rem 1rem;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.875rem;">GA4</a>
-<a href="/tech/gtm.html" style="padding:0.5rem 1rem;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.875rem;">GTM</a>
-<a href="/tech/search console.html" style="padding:0.5rem 1rem;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.875rem;">Search Console</a>
+    <section class="hero" style="padding:5rem 0 4rem;">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>Stack Tech</div>
+            <h1>Google Ads: Search, Shopping y Performance Max</h1>
+            <p class="subtitle" style="font-size:1.25rem;color:var(--text-secondary);max-width:540px;line-height:1.6;margin:1rem 0 2rem;">Configuración técnica completa: enhanced conversions, audience signals, Merchant Center y Measurement. Sin fuga de datos.</p>
+            <div class="hero-cta">
+              <a href="/contacto.html" class="cta-primary">Hablamos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <a href="/google-ads.html" class="cta-secondary">Ver servicio</a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-stat">
+              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M23 6l-9.5 9.5-5-5L1 18"/></svg></div>
+              <div class="hero-stat-content"><div class="hero-stat-value">+156%</div><div class="hero-stat-label">ROAS promedio</div></div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg></div>
+              <div class="hero-stat-content"><div class="hero-stat-value">1.5K€</div><div class="hero-stat-label">inversión mínima</div></div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2v4M12 18v4"/></svg></div>
+              <div class="hero-stat-content"><div class="hero-stat-value">30 días</div><div class="hero-stat-label">hasta primera optimización</div></div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" style="padding: 3rem 0;">
-    <div class="container">
-      <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem;">Relacionado</h2>
-      <div class="grid-2" style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); max-width: 600px; margin: 0 auto;">
-        <a href="/meta-ads.html" class="card" style="display: block; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; text-decoration: none; transition: border-color 0.2s;">
-          <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-primary);">Paid Media</h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary);">Ver servicios</p>
-        </a>
-        <a href="/analytics.html" class="card" style="display: block; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; text-decoration: none; transition: border-color 0.2s;">
-          <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-primary);">Analytics</h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary);">Medir y optimizar</p>
-        </a>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Qué included</h2>
+          <p>Configuración técnica completa para que Google funcione al máximo.</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <h3>Conversion Tracking</h3>
+            <p>Enhanced conversions, purchase events y offline imports. Todo medido con precisión.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <h3>Merchant Center</h3>
+            <p>Feed de productos optimizado, taxonomía correcta y datos estructurados para Shopping.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <h3>Audience Signals</h3>
+            <p>GA4 audience sync, Customer Match y Remarketing Lists para Performance Max.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <h3>Display & YouTube</h3>
+            <p>Creatividades adaptativas, remarketing dinámico y audiencias de interés calibradas.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <h3>Performance Max</h3>
+            <p>Asset groups optimizados, audience signals activos y atribución cross-channel.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <h3>Data Attribution</h3>
+            <p>Modelo data-driven con signals de GA4. Sin pérdida de conversión por cookie.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="cta-box" style="max-width: 500px; margin: 0 auto; padding: 2.5rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; text-align: center;">
-    <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem;">Implementar Google Ads?</h2>
-    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Te ayudamos configuración completa.</p>
-    <a href="/contacto.html" class="cta-button" style="display: inline-block; padding: 0.85rem 1.75rem; background: var(--text-primary); color: var(--bg-primary); font-weight: 600; border-radius: 8px; text-decoration: none;">Hablamos</a>
-  </div>
+    <section class="section-sm" style="padding:3rem 0;">
+      <div class="container">
+        <div class="stats-row">
+          <div class="stat-box"><div class="value">+156%</div><div class="label">ROAS promedio</div></div>
+          <div class="stat-box"><div class="value">1.5K€</div><div class="label">inversión mínima</div></div>
+          <div class="stat-box"><div class="value">3x</div><div class="label">conversiones vs. manual</div></div>
+          <div class="stat-box"><div class="value">30 días</div><div class="label">hasta primera optimización</div></div>
+        </div>
+      </div>
+    </section>
 
-  <footer class="footer" style="background: var(--bg-secondary); padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--border); margin-top: 3rem;">
-    <div style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
-      <a href="/" style="color: var(--text-secondary); text-decoration: none;">Inicio</a>
-      <a href="/servicios.html" style="color: var(--text-secondary); text-decoration: none;">Servicios</a>
-      <a href="/blog.html" style="color: var(--text-secondary); text-decoration: none;">Blog</a>
-    </div>
-    <p style="color: var(--text-secondary); font-size: 0.85rem;">© 2026 DayByDay Consulting</p>
-  </footer>
+    <section class="section-sm stack-section" style="padding:3rem 0;background:var(--bg-secondary);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+      <div class="container">
+        <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:1.5rem;text-align:center;">Stack tecnológico</h2>
+        <div class="stack-row">
+          <a href="/google-ads.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M23 6l-9.5 9.5-5-5L1 18"/></svg>Google Ads</a>
+          <a href="/tech/ga4.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>GA4</a>
+          <a href="/tech/shopify.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Shopify</a>
+          <a href="/tech/capi.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>CAPI</a>
+          <a href="/tech/gtm.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M4 4h16v16H4z"/><path d="M9 9h6v6H9z"/></svg>GTM</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-sm">
+      <div class="container">
+        <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Relacionado</h2>
+        <div class="related-grid">
+          <a href="/google-ads.html" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class="related-content"><h4>Google Ads</h4><p>Servicio completo</p></div></a>
+          <a href="/tech/ga4.html" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class="related-content"><h4>GA4</h4><p>Measurement</p></div></a>
+          <a href="/tech/shopify.html" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class="related-content"><h4>Shopify</h4><p>Feed de productos</p></div></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding:4rem 0;">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Configurar tu stack de Google Ads?</h2>
+          <p>Auditoría gratuita del tracking y la estructura de campañas. Sin compromiso.</p>
+          <a href="/contacto.html" class="cta-primary">Hablamos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- end page-wrapper -->
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+
+  <script src="/js/main.js"></script>
 </body>
 </html>

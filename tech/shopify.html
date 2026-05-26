@@ -1,20 +1,81 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shopify | DayByDay Consulting</title>
-  <meta name="description" content="Shopify. La plataforma de comercio electrónico más usada para crear tu tienda online profesional. Facilidad de uso, diseños profesionales y integrations nativas.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopify | Stack Tech | DayByDay Consulting</title>
+  <meta name="description" content="Shopify: tienda online profesional, catálogo infinito, pasarela de pago integrada y integraciones nativas con Meta, Google y n8n.">
   <meta name="robots" content="index, follow">
   <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
   <link rel="stylesheet" href="/css/sparkles.css">
   <link rel="stylesheet" href="/css/modern.css">
-  <style>*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.7;color:var(--text-primary);background:var(--bg-primary);min-height:100vh}:root{--bg-primary:#050507;--bg-secondary:#0e0e11;--bg-card:#141418;--text-primary:#fafafa;--text-secondary:#a1a1a6;--text-muted:#71717a;--border:#27272a}[data-theme=light]{--bg-primary:#fafafa;--bg-secondary:#f4f4f5;--bg-card:#fff;--text-primary:#09090b;--text-secondary:#52525b;--border:#e4e4e7}.container{max-width:900px;margin:0 auto;padding:0 1.5rem}nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,5,7,.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);height:64px}nav .container{display:flex;justify-content:space-between;align-items:center;height:100%}.nav-logo{font-size:1.2rem;font-weight:700;color:var(--text-primary);text-decoration:none}.nav-links{display:flex;gap:1.25rem;list-style:none;align-items:center}.nav-links a{color:var(--text-secondary);text-decoration:none;font-size:.85rem}.nav-links a:hover{color:var(--text-primary)}.hero{padding:10rem 0 4rem}.hero h1{font-size:clamp(2.5rem,5vw,3.5rem);font-weight:800;letter-spacing:-.02em;margin-bottom:1rem}.hero p{font-size:1.15rem;color:var(--text-secondary);max-width:650px;line-height:1.7}.badge{display:inline-block;padding:.4rem .9rem;background:var(--bg-card);border:1px solid var(--border);border-radius:9999px;font-size:.75rem;color:var(--text-secondary);margin-bottom:1.25rem;text-transform:uppercase;letter-spacing:.05em}.section{padding:3.5rem 0}.section-dark{background:var(--bg-secondary)}.section-title{font-size:1.5rem;font-weight:700;margin-bottom:1.5rem}.card{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:1.5rem}.card h3{font-size:1.1rem;font-weight:600;margin-bottom:.5rem}.card p{color:var(--text-secondary);font-size:.9rem}.card-list{margin-top:1rem}.card-list li{padding:.6rem 0;border-bottom:1px solid var(--border);font-size:.9rem;color:var(--text-secondary)}.card-list li:last-child{border-bottom:none}.card-list li::before{content:'';display:inline-block;width:5px;height:5px;background:var(--accent);border-radius:50%;margin-right:.6rem;vertical-align:middle}.grid-2{display:grid;gap:1.25rem}@media(min-width:640px){.grid-2{grid-template-columns:repeat(2,1fr)}}.grid-3{display:grid;gap:1.25rem}@media(min-width:640px){.grid-3{grid-template-columns:repeat(3,1fr)}}.metric{background:var(--bg-card);border-radius:8px;padding:1.25rem;text-align:center}.metric-value{font-size:1.5rem;font-weight:700}.metric-label{font-size:.8rem;color:var(--text-secondary)}.cta-button{display:inline-block;padding:.85rem 1.75rem;background:var(--text-primary);color:var(--bg-primary);font-weight:600;border-radius:6px;text-decoration:none;font-size:.95rem}.use-case{margin-bottom:1.5rem}.use-case h4{font-size:1rem;font-weight:600;margin-bottom:.35rem}.use-case p{color:var(--text-secondary);font-size:.9rem}footer{background:var(--bg-secondary);padding:2.5rem 0;text-align:center;border-top:1px solid var(--border)}.footer-links{display:flex;justify-content:center;gap:1.25rem;flex-wrap:wrap;margin-bottom:1.25rem}.footer-links a{color:var(--text-secondary);text-decoration:none;font-size:.85rem}@media(max-width:640px){.nav-links{display:none}}</style>
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root {
+      --accent-color: #10b981;
+    }
+    .hero-badge {
+      background: #10b9811a;
+      border: 1px solid #10b98140;
+      color: #10b981;
+    }
+    .feature-icon, .hero-stat-icon {
+      background: linear-gradient(135deg, #10b981, #10b981cc);
+    }
+    .stat-box .value {
+      background: linear-gradient(135deg, #10b981, #10b981cc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .cta-box::before {
+      background: radial-gradient(ellipse 50% 60% at 50% 0%, #10b98120 0%, transparent 60%);
+    }
+    .feature-tag {
+      background: #10b9811a;
+      border: 1px solid #10b98133;
+      color: #10b981;
+    }
+  </style>
 </head>
 <body>
 
-      <nav class="main-nav">
+  <div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+  <aside class="file-tree-sidebar" id="sidebar">
+    <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+    <div class="file-tree-section">
+      <div class="file-tree-section-title">Secciones</div>
+      <a href="/" class="file-tree-item">Inicio</a>
+      <a href="/problema.html" class="file-tree-item">Problema</a>
+      <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
+      <a href="/resultados.html" class="file-tree-item">Resultados</a>
+      <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
+    </div>
+    <div class="file-tree-section">
+      <div class="file-tree-section-title">Paid Media</div>
+      <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
+      <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
+      <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
+      <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
+    </div>
+    <div class="file-tree-section">
+      <div class="file-tree-section-title">Automation & AI</div>
+      <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
+      <a href="/analytics.html" class="file-tree-item">Analytics</a>
+      <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
+    </div>
+    <div class="file-tree-section">
+      <div class="file-tree-section-title">Stack Tech</div>
+      <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
+      <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
+      <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+    </div>
+  </aside>
+
+
+<nav class="main-nav">
     <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
       <ul class="nav-links">
@@ -66,166 +127,162 @@
       </ul>
     </div>
   </nav>
+
   <div style="height:64px;"></div>
 
+  <div class="page-wrapper">
+    <div class="bg-orbs">
+      <div class="bg-orb bg-orb-1"></div>
+      <div class="bg-orb bg-orb-2"></div>
+      <div class="bg-orb bg-orb-3"></div>
+      <div class="bg-orb bg-orb-4"></div>
+    </div>
+    <div class="tech-dots"></div>
+    <div class="tech-grid"></div>
 
-  <!-- Breadcrumb -->
-  <div style="background:var(--bg-secondary);padding:0.75rem 0;border-bottom:1px solid var(--border);">
-    <div style="max-width:900px;margin:0 auto;padding:0 1.5rem;font-size:0.85rem;">
-      <a href="/" style="color:#71717a;text-decoration:none;">Inicio</a>
-      <span style="color:#52525b;margin:0 0.5rem;">›</span>
-      <a href="/servicios.html" style="color:#71717a;text-decoration:none;">Servicios</a>
-      <span style="color:#52525b;margin:0 0.5rem;">›</span>
-      <a href="/tech/" style="color:#71717a;text-decoration:none;">Stack</a>
-      <span style="color:#52525b;margin:0 0.5rem;">›</span>
-      <span style="color:#fafafa;">eCommerce</span>
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Inicio</a><span>/</span><a href="/#servicios">Servicios</a><span>/</span><a href="/automatizacion.html">Automatización</a><span>/</span><span style="color:var(--text-secondary)">Stack Tech</span>
+      </div>
     </div>
-  </div>
-</div>
 
+    <section class="hero" style="padding:5rem 0 4rem;">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>Stack Tech</div>
+            <h1>Shopify: tu tienda online lista para escalar</h1>
+            <p class="subtitle" style="font-size:1.25rem;color:var(--text-secondary);max-width:540px;line-height:1.6;margin:1rem 0 2rem;">Tienda profesional con catálogo infinito, checkout optimizado e integraciones nativas con Meta, Google Ads y n8n. Sin código, sin complicaciones.</p>
+            <div class="hero-cta">
+              <a href="/contacto.html" class="cta-primary">Hablamos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <a href="/automatizacion.html" class="cta-secondary">Ver automatización</a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-stat">
+              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M23 6l-9.5 9.5-5-5L1 18"/></svg></div>
+              <div class="hero-stat-content"><div class="hero-stat-value">2-3 sem</div><div class="hero-stat-label">setup completo</div></div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg></div>
+              <div class="hero-stat-content"><div class="hero-stat-value">99.9%</div><div class="hero-stat-label">uptime garantizado</div></div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2v4M12 18v4"/></svg></div>
+              <div class="hero-stat-content"><div class="hero-stat-value">SSL</div><div class="hero-stat-label">certificado incluido</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section class="hero">
-    <div class="container">
-      <span class="badge">eCommerce platform</span>
-      <h1>Shopify</h1>
-      <p>Shopify es la plataforma de comercio electrónico líder mundial. Permite crear una tienda online profesional sin conocimientos técnicos. Incluye diseños adaptativos, pasarela de pago integrada y gestión de inventario.</p>
-      <p style="margin-top:1rem;">A diferencia de montar tu tienda tipo WordPress WooCommerce, Shopify ofrece hosting incorporado, actualizaciones automaticas de seguridad y soporte técnico. El coste mensual incluye todo lo necesario para vender online: certificado SSL, dominio propio y capacidad de productos ilimitados.</p>
-    </div>
-  </section>
-  <section class="section section-dark">
-    <div class="container">
-      <h2 class="section-title">Qué incluye Shopify</h2>
-      <div class="grid-2">
-        <div class="card">
-          <h3>Tienda Online Completa</h3>
-          <p>Diseño responsive que funciona en móvil y todas las pantallas. Temas gratuitos y premium disponibles. Personalización mediante arrastrar y soltar sin código.</p>
-          <ul class="card-list">
-            <li>Temas responsive incluidos</li>
-            <li>Personalización visual</li>
-            <li>Blog integrado</li>
-            <li>Certificado SSL gratis</li>
-          </ul>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Qué included</h2>
+          <p>Todo lo que necesitas para lanzar y escalar tu eCommerce.</p>
         </div>
-        <div class="card">
-          <h3>Gestión de Productos</h3>
-          <p>Catálogo con variantes por tallas, colores. Inventario automático con alertas. Colecciones manuales y automáticas.</p>
-          <ul class="card-list">
-            <li>Productos ilimitados</li>
-            <li>Variantes (talla, color)</li>
-            <li>Inventario con alertas</li>
-            <li>Colecciones smart</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Pasarela de Pago</h3>
-          <p>Payment methods integradas: tarjeta, PayPal, Bizum, Apple Pay. Checkout optimizado para reducir abandono.</p>
-          <ul class="card-list">
-            <li>Tarjeta crédito/débito</li>
-            <li>PayPal integrado</li>
-            <li>Bizum disponible</li>
-            <li>Express checkout</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Integraciones</h3>
-          <p> Conexión nativa con herramientas de marketing, envíos y fulfillment. Apps del ecosystem para cualquier necesidad.</p>
-          <ul class="card-list">
-            <li>n8n automatización</li>
-            <li>Klaviyo email</li>
-            <li>Shipping apps</li>
-            <li>Reviews y trust</li>
-          </ul>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <h3>Tienda Online Completa</h3>
+            <p>Temas responsive, personalización visual sin código, blog integrado y certificado SSL gratis.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <h3>Gestión de Productos</h3>
+            <p>Catálogo infinito con variantes por tallas y colores. Inventario automático con alertas de stock.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <h3>Pasarela de Pago</h3>
+            <p>Tarjeta, PayPal, Bizum y Apple Pay integrados. Checkout optimizado para reducir abandono.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <h3>Integración Meta CAPI</h3>
+            <p>Catálogo conectado con Meta Business Manager. Pixel + CAPI para atribución completa.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <h3>Google Shopping Feed</h3>
+            <p>Feed de productos sincronizado con Google Merchant Center para Shopping y Performance Max.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <h3>n8n Automation</h3>
+            <p>Orders sync, stock update y notificaciones automáticas. Workflows personalizados para tu operación.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Configuraciones típicas</h2>
-      <div class="grid-3">
-        <div class="metric">
-          <div class="metric-value">2-3 sem</div>
-          <div class="metric-label">Tiempo setup</div>
-        </div>
-        <div class="metric">
-          <div class="metric-value">99,99%</div>
-          <div class="metric-label">Uptime garant</li>
-        </div>
-        <div class="metric">
-          <div class="metric-value">Ilimitado</div>
-          <div class="metric-label">Productos</div>
+    </section>
+
+    <section class="section-sm" style="padding:3rem 0;">
+      <div class="container">
+        <div class="stats-row">
+          <div class="stat-box"><div class="value">2-3 sem</div><div class="label">tiempo de setup</div></div>
+          <div class="stat-box"><div class="value">99.9%</div><div class="label">uptime garantizado</div></div>
+          <div class="stat-box"><div class="value">Ilimitado</div><div class="label">productos y variantes</div></div>
+          <div class="stat-box"><div class="value">0</div><div class="label">coste técnico inicial</div></div>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="section section-dark">
-    <div class="container">
-      <h2 class="section-title">Casos de uso</h2>
-      <div style="display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
-        <div class="use-case">
-          <h4>DTC directa (venta al consumidor)</h4>
-          <p>Tienda online estándar para venta directa. Productos físicos con envío península 24-48h. Integración con agencia de transporte.</p>
-        </div>
-        <div class="use-case">
-          <h4>Preventa (crowdfunding físico)</h4>
-          <p>Productos nuevos antes de fabricación. Precio especiales early birds. Rewards por tier de contribución.</p>
-        </div>
-        <div class="use-case">
-          <h4>Suscripción recurrente</h4>
-          <p>Productos de entrega periódica: vitaminas, supplements, cosmetics. Facturación automática monthly.</p>
-        </div>
-        <div class="use-case">
-          <h4>Digital products</h4>
-          <p>Cursos, ebooks, memberships. Entrega automática tras payment. Márgenes superiores.</p>
-        </div>
-        <div class="use-case">
-          <h4>Multi-tienda</h4>
-          <p>Múltiples marcas o mercados con un solo Shopify. Varias currency y dominios.</p>
-        </div>
-        <div class="use-case">
-          <h4>Marketplace</h4>
-          <p>Varios vendedores en una plataforma. Shopify Plus para escalarlo. Comisión por venta.</p>
+    </section>
+
+    <section class="section-sm stack-section" style="padding:3rem 0;background:var(--bg-secondary);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+      <div class="container">
+        <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:1.5rem;text-align:center;">Stack tecnológico</h2>
+        <div class="stack-row">
+          <a href="/tech/capi.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>CAPI</a>
+          <a href="/tech/meta-ads.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 2h3a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h3"/></svg>Meta Ads</a>
+          <a href="/google-ads.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M23 6l-9.5 9.5-5-5L1 18"/></svg>Google Ads</a>
+          <a href="/tech/ga4.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>GA4</a>
+          <a href="/tech/n8n.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>n8n</a>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="section" id="contacto">
-    <div class="container" style="text-align:center;padding:3rem 0;">
-      <h2>Tu tienda online?</h2>
-      <p style="color:var(--text-secondary);margin:0.75rem auto 1.5rem;max-width:500px;">Te ayudamos a poner en march ay tu tienda Shopify o migrar desde otra plataforma.</p>
-      <a href="mailto:contact@daybydayconsulting.com?subject=Shopify" class="cta-button">Consultar</a>
-    </div>
-  </section>
-  <section class="section section-dark">
-    <div class="container">
-      <h2 class="section-title">Servicios relacionados</h2>
-      <div class="grid-3">
-        <a href="/meta-ads.html" class="card" style="display:block;text-decoration:none;">
-          <h3 style="color:var(--text-primary);">Meta Ads</h3>
-          <p style="color:var(--text-secondary);font-size:0.9rem;">Catálogo Shopify + CAPI</p>
-        </a>
-        <a href="/automatizacion.html" class="card" style="display:block;text-decoration:none;">
-          <h3 style="color:var(--text-primary);">Automatización</h3>
-          <p style="color:var(--text-secondary);font-size:0.9rem;">Orders sync</p>
-        </a>
-        <a href="/google-ads.html" class="card" style="display:block;text-decoration:none;">
-          <h3 style="color:var(--text-primary);">Google Ads</h3>
-          <p style="color:var(--text-secondary);font-size:0.9rem;">Shopping feed</p>
-        </a>
+    </section>
+
+    <section class="section-sm">
+      <div class="container">
+        <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Relacionado</h2>
+        <div class="related-grid">
+          <a href="/meta-ads.html" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class="related-content"><h4>Meta Ads</h4><p>Catálogo + CAPI</p></div></a>
+          <a href="/automatizacion.html" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class="related-content"><h4>Automatización</h4><p>Orders sync + n8n</p></div></a>
+          <a href="/google-ads.html" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class="related-content"><h4>Google Ads</h4><p>Shopping feed</p></div></a>
+        </div>
       </div>
-    </div>
-  </section>
-  <footer>
-    <div class="container">
-      <div class="footer-links">
-        <a href="/">Inicio</a>
-        <a href="/meta-ads.html">Meta Ads</a>
-        <a href="/google-ads.html">Google Ads</a>
-        <a href="/shopify.html">Shopify</a>
+    </section>
+
+    <section class="section" style="padding:4rem 0;">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Lanzar tu tienda en Shopify?</h2>
+          <p>Te ayudamos a ponerla en marcha o migrar desde otra plataforma. Sin costes iniciales ocultos.</p>
+          <a href="/contacto.html" class="cta-primary">Hablamos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
       </div>
-      <p style="color:var(--text-muted);font-size:0.75rem;">© 2026 DayByDay Consulting</p>
-    </div>
-  </footer>
+    </section>
+
+  </div><!-- end page-wrapper -->
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+
   <script src="/js/main.js"></script>
 </body>
 </html>
