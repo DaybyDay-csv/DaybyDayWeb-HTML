@@ -3,72 +3,348 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DayByDay Consulting | Growth Partner para eCommerce España</title>
-  <meta name="description" content="DayByDay Consulting - Agencia de marketing con IA para marcas D2C. Especialistas en Meta Ads, automatización y crecimiento de revenue.">
+  <title>Growth Partner para D2C en España | DayByDay Consulting</title>
+  <meta name="description" content="Socios de crecimiento para D2C que ya facturan. Operamos con criterio sobre margen de contribución, payback de CAC, LTV por cohorte y cash-conversion. Paid media es solo una palanca, no el producto.">
   <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1a1a1a; background: #fff; }
-    header { background: #fff; border-bottom: 1px solid #e5e5e5; padding: 1rem 2rem; position: sticky; top: 0; }
-    nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-size: 1.5rem; font-weight: 700; color: #1a1a1a; text-decoration: none; }
+    /* Reset y base */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1a1a1a; background: #0a0a0a; overflow-x: hidden; }
+    
+    /* Variables */
+    :root {
+      --bg-primary: #0a0a0a;
+      --bg-secondary: #141414;
+      --bg-card: #1a1a1a;
+      --text-primary: #ffffff;
+      --text-secondary: #a1a1a1;
+      --accent: #f5f5f5;
+      --accent-hover: #e0e0e0;
+    }
+    
+    /* Hero Section */
+    .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2rem; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%); pointer-events: none; }
+    
+    /* Logo */
+    .logo-container { display: flex; flex-direction: column; align-items: center; margin-bottom: 3rem; animation: fadeInDown 1s ease-out; }
+    .logo { font-size: clamp(3rem, 15vw, 10rem); font-weight: 800; letter-spacing: -0.04em; line-height: 0.9; }
+    .logo-first-line { color: var(--text-primary); }
+    .logo-first-line .day { display: inline-block; animation: bounceDay 1s ease-out 0.3s both; }
+    .logo-first-line .by { display: inline-block; animation: bounceBy 1s ease-out 0.5s both; }
+    .logo-second-line { color: var(--text-primary); }
+    .logo-second-line .day { display: inline-block; animation: bounceDay 1s ease-out 0.7s both; }
+    .logo-second-line .consulting { font-size: 0.35em; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-secondary); margin-top: 0.5em; display: block; }
+    
+    @keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes bounceDay { 0% { opacity: 0; transform: translateY(-100px) rotate(-15deg); } 60% { opacity: 1; transform: translateY(10px) rotate(5deg); } 100% { opacity: 1; transform: translateY(0) rotate(0); } }
+    @keyframes bounceBy { 0% { opacity: 0; transform: translateY(-100px) rotate(-15deg); } 60% { opacity: 1; transform: translateY(10px) rotate(5deg); } 100% { opacity: 1; transform: translateY(0) rotate(0); } }
+    
+    /* Tagline */
+    .tagline { font-size: clamp(1rem, 3vw, 1.5rem); color: var(--text-secondary); text-align: center; max-width: 600px; margin-bottom: 2rem; animation: fadeInUp 1s ease-out 0.8s both; }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    
+    /* CTA Button */
+    .cta-button { display: inline-block; padding: 1rem 2.5rem; background: var(--text-primary); color: var(--bg-primary); font-weight: 600; font-size: 1rem; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; animation: fadeInUp 1s ease-out 1s both; }
+    .cta-button:hover { background: var(--accent-hover); transform: translateY(-2px); }
+    
+    /* Stats Bar */
+    .stats-bar { display: flex; flex-wrap: wrap; justify-content: center; gap: 3rem; padding: 4rem 2rem; background: var(--bg-secondary); width: 100%; margin-top: 4rem; animation: fadeInUp 1s ease-out 1.2s both; }
+    .stat { text-align: center; }
+    .stat-value { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; color: var(--text-primary); }
+    .stat-label { font-size: 0.875rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.1em; }
+    
+    /* Sections */
+    .section { padding: 6rem 2rem; max-width: 1200px; margin: 0 auto; }
+    .section-dark { background: var(--bg-secondary); }
+    .section-title { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; margin-bottom: 2rem; color: var(--text-primary); }
+    .section-subtitle { font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 3rem; max-width: 600px; }
+    
+    /* Problema Section */
+    .problema-grid { display: grid; gap: 2rem; }
+    @media (min-width: 768px) { .problema-grid { grid-template-columns: repeat(3, 1fr); } }
+    .problema-card { background: var(--bg-card); padding: 2rem; border-radius: 8px; border: 1px solid #333; }
+    .problema-card h3 { font-size: 1.25rem; margin-bottom: 1rem; color: var(--text-primary); }
+    .problema-card p { color: var(--text-secondary); font-size: 0.95rem; }
+    
+    /* Propuesta Section */
+    .propuesta-steps { display: flex; flex-direction: column; gap: 2rem; }
+    @media (min-width: 768px) { .propuesta-steps { grid-template-columns: repeat(3, 1fr); display: grid; } }
+    .step { padding: 2rem; background: var(--bg-card); border-radius: 8px; }
+    .step-number { font-size: 3rem; font-weight: 800; color: #333; margin-bottom: 1rem; }
+    .step h3 { font-size: 1.25rem; margin-bottom: 1rem; color: var(--text-primary); }
+    .step p { color: var(--text-secondary); font-size: 0.95rem; }
+    
+    /* Founders */
+    .founders-section { display: grid; gap: 3rem; }
+    @media (min-width: 768px) { .founders-section { grid-template-columns: repeat(2, 1fr); } }
+    .founder-card { background: var(--bg-card); padding: 2.5rem; border-radius: 8px; }
+    .founder-card h3 { font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary); }
+    .founder-role { color: var(--text-secondary); font-size: 1rem; margin-bottom: 1.5rem; }
+    .founder-bio p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1rem; }
+    .founder-link { color: var(--text-primary); text-decoration: underline; }
+    
+    /* Servicios Grid */
+    .servicios-grid { display: grid; gap: 1.5rem; }
+    @media (min-width: 768px) { .servicios-grid { grid-template-columns: repeat(2, 1fr); } }
+    .servicio-item { background: var(--bg-card); padding: 1.5rem 2rem; border-radius: 8px; display: flex; align-items: center; gap: 1rem; border: 1px solid #333; transition: border-color 0.3s; cursor: pointer; }
+    .servicio-item:hover { border-color: #555; }
+    .servicio-icon { width: 48px; height: 48px; background: #333; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; }
+    .servicio-text h4 { font-size: 1.1rem; font-weight: 600; color: var(--text-primary); }
+    .servicio-text p { font-size: 0.9rem; color: var(--text-secondary); }
+    
+    /* Resultados */
+    .resultados-grid { display: grid; gap: 2rem; }
+    @media (min-width: 768px) { .resultados-grid { grid-template-columns: repeat(3, 1fr); } }
+    .resultado-card { background: var(--bg-card); padding: 2rem; border-radius: 8px; text-align: center; }
+    .resultado-metric { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem; }
+    .resultado-label { color: var(--text-secondary); font-size: 0.95rem; }
+    
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 1rem; }
+    .faq-item { background: var(--bg-card); padding: 1.5rem 2rem; border-radius: 8px; border: 1px solid #333; }
+    .faq-question { font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-answer { color: var(--text-secondary); font-size: 0.95rem; }
+    
+    /* Footer */
+    .footer { background: var(--bg-secondary); padding: 4rem 2rem; text-align: center; }
+    .footer-logo { font-size: 2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem; }
+    .footer-contact { color: var(--text-secondary); margin-bottom: 2rem; }
+    .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; }
+    .footer-links a { color: var(--text-secondary); text-decoration: none; }
+    .footer-links a:hover { color: var(--text-primary); }
+    .footer-copy { font-size: 0.875rem; color: var(--text-secondary); }
+    
+    /* Nav */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; background: rgba(10, 10, 10, 0.9); backdrop-filter: blur(10px); }
+    .nav-logo { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); text-decoration: none; }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a { color: #666; text-decoration: none; font-weight: 500; }
-    .nav-links a:hover { color: #1a1a1a; }
-    main { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; }
-    h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 1.5rem; }
-    .subtitle { font-size: 1.25rem; color: #666; margin-bottom: 2rem; }
-    .cta { display: inline-block; background: #1a1a1a; color: #fff; padding: 1rem 2rem; text-decoration: none; border-radius: 4px; font-weight: 600; }
-    .blogs { margin-top: 4rem; }
-    .blogs h2 { font-size: 2rem; margin-bottom: 2rem; }
-    .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; }
-    .blog-card { border: 1px solid #e5e5e5; border-radius: 8px; padding: 1.5rem; transition: transform 0.2s; }
-    .blog-card:hover { transform: translateY(-4px); }
-    .blog-card a { text-decoration: none; color: inherit; }
-    .blog-card h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
-    .blog-card p { color: #666; font-size: 0.875rem; }
-    footer { background: #f5f5f5; padding: 2rem; text-align: center; margin-top: 4rem; }
+    .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+    .nav-links a:hover { color: var(--text-primary); }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .section { padding: 4rem 1.5rem; }
+      .stats-bar { flex-direction: column; gap: 2rem; }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="/" class="logo">DayByDay</a>
-      <ul class="nav-links">
-        <li><a href="/servicios.html">Servicios</a></li>
-        <li><a href="/blog.html">Blog</a></li>
-        <li><a href="/contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <h1>Growth Partner para tu eCommerce</h1>
-    <p class="subtitle">Somos la agencia que combina estrategia de paid media con automatización inteligente. Dos fundadores, dos cerebros, un objetivo: hacer crecer tu marca.</p>
-    <a href="mailto:contact@daybydayconsulting.com" class="cta">Hablamos</a>
-    
-    <section class="blogs">
-      <h2>Últimos artículos</h2>
-      <div class="blog-grid">
-        
-        <article class="blog-card">
-          <a href="/blog/advantage-plus-shopping-cuando-usarlo-no.html">
-            <h3>Advantage+ Shopping: Cuándo usarlo y cuándo NO</h3>
-            <p>Framework para decidir entre Advantage+ o configuración manual.</p>
-          </a>
-        </article>
-        
-        <article class="blog-card">
-          <a href="/blog/presupuesto-minimo-meta-ads-sin-tirar-dinero.html">
-            <h3>Presupuesto mínimo para Meta Ads sin tirar dinero</h3>
-            <p>Cuánto invertir antes de tener datos estadísticamente significativos.</p>
-          </a>
-        </article>
-        
+  <!-- Navigation -->
+  <nav>
+    <a href="/" class="nav-logo">DayByDay</a>
+    <ul class="nav-links">
+      <li><a href="#problema">El Problema</a></li>
+      <li><a href="#propuesta">Cómo Trabajamos</a></li>
+      <li><a href="#resultados">Resultados</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="logo-container">
+      <div class="logo">
+        <span class="logo-first-line"><span class="day">Day</span><span class="by">by</span></span>
+        <span class="logo-second-line"><span class="day">Day</span><span class="consulting">Consulting</span></span>
       </div>
-    </section>
-  </main>
-  <footer>
-    <p>© 2026 DayByDay Consulting. Madrid.</p>
-  </footer>
+    </div>
+    <p class="tagline">Socios de crecimiento para D2C que ya facturan. Operamos con criterio sobre margen de contribución, payback de CAC, LTV por cohorte y cash-conversion.</p>
+    <a href="mailto:contact@daybydayconsulting.com" class="cta-button">Hablamos</a>
+  </section>
+
+  <!-- Stats -->
+  <div class="stats-bar">
+    <div class="stat">
+      <div class="stat-value">264.712€</div>
+      <div class="stat-label">Gestionados en Meta Ads</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">31.555</div>
+      <div class="stat-label">Clics en Google Ads</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">3.2M€</div>
+      <div class="stat-label">Revenue en ventas</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">88.95</div>
+      <div class="stat-label">ROAS acumulado</div>
+    </div>
+  </div>
+
+  <!-- El Problema -->
+  <section id="problema" class="section section-dark">
+    <h2 class="section-title">El problema real en D2C</h2>
+    <p class="section-subtitle">El ROAS de plataforma sube. La caja del negocio no acompaña. Para crecer con control necesitas operar tres palancas reales:</p>
+    <div class="problema-grid">
+      <div class="problema-card">
+        <h3>Margen de contribución</h3>
+        <p>El problema no es la creatividad ni la puja. Es leer margen real, no métricas de ad account.</p>
+      </div>
+      <div class="problema-card">
+        <h3>Payback de CAC</h3>
+        <p>Saber exactamente cuánto tardas en recuperar cada euro invertido en adquisición.</p>
+      </div>
+      <div class="problema-card">
+        <h3>LTV por cohortes</h3>
+        <p>Entender el valor real de cada cliente por cohorte, no agregado.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cómo Trabajamos -->
+  <section id="propuesta" class="section">
+    <h2 class="section-title">Cómo entramos como Growth Partner</h2>
+    <p class="section-subtitle">Diagnóstico de negocio, no de cuenta publicitaria. Leemos tu P&L, cohortes y cash-conversion en RAW.</p>
+    <div class="propuesta-steps">
+      <div class="step">
+        <div class="step-number">01</div>
+        <h3>Diagnóstico</h3>
+        <p>Análisis de tu negocio con datos reales. Qué funciona, qué está drenando presupuesto.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">02</div>
+        <h3>Decisión</h3>
+        <p>Te devolvemos qué decisión-negocio mueve más caja en los próximos 90 días.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">03</div>
+        <h3>Implementación</h3>
+        <p>Activamos las palancas: producto, paid media, automation, retención.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founders -->
+  <section class="section section-dark">
+    <h2 class="section-title">Los fundadores</h2>
+    <div class="founders-section">
+      <div class="founder-card">
+        <h3>Pablo Santirsó</h3>
+        <p class="founder-role">Founder · Paid Media, Estrategia & Operaciones</p>
+        <div class="founder-bio">
+          <p>Lidera paid media, estrategia y operaciones. Portfolio: Garett (expansión España + paid media), Cartri (ecommerce refresh), UFV Postgrado, Arasnet/ArasLifePlus (caso conjunto con Jorge).</p>
+          <p>+156% ROAS en 90 días (caso real).</p>
+          <a href="https://es.linkedin.com/in/pablo-santirso-perez" class="founder-link">LinkedIn →</a>
+        </div>
+      </div>
+      <div class="founder-card">
+        <h3>Jorge González</h3>
+        <p class="founder-role">Partner · CTO · Automations & Agentic AI</p>
+        <div class="founder-bio">
+          <p>Lidera automation y soluciones tech ad-hoc para B2B y B2C. Track record enterprise: Total Energies, Puig, Robot Factory de Orange. Profesor universitario de tecnología.</p>
+          <p>Especialista en n8n, Azure AI, RPA, integraciones.</p>
+          <a href="https://www.linkedin.com/in/jorge-gonz%C3%A1lez-p%C3%A9rez-4091541b6/" class="founder-link">LinkedIn →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section class="section">
+    <h2 class="section-title">Lo que hacemos</h2>
+    <div class="servicios-grid">
+      <div class="servicio-item">
+        <div class="servicio-icon">📺</div>
+        <div class="servicio-text">
+          <h4>Meta Ads</h4>
+          <p>Campañas de conversión, catálogo, Advantage+, setup completo CAPI</p>
+        </div>
+      </div>
+      <div class="servicio-item">
+        <div class="servicio-icon">🔍</div>
+        <div class="servicio-text">
+          <h4>Google Ads</h4>
+          <p>Search, Shopping, Performance Max con atribución completa</p>
+        </div>
+      </div>
+      <div class="servicio-item">
+        <div class="servicio-icon">⚙️</div>
+        <div class="servicio-text">
+          <h4>Automatización</h4>
+          <p>n8n workflows, notificaciones, sync pedidos, abandoned cart</p>
+        </div>
+      </div>
+      <div class="servicio-item">
+        <div class="servicio-icon">📊</div>
+        <div class="servicio-text">
+          <h4>Analytics</h4>
+          <p>GA4, GTM, dashboards custom, atribución multi-touch</p>
+        </div>
+      </div>
+      <div class="servicio-item">
+        <div class="servicio-icon">🚀</div>
+        <div class="servicio-text">
+          <h4>Growth Strategy</h4>
+          <p>Escalado, pricing, mix de canales, expansión</p>
+        </div>
+      </div>
+      <div class="servicio-item">
+        <div class="servicio-icon">🤖</div>
+        <div class="servicio-text">
+          <h4>Agentic AI</h4>
+          <p>Asistentes<IA para ventas, soporte, qualify</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resultados -->
+  <section id="resultados" class="section section-dark">
+    <h2 class="section-title">Resultados</h2>
+    <div class="resultados-grid">
+      <div class="resultado-card">
+        <div class="resultado-metric">+156%</div>
+        <div class="resultado-label">ROAS en 90 días (caso real)</div>
+      </div>
+      <div class="resultado-card">
+        <div class="resultado-metric">4,8€</div>
+        <div class="resultado-label">CPA Meta Ads</div>
+      </div>
+      <div class="resultado-card">
+        <div class="resultado-metric">10,35%</div>
+        <div class="resultado-label">CTR Google Ads</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <h2 class="section-title">Preguntas frecuentes</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question">¿Qué precio tiene la gestión de Meta Ads?</div>
+        <div class="faq-answer">Los servicios parten desde 800€/mes según volumen de inversión. Recomendamos mínimo 1.500€/mes en Meta Ads para tener datos significativos.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">¿Con quién trabajo directamente?</div>
+        <div class="faq-answer">Con los dos socios. Pablo lidera paid media; Jorge lidera technology. Sin account managers, sin Junior profiles.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">¿Qué tipos de clientes atendéis?</div>
+        <div class="faq-answer">D2C en España con facturación 100K-2M€ anuales. Sectores: moda, salud, hogar, lifestyle.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">¿Tenéis garantía?</div>
+        <div class="faq-answer">Si no hay mejora en 90 días, auditoría sin coste.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="footer">
+    <div class="footer-logo">DayByDay Consulting</div>
+    <p class="footer-contact">Madrid · <a href="mailto:contact@daybydayconsulting.com">contact@daybydayconsulting.com</a></p>
+    <div class="footer-links">
+      <a href="https://es.linkedin.com/in/pablo-santirso-perez">LinkedIn Pablo</a>
+      <a href="https://www.linkedin.com/in/jorge-gonzalez-perez">LinkedIn Jorge</a>
+      <a href="https://calendly.com/daybydayconsulting/discovery">Calendly</a>
+    </div>
+    <p class="footer-copy">© 2026 DayByDay Consulting</p>
+  </section>
 </body>
 </html>
