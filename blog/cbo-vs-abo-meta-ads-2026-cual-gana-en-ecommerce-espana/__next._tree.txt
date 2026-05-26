@@ -1,0 +1,2 @@
+:HL["/_next/static/chunks/0hyk2f62ian66.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"blog","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"cbo-vs-abo-meta-ads-2026-cual-gana-en-ecommerce-espana","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"cSJ4RqjiuM5L-D2VDLo0m"}
