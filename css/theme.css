@@ -28,10 +28,6 @@
   text-decoration: none;
   letter-spacing: -0.02em;
 }
-.main-nav .nav-menu {
-  display: flex;
-  align-items: center;
-}
 .main-nav .nav-links {
   display: flex;
   align-items: center;
