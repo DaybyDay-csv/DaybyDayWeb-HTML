@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cómo Trabajamos | DayByDay Consulting</title>
+  <meta name="description" content="Día a día: diagnóstico de negocio real → decisión estratégica → implementación de palancas. Sin account managers, hablas directamente con los fundadores.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; color: #fafafa; background: #050507; min-height: 100vh; }
+    :root { --bg: #050507; --bg-secondary: #0e0e11; --bg-tertiary: #141418; --border: #27272a; --text: #fafafa; --text-secondary: #a1a1a6; --text-muted: #71717a; --gradient-start: #6366f1; --gradient-end: #a855f7; --glow: rgba(99, 102, 241, 0.15); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .section { padding: 6rem 0; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5, 5, 7, 0.8); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    nav .container { display: flex; justify-content: space-between; align-items: center; height: 72px; }
+    .nav-logo { font-size: 1.25rem; font-weight: 700; color: var(--text); text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { padding: 0.625rem 1.25rem; background: var(--text); color: var(--bg); font-size: 0.875rem; font-weight: 600; border-radius: 6px; text-decoration: none; }
+    .hero { padding: 12rem 0 6rem; text-align: center; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 50% at 50% 0%, var(--glow) 0%, transparent 60%); pointer-events: none; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.375rem 0.875rem; background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: 9999px; font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 2rem; }
+    .hero-badge-dot { width: 6px; height: 6px; background: var(--gradient-start); border-radius: 50%; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+    .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
+    .hero p { font-size: 1.25rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto; }
+    .steps { display: flex; flex-direction: column; gap: 2rem; }
+    @media (min-width: 768px) { .steps { grid-template-columns: repeat(3, 1fr); display: grid; } }
+    .step { position: relative; padding: 2.5rem; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; }
+    .step::after { content: ''; position: absolute; top: 2rem; right: 2rem; width: 40px; height: 40px; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.25rem; }
+    .step:nth-child(1)::after { content: '01'; }
+    .step:nth-child(2)::after { content: '02'; }
+    .step:nth-child(3)::after { content: '03'; }
+    @media (min-width: 768px) { .step::after { display: none; } }
+    .step-number { font-size: 0.75rem; font-weight: 600; color: var(--gradient-start); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; }
+    .step h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; }
+    .step p { color: var(--text-secondary); }
+    .step-list { margin-top: 1.5rem; }
+    .step-list li { color: var(--text-secondary); list-style: none; padding-left: 1.5rem; position: relative; margin-bottom: 0.75rem; }
+    .step-list li::before { content: '✓'; position: absolute; left: 0; color: var(--gradient-start); }
+    .different { margin-top: 4rem; padding: 2.5rem; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; }
+    .different h2 { font-size: 1.5rem; margin-bottom: 1.5rem; }
+    .different-grid { display: grid; gap: 1.5rem; }
+    @media (min-width: 768px) { .different-grid { grid-template-columns: repeat(2, 1fr); } }
+    .different-item { display: flex; gap: 1rem; align-items: flex-start; }
+    .different-icon { width: 24px; height: 24px; background: var(--bg-tertiary); border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .different-item h4 { font-weight: 600; margin-bottom: 0.25rem; }
+    .different-item p { font-size: 0.9rem; color: var(--text-secondary); }
+    .cta-box { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 3rem; text-align: center; margin-top: 4rem; }
+    .cta-box h2 { font-size: 1.75rem; font-weight: 700; margin-bottom: 1rem; }
+    .cta-box p { color: var(--text-secondary); margin-bottom: 2rem; }
+    .cta-button { display: inline-block; padding: 1rem 2rem; background: var(--text); color: var(--bg); font-weight: 600; border-radius: 8px; text-decoration: none; }
+    footer { background: var(--bg-secondary); padding: 4rem 0; border-top: 1px solid var(--border); }
+    footer .container { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.5rem; }
+    .footer-logo { font-size: 1.5rem; font-weight: 700; }
+    .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; }
+    .footer-copy { color: var(--text-muted); font-size: 0.8rem; }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="/" class="nav-logo">DayByDay</a>
+      <ul class="nav-links">
+        <li><a href="/problema.html">Problema</a></li>
+        <li><a href="/como-trabajamos.html">Cómo Trabajamos</a></li>
+        <li><a href="/resultados.html">Resultados</a></li>
+        <li><a href="/growth-partner.html">Growth Partner</a></li>
+      </ul>
+      <a href="#contacto" class="nav-cta">Hablamos</a>
+    </div>
+  </nav>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Proceso validado
+      </div>
+      <h1>Cómo trabajamos</h1>
+      <p>Diagnóstico → Decisión → Implementación. Sin handoffs, sin cuenta managers. Los dos fundadores involucrados desde el día uno.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">Paso 1</div>
+          <h3>Diagnóstico RAW</h3>
+          <p>Analizamos tu negocio con datos reales, no métricas de plataforma:</p>
+          <ul class="step-list">
+            <li>P&L completo (no solo ad spend)</li>
+            <li>Cohortes de adquisición</li>
+            <li>Cash conversion real</li>
+            <li>Unit economics</li>
+          </ul>
+        </div>
+        <div class="step">
+          <div class="step-number">Paso 2</div>
+          <h3>Decisión</h3>
+          <p>Te devolvemos qué decisión-negocio mueve más caja:</p>
+          <ul class="step-list">
+            <li>Pricing修改</li>
+            <li>Mix de productos</li>
+            <li>Canales a escalar</li>
+            <li>Ritmo de inversión</li>
+          </ul>
+        </div>
+        <div class="step">
+          <div class="step-number">Paso 3</div>
+          <h3>Implementación</h3>
+          <p>Activamos las palancas que decida:</p>
+          <ul class="step-list">
+            <li>Paid media (Meta/Google)</li>
+            <li>Automatización (n8n)</li>
+            <li>Retention flows</li>
+            <li>Reporting real-time</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="different">
+        <h2>Por qué somos diferentes</h2>
+        <div class="different-grid">
+          <div class="different-item">
+            <div class="different-icon">👤</div>
+            <div>
+              <h4>Sin cuenta managers</h4>
+              <p>Hablas directamente con Pablo (paid media) o Jorge (tech). No hay intermediarios.</p>
+            </div>
+          </div>
+          <div class="different-item">
+            <div class="different-icon">📊</div>
+            <div>
+              <h4>Diagnóstico de negocio</h4>
+              <p>No solo miramos cuentas de ads. Analizamos tu P&L, tu cash, tu unit economics.</p>
+            </div>
+          </div>
+          <div class="different-item">
+            <div class="different-icon">🎯</div>
+            <div>
+              <h4>Una conversación, dos brains</h4>
+              <p>Donde otras agencias separan marketing y tech, aquí Pablo y Jorge lo aplican juntos.</p>
+            </div>
+          </div>
+          <div class="different-item">
+            <div class="different-icon">⚡</div>
+            <div>
+              <h4>Ad-hoc, no playbooks</h4>
+              <p>Cada cliente recibe diseño personalizado. No usamos plantillas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="cta-box" id="contacto">
+        <h2>Empezamos?</h2>
+        <p>Primera llamada: análisis de tu situación real. Sin compromiso.</p>
+        <a href="mailto:contact@daybydayconsulting.com?subject=Primera llamada" class="cta-button">Programar Llamada</a>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="footer-logo">DayByDay Consulting</div>
+      <div class="footer-links">
+        <a href="/">Inicio</a>
+        <a href="/problema.html">Problema</a>
+        <a href="/como-trabajamos.html">Cómo Trabajamos</a>
+        <a href="/resultados.html">Resultados</a>
+        <a href="/growth-partner.html">Growth Partner</a>
+      </div>
+      <p class="footer-copy">© 2026 DayByDay Consulting. Madrid.</p>
+    </div>
+  </footer>
+</body>
+</html>

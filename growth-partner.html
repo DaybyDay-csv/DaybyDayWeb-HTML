@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Growth Partner España | DayByDay Consulting</title>
+  <meta name="description" content="Growth Partner para D2C en España. No somos agencia: somos socios de crecimiento. Paid media + automatización tech en una conversación.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; color: #fafafa; background: #050507; min-height: 100vh; }
+    :root { --bg: #050507; --bg-secondary: #0e0e11; --bg-tertiary: #141418; --border: #27272a; --text: #fafafa; --text-secondary: #a1a1a6; --text-muted: #71717a; --gradient-start: #6366f1; --gradient-end: #a855f7; --glow: rgba(99, 102, 241, 0.15); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .section { padding: 6rem 0; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5, 5, 7, 0.8); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    nav .container { display: flex; justify-content: space-between; align-items: center; height: 72px; }
+    .nav-logo { font-size: 1.25rem; font-weight: 700; color: var(--text); text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { padding: 0.625rem 1.25rem; background: var(--text); color: var(--bg); font-size: 0.875rem; font-weight: 600; border-radius: 6px; text-decoration: none; }
+    .hero { padding: 12rem 0 6rem; text-align: center; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 50% at 50% 0%, var(--glow) 0%, transparent 60%); }
+    .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.375rem 0.875rem; background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: 9999px; font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 2rem; }
+    .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
+    .hero p { font-size: 1.25rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto; }
+    .definition { margin-top: 4rem; padding: 2.5rem; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; }
+    .definition h2 { font-size: 1.5rem; margin-bottom: 1.5rem; }
+    .definition-content { display: grid; gap: 2rem; }
+    @media (min-width: 768px) { .definition-content { grid-template-columns: 1fr 1fr; } }
+    .vs-item { padding: 1.5rem; background: var(--bg-tertiary); border-radius: 12px; }
+    .vs-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
+    .vs-agencia .vs-label { color: #ef4444; }
+    .vs-partner .vs-label { color: #22c55e; }
+    .vs-item h3 { font-size: 1.125rem; margin-bottom: 0.75rem; }
+    .vs-item ul { list-style: none; }
+    .vs-item li { color: var(--text-secondary); font-size: 0.9rem; padding-left: 1.25rem; position: relative; margin-bottom: 0.5rem; }
+    .vs-item li::before { content: '×'; position: absolute; left: 0; color: #ef4444; font-weight: 700; }
+    .vs-partner li::before { content: '✓'; color: #22c55e; }
+    .two-founders { margin-top: 4rem; }
+    .two-founders h2 { font-size: 1.75rem; margin-bottom: 2rem; text-align: center; }
+    .founders-grid { display: grid; gap: 1.5rem; }
+    @media (min-width: 768px) { .founders-grid { grid-template-columns: repeat(2, 1fr); } }
+    .founder-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; }
+    .founder-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; }
+    .founder-name { font-size: 1.25rem; font-weight: 700; }
+    .founder-role { font-size: 0.875rem; color: var(--text-secondary); }
+    .founder-avatar { width: 56px; height: 56px; background: var(--bg-tertiary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+    .founder-bio p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem; }
+    .founder-link { color: var(--text); font-size: 0.875rem; }
+    .value-props { margin-top: 4rem; }
+    .value-props h2 { font-size: 1.75rem; margin-bottom: 2rem; text-align: center; }
+    .props-grid { display: grid; gap: 1rem; }
+    @media (min-width: 768px) { .props-grid { grid-template-columns: repeat(3, 1fr); } }
+    .prop-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; text-align: center; }
+    .prop-icon { width: 56px; height: 56px; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 1rem; }
+    .prop-card h3 { font-size: 1.125rem; margin-bottom: 0.75rem; }
+    .prop-card p { color: var(--text-secondary); font-size: 0.9rem; }
+    .cta-box { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 3rem; text-align: center; margin-top: 4rem; }
+    .cta-box h2 { font-size: 1.75rem; font-weight: 700; margin-bottom: 1rem; }
+    .cta-box p { color: var(--text-secondary); margin-bottom: 2rem; }
+    .cta-button { display: inline-block; padding: 1rem 2rem; background: var(--text); color: var(--bg); font-weight: 600; border-radius: 8px; text-decoration: none; }
+    footer { background: var(--bg-secondary); padding: 4rem 0; border-top: 1px solid var(--border); }
+    footer .container { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.5rem; }
+    .footer-logo { font-size: 1.5rem; font-weight: 700; }
+    .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; }
+    .footer-copy { color: var(--text-muted); font-size: 0.8rem; }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="/" class="nav-logo">DayByDay</a>
+      <ul class="nav-links">
+        <li><a href="/problema.html">Problema</a></li>
+        <li><a href="/como-trabajamos.html">Cómo Trabajamos</a></li>
+        <li><a href="/resultados.html">Resultados</a></li>
+        <li><a href="/growth-partner.html">Growth Partner</a></li>
+      </ul>
+      <a href="#contacto" class="nav-cta">Hablamos</a>
+    </div>
+  </nav>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        Growth Partner
+      </div>
+      <h1>No somos una agencia</h1>
+      <p>Somos socios de crecimiento. Pagamos por resultado, no por horas. Dos fondateurs, cero politics.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="definition">
+        <h2>Agencia vs Growth Partner</h2>
+        <div class="definition-content">
+          <div class="vs-item vs-agencia">
+            <div class="vs-label">Agencia tradicional</div>
+            <h3>Factura por horas / retainer</h3>
+            <ul>
+              <li>Cuenta manager intermediario</li>
+              <li>Execute sin ownership</li>
+              <li>Optimización sin contexto negocio</li>
+              <li>Reportings semanales vacíos</li>
+              <li>Contrato mínimo 6-12 meses</li>
+            </ul>
+          </div>
+          <div class="vs-item vs-partner">
+            <div class="vs-label">Growth Partner</div>
+            <h3>Stake en el resultado</h3>
+            <ul>
+              <li>Hablas directamente con founders</li>
+              <li>Ownership de decisión</li>
+              <li>Diagnóstico integral negocio</li>
+              <li>KPI real: caja generada</li>
+              <li>Sin permanencia</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="two-founders">
+        <h2>Dos fundadores, un objetivo</h2>
+        <div class="founders-grid">
+          <div class="founder-card">
+            <div class="founder-header">
+              <div>
+                <div class="founder-name">Pablo Santirsó</div>
+                <div class="founder-role">Founder · Paid Media</div>
+              </div>
+              <div class="founder-avatar">👨‍💼</div>
+            </div>
+            <div class="founder-bio">
+              <p>Lidera paid media, estrategia y operaciones. 10+ años gestionando budgets de 6 cifras. Portfolio: Garett, Cartri, UFV Postgrado.</p>
+              <p>+156% ROAS caso real documentado.</p>
+              <a href="https://es.linkedin.com/in/pablo-santirso-perez" class="founder-link">LinkedIn →</a>
+            </div>
+          </div>
+          <div class="founder-card">
+            <div class="founder-header">
+              <div>
+                <div class="founder-name">Jorge González</div>
+                <div class="founder-role">CTO · Automation & AI</div>
+              </div>
+              <div class="founder-avatar">👨‍💻</div>
+            </div>
+            <div class="founder-bio">
+              <p>Lidera automatización y agentic AI. Track record: Total Energies, Puig, Robot Factory Orange. Profesor universitario.</p>
+              <p>Especialista n8n, Azure AI, integraciones.</p>
+              <a href="https://www.linkedin.com/in/jorge-gonz%C3%A1lez-p%C3%A9rez-4091541b6/" class="founder-link">LinkedIn →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="value-props">
+        <h2>Nuestra propuesta de valor</h2>
+        <div class="props-grid">
+          <div class="prop-card">
+            <div class="prop-icon">🧠</div>
+            <h3>Diagnóstico honesto</h3>
+            <p>Si no puedes crescer, te lo decimos. No vendemos falsas expectativas.</p>
+          </div>
+          <div class="prop-card">
+            <div class="prop-icon">⚡</div>
+            <h3>Velocidad de decisión</h3>
+            <p>No hay hierarchy. Cuando decides, se ejecuta. No hay cuenta manager puente.</p>
+          </div>
+          <div class="prop-card">
+            <div class="prop-icon">📈</div>
+            <h3> stakes en ROAS</h3>
+            <p>Nuestos incentivos aligned con los tuyos. Creces, cobramos. Simples.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="cta-box" id="contacto">
+        <h2>Listo para escalar?</h2>
+        <p>Primera llamada: 30 min análisis de tu situación real. Sin comercial, sin compromiso.</p>
+        <a href="mailto:contact@daybydayconsulting.com?subject=Discovery call" class="cta-button">_programar Llamada</a>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="footer-logo">DayByDay Consulting</div>
+      <div class="footer-links">
+        <a href="/">Inicio</a>
+        <a href="/problema.html">Problema</a>
+        <a href="/como-trabajamos.html">Cómo Trabajamos</a>
+        <a href="/resultados.html">Resultados</a>
+        <a href="/growth-partner.html">Growth Partner</a>
+      </div>
+      <p class="footer-copy">© 2026 DayByDay Consulting. Madrid.</p>
+    </div>
+  </footer>
+</body>
+</html>

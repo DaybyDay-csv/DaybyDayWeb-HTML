@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resultados Reales | DayByDay Consulting</title>
+  <meta name="description" content="+156% ROAS en 90 días. CPA 4.8€. 264K€ gestionados. Casos reales documentados, no estimaciones.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; color: #fafafa; background: #050507; min-height: 100vh; }
+    :root { --bg: #050507; --bg-secondary: #0e0e11; --bg-tertiary: #141418; --border: #27272a; --text: #fafafa; --text-secondary: #a1a1a6; --text-muted: #71717a; --gradient-start: #6366f1; --gradient-end: #a855f7; --glow: rgba(99, 102, 241, 0.15); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .section { padding: 6rem 0; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5, 5, 7, 0.8); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    nav .container { display: flex; justify-content: space-between; align-items: center; height: 72px; }
+    .nav-logo { font-size: 1.25rem; font-weight: 700; color: var(--text); text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { padding: 0.625rem 1.25rem; background: var(--text); color: var(--bg); font-size: 0.875rem; font-weight: 600; border-radius: 6px; text-decoration: none; }
+    .hero { padding: 12rem 0 6rem; text-align: center; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 50% at 50% 0%, var(--glow) 0%, transparent 60%); }
+    .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.375rem 0.875rem; background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: 9999px; font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 2rem; }
+    .hero-badge-dot { width: 6px; height: 6px; background: #22c55e; border-radius: 50%; }
+    .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
+    .hero p { font-size: 1.25rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto; }
+    .stats-grid { display: grid; gap: 1.5rem; }
+    @media (min-width: 768px) { .stats-grid { grid-template-columns: repeat(4, 1fr); } }
+    .stat-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; text-align: center; }
+    .stat-value { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0.5rem; }
+    .stat-label { color: var(--text-secondary); font-size: 0.9rem; }
+    .cases { margin-top: 4rem; }
+    .cases h2 { font-size: 1.75rem; margin-bottom: 2rem; text-align: center; }
+    .case-grid { display: grid; gap: 1.5rem; }
+    @media (min-width: 768px) { .case-grid { grid-template-columns: repeat(3, 1fr); } }
+    .case-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; }
+    .case-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+    .case-logo { font-size: 1.25rem; font-weight: 700; }
+    .case-tag { font-size: 0.75rem; padding: 0.25rem 0.75rem; background: var(--bg-tertiary); border-radius: 9999px; color: var(--text-secondary); }
+    .case-metrics { margin-bottom: 1.5rem; }
+    .case-metric { display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid var(--border); }
+    .case-metric:last-child { border-bottom: none; }
+    .case-metric-label { color: var(--text-secondary); }
+    .case-metric-value { font-weight: 600; }
+    .case-desc { color: var(--text-secondary); font-size: 0.9rem; }
+    .garantia { margin-top: 4rem; padding: 2rem; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; text-align: center; }
+    .garantia h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+    .garantia p { color: var(--text-secondary); }
+    .cta-box { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 3rem; text-align: center; margin-top: 4rem; }
+    .cta-box h2 { font-size: 1.75rem; font-weight: 700; margin-bottom: 1rem; }
+    .cta-box p { color: var(--text-secondary); margin-bottom: 2rem; }
+    .cta-button { display: inline-block; padding: 1rem 2rem; background: var(--text); color: var(--bg); font-weight: 600; border-radius: 8px; text-decoration: none; }
+    footer { background: var(--bg-secondary); padding: 4rem 0; border-top: 1px solid var(--border); }
+    footer .container { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.5rem; }
+    .footer-logo { font-size: 1.5rem; font-weight: 700; }
+    .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; }
+    .footer-copy { color: var(--text-muted); font-size: 0.8rem; }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="/" class="nav-logo">DayByDay</a>
+      <ul class="nav-links">
+        <li><a href="/problema.html">Problema</a></li>
+        <li><a href="/como-trabajamos.html">Cómo Trabajamos</a></li>
+        <li><a href="/resultados.html">Resultados</a></li>
+        <li><a href="/growth-partner.html">Growth Partner</a></li>
+      </ul>
+      <a href="#contacto" class="nav-cta">Hablamos</a>
+    </div>
+  </nav>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Casos reales
+      </div>
+      <h1>Resultados</h1>
+      <p>No estimaciones. No proyecciones. Datos reales de clientes que facturan.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value">+156%</div>
+          <div class="stat-label">ROAS en 90 días</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">4,8€</div>
+          <div class="stat-label">CPA Meta Ads</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">10,35%</div>
+          <div class="stat-label">CTR Google Ads</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">264K€</div>
+          <div class="stat-label">Gestionados</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="cases">
+        <h2>Casos documentados</h2>
+        <div class="case-grid">
+          <div class="case-card">
+            <div class="case-card-header">
+              <span class="case-logo">Garett</span>
+              <span class="case-tag">eCommerce Moda</span>
+            </div>
+            <div class="case-metrics">
+              <div class="case-metric">
+                <span class="case-metric-label">Inversión Meta</span>
+                <span class="case-metric-value">264.712€</span>
+              </div>
+              <div class="case-metric">
+                <span class="case-metric-label">CPA</span>
+                <span class="case-metric-value">4,8€</span>
+              </div>
+              <div class="case-metric">
+                <span class="case-metric-label">Ventas</span>
+                <span class="case-metric-value">55.148</span>
+              </div>
+            </div>
+            <p class="case-desc">Expansión a España con paid media. Crecimiento de 0 a 55K ventas en 8 meses.</p>
+          </div>
+          <div class="case-card">
+            <div class="case-card-header">
+              <span class="case-logo">Evercreate</span>
+              <span class="case-tag">Universidad</span>
+            </div>
+            <div class="case-metrics">
+              <div class="case-metric">
+                <span class="case-metric-label">Google Ads</span>
+                <span class="case-metric-value">253.679€</span>
+              </div>
+              <div class="case-metric">
+                <span class="case-metric-label">CTR</span>
+                <span class="case-metric-value">10,35%</span>
+              </div>
+              <div class="case-metric">
+                <span class="case-metric-label">Leads</span>
+                <span class="case-metric-value">2.847</span>
+              </div>
+            </div>
+            <p class="case-desc">Universidad privada. Campañas Search + Display con alta intención.</p>
+          </div>
+          <div class="case-card">
+            <div class="case-card-header">
+              <span class="case-logo">Aras Life Plus</span>
+              <span class="case-tag">Automación</span>
+            </div>
+            <div class="case-metrics">
+              <div class="case-metric">
+                <span class="case-metric-label">Proceso</span>
+                <span class="case-metric-value">100% aut.</span>
+              </div>
+              <div class="case-metric">
+                <span class="case-metric-label">Tiempo venta</span>
+                <span class="case-metric-value">-70%</span>
+              </div>
+              <div class="case-metric">
+                <span class="case-metric-label">Ticket medio</span>
+                <span class="case-metric-value">+25%</span>
+              </div>
+            </div>
+            <p class="case-desc">Shopify + WhatsApp + n8n. Proceso de ventas automatizado.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="garantia">
+        <h3>Garantía</h3>
+        <p>Si no hay mejora en 90 días, auditoría sin coste. Sin permanencias, sin letra pequeña.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="cta-box" id="contacto">
+        <h2>Tu caso?</h2>
+        <p>Reversión de resultados requiere datos reales. Primera llamada sin compromiso.</p>
+        <a href="mailto:contact@daybydayconsulting.com?subject=Caso demo" class="cta-button">Hablar con Pablo</a>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="footer-logo">DayByDay Consulting</div>
+      <div class="footer-links">
+        <a href="/">Inicio</a>
+        <a href="/problema.html">Problema</a>
+        <a href="/como-trabajamos.html">Cómo Trabajamos</a>
+        <a href="/resultados.html">Resultados</a>
+        <a href="/growth-partner.html">Growth Partner</a>
+      </div>
+      <p class="footer-copy">© 2026 DayByDay Consulting. Madrid.</p>
+    </div>
+  </footer>
+</body>
+</html>
