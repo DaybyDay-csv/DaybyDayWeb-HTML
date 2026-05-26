@@ -1,121 +1,130 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Servicios | DayByDay Consulting</title>
-  <meta name="description" content="Servicios de paid media y automatización para eCommerce D2C. Meta Ads, Google Ads, estrategia de growth.">
-  <meta name="robots" content="index, follow">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1a1a1a; background: #fff; }
-    header { background: #fff; border-bottom: 1px solid #e5e5e5; padding: 1rem 2rem; position: sticky; top: 0; }
-    nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-size: 1.5rem; font-weight: 700; color: #1a1a1a; text-decoration: none; }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a { color: #666; text-decoration: none; font-weight: 500; }
-    .nav-links a:hover { color: #1a1a1a; }
-    main { max-width: 800px; margin: 0 auto; padding: 4rem 2rem; }
-    h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-    h2 { font-size: 1.75rem; margin: 2rem 0 1rem; border-bottom: 2px solid #1a1a1a; padding-bottom: 0.5rem; }
-    .service { margin: 2rem 0; }
-    .service h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
-    .service p { color: #666; }
-    ul { margin: 1rem 0; padding-left: 1.5rem; }
-    li { margin-bottom: 0.5rem; color: #555; }
-    .cta-box { background: #f5f5f5; padding: 2rem; border-radius: 8px; margin-top: 3rem; }
-    .cta-box h3 { margin-bottom: 1rem; }
-    .cta { display: inline-block; background: #1a1a1a; color: #fff; padding: 1rem 2rem; text-decoration: none; border-radius: 4px; font-weight: 600; }
-    footer { background: #f5f5f5; padding: 2rem; text-align: center; margin-top: 4rem; }
-  </style>
-</head>
-<body>
-
   <nav class="main-nav" style="background:rgba(5,5,7,0.95);backdrop-filter:blur(12px);border-bottom:1px solid #27272a;position:fixed;top:0;left:0;right:0;z-index:100;">
     <div style="max-width:1100px;margin:0 auto;padding:0 1.5rem;display:flex;justify-content:space-between;align-items:center;height:64px;">
       <a href="/" style="font-size:1.25rem;font-weight:700;color:#fafafa;text-decoration:none;">DayByDay</a>
       <ul style="display:flex;gap:1.25rem;list-style:none;">
           <li><a href="/problema.html" style="color:#a1a1a6;text-decoration:none;font-size:0.9rem;">Problema</a></li>
-          <li><a href="/resultados.html" style="color:#a1a1a6;text-decoration:none;font-size:0.9rem;">Resultados</a></li>
-          <li><a href="/meta-ads.html" style="color:#a1a1a6;text-decoration:none;font-size:0.9rem;">Paid Media</a></li>
-          <li><a href="/growth-strategy.html" style="color:#a1a1a6;text-decoration:none;font-size:0.9rem;">Growth</a></li>
-          <li><a href="/automatizacion.html" style="color:#a1a1a6;text-decoration:none;font-size:0.9rem;">Automation</a></li>
-          <li><a href="/analytics.html" style="color:#a1a1a6;text-decoration:none;font-size:0.9rem;">Analytics</a></li>
-          <li><a href="/agentic-ai.html" style="color:#a1a1a6;text-decoration:none;font-size:0.9rem;">AI</a></li>
+          <li><a href="/como-trabajamos.html" style="color:#a1a1a6;text-decoration:none;font-size:0.9rem;">Cómo Trabajamos</a></li>
+          <li><a href="/resultados.html" style="color:#fafafa;text-decoration:none;font-size:0.9rem;font-weight:600;">Resultados</a></li>
           <li><a href="/blog.html" style="color:#a1a1a6;text-decoration:none;font-size:0.9rem;">Blog</a></li>
       </ul>
+      <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')" style="background:none;border:1px solid #27272a;border-radius:8px;padding:0.5rem;cursor:pointer;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fafafa" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
     </div>
   </nav>
   <div style="height:64px;"></div>
 
-
-  <main>
-    <h1>Nuestros Servicios</h1>
-    <p>Combinamos paid media + automatización. Dos cerebros para tu crecimiento.</p>
-    
-    <section>
-      <h2>Paid Media</h2>
-      
-      <div class="service">
-        <h3>Meta Ads</h3>
-        <p>Campañas de conversiÃ³n, catalogo, retargeting. Setup completo con CAPI.</p>
-        <ul>
-          <li>Audiencia + configuraciÃ³n</li>
-          <li>Creatives strategy</li>
-          <li>Conversion API</li>
-          <li>OptimizaciÃ³n semanal</li>
-        </ul>
-      </div>
-      
-      <div class="service">
-        <h3>Google Ads</h3>
-        <p>Search, Shopping, Performance Max.</p>
-        <ul>
-          <li>Setup campaigns</li>
-          <li>Keyword research</li>
-          <li> Shopping feeds</li>
-          <li> Remarketing</li>
-        </ul>
-      </div>
-    </section>
-    
-    <section>
-      <h2>AutomatizaciÃ³n</h2>
-      
-      <div class="service">
-        <h3>n8n Workflows</h3>
-        <p>Automatizaciones personalizadas:</p>
-        <ul>
-          <li>Notificaciones Slack/Telegram</li>
-          <li>Sync pedidos</li>
-          <li> Abandoned cart</li>
-          <li>Reporting automÃ¡tico</li>
-        </ul>
-      </div>
-      
-      <div class="service">
-        <h3>Data & Analytics</h3>
-        <ul>
-          <li>GA4 setup</li>
-          <li>GTM config</li>
-          <li>Dashboards custom</li>
-          <li>AtribuciÃ³n multi-touch</li>
-        </ul>
-      </div>
-    </section>
-    
-    <section>
-      <h2>Growth Strategy</h2>
-      <p>No solo ejecutamos. Analizamos-tu modelo de negocio y proponemos palancas de crecimiento. Scaling, internationalization, partnerships.</p>
-    </section>
-    
-    <div class="cta-box">
-      <h3>Â¿Te interesa?</h3>
-      <a href="mailto:contact@daybydayconsulting.com" class="cta">Hablamos</a>
+  <!-- Mobile Navigation -->
+  <div id="mobile-nav" class="mobile-nav" style="display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:rgba(5,5,7,0.98);backdrop-filter:blur(20px);z-index:999;overflow-y:auto;padding:1.5rem;">
+    <div style="margin-bottom:1.5rem;">
+      <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:#71717a;margin-bottom:0.75rem;">Navegación</div>
+      <a href="/" style="display:block;padding:0.75rem 0;color:#a1a1a6;text-decoration:none;border-bottom:1px solid #27272a;font-size:1rem;">Inicio</a>
+      <a href="/problema.html" style="display:block;padding:0.75rem 0;color:#a1a1a6;text-decoration:none;border-bottom:1px solid #27272a;font-size:1rem;">Problema</a>
+      <a href="/como-trabajamos.html" style="display:block;padding:0.75rem 0;color:#a1a1a6;text-decoration:none;border-bottom:1px solid #27272a;font-size:1rem;">Cómo Trabajamos</a>
+      <a href="/resultados.html" style="display:block;padding:0.75rem 0;color:#a1a1a6;text-decoration:none;border-bottom:1px solid #27272a;font-size:1rem;">Resultados</a>
+      <a href="/blog.html" style="display:block;padding:0.75rem 0;color:#a1a1a6;text-decoration:none;border-bottom:1px solid #27272a;font-size:1rem;">Blog</a>
     </div>
-  </main>
-  <footer>
-    <p>Â© 2026 DayByDay Consulting. Madrid.</p>
+    <div style="margin-bottom:1.5rem;">
+      <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:#71717a;margin-bottom:0.75rem;">Servicios</div>
+      <a href="/meta-ads.html" style="display:block;padding:0.75rem 0;color:#a1a1a6;text-decoration:none;border-bottom:1px solid #27272a;font-size:1rem;">Meta Ads</a>
+      <a href="/google-ads.html" style="display:block;padding:0.75rem 0;color:#a1a1a6;text-decoration:none;border-bottom:1px solid #27272a;font-size:1rem;">Google Ads</a>
+      <a href="/growth-strategy.html" style="display:block;padding:0.75rem 0;color:#a1a1a6;text-decoration:none;border-bottom:1px solid #27272a;font-size:1rem;">Growth Strategy</a>
+      <a href="/automatizacion.html" style="display:block;padding:0.75rem 0;color:#a1a1a6;text-decoration:none;border-bottom:1px solid #27272a;font-size:1rem;">Automation</a>
+      <a href="/analytics.html" style="display:block;padding:0.75rem 0;color:#a1a1a6;text-decoration:none;border-bottom:1px solid #27272a;font-size:1rem;">Analytics</a>
+      <a href="/agentic-ai.html" style="display:block;padding:0.75rem 0;color:#a1a1a6;text-decoration:none;border-bottom:1px solid #27272a;font-size:1rem;">Agentic AI</a>
+    </div>
+    <div>
+      <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:#71717a;margin-bottom:0.75rem;">Stack</div>
+      <a href="/tech/meta-ads.html" style="display:block;padding:0.5rem 0;color:#71717a;text-decoration:none;font-size:0.9rem;">Meta Ads</a>
+      <a href="/tech/google-ads-tech.html" style="display:block;padding:0.5rem 0;color:#71717a;text-decoration:none;font-size:0.9rem;">Google Ads</a>
+      <a href="/tech/ga4.html" style="display:block;padding:0.5rem 0;color:#71717a;text-decoration:none;font-size:0.9rem;">GA4</a>
+      <a href="/tech/n8n.html" style="display:block;padding:0.5rem 0;color:#71717a;text-decoration:none;font-size:0.9rem;">n8n</a>
+    </div>
+  </div>
+
+  <!-- Servicios Hero -->
+  <section style="padding:8rem 0 4rem;background:linear-gradient(180deg,#050507 0%,#0e0e11 100%);">
+    <div style="max-width:900px;margin:0 auto;padding:0 1.5rem;text-align:center;">
+      <h1 style="font-size:clamp(2rem,5vw,3.5rem);font-weight:800;color:#fafafa;margin-bottom:1rem;">Nuestros Servicios</h1>
+      <p style="font-size:1.15rem;color:#a1a1a6;max-width:600px;margin:0 auto;">Paid Media + Growth + Automation + Analytics. Todo lo que necesitas para escalar tu D2C.</p>
+    </div>
+  </section>
+
+  <!-- Servicios Grid -->
+  <section style="padding:4rem 0;background:#0e0e11;">
+    <div style="max-width:1100px;margin:0 auto;padding:0 1.5rem;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;">
+        <!-- Paid Media -->
+        <a href="/meta-ads.html" style="display:block;background:#141418;border:1px solid #27272a;border-radius:12px;padding:1.5rem;text-decoration:none;transition:border-color 0.2s;">
+          <div style="width:48px;height:48px;background:linear-gradient(135deg,#6366f1,#8b5cf6);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          </div>
+          <h3 style="font-size:1.25rem;font-weight:600;color:#fafafa;margin-bottom:0.5rem;">Paid Media</h3>
+          <p style="color:#a1a1a6;font-size:0.9rem;">Meta Ads, Google Ads, TikTok, LinkedIn. Campañas que convierten.</p>
+        </a>
+        <!-- Growth Strategy -->
+        <a href="/growth-strategy.html" style="display:block;background:#141418;border:1px solid #27272a;border-radius:12px;padding:1.5rem;text-decoration:none;transition:border-color 0.2s;">
+          <div style="width:48px;height:48px;background:linear-gradient(135deg,#10b981,#34d399);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M23 6l-9.5 9.5-5-5L1 18"/></svg>
+          </div>
+          <h3 style="font-size:1.25rem;font-weight:600;color:#fafafa;margin-bottom:0.5rem;">Growth Strategy</h3>
+          <p style="color:#a1a1a6;font-size:0.9rem;">Estrategia de crecimiento. De 100K a 1M. Scaling con ROAS.</p>
+        </a>
+        <!-- Automation -->
+        <a href="/automatizacion.html" style="display:block;background:#141418;border:1px solid #27272a;border-radius:12px;padding:1.5rem;text-decoration:none;transition:border-color 0.2s;">
+          <div style="width:48px;height:48px;background:linear-gradient(135deg,#f59e0b,#fbbf24);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83"/></svg>
+          </div>
+          <h3 style="font-size:1.25rem;font-weight:600;color:#fafafa;margin-bottom:0.5rem;">Automation</h3>
+          <p style="color:#a1a1a6;font-size:0.9rem;">n8n, CAPI, integrations. Automa tu marketing.</p>
+        </a>
+        <!-- Analytics -->
+        <a href="/analytics.html" style="display:block;background:#141418;border:1px solid #27272a;border-radius:12px;padding:1.5rem;text-decoration:none;transition:border-color 0.2s;">
+          <div style="width:48px;height:48px;background:linear-gradient(135deg,#3b82f6,#60a5fa);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          </div>
+          <h3 style="font-size:1.25rem;font-weight:600;color:#fafafa;margin-bottom:0.5rem;">Analytics</h3>
+          <p style="color:#a1a1a6;font-size:0.9rem;">GA4, GTM, dashboards. Mide todo. Optimiza con datos.</p>
+        </a>
+        <!-- Agentic AI -->
+        <a href="/agentic-ai.html" style="display:block;background:#141418;border:1px solid #27272a;border-radius:12px;padding:1.5rem;text-decoration:none;transition:border-color 0.2s;">
+          <div style="width:48px;height:48px;background:linear-gradient(135deg,#ec4899,#f472b6);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3 style="font-size:1.25rem;font-weight:600;color:#fafafa;margin-bottom:0.5rem;">Agentic AI</h3>
+          <p style="color:#a1a1a6;font-size:0.9rem;">AI Agents, Azure, automatizacion inteligente.</p>
+        </a>
+        <!-- Tech Stack -->
+        <a href="/tech/meta-ads.html" style="display:block;background:#141418;border:1px solid #27272a;border-radius:12px;padding:1.5rem;text-decoration:none;transition:border-color 0.2s;">
+          <div style="width:48px;height:48px;background:linear-gradient(135deg,#6366f1,#a78bfa);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+          </div>
+          <h3 style="font-size:1.25rem;font-weight:600;color:#fafafa;margin-bottom:0.5rem;">Stack Tech</h3>
+          <p style="color:#a1a1a6;font-size:0.9rem;">Shopify, n8n, GA4, CAPI, Azure. Nuestra tecnología.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack Section -->
+  <section style="padding:4rem 0;background:#050507;">
+    <div style="max-width:1100px;margin:0 auto;padding:0 1.5rem;">
+      <h2 style="font-size:1.75rem;font-weight:700;color:#fafafa;margin-bottom:2rem;text-align:center;">Stack Tecnológico</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;">
+        <a href="/tech/meta-ads.html" style="padding:0.5rem 1rem;background:#141418;border:1px solid #27272a;border-radius:8px;color:#a1a1a6;text-decoration:none;font-size:0.875rem;">Meta Ads</a>
+        <a href="/tech/google-ads-tech.html" style="padding:0.5rem 1rem;background:#141418;border:1px solid #27272a;border-radius:8px;color:#a1a1a6;text-decoration:none;font-size:0.875rem;">Google Ads</a>
+        <a href="/tech/shopify.html" style="padding:0.5rem 1rem;background:#141418;border:1px solid #27272a;border-radius:8px;color:#a1a1a6;text-decoration:none;font-size:0.875rem;">Shopify</a>
+        <a href="/tech/ga4.html" style="padding:0.5rem 1rem;background:#141418;border:1px solid #27272a;border-radius:8px;color:#a1a1a6;text-decoration:none;font-size:0.875rem;">GA4</a>
+        <a href="/tech/gtm.html" style="padding:0.5rem 1rem;background:#141418;border:1px solid #27272a;border-radius:8px;color:#a1a1a6;text-decoration:none;font-size:0.875rem;">GTM</a>
+        <a href="/tech/n8n.html" style="padding:0.5rem 1rem;background:#141418;border:1px solid #27272a;border-radius:8px;color:#a1a1a6;text-decoration:none;font-size:0.875rem;">n8n</a>
+        <a href="/tech/capi.html" style="padding:0.5rem 1rem;background:#141418;border:1px solid #27272a;border-radius:8px;color:#a1a1a6;text-decoration:none;font-size:0.875rem;">CAPI</a>
+        <a href="/tech/azure.html" style="padding:0.5rem 1rem;background:#141418;border:1px solid #27272a;border-radius:8px;color:#a1a1a6;text-decoration:none;font-size:0.875rem;">Azure</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#0e0e11;padding:3rem 0;text-align:center;border-top:1px solid #27272a;">
+    <p style="color:#71717a;font-size:0.875rem;">© 2026 DayByDay Consulting</p>
   </footer>
 </body>
 </html>

@@ -64,8 +64,28 @@
           <li><a href="/servicios.html" style="color:#a1a1a6;text-decoration:none;font-size:0.9rem;">Servicios</a></li>
           <li><a href="/blog.html" style="color:#a1a1a6;text-decoration:none;font-size:0.9rem;">Blog</a></li>
       </ul>
+      <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')" style="background:none;border:1px solid #27272a;border-radius:8px;padding:0.5rem;cursor:pointer;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fafafa" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
     </div>
   </nav>
+
+  <!-- Mobile Navigation -->
+  <div id="mobile-nav" class="mobile-nav" style="display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:rgba(5,5,7,0.98);backdrop-filter:blur(20px);z-index:999;overflow-y:auto;padding:1.5rem;">
+    <div style="margin-bottom:1.5rem;">
+      <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:#71717a;margin-bottom:0.75rem;">Navegación</div>
+      <a href="/" style="display:block;padding:0.75rem 0;color:#a1a1a6;text-decoration:none;border-bottom:1px solid #27272a;">Inicio</a>
+      <a href="/servicios.html" style="display:block;padding:0.75rem 0;color:#fafafa;text-decoration:none;border-bottom:1px solid #27272a;font-weight:600;">Servicios</a>
+      <a href="/blog.html" style="display:block;padding:0.75rem 0;color:#a1a1a6;text-decoration:none;border-bottom:1px solid #27272a;">Blog</a>
+    </div>
+    <div>
+      <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:#71717a;margin-bottom:0.75rem;">Todos los Stacks</div>
+      <a href="/tech/meta-ads.html" style="display:block;padding:0.5rem 0;color:#71717a;text-decoration:none;">Meta Ads</a>
+      <a href="/tech/google-ads-tech.html" style="display:block;padding:0.5rem 0;color:#71717a;text-decoration:none;">Google Ads</a>
+      <a href="/tech/ga4.html" style="display:block;padding:0.5rem 0;color:#71717a;text-decoration:none;">GA4</a>
+      <a href="/tech/n8n.html" style="display:block;padding:0.5rem 0;color:#71717a;text-decoration:none;">n8n</a>
+    </div>
+  </div>
   <div style="height:64px;"></div>
 
   <!-- Breadcrumb -->

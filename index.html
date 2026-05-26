@@ -431,8 +431,43 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1rem 2
             </span>
           </span>
         </button>
+        <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
     </div>
   </nav>
+
+  <!-- Mobile Navigation -->
+  <div id="mobile-nav" class="mobile-nav">
+    <div class="mobile-nav-section">
+      <div class="mobile-nav-title">Navegación</div>
+      <a href="/" class="mobile-nav-link">Inicio</a>
+      <a href="/problema.html" class="mobile-nav-link">Problema</a>
+      <a href="/como-trabajamos.html" class="mobile-nav-link">Cómo Trabajamos</a>
+      <a href="/resultados.html" class="mobile-nav-link">Resultados</a>
+      <a href="/blog.html" class="mobile-nav-link">Blog</a>
+    </div>
+    <div class="mobile-nav-section">
+      <div class="mobile-nav-title">Servicios</div>
+      <a href="/meta-ads.html" class="mobile-nav-link">Meta Ads</a>
+      <a href="/google-ads.html" class="mobile-nav-link">Google Ads</a>
+      <a href="/growth-strategy.html" class="mobile-nav-link">Growth Strategy</a>
+      <a href="/automatizacion.html" class="mobile-nav-link">Automation</a>
+      <a href="/analytics.html" class="mobile-nav-link">Analytics</a>
+      <a href="/agentic-ai.html" class="mobile-nav-link">Agentic AI</a>
+    </div>
+    <div class="mobile-nav-section">
+      <div class="mobile-nav-title">Stack Tecnológico</div>
+      <a href="/tech/meta-ads.html" class="mobile-nav-link mobile-nav-sub">Meta Ads</a>
+      <a href="/tech/google-ads-tech.html" class="mobile-nav-link mobile-nav-sub">Google Ads</a>
+      <a href="/tech/shopify.html" class="mobile-nav-link mobile-nav-sub">Shopify</a>
+      <a href="/tech/ga4.html" class="mobile-nav-link mobile-nav-sub">GA4</a>
+      <a href="/tech/gtm.html" class="mobile-nav-link mobile-nav-sub">GTM</a>
+      <a href="/tech/n8n.html" class="mobile-nav-link mobile-nav-sub">n8n</a>
+      <a href="/tech/capi.html" class="mobile-nav-link mobile-nav-sub">CAPI</a>
+      <a href="/tech/azure.html" class="mobile-nav-link mobile-nav-sub">Azure AI</a>
+    </div>
+  </div>
 
   <!-- Hero -->
   <section class="hero">
