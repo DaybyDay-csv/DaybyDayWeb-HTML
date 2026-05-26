@@ -19,15 +19,33 @@
   });
 })();
 
+// Sidebar Toggle
+function toggleSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.querySelector('.file-tree-overlay');
+  sidebar.classList.toggle('open');
+  overlay.classList.toggle('display');
+}
+
+// Close sidebar on escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    const sidebar = document.getElementById('sidebar');
+    if (sidebar && sidebar.classList.contains('open')) {
+      toggleSidebar();
+    }
+  }
+});
+
 // Scroll Animations - Intersection Observer
 (function() {
-  const observerOptions = {
+  var observerOptions = {
     root: null,
     rootMargin: '0px',
     threshold: 0.1
   };
 
-  const observer = new IntersectionObserver(function(entries) {
+  var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
@@ -35,8 +53,7 @@
     });
   }, observerOptions);
 
-  // Observe all scroll-animate elements
-  var animatedEls = document.querySelectorAll('.scroll-animate, .fade-left, .fade-right, .scale-in');
+  var animatedEls = document.querySelectorAll('.scroll-animate, .story-section, .fade-left, .fade-right, .scale-in');
   animatedEls.forEach(function(el) {
     observer.observe(el);
   });

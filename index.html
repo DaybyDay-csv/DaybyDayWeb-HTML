@@ -126,6 +126,19 @@
     
     /* Nav */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; background: rgba(10, 10, 10, 0.9); backdrop-filter: blur(10px); }
+    /* Adjust main content for sidebar */
+    @media (min-width: 1025px) {
+      .file-tree-sidebar + * nav,
+      .file-tree-sidebar + nav + * {
+        margin-left: 0;
+      }
+    }
+    @media (max-width: 1024px) {
+      .file-tree-sidebar + * nav,
+      .file-tree-sidebar + nav + * {
+        margin-left: 0;
+      }
+    }
     .nav-logo { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); text-decoration: none; }
     .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
     .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
@@ -138,8 +151,112 @@
       .stats-bar { flex-direction: column; gap: 2rem; }
     }
   </style>
+<link rel="stylesheet" href="/css/sidebar.css">
 </head>
 <body>
+  <!-- File Tree Sidebar -->
+  <div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+  <aside class="file-tree-sidebar" id="sidebar">
+    <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+    
+    <div class="file-tree-section">
+      <div class="file-tree-section-title">Secciones</div>
+      <a href="/" class="file-tree-item active">
+        <span class="file-tree-icon">🏠</span>
+        Inicio
+      </a>
+      <a href="/problema.html" class="file-tree-item">
+        <span class="file-tree-icon">⚠️</span>
+        Problema
+      </a>
+      <a href="/como-trabajamos.html" class="file-tree-item">
+        <span class="file-tree-icon">⚡</span>
+        Cómo Trabajamos
+      </a>
+      <a href="/resultados.html" class="file-tree-item">
+        <span class="file-tree-icon">📈</span>
+        Resultados
+      </a>
+      <a href="/growth-partner.html" class="file-tree-item">
+        <span class="file-tree-icon">🤝</span>
+        Growth Partner
+      </a>
+    </div>
+    
+    <div class="file-tree-section">
+      <div class="file-tree-section-title">Stack Tecnológico</div>
+      <div class="file-tree-folder">
+        <div class="file-tree-item" onclick="this.parentElement.classList.toggle('expanded')">
+          <span class="file-tree-icon">📊</span>
+          Plataformas Ads
+        </div>
+        <div class="file-tree-children">
+          <a href="/tech/meta-ads.html" class="file-tree-child">Meta Ads</a>
+          <a href="/tech/google-ads-tech.html" class="file-tree-child">Google Ads</a>
+          <a href="/tech/tiktok-ads.html" class="file-tree-child">TikTok Ads</a>
+        </div>
+      </div>
+      <div class="file-tree-folder">
+        <div class="file-tree-item" onclick="this.parentElement.classList.toggle('expanded')">
+          <span class="file-tree-icon">🛒</span>
+          eCommerce
+        </div>
+        <div class="file-tree-children">
+          <a href="/tech/shopify.html" class="file-tree-child">Shopify</a>
+        </div>
+      </div>
+      <div class="file-tree-folder">
+        <div class="file-tree-item" onclick="this.parentElement.classList.toggle('expanded')">
+          <span class="file-tree-icon">📉</span>
+          Analytics
+        </div>
+        <div class="file-tree-children">
+          <a href="/tech/ga4.html" class="file-tree-child">GA4</a>
+          <a href="/tech/gtm.html" class="file-tree-child">GTM</a>
+          <a href="/tech/gsc.html" class="file-tree-child">Search Console</a>
+        </div>
+      </div>
+      <div class="file-tree-folder">
+        <div class="file-tree-item" onclick="this.parentElement.classList.toggle('expanded')">
+          <span class="file-tree-icon">⚙️</span>
+          Automatización
+        </div>
+        <div class="file-tree-children">
+          <a href="/tech/n8n.html" class="file-tree-child">n8n</a>
+          <a href="/tech/capi.html" class="file-tree-child">Conversions API</a>
+        </div>
+      </div>
+      <div class="file-tree-folder">
+        <div class="file-tree-item" onclick="this.parentElement.classList.toggle('expanded')">
+          <span class="file-tree-icon">🤖</span>
+          AI & Cloud
+        </div>
+        <div class="file-tree-children">
+          <a href="/tech/azure.html" class="file-tree-child">Azure AI</a>
+          <a href="/tech/linkedin-ads.html" class="file-tree-child">LinkedIn Ads</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="file-tree-section">
+      <div class="file-tree-section-title">Otros</div>
+      <a href="/blog.html" class="file-tree-item">
+        <span class="file-tree-icon">📝</span>
+        Blog
+      </a>
+      <a href="mailto:contact@daybydayconsulting.com" class="file-tree-item">
+        <span class="file-tree-icon">✉️</span>
+        Contacto
+      </a>
+    </div>
+  </aside>
+  
+  <button class="file-tree-toggle" onclick="toggleSidebar()">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M3 12h18M3 6h18M3 18h18"/>
+    </svg>
+  </button>
+
   <!-- Navigation -->
   <nav>
     <a href="/" class="nav-logo">DayByDay</a>
