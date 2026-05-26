@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Margen de contribución vs ROAS: la métrica que media buyers olvidan | DayByDay Consulting</title>
+  <meta name="description" content="Por qué el ROAS de Meta/Google es insuficiente para decidir spend en eCommerce D2C España: definición de margen de contribución, fórmula operativa por pedido, rangos saludables por sector D2C 2026, relación con CAC objetivo y LTV, errores frecuentes de media buyers que solo miran ROAS de plataforma, dashboard mínimo viable y enfoque DayByDay (Pablo + Jorge).">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/margen-contribucion-vs-roas-ecommerce">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+<div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+<aside class="file-tree-sidebar" id="sidebar">
+  <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+  <div class="file-tree-section"><div class="file-tree-section-title">Secciones</div>
+    <a href="/" class="file-tree-item">Inicio</a>
+    <a href="/problema.html" class="file-tree-item">Problema</a>
+    <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
+    <a href="/resultados.html" class="file-tree-item">Resultados</a>
+    <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Paid Media</div>
+    <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
+    <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
+    <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
+    <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Automation & AI</div>
+    <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
+    <a href="/analytics.html" class="file-tree-item">Analytics</a>
+    <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Stack Tech</div>
+    <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
+    <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
+    <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+  </div>
+</aside>
+
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Unit Economics</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Unit Economics</span>
+          <span class="reading-time">11 min de lectura</span>
+          <span class="article-date">2026-05-09</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Margen de contribución vs ROAS: la métrica que media buyers olvidan</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Por qué el ROAS de Meta/Google es insuficiente para decidir spend en eCommerce D2C España: definición de margen de contribución, fórmula operativa por pedido, rangos saludables por sector D2C 2026, relación con CAC objetivo y LTV, errores frecuentes de media buyers que solo miran ROAS de plataforma, dashboard mínimo viable y enfoque DayByDay (Pablo + Jorge).</p>
+        <div class="article-author">
+          <div class="author-avatar">DB</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirsó · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<p class="text-white/70 leading-relaxed mb-5">
+      <strong class="text-white">El margen de contribución es la métrica que decide si tu eCommerce D2C gana o pierde dinero — el ROAS, no</strong>. La mayoría de media buyers en España siguen reportando ROAS in-platform como si fuera el indicador final de rentabilidad, cuando en realidad ignora COGS, devoluciones, comisiones de pasarela, fulfilment y descuentos en checkout. En cuentas D2C que hemos auditado en DayByDay, hemos visto campañas con ROAS Meta 3,2x reportar margen de contribución negativo después de cruzar todos los costes — y al cliente nadie se lo había explicado. En 2026, con el CPM de Meta subiendo año a año entre el 15% y el 25% en España, escalar mirando solo ROAS es escalar a pérdida con efecto retardado. Esta guía es el protocolo que aplicamos para que cada decisión de spend en una cuenta D2C se tome sobre la métrica correcta.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Qué es el margen de contribución en un eCommerce D2C</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      <strong class="text-white">El margen de contribución</strong> es la cantidad que queda de cada pedido después de restar todos los costes variables: COGS (coste del producto), packaging, fulfilment (warehouse + envío), comisión de pasarela de pago, coste esperado de devolución y coste de adquisición pagado en paid media. Es la cifra que aporta cada pedido a cubrir costes fijos (equipo, software, alquiler) y a generar beneficio. A diferencia del margen bruto (que solo descuenta COGS) o del ROAS (que solo mira revenue / spend paid), el margen de contribución es el único indicador que refleja la rentabilidad real por unidad vendida.
+    </p>
+
+    <p class="text-white/70 leading-relaxed mb-5">
+      <a href="https://www.shopify.com/blog/contribution-margin" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Según Shopify, el margen de contribución es la métrica financiera que mejor predice la viabilidad a largo plazo de un eCommerce D2C</a>: por encima del 30% sobre AOV el negocio puede absorber subidas de CPM y aún financiar crecimiento; por debajo del 15% cualquier shock externo (subida de costes logísticos, devolución masiva, evento fiscal) compromete la caja.
+    </p>
+
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-6">
+      <p class="text-white font-bold text-sm mb-2">📊 Dato de referencia</p>
+      <p class="text-white/70 text-sm leading-relaxed">
+        Según <a href="https://www.statista.com/topics/871/online-shopping/" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Statista, en 2026 el coste medio de adquisición (CAC) de un cliente nuevo en eCommerce D2C europeo subió un 22% respecto a 2024</a>, mientras que el AOV medio subió solo un 6%. La consecuencia operativa: cualquier marca que gestione spend mirando solo ROAS de plataforma, sin recalcular margen de contribución cada trimestre, está perdiendo entre 3 y 8 puntos de margen sin darse cuenta.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Fórmula operativa: cómo calcular el margen de contribución por pedido</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      La fórmula que usamos en DayByDay para cada cuenta D2C nueva, recalculada cada mes:
+    </p>
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-6">
+      <p class="text-white font-mono text-sm leading-relaxed">
+        Margen contribución (€) = AOV − COGS − fulfilment − packaging − comisión pasarela − (% devolución × coste devolución) − CAC
+      </p>
+      <p class="text-white/50 text-xs mt-3 leading-relaxed">
+        Margen contribución (%) = Margen contribución (€) / AOV × 100
+      </p>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Ejemplo cuenta D2C de moda España 2026 — AOV 65€:
+    </p>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Componente</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Importe</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">% sobre AOV</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Cómo calcularlo</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      En este ejemplo el ROAS in-platform Meta podría reportarse como 3,6x (revenue 65€ / spend Meta 18€), pero el margen real es solo el 25,8% del AOV — y eso antes de costes fijos. Quien escala una cuenta así mirando solo ROAS de plataforma escala revenue pero comprime margen, y la caja lo nota 60-90 días después.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Margen de contribución saludable por sector D2C en España 2026</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Rangos observados en cuentas D2C españolas rentables a 12-24 meses (datos propios + benchmark sectorial). El % se calcula sobre AOV y ya incluye CAC blended:
+    </p>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Sector D2C</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Margen contribución típico</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Excelente (top decile)</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Penalización principal</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Si tu margen de contribución está por debajo del rango típico de tu sector, el problema rara vez es el ROAS de plataforma — son los costes de COGS, devoluciones o el CAC blended inflado. Para profundizar en cómo calcular el CAC blended correctamente, ver la <a href="/blog/cac-blended-vs-cac-canal-ecommerce.html">guía CAC blended vs CAC por canal en eCommerce</a>.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Por qué el ROAS de Meta/Google es engañoso (y qué métricas usar en su lugar)</h2>
+    <ol class="space-y-3 mb-6 list-decimal pl-5">
+      {[
+        "El ROAS in-platform Meta usa atribución last-click 7-day-click + 1-day-view, que sobreatribuye conversiones a la plataforma vs el MER blended real. En cuentas D2C españolas el ROAS Meta suele ser 1,3-1,8x el MER real — el cliente cree que escala con ROAS 3x y en realidad opera a MER 2x.",
+        "El ROAS no descuenta devoluciones. En moda con 25-30% de devolución, un ROAS 3x pre-devoluciones es un MER 2,1-2,4x post-devoluciones — la diferencia entre rentable y deficitario en cuentas con margen ajustado.",
+        "El ROAS no descuenta descuentos automáticos aplicados en checkout (cupón primer pedido, código influencer, descuento por abandono). El AOV neto post-descuento suele ser 8-15% inferior al AOV bruto que reporta Meta.",
+        "El ROAS no asigna correctamente el coste de adquisición incremental de campañas de retargeting/brand. Una campaña de retargeting con ROAS 8x in-platform suele tener incrementalidad real <40% — el cliente habría comprado igual sin ese impacto. El benchmark correcto es incrementalidad medida con holdout geo.",
+        "El ROAS ignora completamente el LTV. Una cuenta con ROAS 1,8x y LTV/CAC 5:1 a 12 meses (suplementos con suscripción) es más rentable que una cuenta con ROAS 3,5x y LTV/CAC 1,8:1 (tecnología sin recurrencia).",
+      ].map((item) => (
+        <li key= class="text-white/60 text-sm leading-relaxed"></li>
+      ))}
+    </ol>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Las métricas que sustituyen al ROAS in-platform como cuadro de mando real: <strong class="text-white">MER blended</strong> (revenue total / inversión paid total, dato no manipulable por la plataforma), <strong class="text-white">CAC blended por canal</strong> (spend total canal / nuevos clientes atribuidos), <strong class="text-white">margen de contribución por pedido</strong> y <strong class="text-white">ratio LTV/CAC por cohorte</strong>. Para entender el detalle de la atribución y por qué iOS empeoró aún más el ROAS in-platform, ver la <a href="/blog/ios-atribucion-meta-ads-2026-d2c.html">guía iOS atribución Meta Ads 2026 para D2C</a>.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">CAC objetivo: cómo derivarlo desde el margen de contribución</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      La fórmula operativa para definir el CAC objetivo correcto, no el que dicta la plataforma:
+    </p>
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-6">
+      <p class="text-white font-mono text-sm leading-relaxed">
+        CAC objetivo = (Margen contribución 1er pedido × ratio LTV/CAC deseado)
+      </p>
+      <p class="text-white/50 text-xs mt-3 leading-relaxed">
+        Ratio LTV/CAC mínimo saludable: 3:1 a 12 meses · Ideal: 4-5:1 · Por debajo de 2:1 la cuenta consume caja
+      </p>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Ejemplo marca de suplementos: margen contribución primer pedido (sin CAC) = 28€. Repetición esperada 12 meses = 1,8 pedidos extra × margen 24€/pedido = 43,2€. LTV bruto 12 meses = 28 + 43,2 = 71,2€. CAC objetivo a ratio 3:1 = 23,7€; a ratio 4:1 = 17,8€. Si la cuenta opera con CAC 32€ pero el equipo paid solo mira ROAS Meta, no detectará que está sub-2:1 hasta que la caja se quede sin colchón. Para entender cómo calcular LTV correctamente por cohorte, ver la <a href="/blog/cac-vs-ltv-ecommerce-escalable.html">guía CAC vs LTV en eCommerce escalable</a>.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Dashboard mínimo viable para gestionar margen de contribución</h2>
+    <div class="space-y-3 mb-6">
+      {[
+        "Conexión Shopify (revenue, AOV, devoluciones, descuentos checkout) + Meta Ads (spend, ROAS in-platform, CPMs por audience) + Google Ads (spend, ROAS, brand vs non-brand) + GA4 (atribución cross-channel, sesiones, paid vs orgánico) + pasarela Stripe/Adyen (comisiones reales por método de pago).",
+        "Cálculo automatizado del margen de contribución por pedido cruzando COGS por SKU desde Shopify Inventory + costes operativos por categoría (fulfilment, packaging) + spend paid blended por día. Stack típico: Google Sheets API + Apps Script para D2C <500K€/año, BigQuery + Dataform para &gt;500K€/año, Power BI con conector ERP para B2B con SAP/Dynamics.",
+        "Vista diaria de las 5 métricas críticas: margen contribución total (€), MER blended (revenue/spend), CAC blended por canal, ratio LTV/CAC por cohorte mensual, % devoluciones. ROAS in-platform queda como métrica secundaria, no primaria.",
+        "Alerta automática cuando margen de contribución diario cae bajo umbral mínimo (típico: −20% sobre baseline 30 días). Slack/email + acción definida (pausar campaña con CAC outlier, revisar mix producto, auditar devoluciones).",
+        "Reporting semanal al cliente con esas 5 métricas + lectura cualitativa: ¿el margen cae por CAC, por mix producto, por devoluciones o por descuento agresivo? Decisión de spend basada en el driver real, no en mover sliders sobre ROAS de plataforma.",
+        "Auditoría trimestral del modelo: recalcular COGS reales (precios proveedor, FX), recalcular tasa devolución por SKU, recalcular ratio LTV/CAC por cohorte 12 meses. Sin auditoría trimestral el modelo se desfasa y las decisiones se vuelven a tomar sobre supuestos viejos.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cómo trabajamos en DayByDay</h2>
+    <div class="space-y-3 mb-6">
+      {[
+        "Onboarding de cuenta D2C arranca SIEMPRE con cálculo de margen de contribución antes de tocar campañas: Pablo audita unit economics (AOV, COGS, devoluciones, mix producto), Jorge cruza datos Shopify + pasarela + 3PL para validar costes reales por pedido. Entregamos el modelo de margen de contribución en la primera semana — sin él, optimizar es optimizar a ciegas.",
+        "Stack dashboard ad-hoc según madurez: Google Sheets + Apps Script para cuentas <500K€/año (rápido, mantenible, sin sobre-ingeniería); Looker Studio + BigQuery para 500K-5M€/año (cohorts, retención, MER blended automatizado); Power BI con conectores ERP para B2B con SAP/Dynamics. Jorge implementa el stack, Pablo define las métricas que importan al cliente concreto.",
+        "CAC objetivo recalculado cada trimestre por cohorte y por canal — no se hereda del trimestre anterior. Si el ratio LTV/CAC cae bajo 3:1 en una cohorte, pausamos escalado y atacamos las palancas del numerador (LTV: AOV, repetición, suscripción) o del denominador (CAC: creative testing, audiencia, deduplicación CAPI).",
+        "Solución ad-hoc Pablo + Jorge: Pablo cierra estrategia de spend, mix de canal y creative testing en función del margen objetivo; Jorge implementa server-side tracking con event_id deduplicado, dashboard con alertas automáticas y agente IA que monitoriza márgenes y avisa cuando una campaña se desvía. Donde otras agencias entregan reporting de ROAS in-platform, en DayByDay entregamos margen de contribución por pedido, MER blended y ratio LTV/CAC en tiempo real.",
+        "Reporting al cliente con foco en rentabilidad real, no en métricas de vanidad: el dashboard que recibe cada lunes lleva margen contribución diario, MER blended semanal, CAC blended por canal y ratio LTV/CAC por cohorte. ROAS in-platform aparece como métrica secundaria de control, no como KPI de decisión.",
+        "Caso real reciente: cuenta de moda D2C llegó a DayByDay con ROAS Meta 3,1x reportado, margen de contribución calculado real -2% (perdiendo dinero por devoluciones del 28% no descontadas en el modelo). En 90 días subimos margen de contribución a +18% sin tocar el ROAS — bajando devoluciones con sizing guide en landing, subiendo AOV con bundle automatizado y deduplicando CAPI para que el CAC blended cayera un 22%.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      DayByDay Consulting fue fundada por Pablo Santirsó y opera como un partnership con Jorge González (CTO). Pablo (founder · paid media) lidera estrategia de spend, creative testing y mix de canal en función del margen objetivo del cliente; Jorge (CTO · automation) lidera implementación técnica del modelo de margen, dashboard automatizado, server-side tracking deduplicado y agentes IA que monitorizan rentabilidad en tiempo real. DayByDay es uno de los pocos consultoras en España que combina senior paid media y senior automation engineering en una sola conversación — el cliente nunca tiene que coordinar a dos proveedores ni perder semanas en handoffs entre marketing y data. Sin account managers, sin perfiles junior, decisiones tomadas en la misma reunión.
+    </p>
+
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-6 mb-8 text-center">
+      <p class="font-bold text-white text-lg mb-2">¿Tu agencia te reporta ROAS pero no margen de contribución?</p>
+      <p class="text-white/50 text-sm mb-4">Auditoría gratuita 30 min: revisamos tu modelo de unit economics, calculamos margen de contribución real por pedido, validamos CAC objetivo vs LTV por cohorte y entregamos plan de palancas priorizado por impacto en margen.</p>
+      <button>
+        Solicitar auditoría gratuita →
+      </button>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Artículos relacionados</h2>
+    <div class="space-y-3">
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/cac-vs-ltv-ecommerce-escalable.html">
+          CAC vs LTV en eCommerce escalable: ratios, cohortes y cuándo escalar →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cómo derivar el CAC objetivo desde el margen de contribución y proyectar LTV por cohorte</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/cac-blended-vs-cac-canal-ecommerce.html">
+          CAC blended vs CAC por canal en eCommerce →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Por qué el CAC in-platform engaña y cómo calcular el CAC blended real</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/modelos-atribucion-ecommerce-d2c.html">
+          Modelos de atribución en eCommerce D2C →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Last-click, data-driven, MMM y holdout geo: qué modelo usar según etapa de la cuenta</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/que-es-roas-meta-ads.html">
+          Qué es el ROAS en Meta Ads y cómo se calcula →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Definición, fórmula y por qué el ROAS in-platform no es la métrica final de rentabilidad</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/aumentar-aov-ecommerce-d2c-palancas.html">
+          Cómo subir el AOV en D2C: 7 palancas reales →
+        </a>
+        <p class="text-white/40 text-xs mt-1">La palanca con mejor ROI sobre el margen de contribución sin tocar el spend de adquisición</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/suscripciones-ecommerce-ltv-cac-d2c.html">
+          Suscripciones en D2C: cómo cambia el cálculo de LTV y CAC objetivo →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cómo el LTV contractual de la suscripción cambia el CAC objetivo derivado del margen de contribución</p>
+      </div>
+    </div>
+        </article>
+
+        
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+  <div class="faq-item"><h3 class="faq-q">¿Qué es el margen de contribución en un eCommerce D2C y por qué importa más que el ROAS?</h3><p class="faq-a">El margen de contribución es lo que queda de cada pedido después de restar todos los costes variables: COGS (coste del producto), packaging, fulfilment, comisiones de pasarela de pago, devoluciones esperadas, gastos de envío subsidiados y, sobre todo, el coste de adquisición pagado en Meta/Google. El ROAS solo mira ingresos / inversión publicitaria — ignora todo lo demás. Un D2C de moda con ROAS 3x y margen bruto del 35% puede estar perdiendo dinero después de COGS, devoluciones (15-25%) y operaciones, mientras que un D2C de suplementos con ROAS 1,8x y margen bruto del 70% puede ser muy rentable. La métrica que decide si la cuenta gana o pierde dinero a fin de mes es el margen de contribución por pedido, no el ROAS de la plataforma.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo se calcula el margen de contribución por pedido en un eCommerce D2C español?</h3><p class="faq-a">Fórmula operativa: Margen de contribución = AOV − COGS − fulfilment − packaging − comisión pasarela − coste devoluciones esperado − coste adquisición. Ejemplo cuenta D2C moda España 2026: AOV 65€, COGS 22€ (34%), fulfilment 4,5€, packaging 1,2€, comisión Stripe/Bizum 1,8€, devoluciones 18% × coste medio devolución 4€ = 0,72€, coste adquisición Meta CAC 18€. Margen de contribución = 65 − 22 − 4,5 − 1,2 − 1,8 − 0,72 − 18 = 16,78€ por pedido (25,8% sobre AOV). Esta es la cifra real que entra en caja antes de costes fijos (equipo, software, alquiler). El error más frecuente en D2C es calcular ROAS objetivo sin haber calculado primero el margen de contribución mínimo aceptable — y por eso muchas cuentas escalan a pérdida sin saberlo.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuál es el margen de contribución mínimo saludable para un eCommerce D2C en España?</h3><p class="faq-a">Los rangos que vemos en cuentas D2C españolas rentables a 12-24 meses: margen de contribución por pedido del 20-35% sobre AOV es saludable; del 35-50% es excelente y permite escalar agresivamente; por debajo del 15% el negocio depende de subir el AOV o el LTV (suscripción, repetición) para no perder dinero. Por sector: moda 18-28% (penalizada por devoluciones del 20-30%), belleza 30-45% (devoluciones bajas, COGS bajo), suplementos 40-55% (mejor unit economics del D2C), hogar/decoración 25-40% (logística cara), mascotas 25-35%, alimentación premium 20-30% (logística refrigerada), tecnología/gadgets 15-25%. Si tu margen de contribución está por debajo del rango de tu sector, el problema rara vez es el ROAS — es la estructura de costes (COGS demasiado alto, AOV demasiado bajo, devoluciones descontroladas) o el coste de adquisición (CAC) inflado por una agencia que solo mira ROAS de plataforma.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Por qué el ROAS de Meta/Google puede ser engañoso al medir rentabilidad real?</h3><p class="faq-a">Tres razones principales: (1) ROAS in-platform reporta atribución last-click 7-day-click + 1-day-view, que sobreatribuye conversiones a la plataforma vs MER blended (Marketing Efficiency Ratio = revenue total / inversión paid total); en cuentas D2C el ROAS Meta suele ser 1,3-1,8x el MER real. (2) ROAS no descuenta devoluciones, que en moda llegan al 25-30% — un ROAS 3x pre-devoluciones es un MER 2,1-2,4x post-devoluciones. (3) ROAS no incluye descuentos automáticos aplicados en checkout (cupones, primer pedido) que sí aparecen en el revenue de plataforma; el AOV neto post-descuento suele ser 8-15% inferior. La conclusión: usar ROAS de plataforma como métrica única para decisiones de spend lleva a escalar campañas que parecen rentables pero queman caja. El indicador correcto combina margen de contribución, MER blended y CAC blended por canal.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuál es la relación entre margen de contribución, CAC objetivo y LTV en D2C?</h3><p class="faq-a">La regla operativa: el CAC objetivo = margen de contribución del primer pedido × ratio LTV/CAC deseado. Para D2C español saludable, ratio LTV/CAC mínimo 3:1 a 12 meses, ideal 4-5:1. Ejemplo: marca de suplementos con margen de contribución primer pedido 22€, repetición 2,8 pedidos/cliente en 12 meses con margen 24€/pedido extra (mejor por economías de escala), LTV 12 meses = 22 + (1,8 × 24) = 65,2€. CAC objetivo a ratio 3:1 = 21,7€; a ratio 4:1 = 16,3€. Si la cuenta opera con CAC 30€ pero el equipo paid mira solo ROAS, no detectará que está sub-2:1 hasta que la caja se quede sin colchón. Por eso en DayByDay arrancamos cada cuenta calculando margen de contribución, LTV por cohorte y CAC objetivo antes de tocar una sola campaña — sin ese cálculo, optimizar el ROAS es optimizar la métrica equivocada.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué dashboard o reporting hace falta para gestionar el margen de contribución de forma operativa?</h3><p class="faq-a">El stack mínimo que montamos para cuentas D2C: (1) Looker Studio o Power BI conectado a Shopify (revenue, AOV, devoluciones), Meta Ads (spend, ROAS in-platform), Google Ads (spend), GA4 (atribución cross-channel) y la pasarela (Stripe/Adyen) para comisiones reales. (2) Cálculo del margen de contribución por pedido automatizado con Google Sheets API o un script Node/Python que cruza COGS por SKU desde Shopify Inventory + costes operativos por categoría + spend paid blended por día. (3) Vista diaria de margen de contribución total (€), MER blended, CAC blended por canal, ratio LTV/CAC por cohorte mensual y % devoluciones. (4) Alerta automática cuando el margen de contribución diario cae bajo el umbral mínimo definido (típicamente -20% sobre baseline). En DayByDay el dashboard se entrega listo en la primera semana de onboarding — es la base para que las decisiones de spend dejen de mirar el ROAS y empiecen a mirar la métrica que realmente importa.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuándo es aceptable operar con margen de contribución negativo o muy bajo en D2C?</h3><p class="faq-a">Solo en 3 escenarios concretos y siempre con cap de gasto definido: (1) lanzamiento de marca con runway de 6-12 meses y modelo basado en suscripción/recurrencia donde el LTV12-24 cubrirá el CAC inicial — exige modelo financiero con cohortes proyectadas y validación de retención real \u003e30% mes 3. (2) Test de canal nuevo (TikTok, YouTube, programmatic) con presupuesto acotado del 10-15% del spend total y horizonte de 60-90 días para alcanzar margen positivo. (3) Pico estacional con producto loss-leader que activa cross-sell de catálogo con margen mejor (ej: descuento brutal en producto entrada para captar lead que luego compra bundle). Fuera de esos 3 escenarios, operar con margen de contribución negativo es quemar caja sin estrategia — y es el motivo nº1 por el que D2C aparentemente exitosos cierran a los 24-36 meses. La disciplina de margen de contribución es la diferencia entre escalar de verdad y escalar a pérdida.</p></div>
+</section>
+
+
+        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

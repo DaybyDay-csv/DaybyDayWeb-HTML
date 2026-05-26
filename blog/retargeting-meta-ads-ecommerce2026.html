@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retargeting en Meta Ads para eCommerce: guía completa 2026 | DayByDay Consulting</title>
+  <meta name="description" content="Guía completa de retargeting en Meta Ads para eCommerce D2C en 2026: cómo construir la escalera de audiencias, ventanas por ticket, exclusiones obligatorias, distribución de presupuesto vs prospecting, sequenciado creativo y errores que matan el ROAS. Con tabla de KPIs reales por audiencia.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/retargeting-meta-ads-ecommerce2026">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+<div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+<aside class="file-tree-sidebar" id="sidebar">
+  <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+  <div class="file-tree-section"><div class="file-tree-section-title">Secciones</div>
+    <a href="/" class="file-tree-item">Inicio</a>
+    <a href="/problema.html" class="file-tree-item">Problema</a>
+    <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
+    <a href="/resultados.html" class="file-tree-item">Resultados</a>
+    <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Paid Media</div>
+    <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
+    <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
+    <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
+    <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Automation & AI</div>
+    <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
+    <a href="/analytics.html" class="file-tree-item">Analytics</a>
+    <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Stack Tech</div>
+    <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
+    <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
+    <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+  </div>
+</aside>
+
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Estrategia</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Estrategia</span>
+          <span class="reading-time">10 min de lectura</span>
+          <span class="article-date">2026-05-02</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Retargeting en Meta Ads para eCommerce: guía completa 2026</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Guía completa de retargeting en Meta Ads para eCommerce D2C en 2026: cómo construir la escalera de audiencias, ventanas por ticket, exclusiones obligatorias, distribución de presupuesto vs prospecting, sequenciado creativo y errores que matan el ROAS. Con tabla de KPIs reales por audiencia.</p>
+        <div class="article-author">
+          <div class="author-avatar">DB</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirsó · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<p class="text-white/70 leading-relaxed mb-5">
+      El <strong class="text-white">retargeting en Meta Ads para eCommerce</strong> dejó de ser un único ad set con "visitantes 30 días" hace mucho tiempo. En 2026, con CAPI server-side, audiencias de engagement sin cookies y un funnel post-iOS estabilizado, el retargeting es una escalera de 4-5 audiencias coordinadas que decide el 30-40% del revenue de Meta — y donde se concentran los errores más caros que vemos al auditar cuentas D2C.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Esta guía resuelve cómo construir esa escalera de retargeting, qué ventanas aplicar según tu ticket medio, qué porcentaje del presupuesto debe ir a retargeting, cómo orquestar el creativo para no quemar al usuario, y qué errores estructurales matan el ROAS sin que el dashboard lo avise.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">¿Qué cuenta como retargeting en Meta Ads en 2026?</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Más allá del clásico "visitante web", el inventario real de audiencias de retargeting que Meta sigue ofreciendo bien después de iOS y la depreciación de cookies de tercera parte:
+    </p>
+    <div class="space-y-3 mb-6">
+      {[
+        "Eventos web (vía píxel + CAPI server-side): ViewContent, AddToCart, InitiateCheckout, Purchase. Es el núcleo del BOFU.",
+        "Engagement de Instagram y Facebook (server-side de Meta, no depende de cookies): interacciones con perfil, mensaje, anuncio o post.",
+        "Vídeo views: 25%, 50%, 75%, 95%. Útil para construir MOFU sin tracking web.",
+        "Listas de clientes (Customer File): emails y teléfonos hasheados subidos a Meta o sincronizados vía Shopify/Klaviyo.",
+        "Lead Form (si has captado leads en formularios nativos): excelente para campañas de descuento o reactivación.",
+        "Catálogo (DPA): audiencias dinámicas asociadas a productos vistos/añadidos/comprados.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      La <a href="https://www.facebook.com/business/help/2497099693032946" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">documentación oficial de Meta sobre custom audiences</a> recoge todas las fuentes; lo que no recoge es cuáles rinden de verdad en D2C español: las top 4 son AddToCart 7d, Engagement IG 90d, Compradores 90d y Vídeo View 75% 60d. El resto es relleno.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">La escalera de retargeting que aplicamos en cuentas D2C</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Cuatro peldaños, ordenados de mayor a menor intención. Cada audiencia con exclusiones cruzadas para que un usuario solo vea el anuncio del peldaño donde realmente está:
+    </p>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Peldaño</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Audiencia</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Excluir</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Mensaje</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ,
+            ,
+            ,
+            ,
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Las exclusiones cruzadas no son un detalle: son la diferencia entre un retargeting que escala y uno que canibaliza. Sin exclusiones, los compradores de hace 7 días siguen viendo el anuncio de carrito y el ROAS reportado se infla con personas que iban a comprar de todas formas.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">CPA y ROAS reales por audiencia (D2C España)</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Datos agregados de cuentas D2C que gestionamos con CAPI server-side, ticket medio 40-120€, presupuesto Meta entre 8K y 60K€/mes:
+    </p>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Audiencia</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">CTR</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">CPA</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">ROAS</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">% del spend</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ,
+            ,
+            ,
+            ,
+            ,
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
+              <td class="py-3 px-3 text-white font-medium text-xs"></td>
+              <td class="py-3 px-3 text-white font-medium text-xs"></td>
+              <td class="py-3 px-3 text-white font-medium text-xs"></td>
+              <td class="py-3 px-3 text-white font-medium text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Lectura crítica: el carrito 0-7d marca un ROAS de 8-15x pero solo absorbe 3-5% del spend total. Saturarlo con presupuesto no escala — quema audiencia en 48h. La regla de oro: <em>cosechar lo evidente con presupuesto justo, alimentar arriba</em>.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Sequenciado creativo: qué mensaje en cada peldaño</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Mostrar el mismo creativo a un visitante de hace 30 días que a un carrito abandonado de hace 4 horas es una de las decisiones que más ROAS deja sobre la mesa. La secuencia que rinde:
+    </p>
+    <div class="space-y-4 mb-6">
+      {[
+        {
+          peldano: "Caliente (carrito 0-7d)",
+          creativo: "DPA con producto + reseña corta + urgencia ('quedan X' o envío en 24h). Variante con descuento condicionado solo si AOV lo permite.",
+          que_evitar: "Mensajes de marca, vídeos de >15s, reels narrativos. El usuario está a 1 click, no necesita persuasión, necesita fricción cero.",
+        },
+        {
+          peldano: "Tibio (ViewContent 14-30d)",
+          creativo: "DPA con prueba social — reseñas, badge 'best-seller', estrellas. Carrusel mostrando 3-5 productos relacionados.",
+          que_evitar: "Anuncio de marca genérico. El usuario ya conoce la marca, lo que falta es confianza en el producto.",
+        },
+        {
+          peldano: "MOFU (engagement + vídeo 75%)",
+          creativo: "Vídeo de marca corto (15-30s) + UGC + propuesta de valor. Single image con oferta de primera compra para listas.",
+          que_evitar: "DPA puro. La audiencia no ha visto productos en el web, lanzar un feed de catálogo es prematuro.",
+        },
+        {
+          peldano: "Recompra (compradores 60-180d)",
+          creativo: "Cross-sell con catálogo de complementos, novedades, programa de fidelización. Vídeo testimonio de cliente recurrente.",
+          que_evitar: "Mostrar el mismo producto que ya compraron. Excluir SKUs comprados via custom audience por product_id.",
+        },
+      ].map(() => (
+        <div key= class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+          <p class="font-semibold text-white text-sm mb-1"></p>
+          <p class="text-white/70 text-sm mb-1"><span class="text-white/40">Creativo:</span> </p>
+          <p class="text-white/55 text-sm"><span class="text-white/40">Qué evitar:</span> </p>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Errores frecuentes en el retargeting de eCommerce</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Patrones que vemos en cada auditoría y que matan el ROAS sin avisar:
+    </p>
+    <div class="space-y-3 mb-6">
+      {[
+        "Sin exclusiones cruzadas: el comprador de ayer ve el anuncio del carrito de hoy. ROAS reportado inflado con compras que iban a pasar igual.",
+        "Asignar más del 30% del spend a retargeting. La cuenta cosecha demanda existente, prospecting se queda sin combustible y a las 4-6 semanas el CPA total sube.",
+        "Una sola ventana para todo: 'visitantes 30 días' como única audiencia. Pierdes la diferenciación crítica entre carrito 1d y carrito 25d.",
+        "No rotar creativo: la misma plantilla 8 semanas. Frequency >7/semana, CTR cae 40-60%, CPA dobla en 3-4 semanas.",
+        "Mezclar prospecting y retargeting en la misma campaña Advantage+. El algoritmo concentra spend en lo más eficiente aparente y mata el TOFU.",
+        "Audiencias <500 personas como ad set independiente. No salen del aprendizaje, queman frecuencia, no estabilizan CPA. Mejor consolidar.",
+        "Ignorar las listas de clientes/newsletter. Audiencia gratuita, match rate alto y CPA típicamente 30-50% inferior a engagement web.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Las recomendaciones que <a href="https://www.shopify.com/blog/retargeting" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Shopify documenta sobre estrategia de retargeting</a> coinciden con esta lista en lo esencial: estructura limpia, exclusiones obligatorias y rotación creativa cada 3-4 semanas. Lo que añade nuestra experiencia auditando cuentas españolas es el orden de prioridad de los fixes: primero exclusiones, después rotación creativa, después rebalanceo del spend. El error de saltarse el orden suele ser quemar presupuesto reescribiendo creatividades sobre una estructura rota.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cómo trabajamos el retargeting en DayByDay</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Antes de tocar puja o creativo, aplicamos este protocolo en cada cuenta D2C que recogemos:
+    </p>
+    <div class="space-y-3 mb-6">
+      {[
+        "Auditoría de eventos píxel + CAPI: ViewContent solo en PDP, AddToCart con product_id correcto, deduplicación dedup_key, EMQ >7. Sin esto, ninguna estrategia de audiencias funciona.",
+        "Diseño de la escalera de 4 peldaños con exclusiones cruzadas explícitas y ventanas adaptadas al ticket medio del cliente.",
+        "Separación obligatoria de campaña dinámica (DPA) y campaña estática (mensajes que el feed no sabe contar).",
+        "Asignación inicial del spend: 70-75% prospecting, 20% retargeting BOFU, 5-10% MOFU. Ajuste semanal según marginal CPA.",
+        "Bracket creativo: 3 plantillas por peldaño en testing simultáneo, rotación cada 3-4 semanas según frequency.",
+        "Revisión semanal de canibalización: % de compras retargeting vs prospecting, frequency por audiencia, CPA marginal.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-6 mb-8 text-center">
+      <p class="font-bold text-white text-lg mb-2">¿Tu retargeting en Meta Ads está rindiendo lo que debería?</p>
+      <p class="text-white/50 text-sm mb-4">Auditoría gratuita 30 min: revisamos audiencias, exclusiones, eventos píxel + CAPI, distribución del spend y creativo para detectar las fugas que están matando tu ROAS.</p>
+      <button>
+        Solicitar auditoría gratuita →
+      </button>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Artículos relacionados</h2>
+    <div class="space-y-3">
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/adquisicion-vs-retencion-paid-media-d2c.html">
+          Adquisición vs retención: cómo separar presupuestos de paid media en D2C →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cómo encaja el retargeting Meta dentro del bucket retención y qué % del presupuesto le corresponde por madurez de marca</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/black-friday-meta-ads-d2c-preparacion.html">
+          Black Friday Meta Ads para D2C: preparar Q4 con 90 días de antelación →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cómo cambia la escalera de retargeting durante el peak BF (pesa el 50% del spend con ROAS 4-7x)</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/audiencias-lookalike-meta-alta-calidad.html">
+          Audiencias lookalike en Meta de alta calidad: guía 2026 D2C →
+        </a>
+        <p class="text-white/40 text-xs mt-1">La cara prospecting del retargeting: cómo construir lookalikes de calidad y separar TOFU/MOFU de BOFU</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/email-marketing-meta-ads-ltv-d2c.html">
+          Email marketing + Meta Ads: cómo combinar paid y owned para escalar LTV →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cómo retargeting Meta y flujos Klaviyo se cruzan sin canibalizarse en abandono y winback</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/remarketing-dinamico-ecommerce-guia-practica.html">
+          Remarketing dinámico para ecommerce: guía práctica (2026) →
+        </a>
+        <p class="text-white/40 text-xs mt-1">El detalle del DPA, requisitos de catálogo y plantillas creativas dinámicas</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/guia-api-conversiones-meta-ads-shopify.html">
+          Guía API de Conversiones de Meta para eCommerce →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Sin CAPI server-side bien hecho, las audiencias de retargeting pierden la mitad de su tamaño</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/creative-testing-meta-ads.html">
+          Cómo hacer creative testing en Meta Ads →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Protocolo para rotar creativo en cada peldaño antes de que la fatiga mate el CTR</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/escalar-campanas-meta-ads-sin-romper-roas.html">
+          Cómo escalar campañas Meta Ads sin romper el ROAS →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cuándo el retargeting deja de escalar y por qué hay que rebalancear hacia prospecting</p>
+      </div>
+    </div>
+        </article>
+
+        
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+  <div class="faq-item"><h3 class="faq-q">¿Sigue funcionando el retargeting en Meta Ads en 2026 después de iOS y la pérdida de cookies?</h3><p class="faq-a">Sí, pero con una condición innegociable: API de Conversiones server-side bien implementada con match rate (EMQ) \u003e7. Sin CAPI server-side, el match de eventos cae al 50-65% y las audiencias de retargeting se quedan a la mitad de su tamaño real, con un coste por resultado que duplica el benchmark. Con CAPI server-side + parámetros enriquecidos (email hash, fbc/fbp, user_agent), el retargeting recupera prácticamente el rendimiento pre-iOS 14. La diferencia entre cuentas D2C que mantienen retargeting rentable y las que lo ven morir está casi siempre en la base técnica, no en el creativo ni en la puja.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué porcentaje de mi presupuesto debe ir a retargeting en Meta Ads?</h3><p class="faq-a">Regla operativa para eCommerce D2C: entre el 15% y el 25% del spend total de Meta. Si supera el 30%, la cuenta está cosechando demanda existente sin crear nueva — el ROAS reportado se ve bien pero el revenue total se estanca y a las semanas el CPA empieza a subir porque los pools de audiencia se agotan. Si está por debajo del 10%, normalmente es porque alguien lo apagó tras una fatiga creativa que no se solucionó. La distribución que mejor escala en cuentas que gestionamos: 70-75% prospecting (Advantage+ Shopping incluido) + 15-20% retargeting BOFU + 5-10% retargeting MOFU (engagement, vídeo views, listas).</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuántas audiencias de retargeting debo crear?</h3><p class="faq-a">Cuatro o cinco como máximo, con exclusiones cruzadas claras. Más allá fragmentas tanto el público que ningún ad set sale del aprendizaje. Estructura mínima que rinde: (1) Carrito abandonado 0-7 días, (2) ViewContent 14-30 días excluyendo carrito y compra, (3) Engagement 60-90 días (interacción con perfil, vídeo \u003e50%) excluyendo visitantes web, (4) Compradores 60-180 días para cross-sell o repetición, (5) opcional: lista de clientes/newsletter no compradores. Multiplicar audiencias por hora del día, dispositivo o género suele tener efecto contrario al esperado.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué ventanas de retargeting funcionan mejor según mi ticket medio?</h3><p class="faq-a">Ticket <40€ (impulso): carrito 3 días, ViewContent 7 días, compradores 60 días. Ticket 40-150€ (consideración media — moda, belleza, hogar): carrito 7 días, ViewContent 14 días, compradores 90-180 días. Ticket 150-500€ (electrónica, deporte): carrito 14 días, ViewContent 30 días, compradores 180 días. Ticket \u003e500€ (premium, joyería): carrito 30 días, ViewContent 60 días, compradores 365 días. La regla es simple: cuanto más caro el producto, más larga la ventana, porque el ciclo de decisión real es más largo. Forzar ventanas cortas en ticket alto desperdicia el cookie/evento antes de que el usuario decida.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo evito que el retargeting queme a los usuarios y mate la marca?</h3><p class="faq-a">Tres palancas: (1) Frequency cap implícita rotando creativo cada 3-4 semanas. Si un usuario ve \u003e5 impresiones/semana del mismo anuncio, mentalmente lo asocia a 'spam' y baja el CTR de futuras campañas; (2) Exclusiones cruzadas obligatorias (compradores fuera del retargeting de carrito, salvo cross-sell); (3) Diversificar formato — alternar carrusel dinámico, vídeo, UGC y collection ads para que la marca no sea siempre el mismo plano. Indicador clave: si el frequency en una audiencia de carrito 7d sube por encima de 6/semana, baja la puja o reduce el público. Por encima de 8 ya estás quemando.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Debo separar retargeting estático y retargeting dinámico (DPA) en campañas distintas?</h3><p class="faq-a">Sí, casi siempre. El retargeting estático (creativo único, mensaje de marca/oferta general) y el dinámico (DPA con catálogo) tienen objetivos y CPMs distintos. Mezclarlos en la misma campaña hace que el algoritmo concentre presupuesto en el formato con CPA más bajo aparente — normalmente el carrito 7d con DPA — y deje los formatos de marca sin servir. La estructura limpia: una campaña BOFU dinámica (DPA con audiencias por intención) y una campaña BOFU estática para mensajes que el feed no sabe contar (envío gratis, primera compra, vídeo testimonio). Cada una con su presupuesto y su métrica.</p></div>
+</section>
+
+
+        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

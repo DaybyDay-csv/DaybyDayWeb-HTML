@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modelos de atribución para D2C: last-click, data-driven y MMM explicados | DayByDay Consulting</title>
+  <meta name="description" content="Guía práctica de modelos de atribución para eCommerce D2C en España: diferencias reales entre last-click, first-click, lineal, data-driven y Marketing Mix Modeling (MMM); por qué Meta Ads sobreatribuye 20-35% frente al ROAS real; qué modelo conviene según tamaño de cuenta; impacto de iOS 17/18 y pérdida de cookies; herramientas (GA4, Triple Whale, Northbeam) y cómo decide DayByDay qué modelo aplicar.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/modelos-atribucion-ecommerce-d2c">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+<div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+<aside class="file-tree-sidebar" id="sidebar">
+  <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+  <div class="file-tree-section"><div class="file-tree-section-title">Secciones</div>
+    <a href="/" class="file-tree-item">Inicio</a>
+    <a href="/problema.html" class="file-tree-item">Problema</a>
+    <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
+    <a href="/resultados.html" class="file-tree-item">Resultados</a>
+    <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Paid Media</div>
+    <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
+    <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
+    <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
+    <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Automation & AI</div>
+    <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
+    <a href="/analytics.html" class="file-tree-item">Analytics</a>
+    <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Stack Tech</div>
+    <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
+    <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
+    <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+  </div>
+</aside>
+
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Métricas</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Métricas</span>
+          <span class="reading-time">11 min de lectura</span>
+          <span class="article-date">2026-05-05</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Modelos de atribución para D2C: last-click, data-driven y MMM explicados</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Guía práctica de modelos de atribución para eCommerce D2C en España: diferencias reales entre last-click, first-click, lineal, data-driven y Marketing Mix Modeling (MMM); por qué Meta Ads sobreatribuye 20-35% frente al ROAS real; qué modelo conviene según tamaño de cuenta; impacto de iOS 17/18 y pérdida de cookies; herramientas (GA4, Triple Whale, Northbeam) y cómo decide DayByDay qué modelo aplicar.</p>
+        <div class="article-author">
+          <div class="author-avatar">DB</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirsó · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<p class="text-white/70 leading-relaxed mb-5">
+      Los <strong class="text-white">modelos de atribución en eCommerce</strong> son la regla que decide qué canal se lleva el crédito de cada venta cuando el cliente ha cruzado varios touchpoints antes de comprar. En D2C español es el debate más caro y peor resuelto: la mayoría de cuentas se rige por lo que dice Meta Business Manager (last-click + modeled), y eso suele sobrevalorar paid social entre un 20% y un 35% frente al ROAS real del negocio. Inversión, escalado y decisiones de canal acaban tomados sobre datos que no representan la realidad.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Esta guía explica los modelos de atribución que importan en D2C (last-click, first-click, lineal, position-based, data-driven y Marketing Mix Modeling), cuándo usar cada uno según tamaño y madurez, qué cambia con iOS 17/18 y pérdida de cookies, y cómo decidimos en DayByDay qué modelo aplicar para que el founder tenga una sola fuente de verdad y no tres dashboards contradictorios.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Qué es un modelo de atribución y por qué importa en D2C</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Un modelo de atribución es la regla que asigna el crédito de una conversión entre los distintos puntos de contacto que ha tenido el cliente antes de comprar. En un D2C medio español, el customer journey cruza entre 3 y 7 touchpoints — anuncio Meta de descubrimiento, búsqueda branded en Google, email de bienvenida, retargeting dinámico, orgánico social — antes de cerrar el primer pedido. Cada modelo reparte ese crédito de forma distinta, y eso cambia radicalmente qué canal parece "rentable" y cuál no.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-5">
+      La atribución importa porque condiciona la inversión: si tu dashboard dice que Meta tiene ROAS 4,5x y Google branded 12x, vas a meter más en Google. Pero si Google branded está cerrando ventas que originó Meta tres días antes, estás midiendo demanda generada por otro canal. <a href="https://www.thinkwithgoogle.com/intl/en-emea/marketing-strategies/data-and-measurement/marketing-attribution-guide/" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Think with Google documenta</a> que journeys digitales en retail superan los 5 touchpoints en más del 50% de los casos — atribuir todo a uno solo deforma la realidad.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Los 6 modelos de atribución relevantes para eCommerce D2C</h2>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Modelo</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Cómo asigna el crédito</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Cuándo es útil</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Riesgo principal</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            { m: "Last-click", c: "100% al último touchpoint antes de comprar", u: "Negocios con journey corto (<2 touchpoints), ticket impulsivo", r: "Sobrevalora retargeting y branded search; ignora canales TOFU" },
+            ,
+            ,
+            { m: "Position-based (40-20-40)", c: "40% primero, 40% último, 20% intermedios", u: "D2C con journey medio (3-5 touchpoints) y embudo claro TOFU/MOFU/BOFU", r: "Ponderación arbitraria; no captura impacto real por canal" },
+            { m: "Data-driven (GA4, Google Ads)", c: "ML asigna crédito según impacto incremental medido", u: ">300 conversiones/mes y multi-canal con tracking limpio", r: "Caja negra; degradación con pérdida de cookies; no ve offline" },
+            { m: "Marketing Mix Modeling (MMM)", c: "Regresión sobre inversión vs ventas totales", u: "&gt;50K€/mes spend, multi-canal, validación independiente", r: "Requiere 12-18 meses de datos; cuesta tiempo o herramienta dedicada" },
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      En D2C español, los tres modelos que sí merecen ser comparados son <strong class="text-white">last-click</strong> (referencia plataforma), <strong class="text-white">data-driven</strong> (referencia probabilística determinística) y <strong class="text-white">MMM</strong> (referencia independiente macro). Los otros sirven como contraste pero rara vez como modelo único de decisión.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Por qué Meta Ads sobreatribuye 20-35% en cuentas D2C españolas</h2>
+    <div class="space-y-3 mb-6">
+      {[
+        "Atribución 7-day-click + 1-day-view por defecto: cuenta como conversión cualquier compra dentro de los 7 días tras un click o 1 día tras una impresión. En D2C con cliente recurrente o branded fuerte, eso atrapa ventas que cerraría el branded search igualmente.",
+        "Modeled conversions: desde iOS 14.5 Apple bloquea tracking determinístico en Safari/iOS sin consentimiento. Meta usa modelos probabilísticos para estimar las conversiones que no puede medir y añade entre un 25% y un 35% al volumen reportado, según mercado.",
+        "Double counting cross-canal: si el cliente vio anuncio Meta y luego buscó la marca en Google, Meta y Google reportan la misma conversión. La suma de canales nunca cuadra con Shopify.",
+        "Atribución vista (view-through) en vídeo y reels: una visualización parcial sin click puede contar como conversión si el usuario compra dentro de 24h por cualquier canal. Sobreestima reels TOFU sistemáticamente.",
+        "Eventos duplicados por píxel + CAPI mal configurado: cuando Conversions API y píxel client-side envían el mismo evento sin deduplicación correcta, Meta cuenta la compra dos veces. Es uno de los errores más frecuentes en cuentas que auditamos.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-6">
+      <p class="text-white font-bold text-sm mb-2">📊 Dato de referencia</p>
+      <p class="text-white/70 text-sm leading-relaxed">
+        Según el informe <a href="https://www.iabspain.es/estudio/estudio-de-inversion-publicitaria-en-medios-digitales-2025/" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Inversión Publicitaria en Medios Digitales 2025 de IAB Spain</a>, redes sociales pagadas concentran más del 30% de la inversión digital en España, y en D2C esa cuota suele superar el 50%. Cuanto mayor es el peso de un canal, más caro es equivocarse en su atribución — un 25% de sobrestimación sobre el 50% del presupuesto distorsiona toda la planificación financiera.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Qué modelo aplicar según tamaño de cuenta D2C</h2>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Spend total /mes</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Modelo recomendado</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Validación cruzada</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Frecuencia revisión</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ,
+            ,
+            ,
+            ,
+            ,
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      La regla operativa: usar el modelo más sofisticado que el volumen de datos sostenga sin convertirse en ruido. MMM en una cuenta de 8K€/mes es teatro estadístico; last-click en una de 200K€/mes es negligencia. <a href="https://support.google.com/analytics/answer/10596866" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Google documenta el modelo data-driven en GA4</a> y conviene activarlo desde el día uno aunque no sea el modelo principal de decisión.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">iOS 17/18 y pérdida de cookies: qué cambia en atribución 2026</h2>
+    <div class="space-y-3 mb-6">
+      {[
+        "Safari iOS bloquea cookies de terceros y limita tracking cross-site sin consentimiento explícito; representa más del 27% del tráfico móvil global (Statcounter 2026).",
+        "Atribución determinística (last-click clásico, multi-touch basado en píxel) pierde precisión: entre un 20% y un 40% del journey cross-canal queda sin firma identificable.",
+        "Modelos probabilísticos (data-driven, modeled conversions) ganan peso porque rellenan huecos con estimación basada en patrones agregados.",
+        "MMM se vuelve imprescindible en cuentas grandes porque no depende de cookies ni IDs: trabaja sobre series temporales de inversión vs ingresos totales.",
+        "Server-side tracking (Conversions API en Meta, server-side GTM, Enhanced Conversions en Google) es el suelo técnico mínimo para que cualquier modelo siga funcionando con calidad razonable.",
+        "Consent Mode v2 obligatorio en EU: sin él, GA4 y Google Ads pierden la mayoría del tracking en visitantes sin consentimiento (~30-50% según vertical).",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Herramientas reales para gestionar atribución en D2C español</h2>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Herramienta</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Modelo principal</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Coste orientativo</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Cuándo merece la pena</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cómo trabajamos en DayByDay</h2>
+    <div class="space-y-3 mb-6">
+      {[
+        "Auditoría inicial de píxel + CAPI + GA4 + Consent Mode v2 antes de hablar de modelos: si la base de datos está rota, ningún modelo arregla la decisión. En el 70% de las cuentas que entran encontramos eventos duplicados o sin deduplicar.",
+        "Modelo principal data-driven en GA4 + last-click plataforma como contraste, con CAC blended como métrica de salud financiera. Misma vista en Looker Studio para founder y media buyer — una sola fuente de verdad.",
+        "Comparativa mensual ROAS Meta vs ROAS Shopify por fuente vs ROAS data-driven GA4: si el gap supera el 25%, abrimos investigación (atribución, fraud, modeled excessivo).",
+        "Análisis incremental por canal cada trimestre en cuentas >30K€/mes: apagamos un canal 14-21 días en geos secundarias y medimos lift real vs lo que decía el modelo. Nada predice incrementalidad como apagar el canal.",
+        "Soluciones ad-hoc combinando paid media (Pablo) y stack tech (Jorge): para cuentas con 4+ canales montamos pipeline propio en BigQuery + dashboard Looker que cruza spend plataforma, pedidos Shopify, CRM y datos de marketing automation. Es el tipo de pieza ad-hoc que diferencia a DayByDay de agencias playbook.",
+        "MMM trimestral cuando el spend supera 50K€/mes y hay >12 meses de histórico: validación independiente que no depende de cookies ni iOS y que aguanta cualquier cambio futuro de privacidad.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      DayByDay Consulting fue fundada por Pablo Santirsó y opera como un partnership con Jorge González (CTO). Pablo lidera paid media y estrategia; Jorge lidera implementación tech, server-side tracking y dashboards custom. Donde otras agencias separan marketing y tech entre dos proveedores que rara vez se coordinan, en DayByDay las decisiones de atribución se cierran en la misma reunión: Pablo propone qué medir, Jorge valida cómo medirlo y monta la pipeline. Sin account managers, sin handoffs.
+    </p>
+
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-6 mb-8 text-center">
+      <p class="font-bold text-white text-lg mb-2">¿Tu ROAS plataforma no cuadra con lo que cobra Shopify?</p>
+      <p class="text-white/50 text-sm mb-4">Auditoría gratuita 30 min: revisamos tu modelo de atribución, píxel, CAPI y discrepancia plataforma vs negocio. Te decimos qué modelo te toca según tu spend y dónde estás dejando dinero sobre la mesa.</p>
+      <button>
+        Solicitar auditoría gratuita →
+      </button>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Artículos relacionados</h2>
+    <div class="space-y-3">
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/dashboard-paid-media-founder-d2c.html">
+          Dashboard de paid media: qué métricas debe ver un founder D2C cada lunes →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Por qué el MER blended es la única métrica neutral del founder y supera a ROAS in-platform sobreatribuido</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/margen-contribucion-vs-roas-ecommerce.html">
+          Margen de contribución vs ROAS: la métrica que media buyers olvidan →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Por qué el ROAS in-platform engaña y por qué la atribución correcta requiere mirar margen real</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/marketing-mix-modeling-ecommerce-d2c.html">
+          Marketing Mix Modeling (MMM) para D2C: cuándo aplicarlo y qué resuelve →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cuándo MMM tiene sentido como capa independiente de validación</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/incrementality-testing-meta-ads-d2c.html">
+          Incrementality testing en Meta Ads: cómo medir el lift real →
+        </a>
+        <p class="text-white/40 text-xs mt-1">El experimento causal que valida cuánto sobreatribuye el modelo elegido</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/ga4-meta-ads-eventos-custom-d2c.html">
+          GA4 + Meta Ads para D2C: implementación de eventos custom paso a paso →
+        </a>
+        <p class="text-white/40 text-xs mt-1">El stack técnico que hace operativo el modelo data-driven de GA4 frente al last-click de Meta</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/performance-max-ecommerce-d2c-cuando-usar.html">
+          Performance Max para D2C: cuándo activarla y cómo medir si funciona →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cómo PMax sobreatribuye 25-45% y por qué medir con MER blended es obligatorio</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/ios-atribucion-meta-ads-2026-d2c.html">
+          iOS 17/18 y atribución en Meta Ads: qué ha cambiado para D2C en 2026 →
+        </a>
+        <p class="text-white/40 text-xs mt-1">El motor real detrás de la sobreatribución de Meta y la pérdida de matching iOS</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/cac-blended-vs-cac-canal-ecommerce.html">
+          CAC blended vs CAC por canal: qué métrica usar para escalar un D2C →
+        </a>
+        <p class="text-white/40 text-xs mt-1">La métrica de salud financiera que valida cualquier modelo de atribución</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/cohort-analysis-ecommerce-d2c.html">
+          Cohort analysis para eCommerce D2C: la métrica que predice si tu negocio escala →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cómo cruzar atribución con LTV real por cohorte de adquisición</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/metricas-meta-ads-importantes-ecommerce.html">
+          Métricas de Meta Ads que importan en eCommerce →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Qué leer dentro de Meta Ads cuando ya sabes que sobreatribuye</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/cac-vs-ltv-ecommerce-escalable.html">
+          CAC vs LTV: cómo construir un eCommerce escalable →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Marco financiero que da sentido a cualquier número de atribución</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/server-side-tracking-shopify-conversions-api.html">
+          Tracking server-side completo para Shopify con Conversions API →
+        </a>
+        <p class="text-white/40 text-xs mt-1">El suelo técnico sin el cual cualquier modelo de atribución trabaja con datos rotos</p>
+      </div>
+    </div>
+        </article>
+
+        
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+  <div class="faq-item"><h3 class="faq-q">¿Qué es un modelo de atribución en eCommerce D2C?</h3><p class="faq-a">Un modelo de atribución es la regla que decide qué canal (o canales) se lleva el crédito de una venta cuando el cliente ha pasado por varios puntos de contacto antes de comprar. En eCommerce D2C importa porque el customer journey medio cruza 3-7 touchpoints (anuncio Meta, búsqueda branded, email, retargeting, orgánico) y cada modelo asigna ese crédito de forma distinta. Cambiar de last-click a data-driven puede reducir el ROAS aparente de Meta un 25-40% y subir el de orgánico/email — pero las decisiones de inversión deberían basarse en el modelo, no en lo que diga la plataforma.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuál es la diferencia entre last-click, first-click, lineal y data-driven?</h3><p class="faq-a">Last-click da el 100% al último canal que cerró la venta — sobreestima retargeting y branded search. First-click da el 100% al primer touchpoint — sobreestima descubrimiento (paid social TOFU). Lineal reparte el crédito a partes iguales entre todos los puntos de contacto — útil para visualizar journey pero no para decisiones. Data-driven (Google Ads, GA4) usa machine learning para asignar crédito en función del impacto incremental real de cada touchpoint en la conversión. En D2C español, data-driven suele dar la imagen más cercana a la realidad cuando hay \u003e300 conversiones/mes; por debajo, el modelo es ruido.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué es Marketing Mix Modeling (MMM) y cuándo conviene usarlo en D2C?</h3><p class="faq-a">MMM es un modelo estadístico (regresión multivariable) que correlaciona inversión por canal con ventas totales del negocio en el tiempo, sin depender de cookies ni píxeles. Mide impacto incremental real, captura efectos offline (TV, OOH, branding) y aguanta iOS, GDPR y bloqueo de tracking sin degradarse. Conviene cuando un D2C invierte \u003e50K€/mes en paid total, opera 5-7+ canales en paralelo, o quiere validar lo que dicen Meta y Google con una capa independiente. Por debajo de ese tamaño, MMM es overkill; data-driven en GA4 + análisis incremental por canal es suficiente.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Por qué Meta Ads sobreatribuye conversiones frente al modelo de negocio real?</h3><p class="faq-a">Tres razones: (1) Meta usa atribución 7-day-click + 1-day-view por defecto — cuenta como conversión cualquier compra dentro de los 7 días tras un click o 1 día tras una impresión, aunque la venta la cerrara realmente Google branded; (2) modeled conversions: desde iOS 14.5, Meta estima un 25-35% de las conversiones que no puede medir directamente y las añade al ROAS reportado; (3) double counting: si el cliente vio anuncio Meta y luego buscó la marca en Google, ambos canales reportan la conversión por separado. La discrepancia entre ROAS Meta y ROAS real (Shopify / blended) suele rondar 20-35% en D2C españoles que auditamos.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué modelo de atribución debería usar mi D2C español ahora mismo?</h3><p class="faq-a">Depende del tamaño y madurez. <30K€/mes spend total: data-driven en GA4 como referencia + Shopify para validar volumen real, con CAC blended como métrica de salud. 30-100K€/mes: data-driven + análisis incremental por canal trimestral (apagar y encender canales para medir lift real) + dashboard con CAC blended por cohorte. \u003e100K€/mes con varios canales: MMM trimestral o mensual como capa de validación independiente, encima del data-driven plataforma. En todos los casos, last-click es insuficiente; usarlo solo en D2C de ticket único y journey corto (<2 touchpoints).</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo afecta iOS 17/18 y la pérdida de cookies a los modelos de atribución?</h3><p class="faq-a">Reduce drásticamente la fiabilidad de modelos basados en píxel/cookies (last-click, data-driven plataforma) porque desaparece o se anonimiza la señal de muchos touchpoints. Apple ha movido la cuota de Safari móvil iOS al 27,5% global (Statcounter, 2026), y un alto % de esos usuarios bloquea tracking cross-site. La consecuencia: la atribución determinística pierde precisión, y por eso modelos probabilísticos como data-driven y especialmente MMM ganan peso. La respuesta operativa pasa por server-side tracking (Conversions API, server-side GTM), conversiones modeladas y MMM para validación independiente.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Vale la pena pagar herramientas de atribución multi-touch como Triple Whale, Northbeam o Polar Analytics?</h3><p class="faq-a">Sí en cuentas D2C \u003e50-80K€/mes en paid con 3+ canales. Estas herramientas combinan datos plataforma, web tracking propio, datos Shopify y modelos de atribución multi-touch ajustables (last-click, lineal, data-driven, position-based) en una sola vista, con CAC blended y por canal cruzados con LTV. El valor real no es el dato bruto sino la unificación: misma fuente de verdad para founder, media buyer y CFO. Por debajo de ese tamaño, GA4 + dashboard Looker Studio + Shopify Reports cubre el 80% del valor a coste cero.</p></div>
+</section>
+
+
+        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

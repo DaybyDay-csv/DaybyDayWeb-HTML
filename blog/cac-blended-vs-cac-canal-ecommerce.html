@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAC blended vs CAC por canal: qué métrica usar para escalar un D2C | DayByDay Consulting</title>
+  <meta name="description" content="Diferencias entre CAC blended y CAC por canal en eCommerce D2C: cuándo usar cada uno, cómo calcularlos sin inflar resultados, ratios LTV:CAC saludables, por qué la suma de CAC por canal no cuadra con el blended y cuándo merece la pena saltar a Marketing Mix Modeling.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/cac-blended-vs-cac-canal-ecommerce">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+<div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+<aside class="file-tree-sidebar" id="sidebar">
+  <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+  <div class="file-tree-section"><div class="file-tree-section-title">Secciones</div>
+    <a href="/" class="file-tree-item">Inicio</a>
+    <a href="/problema.html" class="file-tree-item">Problema</a>
+    <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
+    <a href="/resultados.html" class="file-tree-item">Resultados</a>
+    <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Paid Media</div>
+    <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
+    <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
+    <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
+    <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Automation & AI</div>
+    <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
+    <a href="/analytics.html" class="file-tree-item">Analytics</a>
+    <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Stack Tech</div>
+    <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
+    <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
+    <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+  </div>
+</aside>
+
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Métricas</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Métricas</span>
+          <span class="reading-time">9 min de lectura</span>
+          <span class="article-date">2026-05-04</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">CAC blended vs CAC por canal: qué métrica usar para escalar un D2C</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Diferencias entre CAC blended y CAC por canal en eCommerce D2C: cuándo usar cada uno, cómo calcularlos sin inflar resultados, ratios LTV:CAC saludables, por qué la suma de CAC por canal no cuadra con el blended y cuándo merece la pena saltar a Marketing Mix Modeling.</p>
+        <div class="article-author">
+          <div class="author-avatar">DB</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirsó · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<p class="text-white/70 leading-relaxed mb-5">
+      El <strong class="text-white">CAC blended</strong> es la métrica que más fricción genera entre dirección y media buyer en un D2C. La plataforma dice que el CAC en Meta está en 22€, el de Google en 18€, y la dirección mira el dashboard financiero y ve un CAC real de 41€. ¿Quién miente? Ninguno. Están midiendo cosas distintas — y entender la diferencia es lo que separa a los D2C que escalan rentables de los que escalan facturación pero hunden margen.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-5">
+      En esta guía explicamos qué mide cada CAC, cuándo usar uno u otro, cómo calcularlos sin inflar el dato y qué ratios LTV:CAC son realistas en eCommerce D2C español en 2026.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">CAC blended vs CAC por canal: en qué se diferencian</h2>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Aspecto</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">CAC blended</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">CAC por canal</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      La <a href="https://www.shopify.com/blog/customer-acquisition-cost" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">guía de Shopify sobre CAC</a> insiste en lo mismo: el CAC blended es la única métrica que cuadra con el negocio real. Todo lo demás son aproximaciones útiles para tomar decisiones tácticas.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Por qué la suma de CAC por canal nunca cuadra con el blended</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Caso real recurrente en cuentas que auditamos: el CFO ve CAC blended de 38€ y la suma ponderada de CAC por canal da 25€. Gap del 52%. Las causas habituales:
+    </p>
+    <div class="space-y-3 mb-6">
+      {[
+        "Doble atribución entre plataformas: Meta cuenta una venta porque hizo last-click después de ver un anuncio; Google la cuenta porque el usuario buscó la marca tras ver Meta. Ambos suman, el negocio solo cobra una vez.",
+        "Conversiones modeladas: Meta y Google reportan conversiones que no se han observado, las estiman estadísticamente. En 2026 el % modelado puede llegar al 25-35% en cuentas D2C sin CAPI o Enhanced Conversions correctamente configurados.",
+        "Tráfico orgánico/marca contado como pago: el usuario buscaba 'marca + producto' y Google Ads se atribuye la venta porque pujó por su propia marca. Esa venta habría sucedido sin spend.",
+        "Recurrentes mezclados con nuevos: si el denominador de CAC plataforma incluye recompras, el CAC sale artificialmente bajo. El blended bien calculado solo cuenta clientes nuevos.",
+        "Costes ocultos no asignados: fees de agencia, herramientas (Triple Whale, Northbeam, Klaviyo), influencer pagado fuera de plataforma. El blended los recoge, el CAC por canal los ignora.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cómo calcular el CAC blended sin inflarlo ni desinflarlo</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Fórmula correcta:
+    </p>
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-6 text-white/80 text-sm leading-relaxed">
+      <strong class="text-white">CAC blended</strong> = (gasto Meta + gasto Google + otros pagados + fees agencia + herramientas adquisición + influencer/PR pagado) / clientes nuevos del periodo
+    </div>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Reglas de cálculo que evitan errores típicos:
+    </p>
+    <div class="space-y-3 mb-6">
+      {[
+        "Cliente nuevo = primera compra de su historial, no primera compra del mes. Usa el order_number = 1 del CRM o Shopify, no el filtro 'new customers' de la plataforma.",
+        "Periodo mínimo 30 días. Tickets >200€ o ciclo de decisión largo: usa 60-90 días para amortiguar el delay entre clic y compra.",
+        "Excluye del numerador costes de retención puros: email marketing transaccional, costes CRM solo para recurrentes, programa de referidos sobre compradores existentes.",
+        "Incluye en el numerador todo gasto que toca usuario nuevo: fees de agencia paid media, herramientas de adquisición (no las de retención), gasto en creatividad si es atribuible.",
+        "Si tienes orgánico fuerte y quieres aislar el CAC de pago, calcula CAC pagado blended = (gasto pagado total) / (clientes nuevos llegados por canales pagados). Necesitas atribución mínima decente para hacerlo, pero es más útil que el CAC blended global cuando >40% del tráfico es orgánico.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Ratios LTV:CAC blended saludables en D2C español 2026</h2>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Tipo producto</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">LTV horizonte</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Ratio mínimo escalable</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Ratio sano</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ,
+            ,
+            ,
+            ,
+            ,
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white font-medium text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      El benchmark clásico LTV:CAC 3:1 que circula en blogs anglosajones (popularizado por <a href="https://www.klipfolio.com/resources/kpi-examples/saas/customer-lifetime-value-to-customer-acquisition-ratio" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Klipfolio y otros</a>) viene de SaaS — en eCommerce D2C español hay que ajustarlo a recurrencia y margen real, no aplicarlo plano.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cómo trabajamos en DayByDay</h2>
+    <div class="space-y-3 mb-6">
+      {[
+        "Dashboard único con tres CAC en paralelo: blended (financiero), CAC por canal según plataforma y CAC pagado blended (gasto pagado / clientes nuevos vía pago). Ver los tres elimina discusiones eternas sobre 'cuál es el real'.",
+        "Definición compartida con el cliente: qué entra en numerador, qué entra en denominador, qué periodo. Sin esto, cada vez que sube alguien nuevo al equipo se vuelve a discutir el dato.",
+        "Revisión mensual de gap blended vs suma plataforma: si crece más del 60%, hay problema de atribución (CAPI mal, marca pujada por Google, exceso modeled). Lo investigamos antes de tomar decisiones de presupuesto.",
+        "Decisiones de escalado a nivel negocio sobre CAC blended + LTV a 12m. Decisiones tácticas dentro de Meta/Google sobre métricas plataforma con ROAS objetivo derivado del blended.",
+        "Holdout o geo-lift trimestral en cuentas >30K€/mes spend: apagamos un canal en una región durante 2-4 semanas para medir incrementalidad real. Es la única forma rigurosa de saber qué pasaría sin ese canal.",
+        "MMM solo cuando spend supera 50K€/mes y hay >2 canales relevantes. Por debajo, la triangulación blended + plataforma + holdouts cubre el 80% de decisiones sin la complejidad.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-6 mb-8 text-center">
+      <p class="font-bold text-white text-lg mb-2">¿Tu CAC plataforma y tu CAC financiero no cuadran?</p>
+      <p class="text-white/50 text-sm mb-4">Auditoría gratuita 30 min: revisamos cómo calculas CAC blended, qué atribución usas y dónde está el gap real entre lo que dice la plataforma y lo que cuadra en P&L.</p>
+      <button>
+        Solicitar auditoría gratuita →
+      </button>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Artículos relacionados</h2>
+    <div class="space-y-3">
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/dashboard-paid-media-founder-d2c.html">
+          Dashboard de paid media: qué métricas debe ver un founder D2C cada lunes →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Las 3 capas del dashboard del founder con MER blended y CAC adquisición específico como métricas north star</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/adquisicion-vs-retencion-paid-media-d2c.html">
+          Adquisición vs retención: cómo separar presupuestos de paid media en D2C →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cómo separar el CAC blended en bucket adquisición y bucket retención para tomar decisiones de spend con margen</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/margen-contribucion-vs-roas-ecommerce.html">
+          Margen de contribución vs ROAS: la métrica que media buyers olvidan →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Por qué el ROAS in-platform engaña y cómo derivar el CAC objetivo desde el margen de contribución</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/cac-vs-ltv-ecommerce-escalable.html">
+          CAC vs LTV: cómo construir un eCommerce escalable →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Marco completo para usar la relación CAC:LTV en decisiones de inversión y precio</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/incrementality-testing-meta-ads-d2c.html">
+          Incrementality testing en Meta Ads: cómo medir el lift real →
+        </a>
+        <p class="text-white/40 text-xs mt-1">El test causal que detecta cuánto del gap MER vs ROAS por canal es sobreatribución</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/benchmark-roas-sector-espana-2026.html">
+          Benchmark ROAS por sector en España 2026 →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cómo derivar tu ROAS objetivo desde el CAC blended y márgenes reales del sector</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/metricas-meta-ads-importantes-ecommerce.html">
+          Métricas de Meta Ads que importan en eCommerce →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Qué mirar dentro de la plataforma cuando ya tienes el CAC blended bajo control</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/checklist-auditoria-campanas-paid-media.html">
+          Checklist para auditar campañas de paid media →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cómo detectar problemas de atribución que inflan el CAC plataforma frente al blended</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/modelos-atribucion-ecommerce-d2c.html">
+          Modelos de atribución para D2C: last-click, data-driven y MMM explicados →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Por qué el CAC por canal nunca cuadra: el modelo de atribución que hay detrás</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/marketing-mix-modeling-ecommerce-d2c.html">
+          Marketing Mix Modeling (MMM) para D2C: cuándo aplicarlo y qué resuelve →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cuándo MMM cierra el gap entre CAC blended y CAC por canal en cuentas grandes</p>
+      </div>
+    </div>
+        </article>
+
+        
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+  <div class="faq-item"><h3 class="faq-q">¿Qué diferencia hay entre CAC blended y CAC por canal?</h3><p class="faq-a">CAC blended (o blended CAC) divide todo el gasto de marketing del periodo entre todos los clientes nuevos del mismo periodo, sin distinguir canal. CAC por canal, en cambio, intenta atribuir cada cliente al canal que lo trajo (Meta, Google, email, orgánico) usando el modelo de atribución de la plataforma o el del CRM. El blended es resistente al ruido de atribución y refleja la realidad financiera del negocio; el CAC por canal es útil para decisiones de asignación de presupuesto pero depende totalmente del modelo de atribución elegido y suele inflar al canal con más cookies (last-click).</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuál de los dos CAC se usa para escalar un D2C?</h3><p class="faq-a">Para decisiones de escalado a nivel negocio (cuánto puedo invertir en marketing manteniendo márgenes) se usa el CAC blended comparado contra el LTV blended. Para decisiones tácticas dentro de cada canal (subir/bajar presupuesto en un ad set, pausar una campaña Google) se usa el CAC del canal con la métrica que ofrece la plataforma. La regla práctica que aplicamos: la dirección del negocio mira blended; el media buyer mira por canal. Mezclarlos genera decisiones contradictorias — el media buyer sube presupuesto porque su CAC en plataforma es bueno, mientras el blended se dispara porque el incremental real es bajo.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Por qué mi CAC por canal es mucho mejor que el CAC blended?</h3><p class="faq-a">Casi siempre por dos motivos: (1) atribución last-click duplica conversiones — Meta y Google se apuntan la misma venta porque ambos tocaron al usuario; (2) hay tráfico orgánico, recurrente o de marca que las plataformas se atribuyen pero que habría convertido igual sin pagar. El gap típico que vemos en cuentas D2C españolas es 30-60%: si la suma de CAC por canal da 25€ pero el blended da 38€, sobra atribución en algún sitio. El blended no miente; las plataformas sí.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo calculo el CAC blended correctamente?</h3><p class="faq-a">Fórmula: (gasto total marketing del periodo + costes herramientas + fees agencia) / clientes nuevos del periodo. Cliente nuevo = primera compra histórica, no primera compra del mes. Periodo mínimo recomendado 30 días para amortiguar ciclo de conversión; en tickets altos (\u003e200€) usar 60-90 días. Excluye del numerador costes que no generan adquisición (retención, CRM puro). Excluye del denominador a clientes recurrentes — si los cuentas, infla el resultado y rompe la comparación con LTV de primer pedido.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué relación CAC blended / LTV es saludable en eCommerce D2C?</h3><p class="faq-a">Depende del horizonte de LTV considerado. Con LTV a 12 meses, el ratio LTV:CAC blended sano para escalar D2C en España está en 3:1 mínimo — por debajo cuesta crecer sin comerse el margen. En productos de recompra alta (suplementos, café, cosmética) puede aceptarse 2:1 a 12 meses si LTV a 24 meses sube a 4-5:1. En productos de un solo uso (regalo, electrónica) el ratio debe medirse contra margen de la primera venta, no LTV proyectado, y conviene exigir CAC blended ≤60% del margen bruto del primer pedido.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Vale la pena montar Marketing Mix Modeling para resolver el CAC por canal?</h3><p class="faq-a">Sí cuando el negocio supera ~50K€/mes de spend total y hay \u003e2 canales relevantes. Por debajo, MMM es un cañonazo para matar mosca: el coste de implementarlo y mantenerlo no se recupera en eficiencia. Antes que MMM, en cuentas medianas funciona muy bien combinar tres lecturas paralelas: CAC blended (verdad financiera), CAC plataforma (decisión táctica) y geo lift o holdout tests trimestrales para medir incrementalidad real de un canal concreto. Esa triangulación cubre el 80% de las decisiones que tomaría un MMM sin la complejidad.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo afecta iOS y la pérdida de cookies al CAC por canal?</h3><p class="faq-a">Mucho, y desigual. Meta sufrió más que Google porque dependía más de la cookie cross-site, pero ambos han recuperado parte vía modeled conversions y CAPI/Enhanced Conversions. El efecto neto: el CAC por canal que reportan las plataformas hoy mezcla conversiones reales con conversiones modeladas estadísticamente — fiabilidad menor que pre-2021. Por eso el blended ha ganado peso: no depende de cookies, mide outputs (clientes nuevos) contra inputs (gasto total) sin atribución. En cuentas D2C medianas, mirar solo CAC plataforma en 2026 es ir ciego.</p></div>
+</section>
+
+
+        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

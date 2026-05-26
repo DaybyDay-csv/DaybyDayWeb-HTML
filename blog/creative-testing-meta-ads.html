@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Testing en Meta Ads: el framework que usamos para encontrar creativos ganadores | DayByDay Consulting</title>
+  <meta name="description" content="Framework paso a paso para hacer creative testing en Meta Ads: estructura de campañas, métricas de evaluación, cuándo declarar un ganador y cómo construir un sistema de creatividades que escale.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/creative-testing-meta-ads">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+<div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+<aside class="file-tree-sidebar" id="sidebar">
+  <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+  <div class="file-tree-section"><div class="file-tree-section-title">Secciones</div>
+    <a href="/" class="file-tree-item">Inicio</a>
+    <a href="/problema.html" class="file-tree-item">Problema</a>
+    <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
+    <a href="/resultados.html" class="file-tree-item">Resultados</a>
+    <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Paid Media</div>
+    <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
+    <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
+    <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
+    <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Automation & AI</div>
+    <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
+    <a href="/analytics.html" class="file-tree-item">Analytics</a>
+    <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Stack Tech</div>
+    <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
+    <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
+    <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+  </div>
+</aside>
+
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Meta Ads</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Meta Ads</span>
+          <span class="reading-time">9 min de lectura</span>
+          <span class="article-date">2026-03-25</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Creative Testing en Meta Ads: el framework que usamos para encontrar creativos ganadores</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Framework paso a paso para hacer creative testing en Meta Ads: estructura de campañas, métricas de evaluación, cuándo declarar un ganador y cómo construir un sistema de creatividades que escale.</p>
+        <div class="article-author">
+          <div class="author-avatar">DB</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirsó · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<h2 class="text-2xl font-black mt-10 mb-4">
+      Por qué el creative testing es la única ventaja competitiva real en Meta Ads
+    </h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      En 2026, Meta Ads es un sistema casi completamente automatizado. La segmentación la gestiona el
+      algoritmo. Las pujas las optimiza el sistema. El presupuesto lo distribuye Advantage Campaign Budget.
+      Si las palancas técnicas están igualadas entre competidores, ¿qué separa al que escala al que se estanca?
+    </p>
+    <p class="text-white/70 leading-relaxed mb-5">
+      La respuesta es una sola: <strong class="text-white">los creativos</strong>. El creativo es el único
+      input del sistema publicitario que el algoritmo no puede generar por sí solo (todavía) y que marca la
+      diferencia entre un ROAS de 2x y uno de 5x con el mismo presupuesto y el mismo producto.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-5">
+      En DayByDay hemos gestionado decenas de cuentas D2C en España y el patrón es constante: las marcas que
+      tienen un sistema de creative testing estructurado consiguen resultados entre 40-80% mejores que las que
+      publican creativos sin metodología. No es suerte. Es proceso.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">
+      El error más común: testear todo a la vez
+    </h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      La mayoría de los eCommerce D2C que llegan a DayByDay tienen el mismo problema: han publicado creativos
+      variados sin saber qué testear ni cómo interpretarlo. Lanzan un vídeo UGC, un carrusel de producto y un
+      estático lifestyle al mismo tiempo, en la misma campaña, y cuando uno funciona no saben por qué.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Sin saber por qué funciona algo, no puedes replicarlo ni escalarlo. El creative testing no es publicar
+      muchos creativos — es publicar creativos diseñados para aprender algo específico.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">
+      Las 4 variables que determinan el rendimiento de un creativo
+    </h2>
+    <div class="space-y-4 mb-8">
+      {[
+        {
+          variable: "1. El hook (primeros 3 segundos)",
+          desc: "Es la variable con mayor impacto en el CTR y la tasa de retención. El hook decide si el usuario para el scroll o sigue. En vídeo: los primeros 3 segundos. En estático: el titular o el elemento visual principal. Un hook diferente sobre el mismo producto puede triplicar el CTR.",
+          metric: "Métrica clave: Hook Rate (% que ve >3 seg en vídeo) / CTR en estáticos",
+        },
+        {
+          variable: "2. El formato",
+          desc: "Vídeo UGC, vídeo producido, carrusel, imagen estática, Stories nativo. Cada formato tiene un coste de producción y un perfil de rendimiento diferente. En D2C español, el UGC de cliente real suele superar al contenido producido en adquisición fría, pero no siempre.",
+          metric: "Métrica clave: CPA y ROAS por formato en audiencias frías",
+        },
+        {
+          variable: "3. El ángulo del copy",
+          desc: "Problema/solución, benchmark vs competencia, testimonial, urgencia/escasez, beneficio específico, educación. El mismo producto puede comunicarse con 6 ángulos completamente diferentes. El ángulo correcto depende del momento de compra del usuario.",
+          metric: "Métrica clave: CVR (tasa de clic a compra) por ángulo de copy",
+        },
+        {
+          variable: "4. La oferta o CTA",
+          desc: "Descuento vs precio completo, envío gratis vs precio justo, prueba gratis vs compra directa, urgencia vs evergreen. La oferta afecta directamente al CVR y al tipo de cliente que atrae. Una oferta muy agresiva puede generar volumen pero atraer compradores de bajo LTV.",
+          metric: "Métrica clave: CVR, AOV y tasa de repetición de compra a 30 días",
+        },
+      ].map(() => (
+        <div key= class="bg-[#1a1616] border border-white/8 rounded-xl p-5">
+          <p class="font-bold text-white mb-2"></p>
+          <p class="text-white/60 text-sm mb-3"></p>
+          <p class="text-xs text-[#e63946] font-semibold"></p>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">
+      Nuestro framework de creative testing: 3 fases
+    </h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      El framework que usamos en DayByDay divide el proceso en tres fases distintas, cada una con objetivos
+      y estructura de campañas diferentes.
+    </p>
+
+    <h3 class="text-xl font-bold mt-8 mb-3">Fase 1: Exploración — ¿qué ángulos resuenan?</h3>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Objetivo: identificar qué hooks y ángulos de copy generan la mayor tasa de interacción.
+      No buscamos conversiones todavía — buscamos señales de resonancia.
+    </p>
+    <div class="space-y-3 mb-6">
+      {[
+        "Estructura: campaña de tráfico o engagement, CBO con mínimo 3 ad sets, 3-5 creativos por ad set",
+        "Presupuesto: 10-20€/día por ad set (suficiente para generar datos en 5-7 días)",
+        "Variables testadas: hook (primeros 3 seg o titular visual) con el mismo copy de fondo",
+        "Criterio de avance: CTR > 1.5% en frío y Hook Rate > 30% en vídeos",
+        "Duración: 7 días antes de evaluar — no tocar nada antes",
+      ].map((item) => (
+        <div key= class="flex items-start gap-3 text-sm text-white/70">
+          <span class="text-[#e63946] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <h3 class="text-xl font-bold mt-8 mb-3">Fase 2: Validación — ¿convierte con datos reales?</h3>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Los creativos que superan los umbrales de Fase 1 pasan a validación en campaña de conversión.
+      Aquí buscamos saber si el creativo realmente vende, no solo si llama la atención.
+    </p>
+    <div class="space-y-3 mb-6">
+      {[
+        "Estructura: campaña de Purchase, CBO, 1 creativo por ad set para aislar resultados",
+        "Presupuesto: 20-30€/día por ad set mínimo — necesitas datos de conversión suficientes",
+        "Criterio de victoria: 50+ compras con ROAS ≥ objetivo de la cuenta en 7-14 días",
+        "Combinación de variables: en esta fase sí se pueden testear copy + creativo juntos si el volumen lo permite",
+        "Nunca declarar ganador con menos de 50 conversiones — el margen de error es demasiado alto",
+      ].map((item) => (
+        <div key= class="flex items-start gap-3 text-sm text-white/70">
+          <span class="text-[#e63946] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <h3 class="text-xl font-bold mt-8 mb-3">Fase 3: Escala — maximizar el ganador</h3>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Un creativo validado pasa a la campaña principal con presupuesto escalado. El objetivo aquí es
+      extraer el máximo valor del creativo antes de que la fatiga lo degrade.
+    </p>
+    <div class="space-y-3 mb-6">
+      {[
+        "Mueve el creativo ganador a la campaña principal (Advantage+ Shopping o ASC con mejores performers)",
+        "Monitoriza el CPM semana a semana — si sube más del 30%, la audiencia empieza a saturarse",
+        "Crea variaciones del ganador: mismo hook con copy diferente, mismo copy con nuevo visual",
+        "Señal de fatiga: CTR cae >25% vs mejor semana del creativo → planifica sustitución",
+        "El ganador nunca dura para siempre — hay que tener sustitutos en Fase 2 continuamente",
+      ].map((item) => (
+        <div key= class="flex items-start gap-3 text-sm text-white/70">
+          <span class="text-[#e63946] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">
+      La estructura de campañas para testing continuo
+    </h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      El sistema que implementamos en las cuentas que gestionamos en DayByDay tiene siempre tres capas activas en paralelo:
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+      {[
+        {
+          layer: "Capa 1: Escala",
+          desc: "60-70% del presupuesto. Creativos ganadores validados. Objetivo: conversiones al ROAS objetivo.",
+          color: "border-green-500/30 bg-green-500/5",
+        },
+        {
+          layer: "Capa 2: Validación",
+          desc: "20-25% del presupuesto. Candidatos a ganador con buenas métricas de Fase 1. Objetivo: confirmar conversiones.",
+          color: "border-yellow-500/30 bg-yellow-500/5",
+        },
+        {
+          layer: "Capa 3: Exploración",
+          desc: "10-15% del presupuesto. Nuevos conceptos creativos. Objetivo: aprendizaje y próximos candidatos.",
+          color: "border-[#e63946]/30 bg-[#e63946]/5",
+        },
+      ].map(() => (
+        <div key= className=border rounded-xl p-4 $>
+          <p class="font-bold text-white mb-2 text-sm"></p>
+          <p class="text-white/60 text-xs"></p>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">
+      Las métricas que miramos (y las que ignoramos)
+    </h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      El dashboard de Meta Ads tiene decenas de métricas. Estas son las que realmente importan para evaluar creativos:
+    </p>
+    <div class="overflow-x-auto mb-8">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 pr-4 text-white/50 font-semibold">Métrica</th>
+            <th class="text-left py-3 pr-4 text-white/50 font-semibold">Para qué sirve</th>
+            <th class="text-left py-3 text-white/50 font-semibold">Umbral referencia</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-white/5">
+          {[
+            ["CTR (link clicks)", "Mide la capacidad del creativo de generar interés suficiente para el clic", ">1.5% en frío, >2.5% en retargeting"],
+            ["Hook Rate (vídeos)", "% que ve más de 3 segundos — indica si el hook detiene el scroll", "30% para pasar a validación"],
+            ["CVR (clic → compra)", "Mide si el creativo atrae al buyer correcto y no solo curiosos", ">1.5% para producto <60€, >0.8% para &gt;100€"],
+            ["CPM", "Señal del nivel de competencia y saturación de audiencia", "Comparar vs benchmark del sector — sube si hay fatiga"],
+            ["ROAS", "La métrica de negocio — lo que importa al final", "Definido por el objetivo de la cuenta, no universal"],
+          ].map(([metric, use, ref]) => (
+            <tr key=>
+              <td class="py-3 pr-4 text-white font-medium"></td>
+              <td class="py-3 pr-4 text-white/60"></td>
+              <td class="py-3 text-white/50 text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-white/70 leading-relaxed mb-5">
+      <strong class="text-white">Métricas que ignoramos para evaluar creativos:</strong> alcance, impresiones, frecuencia
+      (a nivel de evaluación de creativo — la frecuencia sí importa a nivel de campaña). Estas métricas dicen cuánta
+      gente vio el creativo, no si el creativo es bueno.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">
+      Cuántos creativos necesitas según tu presupuesto
+    </h2>
+    <div class="space-y-4 mb-8">
+      {[
+        {
+          budget: "50-150€/día",
+          active: "6-10 creativos activos",
+          rotation: "Renueva 2-3 creativos/mes",
+          note: "Con poco presupuesto, la fatiga tarda más. Prioriza 1-2 formatos que sepas que convierten en tu sector.",
+        },
+        {
+          budget: "150-500€/día",
+          active: "10-20 creativos activos",
+          rotation: "Renueva 4-6 creativos/mes",
+          note: "Aquí empieza a merecer la pena tener las 3 capas activas. El testing ya genera ROI directo.",
+        },
+        {
+          budget: "+500€/día",
+          active: "20-40 creativos activos",
+          rotation: "Renueva 8-12 creativos/mes",
+          note: "A este nivel, el creative testing es el cuello de botella principal del crecimiento. Necesitas un sistema de producción continua.",
+        },
+      ].map(() => (
+        <div key= class="bg-[#1a1616] border border-white/8 rounded-xl p-5">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-[#e63946] font-black"></span>
+          </div>
+          <div class="grid grid-cols-2 gap-4 mb-3">
+            <div>
+              <p class="text-white/40 text-xs mb-1">Creativos activos</p>
+              <p class="text-white text-sm font-semibold"></p>
+            </div>
+            <div>
+              <p class="text-white/40 text-xs mb-1">Rotación recomendada</p>
+              <p class="text-white text-sm font-semibold"></p>
+            </div>
+          </div>
+          <p class="text-white/50 text-xs"></p>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">
+      El banco de insights: cómo acumular ventaja competitiva
+    </h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      El objetivo final del creative testing no es solo encontrar el creativo ganador de esta semana.
+      Es construir un banco de aprendizajes específico para tu marca y tu cliente: qué hooks funcionan
+      en tu categoría, qué ángulos de copy convierten mejor en tu precio, qué formatos tienen mejor LTV.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-5">
+      En DayByDay documentamos cada test con tres campos: la hipótesis inicial (qué pensábamos que iba a
+      pasar), el resultado real (qué pasó) y el aprendizaje accionable (qué hacemos diferente a partir de
+      ahora). Tras 3-6 meses, este banco de insights es imposible de replicar por un competidor nuevo
+      — es la ventaja competitiva real.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-5">
+      La mayoría de marcas D2C en España no tienen este sistema. Publican creativos de forma reactiva,
+      sin aprender de cada iteración. Esa es la oportunidad.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">
+      ¿Por qué muchas marcas D2C fallan en creative testing?
+    </h2>
+    <div class="space-y-3 mb-8">
+      {[
+        "Impaciencia: sacan conclusiones con 5-10 conversiones cuando se necesitan 50+",
+        "Confunden 'muchos creativos' con 'sistema de testing' — sin hipótesis no hay aprendizaje",
+        "No tienen proceso de producción de creativos: dependen de cuando 'sale' contenido nuevo",
+        "Testean variables combinadas: no saben si ganó el hook o el copy porque los pusieron juntos",
+        "No documentan: cada round de tests empieza de cero sin aprender del anterior",
+      ].map((item) => (
+        <div key= class="flex items-start gap-3 text-sm text-white/70">
+          <span class="text-white/30 mt-0.5 flex-shrink-0">✗</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <div class="bg-[#1a1616] border border-[#e63946]/20 rounded-xl p-6 mb-8">
+      <p class="text-white font-bold mb-2">¿Quieres implementar este framework en tu cuenta?</p>
+      <p class="text-white/60 text-sm mb-4">
+        En DayByDay implementamos este sistema de creative testing en cuentas D2C en España desde
+        <strong class="text-white">el primer mes</strong>. Los resultados que publicamos (+156% ROAS en 90 días)
+        vienen directamente de aplicar este proceso. Si quieres ver si hay margen de mejora en tus campañas actuales,
+        hablamos 15 minutos.
+      </p>
+      <button>
+        Ver si aplica a mi cuenta →
+      </button>
+    </div>
+
+    <p class="text-white/70 leading-relaxed mb-5">
+      Si tienes curiosidad sobre cómo este framework se aplica a la escala de campañas,
+      <a href="/blog/escalar-meta-ads.html">
+        aquí explicamos cómo escalar Meta Ads sin romper el ROAS
+      </a>
+      . Y si quieres entender primero si Meta Ads o Google Ads es la mejor inversión para tu eCommerce,
+      <a href="/blog/meta-ads-vs-google-ads.html">
+        tienes el análisis completo aquí
+      </a>
+      . Para priorizar qué testar más allá del creativo (audiencia, puja, estructura),
+      <a href="/blog/ab-testing-meta-ads-que-testar-primero.html">
+        revisa la pirámide de impacto del A/B testing en Meta Ads
+      </a>
+      .
+    </p>
+        </article>
+
+        
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+  <div class="faq-item"><h3 class="faq-q">¿Cuántos creativos necesito para hacer creative testing en Meta Ads?</h3><p class="faq-a">Para un test válido necesitas al menos 3-5 variaciones por variable que quieras testear (hook, formato, copy, oferta). En DayByDay recomendamos trabajar con un mínimo de 10-15 creativos activos simultáneamente en una cuenta con \u003e50€/día de gasto, para que el algoritmo de Meta tenga suficientes opciones y datos para optimizar.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuánto presupuesto hay que asignar a creative testing?</h3><p class="faq-a">La regla que seguimos: entre el 15-25% del presupuesto total de Meta Ads dedicado a testing de nuevos creativos. Si gastas 5.000€/mes, entre 750-1.250€ deberían ir a testear nuevos creativos. El resto va a escalar los ganadores probados.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuándo sé que un creativo ha 'ganado' el test?</h3><p class="faq-a">Un creativo gana cuando alcanza al menos 50 eventos de optimización (conversiones o purchases) con un ROAS igual o superior al objetivo de la cuenta, en un periodo de 7-14 días. Con menos datos el resultado es estadísticamente poco fiable. No declaramos ganador antes de 50 conversiones.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Es mejor usar DCO (Dynamic Creative Optimization) o creativos individuales para hacer tests?</h3><p class="faq-a">Depende del objetivo. DCO es útil para exploración rápida de combinaciones (Meta combina elementos automáticamente), pero no te dice qué elemento específico funcionó. Para aprendizaje real y construir un banco de insights accionables, usamos creativos individuales en fases de validación. DCO sirve más para escala que para aprendizaje.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Con qué frecuencia hay que renovar los creativos en Meta Ads?</h3><p class="faq-a">Depende del presupuesto: con <200€/día, un buen creativo puede durar 3-6 semanas. Con \u003e500€/día, la fatiga llega antes (1-2 semanas). La señal de alarma no es el tiempo sino la métrica: si el CTR del creativo cae más de un 25% respecto a su mejor semana, es hora de renovarlo aunque lleve pocos días activo.</p></div>
+</section>
+
+
+        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

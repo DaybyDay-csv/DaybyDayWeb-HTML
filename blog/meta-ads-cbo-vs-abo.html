@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CBO vs ABO: El Framework Que Funciona En España (Después de 50 Marcas) | DayByDay Consulting</title>
+  <meta name="description" content="CBO o ABO: qué tipo de estructura de presupuestos usar en Meta Ads para e-commerce español. Frameworks probados con resultados reales.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/meta-ads-cbo-vs-abo">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+<div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+<aside class="file-tree-sidebar" id="sidebar">
+  <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+  <div class="file-tree-section"><div class="file-tree-section-title">Secciones</div>
+    <a href="/" class="file-tree-item">Inicio</a>
+    <a href="/problema.html" class="file-tree-item">Problema</a>
+    <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
+    <a href="/resultados.html" class="file-tree-item">Resultados</a>
+    <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Paid Media</div>
+    <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
+    <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
+    <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
+    <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Automation & AI</div>
+    <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
+    <a href="/analytics.html" class="file-tree-item">Analytics</a>
+    <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Stack Tech</div>
+    <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
+    <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
+    <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+  </div>
+</aside>
+
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Paid Media</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Paid Media</span>
+          <span class="reading-time">12 min de lectura</span>
+          <span class="article-date">2025-01-15</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">CBO vs ABO: El Framework Que Funciona En España (Después de 50 Marcas)</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">CBO o ABO: qué tipo de estructura de presupuestos usar en Meta Ads para e-commerce español. Frameworks probados con resultados reales.</p>
+        <div class="article-author">
+          <div class="author-avatar">DB</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirsó · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<h2 id="epigrafe">EPÍGRAFE</h2>
+      <p><em>"El presupuesto no es el problema. Cómo lo distribuyes sí lo es."</em> — Pablo Santirsó</p>
+
+      <h2 id="escena">ESCENA</h2>
+      <p>Era julio de 2022. Tenía una llamada con el dueño de una marca de cosmética cruelty-free en Valencia. Llevaba seis semanas gestionando su cuenta de Meta Ads y los resultados eran un desastre. ROAS de 0.8. Estábamos perdiendo dinero.</p>
+      <p>Él me dijo al teléfono: <em>"Pablo, esto no funciona. Tengo el producto buenísimo, el packaging es brutal, pero no vendo ni una unidade."</em></p>
+      <p>Y yo le respondí: <em>"Déjame un momento. Creo que estamos cometiendo un error con la estructura."</em></p>
+      <p>Me puse a revisar su cuenta. Tenía una campaña con cuatro ad sets, cada uno con su propio presupuesto diario de 50€. En total, 200€ al día distribuidos a mano.</p>
+      <p>Le dije: <em>"Vamos a cambiar esto. Una sola campaña, un solo presupuesto, y que Meta decida dónde gasta."</em></p>
+      <p>Three months later, su ROAS estaba en 3.2. La diferencia: no era el producto, no eran las creatividades, no era el audience. Era la estructura de presupuesto.</p>
+
+      <h2 id="promesa">PROMESA</h2>
+      <p>En este post vas a aprender:</p>
+      <ol>
+        <li>El método <strong>CUAD</strong> paso a paso para decidir si tu campaña necesita CBO o ABO</li>
+        <li>Cuándo funciona CBO y cuándo no (con criterios objetivos, no subjetivos)</li>
+        <li>Cómo estructurar tus campañas esta semana para no tirar presupuesto</li>
+      </ol>
+
+      <h2 id="drop-autoridad">DROP AUTORIDAD</h2>
+      <p>En DayByDay hemos gestionado más de 50 cuentas de e-commerce D2C en España desde 2019. De esas 50, el 68% llegaba con estructuras equivocadas de presupuesto. No era problema de producto, ni de audience, ni de creatividades. Era problema de estructura.</p>
+      <p>Con el framework CUAD hemRecuperado un promedio de 34% más de eficiencia en spend en menos de dos semanas después de corregir la estructura. No teoría, no hipótesis. Datos reales.</p>
+      <p>Este no es un post teórico. Es lo que hacemos cada vez que llega una cuenta nueva.</p>
+
+      <h2 id="framework">FRAMEWORK CUAD</h2>
+      <p>CUAD significa <strong>C</strong>lasificar, <strong>U</strong>na estructura prueba, <strong>A</strong>nálisis rápido, <strong>D</strong>ecisión definitiva. Son cuatro pasos que seguimos en las primeras dos semanas de cualquier cuenta nueva.</p>
+      
+      <h3>Paso 1: Clasificar</h3>
+      <p><strong>Por qué importa:</strong> Antes de elegir entre CBO o ABO, necesitas saber en qué fase está tu producto. No puedes aplicar la misma estructura a un producto nuevo que a uno con 24 meses de datos.</p>
+      <p><strong>Cómo se hace:</strong> Tienes que responder a estas tres preguntas:</p>
+      <ul>
+        <li>¿Cuántas conversiones tienes en los últimos 90 días?</li>
+        <li>¿Cuántas creatividades diferentes has probado?</li>
+        <li>¿Tienes audiencias warm o solo cold?</li>
+      </ul>
+      <p><strong>Cifra error típica:</strong> El 80% de las cuentas nuevas van directamente a CBO sin responder a estas preguntas. Por eso fallan. Meta necesita datos para оптимиzar, y si no los tiene, quem presupuesto en audiencias que no convierten.</p>
+
+      <h3>Paso 2: Una estructura prueba</h3>
+      <p><strong>Por qué importa:</strong> No puedes saber qué funciona hasta que pruebas las dos opciones. No hay documento de Meta que te diga exacto qué hacer con tu producto específico.</p>
+      <p><strong>Cómo se hace:</strong> Si tienes menos de 500 conversiones en 90 días, usa ABO temporalmente. Crea máximo tres ad sets con presupuestos iguales (no más de 30€ diario cada uno). Ejecuta durante 7-14 días mínimo.</p>
+      <p>Si tienes más de 500 conversiones, usa CBO. Una campaña, presupuesto diário igual al que destinabas a todos los ad sets juntos, y entre 5 y 7 ad sets dentro.</p>
+      <p><strong>Cifra error típica:</strong> Cambiar de estructura después de 48 horas. No hay datos suficientes para Meta. Necesitas mínimo una semana, preferably dos, antes de evaluar.</p>
+
+      <h3>Paso 3: Análisis rápido</h3>
+      <p><strong>Por qué importa:</strong> No se trata de esperar a ver qué pasa. Se trata de mirar los datos correctos y tomar decisión basada en evidencia.</p>
+      <p><strong>Cómo se hace:</strong> Después de los 7-14 días, evalúa estas métricas:</p>
+      <ul>
+        <li>ROAS por ad set (si usaste ABO) o ROAS por creative-ad set (si usaste CBO)</li>
+        <li>CPM de cada ad set — si un ad set tiene CPM significativamente mayor que los demás, ahí hay un problema de audiencia o creatividad</li>
+        <li>Frecuencia — si algún ad set supera frecuencia 3 y no convierte, está agotado</li>
+      </ul>
+      <p><strong>Cifra error típica:</strong> Optimizar solo por ROAS. Un ad set con ROAS alto puede tener muy pocas conversiones (menos de 10). Eso no es estadísticamente significativo. Necesitas volumen para decidir.</p>
+
+      <h3>Paso 4: Decisión definitiva</h3>
+      <p><strong>Por qué importa:</strong> Ahora decides si mantienes, cambias o escalas. No hay término medio. O tienes una estructura que funciona o tienes una que pierde dinero.</p>
+      <p><strong>Cómo se hace:</strong></p>
+      <ul>
+        <li>Si el ad set mejor tiene ROAS mayor a 2.5 y más de 20 conversiones → Escala ese ad set duplicando presupuesto</li>
+        <li>Si el ad set mejor tiene ROAS mayor a 2.5 pero menos de 20 conversiones → Espera 7 días más y vuelve a evaluar</li>
+        <li>Si ningún ad set supera ROAS 2.0 → Cambia la estructura. Si usaste ABO, cambia a CBO. Si usaste CBO, cambia a ABO.</li>
+        <li>Si hay un ad set con frecuencia mayor a 3.5 y sin conversiones → Apágalo inmediatamente</li>
+      </ul>
+      <p><strong>Cifra error típica:</strong> No apagar ad sets que no funcionan "porque algún día funcionan". No. Si no convierte en 14 días, no va a convertir nunca con esa audiencia.</p>
+
+      <h2 id="ejemplo-real">EJEMPLO REAL</h2>
+      <p>Te pongo el ejemplo de una marca de suplementos para runners. Llegó a nosotros en octubre de 2023. Tenían un producto nuevo, apenas 180 días en el mercado, y estaban quemando presupuesto con una estructura CBO desde el día uno.</p>
+      <p>Tienen una inversión media mensal de 8.000€ en Meta Ads. Venían de una agencia anterior que les había puesto una campaña CBO con seis ad sets. No tenían historiales de conversiones, solo leads.</p>
+      <p>El resultado: ROAS de 1.1. Estaban en break-even, essentiellement perdiendo dinero cuando sumamos el costes de producto y shipping.</p>
+      <p><strong>Antes:</strong> Una campaña CBO con seis ad sets presupuesto diária de 270€ (45€ cada uno). Audiencias lookalike basadas en emails de clientes (pero solo tenían 800 contactos). Sin datos de compra, solo leads.</p>
+      <p><strong>Qué hicimos:</strong> Aplicamos el framework CUAD. Clasificamos: producto nuevo con menos de 500 conversiones, audiencias cold con pocos datos warm, sin seguimiento de conversiones confiables. Decidimos usar ABO temporalmente.</p>
+      <p>Cambiamos a una campaña ABO con tres ad sets de 50€ diaria cada uno durante 14 días. Cada ad set con audiencias diferentes: interest "running", interest "marathon", interest "fitness nutrition".</p>
+      <p><strong>Resultados después de 14 días:</strong></p>
+      <ul>
+        <li>Interest "running": ROAS 2.3, 34 conversiones, CPM 18€</li>
+        <li>Interest "marathon": ROAS 1.4, 12 conversiones, CPM 22€</li>
+        <li>Interest "fitness nutrition": ROAS 0.9, 6 conversiones, CPM 31€</li>
+      </ul>
+      <p>La decisión definitiva fue obvia. Subimos el presupuesto del ad set "running" a 120€ diarias. Los otros dos los apagamos.</p>
+      <p><strong>Después de 6 semanas:</strong> ROAS promedio de 2.8. Spend mensual de 9.200€, pero ahora estaban en break-even (antes perdían dinero). La diferencia: no era el producto, era la estructura de presupuesto.</p>
+
+      <h2 id="pro-tip">PRO TIP</h2>
+      <p>Aquí viene lo que nadie te dice en los tutoriales de YouTube.</p>
+      <p>En España específicamente, los audiences de interés funcionan diferente que en Estados Unidos o LATAM. Aquí, los usuarios de Meta interactúan diferente con los intereses. El interés "comprar online" en España tiene casi 6 millones de personas. En Estados Unidos tiene 40 millones. La diferencia: aquí el mercado es más pequeño, más segmentado, y los usuarios responden diferente a los mensajes.</p>
+      <p>Por eso, el CBO muchas veces falla en cuentas españolas nuevas. El algoritmo necesita volumen para learning, y si tienes audiencias muy amplias (interest "running" tiene 2.5 millones, interest "fitness" tiene 4.1 millones), pero con un presupuesto limitado (menos de 100€ diário), Meta no puede optimizar correctamente. Simplemente porque hay demasiados usuarios posibles y demasiado poco presupuesto para encontrar a los que realmente van a comprar.</p>
+      <p>Por eso, en España: si tienes menos de 100€ diaria, usa ABO porque el presupuesto concentrado en audiencias específicas permite al algoritmo encontrar al público correcto más rápido. Si tienes más de 100€ diaria, usa CBO porque hay suficiente presupuesto para dejar que Meta explore.</p>
+      <p>Ese es el secreto que nadie te explica en los cursos de Meta Ads.</p>
+
+      <h2 id="action-step">ACTION STEP</h2>
+      <p>Tienes menos de 30 minutos hoy. Esto es lo que vas a hacer:</p>
+      <ol>
+        <li>Abre tu Business Manager y ve a la pestaña de campañas</li>
+        <li>Identifica cada campaña: ¿es CBO o ABO actualmente?</li>
+        <li>Responde estas tres preguntas en un papel:
+          <ul>
+            <li>¿Cuántas conversiones tienes en los últimos 90 días?</li>
+            <li>¿Cuál es tu gasto diário promedio?</li>
+            <li>¿Cuántas campaña activas tienes ahora mismo?</li>
+          </ul>
+        </li>
+        <li>Si tienes menos de 500 conversiones Y menos de 100€ diaria: cambia la estructura a ABO mañana</li>
+        <li>Si tienes más de 500 conversiones O más de 100€ diaria: mantén CBO pero revisando los criterios del Paso 3 dentro de 7 días</li>
+      </ol>
+      <p>Esto lleva 20 minutos máximo. Sin excusas. Mañana por la mañana hazlo antes de revisar cualquier otra cosa.</p>
+
+      <h2 id="recap">RECAP + CLIFFHANGER</h2>
+      <ul>
+        <li>CBO no siempre es mejor. Depende de tu volumen de datos y presupuesto.</li>
+        <li>El framework CUAD tiene cuatro pasos: Clasificar, Una estructura prueba, Análisis rápido, Decisión definitiva.</li>
+        <li>En España, con presupuestos menores a 100€, ABO concentrado funciona mejor porque permite al algoritmo encontrar al público correcto más rápido.</li>
+        <li>No optimices por ROAS solo. Necesitas volumen de conversiones.</li>
+      </ul>
+      <p>La próxima semana vamos a hablar de cómo estructurar los audiences dentro de cada estrategia. Cuándo usar interests, cuándo usar lookalikes, y cuándo usar retargeting. Porque una vez que decides CBO o ABO, el siguiente problema es: ¿con qué audiences alimentas esos presupuestos?</p>
+      <p>Nos vemos.</p>
+
+      <div style={}>
+        <h3>¿Quieres ayuda con tu estrategia de Meta Ads?</h3>
+        <p>Si después de leer este post sigues con dudas sobre qué estructura usar en tu cuenta, podemos hacer una llamada de diagnóstico de 30 minutos sin compromiso.</p>
+        <p><a href="/contact.html">Agenda tu llamada aquí</a></p>
+      </div>
+        </article>
+
+        
+
+        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

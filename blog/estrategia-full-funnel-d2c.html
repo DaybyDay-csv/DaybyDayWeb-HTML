@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estrategia full funnel D2C: del frío al cliente recurrente | DayByDay Consulting</title>
+  <meta name="description" content="Cómo montar una estrategia full funnel real para un eCommerce D2C en España: paid media (Meta + Google), email/WhatsApp y retención. Suelo de presupuesto, distribución por canal, KPIs blended y orden operativo de implementación.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/estrategia-full-funnel-d2c">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+<div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+<aside class="file-tree-sidebar" id="sidebar">
+  <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+  <div class="file-tree-section"><div class="file-tree-section-title">Secciones</div>
+    <a href="/" class="file-tree-item">Inicio</a>
+    <a href="/problema.html" class="file-tree-item">Problema</a>
+    <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
+    <a href="/resultados.html" class="file-tree-item">Resultados</a>
+    <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Paid Media</div>
+    <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
+    <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
+    <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
+    <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Automation & AI</div>
+    <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
+    <a href="/analytics.html" class="file-tree-item">Analytics</a>
+    <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Stack Tech</div>
+    <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
+    <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
+    <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+  </div>
+</aside>
+
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Estrategia</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Estrategia</span>
+          <span class="reading-time">9 min de lectura</span>
+          <span class="article-date">2026-04-29</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Estrategia full funnel D2C: del frío al cliente recurrente</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Cómo montar una estrategia full funnel real para un eCommerce D2C en España: paid media (Meta + Google), email/WhatsApp y retención. Suelo de presupuesto, distribución por canal, KPIs blended y orden operativo de implementación.</p>
+        <div class="article-author">
+          <div class="author-avatar">DB</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirsó · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<p class="text-white/70 leading-relaxed mb-5">
+      Una <strong class="text-white">estrategia full funnel D2C</strong> no es lanzar Meta Ads en TOFU/MOFU/BOFU. Eso es full funnel dentro de Meta. El full funnel real de un eCommerce D2C cubre cuatro capas — descubrimiento, consideración, conversión y recompra — combinando paid media (Meta + Google + TikTok), email/WhatsApp y SEO. Las cuentas que escalan en España de 100K a 1M€ no lo hacen estirando una sola plataforma; lo hacen montando un sistema donde cada canal cumple un rol específico y los KPIs se miden blended, no por canal.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Este artículo es el orden operativo que aplicamos en DayByDay para montar full funnel D2C: qué canal entra primero, cómo se distribuye el presupuesto, qué KPIs validan que funciona y los errores que vemos repetir cada mes en cuentas que llegan estancadas.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Las cuatro capas del full funnel D2C (más allá de Meta)</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      El error de partida más habitual es asumir que full funnel = Meta Ads en distintas fases. La realidad operativa de un D2C español que escala:
+    </p>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Capa</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Objetivo</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Canal principal</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">KPI clave</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ,
+            ,
+            ,
+            ,
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
+              <td class="py-3 px-3 text-white/55 text-xs"></td>
+              <td class="py-3 px-3 text-white/55 text-xs"></td>
+              <td class="py-3 px-3 text-white font-medium text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      La fricción crítica está entre conversión y recompra. La mayoría de D2C españoles que llegan estancados invierten 80-90% de la atención en las dos primeras capas y dejan email/WhatsApp en automático con un par de flujos genéricos. Resultado: CAC creciente, LTV plano y techo de escala.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Orden operativo: qué canal montar primero (y por qué)</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      No tiene sentido activar TikTok Ads, Google Performance Max y email automation en paralelo si la base no está. El orden que aplicamos en cuentas D2C nuevas:
+    </p>
+    <div class="space-y-4 mb-6">
+      {[
+        {
+          num: "1",
+          titulo: "Tracking server-side antes que cualquier campaña",
+          desc: "Pixel + Conversions API deduplicados, GA4 con eventos custom, discrepancia Meta vs Shopify <30%. Si esto está roto, todos los CAC reportados son ficción y cualquier decisión de escalado es ciega. La documentación oficial de Meta sobre la API de Conversiones es la referencia obligatoria aquí.",
+        },
+        {
+          num: "2",
+          titulo: "Meta Ads como motor de adquisición fría",
+          desc: "Es el canal con mayor capacidad de generar demanda en D2C de descubrimiento (moda, belleza, suplementos, hogar). Validar CAC objetivo en TOFU antes de pasar a la siguiente capa: 30 días con CAC dentro de rango es el suelo para considerar la base estable.",
+        },
+        {
+          num: "3",
+          titulo: "Email + WhatsApp para captura y carrito abandonado",
+          desc: "Con tráfico ya entrando, los flujos básicos (bienvenida, carrito, post-compra) levantan 8-15% de los ingresos sin coste variable. Sin email funcionando, el dinero invertido en MOFU/BOFU paga doble.",
+        },
+        {
+          num: "4",
+          titulo: "Google Ads de marca + brand defense",
+          desc: "Cuando Meta empieza a generar demanda, las búsquedas de tu marca crecen. No capturarlas con Google Ads de marca es regalar conversiones a competidores que pujan por tu nombre. Coste bajo, ROAS muy alto, y bloquea defensa.",
+        },
+        {
+          num: "5",
+          titulo: "Capa adicional (TikTok, Performance Max, contenido orgánico)",
+          desc: "Sólo cuando los pasos 1-4 están en régimen estable. Abrir un canal nuevo antes diluye atención y presupuesto, y suele resultar en dos canales subóptimos en lugar de uno dominado.",
+        },
+      ].map(() => (
+        <div key= class="bg-[#1a1616] border border-white/8 rounded-xl p-4 flex gap-4">
+          <div class="w-8 h-8 rounded-full bg-[#de0015]/20 border border-[#de0015]/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <span class="text-[#de0015] font-bold text-sm"></span>
+          </div>
+          <div>
+            <p class="font-semibold text-white text-sm mb-1"></p>
+            <p class="text-white/55 text-sm"></p>
+          </div>
+        </div>
+      ))}
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      La <a href="https://www.shopify.com/blog/marketing-funnel" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">guía de marketing funnel de Shopify</a> describe esta misma lógica: capa de adquisición + capa de retención + medición blended es el patrón estándar para D2C que escala con paid media.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Distribución de presupuesto recomendada por fase de madurez</h2>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Fase</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Meta Ads</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Google Ads</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">TikTok / otros</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Reserva test</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ,
+            ,
+            ,
+            ,
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
+              <td class="py-3 px-3 text-white/55 text-xs"></td>
+              <td class="py-3 px-3 text-white/55 text-xs"></td>
+              <td class="py-3 px-3 text-white/55 text-xs"></td>
+              <td class="py-3 px-3 text-white/55 text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">KPIs blended: la fuente de verdad cuando hay 3+ canales</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Cuando el full funnel está activo en 3 o más canales, mirar ROAS por plataforma deja de ser útil — todos los canales se atribuyen las mismas conversiones. Las métricas que validan que el sistema funciona:
+    </p>
+    <div class="space-y-3 mb-6">
+      {[
+        "MER (ingresos totales / inversión paid total): >3,5 en cuentas que escalan, >5 en cuentas con mucha recompra orgánica. Si baja al subir presupuesto, la última subida no fue productiva.",
+        "CAC blended: inversión paid total / clientes nuevos del mes. Es el coste real de adquirir un cliente, sin doble contar entre canales.",
+        "Tasa de recompra a 90 días: >25% en D2C consumible, >15% en producto único. Por debajo, la capa de retención no funciona y el negocio depende 100% del paid.",
+        "LTV-180d: los seis primeros meses son el horizonte realista para validar unit economics. Trabajar con LTV anual sobreestima.",
+        "Contribución incremental por canal vía geo-test o pause-test trimestral: la única forma honesta de saber qué canal aporta de verdad cuando el tracking está limitado por iOS.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Errores que vemos repetir en full funnel D2C</h2>
+    <div class="space-y-3 mb-6">
+      {[
+        "Activar BOFU/retargeting antes de validar adquisición fría — el ROAS reportado parece bueno pero no entran clientes nuevos.",
+        "Dejar email/WhatsApp en piloto automático con flujos genéricos — la capa de retención es la que dilata el LTV, sin ella el CAC va a estrangular el negocio.",
+        "Activar TikTok Ads sin haber estabilizado Meta — abrir un canal nuevo cuando el primero todavía no aporta CAC objetivo es duplicar problemas.",
+        "Mirar ROAS por canal en vez de MER blended — sobreinvierte en BOFU y oculta dónde está la incrementalidad real.",
+        "Asumir que full funnel = más campañas activas. Cuando hay >12 campañas paralelas, el algoritmo se canibaliza a sí mismo. Menos es más.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cómo trabajamos en DayByDay el full funnel D2C</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Cuando entra una marca D2C nueva en gestión, la primera fase no es lanzar campañas — es montar el sistema. En las cuentas que escalan con nosotros la secuencia de los primeros 90 días sigue siempre el mismo orden:
+    </p>
+    <div class="space-y-3 mb-6">
+      {[
+        "Semana 1-2 — Auditoría de tracking: Conversions API, GA4, eventos custom, discrepancia Meta vs Shopify. Cualquier escalado a partir de aquí descansa en este paso.",
+        "Semana 2-4 — Validación de Meta Ads en TOFU: 1-2 campañas Advantage+ Shopping + lookalike top LTV. Objetivo: CAC objetivo estable durante 30 días.",
+        "Semana 3-6 — Activación de email/WhatsApp con flujos básicos: bienvenida (3 emails), carrito abandonado (2 emails + 1 WhatsApp), post-compra (2 emails + cross-sell). Apunta a +10-15% ingresos no atribuibles a paid.",
+        "Semana 5-8 — Google Ads marca + brand defense + categorías top. ROAS típicamente >8 en marca, >3 en categorías.",
+        "Semana 8-12 — Apertura de capa adicional (TikTok o capa MOFU específica) sólo si MER blended >3,5 y CAC objetivo respetado.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      El resultado típico al final de los 90 días es un sistema con 3 canales activos, MER blended estable en 3,5-4,5x, recompra >25% y un techo de escala identificado por capa, no por intuición. Sin esto, escalar inversión es como pisar el acelerador con los ojos cerrados.
+    </p>
+
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-6 mb-8 text-center">
+      <p class="font-bold text-white text-lg mb-2">¿Quieres una hoja de ruta full funnel para tu D2C?</p>
+      <p class="text-white/50 text-sm mb-4">Te montamos el orden de implementación, distribución de presupuesto y KPIs blended con tus datos reales — no plantillas genéricas.</p>
+      <button>
+        Solicitar análisis gratuito →
+      </button>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Artículos relacionados</h2>
+    <div class="space-y-3">
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/estrategia-full-funnel-meta-ads-d2c.html">
+          Estrategia full funnel dentro de Meta Ads (TOFU / MOFU / BOFU) →
+        </a>
+        <p class="text-white/40 text-xs mt-1">El zoom dentro de Meta: cómo estructurar las tres capas con audiencias, formatos y presupuestos por fase</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/escalar-ecommerce-d2c-100k-1m-paid-media.html">
+          Cómo escalar un eCommerce D2C de 100K a 1M€ con paid media →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Sistema de escalado, hitos por fase y cuándo activar cada canal sin romper rentabilidad</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/cac-vs-ltv-ecommerce-escalable.html">
+          CAC vs LTV: la métrica que define si tu D2C es escalable →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Por qué la capa de retención del full funnel es la que dilata LTV y permite seguir subiendo CAC</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/cuanto-invertir-meta-ads-calculadora.html">
+          Cuánto invertir en Meta Ads según tu ticket y margen (con calculadora) →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Fórmula operativa para fijar presupuesto Meta y suelo mínimo realista por ticket medio</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/combinar-google-ads-meta-ads-d2c.html">
+          Cómo combinar Google Ads y Meta Ads en una estrategia D2C →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Rol de cada canal, orden de activación y reparto de presupuesto entre Meta y Google por fase de madurez</p>
+      </div>
+    </div>
+        </article>
+
+        
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+  <div class="faq-item"><h3 class="faq-q">¿Qué es una estrategia full funnel para un eCommerce D2C?</h3><p class="faq-a">Una estrategia full funnel para D2C es el sistema de adquisición y retención que cubre las cuatro fases del recorrido del cliente: descubrimiento (frío), consideración, conversión y recompra. No se limita a Meta Ads — combina paid media (Meta + Google + TikTok), tráfico orgánico (SEO + redes), email/WhatsApp y retención post-compra. La diferencia con un enfoque sólo de paid es que el full funnel D2C optimiza el LTV completo, no únicamente el CAC del primer pedido.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuál es la diferencia entre full funnel en Meta Ads y full funnel D2C completo?</h3><p class="faq-a">El full funnel en Meta Ads se queda dentro de la plataforma — TOFU/MOFU/BOFU vía Meta. El full funnel D2C es un nivel por encima: Meta es el motor de adquisición, pero Google Ads cubre demanda existente, email/WhatsApp construye recompra y SEO/contenido reduce dependencia del coste por click. Una marca D2C que sólo escala vía Meta tiene un techo claro: cuando la audiencia satura, el CAC se dispara. El full funnel D2C diluye ese riesgo distribuyendo presupuesto y atención entre adquisición fría, retención y demanda capturada.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Por dónde empiezo si mi D2C todavía no tiene full funnel montado?</h3><p class="faq-a">El orden que aplicamos: 1) Validar tracking (Conversions API + GA4 + atribución por canal). 2) Activar adquisición pura en Meta hasta validar CAC objetivo. 3) Montar email/WhatsApp con flujos básicos (bienvenida, carrito abandonado, post-compra). 4) Añadir Google Ads de marca + categorías top. 5) Cuando el motor está estable, abrir TikTok o capa de contenido orgánico para diluir CAC. Saltarse el paso 1 invalida todo lo demás: sin tracking, no sabes qué canal está aportando incrementalidad real.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuánto presupuesto necesito para una estrategia full funnel D2C en España?</h3><p class="faq-a">Suelo realista en 2026: 2.500-4.000€/mes de inversión publicitaria total para empezar a operar full funnel sin que ningún canal quede subóptimo. Distribución de partida: 60-70% Meta, 20-25% Google (marca + brand defense + categorías top), 5-10% reserva para test de TikTok o capa adicional. Por debajo de 2.000€/mes no hay datos suficientes para que ningún canal salga de la fase de aprendizaje. El email/WhatsApp no entra en esta cifra — es coste fijo de plataforma (Klaviyo, Brevo) que ronda 50-300€/mes según base.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo mido si mi estrategia full funnel está funcionando o no?</h3><p class="faq-a">Tres KPIs blended (no por canal): MER (ingresos totales / inversión paid total) > 3,5 en cuentas que escalan; CAC blended (inversión paid / clientes nuevos del periodo) en línea con LTV-180d para ratio LTV/CAC ≥3:1; tasa de recompra a 90 días \u003e25% para validar que la capa de retención funciona. Mirar ROAS por canal aislado lleva a sobreinvertir en BOFU (que infla ROAS reportado pero no aporta clientes nuevos). El MER y el CAC blended son la fuente de verdad.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo afecta iOS 14+ y la pérdida de tracking a una estrategia full funnel D2C?</h3><p class="faq-a">Reduce la precisión de atribución por canal entre un 20% y un 35% según sector. La consecuencia operativa es que las decisiones de presupuesto se toman cada vez más sobre métricas blended (MER, CAC blended, post-purchase survey) y menos sobre ROAS por plataforma. Un full funnel D2C bien montado en 2026 incluye Conversions API server-side, GA4 con eventos custom, post-purchase survey ('¿dónde nos conociste?') y, en cuentas que invierten \u003e15K€/mes, modelos de marketing mix simplificados. Sin esa capa, escalar a ciegas es la norma.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuál es el error más común al implementar full funnel en un D2C?</h3><p class="faq-a">Empezar por la capa de retargeting/BOFU sin haber validado adquisición fría. La cuenta queda atrapada en un bucle: el ROAS reportado parece bueno porque el BOFU recoge usuarios que iban a comprar igual, pero el negocio no crece porque no entran clientes nuevos. La señal de alarma es MER blended \u003e5 con crecimiento de ingresos plano. La regla operativa: hasta que la capa TOFU no genere CAC objetivo de forma estable durante 30 días, BOFU/MOFU son maquillaje, no motor.</p></div>
+</section>
+
+
+        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

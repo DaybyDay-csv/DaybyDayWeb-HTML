@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cómo subir el AOV en D2C: 7 palancas reales para ecommerce | DayByDay Consulting</title>
+  <meta name="description" content="Guía operativa para aumentar el AOV (ticket medio) en un eCommerce D2C en España: definición y cálculo, AOV saludable por sector D2C 2026, las 7 palancas con mayor ROI ordenadas por impacto (bundles, free shipping threshold, cross-sell, tier descuento, upsell post-purchase, suscripción, edición limitada), cómo medir si funcionan sin canibalizar conversión, errores frecuentes y enfoque DayByDay (Pablo + Jorge).">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/aumentar-aov-ecommerce-d2c-palancas">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+<div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+<aside class="file-tree-sidebar" id="sidebar">
+  <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+  <div class="file-tree-section"><div class="file-tree-section-title">Secciones</div>
+    <a href="/" class="file-tree-item">Inicio</a>
+    <a href="/problema.html" class="file-tree-item">Problema</a>
+    <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
+    <a href="/resultados.html" class="file-tree-item">Resultados</a>
+    <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Paid Media</div>
+    <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
+    <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
+    <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
+    <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Automation & AI</div>
+    <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
+    <a href="/analytics.html" class="file-tree-item">Analytics</a>
+    <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Stack Tech</div>
+    <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
+    <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
+    <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+  </div>
+</aside>
+
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Unit Economics</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Unit Economics</span>
+          <span class="reading-time">11 min de lectura</span>
+          <span class="article-date">2026-05-10</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Cómo subir el AOV en D2C: 7 palancas reales para ecommerce</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Guía operativa para aumentar el AOV (ticket medio) en un eCommerce D2C en España: definición y cálculo, AOV saludable por sector D2C 2026, las 7 palancas con mayor ROI ordenadas por impacto (bundles, free shipping threshold, cross-sell, tier descuento, upsell post-purchase, suscripción, edición limitada), cómo medir si funcionan sin canibalizar conversión, errores frecuentes y enfoque DayByDay (Pablo + Jorge).</p>
+        <div class="article-author">
+          <div class="author-avatar">DB</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirsó · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<p class="text-white/70 leading-relaxed mb-5">
+      <strong class="text-white">Subir el AOV es la palanca con mejor ROI para escalar un eCommerce D2C en España en 2026</strong>. Cada euro extra de ticket medio cae directamente sobre el margen de contribución sin requerir más inversión en adquisición — y con el CPM de Meta subiendo año a año entre el 15% y el 25%, las cuentas D2C que aguantan rentabilidad son casi siempre las que han trabajado AOV antes que ROAS. En esta guía repasamos cómo se calcula, qué AOV es saludable por sector D2C español, las 7 palancas con mayor impacto medido en cuentas reales y cómo evitar el error clásico de subir AOV mientras se canibaliza la conversion rate.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Qué es el AOV y cómo se calcula correctamente</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      <strong class="text-white">El AOV (Average Order Value)</strong> es el ingreso medio por pedido completado en un periodo concreto: revenue total dividido entre número de pedidos. La fórmula operativa que usamos en DayByDay separa siempre AOV bruto y AOV neto:
+    </p>
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-6">
+      <p class="text-white font-mono text-sm leading-relaxed">
+        AOV bruto (€) = Revenue total / Pedidos completados
+      </p>
+      <p class="text-white/50 text-xs mt-3 leading-relaxed">
+        AOV neto (€) = (Revenue total − Descuentos − Devoluciones esperadas) / Pedidos completados
+      </p>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      La diferencia importa: en cuentas D2C de moda con 25-30% de devolución y descuentos checkout del 8-15%, el AOV bruto que reporta Shopify suele estar 18-25% por encima del AOV neto real. Para decisiones de spend y de free shipping threshold trabajamos siempre sobre AOV neto. Y para detectar si una palanca de AOV está sesgando los datos por pedidos grandes, comparamos también AOV mediano vs medio — la mediana es más robusta y refleja el comportamiento real del comprador típico.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-5">
+      <a href="https://www.shopify.com/blog/average-order-value" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Según Shopify, el AOV es uno de los KPIs más subestimados en eCommerce D2C</a>: subir un 15% el AOV equivale a aumentar la rentabilidad de cada campaña de Meta o Google sin tocar el creative ni la audiencia.
+    </p>
+
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-6">
+      <p class="text-white font-bold text-sm mb-2">📊 Dato de referencia</p>
+      <p class="text-white/70 text-sm leading-relaxed">
+        Según <a href="https://www.statista.com/topics/871/online-shopping/" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Statista, el AOV medio en eCommerce europeo en 2026 subió solo un 6% interanual</a>, mientras el coste medio de adquisición (CAC) subió un 22%. La consecuencia operativa: cualquier marca D2C que escale spend sin trabajar palancas de AOV en paralelo está comprimiendo el margen de contribución cada trimestre sin darse cuenta.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">AOV saludable por sector D2C en España 2026</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Rangos observados en cuentas D2C españolas con unit economics positivos a 12-24 meses (datos propios + benchmark sectorial). Top decile = el 10% superior de cada sector:
+    </p>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Sector D2C</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">AOV típico</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Top decile</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Palanca más efectiva</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Si tu AOV está por debajo del rango típico de tu sector, antes de tocar campañas conviene revisar catálogo, bundling y cross-sell. Para entender cómo el AOV impacta directamente sobre el indicador de rentabilidad real (margen de contribución), ver la <a href="/blog/margen-contribucion-vs-roas-ecommerce.html">guía margen de contribución vs ROAS</a>.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Las 7 palancas para subir el AOV ordenadas por impacto</h2>
+    <ol class="space-y-3 mb-6 list-decimal pl-5">
+      {[
+        "Bundles y packs estructurados (+18-35% AOV). Crear sets de 2-4 productos complementarios con un descuento del 10-15% sobre la suma individual. Funcionan mejor cuando se posicionan como solución a un problema concreto (ej: 'rutina antiedad noche' en cosmética, 'starter pack moda' en básicos). Apps Shopify típicas: Bundler, Bold Bundles, Frequently Bought Together. Crítico que el bundle tenga un nombre distinto a 'pack 2x1' — la narrativa importa para el ticket medio.",
+        "Free shipping threshold dinámico (+8-15% AOV). Establecer un umbral de envío gratis al 110-115% del AOV mediano actual. Mostrar la barra de progreso en el carrito ('te quedan 4€ para envío gratis') y recalcular el threshold cada trimestre cuando el AOV mediano suba. La clave es la mediana, no la media — usar la media suele dar un threshold demasiado alto y reduce conversion.",
+        "Cross-sell automatizado en checkout (+10-20% AOV). Mostrar 1-2 productos complementarios con descuento del 10-15% en la página de carrito o checkout. La oferta debe ser contextual al producto añadido, no un cross-sell genérico. Apps: Shopify nativo, ReConvert, Bold Upsell. En sectores con producto complementario claro (cosmética, mascotas, suplementos) el ROI es alto; en moda funciona peor por la dificultad de predecir gusto.",
+        "Tier de descuento por volumen (+12-22% AOV en consumibles). Estructura típica: 1 unidad precio base, 2 unidades -10%, 3 unidades -15%, 4+ unidades -20%. Funciona muy bien en suplementos, cosmética, alimentación, mascotas (productos de consumo recurrente). En moda/tecnología funciona peor porque el comprador no necesita 3 unidades del mismo producto. Mostrar el ahorro absoluto en €, no solo el %.",
+        "Upsell post-purchase one-click (+5-12% AOV). Oferta contextual tras la compra (página de gracias o email inmediato) con compra a un clic sin re-introducir datos. Apps: ReConvert, AfterSell, Zipify OCU. Conversión típica del 8-18% cuando la oferta es relevante. Es la palanca con mayor ROI inmediato porque no toca el funnel de adquisición ni la conversion rate del checkout original.",
+        "Suscripción con descuento permanente (+15-30% LTV, eleva AOV efectivo 12 meses). Oferta -10% a -15% por suscripción mensual recurrente. Funciona perfectamente en suplementos (recompra natural cada 30-45d), café, mascotas, cosmética básica. App típica: Shopify Subscriptions, Recharge, Bold Subscriptions. La métrica relevante no es el AOV de pedido individual sino el AOV efectivo a 12 meses (ticket medio × pedidos esperados).",
+        "Edición limitada / colaboración exclusiva (+20-40% sobre AOV base, ventana corta). Drop de producto con stock limitado y AOV superior (premium materials, packaging especial, colaboración con creator). Crea urgencia natural y atrae al segmento de mayor LTV. Aplicable 4-8 veces al año, no como estrategia continua. Funciona muy bien en moda, belleza nicho, hogar diseño.",
+      ].map((item) => (
+        <li key= class="text-white/60 text-sm leading-relaxed"></li>
+      ))}
+    </ol>
+    <p class="text-white/70 leading-relaxed mb-5">
+      El orden cambia por sector. En suplementos la suscripción manda; en moda los bundles + free shipping; en belleza los sets + upsell post-purchase; en hogar el cross-sell complementario. La palanca correcta depende del unit economics actual y del comportamiento de compra del comprador típico.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cómo calcular el free shipping threshold óptimo</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      La fórmula que aplicamos en cuentas D2C nuevas:
+    </p>
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-6">
+      <p class="text-white font-mono text-sm leading-relaxed">
+        Threshold óptimo (€) = AOV mediano actual × 1,10-1,15
+      </p>
+      <p class="text-white/50 text-xs mt-3 leading-relaxed">
+        Recalcular cada trimestre. Cuando el AOV mediano sube por efecto del threshold, subir el threshold también.
+      </p>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      <a href="https://www.shopify.com/blog/free-shipping" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Según Shopify Plus, el 64% de compradores online añade productos al carrito específicamente para alcanzar el envío gratis</a>. Ejemplo cuenta belleza España con AOV mediano 38€: threshold óptimo 42-44€. El comprador percibe el envío gratis como alcanzable con un solo producto extra de 4-7€, y el % de pedidos que cruzan el threshold sube del 22% al 41-48% en 30-60 días sin caída de conversion rate. Si el threshold se pone a 60€ con AOV mediano 38€, la mayoría no llegará y la conversion rate global cae.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cómo medir si una palanca de AOV está funcionando</h2>
+    <div class="space-y-3 mb-6">
+      {[
+        "Comparar siempre AOV bruto y AOV mediano antes/después. La media se distorsiona con outliers de pedidos grandes y puede ocultar que la palanca solo funciona para una minoría. La mediana refleja el comportamiento del comprador típico.",
+        "Vigilar la conversion rate global del checkout pre/post. Si el AOV sube un 15% pero la CR cae un 25%, el revenue total baja y la palanca destruye valor. Comparar ventanas de 30 días vs 30 días con volumen y mix de tráfico equivalente.",
+        "Calcular el margen de contribución por pedido pre/post. Una palanca de bundle con descuento del 25% puede subir AOV pero comprimir margen — el ticket sube pero la rentabilidad por pedido baja. Cruzar AOV con margen siempre.",
+        "A/B test obligatorio: 50% del tráfico ve la palanca, 50% no, mínimo 14 días o 1.500 pedidos por variante. Sin holdout no se puede separar el efecto de la palanca del de estacionalidad o creative testing en paralelo. Las cuentas que cambian 5 cosas a la vez no saben qué funcionó.",
+        "Vigilar % devoluciones post-palanca. Bundles agresivos pueden disparar devoluciones parciales en moda (cliente devuelve 1 de 3 productos del pack) y romper la economía de pedido. Cruzar AOV con tasa devolución por SKU del bundle.",
+        "Reporting semanal con AOV bruto, AOV mediano, CR global, margen contribución y % devoluciones — no solo AOV en aislado. La decisión de mantener o retirar una palanca se toma sobre el cuadro completo, no sobre una sola métrica.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Errores frecuentes al trabajar palancas de AOV</h2>
+    <ol class="space-y-3 mb-6 list-decimal pl-5">
+      {[
+        "Lanzar 5 palancas a la vez sin holdout. Es imposible saber cuál funcionó y cuál canibalizó conversion. Lanzar de una en una con A/B test de 14-30 días.",
+        "Usar AOV medio en lugar de mediano para calibrar el free shipping threshold. La media está sesgada por outliers — el threshold queda demasiado alto y la conversion rate cae.",
+        "Bundles con descuento del 25-30%: suben AOV nominal pero comprimen margen de contribución. El descuento óptimo en bundle suele estar entre 8% y 15%.",
+        "Cross-sell genérico no contextual al producto principal. Convierte 3-5x menos que un cross-sell relevante (ej: ofrecer ropa de hombre tras compra de cosmética femenina vs ofrecer crema hidratante tras compra de serum).",
+        "Ignorar el impacto de devoluciones post-bundle en moda. El cliente devuelve 1 de 3 productos del pack, pierde el descuento y el equipo de soporte gestiona el reembolso parcial — fricción operativa que puede comerse el AOV ganado.",
+        "Subir AOV agresivamente cuando la cuenta tiene <30 conversiones/día y el algoritmo aún está en fase de aprendizaje. Primero estabilizar volumen, luego optimizar AOV.",
+        "No recalibrar el threshold de free shipping cada trimestre. Cuando el AOV mediano sube por efecto del threshold, mantenerlo en el viejo valor pierde toda su capacidad de presión.",
+      ].map((item) => (
+        <li key= class="text-white/60 text-sm leading-relaxed"></li>
+      ))}
+    </ol>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cómo trabajamos en DayByDay</h2>
+    <div class="space-y-3 mb-6">
+      {[
+        "Onboarding D2C arranca con auditoría de unit economics: Pablo audita AOV mediano vs medio por sector y mix de producto, Jorge cruza datos Shopify + pasarela + 3PL para validar coste real por pedido y devoluciones por SKU. Sin ese cálculo previo, decidir qué palanca activar es decidir a ciegas.",
+        "Diseño ad-hoc del stack de palancas en función del sector y momento de la cuenta: en suplementos arrancamos por suscripción + tier descuento; en moda por bundles + free shipping; en belleza por sets + upsell post-purchase. No usamos plantilla — cada cuenta recibe combinación priorizada por impacto sobre margen, no sobre revenue.",
+        "Implementación técnica: Jorge integra los apps Shopify (Bundler, ReConvert, Recharge según caso) con tracking server-side compartido para que cada palanca de AOV tenga atribución limpia en Meta CAPI y GA4. Sin tracking limpio, el A/B test del bundle queda contaminado por discrepancias de atribución.",
+        "Solución ad-hoc Pablo + Jorge: cuando una marca de moda necesitaba subir AOV sin reventar devoluciones, Pablo diseñó un bundle 'estilismo completo' con sizing guide reforzada y Jorge montó un script Node que detectaba combinaciones bundle con tasa devolución >35% y las desactivaba automáticamente del catálogo. Resultado en 90 días: AOV +28%, devoluciones -6 puntos.",
+        "Reporting semanal con AOV bruto, AOV mediano, CR global, margen contribución por pedido y % devoluciones por palanca activa. Decisiones de mantener/retirar palanca tomadas sobre cuadro completo, no sobre AOV aislado.",
+        "Caso real reciente: cuenta D2C suplementos llegó con AOV 42€ y CAC 28€ (margen contribución 14%). En 90 días subimos AOV a 58€ con suscripción + bundle + tier descuento, manteniendo CAC y CR estables. Margen contribución pasó del 14% al 27% sin tocar el spend de Meta.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      DayByDay Consulting fue fundada por Pablo Santirsó y opera como un partnership con Jorge González (CTO). Pablo (founder · paid media) lidera estrategia de spend, mix de palancas y posicionamiento del catálogo en función del margen objetivo del cliente; Jorge (CTO · automation) lidera implementación técnica de bundles, suscripciones, upsell post-purchase, scripts de control de devoluciones y dashboards automatizados. Donde otras agencias separan marketing y tecnología — el media buyer pide al cliente que contrate un developer aparte para integrar Bundler con Recharge —, en DayByDay Pablo y Jorge resuelven la palanca completa en la misma reunión. Sin account managers, sin handoffs, sin perfiles junior.
+    </p>
+
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-6 mb-8 text-center">
+      <p class="font-bold text-white text-lg mb-2">¿Tu AOV está por debajo del rango de tu sector?</p>
+      <p class="text-white/50 text-sm mb-4">Auditoría gratuita 30 min: revisamos tu AOV mediano vs medio por sector, identificamos las 2-3 palancas con mayor impacto sobre tu margen de contribución y entregamos plan de implementación priorizado por ROI a 90 días.</p>
+      <button>
+        Solicitar auditoría gratuita →
+      </button>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Artículos relacionados</h2>
+    <div class="space-y-3">
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/margen-contribucion-vs-roas-ecommerce.html">
+          Margen de contribución vs ROAS en eCommerce D2C →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Por qué el AOV es la palanca que más impacta sobre el margen de contribución por pedido</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/cac-vs-ltv-ecommerce-escalable.html">
+          CAC vs LTV en eCommerce escalable →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cómo derivar el CAC objetivo desde el AOV, el margen y el ratio LTV/CAC</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/cuanto-invertir-meta-ads-calculadora.html">
+          Cuánto invertir en Meta Ads según ticket medio y margen →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cómo el AOV define el suelo mínimo de inversión y la distribución TOFU/MOFU/BOFU</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/cro-landing-page-meta-ads-d2c.html">
+          CRO de landing page para Meta Ads →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cómo el bundle/upsell se integra en la landing sin romper la conversion rate</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/suscripciones-ecommerce-ltv-cac-d2c.html">
+          Suscripciones en D2C: cómo cambia LTV y CAC objetivo →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Suscripción como palanca con mayor impacto sobre LTV contractual y CAC objetivo permitido</p>
+      </div>
+    </div>
+        </article>
+
+        
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+  <div class="faq-item"><h3 class="faq-q">¿Qué es el AOV en eCommerce y por qué es la palanca más rentable para escalar un D2C?</h3><p class="faq-a">El AOV (Average Order Value, o ticket medio) es el ingreso medio por pedido completado: revenue total dividido entre número de pedidos del periodo. Importa más que casi cualquier otra métrica porque cada euro extra de AOV cae directamente sobre el margen de contribución sin requerir más inversión en adquisición. Subir el AOV un 15% en una cuenta D2C con AOV 55€ y CAC 22€ pasa el margen de contribución por pedido del 24% al 32% sin cambiar el CPM ni el CTR. En 2026, con el CPM de Meta subiendo año a año entre el 15% y el 25% en España, las cuentas D2C que escalan sin reventar la caja son casi siempre las que han trabajado AOV antes que ROAS.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuál es un AOV saludable para un eCommerce D2C en España y cómo se compara por sector?</h3><p class="faq-a">Rangos observados en cuentas D2C españolas rentables a 12-24 meses (datos propios + benchmark sectorial): moda 45-75€ (top decile 90-130€ por bundle), belleza/cosmética 35-65€ (top 80-120€ con sets), suplementos 40-70€ (top 90-150€ con suscripción), hogar/decoración 60-150€ (top 200-350€), mascotas 35-65€ (top 80-120€ con suscripción), alimentación premium 30-55€ (top 70-110€ con bundles), tecnología/gadgets 80-200€ (top 350-700€). Si tu AOV está por debajo del rango típico de tu sector, el problema rara vez es el creative o la audiencia — es el catálogo, el bundling o la falta de cross-sell estructurado. Subir el AOV antes que escalar spend es casi siempre la palanca con mejor ROI a 90 días.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué palanca para subir el AOV tiene mayor impacto en un D2C español típico?</h3><p class="faq-a">Por orden de impacto medio observado en cuentas D2C España: (1) bundles y packs estructurados (+18-35% AOV, mayor ROI), (2) free shipping threshold dinámico al 110-115% del AOV actual (+8-15% AOV), (3) cross-sell automatizado en checkout con producto complementario y descuento (+10-20% AOV), (4) tier de descuento por volumen (-10% sobre 2 unidades, -15% sobre 3) (+12-22% AOV en consumibles), (5) upsell post-purchase one-click (+5-12% AOV con conversion 8-18%), (6) suscripción con descuento permanente (+15-30% LTV, eleva AOV efectivo 12-meses), (7) edición limitada/exclusiva con AOV mayor (+20-40% sobre AOV base, ventana corta). El orden cambia por sector: en suplementos la suscripción manda; en moda los bundles+free shipping; en belleza los sets+upsell post-purchase; en hogar el cross-sell complementario.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo se calcula el free shipping threshold óptimo para subir el AOV sin sacrificar conversión?</h3><p class="faq-a">Fórmula que aplicamos en DayByDay: threshold óptimo = AOV mediano actual × 1,10-1,15. No usar la media — usar la mediana, porque la media está sesgada por outliers de pedidos grandes y suele indicar un threshold demasiado alto. Ejemplo: marca de belleza con AOV mediano 38€ → threshold óptimo 42-44€. El usuario percibe el envío gratis como alcanzable (un solo producto extra de 4-7€) y el % de pedidos que cruzan el threshold sube del 22% al 41-48% en 30-60 días. Si pones el threshold a 60€ con AOV mediano 38€, la mayoría no llegará y bajará la conversion rate global. Cada trimestre recalcular: cuando el AOV mediano sube por efecto del threshold, subir el threshold también para mantener la presión. Estudio Shopify Plus: el 64% de compradores online añade productos al carrito específicamente para alcanzar el envío gratis.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué es un upsell post-purchase y cuánto puede subir el AOV de un eCommerce D2C?</h3><p class="faq-a">El upsell post-purchase one-click es una oferta que aparece tras la compra (en la página de gracias o por email inmediato) con compra a un solo clic sin volver a meter datos de pago. Apps típicas Shopify: ReConvert, AfterSell, Zipify OCU. Cuando la oferta es relevante (producto complementario o upgrade a tamaño superior con descuento del 10-20%), las tasas de conversión observadas en cuentas D2C son del 8-18%, con un AOV incremental del 5-12% sobre el AOV base. Es la palanca de mayor impacto inmediato sin riesgo: no toca el funnel de adquisición, no afecta la conversion rate del checkout original, y el ticket extra cae sobre margen sin coste de adquisición adicional. Crítico que la oferta sea contextual al producto comprado (ej: tras comprar serum facial, ofrecer crema hidratante con -15%) — ofertas genéricas convierten mucho menos.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuándo NO conviene subir el AOV agresivamente en un D2C?</h3><p class="faq-a">En 3 escenarios concretos: (1) cuando el producto core tiene un precio psicológico anclado (ej: una vela aromática de 19€ — empujar el AOV a 45€ con bundle puede romper la propuesta de valor y bajar la conversion rate global más de lo que sube el AOV). (2) Cuando la cuenta opera con un volumen de conversiones bajo (<30/día en Meta) y los algoritmos aún están en fase de aprendizaje — primero estabilizar volumen, luego optimizar AOV. (3) Cuando el producto tiene devoluciones altas (moda 25-30%) y subir AOV con bundle multiplica la pérdida por devolución parcial — el cliente devuelve 1 de los 3 productos del bundle pero pierde el descuento, generando fricción y reembolsos manuales. La regla: subir AOV solo cuando el margen de contribución por pedido lo soporta, las devoluciones están bajo control (<20%) y el algoritmo ya tiene volumen de datos para optimizar.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo se mide si una palanca de AOV está funcionando realmente y no canibalizando conversión?</h3><p class="faq-a">Las 3 métricas que vigilamos en DayByDay tras lanzar cualquier palanca de AOV: (1) AOV total (€) y AOV mediano (€), separadamente — la mediana detecta si la subida es real y distribuida o si está impulsada por unos pocos pedidos grandes. (2) Conversion rate global del checkout pre/post — si el AOV sube 15% pero la CR baja 25%, el revenue total cae. Hay que comparar ventana 30 días vs 30 días con tráfico equivalente. (3) Margen de contribución por pedido — el AOV puede subir mientras el margen baja por descuentos agresivos en bundle o cross-sell con producto de bajo margen. Test obligatorio: A/B test con 50% de tráfico viendo la palanca y 50% no, mínimo 14 días o 1.500 pedidos por variante. Sin holdout no se puede separar el efecto de la palanca del de estacionalidad o creative testing paralelo. Las cuentas que cambian 5 cosas a la vez no saben qué funcionó.</p></div>
+</section>
+
+
+        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

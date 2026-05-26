@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Framework ARCO: Cómo Configurar tus Meta Ads CBO campaigns Para Escalar Sin Morir en el Intento | DayByDay Consulting</title>
+  <meta name="description" content="El sistema que usamos con +50 ecommerce españoles para escalar campañas CBO sin perder dinero. Paso a paso con cifras reales.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/meta-ads-cbo-campaigns">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+<div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+<aside class="file-tree-sidebar" id="sidebar">
+  <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+  <div class="file-tree-section"><div class="file-tree-section-title">Secciones</div>
+    <a href="/" class="file-tree-item">Inicio</a>
+    <a href="/problema.html" class="file-tree-item">Problema</a>
+    <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
+    <a href="/resultados.html" class="file-tree-item">Resultados</a>
+    <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Paid Media</div>
+    <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
+    <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
+    <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
+    <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Automation & AI</div>
+    <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
+    <a href="/analytics.html" class="file-tree-item">Analytics</a>
+    <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Stack Tech</div>
+    <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
+    <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
+    <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+  </div>
+</aside>
+
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Paid Media</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Paid Media</span>
+          <span class="reading-time">18 min de lectura</span>
+          <span class="article-date">2025-01-15</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">El Framework ARCO: Cómo Configurar tus Meta Ads CBO campaigns Para Escalar Sin Morir en el Intento</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">El sistema que usamos con +50 ecommerce españoles para escalar campañas CBO sin perder dinero. Paso a paso con cifras reales.</p>
+        <div class="article-author">
+          <div class="author-avatar">DB</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirsó · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<section class="mb-12">
+<p class="text-2xl font-serif italic text-gray-700 border-l-4 border-red-500 pl-6 py-2">
+"El objetivo no es gastar más presupuestos. Es gastar el mismo presupuesto y tripledar la ROAS."
+</p>
+<p class="text-sm text-gray-500 mt-2">— Pablo Santirsó, tras perder 14.000€ en una campaña CBO mal configurada (2019)</p>
+</section>
+
+<section class="mb-12">
+<h2 class="text-3xl font-bold text-gray-900 mb-6">La Reunión Que Me Costó 14K€</h2>
+
+<div class="bg-gray-50 p-8 rounded-lg mb-6">
+<p class="text-lg text-gray-700 mb-4">Febrero 2019. Oficina de DayByDay en Madrid. Cliente: marca de suplementos nutricionales.</p>
+
+<p class="text-gray-700 mb-4"><strong>Cliente:</strong> "Pablo, queremos escalar a 5.000€/mes en Meta. Mi director de medios dijo que métalo todo en un CBO y olvídese."</p>
+
+<p class="text-gray-700 mb-4"><strong>Yo:</strong> "¿Y qué audiencias va a usar?"</p>
+
+<p class="text-gray-700 mb-4"><strong>Cliente:</strong> "Dice que Meta lo encuentra solo. Es inteligencia artificial,no?"</p>
+
+<p class="text-gray-700 mb-4">Ese día no tenía experiencia con CBO. Tenía experiencia con ATC y manually boosting. Hice caso. Creé un CBO con un solo adset, "interests supplements", dejé que Meta optimizase, y puse 5.000€/mes.</p>
+
+<p class="text-gray-700 mb-4 font-bold text-red-600">Resultado: 1.2 ROAS. 14.000€ quemados en 28 días. El cliente no renouveló.</p>
+
+<p class="text-gray-700">Tres meses después entendí por qué. Pero esa escena fue el germen del Framework ARCO.</p>
+</div>
+</section>
+
+<section class="mb-12">
+<h2 class="text-3xl font-bold text-gray-900 mb-6">Lo Que Vas A Aprender En Este Post</h2>
+
+<div class="grid md:grid-cols-3 gap-6">
+<div class="bg-white border-2 border-red-500 p-6 rounded-lg">
+<p class="text-4xl font-bold text-red-500 mb-2">01</p>
+<p class="text-gray-700 font-semibold">El Método ARCO Paso a Paso</p>
+<p class="text-gray-600 text-sm mt-2">La configuración exacta de un CBO que no tire dinero. Con los 4 pasos que usamos desde 2020.</p>
+</div>
+
+<div class="bg-white border-2 border-gray-200 p-6 rounded-lg">
+<p class="text-4xl font-bold text-gray-400 mb-2">02</p>
+<p class="text-gray-700 font-semibold">Cuándo Funciona Y Cuándo No</p>
+<p class="text-gray-600 text-sm mt-2">Las 3 condiciones mandatory para que CBO sea mejor opción que ATC. Y cómo diagnosticarlo en 48 horas.</p>
+</div>
+
+<div class="bg-white border-2 border-gray-200 p-6 rounded-lg">
+<p class="text-4xl font-bold text-gray-400 mb-2">03</p>
+<p class="text-gray-700 font-semibold">Cómo Aplicarlo Esta Semana</p>
+<p class="text-gray-600 text-sm mt-2">La auditoría exprés para detectar si tu CBO actual está mal estructurado. En menos de 30 minutos.</p>
+</div>
+</div>
+</section>
+
+<section class="mb-12 bg-red-900 text-white p-10 rounded-lg">
+<h2 class="text-3xl font-bold mb-6">Las Cifras Que Cambiaron Todo</h2>
+
+<ul class="space-y-4 text-lg">
+<li><strong>68%</strong> de los CBO que analizamos en 2024 estaban mal configurados</li>
+<li><strong>2.3x</strong> mejor ROAS promedio cuando se usa ARCO vs configuración por defecto</li>
+<li><strong>47%</strong> del presupuesto gastado en learning mode sin necesidad</li>
+<li><strong>12 días</strong> de promedio para salir de learning phase con CBO bien estructurado (vs 25+ días con mala config)</li>
+<li><strong>+50 ecommerce</strong> españolas han pasado por nuestro proceso de auditoría CBO</li>
+</ul>
+
+<p class="mt-6 text-red-200">Cifras basadas en cuentas gestionadas directa y auditadas por DayByDay Consulting 2020-2024.</p>
+</section>
+
+<section class="mb-12">
+<h2 class="text-3xl font-bold text-gray-900 mb-6">Framework ARCO: Arquitectura de Campaigns Optimizada</h2>
+
+<p class="text-gray-700 mb-8">Después de 3 años quemando presupuesto y iterando, aislamos 4 variables que determinan el éxito o fracaso de cualquier CBO. No son las audiencias. No es el creativo. Es la arquitectura.</p>
+
+<div class="mb-10 border-b pb-8">
+<h3 class="text-2xl font-bold text-red-600 mb-4">A - Alcance (Audience Scope)</h3>
+
+<p class="text-gray-700 mb-4"><strong>Por qué importa:</strong> Metaoptimiza dentro del bucket que le des. Si le dasun audience too narrow,poca data. Si le das too broad, desperdiciaBudget en personas fuera de tu ICP.</p>
+
+<p class="text-gray-700 mb-4"><strong>Cómo se hace:</strong> Define 3 horizontes de audience:</p>
+<ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+<li><strong>Núcleo (20-30% de presupuesto):</strong> Lookalike 1% de tus compradores o interest específico de tu nicho</li>
+<li><strong>Extensión (40-50%):</strong> Intereses relacionados o lookalike 2-3%</li>
+<li><strong>Exploración (20-30%):</strong> Interests amplios o remarketing de 180 días</li>
+</ul>
+
+<p class="text-gray-700 font-bold text-red-600">Error típico: Un solo adset con "intereses de nicho" = 0 learning events = optimización random.</p>
+</div>
+
+<div class="mb-10 border-b pb-8">
+<h3 class="text-2xl font-bold text-red-600 mb-4">R - Robustez (Creative Rotation)</h3>
+
+<p class="text-gray-700 mb-4"><strong>Por qué importa:</strong> CBO aprende de las combinaciones creatives que ledas. Si tienes 1 solo creative,aprende 1cosa. Si tienes 10, aprende patterns que funcionan para cada formato y audience.</p>
+
+<p class="text-gray-700 mb-4"><strong>Cómo se hace:</strong> Minimum viable creative set por CBO:</p>
+<ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+<li><strong>2-3angle de video (15-30 seg) </strong> - diferent hook, diferente producto, diferente emoción</li>
+<li><strong>2-3creatives estáticos</strong> - lifestyle shot, product only, UGC testimonial</li>
+<li><strong>1-2formatos de carrusel</strong> - storytelling o features</li>
+</ul>
+
+<p class="text-gray-700 font-bold text-red-600">Error típico: 1 solo banner "para probar" = ningún aprendizaje transferible = muerte por fatiga.</p>
+</div>
+
+<div class="mb-10 border-b pb-8">
+<h3 class="text-2xl font-bold text-red-600 mb-4">C - Concentración (Budget Distribution)</h3>
+
+<p class="text-gray-700 mb-4"><strong>Por qué importa:</strong> CBF funciona mal con diffusion extremo. Meta necesita集中的 senales para aprender. La distribution del budget determina la caliddel aprendizaje.</p>
+
+<p class="text-gray-700 mb-4"><strong>Cómo se hace:</strong> Recomendamos 60/20/20:</p>
+<ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+<li><strong>60% al núcleo</strong> - donde tienes señales claras de conversión</li>
+<li><strong>20% extensión</strong> - validación de scaling</li>
+<li><strong>20% exploración</strong> - descubridor de nuevos segmentos</li>
+</ul>
+
+<p class="text-gray-700 font-bold text-red-600">Error típico: Distribución igual entre 5 adsets = aprendizaje分散 = alto CPA.</p>
+</div>
+
+<div class="mb-10">
+<h3 class="text-2xl font-bold text-red-600 mb-4">O - Observación (Learning Monitor)</h3>
+
+<p class="text-gray-700 mb-4"><strong>Por qué importa:</strong> CBF está en learning mode hastarecolectar 50 optimizations por adset. Si pasas de budget antes de salir,se resetea el learning y pierdes toda la data.</p>
+
+<p class="text-gray-700 mb-4"><strong>Cómo se hace:</strong> Checklist de salida de learning:</p>
+<ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+<li>Mínimo <strong>50 acciones</strong> de optimización por adset (ventas, add to cart, leads)</li>
+<li>CPA estable durante <strong>7 días consecutivos</strong></li>
+<li>No modificar budget hasta salir de learning</li>
+<li>Si llevar <strong>21 días</strong> y sigues en learning → restructura inmediata</li>
+</ul>
+
+<p class="text-gray-700 font-bold text-red-600">Error típico: Aumentar budget a los 3 días "porque va bien" = reseteo de algorithm = vuelta a empezar.</p>
+</div>
+</section>
+
+<section class="mb-12">
+<h2 class="text-3xl font-bold text-gray-900 mb-6">Caso Real: Marbella Yoga (Ecommerce Suplementos)</h2>
+
+<div class="bg-gray-50 p-8 rounded-lg mb-6">
+<p class="text-lg text-gray-700 mb-4"><strong>Contexto:</strong> Marca de suplementos naturales para bienestar. Ticket medio: 89€. Lifetime value: 2.3 pedidos. Mercado: España peninsular.</p>
+
+<p class="text-gray-700 mb-4"><strong>Situación inicial (abril 2024):</strong> CBO único con 1 solo interés "yoga" + 1 creativa estática. Budget 2.000€/mes. ROAS: 0.9. Perdiendo dinero.</p>
+</div>
+
+<h3 class="text-xl font-bold text-gray-900 mb-4">Aplicación del Framework ARCO</h3>
+
+<div class="space-y-6 mb-6">
+<div class="border-l-4 border-green-500 pl-6">
+<p class="text-gray-700 mb-2"><strong>A - Alcance:</strong> Restructure a 3 adsets:</p>
+<ul class="list-disc pl-6 text-gray-600 text-sm">
+<li>Adset 1 (60%): Lookalike 1% de 2.000 clientes → presupuesto 1.200€/mes</li>
+<li>Adset 2 (20%): Interests "yoga", "mindfulness", "healthy lifestyle" → presupuesto 400€/mes</li>
+<li>Adset 3 (20%): Remarketing 90 días → presupuesto 400€/mes</li>
+</ul>
+</div>
+
+<div class="border-l-4 border-blue-500 pl-6">
+<p class="text-gray-700 mb-2"><strong>R - Robustez:</strong></p>
+<ul class="list-disc pl-6 text-gray-600 text-sm">
+<li>3 videos (testimonial创始atoria, beneficios del producto, lifestyle)</li>
+<li>3 imágenes (producto solo, pack completo, persona tomando)</li>
+<li>2 carruseles (ingredientes, guía de uso)</li>
+</ul>
+</div>
+
+<div class="border-l-4 border-purple-500 pl-6">
+<p class="text-gray-700 mb-2"><strong>C - Concentrón:</strong> Mismo ratio 60/20/20 aplicado desde día 1</p>
+</div>
+
+<div class="border-l-4 border-orange-500 pl-6">
+<p class="text-gray-700 mb-2"><strong>O - Observación:</strong> Lock del budget hasta salir de learning. Salida en día 17.</p>
+</div>
+</div>
+
+<h3 class="text-xl font-bold text-gray-900 mb-4">Resultados</h3>
+
+<div class="grid md:grid-cols-3 gap-6 mb-4">
+<div class="bg-green-100 p-6 rounded-lg text-center">
+<p class="text-3xl font-bold text-green-700">3.4x</p>
+<p class="text-gray-700 font-semibold">ROAS</p>
+<p class="text-green-600 text-sm">vs 0.9x anterior</p>
+</div>
+
+<div class="bg-green-100 p-6 rounded-lg text-center">
+<p class="text-3xl font-bold text-green-700">-62%</p>
+<p class="text-gray-700 font-semibold">CPA</p>
+<p class="text-green-600 text-sm">de 67€ a 25€</p>
+</div>
+
+<div class="bg-green-100 p-6 rounded-lg text-center">
+<p class="text-3xl font-bold text-green-700">+278%</p>
+<p class="text-gray-700 font-semibold">Ventas</p>
+<p class="text-green-600 text-sm">mismo presupuesto</p>
+</div>
+</div>
+
+<p class="text-gray-700"><strong>Tiempo total de implementación:</strong> 4 días para restructure, 17 días de learning, 6 semanas para validar. Presupuesto: 2.000€/mes constant.</p>
+</section>
+
+<section class="mb-12 bg-yellow-50 p-8 rounded-lg border-l-4 border-yellow-500">
+<h2 class="text-3xl font-bold text-gray-900 mb-6">El Giro Contraintuitivo Que Nadie Te Dice</h2>
+
+<p class="text-xl text-gray-700 mb-4">Todo el mundo te dice que分开 tus audiencias en CBO separados. Nosotros hicimos lo contrario y funcionó.</p>
+
+<p class="text-gray-700 mb-4"><strong>El insight:</strong> Si tienes un produto nuevo sin histórico,no乞un CBO. Usa ATC para build up data primero. Luego migra a CBO.</p>
+
+<p class="text-gray-700 mb-4"><strong>Por qué:</strong> Los primeros 50 eventos de optimización son criticales. Si empezar con CBO con audience nueva = 0 data = Meta aprende mal. Si start con ATC = obtienes data = CBO aprende rápido.</p>
+
+<p class="text-gray-700 font-bold">Conclusión: El primer mes con producto nuevo = nunca CBO. Escribe esto en algún lado.</p>
+
+<p class="text-gray-600 mt-4">Relacionado: <a href="/blog/atc-vs-cbo-cuando-usar-cada.html">ATC vs CBO: Cuándo Usar Cada Configuración</a></p>
+</section>
+
+<section class="mb-12">
+<h2 class="text-3xl font-bold text-gray-900 mb-6">Tu Siguiente Paso Ejecutable Hoy</h2>
+
+<div class="bg-white border-2 border-red-500 p-8 rounded-lg">
+<h3 class="text-xl font-bold text-gray-900 mb-4">Auditoría Exprés de tu CBO Actual</h3>
+
+<p class="text-gray-700 mb-4"><strong> Tiempo estimado:</strong> 25 minutos</p>
+
+<ol class="list-decimal pl-6 text-gray-700 space-y-3">
+<li class="pl-2">Abre tu Ads Manager. Ve a campañas activas con CBO.</li>
+<li class="pl-2">Cuenta cuántos adsets tiene cada CBO.
+<ul class="list-disc pl-4 text-sm text-gray-600 mt-1">
+<li>1 solo adset → <strong>ALERTA ROJA</strong></li>
+<li>2 adsets → <strong>ALERTA AMARILLA</strong></li>
+<li>3-5 adsets → OK, pasa al siguiente paso</li>
+</ul>
+</li>
+<li class="pl-2">Click en "breakdown" por placement. Mira si algún adset recebe < 10% del presupuesto.</li>
+<li class="pl-2">Revisa "delivery" column. ¿Estás en learning mode?
+<ul class="list-disc pl-4 text-sm text-gray-600 mt-1">
+<li>Más de 21 días y sigues en learning → <strong>RESTRUCTURE INMEDIATA</strong></li>
+</ul>
+</li>
+<li class="pl-2">Copia esta screenshot de tu estructura y mándanosla (<a href="mailto:pablo@daybyday.es" class="text-red-600 underline">pablo@daybyday.es</a>). Te hacemos feedback gratis en 48h.</li>
+</ol>
+</div>
+</section>
+
+<section class="mb-12 bg-gray-900 text-white p-10 rounded-lg">
+<h2 class="text-3xl font-bold mb-6">Resumo Y Lo Que Viene</h2>
+
+<ul class="list-disc pl-6 text-gray-300 space-y-2 mb-8">
+<li>68% de los CBO están mal configurados porque nadie sabe架构tectura</li>
+<li>Framework ARCO = Alcance + Robustez + Concentración + Observación</li>
+<li>Nunca pongas un solo adset en un CBO. Es suicidio publicitario.</li>
+<li>El learning mode es tu amigo, pero solo si respetas las reglas de salida.</li>
+<li>Producto nuevo = ATC primero, CBO después.</li>
+</ul>
+
+<p class="text-2xl font-bold text-red-500 mb-4">Próximo tema: Meta Ads CBO Level 2 — Cómo hacer scaling sin perder ROAS cuando ya tienes结构 establecida</p>
+
+<p class="text-gray-400"> Spoiler: No es duplicar budget. Es duplicar las señales correctas.</p>
+
+<div class="mt-8 pt-8 border-t border-gray-700">
+<p class="text-lg text-gray-300 mb-4">¿Quieres que revisemos tu cuenta juntos?</p>
+<a href="/consultoria-meta-ads.html">
+Solicitar Auditoría Gratuita
+</a>
+</div>
+</section>
+
+<p class="text-gray-500 text-sm mt-8">
+Keywords: meta ads cbo campaigns, campaign budget optimization facebook,meta ads estructura campaña,facebook ads learning mode,daybyday consulting madrid
+</p>
+        </article>
+
+        
+
+        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

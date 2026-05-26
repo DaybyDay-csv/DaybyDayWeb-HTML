@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checklist para auditar tus campañas de paid media en 2026 | DayByDay Consulting</title>
+  <meta name="description" content="Checklist completo para auditar campañas de Meta Ads y Google Ads: estructura, tracking, creatividades, audiencias y métricas clave. Descarga e implementa paso a paso.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/checklist-auditoria-campanas">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+<div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+<aside class="file-tree-sidebar" id="sidebar">
+  <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+  <div class="file-tree-section"><div class="file-tree-section-title">Secciones</div>
+    <a href="/" class="file-tree-item">Inicio</a>
+    <a href="/problema.html" class="file-tree-item">Problema</a>
+    <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
+    <a href="/resultados.html" class="file-tree-item">Resultados</a>
+    <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Paid Media</div>
+    <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
+    <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
+    <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
+    <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Automation & AI</div>
+    <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
+    <a href="/analytics.html" class="file-tree-item">Analytics</a>
+    <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Stack Tech</div>
+    <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
+    <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
+    <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+  </div>
+</aside>
+
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Estrategia</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Estrategia</span>
+          <span class="reading-time">7 min de lectura</span>
+          <span class="article-date">2026-03-12</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Checklist para auditar tus campañas de paid media en 2026</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Checklist completo para auditar campañas de Meta Ads y Google Ads: estructura, tracking, creatividades, audiencias y métricas clave. Descarga e implementa paso a paso.</p>
+        <div class="article-author">
+          <div class="author-avatar">DB</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirsó · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<p class="text-white/70 leading-relaxed mb-6">
+      Una <strong>auditoría de campañas de paid media</strong> es la herramienta más eficaz para diagnosticar por qué tu inversión publicitaria no está dando el resultado esperado. Este checklist cubre los 6 bloques críticos que revisamos en DayByDay cuando auditamos una cuenta nueva — con preguntas concretas y valores de referencia para cada punto.
+    </p>
+
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-8">
+      <p class="text-white/40 text-xs uppercase tracking-wider mb-2">Por qué importa esto</p>
+      <p class="text-white/70 text-sm leading-relaxed">
+        En el <strong>78% de las auditorías</strong> que realizamos en DayByDay, encontramos al menos 3 errores críticos que están impactando directamente en el ROAS: tracking defectuoso, audiencias solapadas o creatividades saturadas. La auditoría sistemática es el primer paso para recuperar eficiencia.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Bloque 1 — Tracking y atribución</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      El tracking es la base de todo. Sin datos fiables, cualquier decisión de optimización es una apuesta a ciegas.
+    </p>
+    <ul class="space-y-2 mb-8">
+      {[
+        "¿El píxel de Meta o la etiqueta de Google Ads están activos y sin errores? → Verifica en Events Manager / Tag Assistant",
+        "¿Hay conversiones duplicadas en el dashboard? → Busca el mismo evento de compra disparándose más de una vez por transacción",
+        "¿Está implementada la API de Conversiones de Meta? → Sin ella, las iOS 14+ no se atribuyen correctamente",
+        "¿El Enhanced Conversions de Google Ads está activo? → Mejora la atribución hasta un 15-20%",
+        "¿El modelo de atribución es el correcto? → Recomendamos 'basado en datos' en Meta, no lineal ni primer clic",
+        "¿Las ventanas de atribución están configuradas para tu ciclo de compra? → eCommerce: 7 días clic + 1 día vista como mínimo",
+      ].map((item, i) => (
+        <li key= class="flex items-start gap-3">
+          <span class="text-green-400 flex-shrink-0 mt-0.5">☑</span>
+          <span class="text-white/70 text-sm leading-relaxed"></span>
+        </li>
+      ))}
+    </ul>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Bloque 2 — Estructura de campañas</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Una estructura de campañas mal planteada hace que los conjuntos de anuncios compitan entre sí, encareciendo el CPM y confundiendo al algoritmo.
+    </p>
+    <ul class="space-y-2 mb-8">
+      {[
+        "¿Hay separación clara entre campañas de prospección (frío) y retargeting (caliente)?",
+        "¿Los conjuntos de anuncios del mismo nivel tienen audiencias que no se solapan entre sí?",
+        "¿Cada campaña tiene un objetivo único y coherente con el stage del funnel?",
+        "¿El presupuesto está correctamente distribuido? → Regla general: 70% prospección, 30% retargeting",
+        "¿Hay campañas duplicadas activas que compiten por el mismo presupuesto?",
+        "¿Las campañas de Advantage+ Shopping están configuradas con exclusiones de audiencias calientes?",
+      ].map((item, i) => (
+        <li key= class="flex items-start gap-3">
+          <span class="text-green-400 flex-shrink-0 mt-0.5">☑</span>
+          <span class="text-white/70 text-sm leading-relaxed"></span>
+        </li>
+      ))}
+    </ul>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Bloque 3 — Creatividades y anuncios</h2>
+    <ul class="space-y-2 mb-8">
+      {[
+        "¿Cuántas semanas llevan activas las creatividades principales? → Si supera 6 semanas sin testear nuevas, hay saturación",
+        "¿La frecuencia media está por encima de 3? → Valores >3.5 indican saturación de audiencia",
+        "¿Hay al menos 3-5 variaciones activas por conjunto de anuncios?",
+        "¿Los primeros 3 segundos del vídeo son específicamente para detener el scroll?",
+        "¿Hay UGC (User Generated Content) en el mix de creatividades? → Suele mejorar CTR un 20-40%",
+        "¿Los copies tienen un CTA claro y específico (no genérico como 'Comprar ahora')?",
+      ].map((item, i) => (
+        <li key= class="flex items-start gap-3">
+          <span class="text-green-400 flex-shrink-0 mt-0.5">☑</span>
+          <span class="text-white/70 text-sm leading-relaxed"></span>
+        </li>
+      ))}
+    </ul>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Bloque 4 — Audiencias y segmentación</h2>
+    <ul class="space-y-2 mb-8">
+      {[
+        "¿Las audiencias Lookalike están basadas en los mejores clientes (LTV alto) y no en todos los compradores?",
+        "¿Hay exclusiones de audiencias calientes en las campañas de prospección?",
+        "¿Las audiencias de retargeting están segmentadas por comportamiento? → Visitantes 3 días vs 30 días requieren mensajes distintos",
+        "¿Las audiencias de intereses tienen un tamaño adecuado? → En España: mínimo 500.000 personas para que el algoritmo aprenda",
+        "¿Hay audiencias personalizadas de clientes existentes para exclusión y subir pujas?",
+      ].map((item, i) => (
+        <li key= class="flex items-start gap-3">
+          <span class="text-green-400 flex-shrink-0 mt-0.5">☑</span>
+          <span class="text-white/70 text-sm leading-relaxed"></span>
+        </li>
+      ))}
+    </ul>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Bloque 5 — Métricas y benchmarks</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Compara tus métricas con estos valores de referencia para ecommerce D2C en España:
+    </p>
+    <div class="overflow-x-auto mb-8">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 pr-4 text-white/40 font-semibold text-xs uppercase tracking-wide">Métrica</th>
+            <th class="text-left py-3 pr-4 text-white/40 font-semibold text-xs uppercase tracking-wide">Bueno</th>
+            <th class="text-left py-3 pr-4 text-white/40 font-semibold text-xs uppercase tracking-wide">Alerta</th>
+            <th class="text-left py-3 text-white/40 font-semibold text-xs uppercase tracking-wide">Crítico</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ["ROAS (moda/lifestyle)", "4x", "2x–4x", "<2x"],
+            ["ROAS (suplementos)", "5x", "3x–5x", "<3x"],
+            ["CPA (ticket 60€)", "<25€", "25€–45€", ">45€"],
+            ["CTR Link", ">1.5%", "0.8%–1.5%", "<0.8%"],
+            ["Frecuencia", "<3", "3–4", ">4"],
+            ["CPM (España)", "<10€", "10€–20€", ">20€"],
+          ].map(([metrica, bueno, alerta, critico]) => (
+            <tr key= class="border-b border-white/5">
+              <td class="py-3 pr-4 text-white/80 font-medium"></td>
+              <td class="py-3 pr-4 text-green-400/80 text-sm"></td>
+              <td class="py-3 pr-4 text-yellow-400/80 text-sm"></td>
+              <td class="py-3 text-red-400/80 text-sm"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Bloque 6 — Página de destino (landing)</h2>
+    <ul class="space-y-2 mb-8">
+      {[
+        "¿La página de destino carga en menos de 3 segundos en móvil? → Usa PageSpeed Insights para medir",
+        "¿El mensaje del anuncio y la landing son coherentes? → El visitante debe ver lo que el anuncio prometió",
+        "¿La tasa de conversión de la landing está por encima del 1-3%? → Por debajo indica problema de experiencia de usuario",
+        "¿Hay un CTA claro 'above the fold' (sin hacer scroll)?",
+        "¿Hay señales de confianza visibles? → Reviews, sellos de seguridad, política de devoluciones",
+      ].map((item, i) => (
+        <li key= class="flex items-start gap-3">
+          <span class="text-green-400 flex-shrink-0 mt-0.5">☑</span>
+          <span class="text-white/70 text-sm leading-relaxed"></span>
+        </li>
+      ))}
+    </ul>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cómo hacemos las auditorías en DayByDay</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Este checklist es la base del proceso que seguimos en DayByDay cuando auditamos una cuenta nueva. Revisamos los 6 bloques en profundidad y entregamos un informe con la puntuación de cada área y un plan de acción priorizado por impacto potencial.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-6">
+      La auditoría completa nos lleva 1-2 días laborables y es el punto de partida de cualquier colaboración. Si quieres saber más sobre nuestra metodología, puedes leer
+      <a
+        href="https://www.facebook.com/business/help/218844828315224?id=708519410192662"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-[#de0015] hover:text-red-400 underline"
+      >
+        las guías oficiales de optimización de Meta Business
+      </a>
+      como referencia técnica.
+    </p>
+
+    <div class="bg-[#1a1616] border border-white/10 rounded-2xl p-6 mb-8 text-center">
+      <p class="text-white/60 text-sm mb-4">
+        ¿Quieres que auditemos tus campañas con este checklist y te digamos exactamente qué está fallando?
+      </p>
+      <button>
+        Auditoría gratuita →
+      </button>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Artículos relacionados</h2>
+    <ul class="space-y-2 mb-4">
+      {[
+        ["/blog/como-mejorar-roas-meta-ads-7-palancas", "Cómo mejorar el ROAS en Meta Ads: 7 palancas reales"],
+        ["/blog/por-que-anuncios-meta-no-convierten", "Por qué tus anuncios de Meta no convierten (y cómo solucionarlo)"],
+        ["/blog/senales-agencia-publicidad-no-rinde", "Señales de que tu agencia de publicidad no está rindiendo"],
+        ["/blog/como-elegir-agencia-meta-ads-ecommerce", "Cómo elegir la mejor agencia de Meta Ads para tu eCommerce en España"],
+        ["/blog/buen-roas-por-nicho-benchmarks-2026", "¿Qué es un buen ROAS? Benchmarks por nicho para 2026"],
+        ["/blog/caso-exito-ecommerce-d2c-roas-meta-ads", "Caso de éxito: eCommerce D2C +156% ROAS en 90 días"],
+        ["/blog/guia-api-conversiones-meta-ads-shopify", "Guía API de Conversiones de Meta (CAPI) en Shopify"],
+        ["/blog/automatizaciones-reglas-meta-ads-manager", "Automatizaciones y reglas en Meta Ads Manager para escalar"],
+        ["/blog/modelos-atribucion-ecommerce-d2c", "Modelos de atribución para D2C: last-click, data-driven y MMM explicados"],
+      ].map(([to, label]) => (
+        <li key=>
+          <div class="embed-item"></div>
+        </li>
+      ))}
+    </ul>
+        </article>
+
+        
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+  <div class="faq-item"><h3 class="faq-q">¿Qué es una auditoría de campañas de paid media?</h3><p class="faq-a">Una auditoría de paid media es un análisis sistemático de todas las campañas activas para identificar problemas de estructura, segmentación, creatividades, pujas y tracking. El objetivo es encontrar por qué los resultados no son los esperados y definir un plan de acción concreto para mejorar el ROAS o reducir el CPA.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuánto tiempo lleva hacer una auditoría de Meta Ads?</h3><p class="faq-a">Una auditoría básica de Meta Ads se puede hacer en 2-4 horas si tienes acceso completo a la cuenta. Una auditoría completa que incluya análisis de creatividades, audiencias, estructura de campañas, tracking y comparativa con benchmarks del sector puede llevar entre 1 y 3 días laborables para un profesional experimentado.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Con qué frecuencia debería auditar mis campañas de paid media?</h3><p class="faq-a">Se recomienda una revisión completa trimestral (cada 3 meses) y una revisión mensual de métricas clave. Si cambias de agencia, antes de arrancar cualquier nueva campaña debes hacer una auditoría completa del estado actual. También si detectas una caída de ROAS superior al 20% en un período de 2 semanas.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué métricas son las más importantes en una auditoría de Meta Ads?</h3><p class="faq-a">Las métricas prioritarias son: ROAS (retorno sobre inversión publicitaria), CPA (coste por adquisición), frecuencia de anuncio (si supera 3-4 el rendimiento baja), CPM (coste por 1.000 impresiones), CTR (click-through rate) y tasa de conversión de la landing. MER (Marketing Efficiency Ratio) si mides el efecto global.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué errores se detectan más frecuentemente en una auditoría de campañas?</h3><p class="faq-a">Los más comunes: tracking mal configurado (conversiones duplicadas o perdidas), estructura de campañas solapada (audiencias que compiten entre sí), creatividades saturadas sin renovar más de 6 semanas, presupuestos mal distribuidos entre funnel frío y retargeting, y pujas automáticas sin suficientes datos para el algoritmo.</p></div>
+</section>
+
+
+        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

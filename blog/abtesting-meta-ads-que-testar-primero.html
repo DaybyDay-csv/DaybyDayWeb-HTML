@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A/B testing en Meta Ads: qué testar primero para maximizar aprendizaje | DayByDay Consulting</title>
+  <meta name="description" content="Cómo priorizar A/B tests en Meta Ads para eCommerce D2C: pirámide de impacto (creativo → hook → oferta → audiencia → puja → estructura), volumen mínimo de conversiones por variante, duración óptima del test, A/B nativo vs comparación manual, y cómo evitar contaminación por audience overlap.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/abtesting-meta-ads-que-testar-primero">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+<div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+<aside class="file-tree-sidebar" id="sidebar">
+  <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+  <div class="file-tree-section"><div class="file-tree-section-title">Secciones</div>
+    <a href="/" class="file-tree-item">Inicio</a>
+    <a href="/problema.html" class="file-tree-item">Problema</a>
+    <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
+    <a href="/resultados.html" class="file-tree-item">Resultados</a>
+    <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Paid Media</div>
+    <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
+    <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
+    <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
+    <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Automation & AI</div>
+    <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
+    <a href="/analytics.html" class="file-tree-item">Analytics</a>
+    <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Stack Tech</div>
+    <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
+    <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
+    <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+  </div>
+</aside>
+
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Estrategia</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Estrategia</span>
+          <span class="reading-time">8 min de lectura</span>
+          <span class="article-date">2026-05-03</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">A/B testing en Meta Ads: qué testar primero para maximizar aprendizaje</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Cómo priorizar A/B tests en Meta Ads para eCommerce D2C: pirámide de impacto (creativo → hook → oferta → audiencia → puja → estructura), volumen mínimo de conversiones por variante, duración óptima del test, A/B nativo vs comparación manual, y cómo evitar contaminación por audience overlap.</p>
+        <div class="article-author">
+          <div class="author-avatar">DB</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirsó · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<p class="text-white/70 leading-relaxed mb-5">
+      El <strong class="text-white">A/B testing en Meta Ads</strong> es la palanca más infrautilizada por cuentas D2C que están escalando: el 80% de los anunciantes que auditamos cambia 4-5 cosas a la vez en cada iteración y luego no puede explicar qué movió el CPA. Sin un orden de testeo y un volumen mínimo por variante, los aprendizajes no se acumulan — cada cambio sobrescribe al anterior y el ROAS sube y baja sin patrón.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Esta guía cubre qué testar primero, cuántas conversiones necesitas para fiarte del resultado, cuánto tiempo dejar correr cada test, y cómo evitar los errores que invalidan los datos antes incluso de leerlos.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Pirámide de impacto: qué testar primero</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Orden recomendado por retorno por euro invertido en spend de testing. Cada nivel se aborda solo cuando el anterior está estabilizado:
+    </p>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Nivel</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Qué testar</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Impacto típico</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Coste relativo</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
+              <td class="py-3 px-3 text-white/70 text-xs"></td>
+              <td class="py-3 px-3 text-white font-medium text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      La regla práctica es que el creativo, el hook y la oferta concentran la mayor parte del aprendizaje útil. Saltar al nivel 5 o 6 sin tener el 1-3 fijo es por qué muchas cuentas hacen 20 tests al trimestre sin notar mejora real. La <a href="https://www.facebook.com/business/help/1738164643098669" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">documentación oficial de Meta sobre A/B testing</a> describe la mecánica del Experiments tool, pero no la prioridad — eso depende de la madurez de tu cuenta.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Volumen mínimo por variante: cuándo el resultado es fiable</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      La mayoría de tests "no concluyentes" en Meta Ads son tests con volumen insuficiente. Sin conversiones, no hay señal — solo ruido:
+    </p>
+    <div class="space-y-3 mb-6">
+      {[
+        "Mínimo operativo: 50 conversiones por variante (Purchase, AddToCart o evento equivalente bien medido vía CAPI).",
+        "Ideal: 100+ conversiones por variante para detectar diferencias <20% en CPA con confianza.",
+        "Si el evento Purchase no llega a 50/semana por celda, testa sobre eventos intermedios de calidad (ICheckout, ATC alta intención) y confirma sobre Purchase a 14-28 días.",
+        "Tamaño de muestra mínimo según efecto detectable: detectar mejoras del 10% requiere ~3-5x más volumen que detectar mejoras del 30%. Tests pequeños solo detectan diferencias grandes.",
+        "Aplicar la regla a creativo: dentro de un mismo ad set, Meta reparte impresiones — basta con que cada anuncio acumule 30-50 conversiones, no requiere ad set propio.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Para cuentas con CPA de 30-40€, esto significa €1.500-3.000 de spend mínimo por test serio sobre Purchase. Si el presupuesto no llega, no diluyas: testa creativo dentro de ad set único antes de desplegar tests estructurales más caros. La <a href="https://hbr.org/2017/06/a-refresher-on-ab-testing" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">guía de Harvard Business Review sobre A/B testing</a> resume bien por qué los tests con poca señal son peor que no testar — toman decisiones aleatorias dándoles peso de evidencia.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Duración del test: ni 3 días ni 30</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Meta tarda 50 eventos por ad set en salir de learning phase. Los primeros 3-4 días el CPA está distorsionado por la exploración inicial del algoritmo, no por la calidad real de la variante. Plan de duración recomendado:
+    </p>
+    <div class="space-y-3 mb-6">
+      {[
+        "Días 1-3: ignorar resultados. Learning phase activo, CPA volátil, no tomar decisiones.",
+        "Días 4-7: primer corte de lectura. Si una variante tiene CPA >40% peor con 30+ eventos, puedes pausarla anticipadamente para reasignar presupuesto.",
+        "Días 7-14: ventana de decisión principal. Ya hay volumen estable y el aprendizaje se ha completado.",
+        "Días 14-21: extender solo si el volumen por celda sigue por debajo de 50 conversiones — no por cabezonería estadística sobre tests con CPA empate.",
+        ">21 días: detener. Si a las tres semanas no hay diferencia clara, el test es empate técnico. Quédate con la variante operativamente más simple y sigue.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">A/B test nativo vs comparación manual: cuándo usar cada uno</h2>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Tipo de test</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Herramienta</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Razón</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
+              <td class="py-3 px-3 text-white/70 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Errores frecuentes que invalidan el A/B test</h2>
+    <div class="space-y-3 mb-6">
+      {[
+        "Testar dos cosas a la vez (creativo nuevo + audiencia nueva): si gana B no sabes si fue por el creativo o por la audiencia. Una variable por test.",
+        "Detener el test al día 3-4 porque 'una variante va mejor': el ranking suele invertirse entre día 4 y día 10 cuando el algoritmo termina de aprender.",
+        "Presupuesto desigual entre celdas — la variante con más spend acumula más eventos y más exploración. Spend igual entre celdas, siempre.",
+        "Audiencias con overlap >25% (ej. LAL 1% vs LAL 3% sobre la misma semilla sin exclusiones): el público compartido sesga el resultado a favor de la celda que arranca primero.",
+        "Lanzar el test durante un evento atípico (Black Friday, lanzamiento de producto, ola promocional): el comportamiento del cliente no es el de operación normal.",
+        "Confiar en la significancia estadística de Meta sin validar volumen: la barra de 'confianza' aparece incluso con muestras pequeñas y puede engañar.",
+        "No documentar el test: tres meses después nadie recuerda qué hipótesis se probaba. Cada test con hipótesis escrita, criterio de éxito y decisión final guardada.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cómo organizamos el testing en DayByDay</h2>
+    <div class="space-y-3 mb-6">
+      {[
+        "Roadmap de testing trimestral con hipótesis priorizadas por impacto esperado, no por moda. Cada cliente tiene su backlog ordenado por la pirámide de impacto.",
+        "Ratio de testing 15-20% del spend total mensual reservado a tests, separado del presupuesto de evergreen (ad sets ganadores estables).",
+        "Test docs cortos: hipótesis, métrica primaria, métrica secundaria, criterio de éxito (% mejora mínima detectable), duración prevista, decisión final. Una hoja por test.",
+        "Validación de eventos vía CAPI server-side antes de lanzar cualquier test: sin EMQ >7 los datos del test no son fiables y desperdiciamos el budget.",
+        "Lectura semanal con el cliente del backlog de tests: qué se probó, qué se aprendió, qué se mantiene. Ningún test sin retrospectiva.",
+        "Tests de creativo siempre primero en cuentas nuevas. Solo cuando el creativo evergreen está estabilizado pasamos a tests estructurales más caros.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-6 mb-8 text-center">
+      <p class="font-bold text-white text-lg mb-2">¿Tu A/B testing en Meta Ads está dando aprendizajes accionables?</p>
+      <p class="text-white/50 text-sm mb-4">Auditoría gratuita 30 min: revisamos el roadmap de tests, volumen por variante, duración, y si los resultados están moviendo realmente el CPA o solo añadiendo ruido.</p>
+      <button>
+        Solicitar auditoría gratuita →
+      </button>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Artículos relacionados</h2>
+    <div class="space-y-3">
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/creative-testing-meta-ads.html">
+          Creative testing en Meta Ads: cómo testar creativos con presupuesto limitado →
+        </a>
+        <p class="text-white/40 text-xs mt-1">El nivel 1 de la pirámide explicado en detalle: cómo estructurar el ad set de testing creativo</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/audiencias-lookalike-meta-alta-calidad.html">
+          Audiencias lookalike en Meta de alta calidad: guía 2026 D2C →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cuando llegues al nivel 5 (test de audiencia), por qué semilla y % usar antes de testar nada</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/escalar-campanas-meta-ads-sin-romper-roas.html">
+          Cómo escalar campañas Meta Ads sin romper el ROAS →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Qué hacer cuando un test gana: cómo escalar la variante ganadora sin perder rendimiento</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/guia-api-conversiones-meta-ads-shopify.html">
+          Guía API de Conversiones de Meta para eCommerce →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Sin CAPI bien implementada los datos de tus tests son ruido — la base técnica antes que el roadmap</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/cro-landing-page-meta-ads-d2c.html">
+          CRO de landing page para Meta Ads: qué cambia respecto a SEO →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cuando termines de testear creative, el siguiente test que más mueve la aguja en CR está en la landing</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/meta-ads-library-analisis-competencia.html">
+          Análisis de competencia en Meta Ads Library →
+        </a>
+        <p class="text-white/40 text-xs mt-1">De dónde sacar hipótesis testables antes de gastar en producción: ángulos ganadores del mercado</p>
+      </div>
+    </div>
+        </article>
+
+        
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+  <div class="faq-item"><h3 class="faq-q">¿Por dónde empiezo a hacer A/B testing en Meta Ads si tengo poco presupuesto?</h3><p class="faq-a">Empieza por creativo, no por audiencia ni por puja. En cuentas <15K€/mes el creativo explica el 70-80% de la varianza de CPA — testar dos audiencias parecidas con el mismo vídeo no mueve la aguja, mientras que dos ángulos creativos distintos sobre la misma audiencia pueden multiplicar CTR por 2-3x. Estructura mínima: 1 ad set con 4-6 anuncios variando hook (primeros 3 segundos) y formato (UGC vertical vs producto en mesa vs testimonio). El que gane se queda; el resto se itera. Solo cuando el creativo está estabilizado (CPA constante 2-3 semanas) tiene sentido empezar a testar audiencias o pujas.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuántas conversiones necesito por variante para que un test sea fiable?</h3><p class="faq-a">Mínimo 50 conversiones por variante en cuentas D2C, ideal 100. Por debajo de 30, la diferencia entre CPA de las variantes está dentro del ruido estadístico — vas a tomar decisiones por azar. En la práctica esto significa que un test sobre Purchase necesita 1-2 semanas y €1.500-3.000 de spend mínimo si tu CPA está en 30€. Cuando el evento Purchase tiene volumen escaso, el truco es testar sobre eventos intermedios bien medidos vía CAPI server-side (AddToCart, InitiateCheckout) y confirmar la decisión sobre Purchase a 14-28 días.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuál es la diferencia entre A/B test nativo de Meta y comparar dos campañas a mano?</h3><p class="faq-a">El A/B test nativo (Experiments dentro de Ads Manager) reparte tráfico aleatoriamente entre celdas y aplica significancia estadística sobre métricas Meta — útil para comparar dos estrategias estructuralmente distintas (CBO vs ABO, Advantage+ vs manual, lookalike vs broad). Comparar dos campañas a mano permite más flexibilidad pero introduce sesgos: solapamiento de público, learning phase distinto, presupuesto diario no equivalente. Regla operativa: usar el A/B test nativo cuando la decisión es de estructura (audiencia, puja, optimización); comparar a mano cuando solo cambias creativo dentro de un mismo ad set, donde el algoritmo ya reparte impresiones internamente.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué orden seguir para no testar todo a la vez?</h3><p class="faq-a">Pirámide invertida por impacto: (1) creativo — máximo retorno, mínimo coste; (2) hook + primeros 3 segundos del vídeo, dentro del creativo ganador; (3) oferta y landing page, no solo el anuncio; (4) formato (vídeo vs estático vs carrusel) cuando el ángulo gana; (5) audiencia / lookalike % / broad vs interés; (6) puja y optimización (lowest cost vs cost cap, eventos de optimización); (7) estructura de cuenta (CBO vs ABO, número de ad sets). Saltar pasos hace que mezcles efectos y no sepas qué movió la aguja. Cada nivel se testa solo cuando el anterior está estabilizado.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuánto tiempo dejo correr un A/B test antes de decidir?</h3><p class="faq-a">Mínimo 7 días, ideal 14, nunca menos. Meta sale del learning phase a los 50 eventos por ad set y los primeros 3-4 días el CPA está distorsionado por exploración del algoritmo. Tests de menos de una semana suelen ganar la variante 'que arrancó antes', no la mejor. La excepción es testar creativo dentro de un mismo ad set ganador: ahí 5-7 días con suficiente volumen pueden bastar. Si a los 14 días no hay diferencia clara (\u003e20% en CPA con 100+ eventos por celda), el test es empate técnico — quédate con la variante operativamente más simple.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Tiene sentido hacer A/B testing si uso Advantage+ Shopping Campaign?</h3><p class="faq-a">Sí, pero solo a nivel de creativo y catálogo, no de audiencia. Advantage+ ignora la mayor parte de tus targeting hints, así que testar lookalikes vs intereses dentro de Advantage+ no aporta — el algoritmo decide internamente. Donde sí rinde el test: rotación de creativos (el algoritmo necesita 4-8 creativos activos para no agotar a la audiencia), variantes de oferta en la landing, y feed del catálogo (títulos, imágenes, precios). En cuentas con Advantage+ y manual coexistiendo, el test estructural es la propia coexistencia: medir incremental con holdout geo, no comparar CPA reportado.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo evito que el A/B test se contamine con audience overlap?</h3><p class="faq-a">Tres reglas: (1) usar Audience Insights para verificar que el solapamiento entre celdas es <20%; (2) si testas dos lookalikes parecidos, aplicar exclusiones cruzadas — el ad set A excluye al público del B y viceversa; (3) no lanzar el test mientras hay otra campaña activa sobre la misma audiencia core (un retargeting agresivo durante un test de prospecting infla las conversiones de las celdas con más overlap). Y siempre: presupuesto diario igual entre celdas, mismo evento de optimización, mismo período de inicio.</p></div>
+</section>
+
+
+        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

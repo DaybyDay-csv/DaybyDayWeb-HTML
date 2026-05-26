@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audiencias lookalike en Meta de alta calidad: guía 2026 D2C | DayByDay Consulting</title>
+  <meta name="description" content="Cómo crear audiencias lookalike de alta calidad en Meta Ads para eCommerce D2C: jerarquía de semillas (compradores LTV alto, AddToCart, engagement), tamaño semilla mínimo, qué porcentaje (1-10%) usar según tamaño de cuenta, exclusiones obligatorias y cuándo Advantage+ los sustituye.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/audiencias-lookalike-meta-alta-calidad">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+<div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+<aside class="file-tree-sidebar" id="sidebar">
+  <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+  <div class="file-tree-section"><div class="file-tree-section-title">Secciones</div>
+    <a href="/" class="file-tree-item">Inicio</a>
+    <a href="/problema.html" class="file-tree-item">Problema</a>
+    <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
+    <a href="/resultados.html" class="file-tree-item">Resultados</a>
+    <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Paid Media</div>
+    <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
+    <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
+    <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
+    <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Automation & AI</div>
+    <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
+    <a href="/analytics.html" class="file-tree-item">Analytics</a>
+    <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Stack Tech</div>
+    <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
+    <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
+    <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+  </div>
+</aside>
+
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Estrategia</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Estrategia</span>
+          <span class="reading-time">9 min de lectura</span>
+          <span class="article-date">2026-05-02</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Audiencias lookalike en Meta de alta calidad: guía 2026 D2C</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Cómo crear audiencias lookalike de alta calidad en Meta Ads para eCommerce D2C: jerarquía de semillas (compradores LTV alto, AddToCart, engagement), tamaño semilla mínimo, qué porcentaje (1-10%) usar según tamaño de cuenta, exclusiones obligatorias y cuándo Advantage+ los sustituye.</p>
+        <div class="article-author">
+          <div class="author-avatar">DB</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirsó · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<p class="text-white/70 leading-relaxed mb-5">
+      Las <strong class="text-white">audiencias lookalike en Meta</strong> siguen siendo, en 2026, una de las palancas más eficientes de prospecting para eCommerce D2C — pero solo cuando la semilla es de calidad y los eventos están medidos vía CAPI server-side. La mayoría de cuentas que auditamos tienen 6-10 lookalikes activos compitiendo entre sí, semillas obsoletas y exclusiones rotas. El resultado: prospecting que canibaliza retargeting y un ROAS reportado que no corresponde con el revenue incremental real.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Esta guía cubre cómo elegir la semilla, qué tamaño y porcentaje usar según tu cuenta, cómo construir un stack de 3-4 lookalikes que no se canibalicen, y cuándo Advantage+ Shopping Campaign los sustituye en cuentas grandes.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Qué es realmente una audiencia lookalike en 2026</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Un lookalike no es "personas parecidas a tus clientes" en abstracto: es un modelo estadístico que Meta construye a partir de las señales de tu semilla y proyecta sobre el inventario disponible en un país. La calidad final depende de tres variables, en este orden:
+    </p>
+    <div class="space-y-3 mb-6">
+      {[
+        "Calidad de la semilla — qué evento de conversión define a la persona y qué match rate tienen los eventos en tu cuenta (vía píxel + CAPI server-side).",
+        "Tamaño de la semilla — por debajo de 1.000 personas Meta no tiene suficientes patrones; entre 5.000 y 10.000 es el rango ideal.",
+        "Frescura — una semilla de compradores con ventana cerrada (no se actualiza) se vuelve obsoleta en 60-90 días y el lookalike empieza a degradarse aunque el dashboard no lo avise.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      La <a href="https://www.facebook.com/business/help/164749007013531" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">documentación oficial de Meta sobre lookalike audiences</a> recoge las fuentes válidas y los rangos %; lo que no recoge es cuáles funcionan en D2C español. Por eso la jerarquía siguiente.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Jerarquía de semillas: cuál usar según tu volumen</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Ordenadas de mayor a menor calidad de la señal. Si la primera no tiene volumen suficiente, baja al siguiente nivel:
+    </p>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Semilla</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Volumen mín.</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Calidad</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Cuándo usarla</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white font-medium text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      La semilla de compradores LTV alto es la diferencia entre un lookalike que escala y uno que se queda en CPA medio. Construirla requiere tener LTV calculado por cliente — algo que la <a href="https://www.shopify.com/blog/customer-lifetime-value" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">guía de Shopify sobre Customer Lifetime Value</a> explica bien. Si tu Shopify ya tiene Klaviyo o un CRM enchufado, exportar el top 25% por revenue total es trivial; la inversión de tiempo se devuelve a los 30 días en CPA de prospecting.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Qué porcentaje (1%, 3%, 5%, 10%) elegir</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Decisión por tamaño de cuenta y objetivo. La regla "1% siempre es mejor" es falsa en cuentas pequeñas — fragmenta tanto el público que el ad set no estabiliza CPA.
+    </p>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Spend Meta/mes</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">% recomendado</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Estructura típica</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ,
+            ,
+            ,
+            ,
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
+              <td class="py-3 px-3 text-white font-medium text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Lectura crítica: en cuentas pequeñas el 1% es un público demasiado estrecho — el ad set entra y sale del aprendizaje, gasta presupuesto sin estabilizar CPA. Empezar con 3-5% y bajar al 1% cuando el volumen lo permita es la secuencia que mejor escala.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Exclusiones cruzadas obligatorias</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Sin exclusiones, el lookalike incluye personas que ya están en tu pixel y el ROAS reportado de prospecting se infla con compras que iban a pasar igual vía retargeting. Exclusiones operativas en cada ad set lookalike:
+    </p>
+    <div class="space-y-3 mb-6">
+      {[
+        "Compradores 180d (custom audience desde evento Purchase) — evita pagar por reactivar a quien volvía igual.",
+        "AddToCart + ViewContent 30d — separa demanda existente de demanda nueva, esencial para que prospecting y retargeting no canibalicen.",
+        "Suscriptores email recientes 60d (vía Customer File sincronizado) — clientes que están recibiendo email + paid duplican coste sin incremento.",
+        "Visitantes web 30d (opcional, según overlap con MOFU) — solo si tu retargeting ya cubre toda la franja.",
+        "Empleados / IPs internas / dominios de prueba — el ruido de internal traffic distorsiona la semilla y el lookalike resultante.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Errores frecuentes que matan el lookalike</h2>
+    <div class="space-y-3 mb-6">
+      {[
+        "Crear lookalike sobre 'visitantes web 30d' sin filtro de calidad: incluye rebotes, bots y tráfico de redes que no convierte. Resultado: público amplio que no se parece a tu cliente real.",
+        "Semilla con <1.000 personas — Meta sigue construyendo el público pero el modelo es inestable, CPA volátil semana a semana.",
+        "No actualizar la semilla: una lista cerrada se obsolece a los 60-90 días. Toda semilla operativa debe ser dinámica (custom audience con ventana móvil), no estática.",
+        "Activar 6-10 lookalikes simultáneos por intuición. El algoritmo fragmenta el aprendizaje y ningún ad set estabiliza CPA. Tres o cuatro máximo, con función diferenciada.",
+        "Sin CAPI server-side: el match rate de la semilla cae al 50-65%. El lookalike se construye sobre datos parciales y rinde un 30-40% peor que con CAPI bien implementada.",
+        "No excluir compradores: el prospecting reporta un ROAS inflado, retargeting se queda sin presupuesto, escala se rompe.",
+        "Confundir Advantage+ Audience (audience expansion) con lookalike: son cosas distintas. Advantage+ ignora parte de tus targeting hints, el lookalike no.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cuándo Advantage+ sustituye al lookalike</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      A partir de ~70K€/mes de spend en Meta, Advantage+ Shopping Campaign con catálogo bien optimizado + Customer File enriquecida suele rendir mejor que un stack de lookalikes — el algoritmo tiene suficiente volumen para reasignar dinámicamente entre intereses, broad y similares sin necesidad de targeting hints rígidos. Por debajo de ese volumen, el lookalike sigue siendo la palanca de prospecting más eficiente, especialmente combinado con un retargeting limpio. La transición no es binaria: en cuentas 50-100K€/mes habitualmente conviven Advantage+ Shopping con un ad set lookalike 1% LTV alto que actúa como "sembrador" de señal de calidad para el algoritmo.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cómo trabajamos los lookalikes en DayByDay</h2>
+    <div class="space-y-3 mb-6">
+      {[
+        "Auditoría previa de eventos píxel + CAPI: sin EMQ >7 en Purchase y AddToCart no creamos lookalikes. La base técnica primero.",
+        "Construcción de la semilla LTV alto cuando hay datos disponibles (Klaviyo, Shopify CRM, datos de cliente). Top 25% por revenue total exportado a Customer File.",
+        "Stack inicial de 3 lookalikes con función diferenciada (1% LTV / 3% compradores / 5-10% engagement) y exclusiones cruzadas explícitas.",
+        "Refresco mensual de semilla: ventana móvil 180d para compradores, 90d para AddToCart. Nunca semillas estáticas.",
+        "Test de % en escalada: empezar 3-5%, bajar al 1% cuando el ad set tiene 50+ conversiones/semana estables.",
+        "Revisión semanal de overlap entre lookalikes y retargeting con Audience Insights — si el solapamiento >25% revisamos exclusiones antes de tocar puja o creativo.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-6 mb-8 text-center">
+      <p class="font-bold text-white text-lg mb-2">¿Tus lookalikes en Meta están construidos sobre la semilla correcta?</p>
+      <p class="text-white/50 text-sm mb-4">Auditoría gratuita 30 min: revisamos calidad de eventos píxel + CAPI, semillas, exclusiones y stack de prospecting para detectar si tu lookalike está canibalizando retargeting.</p>
+      <button>
+        Solicitar auditoría gratuita →
+      </button>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Artículos relacionados</h2>
+    <div class="space-y-3">
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/retargeting-meta-ads-ecommerce-2026.html">
+          Retargeting en Meta Ads para eCommerce: guía completa 2026 →
+        </a>
+        <p class="text-white/40 text-xs mt-1">La cara complementaria: cómo separar prospecting (lookalike) de retargeting con exclusiones limpias</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/guia-api-conversiones-meta-ads-shopify.html">
+          Guía API de Conversiones de Meta para eCommerce →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Sin CAPI server-side bien hecho, la semilla del lookalike pierde la mitad de su match rate</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/advantage-plus-shopping-cuando-usarlo-no.html">
+          Advantage+ Shopping Campaign: cuándo usarlo y cuándo no →
+        </a>
+        <p class="text-white/40 text-xs mt-1">A partir de ~70K€/mes Advantage+ empieza a competir con el lookalike — cuándo migrar</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/escalar-campanas-meta-ads-sin-romper-roas.html">
+          Cómo escalar campañas Meta Ads sin romper el ROAS →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cómo escalar lookalikes sin saturar el público y disparar el frequency</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/ab-testing-meta-ads-que-testar-primero.html">
+          A/B testing en Meta Ads: qué testar primero para maximizar aprendizaje →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cuándo testar audiencias y lookalikes vs cuándo el creativo aún manda — pirámide de impacto</p>
+      </div>
+    </div>
+        </article>
+
+        
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+  <div class="faq-item"><h3 class="faq-q">¿Siguen funcionando las audiencias lookalike en Meta Ads en 2026?</h3><p class="faq-a">Sí, pero solo si la audiencia semilla es de calidad y los eventos están bien medidos vía CAPI server-side. Sin CAPI con EMQ \u003e7, el match rate de la lista semilla cae al 50-65% y Meta construye el lookalike sobre datos parciales — el resultado es un público que se parece más a 'cualquier comprador online' que a tu cliente real. Con semilla limpia y eventos de alta calidad, los lookalikes 1-3% siguen siendo una de las palancas de prospecting con mejor coste por adquisición que vemos en cuentas D2C españolas. Lo que ha cambiado no es su rendimiento, sino la importancia de la base técnica.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué tamaño mínimo necesita la audiencia semilla para crear un lookalike de calidad?</h3><p class="faq-a">Mínimo operativo: 1.000-2.000 personas en la semilla, ideal 5.000-10.000. Por debajo de 1.000 Meta sigue construyendo el público pero el algoritmo no tiene suficientes patrones para generar un lookalike estable — verás CPA volátil semana a semana. Si tu cuenta tiene <1.000 compradores, la mejor opción es lookalike sobre AddToCart 90d o ViewContent + tiempo en página \u003e60s, no compradores. Si superas 10.000, no hace falta más: a partir de ahí el algoritmo no mejora la calidad del modelo, solo amplía el rango.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué porcentaje (1%, 3%, 5%, 10%) es mejor para un lookalike en eCommerce D2C?</h3><p class="faq-a">Regla operativa por tamaño de cuenta: cuentas <10K€/mes en Meta empiezan con lookalike 3-5% para tener volumen suficiente sin fragmentar. Cuentas 10-50K€/mes pueden trabajar 1-3% como audiencia core de prospecting + 5-10% como respaldo de escala. Cuentas \u003e50K€/mes se benefician más de un stack: 1% para máxima similitud, 3% para escala estable, 5-10% solo cuando el 1-3% empieza a saturar. El error frecuente es asumir que '1% siempre rinde mejor': en cuentas pequeñas el 1% es un público demasiado estrecho y entra y sale del aprendizaje constantemente.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Lookalike sobre compradores o sobre otra fuente?</h3><p class="faq-a">Depende del volumen de eventos. Jerarquía de calidad de semillas en orden descendente: (1) compradores con LTV alto/clientes recurrentes — la mejor semilla, pero requiere ≥1.000 personas; (2) compradores totales 180d — semilla por defecto si tienes volumen; (3) AddToCart 90d sin compra — útil cuando compradores <1.000; (4) Visitantes con tiempo en página \u003e60s — TOFU adicional; (5) suscriptores email comprometidos vía Customer File — semilla limpia que muchas cuentas ignoran. Lo que NO funciona como semilla: visitantes web 30d sin filtro de calidad (incluye rebote y bots), engagement IG genérico, y leads sin cualificación.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuántas audiencias lookalike debo tener activas simultáneamente?</h3><p class="faq-a">Tres o cuatro como máximo, con función diferenciada. Estructura que rinde en cuentas D2C: (1) lookalike 1-3% compradores LTV alto (core prospecting BOFU-MOFU), (2) lookalike 3-5% AddToCart 90d (volumen MOFU), (3) lookalike 5-10% engagement IG/FB 365d (TOFU de bajo coste), (4) opcional: lookalike sobre lista de email de marca para campañas de lanzamiento. Más allá fragmentas el aprendizaje y ningún ad set sale de learning phase. El error clásico es crear 8-10 lookalikes por intuición y dejarlos competir entre sí — el algoritmo no sabe a cuál servir y el CPA se desestabiliza.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Excluyo a clientes y visitantes recientes de mis lookalike audiences?</h3><p class="faq-a">Casi siempre sí. Sin exclusiones, el lookalike incluye personas que ya están en tu pixel — lo que infla el ROAS reportado con compras que iban a pasar igual vía retargeting. Exclusiones obligatorias: (1) compradores 180d, (2) carrito + ViewContent 30d, (3) suscriptores email recientes 60d. Excepción: si tu funnel es de adquisición pura sin overlap con remarketing (lanzamiento de producto nuevo, expansión geográfica), puedes desactivar exclusiones temporalmente. En operación normal, sin exclusiones cruzadas el reporte de prospecting roba revenue al retargeting y la atribución pierde sentido.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuándo dejan de funcionar los lookalikes y qué los sustituye?</h3><p class="faq-a">Dejan de funcionar cuando: (1) la semilla deja de actualizarse — un lookalike de compradores 180d con ventana cerrada se vuelve obsoleto en 60-90 días; (2) la cuenta supera ~70K€/mes en Meta y el público disponible se satura — ahí el frequency sube y el CPA marginal se dispara; (3) Advantage+ Shopping Campaign con 'audience expansion' empieza a canibalizar el volumen del lookalike. Lo que los sustituye en cuentas grandes: Advantage+ Shopping con catálogo bien optimizado + listas Customer File enriquecidas + interés agregado broad. En cuentas <30K€/mes, los lookalikes siguen siendo la palanca más eficiente de prospecting.</p></div>
+</section>
+
+
+        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

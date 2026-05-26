@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cómo Testar Nuevas Campañas en Meta Ads: Sistema de Experimentación 2026 | DayByDay Consulting</title>
+  <meta name="description" content="Guía completa para testar campañas de Meta Ads de forma científica. Aprende a diseñar tests, interpretar resultados y escalar lo que funciona.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/test-campaigns-meta-ads">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+<div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+<aside class="file-tree-sidebar" id="sidebar">
+  <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+  <div class="file-tree-section"><div class="file-tree-section-title">Secciones</div>
+    <a href="/" class="file-tree-item">Inicio</a>
+    <a href="/problema.html" class="file-tree-item">Problema</a>
+    <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
+    <a href="/resultados.html" class="file-tree-item">Resultados</a>
+    <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Paid Media</div>
+    <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
+    <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
+    <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
+    <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Automation & AI</div>
+    <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
+    <a href="/analytics.html" class="file-tree-item">Analytics</a>
+    <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Stack Tech</div>
+    <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
+    <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
+    <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+  </div>
+</aside>
+
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Meta Ads</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Meta Ads</span>
+          <span class="reading-time">11 min de lectura</span>
+          <span class="article-date">2026-05-24</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Cómo Testar Nuevas Campañas en Meta Ads: Sistema de Experimentación 2026</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Guía completa para testar campañas de Meta Ads de forma científica. Aprende a diseñar tests, interpretar resultados y escalar lo que funciona.</p>
+        <div class="article-author">
+          <div class="author-avatar">DB</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirsó · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<section>
+      <h2>Por qué la mayoría de tests fallan</h2>
+      <p class="text-white/70 leading-relaxed mb-5">
+        El 90% de los marketers de eCommerce commeten el mismo error: lanzan un test sin hipótesis clara, sin control de variables y sin suficiente duración. El resultado: datos inutilizables y dinero desperdiciado.
+      </p>
+      <p class="text-white/70 leading-relaxed mb-5">
+        En <a href="/servicios/meta-ads.html">DayByDay</a> aplicamos un sistema de experimentación riguroso que reduce el coste de aprendizaje en un 60%. Esta guía te explica exactamente cómo lo hacemos.
+      </p>
+    </section>
+
+    <section>
+      <h2>El sistema de experimentación de 3 fases</h2>
+      <p class="text-white/70 leading-relaxed mb-4">
+        Cada test de campaña pasa por 3 fases distintas. Saltarse fases es la causa #1 de fracaso.
+      </p>
+
+      <h3 class="text-lg font-bold mt-6 mb-3">Fase 1: Validación (Días 1-14)</h3>
+      <p class="text-white/70 leading-relaxed mb-4">
+        Presupuesto: 300-500€/mes por test. Objetivo: validar que la campaña puede alcanzar métricas aceptables. No escalamos hasta tener al menos 50 conversiones y CPA dentro del 30% del target. Aprende más sobre <a href="/blog/budget-meta-ads-2026.html">cómo estructurar el presupuesto de test</a> en nuestra guía específica.
+      </p>
+
+      <h3 class="text-lg font-bold mt-6 mb-3">Fase 2: Optimización (Días 15-30)</h3>
+      <p class="text-white/70 leading-relaxed mb-4">
+        Una vez validada, ajustamos creatividades, audiencias y bidding. Aquí es donde el ROAS mejora de forma consistente. Si necesitas entender mejor qué métricas optimizar, mira nuestro <a href="/blog/que-es-roas-meta-ads.html">artículo sobre ROAS</a>.
+      </p>
+
+      <h3 class="text-lg font-bold mt-6 mb-3">Fase 3: Escala (Día 31+)</h3>
+      <p class="text-white/70 leading-relaxed mb-5">
+        Solo escalamos si el CPA en fase 2 es igual o mejor que en fase 1. Subimos un 20% cada 3 días监控ando ROAS. Si cae más de un 15%, rollback inmediato.
+      </p>
+    </section>
+
+    <section>
+      <h2>Variables críticas a testar</h2>
+      <p class="text-white/70 leading-relaxed mb-4">
+        No testes más de 2 variables a la vez o no podrás atribuir el resultado. Nuestra prioridad actual en 2026:
+      </p>
+
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-6">
+        <div class="space-y-4">
+          <div class="flex justify-between items-start border-b border-white/10 pb-3">
+            <div>
+              <span class="text-white font-bold">1. Audiencias</span>
+              <p class="text-white/50 text-xs mt-1">Lookalike 1% vs 3%, interests vs behavior</p>
+            </div>
+            <span class="text-green-400 font-mono text-sm">Alto impacto</span>
+          </div>
+          <div class="flex justify-between items-start border-b border-white/10 pb-3">
+            <div>
+              <span class="text-white font-bold">2. Creatividades</span>
+              <p class="text-white/50 text-xs mt-1">Video vs imagen, hooks en primeros 3 segundos</p>
+            </div>
+            <span class="text-green-400 font-mono text-sm">Alto impacto</span>
+          </div>
+          <div class="flex justify-between items-start border-b border-white/10 pb-3">
+            <div>
+              <span class="text-white font-bold">3. Objetivos de campaña</span>
+              <p class="text-white/50 text-xs mt-1">Conversiones vs ventas catálogo vs valor</p>
+            </div>
+            <span class="text-yellow-400 font-mono text-sm">Medio impacto</span>
+          </div>
+          <div class="flex justify-between items-start">
+            <div>
+              <span class="text-white font-bold">4. Bidding strategy</span>
+              <p class="text-white/50 text-xs mt-1">Lowest cost vs target CPA vs manual</p>
+            </div>
+            <span class="text-yellow-400 font-mono text-sm">Medio impacto</span>
+          </div>
+        </div>
+      </div>
+      <p class="text-white/70 leading-relaxed mb-5">
+        Prueba siempre primero audiencias y creatividades antes de tocar bidding o presupuesto. Son las variables con mayor palanca sobre el rendimiento.
+      </p>
+    </section>
+
+    <section>
+      <h2>Cómo diseñar un test válido</h2>
+
+      <h3 class="text-lg font-bold mt-6 mb-3">1. Define tu hipótesis</h3>
+      <p class="text-white/70 leading-relaxed mb-4">
+        "Las audiencias lookalike 3% tendrán mejor CPA que las de 1% porque..." → Completa la parte "porque" con datos de tu cuenta histórica o investigación.
+      </p>
+
+      <h3 class="text-lg font-bold mt-6 mb-3">2. Calcula el tamaño de muestra</h3>
+      <p class="text-white/70 leading-relaxed mb-4">
+        Para detectar un cambio del 15% en CPA con 80% de confianza estadística necesitas:
+      </p>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-5">
+        <p class="font-mono text-white text-sm mb-2">Mínimo 200 conversiones por variante</p>
+        <p class="text-white/50 text-xs">Con CPA medio de 15€, eso son 3.000€/variante</p>
+        <p class="text-white/50 text-xs mt-2">Si tu CPA es 30€, necesitas 6.000€/variante</p>
+      </div>
+
+      <h3 class="text-lg font-bold mt-6 mb-3">3. Controla las variables</h3>
+      <p class="text-white/70 leading-relaxed mb-5">
+        Cuando testes audiencias, usa la MISMA creatividad en ambas variantes. Cuando testes creatividades, usa la MISMA audiencia. Mezclar variables invalida el test.
+      </p>
+    </section>
+
+    <section>
+      <h2>Errores que destruyen tus tests</h2>
+
+      <h3 class="text-lg font-bold mt-6 mb-3">1. Tomar decisiones antes de tiempo</h3>
+      <p class="text-white/70 leading-relaxed mb-4">
+        Si a los 3 días una variante tiene mejor CPA, no pares el test. Puede ser fluctuación estadística. Lee más sobre cómo <a href="/blog/estructura-campaigns-meta-ads.html">estructurar campañas correctamente</a> para evitar este error.
+      </p>
+
+      <h3 class="text-lg font-bold mt-6 mb-3">2. No documentar resultados</h3>
+      <p class="text-white/70 leading-relaxed mb-4">
+        Sin registro, repites los mismos errores. Creamos una spreadsheet con: hipótesis, duración, resultados, aprendizaje y siguiente acción. Actualiza después de cada test.
+      </p>
+
+      <h3 class="text-lg font-bold mt-6 mb-3">3. Testar en periodo de baja temporada</h3>
+      <p class="text-white/70 leading-relaxed mb-5">
+        Los datos de julio no aplican a noviembre. Si testeas en temporada baja, los resultados serán peores que en alta. Planifica tests para enero-febrero o septiembre.
+      </p>
+    </section>
+
+    <section>
+      <h2>Matriz de decisión post-test</h2>
+      <p class="text-white/70 leading-relaxed mb-4">
+        Después de cada test, usamos esta matriz para decidir siguiente paso:
+      </p>
+      <div class="space-y-3 mb-5">
+        <div class="flex items-start gap-3">
+          <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded text-xs font-bold">WIN</span>
+          <p class="text-white/70">CPA mejor +15% → Escalar inmediatamente con mismo setup</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded text-xs font-bold">CONTINUE</span>
+          <p class="text-white/70">CPA mejor +5-15% → Continuar optimización 2 semanas más</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="bg-red-500/20 text-red-400 px-2 py-1 rounded text-xs font-bold">KILL</span>
+          <p class="text-white/70">CPA peor → Pausar en 48h, Documentar por qué falló</p>
+        </div>
+      </div>
+      <p class="text-white/70 leading-relaxed mb-5">
+        El KILL es tan importante como el WIN. Cada test fallido enseña algo si lo documentas bien. Los founders que más rápido escalan son los que no tienen ego en pausar campañas.
+      </p>
+    </section>
+
+    <section>
+      <h2>Conclusión</h2>
+      <p class="text-white/70 leading-relaxed mb-4">
+        Testar campañas sin sistema es gambling con tu presupuesto. El sistema que usamos en DayByDay tiene 3 fases, 4 variables prioritarias y una matriz de decisión clara. Con esto reducimos el coste de aprendizaje drásticamente.
+      </p>
+      <p class="text-white/70 leading-relaxed mb-5">
+        Empieza mañana con un solo test: hypothesis clara, mismo creative, dos audiencias. Mide 14 días. Documenta. Repite. Si quieres que te ayudemos a diseñar tu primer test o revisar los resultados, <a href="/?book=call.html">reserva una llamada de discovery</a>.
+      </p>
+    </section>
+        </article>
+
+        
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+  <div class="faq-item"><h3 class="faq-q">¿Cuántos días necesito para testar una nueva campaña de Meta Ads?</h3><p class="faq-a">Mínimo 7 días para datos significativos, pero el algoritmo necesita al menos 50 eventos de conversión para estabilizarse. Esto suele tomar 14-21 días dependiendo del presupuesto diario.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuándo debo pausar una campaña que no convierte?</h3><p class="faq-a">Si después de 14 días y 50+ eventos de conversión el CPA es 2x tu target, pausar. Pero si hay volumen y el CPA está dentro del 20% del target, seguir testando.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo afecta la estacionalidad a los tests de campañas?</h3><p class="faq-a">Evita lanzar tests en fechas de alta demanda (Black Friday, Navidad) porque los datos quedan contaminados. Mejor lanzar en enero, marzo-abril o septiembre.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuántas variaciones de anuncio debo crear por campaña?</h3><p class="faq-a">Mínimo 3-5 creatividades diferentes. El algoritmo de Meta optimiza mejor con más opciones. En sectores competitivos, hasta 7-10 variaciones.</p></div>
+</section>
+
+
+        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

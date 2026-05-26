@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cohort analysis para eCommerce D2C: la métrica que predice si tu negocio escala | DayByDay Consulting</title>
+  <meta name="description" content="Cómo usar cohort analysis para detectar si tu D2C está escalando con clientes de calidad o degradándose: métricas clave (retención, LTV acumulado, payback), número mínimo de cohortes para ser fiables, patrones que delatan un escalado tóxico, herramientas reales (Shopify, Triple Whale, Lifetimely) y cómo cruzar cohortes con decisiones de paid media.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/cohort-analysis-ecommerce-d2c">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+<div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+<aside class="file-tree-sidebar" id="sidebar">
+  <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+  <div class="file-tree-section"><div class="file-tree-section-title">Secciones</div>
+    <a href="/" class="file-tree-item">Inicio</a>
+    <a href="/problema.html" class="file-tree-item">Problema</a>
+    <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
+    <a href="/resultados.html" class="file-tree-item">Resultados</a>
+    <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Paid Media</div>
+    <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
+    <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
+    <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
+    <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Automation & AI</div>
+    <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
+    <a href="/analytics.html" class="file-tree-item">Analytics</a>
+    <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Stack Tech</div>
+    <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
+    <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
+    <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+  </div>
+</aside>
+
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Métricas</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Métricas</span>
+          <span class="reading-time">10 min de lectura</span>
+          <span class="article-date">2026-05-04</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Cohort analysis para eCommerce D2C: la métrica que predice si tu negocio escala</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Cómo usar cohort analysis para detectar si tu D2C está escalando con clientes de calidad o degradándose: métricas clave (retención, LTV acumulado, payback), número mínimo de cohortes para ser fiables, patrones que delatan un escalado tóxico, herramientas reales (Shopify, Triple Whale, Lifetimely) y cómo cruzar cohortes con decisiones de paid media.</p>
+        <div class="article-author">
+          <div class="author-avatar">DB</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirsó · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<p class="text-white/70 leading-relaxed mb-5">
+      El <strong class="text-white">cohort analysis</strong> es la métrica que más D2C ignoran y la que mejor predice si un eCommerce está escalando bien o quemando caja en silencio. Mientras el dashboard mensual celebra crecimiento de facturación, las cohortes pueden estar diciéndote que los clientes nuevos repiten menos, gastan menos y tardan más en cubrir su CAC. La facturación crece, el negocio empeora — y en 6-12 meses lo nota la cuenta de resultados.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-5">
+      En esta guía explicamos cómo montar un cohort analysis útil para eCommerce D2C, qué métricas medir, qué patrones avisan de problemas y cómo cruzarlo con decisiones de paid media para escalar sin romper el negocio.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Qué mide cada tipo de cohorte y para qué sirve</h2>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Tipo de cohorte</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Qué mide</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Decisión que habilita</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ,
+            ,
+            ,
+            ,
+            ,
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      La mayoría de D2C españoles solo mira la primera (cohorte mensual). Las cuatro siguientes son las que diferencian la operativa de un media buyer senior: permiten decisiones de inversión basadas en LTV real, no en CAC plataforma. <a href="https://www.shopify.com/blog/cohort-analysis" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Shopify documenta el reporte de cohortes nativo</a> y conviene tenerlo activado siempre como mínimo común.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Las 4 métricas que toda cohorte D2C debe medir</h2>
+    <div class="space-y-3 mb-6">
+      {[
+        "Tasa de recompra acumulada a 30 / 60 / 90 / 180 / 365 días: % de la cohorte que ha hecho una segunda compra antes de cada hito. Es el primer indicador de si el producto y el cliente encajan.",
+        "LTV acumulado por cohorte: gasto medio acumulado por cliente en cada hito temporal. Permite comparar cohortes entre sí y proyectar LTV final cuando aún no han pasado 12 meses.",
+        "Frecuencia de pedidos: pedidos medios por cliente acumulados. En productos con recompra alta (suplementos, café), una caída de 0,3 a 0,2 pedidos a los 90 días es una alarma temprana antes de que el LTV se hunda.",
+        "Payback period: cuántos meses tarda la cohorte en generar margen acumulado igual al CAC blended con el que se adquirió. Es la métrica financiera real de salud del escalado — si crece mes a mes, estás escalando contra tu propio cash flow.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Patrones rojos: cuándo el cohort analysis avisa de problemas</h2>
+    <div class="space-y-3 mb-6">
+      {[
+        "Recompra a 90 días bajando 3 meses seguidos: las últimas cohortes repiten menos que las anteriores. Casi siempre significa que el escalado de paid está trayendo cliente menos cualificado — pasa cuando se sube presupuesto sin tocar segmentación o creatividad.",
+        "LTV de cohortes BFCM (noviembre/diciembre) <70% del LTV de cohortes Q1-Q3: el cliente cazaoportunidades no recompra. Si tu spend Q4 representa >40% del año, esto deforma todo el modelo financiero.",
+        "Payback period creciendo mientras CAC se mantiene: el problema no es que sea más caro adquirir, es que el cliente nuevo retiene peor. Subida de CPMs no lo explica.",
+        "Cohortes de un canal con LTV muy inferior al resto a 6 meses: ese canal trae visita barata pero no cliente real. Pasa con frecuencia en TikTok Ads y campañas Advantage+ Shopping mal configuradas.",
+        "Frecuencia de pedido cayendo sin caída paralela en AOV: clientes compran una vez y no vuelven. Producto correcto, expectativa equivocada — habitualmente por discordancia entre el creativo y la experiencia post-compra.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Payback period saludable por tipo de D2C español</h2>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Tipo producto</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Payback saludable</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Límite aceptable</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Señal de alarma</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ,
+            ,
+            ,
+            ,
+            ,
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white font-medium text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Estos rangos los derivamos de cuentas D2C españolas que auditamos en sectores moda, suplementos, cosmética y hogar. Coinciden razonablemente con benchmarks internacionales que publica <a href="https://www.klaviyo.com/blog/customer-lifetime-value-benchmarks" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Klaviyo en su informe de LTV por industria</a>, ajustando margen y AOV al mercado español.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cómo trabajamos en DayByDay</h2>
+    <div class="space-y-3 mb-6">
+      {[
+        "Cohort dashboard mensual cruzado con CAC blended por cohorte: misma vista combina retención, LTV acumulado y payback period sobre el CAC con el que se adquirió esa cohorte. Sin esto, los datos sueltos no producen decisiones.",
+        "Cohortes por canal y campaña en cuentas con >2 canales activos: Meta, Google, TikTok, orgánico y email. Es la única forma de descubrir que un canal con CAC bajo está trayendo cliente con LTV un 40% inferior — pasa más de lo que parece.",
+        "Revisión trimestral de cohortes BFCM vs cohortes orgánicas Q2-Q3: si el gap supera el 30%, recalibramos política de descuentos y filtros de audiencia para Q4 siguiente.",
+        "Proyección de LTV a 12 meses desde cohortes de 90 días: con datos de 3 meses se puede estimar LTV final con error <15% si la cohorte tiene volumen suficiente. Permite tomar decisiones de inversión sin esperar un año entero.",
+        "Reglas de escalado paid derivadas del payback objetivo: si el cliente quiere payback ≤6 meses, el ROAS objetivo de primera compra se calcula desde ahí — no desde benchmarks genéricos. Esto evita escalar facturación con CAC que el negocio no puede aguantar.",
+        "Herramientas: BigQuery + Looker Studio para cuentas &gt;50K€/mes, o Triple Whale / Lifetimely para escalas menores. Shopify Analytics para validar cifras pero no como fuente única de verdad.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-6 mb-8 text-center">
+      <p class="font-bold text-white text-lg mb-2">¿Tu D2C crece en facturación pero no sabes si las cohortes mejoran?</p>
+      <p class="text-white/50 text-sm mb-4">Auditoría gratuita 30 min: revisamos tus cohortes de adquisición de los últimos 12 meses y detectamos si el escalado está trayendo cliente de calidad o degradando el negocio.</p>
+      <button>
+        Solicitar auditoría gratuita →
+      </button>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Artículos relacionados</h2>
+    <div class="space-y-3">
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/adquisicion-vs-retencion-paid-media-d2c.html">
+          Adquisición vs retención: cómo separar presupuestos de paid media en D2C →
+        </a>
+        <p class="text-white/40 text-xs mt-1">El bucket que aplica directamente la lectura cohorte para decidir cuándo recortar adquisición y meter más en retención</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/cac-blended-vs-cac-canal-ecommerce.html">
+          CAC blended vs CAC por canal: qué métrica usar para escalar un D2C →
+        </a>
+        <p class="text-white/40 text-xs mt-1">El CAC que se cruza con cohortes para calcular payback period real</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/email-marketing-meta-ads-ltv-d2c.html">
+          Email marketing + Meta Ads: cómo combinar paid y owned para escalar LTV →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cómo los flujos email construyen el LTV que las cohortes proyectan</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/cac-vs-ltv-ecommerce-escalable.html">
+          CAC vs LTV: cómo construir un eCommerce escalable →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Marco completo CAC:LTV con LTV proyectado desde cohortes</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/suscripciones-ecommerce-ltv-cac-d2c.html">
+          Suscripciones en D2C: cómo cambia LTV y CAC objetivo →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cálculo de churn por cohorte y LTV contractual en cuentas con suscripción</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/escalar-ecommerce-d2c-100k-1m-paid-media.html">
+          Cómo escalar un eCommerce D2C de 100K€ a 1M€ con paid media →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cómo las cohortes evitan escalar facturación a costa de margen futuro</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/metricas-meta-ads-importantes-ecommerce.html">
+          Métricas de Meta Ads que importan en eCommerce →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Métricas plataforma que se cruzan con cohortes para decisiones de escalado</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/modelos-atribucion-ecommerce-d2c.html">
+          Modelos de atribución para D2C: last-click, data-driven y MMM explicados →
+        </a>
+        <p class="text-white/40 text-xs mt-1">El modelo que asigna a cada cohorte el canal de adquisición correcto</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/marketing-mix-modeling-ecommerce-d2c.html">
+          Marketing Mix Modeling (MMM) para D2C: cuándo aplicarlo y qué resuelve →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cómo MMM valida el LTV agregado por canal sin depender de cookies</p>
+      </div>
+    </div>
+        </article>
+
+        
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+  <div class="faq-item"><h3 class="faq-q">¿Qué es exactamente un cohort analysis en eCommerce D2C?</h3><p class="faq-a">Cohort analysis es una técnica que agrupa clientes según un evento común — habitualmente el mes de su primera compra — y sigue su comportamiento (recompra, gasto acumulado, retención) en el tiempo. En lugar de mirar la métrica agregada del negocio (que mezcla clientes nuevos y antiguos y oculta tendencias), miras cómo se comporta cada cohorte de adquisición. Es la única forma fiable de saber si los clientes nuevos de hoy son mejores, iguales o peores que los de hace 12 meses — y por tanto, si tu D2C realmente está mejorando o solo está creciendo en facturación pero degradándose en calidad.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué métricas se miden en un cohort analysis para D2C?</h3><p class="faq-a">Las cuatro críticas: (1) tasa de recompra a 30/60/90/180/365 días — qué % de la cohorte vuelve a comprar; (2) LTV acumulado por cohorte en cada hito temporal; (3) frecuencia de compra (pedidos por cliente acumulados); (4) AOV de la cohorte vs cohortes anteriores. La quinta opcional pero potente: payback period — cuántos meses tarda una cohorte en cubrir su CAC. En cuentas que auditamos, el simple cruce de payback period vs CAC blended detecta más del 60% de los problemas de escalado antes de que aparezcan en la cuenta de resultados.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuántas cohortes mínimas necesito para que el análisis sea útil?</h3><p class="faq-a">Mínimo 6 cohortes mensuales con \u003e50 clientes cada una para detectar tendencias con cierta solidez. Con 12 cohortes ya puedes ver estacionalidad anual y diferenciar entre cohortes Q4 (Black Friday, peor calidad) y cohortes Q1-Q3 (mejor calidad). Por debajo de 50 clientes/cohorte el ruido estadístico hace que cualquier curva de retención sea poco fiable; en ese caso conviene agrupar en cohortes trimestrales en lugar de mensuales hasta tener volumen.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo detecto que mi D2C está degradándose con cohortes aunque la facturación crezca?</h3><p class="faq-a">Tres patrones rojos típicos: (1) la tasa de recompra a 90 días de las cohortes recientes es inferior a las cohortes de hace 12 meses — significa que los clientes nuevos son peores; (2) el LTV a 6 meses de cohortes nuevas baja mientras el CAC sube — payback se alarga; (3) las cohortes adquiridas durante picos de spend (sales, BFCM) tienen retención significativamente peor que las orgánicas — el escalado paid está trayendo peor cliente. Si ves los tres, estás escalando facturación a costa de margen futuro, aunque el dashboard mensual diga lo contrario.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Sirven Shopify Analytics o GA4 para hacer cohort analysis serio?</h3><p class="faq-a">Para algo básico, sí. Shopify Analytics tiene reportes de retención por cohorte de adquisición y GA4 ofrece informe de cohortes de retención. Para análisis serio en D2C \u003e100K€/mes ambos se quedan cortos: Shopify mezcla canales y no permite cruzar con CAC; GA4 mide visitas, no clientes. La realidad práctica es que la mayoría de D2C medianos hace cohort analysis en hojas (PostgreSQL/BigQuery + Looker o Sheets) o usa herramientas específicas como Triple Whale, Lifetimely o Polar Analytics — todas tienen vista de cohortes nativa cruzada con spend de marketing.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué payback period es bueno en eCommerce D2C español?</h3><p class="faq-a">Depende mucho de margen y recurrencia, pero rangos saludables que vemos: en consumibles (suplementos, café, cosmética con recompra alta) un payback de 2-4 meses es saludable, 6 meses es el límite aceptable. En moda y hogar 4-8 meses. En ticket alto/un solo uso, payback debe ser <1 pedido — el primer pedido tiene que cubrir CAC. Por encima de esos rangos, escalar significa quemar caja: cada nuevo cliente exige financiación durante meses antes de generar margen positivo, y eso solo es viable si hay capital de inversión asegurado.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo cruzo cohort analysis con decisiones de paid media?</h3><p class="faq-a">Tres palancas concretas: (1) si una cohorte adquirida vía un canal concreto (ej. TikTok Ads) tiene retención significativamente peor que la media, ese canal está trayendo tráfico de peor calidad aunque el CAC plataforma parezca bueno — hay que reasignar presupuesto; (2) si las cohortes BFCM son peores, conviene reducir descuentos agresivos o filtrar audiencias para evitar cazadores de oferta; (3) la curva de LTV por cohorte permite calcular un ROAS objetivo realista — si tu LTV a 12 meses es 180€ con margen 40% y quieres payback en 6 meses, el ROAS objetivo de primer pedido se deriva de esos números, no de un benchmark genérico de internet.</p></div>
+</section>
+
+
+        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

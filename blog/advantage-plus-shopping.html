@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advantage+ Shopping en Meta Ads: cuándo usarlo y cuándo no | DayByDay Consulting</title>
+  <meta name="description" content="Guía práctica de Advantage+ Shopping Campaigns (ASC) para ecommerce: cómo funciona, qué cuentas se benefician más, cuándo mantener campañas manuales y cómo estructurar la transición sin perder ROAS.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/advantage-plus-shopping">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+<div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+<aside class="file-tree-sidebar" id="sidebar">
+  <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+  <div class="file-tree-section"><div class="file-tree-section-title">Secciones</div>
+    <a href="/" class="file-tree-item">Inicio</a>
+    <a href="/problema.html" class="file-tree-item">Problema</a>
+    <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
+    <a href="/resultados.html" class="file-tree-item">Resultados</a>
+    <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Paid Media</div>
+    <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
+    <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
+    <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
+    <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Automation & AI</div>
+    <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
+    <a href="/analytics.html" class="file-tree-item">Analytics</a>
+    <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Stack Tech</div>
+    <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
+    <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
+    <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+  </div>
+</aside>
+
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Meta Ads</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Meta Ads</span>
+          <span class="reading-time">6 min de lectura</span>
+          <span class="article-date">2026-04-07</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Advantage+ Shopping en Meta Ads: cuándo usarlo y cuándo no</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Guía práctica de Advantage+ Shopping Campaigns (ASC) para ecommerce: cómo funciona, qué cuentas se benefician más, cuándo mantener campañas manuales y cómo estructurar la transición sin perder ROAS.</p>
+        <div class="article-author">
+          <div class="author-avatar">DB</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirsó · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<p class="text-white/70 leading-relaxed mb-5">
+      <strong class="text-white">Advantage+ Shopping Campaigns (ASC)</strong> es la apuesta de Meta por automatizar la gestión de campañas de ecommerce. Desde que Meta lo lanzó en 2022, hemos probado este formato en decenas de cuentas D2C en España — y la conclusión no es que siempre sea mejor que las campañas manuales. La clave está en saber en qué situaciones el algoritmo tiene ventaja y en cuáles no.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Este artículo recoge lo que hemos aprendido gestionando cuentas entre 5.000€ y 80.000€/mes: cuándo migrar a ASC, cuándo mantener la estructura manual y cómo hacer la transición sin que el ROAS se resinta.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cómo funciona Advantage+ Shopping</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      En una campaña manual de Meta, tú decides las audiencias, los formatos, los presupuestos por conjunto y las exclusiones. En ASC, cedes esas decisiones al algoritmo. Meta usa las señales de comportamiento de toda la cuenta — píxel, API de Conversiones, catálogo — para decidir automáticamente a quién impactar, con qué anuncio y cuánto gastar en cada usuario.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-4">
+      El sistema gestiona de forma unificada lo que antes se dividía en prospecting y retargeting. Puedes establecer un límite de presupuesto para "nuevos clientes" (Meta lo llama budget cap de clientes nuevos), pero dentro de ese margen el algoritmo tiene libertad total.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Según la <a href="https://www.facebook.com/business/help/1986556321743605" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">documentación oficial de Meta sobre Advantage+ Shopping</a>, estas campañas están diseñadas para cuentas de ecommerce con historial de conversiones suficiente. El volumen mínimo recomendado es 50 eventos de compra por semana.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cuándo usar Advantage+ Shopping (y cuándo no)</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      La pregunta no es si ASC es mejor o peor en abstracto — es si tu cuenta reúne las condiciones para que el algoritmo pueda optimizar correctamente. Esta es la tabla de decisión que usamos en DayByDay:
+    </p>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Situación</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Recomendación</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Motivo</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white/70 text-xs"></td>
+              <td class="py-3 px-3 font-medium text-white text-xs"></td>
+              <td class="py-3 px-3 text-white/50 text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Las ventajas reales de ASC para ecommerce D2C</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Cuando las condiciones son las correctas, ASC tiene ventajas concretas sobre la gestión manual:
+    </p>
+    <div class="space-y-4 mb-6">
+      {[
+        {
+          titulo: "Equilibrio automático prospecting/retargeting",
+          desc: "En campañas manuales, el ratio prospecting/retargeting es una decisión que hay que revisar semanalmente. ASC lo gestiona en tiempo real según qué usuarios tienen más probabilidad de convertir en cada momento.",
+        },
+        {
+          titulo: "Menor impacto del aprendizaje al escalar",
+          desc: "Al subir el presupuesto en campañas manuales, el algoritmo tiene que recalibrar conjuntos de anuncios individuales. En ASC, el sistema redistribuye el presupuesto extra dentro de la misma estructura, lo que amortigua la caída de ROAS post-subida.",
+        },
+        {
+          titulo: "Selección automática del formato más eficiente",
+          desc: "ASC puede servir automáticamente el formato de anuncio (imagen, vídeo, carrusel, catálogo) que el algoritmo considera más probable que convierta para cada usuario. Elimina el sesgo del gestor sobre qué formato funciona mejor.",
+        },
+        {
+          titulo: "Menor carga de gestión operativa",
+          desc: "Con campañas manuales, mantener actualizadas las audiencias, exclusiones y presupuestos de 10-20 conjuntos requiere tiempo semanal. ASC reduce esa carga, liberando tiempo para lo que sí requiere criterio humano: creatividades y estrategia.",
+        },
+      ].map(() => (
+        <div key= class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+          <p class="font-semibold text-white text-sm mb-2"></p>
+          <p class="text-white/55 text-sm"></p>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Los límites de Advantage+ Shopping</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      ASC no es la solución para todo. Estos son los escenarios donde preferimos mantener campañas manuales o estructuras híbridas:
+    </p>
+    <div class="space-y-3 mb-6">
+      {[
+        "Cuentas con estacionalidad muy marcada (rebajas, Black Friday): necesitas control manual para ajustar presupuestos y audiencias en ventanas cortas de 3-5 días",
+        "Productos con márgenes muy diferentes: ASC no permite optimizar por margen por SKU — si tienes productos al 15% y al 60% de margen, puede priorizar los de más volumen, no los más rentables",
+        "Marcas con restricciones de brand safety estrictas: el control de placements y contextos de aparición es más limitado en ASC",
+        "Estrategias de prospecting puro con presupuesto limitado para retargeting: ASC mezcla ambas, lo que puede no ser óptimo si quieres destinar casi todo el presupuesto a captación",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">—</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cómo hacer la transición a ASC sin perder ROAS</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      El error más común al migrar a ASC es pausar todas las campañas manuales y lanzar ASC desde cero. El resultado es que el algoritmo empieza el aprendizaje sin historial y el ROAS cae las primeras 2 semanas. El protocolo correcto:
+    </p>
+    <div class="space-y-4 mb-6">
+      {[
+        {
+          paso: "1",
+          titulo: "Lanza ASC en paralelo con un presupuesto del 20-30% del total",
+          desc: "Mantén tus campañas manuales activas y añade ASC con una fracción del presupuesto. Así el algoritmo aprende sin que el ROAS global se vea afectado.",
+        },
+        {
+          paso: "2",
+          titulo: "Espera mínimo 2 semanas antes de comparar resultados",
+          desc: "ASC necesita el período de aprendizaje completo (7-14 días, mínimo 50 compras) antes de poder comparar su rendimiento con el de las campañas manuales de forma fiable.",
+        },
+        {
+          paso: "3",
+          titulo: "Compara ROAS a 7 días entre ASC y manual en el mismo período",
+          desc: "Usa las columnas de comparación del Ads Manager. Si ASC supera el ROAS de las campañas manuales en 2-3 semanas consecutivas, transfiere más presupuesto gradualmente.",
+        },
+        {
+          paso: "4",
+          titulo: "Escala el presupuesto de ASC en pasos del 20-25%",
+          desc: "El mismo protocolo de escala que en campañas manuales aplica en ASC. No subas más del 25% por semana para evitar que el algoritmo entre en nueva fase de aprendizaje.",
+        },
+      ].map(() => (
+        <div key= class="bg-[#1a1616] border border-white/8 rounded-xl p-4 flex gap-4">
+          <div class="w-8 h-8 rounded-full bg-[#de0015]/20 border border-[#de0015]/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <span class="text-[#de0015] font-bold text-sm"></span>
+          </div>
+          <div>
+            <p class="font-semibold text-white text-sm mb-1"></p>
+            <p class="text-white/55 text-sm"></p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cómo trabajamos en DayByDay con Advantage+ Shopping</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      En la mayoría de las cuentas que gestionamos con más de 50 compras semanales, nuestra estructura estándar es: 1 campaña ASC principal + 1 campaña manual para testing de creatividades nuevas. La razón: ASC optimiza muy bien la distribución del presupuesto, pero tarda en adoptar creatividades nuevas. Mantenemos una campaña manual pequeña (15-20% del presupuesto) exclusivamente para testear nuevos creativos antes de añadirlos a ASC.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-4">
+      El resultado de esta estructura en los últimos 12 meses con clientes D2C en España: ROAS medio un 22% más alto que con estructura todo-manual, y un 35% menos de horas de gestión operativa semanal, liberadas para producción de creatividades y estrategia.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Para más contexto sobre por qué la calidad del tracking es el requisito previo a cualquier migración a ASC, el informe de <a href="https://www.iabspain.es/wp-content/uploads/2024-Estudio-Inversion-Publicitaria-en-Medios-Digitales-IAB.pdf" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">IAB Spain sobre inversión en medios digitales</a> recoge la evolución del entorno cookieless que hace que la API de Conversiones sea crítica para que ASC funcione bien.
+    </p>
+
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-6 mb-8 text-center">
+      <p class="font-bold text-white text-lg mb-2">¿No sabes si tu cuenta está lista para Advantage+ Shopping?</p>
+      <p class="text-white/50 text-sm mb-4">Revisamos tu estructura actual y te decimos exactamente qué necesita tu cuenta antes de migrar — sin coste.</p>
+      <button>
+        Solicitar revisión gratuita →
+      </button>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Artículos relacionados</h2>
+    <div class="space-y-3">
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/presupuesto-minimo-meta-ads-ecommerce.html">
+          Presupuesto mínimo Meta Ads: ¿cuánto necesito invertir? →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Por qué Advantage+ Shopping rinde mejor en presupuestos pequeños y cuándo no activarlo desde día 0</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/escalar-campanas-meta-ads-sin-romper-roas.html">
+          Cómo escalar campañas Meta Ads sin que se rompa el ROAS →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Por qué ASC protege mejor el ROAS en fase de escala y el protocolo de subida de presupuesto</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/como-mejorar-roas-meta-ads-7-palancas.html">
+          Cómo mejorar el ROAS en Meta Ads: 7 palancas reales →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Las palancas que hay que tener en orden antes de migrar a Advantage+ Shopping</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/guia-meta-ads-ecommerce-d2c-espana-2026.html">
+          Guía completa de Meta Ads para ecommerce D2C en España 2026 →
+        </a>
+        <p class="text-white/40 text-xs mt-1">El contexto completo de Meta Ads donde encaja Advantage+ Shopping</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/dynamic-product-ads-meta-shopify-d2c.html">
+          Dynamic Product Ads en Meta para Shopify: guía técnica D2C 2026 →
+        </a>
+        <p class="text-white/40 text-xs mt-1">El primo cercano de Advantage+ Catalog: catálogo, CAPI, product sets y estructura DPA completa</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/estrategias-puja-meta-ads.html">
+          Estrategias de puja en Meta Ads: cuál elegir según tu objetivo →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Las opciones de puja disponibles dentro de Advantage+ Shopping y cuándo usarlas</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/ad-fatigue-meta-ads-rotacion-creativa.html">
+          Ad fatigue en Meta Ads: señales tempranas y protocolo de rotación creativa →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Por qué ASC necesita 8-15 creatividades activas y cómo mantener el pipeline para que el algoritmo no se quede sin material</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/cbo-vs-abo-meta-ads-2026-d2c.html">
+          CBO vs ABO en Meta Ads 2026: qué estructura usar para escalar D2C →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cómo distribuir el spend entre Advantage+ Shopping, CBO clásico y ABO en cuentas D2C escaladas</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/performance-max-vs-meta-ads-espana.html">
+          Performance Max vs Meta Ads: ¿cuál funciona mejor en España? →
+        </a>
+        <p class="text-white/40 text-xs mt-1">El equivalente de Advantage+ Shopping en Google y cómo combinarlos sin canibalización</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/audiencias-lookalike-meta-alta-calidad.html">
+          Audiencias lookalike en Meta de alta calidad: guía 2026 D2C →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cuándo migrar de un stack de lookalikes a Advantage+ Shopping y la convivencia entre ambos</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/remarketing-dinamico-ecommerce-guia-practica.html">
+          Remarketing dinámico para ecommerce: guía práctica →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cómo conviven Advantage+ Shopping y DPA sin solapar audiencias ni quemar frecuencia</p>
+      </div>
+    </div>
+        </article>
+
+        
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+  <div class="faq-item"><h3 class="faq-q">¿Qué es Advantage+ Shopping en Meta Ads?</h3><p class="faq-a">Advantage+ Shopping Campaigns (ASC) es el formato de campaña automatizado de Meta para ecommerce. A diferencia de las campañas manuales, ASC gestiona automáticamente la distribución del presupuesto entre audiencias frías y calientes, los formatos de anuncio y la puja. Meta usa señales de comportamiento de toda la cuenta para optimizar quién ve cada anuncio y cuándo. Está disponible en el Ads Manager bajo el objetivo 'Ventas' desde 2022.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Advantage+ Shopping es mejor que las campañas manuales de Meta Ads?</h3><p class="faq-a">Depende del volumen de la cuenta. En cuentas con más de 50 conversiones semanales, ASC suele superar a las campañas manuales en ROAS porque el algoritmo tiene suficientes datos para optimizar bien. En cuentas con menos de 30 conversiones semanales, las campañas manuales dan más control y pueden rendir mejor. Como norma, si tu cuenta genera más de 50 compras por semana, prueba ASC en paralelo con tus campañas actuales durante 4 semanas antes de decidir.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Puedo usar Advantage+ Shopping con un catálogo de productos pequeño?</h3><p class="faq-a">Sí, pero con limitaciones. ASC funciona mejor con catálogos de 50+ productos porque el algoritmo puede elegir qué producto mostrar a cada usuario según sus señales de comportamiento. Con catálogos pequeños (menos de 20 productos), la ventaja del algoritmo se reduce y una campaña manual con catálogo dinámico puede dar resultados similares con más control sobre la creatividad.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuánto tiempo tarda Advantage+ Shopping en aprender?</h3><p class="faq-a">Entre 7 y 14 días desde el lanzamiento. Durante ese período, el ROAS puede ser más bajo de lo esperado porque el algoritmo está explorando qué combinaciones de audiencia y creatividad funcionan mejor. Necesita al menos 50 eventos de compra para salir del aprendizaje. No hagas cambios significativos durante los primeros 7 días para no reiniciar el proceso.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo se mide el rendimiento de Advantage+ Shopping vs campañas manuales?</h3><p class="faq-a">La comparativa más útil es mirar el ROAS a 7 días por separado para cada tipo de campaña. Meta también ofrece en los informes el desglose de ASC entre 'nuevos clientes' y 'compradores existentes', lo que permite ver si el algoritmo está equilibrando correctamente la captación y el retargeting. El error más común es comparar el CPA de ASC con el de campañas de retargeting puro — ASC incluye prospecting, por lo que el CPA será más alto que el de retargeting solo.</p></div>
+</section>
+
+
+        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

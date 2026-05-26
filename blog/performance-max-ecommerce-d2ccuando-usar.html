@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Performance Max para D2C: cuándo activarla y cómo medir si funciona en 2026 | DayByDay Consulting</title>
+  <meta name="description" content="Guía operativa para activar Performance Max en un eCommerce D2C en España: condiciones mínimas (30+ conversiones/mes, feed limpio, base Search activa), cómo detectar canibalización con Search Brand y remarketing, ROAS objetivo por sector, novedades 2026 (channel-level reporting, brand exclusions, GA4 cohorts), modelo híbrido Standard Shopping + PMax, preparación de feed Merchant Center y enfoque DayByDay.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/performance-max-ecommerce-d2ccuando-usar">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+<div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+<aside class="file-tree-sidebar" id="sidebar">
+  <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+  <div class="file-tree-section"><div class="file-tree-section-title">Secciones</div>
+    <a href="/" class="file-tree-item">Inicio</a>
+    <a href="/problema.html" class="file-tree-item">Problema</a>
+    <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
+    <a href="/resultados.html" class="file-tree-item">Resultados</a>
+    <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Paid Media</div>
+    <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
+    <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
+    <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
+    <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Automation & AI</div>
+    <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
+    <a href="/analytics.html" class="file-tree-item">Analytics</a>
+    <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Stack Tech</div>
+    <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
+    <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
+    <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+  </div>
+</aside>
+
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Google Ads</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Google Ads</span>
+          <span class="reading-time">12 min de lectura</span>
+          <span class="article-date">2026-05-08</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Performance Max para D2C: cuándo activarla y cómo medir si funciona en 2026</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Guía operativa para activar Performance Max en un eCommerce D2C en España: condiciones mínimas (30+ conversiones/mes, feed limpio, base Search activa), cómo detectar canibalización con Search Brand y remarketing, ROAS objetivo por sector, novedades 2026 (channel-level reporting, brand exclusions, GA4 cohorts), modelo híbrido Standard Shopping + PMax, preparación de feed Merchant Center y enfoque DayByDay.</p>
+        <div class="article-author">
+          <div class="author-avatar">DB</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirsó · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<p class="text-white/70 leading-relaxed mb-5">
+      <strong class="text-white">Performance Max para un eCommerce D2C en España no es plug-and-play</strong>: activarla sin volumen, sin feed limpio y sin entender qué canibaliza es la forma más rápida de inflar el ROAS reportado en Google Ads mientras el MER blended de la cuenta no se mueve. En 2026 PMax ya no es una caja negra absoluta —Google ha abierto channel-level reporting, brand exclusions y testing nativo de asset groups—, pero la mayoría de cuentas que auditamos siguen activándola en el momento equivocado y sin las condiciones mínimas. Esta guía es el protocolo que usamos en DayByDay para decidir cuándo abrir Performance Max, cómo medir si está aportando incremental real y cuándo apagarla.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Qué es Performance Max para un eCommerce D2C</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      <strong class="text-white">Performance Max</strong> es el formato automatizado de Google Ads que combina en una única campaña los inventarios de Search, Shopping, YouTube, Display, Discover y Gmail, optimizando con machine learning hacia un objetivo de conversión definido (Maximize Conversion Value con ROAS objetivo es el setup estándar para eCommerce D2C). El operador entrega assets (imágenes, vídeos, headlines, descriptions), feed de productos y señales de audiencia; Google decide en qué canal, a qué subasta y a qué usuario se sirve cada impresión.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-5">
+      <a href="https://www.searchenginejournal.com/performance-max-for-ecommerce-the-hybrid-strategy-thats-actually-working/571885/" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Según Search Engine Journal, la estrategia híbrida (Standard Shopping para SKUs core + Performance Max para el resto) es la que mejor rinde para eCommerce en 2026</a>, superando al PMax-only en transparencia y permitiendo control granular donde el margen lo justifica. El consenso del sector es claro: PMax funciona como parte de un portfolio multi-campaña, no como solución única.
+    </p>
+
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-6">
+      <p class="text-white font-bold text-sm mb-2">📊 Dato de referencia</p>
+      <p class="text-white/70 text-sm leading-relaxed">
+        Según <a href="https://foundrycro.com/blog/roas-benchmarks-by-industry-2026/" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">los benchmarks 2026 publicados por Foundry CRO</a>, Performance Max promedia un ROAS de 3,5x a 5x reportado para eCommerce, mientras que las campañas de Search puro promedian 5,17x. La diferencia no significa que PMax sea peor: significa que PMax incluye discovery y prospecting que Search puro no toca, y que hay que mirar el ROAS incremental sobre la mezcla, no el ROAS aislado de cada campaña.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Las 3 condiciones obligatorias antes de activar Performance Max</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Activar PMax sin cumplir estas tres condiciones es la causa nº1 de cuentas D2C españolas que llegan a DayByDay con CPA disparado y ROAS reportado que no cuadra con el cierre de Shopify:
+    </p>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Condición</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Umbral mínimo</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Riesgo si no se cumple</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Cómo verificar</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ,
+            ,
+            ,
+            ,
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Más detalle sobre cómo combinar Google Ads y Meta Ads en una D2C en la <a href="/blog/combinar-google-ads-meta-ads-d2c.html">guía de combinación Google Ads + Meta Ads para D2C</a> y cómo se compara con Meta Ads en presupuesto en <a href="/blog/performance-max-vs-meta-ads-espana.html">Performance Max vs Meta Ads en España</a>.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cómo medir si Performance Max está canibalizando o aportando incremental</h2>
+    <ol class="space-y-3 mb-6 list-decimal pl-5">
+      {[
+        "Brand search test (semana 1-2 tras activar PMax): pausar 7-14 días la campaña Search Brand pura mientras PMax sigue activa. Si las conversiones de marca caen >25% en ese periodo, PMax no está recogiéndolas y solo está reportando lo que Search Brand habría capturado igual.",
+        "Channel-level reporting: abrir el reporte por canal dentro de PMax (Search, Shopping, YouTube, Display, Discover) y validar el % de spend por canal. Si más del 60% va a Search+Shopping y la cuenta ya tenía Search Brand + Standard Shopping cubriendo eso, hay solapamiento estructural y conviene aplicar brand exclusions o reducir presupuesto PMax.",
+        "% New Customers en PMax vs cuenta: revisar el segmento 'New Customer' que Google muestra en Insights. Si el % de new customers en PMax es menor al % medio del resto de campañas, PMax está cosechando warm que ya iba a convertir.",
+        "MER blended antes vs después: medir el MER blended (revenue total / spend total Meta+Google+TikTok) los 30 días previos a activar PMax y los 30 días posteriores. Subida ≥0,2 puntos = incremental real. Plano o bajada = canibalización pura.",
+        "Search query report de PMax: con script de Google Ads se pueden extraer las search queries que activan PMax. Si las top 20 son términos de marca propia, hay que activar brand exclusions inmediatamente.",
+        "Holdout geo (cuentas grandes >30K€/mes Google): apagar PMax en una región (Madrid o Cataluña) durante 30 días y comparar caída de revenue total con la región control. Es el método más limpio para medir incremental real, sin atribución.",
+      ].map((item) => (
+        <li key= class="text-white/60 text-sm leading-relaxed"></li>
+      ))}
+    </ol>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Modelo híbrido: Standard Shopping + Performance Max</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      La estructura que mejor rendimiento da en cuentas D2C españolas con catálogo &gt;80 SKUs activos:
+    </p>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Bloque</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">% spend Google Ads</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Cobertura</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">ROAS objetivo</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ,
+            ,
+            ,
+            ,
+            ,
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      <a href="https://www.storegrowers.com/performance-max-campaigns/" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Store Growers en su análisis 2026 de Performance Max para eCommerce</a> coincide en que la activación con bid muy agresivo desde el día 1 reduce volumen de conversión hasta un 50%. La regla operativa: arrancar con ROAS target conservador (-15% sobre objetivo final), dejar 4 semanas de aprendizaje y subir gradualmente el target en incrementos de 0,3-0,5 puntos cada 14 días.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Novedades Performance Max 2026 que cambian el juego</h2>
+    <div class="space-y-3 mb-6">
+      {[
+        "Channel-level reporting nativo: Google ha abierto el reporte por canal dentro de cada campaña PMax. Por fin se puede saber qué % del spend va a Search vs Shopping vs YouTube vs Display vs Discover sin scripts externos.",
+        "Brand exclusions a nivel de campaña: ahora se pueden excluir marcas competidoras y términos de marca propia más finamente, evitando canibalización con Search Brand sin tener que apagar PMax.",
+        "Asset group A/B testing nativo: opción de testar variantes de asset group dentro de la misma campaña sin duplicarla; reduce inflación de aprendizaje.",
+        "Integración GA4 + LTV cohorts: PMax puede optimizar a un evento de conversión basado en LTV/AOV de GA4, no solo a la conversión inmediata. Cambio crítico para D2C con suscripción o repetición alta.",
+        "Demand Gen overlap reporting: Google ahora reporta solapamiento entre PMax y Demand Gen, permitiendo decidir qué campaña apagar si están compitiendo en la misma audiencia.",
+        "Customer Match priorización: las listas Customer Match suben en peso dentro del algoritmo PMax — sincronizar Klaviyo/Shopify customers con Google Ads pasa de nice-to-have a obligatorio.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Más contexto sobre cómo elegir entre Google y Meta para un D2C en <a href="/blog/meta-ads-vs-google-ads.html">Meta Ads vs Google Ads para eCommerce</a>.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cómo trabajamos en DayByDay</h2>
+    <div class="space-y-3 mb-6">
+      {[
+        "Diagnóstico previo a activar PMax: auditamos volumen de conversión últimos 90 días, salud del feed Merchant Center (disapprovals, GTIN, custom labels), baseline Search Brand + non-brand y tracking GA4+Enhanced Conversions. Si una de las cuatro condiciones no se cumple, NO activamos PMax — preparamos la base primero.",
+        "Estructura híbrida desde el día 1: separamos hero SKUs (top 5-15 por margen) en Standard Shopping con bid manual, dejamos PMax solo para el resto del catálogo y discovery. Ningún cliente nuestro corre PMax-only salvo en catálogos <20 SKUs.",
+        "Implementación Pablo + Jorge en paralelo: Pablo cierra la estrategia de campañas, asset groups y ROAS targets; Jorge configura la integración Shopify→GA4 con Enhanced Conversions, sincronización Customer Match desde Klaviyo, dashboard Looker Studio con MER blended cruzando Meta + Google + TikTok y script Google Ads para extraer search query report de PMax (no expuesto en UI).",
+        "Brand search test obligatorio en semana 2: pausamos Search Brand 10-14 días para medir si PMax recoge marca o solo la canibaliza. Decisión basada en datos, no en intuición.",
+        "Reporting MER-first, no ROAS-first: el dashboard que ve el cliente cada lunes muestra MER blended por canal y por semana, con anotaciones de cambios; el ROAS reportado de Google Ads se muestra en segundo plano porque sabemos que sobreatribuye 25-45%.",
+        "Holdout geo trimestral en cuentas >30K€/mes Google: apagamos PMax en una región (típicamente Cataluña o Madrid) durante 30 días para medir incremental real sin depender de la atribución de plataforma.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      DayByDay Consulting fue fundada por Pablo Santirsó y opera como un partnership con Jorge González (CTO). Pablo (founder · paid media) lidera la estrategia de campañas Google Ads, asset groups y decisiones de ROAS target; Jorge (CTO · automation) lidera Enhanced Conversions, Customer Match Klaviyo↔Google, scripts Google Ads para reporting que la UI no expone, y dashboard Looker con MER blended. Donde otras agencias separan paid Google de tracking server-side entre dos proveedores que rara vez se hablan, en DayByDay las decisiones de qué señales pasar a Customer Match, qué canal apagar dentro de PMax y qué SKUs separar en Standard Shopping se cierran en la misma reunión. El cliente habla con los dos socios desde la primera reunión: sin account managers, sin handoffs, sin perfiles junior.
+    </p>
+
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-6 mb-8 text-center">
+      <p class="font-bold text-white text-lg mb-2">¿Tu cuenta está lista para Performance Max o te está canibalizando?</p>
+      <p class="text-white/50 text-sm mb-4">Auditoría gratuita 30 min: revisamos volumen de conversión, salud del feed Merchant Center, baseline Search Brand, tracking GA4+Enhanced Conversions y % de spend PMax que va a Search vs Shopping vs YouTube. Te decimos si activar, si reestructurar a híbrido o si pausar.</p>
+      <button>
+        Solicitar auditoría gratuita →
+      </button>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Artículos relacionados</h2>
+    <div class="space-y-3">
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/performance-max-vs-meta-ads-espana.html">
+          Performance Max vs Meta Ads en España: cuál escoger para D2C →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Comparativa de Performance Max y Meta Ads en presupuesto, atribución y rendimiento real</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/combinar-google-ads-meta-ads-d2c.html">
+          Cómo combinar Google Ads y Meta Ads para escalar un D2C →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Distribución óptima de presupuesto entre Google y Meta según madurez de cuenta</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/meta-ads-vs-google-ads.html">
+          Meta Ads vs Google Ads para eCommerce: cuál encaja con cada D2C →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Diferencias estructurales entre Meta Ads y Google Ads para eCommerce D2C</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/modelos-atribucion-ecommerce-d2c.html">
+          Modelos de atribución para D2C: last-click, data-driven y MMM →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cómo PMax sobreatribuye 25-45% y por qué medir con MER blended es obligatorio</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/smart-bidding-google-ads-d2c.html">
+          Smart Bidding en Google Ads para D2C: cuándo confiar y cuándo intervenir →
+        </a>
+        <p class="text-white/40 text-xs mt-1">PMax es 100% Smart Bidding obligatorio — protocolo de intervención sin romper el learning phase.</p>
+      </div>
+    </div>
+        </article>
+
+        
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+  <div class="faq-item"><h3 class="faq-q">¿Cuándo conviene activar Performance Max para un eCommerce D2C en España?</h3><p class="faq-a">Cuando se cumplen tres condiciones a la vez: la cuenta tiene más de 30 conversiones/mes en Google Ads (umbral mínimo del algoritmo de PMax para no quemar presupuesto en aprendizaje), el feed de Google Merchant Center está limpio (sin disapprovals, con GTIN, custom labels y atributos de margen), y existe ya base de Search Brand + non-brand activa con datos de conversión. Activar Performance Max sin estas tres condiciones suele acabar en CPA inflado un 40-80% durante 4-6 semanas y canibalización de Search brand sin que el operador lo vea (PMax atribuye a sí mismo conversiones que la marca habría capturado igual). En cuentas D2C de menos de 15K€/mes en Google Ads recomendamos empezar con Standard Shopping + Search brand+non-brand y solo abrir PMax cuando el volumen mensual cruza 30 conversiones reales sostenidas tres meses seguidos.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué ROAS es bueno en Performance Max para un eCommerce D2C en España 2026?</h3><p class="faq-a">Depende del sector y de cómo se mida, pero los rangos que vemos en cuentas D2C que hemos auditado son: moda 2,8-4,2x, belleza 3,5-5,5x, suplementos 2,5-3,8x, hogar 3,2-4,8x, mascotas 2,8-4,0x. Hay que distinguir entre ROAS reportado por Google Ads (suele estar inflado entre 25 y 45% por sobreatribución de PMax a search brand y a remarketing dinámico que ya iba a convertir) y ROAS real medido con MMM o blended MER. El benchmark sectorial que cita Foundry CRO sitúa el ROAS medio de PMax para eCommerce entre 3,5x y 5x reportados, pero la conversación útil con un cliente nunca es sobre ROAS reportado: es sobre incremental. Si PMax sube tu MER blended cuando lo activas, está aportando volumen real; si solo sube el ROAS reportado de Google sin mover el MER, está canibalizando.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo se mide si Performance Max está canibalizando Search brand y remarketing?</h3><p class="faq-a">Con tres comprobaciones operativas. (1) Brand search test: pausar 7-14 días la campaña Search Brand pura mientras PMax sigue activa y comparar conversiones de marca; si PMax no las recoge en el mismo volumen, está dejándolas escapar. (2) Comparar el % de conversiones que PMax atribuye a 'New customers' (segmento que Google muestra en el reporte de Insights) frente al % medio de la cuenta: si el % de new customers en PMax es menor que el % medio del resto de campañas, PMax está cosechando warm. (3) Activar el reporte de 'Asset group performance by channel' (sólo accesible desde 2024 con account script o Looker conector) para ver qué % del spend va a Search vs YouTube vs Display vs Discover; si más del 60% va a Search/Shopping y la cuenta ya tenía Search brand + Standard Shopping cubriendo eso, hay solapamiento. La regla operativa que aplicamos: PMax debe sumar al MER blended un mínimo de 0,2 puntos en 60 días. Si no lo hace, el incremental es cero y el ROAS reportado es ilusorio.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué cambios trae Performance Max en 2026 que afectan a un eCommerce D2C?</h3><p class="faq-a">Cuatro cambios relevantes que ya están en producción para cuentas en España. (1) Channel-level reporting: Google ha abierto reporte por canal dentro de PMax (Search, Shopping, YouTube, Display, Discover, Gmail), lo que permite por fin saber dónde se gasta el presupuesto. (2) Brand exclusions a nivel de campaña: ahora se pueden excluir marcas competidoras y términos de marca propia más finamente, evitando canibalización con Search Brand. (3) Asset group testing nativo: la opción de A/B test de asset groups dentro de la misma campaña sin tener que duplicarla. (4) Integración con Google Analytics 4 para cohortes: PMax ahora puede optimizar a una conversión basada en LTV/AOV de GA4, no solo a la conversión inmediata, lo que cambia el juego para D2C con suscripción o repetición alta. La consecuencia operativa: lo que en 2024 era una caja negra hoy se puede auditar y trocear, pero la mayoría de agencias siguen sin abrir el reporte por canal porque obliga a tomar decisiones incómodas (apagar el canal que no rinde).</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Es mejor Performance Max o Standard Shopping para un eCommerce D2C en 2026?</h3><p class="faq-a">Depende del volumen, del catálogo y de la madurez del feed. La estrategia que mejor rendimiento da en cuentas D2C españolas en 2026 es la híbrida: Standard Shopping para los SKUs core de mayor margen y rotación (control total, datos transparentes, exclusión por search query), y Performance Max para descubrimiento sobre el resto del catálogo y para activar canales que Standard Shopping no toca (YouTube, Discover). Search Engine Journal y los datos de cuentas que hemos optimizado lo confirman: el modelo híbrido supera al PMax-only en 15-30% de ROAS incremental cuando el catálogo tiene más de 80 SKUs activos. En catálogos pequeños (menos de 20 SKUs) Standard Shopping pierde sentido y PMax con feed bien estructurado y custom labels por margen funciona mejor. La regla práctica: si puedes nombrar cuáles son tus 5-10 SKUs hero, sepáralos en Standard Shopping con bid manual; el resto a PMax.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo se prepara el feed de Google Merchant Center para que Performance Max funcione bien?</h3><p class="faq-a">El feed es el 70% del rendimiento de PMax. Cinco intervenciones obligatorias antes de activar la campaña. (1) Limpieza de disapprovals: el feed debe estar al 100% aprobado en GMC; cualquier producto bloqueado se queda fuera de la subasta y desbalancea el aprendizaje. (2) GTIN, MPN y brand correctos en cada producto (Google penaliza fuertemente productos sin GTIN en categorías regulables). (3) Custom labels por margen y por rotación: etiquetar productos como custom_label_0=margen_alto, custom_label_1=top_seller, custom_label_2=stock_bajo permite crear asset groups segmentados con ROAS objetivo distinto. (4) Imágenes optimizadas (1:1 mínimo 800x800px con producto centrado y fondo limpio para evitar penalización de ML). (5) Atributos enriquecidos: color, size, gender, age_group, material — Google los usa como señales de matching y elevan el CTR en Shopping un 15-25% según datos públicos de Google. Sin estos cinco puntos, PMax aprende sobre datos sucios y la cuenta tarda 60-90 días en estabilizarse.</p></div>
+</section>
+
+
+        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

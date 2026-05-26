@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KPIs de paid media para CFO/CEO: cómo presentar resultados sin tecnicismos (2026) | DayByDay Consulting</title>
+  <meta name="description" content="Guía práctica para presentar resultados de paid media a CFO/CEO y board sin tecnicismos. Aprende a traducir MER blend, CAC, LTV y ROAS a euros y porcentajes que entienda cualquier CFO. Incluye plantillas de reporting mensual (1 página) y quarterly deep dive (5-10 páginas), los 5 KPIs obligatorios, 3 errores frecuentes en presentations al board, y framework DayByDay Pablo+Jorge para reporting que-valida-presupuestos-y-sostiene-inversiones.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/kpis-paid-media-cfo-ceo-d2c">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+<div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+<aside class="file-tree-sidebar" id="sidebar">
+  <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+  <div class="file-tree-section"><div class="file-tree-section-title">Secciones</div>
+    <a href="/" class="file-tree-item">Inicio</a>
+    <a href="/problema.html" class="file-tree-item">Problema</a>
+    <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
+    <a href="/resultados.html" class="file-tree-item">Resultados</a>
+    <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Paid Media</div>
+    <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
+    <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
+    <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
+    <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Automation & AI</div>
+    <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
+    <a href="/analytics.html" class="file-tree-item">Analytics</a>
+    <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Stack Tech</div>
+    <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
+    <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
+    <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+  </div>
+</aside>
+
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Reporting</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Reporting</span>
+          <span class="reading-time">11 min de lectura</span>
+          <span class="article-date">2026-05-21</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">KPIs de paid media para CFO/CEO: cómo presentar resultados sin tecnicismos (2026)</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Guía práctica para presentar resultados de paid media a CFO/CEO y board sin tecnicismos. Aprende a traducir MER blend, CAC, LTV y ROAS a euros y porcentajes que entienda cualquier CFO. Incluye plantillas de reporting mensual (1 página) y quarterly deep dive (5-10 páginas), los 5 KPIs obligatorios, 3 errores frecuentes en presentations al board, y framework DayByDay Pablo+Jorge para reporting que-valida-presupuestos-y-sostiene-inversiones.</p>
+        <div class="article-author">
+          <div class="author-avatar">DB</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirsó · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<p class="text-white/70 leading-relaxed mb-5">
+      <strong class="text-white">Tu CFO no necesita saber qué es un ROAS in-platform ni un CTR.</strong> Lo que necesita es entender una cosa: ¿estamos invirtiendo 1€ en paid media y recuperando X€ en beneficio neto? En términos financieros, paid media es una línea de inversión más en el P&L, y debe presentarse con el mismo rigor que cualquier otra inversión de capital. Este artículo te da la plantilla exacta para reporting de paid media que tu CFO entenderá en 30 segundos: 5 KPIs esenciales, la estructura de monthly flash (1 página) y quarterly deep dive (5-10 páginas), y cómo traducir métricas operativas a euros.y percentages que validen presupuestos ante el board.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Por qué el reporting tradicional de paid media no sirve para CFD/CEO</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      El media buyer vive en ROAS in-platform, CPA por ad set y CTR. Esas métricas tienen sentido para optimizar campañas día a día, pero son illegibles para un CFO que evalúa inversiones. La diferencia fundamental es que <strong class="text-white">el CFO pregunta por ROI y payback period</strong>, no por la eficiencia de un creativo específico. КогдаPresentas ROAS 4,2x desde Meta Ads al CFO, la pregunta inmediata es: «¿pero eso qué relación tiene con mi cuenta corriente?» Y si no tienes una respuesta limpia en euros, has perdido la atención del CFO para el resto de la презентация.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-5">
+      La solución es un reporting en dos capas: monthly flash (1 página, leitourgical) и quarterly deep dive (5-10 páginas, para presupuestos). Pero antes de lasplantillas, necesitas dominar los 5 KPIs que el CFO entiende: MER blend, margen contribución, CAC vs LTV, revenue atribuido y runway. El resto— métricas operacionales — sonpara ti, no para el CFO.
+    </p>
+
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-6">
+      <p class="text-white font-bold text-sm mb-2">🎯 Regla DayByDay</p>
+      <p class="text-white/70 text-sm leading-relaxed">
+        Si necesitas más de 2 frases paraExplain un KPI al CFO, no es el KPI correcto. El reportingboard-ready debe funcionar como un financials slide:左边 ingresos, derecha inversión, centro ratio de retorno. Todo lo que requiera explicarmodelo de atribución ya ha perdido al CFO.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Los 5 KPIs que tu CFO entiende: MER blend, margen, CAC, revenue atribuido, runway</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Estos 5 KPIs son universales, finance-alignados y caben en 1úna página. No dependen de la plataforma (Meta, Google, TikTok), nicht del modelo de atribución. Son lo que tesorería y el board necesitan paravalidar el presupuesto.
+    </p>
+
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-4 text-white/60 font-semibold">KPI</th>
+            <th class="text-left py-3 px-4 text-white/60 font-semibold">Definición</th>
+            <th class="text-left py-3 px-4 text-white/60 font-semibold">Para qué sirve</th>
+          </tr>
+        </thead>
+        <tbody class="text-white/80">
+          {[
+            ,
+            ,
+            ,
+            ,
+            
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5">
+              <td class="py-3 px-4 font-semibold text-white"></td>
+              <td class="py-3 px-4"></td>
+              <td class="py-3 px-4"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Monthly flash: la plantilla de 1 página que seu CFO leerá cada mes</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      El monthly flash es el único reporting que el CFO mira cada mes. Debe caber en un slide de una presentación y contener únicamente las 5 métricas anteriores con comparación vs mes anterior y vs objetivo. No hay excuse para que ocupe más de una página: si tu herramienta de analytics no te permite exportar esto en 30 segundos, tu stack de reporting está roto.
+    </p>
+
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-6 space-y-4">
+      <p class="text-white font-bold text-lg">Plantilla Monthly Flash (1 página)</p>
+      <div class="space-y-2 text-white/70 text-sm">
+        <p><span class="text-white font-semibold">Encabezado:</span> Mes [ENE/FEB...] 2026 | Paid Media Report</p>
+        <p><span class="text-white font-semibold">Spend total:</span> [50.000€] vs mes anterior [48.000€] | Objetivo [55.000€]</p>
+        <p><span class="text-white font-semibold">Revenue attribuido:</span> [175.000€] ( MER 3,5x ) vs obj. [165.000€]</p>
+        <p><span class="text-white font-semibold">Margen contribución:</span> [65.000€] (40%) | Objetivo [55.000€]</p>
+        <p><span class="text-white font-semibold">CAC:</span> [45€] vs LTV [180€] | Ratio 4,0x | Payback 3 meses</p>
+        <p><span class="text-white font-semibold">Runway:</span> [14 meses] ao burn actual</p>
+        <p><span class="text-white font-semibold">Notas:</span> [1 frase sobre desviación principal + acción tomada]</p>
+      </div>
+    </div>
+
+    <p class="text-white/70 leading-relaxed mb-5">
+      Esta plantilla es lo único que el CFO espera recibir el primer día hábil de cadames. No necesitas más. Si hay una desviación >15% vs objetivo, include un short reason + action taken en 1 frase. Ejemplo: "MER cayó a 2,4x vs objetivo 2,8x: reducir spend Google -20% semana 2, concentrar en Meta donde MER es 3,2x."
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Quarterly deep dive: la presentación de presupuesto ante el board</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      El quarterly deep dive se hace cada fin de trimestre y tiene 3 objectifs: (1) analizar performance de cohortes, (2) solicitar/validar presupuesto para el siguiente trimestre/y (3) decisiones estratégicas de mix de canales. Son 5-10 páginas máximo, y el CFO las revisa con el controller antes del board.
+    </p>
+
+    <div class="space-y-4 mb-6">
+      {[
+        ,
+        ,
+        ,
+        ,
+        ,
+        ,
+      ].map(( row, i) => (
+        <div key= class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+          <div class="flex items-start gap-3">
+            <span class="text-white font-black text-lg flex-shrink-0 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center"></span>
+            <div>
+              <p class="text-white font-semibold text-sm mb-1"></p>
+              <p class="text-white/60 text-xs leading-relaxed"></p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <p class="text-white/70 leading-relaxed mb-5">
+      El board decidirá principalmente en las páginas 4 (unit economics) y 5 (stress test). Si el LTV:CAC ratio es menor a 3x por un canal durante 2+ trimestres consecutivos, la recomendación estratégica es reducir o eliminar ese canal. Si el estrés test muestra que con MER conservador el negocio sigue siendo break-even positivo, el presupuesto se aprueba automáticamente. Esto elimina la discusión subjetiva sobre "si el gasto en paid media está funcionando" porque está todo expresado en ratios financieros.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cómo traducir CTR, ROAS in-platform, CPM y CPA para el CFO</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      El CFO no necesita esas métricas. Pero por si te lo preguntan, aquí tienes la traducción:
+    </p>
+
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-4 text-white/60 font-semibold">Métrica operativa</th>
+            <th class="text-left py-3 px-4 text-white/60 font-semibold">Traducción CFO</th>
+          </tr>
+        </thead>
+        <tbody class="text-white/80">
+          {[
+            ,
+            ,
+            ,
+            
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5">
+              <td class="py-3 px-4 font-semibold"></td>
+              <td class="py-3 px-4"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-white/70 leading-relaxed mb-5">
+      <strong class="text-white">Nota importante:</strong> Cuando el CFO pregunta «¿por qué el ROAS de Meta no cuadra con el revenue de Shopify?», no intentes explicarmodelos de atribución. La respuesta correcta es: «El ROAS in-platform de Meta sobreatribute vs otros canales porque cuenta last-click. El revenue real del negocio vs inversión real es el MER blend, quefue de 3,5x este trimestre y está alineado con nuestro objetivo de 3,0x.» Punto. Fin de la discusión.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">3 errores frecuentes en reporting al board y cómo evitarlos</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      En las auditorías de DayByDay a cuentas D2C españolas, estos son los 3 errores que vemos repetir}:
+    </p>
+
+    <div class="space-y-4 mb-6">
+      {[
+        { e: "1. Presentar ROAS in-platform sin contexto", s: "El CFO ve ROAS 4,2x y pregunta por qué no ganamos 4,2€ por cada euro. El problema: ROAS in-platform es attribution-limited. Error: Always presentation MER blend alongside ROAS in-platform, o el CFO concluirá incorrectamente." },
+        { e: "2. Reporting quarterly con datos de agencia", s: "Muchas agencias reportan CAC blend (incluye retargeting, brand search, orgánico atribuido) para inflar看起来mejor. Error: Separate CAC de adquisición nueva (cold) del resto; eso es lo que valida sipaid media genera clientes nuevos reales." },
+        { e: "3. No mostrar cohortes LTV", s: "Si solo Presentas LTV histórico sin breakdown por cohorte, no puedes detectar si las últimas cohorts están degradándose. Error: Siempre muestra LTV-30, LTV-60, LTV-90 por quarter de adquisición;能看到 tendencia real." }
+      ].map((row, i) => (
+        <div key= class="bg-[#1a1616] border border-red-500/20 border-l-4 rounded-r-xl p-4">
+          <p class="text-white font-semibold text-sm mb-2"></p>
+          <p class="text-white/60 text-xs"></p>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Framework DayByDay: el stack de reporting quevalida presupuestos</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      En DayByDay usamos un pipeline automatizado que genera el monthly flash cadalunes 8am y el quarterly deep dive el último día de cada quarter. El stack:
+    </p>
+    <ul class="text-white/70 space-y-2 mb-5 list-disc pl-5">
+      <li><strong class="text-white">Datos:</strong> Shopify Admin API (revenue real) + Meta Ads API + Google Ads API + TikTok Ads API + GA4 (attribution) + Stripe (payments)</li>
+      <li><strong class="text-white">ETL:</strong> n8n automatizado — extracción diaria, enrichment con cohortes LTV-30/60/90, cálculo de MER blend por canal</li>
+      <li><strong class="text-white">Presentation:</strong> Looker Studio dashboard (1 página) + Google Slides template (quarterly) — ambos se generan automáticamente con datos de n8n</li>
+      <li><strong class="text-white">Entregable:</strong> Monday 8am: monthly flash emailed al CFO. Último día Q: quarterly deep dive preparado para board.</li>
+    </ul>
+
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-6">
+      <p class="text-white font-bold text-sm mb-2">💡 Nota técnica</p>
+      <p class="text-white/70 text-sm leading-relaxed">
+        Este stack requiere setup inicial estimado en 15-25 horas de desarrollo n8n + Looker Studio, pero una vez implementado, funciona automáticamente. Para cuentas 10K€ o meno/mes de spend onde el reporting manual es viable, un Sheets con conexiones de Shopify + Meta + Google +TikTok export puede cubrir el monthly flash. No compres herramientas caras (Triple Whale, Northbeam) hasta que tengas >50K€/mes de spend y el CFO te pida reporting más sofisticado daily.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Resumen: tu checklist de reporting para CFO/CEO</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      TL;DR: Si solo te llevas una cosa de esteartículo, que sea esta Checklist:
+    </p>
+
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-6">
+      <div class="space-y-2 text-white/70 text-sm">
+        <p class="flex items-start gap-2"><span class="text-green-400">✓</span><span>Monta un monthly flash con estas 5 métricas: MER blend, margen contribución,CAC vs LTV, revenue atribuido, runway</span></p>
+        <p class="flex items-start gap-2"><span class="text-green-400">✓</span><span>Cada monthly flash: máximo 1 página, comparación vs mes anterior + objetivoy 1 frase de desviación</span></p>
+        <p class="flex items-start gap-2"><span class="text-green-400">✓</span><span>Cada quarterly: incluye cohortes LTV-30/60/90 por canal, unit economics porcanal, stress test (3 escenarios), presupuesto solicitado</span></p>
+        <p class="flex items-start gap-2"><span class="text-green-400">✓</span><span>NUNCA_presentes ROAS in-platform sin MER blend al lado — el CFO concludeincorrectamente</span></p>
+        <p class="flex items-start gap-2"><span class="text-green-400">✓</span><span>NUNCA mezcles CAC blend (incluye retargeting + brand) con CAC adquisición (cold)nuevo —会计distorsion</span></p>
+        <p class="flex items-start gap-2"><span class="text-green-400">✓</span><span>Declara siempre el modelo de atribución cuando presentes revenue atribuido: last-click, data-driven, etc.</span></p>
+        <p class="flex items-start gap-2"><span class="text-green-400">✓</span><span>Si LTV:CAC &lt;3x por 2+ trimestres en un canal, recomienda reducir o salir — datos驱动decisión</span></p>
+      </div>
+    </div>
+
+    <p class="text-white/70 leading-relaxed mb-5">
+      Paid media no es distinto a cualquier otra inversión de capital. Se evalúa con los mismos criterios: ¿cuánto pongo, cuánto vuelvo, cuánto tarda en volver, y el riesgo de que no vuelva. El reporting que te he dado en esteartículo traduce paid media exactamente a eselenguaje financiero. No necesitas más paravalidar presupuestos ante el CFO. Y cuando el CFO te pregunte «¿funciona?» tú le dices: «MER blend 3,5x, LTV:CAC ratio 4x, payback 3 meses. Sí, funciona.»
+    </p>
+
+    <p class="text-white/50 text-sm leading-relaxed mt-8 pt-6 border-t border-white/10">
+      <em>Artículo escrito por Pablo Santirsó (Growth Partner, paid media) y Jorge González (CTO, automatización yreporting). Si mounting tu stack de reporting o necesitas help traduciendo tus métricas actuales al lenguaje CFO, agenda un call con DayByDay Consulting.</em>
+    </p>
+        </article>
+
+        
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+  <div class="faq-item"><h3 class="faq-q">¿Qué KPIs de paid media debo presentar a mi CFO cada mes sin tecnicismos?</h3><p class="faq-a">Para CFO/CEO, presenta 5 métricas clave que caben en una diapositiva: (1) MER blended — revenue total / spend total, la rentabilidad real del euro invertido; (2) Margen contribución — cuánto queda después de COGS y paid media; (3) CAC promedio — coste de adquirir un cliente nuevo y cómo se compara con LTV; (4) Revenue atribuido — revenue total generado por canales paid, con modelo de atribución declarado; (5) Runway — meses de cash disponibles al ritmo de burn actual. Evita: ROAS in-platform, CPA granular, CTR, CPC. Esas son métricas de optimización operacional que el media buyer gestiona internamente.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo explico el gasto en Meta Ads a un CEO que solo entiende EBITDA y clawback?</h3><p class="faq-a">Traduce paid media a lenguaje financiero en 3 pasos: (1) Expresa el spend como % del revenue generado — si gastas 50K€/mes en Meta yFacturas 150K€, el retorno es 3x tu inversión, comparable a cualquier línea de income; (2) Calcula el contribution margin post-paid — si tu margen bruto es 65% y gastas 50K€ en paid, resta eso del margen bruto y muestra el margen neto post-paid; (3) Explica el CAC vs LTV como payback period — si CAC es 45€ y LTV es 180€, el payback es 3 meses, y eso es lo que le importa a tesorería. El CEO no quiere ver ROAS 4,2x; quiere ver que invierte 1€ y recupera 3€ netos en 90 días.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cada cuánto debo reporting a board/inversores sobre paid media?</h3><p class="faq-a">Board-friendly reporting sigue cadencia trimestral con monthly flash. Monthly flash (1 página, 5 métricas): MERblended, spend total, revenue atribuido, CAC vs LTV, runway. Quarterly deep dive (5-10 páginas): análisis de cohortes LTV-30/60/90 por canal de adquisición, contribución por canal vs objetivo anual, proyección de spend vs revenue para los próximos 4 trimestres, evaluación de canales con rendimiento decreciente, y plan de rebalanceo si un canal baja del umbral. Lo que NO va al board: detalle de campañas, creatives con mejor CTR, optimizaciones de bid, audiencias probadas. Eso es trabajo operativo.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo construyo un reporting de paid media que valide el presupuesto anual ante inversores?</h3><p class="faq-a">El reporting para presupuesto anual sigue estructura ROI: (1) Histórico 12 meses con MERblended mensual y tendencia; (2) Proyección revenue = spend proyectado × MER objetivo. Si solicitas 600K€ anuales para paid media y tu MER objetivo es 2,5x, el revenue proyectado es 1,5M€; (3) Unit economics validated: CAC medio de los últimos 12 meses vs LTV-180d实测, payback period, y CLV:CAC ratio debe ser &gt;3x; (4) Escenarios:乐观ista (MER 3x), base (MER 2,5x), conservador (MER 2x) — esto muestra al inversor que has stress-testado el presupuesto. Incluye también: qué canales estásapagando o reduciendo porque el CAC supera el umbral y cuánto revenue limpias al hacerlo.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué сделать decir cuando el CFO pregunta por qué el ROAS reported por Meta no cuadra con el revenue en Shopify?</h3><p class="faq-a">La diferencia entre ROAS in-platform y revenue real es normal y tiene 3 causas principales: (1) Atribución different — Meta atribuye last-click, Shopify cuenta toda la ruta (orgánico + directo + paid); (2) Diferencias temporales — Meta atribuye en ventana de-click (1-28 días), Shopify firma cuando el pago realmente ocurre; (3) browser blocking — Meta pierde entre 15-40% de eventos por iOS/AdBlockers, pero Shopify registra todas las compras. La métrica que reconcilea ambas es el MER blended a nivel negocio (shopify revenue/shopify spend paid = true return). No intentes explicar el modelo de atribución al CFO; muéstrale el número de banco: ingresos - costes = neto, luego aplica el paid media como una línea de inversión con ROI demostrable.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuál es el ratio de spend en paid media vs revenue saludable para un D2C español en 2026?</h3><p class="faq-a">Depende del maturity del D2C: (1) D2C early-stage (<100K€ revenue/año): paid media representa 40-60% del revenue, el objetivo es test audience y generar data para optimizar; MER 1,5-2,0x es aceptable porque inviertes en aprendizaje; (2) D2C growth-stage (100K€-500K€ revenue/año): paid representa 25-40% del revenue, el objetivo es escala eficiente; MER 2,0-2,5x es el target; (3) D2C scale-stage (500K€ revenue/año): paid representa 15-30% del revenue, el objetivo es eficiencia y retención; MER 2,5-3,5x es healthy. Por debajo de MER 1,8x sostenido 90 días, el modelo paid no es sostenible y hay que rebalancear mix de canales o aceptar márgenes más bajos. El CFO debe saber que MER <1,8x requiere intervención.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo presento resultados de paid media en una junta con inversores que no saben qué es un ROAS?</h3><p class="faq-a">Traduce todo a euros: 'Invertimos 50.000€ en canales digitales en el último trimestre y generamos 175.000€ en revenue atribuible a esa inversión, lo que supone un retorno de 3,5€ por cada euro invertido.' Eso es todo lo que necesitan oír. Después añade: 'De esos 175.000€, nuestro margen bruto es 115.000€ (65%) y tras restar los 50.000€ de inversión en paid, quedan 65.000€ de contribución neta.' El resto — CTR, CPM, frecuencia, audiencias, audiencias lookalike — es operativa y no es board-level. La唯一 pregunta de seguimiento que debe importar al board es: ¿estamos generando más euros de los que gastamos a un coste sostenible?</p></div>
+</section>
+
+
+        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

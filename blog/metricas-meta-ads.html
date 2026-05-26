@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Métricas Meta Ads que importan de verdad (y las que no) | DayByDay Consulting</title>
+  <meta name="description" content="Guía práctica sobre qué métricas de Meta Ads usar para tomar decisiones en ecommerce D2C: ROAS real vs ROAS de plataforma, MER, CPA, CTR y cuáles ignorar para no optimizar hacia los KPIs equivocados.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/metricas-meta-ads">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+<div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+<aside class="file-tree-sidebar" id="sidebar">
+  <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+  <div class="file-tree-section"><div class="file-tree-section-title">Secciones</div>
+    <a href="/" class="file-tree-item">Inicio</a>
+    <a href="/problema.html" class="file-tree-item">Problema</a>
+    <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
+    <a href="/resultados.html" class="file-tree-item">Resultados</a>
+    <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Paid Media</div>
+    <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
+    <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
+    <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
+    <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Automation & AI</div>
+    <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
+    <a href="/analytics.html" class="file-tree-item">Analytics</a>
+    <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Stack Tech</div>
+    <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
+    <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
+    <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+  </div>
+</aside>
+
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Meta Ads</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Meta Ads</span>
+          <span class="reading-time">6 min de lectura</span>
+          <span class="article-date">2026-04-07</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Métricas Meta Ads que importan de verdad (y las que no)</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Guía práctica sobre qué métricas de Meta Ads usar para tomar decisiones en ecommerce D2C: ROAS real vs ROAS de plataforma, MER, CPA, CTR y cuáles ignorar para no optimizar hacia los KPIs equivocados.</p>
+        <div class="article-author">
+          <div class="author-avatar">DB</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirsó · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<p class="text-white/70 leading-relaxed mb-5">
+      <strong class="text-white">Las métricas de Meta Ads que importan de verdad</strong> no son las que el Ads Manager pone en primera fila. En la mayoría de cuentas D2C que auditamos, los gestores toman decisiones basándose en el ROAS de plataforma, el CTR o el alcance — métricas que, sin contexto, pueden llevar a optimizar campañas que en realidad están destruyendo margen.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Este artículo recoge qué métricas usamos en DayByDay para evaluar si una cuenta funciona de verdad, cuáles son trampa y con qué frecuencia hay que mirarlas para no tomar decisiones con datos incompletos.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">El problema con las métricas por defecto de Meta</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Meta Ads Manager está optimizado para que los anunciantes vean sus campañas con el mejor rendimiento posible. Eso no significa que mienta — significa que las métricas por defecto responden a la pregunta "¿qué hicieron mis anuncios según Meta?" en lugar de "¿están generando negocio real mis anuncios?".
+    </p>
+    <p class="text-white/70 leading-relaxed mb-5">
+      La discrepancia más común: el ROAS que reporta Meta sobreestima el rendimiento real entre un 20-35% en cuentas D2C españolas, según los datos que manejamos de nuestros clientes. Esto ocurre porque Meta usa ventanas de atribución amplias (7 días post-clic + 1 día post-view por defecto) y atribuye conversiones que habrían ocurrido igualmente sin el anuncio.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Tabla: qué métricas importan y para qué</h2>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Métrica</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Sirve para</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">No sirve para</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Prioridad</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white font-medium text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/40 text-xs"></td>
+              <td class="py-3 px-3 text-white/70 text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Las 3 métricas que usamos para evaluar si una cuenta funciona</h2>
+
+    <div class="space-y-4 mb-6">
+      {[
+        {
+          num: "1",
+          titulo: "MER — Marketing Efficiency Ratio",
+          desc: "El MER es la métrica más honesta que existe: ingresos totales del negocio dividido entre gasto total en publicidad. No depende de atribución, no puede ser inflado por ventanas de conversión y refleja el impacto real en caja. Fórmula: MER = Ingresos totales / Inversión total en paid media. Si el MER es 4, cada euro invertido en publicidad genera 4€ de ingreso. Cuando escalamos una cuenta, miramos si el MER sube, se mantiene o baja — esa es la única señal que necesitamos para saber si el incremento de presupuesto está funcionando.",
+        },
+        {
+          num: "2",
+          titulo: "CPA real (no el de Meta)",
+          desc: "El CPA de Meta Ads Manager incluye conversiones atribuidas con ventanas amplias que sobreestiman su contribución. El CPA real que miramos nosotros sale de dividir la inversión en Meta entre las compras registradas en Shopify o en el servidor (vía API de Conversiones), no las que reporta Meta. La diferencia media en cuentas D2C es del 20-35%. Operar con el CPA de plataforma sin cruzarlo con los datos del negocio es tomar decisiones con información incompleta.",
+        },
+        {
+          num: "3",
+          titulo: "CPNC — Coste por Nuevo Cliente",
+          desc: "En ecommerce D2C, la pregunta relevante no es solo cuánto cuesta una compra — es cuánto cuesta conseguir un cliente que no ha comprado antes. El CPNC requiere que el CRM o el sistema de pedidos identifique si el comprador es nuevo o recurrente. Meta puede dar una aproximación con la configuración de Advantage+ Shopping, pero el dato limpio viene del backend. Si el CPNC está por encima del LTV esperado en los primeros 90 días, la estrategia de captación no es rentable independientemente del ROAS de plataforma.",
+        },
+      ].map(() => (
+        <div key= class="bg-[#1a1616] border border-white/8 rounded-xl p-4 flex gap-4">
+          <div class="w-8 h-8 rounded-full bg-[#de0015]/20 border border-[#de0015]/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <span class="text-[#de0015] font-bold text-sm"></span>
+          </div>
+          <div>
+            <p class="font-semibold text-white text-sm mb-1"></p>
+            <p class="text-white/55 text-sm"></p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Métricas de diagnóstico: útiles cuando algo falla</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      El CTR y el CPM no son métricas de negocio, pero sí son útiles para diagnosticar por qué el rendimiento ha caído. Así las usamos:
+    </p>
+    <div class="space-y-3 mb-6">
+      {[
+        "CTR cae de forma sostenida (&gt;20% en 2 semanas) → señal de fatiga creativa. Prioridad: producir nuevas creatividades antes de tocar presupuesto o audiencias.",
+        "CPM sube de forma brusca sin cambios en la cuenta → señal de presión competitiva estacional (rebajas, Black Friday, Navidad) o aumento de competencia en el sector. Acción: revisar el calendario y valorar ajustar presupuesto temporalmente.",
+        "CTR alto + CPA alto → la creatividad engancha pero la landing no convierte. El problema está fuera de Meta Ads, no dentro.",
+        "CTR bajo + CPA bajo → audiencia poco interesada pero que convierte bien la poca que llega. Suele indicar una audiencia muy cualificada con bajo volumen — ideal para escalar con lookalikes.",
+        "Frecuencia >3 en menos de 30 días en audiencias <50.000 personas → riesgo real de saturación. Ampliar audiencia o rotar creatividades.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Con qué frecuencia revisar cada métrica</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Uno de los errores más comunes en la gestión de Meta Ads es revisar los resultados cada día. Los algoritmos de Meta necesitan al menos 7 días para estabilizarse después de cualquier cambio. Revisar antes genera decisiones precipitadas que interrumpen el aprendizaje y empeoran los resultados. Esta es la cadencia que seguimos:
+    </p>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Métrica</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Frecuencia de revisión</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Cuándo actuar</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white font-medium text-xs"></td>
+              <td class="py-3 px-3 text-white/70 text-xs"></td>
+              <td class="py-3 px-3 text-white/50 text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cómo medimos el rendimiento en DayByDay</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      En todas las cuentas que gestionamos, el reporting semanal incluye tres números: MER del período, CPA real cruzado con Shopify y CPNC cuando el volumen de datos es suficiente. El ROAS de Meta Ads Manager aparece como referencia de tendencia, no como criterio de decisión.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Para que el CPA real sea fiable, implementamos siempre la <a href="https://developers.facebook.com/docs/marketing-api/conversions-api" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">API de Conversiones de Meta</a> correctamente configurada desde el servidor, no solo el píxel de navegador. Esto reduce la discrepancia de atribución y da al algoritmo señales de conversión más precisas, lo que mejora directamente la calidad de la optimización.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-5">
+      El informe de <a href="https://www.iabspain.es/wp-content/uploads/2024-Estudio-Inversion-Publicitaria-en-Medios-Digitales-IAB.pdf" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">IAB Spain sobre inversión publicitaria digital 2024</a> documenta que la fragmentación de los modelos de atribución es uno de los principales retos del sector — precisamente porque cada plataforma atribuye conversiones con criterios propios, el MER como métrica agnóstica de plataforma es cada vez más relevante.
+    </p>
+
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-6 mb-8 text-center">
+      <p class="font-bold text-white text-lg mb-2">¿Tu reporting actual refleja el rendimiento real de tus campañas?</p>
+      <p class="text-white/50 text-sm mb-4">Revisamos tu estructura de métricas y configuración de atribución — y te decimos qué cambiar para tomar mejores decisiones.</p>
+      <button>
+        Solicitar auditoría gratuita →
+      </button>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Artículos relacionados</h2>
+    <div class="space-y-3">
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/escalar-ecommerce-d2c-100k-1m-paid-media.html">
+          [PILAR] Cómo escalar un eCommerce D2C de 100K a 1M€ con paid media →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cómo cruzamos MER, nCPA y LTV/CAC en cuentas en fase de escala — el sistema completo</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/cac-vs-ltv-ecommerce-escalable.html">
+          CAC vs LTV: la métrica que define si tu D2C es escalable →
+        </a>
+        <p class="text-white/40 text-xs mt-1">El ratio LTV/CAC, payback period y por qué el ROAS de plataforma no es suficiente para decidir inversión</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/cuanto-invertir-meta-ads-calculadora.html">
+          Cuánto invertir en Meta Ads según tu ticket y margen (con calculadora) →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Calculadora que traduce las métricas reales (LTV, margen, ratio) en presupuesto Meta concreto y CAC objetivo</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/como-mejorar-roas-meta-ads-7-palancas.html">
+          Cómo mejorar el ROAS en Meta Ads: 7 palancas reales →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Qué tocar primero cuando el ROAS real no está donde debería estar</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/benchmark-roas-sector-espana-2026.html">
+          Benchmark ROAS por sector en España 2026 →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Los rangos de ROAS real esperables por industria para contextualizar tus métricas</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/escalar-campanas-meta-ads-sin-romper-roas.html">
+          Cómo escalar campañas Meta Ads sin romper el ROAS →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Qué métricas vigilar específicamente durante una fase de escala de presupuesto</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/checklist-auditoria-campanas-paid-media.html">
+          Checklist para auditar tus campañas de paid media →
+        </a>
+        <p class="text-white/40 text-xs mt-1">El proceso completo para diagnosticar qué está fallando usando las métricas correctas</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/por-que-anuncios-meta-no-convierten.html">
+          Por qué tus anuncios de Meta no convierten (y cómo solucionarlo) →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Las 5 capas a auditar (tracking, landing, audiencia, creatividad, estructura) cuando las métricas dicen que algo va mal</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/guia-api-conversiones-meta-ads-shopify.html">
+          Guía API de Conversiones de Meta (CAPI) en Shopify →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Por qué CAPI cambia los números reportados (eventos, CPA, EMQ) y cómo verificar que está bien configurada</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/remarketing-dinamico-ecommerce-guia-practica.html">
+          Remarketing dinámico para ecommerce: guía práctica →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Por qué el ROAS del DPA aislado engaña sin mirar MER blended y métricas de incrementalidad</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/modelos-atribucion-ecommerce-d2c.html">
+          Modelos de atribución para D2C: last-click, data-driven y MMM explicados →
+        </a>
+        <p class="text-white/40 text-xs mt-1">El modelo detrás de cada métrica plataforma: por qué Meta sobreatribuye 20-35%</p>
+      </div>
+    </div>
+        </article>
+
+        
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+  <div class="faq-item"><h3 class="faq-q">¿Cuáles son las métricas más importantes en Meta Ads para ecommerce?</h3><p class="faq-a">Para ecommerce, las métricas que realmente importan son: ROAS real de negocio (ingresos totales / inversión publicitaria), CPA (coste por compra), MER (Marketing Efficiency Ratio = ingresos totales / gasto total en marketing) y CPNC (coste por nuevo cliente). El CTR y el CPM son métricas auxiliares útiles para diagnosticar problemas, no para evaluar si las campañas funcionan. El ROAS que reporta Meta sobreestima entre un 20-35% respecto al ROAS real.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué es el MER y por qué importa más que el ROAS?</h3><p class="faq-a">El MER (Marketing Efficiency Ratio) es el ratio entre los ingresos totales del negocio y el gasto total en publicidad. A diferencia del ROAS de plataforma, el MER no depende de ventanas de atribución ni de modelos de atribución — solo mira la caja. Si el MER sube cuando subes la inversión en Meta Ads, las campañas están funcionando. Si baja, algo falla. Es la métrica que recomendamos para tomar decisiones de escala porque no puede ser manipulada por el algoritmo.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Por qué el ROAS de Meta Ads no es fiable?</h3><p class="faq-a">El ROAS que reporta Meta Ads Manager sobreestima el rendimiento real por tres razones: atribuye conversiones a anuncios que no fueron el último contacto antes de la compra (ventana de atribución de 7 días post-clic + 1 día post-view), cuenta a compradores que habrían comprado igualmente sin ver el anuncio, y puede duplicar conversiones si el píxel y la API de Conversiones no están configurados correctamente. La discrepancia típica en cuentas D2C españolas es del 20-35%.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué CTR es bueno en Meta Ads para ecommerce?</h3><p class="faq-a">El CTR por sí solo no dice nada sobre si las campañas funcionan o no. Un CTR del 3% con un ROAS de 1,5x es peor que un CTR del 0,8% con un ROAS de 4x. Dicho esto, como referencia para D2C en España en 2026: CTR inferior al 0,8% en frío suele indicar problemas de creatividad o audiencia; CTR superior al 2,5% en frío suele indicar buena resonancia. Pero nunca optimices por CTR — optimiza por coste por compra.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué métricas de Meta Ads son una pérdida de tiempo?</h3><p class="faq-a">Las métricas que no deberían informar decisiones de negocio son: alcance (no es objetivo, es consecuencia del presupuesto), frecuencia (mirarla en exceso genera paranoia sin datos suficientes para actuar), puntuación de relevancia (retirada por Meta en 2019, sustituida por métricas de diagnóstico sin peso en optimización real), y resultados en objetivos de conciencia (impresiones, visitas a perfil) si tu objetivo es vender.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Con qué frecuencia hay que revisar las métricas de Meta Ads?</h3><p class="faq-a">La cadencia correcta depende de la métrica: ROAS de plataforma y CPA → revisar semanalmente, no diariamente (las fluctuaciones de 24-48h no son significativas). MER → revisar semanalmente con los datos del negocio. CTR y CPM → revisar cuando haya caída de rendimiento, no como rutina diaria. Cambios en campañas → esperar mínimo 7 días antes de evaluar, para que el algoritmo salga de la fase de aprendizaje.</p></div>
+</section>
+
+
+        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

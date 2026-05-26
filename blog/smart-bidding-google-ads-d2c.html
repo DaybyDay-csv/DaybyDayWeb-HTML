@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Bidding en Google Ads para D2C: cuándo confiar y cuándo intervenir (2026) | DayByDay Consulting</title>
+  <meta name="description" content="Guía operativa de Smart Bidding en Google Ads para eCommerce D2C España 2026: qué es y diferencias con pujas manuales, cuándo usar Target ROAS vs Target CPA vs Maximize Conversion Value vs Enhanced CPC por vertical D2C y volumen de conversiones, periodo de aprendizaje real 14-21 días, presupuesto mínimo CPA×30 para Search/Shopping y CPA×50-60 para Performance Max, papel de Enhanced Conversions y GA4 server-side con Consent Mode v2 (sube match rate 50-65%→80-90% y baja CPA real 12-22%), protocolo de intervención manual segura (cambios máximo ±15% cada 7-10 días, no tocar presupuesto en learning, exclusiones antes de bajar puja), tabla decisión por vertical D2C (moda, suplementos, cosmética, joyería, electrodomésticos, mascotas), 6 errores frecuentes en cuentas D2C españolas con Smart Bidding mal configurado y enfoque DayByDay Pablo+Jorge con pipeline n8n + Google Ads API + Shopify Admin + GA4 BigQuery + dashboard Looker Studio que cruza Smart Bidding × cohorte LTV90 × CAC adquisición específico por estrategia.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/smart-bidding-google-ads-d2c">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+<div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+<aside class="file-tree-sidebar" id="sidebar">
+  <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+  <div class="file-tree-section"><div class="file-tree-section-title">Secciones</div>
+    <a href="/" class="file-tree-item">Inicio</a>
+    <a href="/problema.html" class="file-tree-item">Problema</a>
+    <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
+    <a href="/resultados.html" class="file-tree-item">Resultados</a>
+    <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Paid Media</div>
+    <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
+    <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
+    <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
+    <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Automation & AI</div>
+    <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
+    <a href="/analytics.html" class="file-tree-item">Analytics</a>
+    <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Stack Tech</div>
+    <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
+    <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
+    <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+  </div>
+</aside>
+
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Google Ads</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Google Ads</span>
+          <span class="reading-time">10 min de lectura</span>
+          <span class="article-date">2026-05-19</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Smart Bidding en Google Ads para D2C: cuándo confiar y cuándo intervenir (2026)</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Guía operativa de Smart Bidding en Google Ads para eCommerce D2C España 2026: qué es y diferencias con pujas manuales, cuándo usar Target ROAS vs Target CPA vs Maximize Conversion Value vs Enhanced CPC por vertical D2C y volumen de conversiones, periodo de aprendizaje real 14-21 días, presupuesto mínimo CPA×30 para Search/Shopping y CPA×50-60 para Performance Max, papel de Enhanced Conversions y GA4 server-side con Consent Mode v2 (sube match rate 50-65%→80-90% y baja CPA real 12-22%), protocolo de intervención manual segura (cambios máximo ±15% cada 7-10 días, no tocar presupuesto en learning, exclusiones antes de bajar puja), tabla decisión por vertical D2C (moda, suplementos, cosmética, joyería, electrodomésticos, mascotas), 6 errores frecuentes en cuentas D2C españolas con Smart Bidding mal configurado y enfoque DayByDay Pablo+Jorge con pipeline n8n + Google Ads API + Shopify Admin + GA4 BigQuery + dashboard Looker Studio que cruza Smart Bidding × cohorte LTV90 × CAC adquisición específico por estrategia.</p>
+        <div class="article-author">
+          <div class="author-avatar">DB</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirsó · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<p class="text-white/70 leading-relaxed mb-5">
+      <strong class="text-white">Smart Bidding es la palanca de Google Ads que separa cuentas D2C que escalan de las que se atascan en 3-5K€/mes</strong> — bien configurada baja el CPA real 15-30% y libera horas de gestión manual; mal configurada le come al algoritmo el presupuesto en learning eterno y dispara el CPA blended 20-45%. La diferencia no está en qué estrategia eliges (Target ROAS, Target CPA, Maximize Conversion Value, Enhanced CPC) sino en si tu cuenta cumple los 3 prerrequisitos para que Smart Bidding funcione: volumen de conversiones suficiente, tracking server-side limpio con Enhanced Conversions y disciplina para no tocar tROAS/tCPA cada día. En auditorías DayByDay 2025-2026 sobre cuentas D2C España con 8-60K€/mes spend en Google Ads vemos que el 60-70% tiene Smart Bidding activado pero con uno de los 6 errores que explican esta guía. Recorremos cuándo usar cada estrategia, cómo intervenir sin romper el aprendizaje y qué presupuesto mínimo necesita cada formato.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Qué es Smart Bidding (definición operativa)</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      <strong class="text-white">Smart Bidding</strong> es el conjunto de estrategias de puja automatizadas de Google Ads que usan machine learning para fijar una puja distinta en cada subasta según señales contextuales en tiempo real: dispositivo, ubicación geográfica, hora del día, query exacta, lista de audiencia del usuario, historial de navegación, contexto de la búsqueda, sistema operativo, navegador y otras 50+ señales no expuestas. El media buyer no fija un CPC fijo: define un objetivo (CPA, ROAS o maximizar conversiones dentro del presupuesto) y Google optimiza cada puja. Las 5 estrategias Smart Bidding en uso D2C 2026 son Maximize Conversions, Maximize Conversion Value, Target CPA, Target ROAS y Enhanced CPC (este último en fase de retiro progresivo según <a href="https://support.google.com/google-ads/answer/2979071" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Google Ads Help</a>).
+    </p>
+
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-6">
+      <p class="text-white font-bold text-sm mb-2">📊 Dato de referencia</p>
+      <p class="text-white/70 text-sm leading-relaxed">
+        Según <a href="https://www.thinkwithgoogle.com/intl/en-emea/marketing-strategies/automation/smart-bidding-machine-learning-bid-optimisation/" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Think with Google</a>, las cuentas que migran de pujas manuales a Smart Bidding mejoran conversiones con el mismo CPA un 20-35% promedio en 90 días — pero la mejora se concentra en cuentas con ≥30 conversiones/mes por campaña y tracking server-side completo. El <a href="https://www.statista.com/statistics/1414148/google-search-advertising-revenue-worldwide/" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">informe Statista Google Search Advertising Revenue</a> indica que más del 80% del spend D2C global en Google Ads usa ya alguna estrategia Smart Bidding en 2025, frente al 45% en 2021. En auditorías DayByDay sobre cuentas D2C España, el 60-70% tiene Smart Bidding activado pero sólo el 35-40% cumple los 3 prerrequisitos (volumen, tracking, disciplina) que hacen que funcione realmente.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Las 5 estrategias Smart Bidding y cuándo usar cada una</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      No hay una estrategia universal. La elección depende del tipo de conversión que persigues, la variabilidad del ticket medio, el volumen de conversiones histórico y la fase de madurez de la cuenta. Esta tabla resume la decisión:
+    </p>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Estrategia</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Objetivo</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Volumen mínimo conv/mes</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Cuándo usar en D2C</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ,
+            ,
+            ,
+            ,
+            ,
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Regla DayByDay para D2C 2026: empezar siempre con <strong class="text-white">Maximize Conversion Value sin tROAS</strong> 4-6 semanas para que Google encuentre patrones de optimización, después migrar a tROAS con un valor 15-25% por debajo del histórico para dejar espacio al algoritmo. Saltar directo a tROAS exigente en una cuenta nueva es el error #1 que vemos en auditorías — Google no encuentra subastas que cumplan el ratio y el spend cae al 30-40% del presupuesto en la primera semana.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Prerrequisito crítico: Enhanced Conversions y tracking server-side</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Smart Bidding funciona o falla según la calidad de la señal de conversión que recibe Google. En cuentas D2C España 2026 con ≥40% tráfico iOS, el píxel cliente-side pierde 20-40% de eventos por iOS 17/18 Link Tracking Protection, Consent Mode v2 denied o cookies bloqueadas en Safari. Sin Enhanced Conversions ni server-side tracking, el algoritmo optimiza con datos parciales y el CPA real diverge del CPA reportado.
+    </p>
+    <ul class="space-y-2 mb-6">
+      {[
+        "Activar Enhanced Conversions for Web en Google Ads: envío de email/teléfono hasheado SHA256 al servidor de Google en el evento purchase de Shopify. Sube match rate del 50-65% al 80-90%.",
+        "Implementar GA4 con Consent Mode v2 + modelado de conversiones para usuarios que rechazan cookies (recupera 15-25% de eventos perdidos según Google).",
+        "Server-side tracking vía Google Tag Manager server-side (sGTM) en Cloud Run o Stape, especialmente si AOV &gt;100€ y spend >15K€/mes Google Ads.",
+        "Importar conversiones offline desde Shopify (devoluciones, segunda compra, LTV60) cada 24-48h vía Google Ads API o Customer Match para que Smart Bidding optimice hacia LTV, no solo first purchase.",
+        "Marcar Purchase como única conversión primaria de campaña; lead_form, add_to_cart, view_item como secundarias (informan al algoritmo pero no entran en el objetivo de optimización).",
+      ].map((item) => (
+        <li key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </li>
+      ))}
+    </ul>
+    <p class="text-white/70 leading-relaxed mb-5">
+      El detalle técnico de Enhanced Conversions + GA4 + sGTM lo cubrimos en la <a href="/blog/server-side-tracking-shopify-conversions-api.html">guía server-side tracking Shopify</a> y en la <a href="/blog/ga4-meta-ads-eventos-custom-d2c.html">implementación GA4 + Meta Ads para D2C</a>.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Protocolo de intervención manual: cuándo tocar y cuándo no</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      El error más caro con Smart Bidding no es elegir mal la estrategia: es intervenir demasiado. Cada cambio en tROAS/tCPA, presupuesto o estructura resetea total o parcialmente el aprendizaje. Estas son las 5 reglas operativas que aplicamos en cuentas D2C DayByDay:
+    </p>
+    <ol class="space-y-3 mb-6 list-decimal pl-5">
+      {[
+        "Cambios de tROAS/tCPA: máximo ±15% cada 7-10 días. Cambios más grandes o más frecuentes resetean el learning phase (7-14 días) y el CPA real sube 20-35% durante ese periodo.",
+        "Cambios de presupuesto: máximo ±20% por semana, nunca durante learning phase (primeros 7-14 días tras crear campaña o cambio mayor). Subidas mayores generan over-pacing y el algoritmo gasta a CPA inflado las primeras 48h.",
+        "Antes de bajar la puja: exclusiones primero. Exclusiones de keywords negativas, audiencias de baja calidad, ubicaciones con CPA alto, dispositivos con CR bajo. Bajar tROAS sin haber depurado señal es romper el algoritmo sin diagnóstico.",
+        "Una intervención por semana, no por día. Lunes revisión + decisión, viernes lectura de impacto. Cambiar tROAS martes y jueves porque un día subió el CPA es anti-patrón #1 — el algoritmo necesita 5-7 días para asimilar cada cambio.",
+        "Cambios estructurales (separar ad group, cambiar tipo de campaña, migrar Search a Performance Max) sólo cuando hay diagnóstico claro de por qué el actual no funciona, no por sensación. Cada cambio estructural reinicia learning de cero.",
+      ].map((item) => (
+        <li key= class="text-white/60 text-sm leading-relaxed"></li>
+      ))}
+    </ol>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Performance Max y Smart Bidding: caso especial</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Performance Max (PMax) es 100% Smart Bidding obligatorio — sólo permite Maximize Conversions, Maximize Conversion Value o Target ROAS. El algoritmo reparte spend entre Search, Shopping, YouTube, Discovery, Display y Gmail sin que el media buyer pueda fijar split por canal. Eso amplifica los beneficios y los riesgos de Smart Bidding: si el tracking falla, PMax canibaliza brand search y se imputa conversiones que ya ibas a tener.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Recomendación operativa: activar PMax sólo con ≥30 conversiones/mes en Shopping/Search standalone, presupuesto ≥ CPA × 50-60, feed Merchant Center limpio con product groups por margen, brand search standalone protegido (no migrar brand a PMax) y monitorización vía channel-level reporting + holdout geo test cada 60-90 días. Cubrimos los criterios completos en la <a href="/blog/performance-max-ecommerce-d2c-cuando-usar.html">guía Performance Max para D2C</a>.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">6 errores frecuentes en cuentas D2C españolas con Smart Bidding</h2>
+    <ol class="space-y-3 mb-6 list-decimal pl-5">
+      {[
+        "Activar tROAS sin histórico de conversiones suficiente (<30/mes): el algoritmo no tiene señal y limita spend al 30-50% del presupuesto. Solución: empezar con Maximize Conversion Value 4-6 semanas y migrar a tROAS sólo cuando volumen lo soporta.",
+        "Mezclar conversiones de diferente valor como primarias (lead_form + add_to_cart + purchase): Smart Bidding optimiza hacia la más fácil (add_to_cart), no hacia revenue. Solución: sólo Purchase como conversión primaria, resto como secundarias (informan algoritmo pero no objetivo).",
+        "tROAS fijado al ROAS histórico exacto sin colchón: Google no encuentra subasta donde competir y el spend cae 40-60%. Solución: tROAS 15-25% por debajo del histórico para que algoritmo encuentre espacio.",
+        "Cambios diarios de tROAS/tCPA: reset constante del learning phase, CPA real crece 20-35%. Solución: máximo ±15% cada 7-10 días, una intervención por semana.",
+        "Sin Enhanced Conversions ni GA4 con Consent Mode v2: Smart Bidding optimiza ciego, pierde 20-40% eficiencia en iOS. Solución: Enhanced Conversions for Web + sGTM + modelado Consent Mode v2 obligatorio antes de activar Smart Bidding.",
+        "Performance Max con feed Merchant Center mal categorizado o sin product groups por margen: el algoritmo prioriza productos de bajo margen pero alto CTR, baja margen contribución blended 8-15 puntos en 90 días. Solución: product groups por margen + exclusión de productos no rentables + ROAS objetivo por product group.",
+      ].map((item) => (
+        <li key= class="text-white/60 text-sm leading-relaxed"></li>
+      ))}
+    </ol>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cómo trabajamos en DayByDay</h2>
+    <div class="space-y-3 mb-6">
+      {[
+        "Auditoría de tracking previa obligatoria (2-3h): Enhanced Conversions activo, match rate ≥80%, GA4 con Consent Mode v2 modelando, sGTM si spend >15K€/mes, conversiones primarias bien definidas. Sin esta base, cualquier Smart Bidding optimiza ciego.",
+        "Diagnóstico de volumen de conversiones por campaña: si <30 conv/mes, consolidamos ad groups o subimos presupuesto temporal antes de migrar a tROAS. No activamos Smart Bidding restrictivo si la cuenta no lo soporta.",
+        "Protocolo de migración escalonado: Maximize Conversion Value 4-6 semanas → tROAS 15-25% por debajo del histórico → ajustes ±15% cada 7-10 días. Documentamos cada cambio en log con fecha, magnitud y razón.",
+        "Solución ad-hoc Pablo + Jorge: para una marca D2C de cosmética AOV 78€ con 22K€/mes spend Google Ads, Jorge construyó pipeline n8n + Google Ads API + Shopify Admin API + GA4 BigQuery que cada noche cruza conversiones Google × pedidos reales Shopify × cohorte LTV90 × margen contribución por product group, e importa conversiones offline (devoluciones, segunda compra a 60d) a Google Ads vía Customer Match. Pablo lidera la sesión semanal con el founder para reasignar tROAS por product group según margen real, no según ROAS plataforma. Resultado en 90 días: CPA blended Google bajó 19%, % spend en learning bajó del 24% al 6%, margen contribución blended subió 4 puntos por reasignación a productos high-margin y atribución cross-channel mejoró con offline conversions feed.",
+        "Revisión semanal 20 min cada lunes con founder + Pablo: leemos CPA real vs CPA reportado, % spend en learning, tROAS efectivo vs objetivo, channel-level reporting de Performance Max y decidimos las 1-2 intervenciones de la semana (no más).",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      DayByDay Consulting fue fundada por Pablo Santirsó y opera como un partnership con Jorge González (CTO). Pablo lidera la estrategia paid media en Meta + Google y la disciplina de intervención semanal sobre Smart Bidding; Jorge construye el pipeline técnico (Enhanced Conversions + sGTM + GA4 BigQuery + Google Ads API + offline conversions feed) que hace que el algoritmo de Google reciba señal limpia y optimice hacia LTV, no hacia first purchase. Donde otras agencias activan Smart Bidding sin auditar el tracking previo — y luego echan la culpa al algoritmo cuando el CPA blended sube —, en DayByDay Pablo y Jorge montan la base de señal antes de tocar una sola estrategia de puja. El cliente habla con los dos socios desde el primer día, sin account managers ni handoffs.
+    </p>
+
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-6 mb-8 text-center">
+      <p class="font-bold text-white text-lg mb-2">¿Tu cuenta Google Ads tiene Smart Bidding activado pero el CPA blended sube?</p>
+      <p class="text-white/50 text-sm mb-4">Auditoría Smart Bidding gratuita 30 min: revisamos Enhanced Conversions, match rate, conversiones primarias, % spend en learning y configuración tROAS/tCPA. Entregamos plan operativo de 30-60 días para limpiar señal y migrar estrategia sin romper el aprendizaje.</p>
+      <button>
+        Solicitar auditoría gratuita →
+      </button>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Artículos relacionados</h2>
+    <div class="space-y-3">
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/performance-max-ecommerce-d2c-cuando-usar.html">
+          Performance Max para D2C: cuándo activarla y cómo medir si funciona →
+        </a>
+        <p class="text-white/40 text-xs mt-1">PMax es 100% Smart Bidding obligatorio. Cuándo activarla, channel-level reporting y protección de brand search.</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/server-side-tracking-shopify-conversions-api.html">
+          Tracking server-side completo para Shopify con Conversions API →
+        </a>
+        <p class="text-white/40 text-xs mt-1">La base técnica que hace que Enhanced Conversions y Smart Bidding optimicen sobre señal limpia.</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/combinar-google-ads-meta-ads-d2c.html">
+          Cómo combinar Google Ads y Meta Ads en una estrategia D2C →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Rol de Google (cosecha demanda) vs Meta (generación demanda), reparto por fase de madurez.</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/ga4-meta-ads-eventos-custom-d2c.html">
+          GA4 + Meta Ads para D2C: implementación de eventos custom paso a paso →
+        </a>
+        <p class="text-white/40 text-xs mt-1">GA4 con Consent Mode v2 alimenta tanto Meta CAPI como Enhanced Conversions Google.</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/dashboard-paid-media-founder-d2c.html">
+          Dashboard de paid media: qué métricas debe ver un founder D2C cada lunes →
+        </a>
+        <p class="text-white/40 text-xs mt-1">CPA real vs CPA reportado y % spend en learning como métricas obligatorias del dashboard.</p>
+      </div>
+    </div>
+        </article>
+
+        
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+  <div class="faq-item"><h3 class="faq-q">¿Qué es Smart Bidding en Google Ads y por qué es distinto a las pujas manuales?</h3><p class="faq-a">Smart Bidding es el conjunto de estrategias de puja automatizadas de Google Ads (Maximize Conversions, Maximize Conversion Value, Target CPA, Target ROAS, Enhanced CPC) que usan machine learning para fijar una puja distinta en cada subasta según señales contextuales en tiempo real (dispositivo, ubicación, hora del día, query exacta, audiencia, historial del usuario, contexto de navegación). A diferencia de las pujas manuales, el media buyer no fija un CPC fijo: define un objetivo (CPA, ROAS o maximizar conversiones dentro del presupuesto) y Google optimiza. En D2C eCommerce 2026, Smart Bidding es obligatorio en Performance Max y Demand Gen, y recomendado en Search/Shopping cuando hay ≥30 conversiones/mes por campaña y tracking server-side limpio (Enhanced Conversions o GA4 con Consent Mode v2).</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuándo conviene Target ROAS vs Target CPA vs Maximize Conversion Value en D2C?</h3><p class="faq-a">Target ROAS funciona en cuentas D2C con ticket variable amplio (joyería 80-450€, electrodomésticos 120-800€, tecnología 50-1.200€) y ≥50 conversiones/mes por campaña — fija un retorno objetivo y Google reparte spend hacia productos/audiencias que cumplen ese ratio. Target CPA funciona en cuentas con ticket homogéneo (suplementos 45-75€, mascotas 35-70€, cosmética 40-90€) donde la métrica de negocio es coste por cliente nuevo, no ingresos brutos. Maximize Conversion Value (sin tROAS) conviene en fases de escala agresiva o lanzamientos donde quieres que Google reparta presupuesto sin restricción de ratio durante 4-6 semanas para alimentar al algoritmo. Regla DayByDay: empezar siempre con Maximize Conversion Value 4-6 semanas, después migrar a tROAS con valor 15-25% por debajo del histórico para que Google encuentre espacio de optimización.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuánto tarda Smart Bidding en estabilizarse y cuándo intervenir manualmente?</h3><p class="faq-a">El periodo de aprendizaje (learning phase) oficial es 7-14 días tras crear la campaña o tras un cambio mayor (presupuesto ±20%, tROAS/tCPA ±15%, expansión geográfica, cambio de estructura). En cuentas D2C reales 2026 el algoritmo se estabiliza entre 14-21 días si hay ≥30 conversiones/semana; por debajo de ese volumen el aprendizaje no completa y conviene consolidar ad groups o subir presupuesto temporalmente. Intervenciones manuales recomendadas: ajustar tROAS/tCPA solo cada 7-10 días en saltos de máximo ±15%, no tocar presupuesto durante learning salvo emergencia, usar exclusiones de keywords/audiencias antes de bajar puja. Anti-patrón frecuente: bajar tROAS 30% en 24h porque un día CPA subió — Google reinicia aprendizaje y CPA empeora otros 14 días.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Smart Bidding funciona sin Enhanced Conversions o tracking server-side?</h3><p class="faq-a">Funciona pero pierde 20-40% de eficiencia. Smart Bidding depende totalmente de la calidad de la señal de conversión que recibe Google: si el píxel pierde eventos por iOS 17/18 Link Tracking Protection, Consent Mode v2 denied o cookies bloqueadas, el algoritmo optimiza con datos parciales y el CPA real diverge del CPA reportado. En cuentas D2C España 2026 con ≥40% tráfico iOS, activar Enhanced Conversions (envío de email/teléfono hasheado al servidor de Google) sube el match rate del 50-65% al 80-90% y baja el CPA real 12-22%. La ruta recomendada en Shopify es Enhanced Conversions for Web + tracking server-side vía GA4 + Google Tag Manager server-side (sGTM), con Consent Mode v2 configurado para modelar conversiones de usuarios que rechazan cookies.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué errores frecuentes ve DayByDay en cuentas D2C con Smart Bidding mal configurado?</h3><p class="faq-a">Los 6 errores más frecuentes en auditorías Google Ads 2025-2026: (1) Activar tROAS sin histórico de conversiones suficiente (<30/mes) — el algoritmo no tiene señal y limita spend al 30-50% del presupuesto. (2) Mezclar conversiones de diferente valor en la misma cuenta sin diferenciación (lead form + purchase + add-to-cart como 'conversiones primarias') — Smart Bidding optimiza hacia la conversión más fácil de conseguir, no hacia el revenue. (3) tROAS fijado al ROAS histórico exacto sin colchón — Google no encuentra subasta donde competir y el spend cae. (4) Cambios diarios de tROAS/tCPA — reset constante del learning phase, CPA real crece 20-35%. (5) Sin Enhanced Conversions ni GA4 con Consent Mode v2 — Smart Bidding optimiza ciego, pierde 20-40% eficiencia en iOS. (6) Performance Max con feed Merchant Center mal categorizado o sin product groups por margen — el algoritmo prioriza productos de bajo margen pero alto CTR, baja el margen contribución blended 8-15 puntos en 90 días.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué presupuesto mínimo necesita una campaña Search/Shopping con Smart Bidding para funcionar?</h3><p class="faq-a">El umbral operativo para que Smart Bidding rinda en una campaña Search/Shopping D2C es presupuesto que permita ≥30 conversiones/mes a CPA esperado. Fórmula: presupuesto mínimo mensual ≥ CPA objetivo × 30. Ejemplos reales D2C España 2026: cuenta moda CPA 18€ → presupuesto mínimo 540€/mes para que tROAS estabilice; cuenta suplementos CPA 28€ → 840€/mes; cuenta electrodomésticos CPA 65€ → 1.950€/mes. Por debajo de ese umbral conviene Maximize Clicks o Manual CPC enhanced para alimentar al algoritmo, y migrar a Smart Bidding cuando el volumen de conversiones supere ese mínimo. Performance Max necesita el doble: presupuesto ≥ CPA × 50-60 para que cada canal interno (Search, Shopping, YouTube, Discovery) reciba aprendizaje suficiente.</p></div>
+</section>
+
+
+        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

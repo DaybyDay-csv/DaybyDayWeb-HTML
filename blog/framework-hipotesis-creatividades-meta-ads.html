@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Framework de hipótesis creativas Meta Ads: cómo briefar antes de gastar en producción | DayByDay Consulting</title>
+  <meta name="description" content="Framework operativo para escribir hipótesis creativas testables antes de producir cualquier pieza Meta Ads en eCommerce D2C España: las 5 dimensiones obligatorias del brief (audiencia objetivo, ángulo emocional, formato/duración, hook seg 0-2, prueba), anatomía de una hipótesis falsable con métrica de éxito numérica, 7 ángulos canónicos D2C España 2026 (dolor físico, miedo social, aspiracional, comodidad, ahorro tiempo, transformación, ahorro económico) con Hook Rate y CTR esperados por vertical, plantilla DayByDay de brief de 1 página, regla 3-4 variantes/hipótesis con 200-400€/variante y 5-7 días, priorización por impacto × coste × señal previa, criterios para descartar hipótesis con datos y enfoque DayByDay Pablo+Jorge con pipeline n8n + agente IA para hipótesis automatizadas.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/framework-hipotesis-creatividades-meta-ads">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+<div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+<aside class="file-tree-sidebar" id="sidebar">
+  <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+  <div class="file-tree-section"><div class="file-tree-section-title">Secciones</div>
+    <a href="/" class="file-tree-item">Inicio</a>
+    <a href="/problema.html" class="file-tree-item">Problema</a>
+    <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
+    <a href="/resultados.html" class="file-tree-item">Resultados</a>
+    <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Paid Media</div>
+    <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
+    <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
+    <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
+    <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Automation & AI</div>
+    <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
+    <a href="/analytics.html" class="file-tree-item">Analytics</a>
+    <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Stack Tech</div>
+    <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
+    <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
+    <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+  </div>
+</aside>
+
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Creatividades</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Creatividades</span>
+          <span class="reading-time">11 min de lectura</span>
+          <span class="article-date">2026-05-14</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Framework de hipótesis creativas Meta Ads: cómo briefar antes de gastar en producción</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Framework operativo para escribir hipótesis creativas testables antes de producir cualquier pieza Meta Ads en eCommerce D2C España: las 5 dimensiones obligatorias del brief (audiencia objetivo, ángulo emocional, formato/duración, hook seg 0-2, prueba), anatomía de una hipótesis falsable con métrica de éxito numérica, 7 ángulos canónicos D2C España 2026 (dolor físico, miedo social, aspiracional, comodidad, ahorro tiempo, transformación, ahorro económico) con Hook Rate y CTR esperados por vertical, plantilla DayByDay de brief de 1 página, regla 3-4 variantes/hipótesis con 200-400€/variante y 5-7 días, priorización por impacto × coste × señal previa, criterios para descartar hipótesis con datos y enfoque DayByDay Pablo+Jorge con pipeline n8n + agente IA para hipótesis automatizadas.</p>
+        <div class="article-author">
+          <div class="author-avatar">DB</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirsó · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<p class="text-white/70 leading-relaxed mb-5">
+      <strong class="text-white">Un framework de hipótesis creativas para Meta Ads es la diferencia entre gastar 2.000€ en cuatro UGCs que rinden y gastar 2.000€ en cuatro UGCs que el algoritmo no llega a estabilizar.</strong> El 60-70% de las creatividades que producen las cuentas D2C en España con presupuestos de 5-30K€/mes mueren antes del día 7 porque el brief que las generó era una frase del tipo "haz un UGC enseñando el producto" en lugar de una hipótesis falsable. En DayByDay vemos el mismo patrón en cada auditoría: el creador rueda bien, la agencia entrega a tiempo, el media buyer activa, y la pieza se desploma porque nadie escribió por adelantado qué se estaba intentando probar. Esta guía resume el framework operativo que aplicamos a cuentas D2C de 5K a 80K€/mes: las 5 dimensiones del brief, la anatomía de una hipótesis testable, los 7 ángulos canónicos para D2C España, cómo priorizar el backlog y cómo descartar hipótesis con datos en lugar de con intuición.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Qué es un framework de hipótesis creativas y por qué importa en 2026</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Un <strong class="text-white">framework de hipótesis creativas</strong> es un protocolo escrito que convierte cada brief en una afirmación falsable medible por una métrica concreta. En lugar de pedirle al creador "hazme un Reel con el producto", se escribe: "creemos que un hook con dolor físico (espalda) en segundo 0-2, narrado por una mujer 40-55 años en formato Reel 15-18s, conseguirá Hook Rate &gt;32% y reducirá el CPA un 15-20% frente al baseline de 38€". La pieza nace ya con un objetivo numérico, un público objetivo y una variable a aislar. La producción deja de ser arte y se vuelve infraestructura de testing.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Esta disciplina importa más en 2026 que hace 3 años porque <a href="https://www.facebook.com/business/help/355670007911605" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Meta empuja Advantage+ Shopping Campaigns</a> con 8-15 creatividades dispersando el algoritmo, porque la fatiga creativa ha pasado de ciclos de 60 días a ciclos de 21-35 días en audiencias medias y porque el coste por UGC con nano-creator de calidad oscila ya entre 80€ y 250€/pieza. Sin framework, una cuenta D2C 15K€/mes gasta 1.500-3.000€ de producción mensual sin saber qué está aprendiendo.
+    </p>
+
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-6">
+      <p class="text-white font-bold text-sm mb-2">📊 Dato de referencia</p>
+      <p class="text-white/70 text-sm leading-relaxed">
+        Según el <a href="https://datareportal.com/reports/digital-2025-spain" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">informe Digital 2025 Spain de DataReportal</a>, el usuario español pasa una media de 1h 50min al día en redes sociales con Instagram y TikTok concentrando el 60-65% del tiempo. En auditorías DayByDay de cuentas D2C España 2024-2026, las cuentas con framework escrito previo a producción consiguen 2-3 veces más winners por trimestre y bajan el % de creatividades muertas pre-día-7 del 60-70% al 25-35%, con el mismo presupuesto de producción.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Las 5 dimensiones que todo brief debe cerrar antes de producir</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Un brief de Meta Ads válido cierra obligatoriamente estas 5 dimensiones. Si una sola queda abierta, el creador interpreta y el resultado es interpretativo:
+    </p>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Dimensión</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Qué cerrar antes de producir</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Métrica que impacta</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ,
+            ,
+            ,
+            ,
+            ,
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      El error más caro: cerrar 4 de las 5 dimensiones y dejar el hook al criterio del creador. El hook concentra el 60-70% del impacto en Hook Rate y Hook Rate por debajo del 22% mata la creatividad en 48-72h independientemente de lo bueno que sea el resto del Reel.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Anatomía de una hipótesis creativa testable</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Una hipótesis creativa válida sigue una estructura fija de 5 bloques. Esto es lo que se escribe en una página A4 antes de gastar un solo euro en producción:
+    </p>
+    <ol class="space-y-3 mb-6 list-decimal pl-5">
+      {[
+        "Afirmación: 'Creemos que [HOOK / ÁNGULO] resonará más en [AUDIENCIA] porque verbalizan [DOLOR] y consumen contenido [FORMATO]'. Ejemplo: 'creemos que un hook con before/after de cabello frizz a hidratado, narrado por mujer 30-45 que reconoce el problema visualmente, resonará más en LAL 1-3% de clientes con AOV >50€'.",
+        "Métrica de éxito: número concreto que define ganador. Ejemplo: 'Hook Rate >32%, CTR outbound >1,4%, CPA <34€ (15% mejor que baseline 40€), 200€ de spend mínimo'.",
+        "Variable aislada: única cosa que cambia respecto al baseline o al control. Ejemplo: 'mantenemos creador, audiencia, oferta y CTA; solo cambiamos el hook visual de talking-head a before/after en segundo 0-2'.",
+        "Riesgos y supuestos: qué tiene que ser cierto para que el test sea válido. Ejemplo: 'asumimos que la audiencia LAL 1-3% tiene volumen suficiente &gt;100K usuarios y que la oferta -15% sigue activa durante todo el test'.",
+        "Decisión por resultado: qué se hace si gana, si pierde y si queda indiferente. Ejemplo: 'si gana: producimos 2-3 variantes del before/after con creadores distintos. Si pierde: matamos el ángulo before/after para esta audiencia y probamos en LAL 5-10%. Si indiferente: extendemos 3 días el test antes de decidir'.",
+      ].map((item) => (
+        <li key= class="text-white/60 text-sm leading-relaxed"></li>
+      ))}
+    </ol>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Cualquier brief que no cierre los 5 bloques entra en el cajón hasta que el media buyer lo complete. Suena rígido; en la práctica reduce el % de creatividades fallidas del 60-70% al 25-35% en cuentas auditadas en DayByDay.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">7 ángulos canónicos D2C España 2026</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Para acelerar la fase de ideación, todo backlog parte de los 7 ángulos canónicos que más rinden en D2C España según datos de cuentas auditadas (5-80K€/mes) y validación cruzada con <a href="https://www.facebook.com/ads/library" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Meta Ads Library</a>:
+    </p>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Ángulo</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Vertical donde rinde más</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Hook Rate esperado</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+            ,
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Ningún ángulo es universal. Una marca de suplementos con audiencia 40-65 años suele rentar más con dolor físico + transformación; una marca de moda femenina 25-40 años rentar más con aspiracional + transformación; un D2C de hogar con audiencia 30-55 años rentar más con comodidad + ahorro tiempo. El backlog trimestral debería testar 2-3 ángulos distintos en paralelo para no concentrar la cuenta en un único registro emocional.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Plantilla DayByDay: brief de 1 página</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Estructura del brief que entregamos al creador antes de cualquier producción. Cabe en una página A4 y nunca pasa de 350 palabras:
+    </p>
+    <ul class="space-y-2 mb-6">
+      {[
+        "Cabecera: marca, fecha, código de hipótesis (H-2026-Q2-#12), media buyer responsable.",
+        "Hipótesis (5 bloques): afirmación, métrica de éxito, variable aislada, riesgos/supuestos, decisión por resultado.",
+        "Audiencia objetivo: 2-3 líneas con edad, género, momento de compra y dolor verbal exacto (citas reales de reviews o entrevistas).",
+        "Formato y especificaciones técnicas: Reel 9:16 1080×1920px, duración 15-22s, audio voz on-camera + sub generados, primer fotograma con producto visible.",
+        "Guión por escenas (segundos): seg 0-2 hook, seg 2-6 dolor o promesa, seg 6-12 demo o evidencia, seg 12-18 prueba social, seg 18-22 CTA.",
+        "Don'ts explícitos: no MotionGraphics, no música cinematográfica, no más de 3 cortes/3s, no hablar a cámara durante >8s seguidos.",
+        "Criterio de aceptación: Hook Rate >25% y CTR outbound >1% para considerar la pieza válida antes de escalar.",
+      ].map((item) => (
+        <li key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </li>
+      ))}
+    </ul>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cómo priorizar el backlog de hipótesis</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Una cuenta D2C activa puede tener 15-25 hipótesis vivas en el backlog en un trimestre. Producirlas todas no es viable; priorizarlas mal es la causa real de la mayoría de cuentas estancadas. Criterio de priorización en 3 ejes:
+    </p>
+    <ol class="space-y-3 mb-6 list-decimal pl-5">
+      {[
+        "Impacto esperado en CPA: hipótesis sobre el hook (impacto 15-30% en CPA) prioritarias sobre hipótesis de pie de Reel (impacto 3-8%). Hipótesis sobre formato (Reel vs estático) prioritarias sobre hipótesis de duración (15s vs 22s).",
+        "Coste de producción: variante del winner actual con mismo creador 180-220€/pieza versus rodar UGC nuevo con creador nuevo 350-700€/pieza. Con presupuesto limitado, 70% del backlog debe ser iteración del ángulo ganador del trimestre anterior y 30% exploración de ángulos nuevos.",
+        "Confianza basada en señal previa: si la cuenta lleva 60 días con dolor físico ganando en mujer 40-55, prioriza variantes 2.0 del ángulo (cambio de hablante, setting, hook visual) antes que abrir un ángulo totalmente nuevo con esa misma audiencia. La señal previa reduce el riesgo de la inversión.",
+      ].map((item) => (
+        <li key= class="text-white/60 text-sm leading-relaxed"></li>
+      ))}
+    </ol>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Ver protocolo de rotación creativa y ciclo de vida por audiencia en la <a href="/blog/ad-fatigue-meta-ads-rotacion-creativa.html">guía de ad fatigue en Meta Ads</a> y método para extraer ángulos de la competencia sin copiar en la <a href="/blog/meta-ads-library-analisis-competencia.html">guía de Meta Ads Library</a>.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">7 errores frecuentes al briefar creatividades en Meta Ads</h2>
+    <ol class="space-y-3 mb-6 list-decimal pl-5">
+      {[
+        "Brief delegado al creador o a la agencia creativa sin filtro del media buyer: la pieza nace estéticamente correcta pero ciega a la economía de la cuenta (qué audiencia tiene mejor CPA, qué ángulo ganó el trimestre anterior).",
+        "Mezclar 2-3 ángulos emocionales en la misma creatividad para 'cubrir más': la pieza no resuena fuerte con ningún segmento y el Hook Rate se queda en 18-22%.",
+        "Producir 6-8 piezas con presupuesto pequeño en lugar de 3-4 con presupuesto suficiente: cada pieza no llega a 200€ de spend y queda en aprendizaje permanente.",
+        "Cambiar 2-3 variables a la vez (hook + creador + formato): si gana o pierde no sabes cuál variable fue. El A/B testing real solo aísla una variable por hipótesis.",
+        "No documentar las hipótesis fallidas: en 6 meses el equipo vuelve a proponer el mismo ángulo perdedor porque nadie recuerda que ya se testó.",
+        "Confundir 'me gusta' interno con señal de mercado: la pieza que más gusta en la sala de reuniones suele ser la que peor convierte. Solo el dato Hook Rate + CTR + CPA decide.",
+        "No incluir don'ts en el brief: el creador rellena el brief con su intuición visual (MotionGraphics, música épica, transiciones rápidas) y la pieza nace ya con anti-patrones documentados que matan Hook Rate en seg 0-2.",
+      ].map((item) => (
+        <li key= class="text-white/60 text-sm leading-relaxed"></li>
+      ))}
+    </ol>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cómo trabajamos en DayByDay</h2>
+    <div class="space-y-3 mb-6">
+      {[
+        "Onboarding incluye auditoría de las últimas 30-60 creatividades producidas: identificamos cuántas tenían brief escrito previo, cuántas se decidieron en reunión sin documentar, qué % murió antes del día 7 y qué % escaló. En cuentas D2C 5-30K€/mes el patrón típico es 60-70% de creatividades muertas pre-día-7 y 5-8% que escalan. Tras 90 días con framework esos números pasan a 25-35% muertas y 15-22% que escalan.",
+        "Brief de 1 página firmado por Pablo antes de cualquier producción: la hipótesis (5 bloques), las 5 dimensiones cerradas, el guión por escenas y los don'ts explícitos. El creador no recibe el encargo hasta que el brief está firmado.",
+        "Regla 3-4 variantes por hipótesis con 200-400€ de spend cada una y 5-7 días de test: ni 1-2 variantes (ruido estadístico) ni 6-8 variantes (dispersión de spend). Variable aislada estricta: cambia hook o cambia hablante, no ambos.",
+        "Solución ad-hoc Pablo + Jorge: para una cuenta D2C de cosmética 22K€/mes con 6 ángulos vivos pero sin priorización, Jorge montó un workflow n8n + agente IA sobre OpenAI API que cruza datos del último trimestre (Hook Rate por ángulo, CPA por audiencia, % new customers por creatividad) con Meta Ads Library de 6 competidores y devuelve cada lunes un ranking del top 5 hipótesis a producir con coste estimado y métrica de éxito propuesta. Pablo revisa, firma 2-3 hipótesis y entrega al creador nano-creator (180-220€/pieza). En 90 días el % de winners pasó de 7% a 19% sin tocar presupuesto de producción.",
+        "Documentación obligatoria de hipótesis ganadoras y fallidas: cada cuenta tiene un Notion compartido con histórico de hipótesis testadas, resultado numérico y conclusión. Cuando rota equipo del cliente o cuando aparece una nueva propuesta de ángulo, se valida contra el histórico no contra la intuición del momento.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      DayByDay Consulting fue fundada por Pablo Santirsó y opera como un partnership con Jorge González (CTO). Pablo (founder · paid media) escribe cada hipótesis con datos del último trimestre, firma el brief y valida la pieza final contra criterio Hook Rate + CTR + CPA. Jorge (CTO · automation) construye el pipeline n8n + agente IA + Meta Marketing API que automatiza el ranking semanal de hipótesis, scrapea Meta Ads Library de competidores y centraliza el histórico en Notion. Donde otras agencias entregan briefs en formato "haz un UGC bonito", en DayByDay cada pieza nace de una hipótesis falsable escrita y firmada. El cliente habla con los dos socios desde la primera reunión: sin account managers, sin handoffs, sin perfiles junior.
+    </p>
+
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-6 mb-8 text-center">
+      <p class="font-bold text-white text-lg mb-2">¿Tu cuenta produce 4-6 creatividades al mes y solo 1 sobrevive al día 7?</p>
+      <p class="text-white/50 text-sm mb-4">Auditoría gratuita 30 min: revisamos las últimas 30 creatividades, cuántas tenían brief escrito previo, qué % escaló y entregamos plantilla DayByDay de hipótesis + ranking de top 5 ángulos a testar el próximo trimestre.</p>
+      <button>
+        Solicitar auditoría gratuita →
+      </button>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Artículos relacionados</h2>
+    <div class="space-y-3">
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/ad-fatigue-meta-ads-rotacion-creativa.html">
+          Ad fatigue en Meta Ads: señales tempranas y protocolo de rotación creativa →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Ciclo de vida por audiencia y formato, 4 señales tempranas, pipeline 4-8 creatividades/mes con presupuesto fijo</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/meta-ads-library-analisis-competencia.html">
+          Análisis de competencia en Meta Ads Library →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cómo extraer ángulos ganadores de competidores y convertirlos en hipótesis testables sin copiar</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/ugc-meta-ads.html">
+          UGC en Meta Ads: por qué funciona y cómo producirlo →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Formato dominante en D2C España 2026 y cómo encajarlo en el framework de hipótesis creativas</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/creative-testing-meta-ads.html">
+          Creative testing en Meta Ads: framework paso a paso →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Estructura de cuenta para testar hipótesis sin canibalizar campañas evergreen</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/partnership-ads-meta-ugc-creators-d2c.html">
+          Partnership Ads en Meta para D2C con cuentas de creators →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cómo aplicar el framework de hipótesis al brief con creator y servirlo como Partnership Ad para subir Hook Rate 25-40%</p>
+      </div>
+    </div>
+        </article>
+
+        
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+  <div class="faq-item"><h3 class="faq-q">¿Qué es un framework de hipótesis creativas en Meta Ads?</h3><p class="faq-a">Un framework de hipótesis creativas es la estructura escrita que define qué se va a testar antes de gastar dinero en producir una pieza de Meta Ads. En lugar de pedirle al creador 'haz un UGC de 15 segundos', el framework convierte cada brief en una afirmación falsable del tipo 'creemos que un hook con dolor físico (espalda) en segundo 0-2, narrado por una mujer 40-55 años, conseguirá un Hook Rate \u003e32% y bajará el CPA en un 18% frente al baseline'. Cada elemento (audiencia objetivo, formato, hook, propuesta, prueba) se anota previamente y se valida con datos. En auditorías de DayByDay vemos que cuentas D2C España con framework escrito previo consiguen 2-3 veces más winners por trimestre que cuentas donde el brief sigue siendo 'haz algo bonito que convierta'.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuántas variantes debo testar por hipótesis creativa?</h3><p class="faq-a">El estándar operativo para eCommerce D2C España es 3-4 variantes por hipótesis: misma audiencia, mismo formato, mismo ángulo de fondo, pero cambiando una sola variable controlada (hook, hablante, prueba social, oferta destacada). Con 3-4 variantes y 200-400€ de spend cada una durante 5-7 días tienes señal suficiente para decidir ganador por Hook Rate, CTR outbound y CPA o coste add-to-cart. Si testas solo 1-2 variantes el resultado es ruido estadístico; si pasas de 5-6 variantes por hipótesis estás dispersando spend y reseteando aprendizaje. La regla DayByDay: una hipótesis = un ángulo, 3-4 variantes, 1 variable controlada, 5-7 días, 200-400€ por variante.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué dimensiones debe cubrir el brief antes de producir una creatividad para Meta Ads?</h3><p class="faq-a">Cinco dimensiones, ninguna opcional. (1) Audiencia objetivo: edad, género, momento de compra (problema-consciente, solución-consciente, marca-consciente), dolor concreto que verbaliza. (2) Ángulo emocional: dolor físico, miedo social, deseo aspiracional, comodidad, ahorro de tiempo. (3) Formato y duración: Reel vertical 9-25s, estático cuadrado/9:16, carrusel 3-5 slides. (4) Hook segundo 0-2: pregunta directa al dolor, declaración disruptiva, demostración visual, número impactante. (5) Prueba o evidencia: testimonio cliente real, before/after, antes/después de uso, dato cuantitativo, comparativa producto. Si una sola de estas 5 dimensiones queda sin definir, el brief es interpretativo y el creador adivina. Ese es el punto exacto donde se pierden 80-200€ por creatividad producida en vacío.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo priorizo qué hipótesis producir primero cuando tengo presupuesto limitado?</h3><p class="faq-a">Tres criterios: (1) Impacto esperado: una hipótesis sobre el hook impacta más al CPA que una sobre el copy de pie de Reel — un hook malo apaga el funnel en segundo 1, un pie de Reel malo solo reduce 5-8% el CTR outbound. (2) Coste de producción: una variante de hook nuevo con el mismo creador (180-220€) es más eficiente que rodar 4 UGCs nuevos (700-900€) si no tienes señal previa. (3) Confianza basada en señal previa: si la cuenta lleva 60 días con UGC voz on-camera ganando, prioriza variantes del ángulo ganador (versión 2.0) antes que abrir un ángulo totalmente nuevo. Regla práctica DayByDay para cuentas <15K€/mes: 70% del backlog son variantes del winner del trimestre anterior, 30% son ángulos nuevos. Por encima de 20K€/mes ese reparto se mueve a 50/50 porque la cuenta necesita exploración constante para no fatigar.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Quién debe escribir las hipótesis creativas: el media buyer o el equipo creativo?</h3><p class="faq-a">El media buyer escribe la hipótesis y el equipo creativo la ejecuta. Es el error más caro de cuentas D2C en España: delegar el brief en la agencia creativa o en el creador UGC sin filtro de media buyer. El creador sabe rodar, el media buyer sabe qué hook funcionó en el último trimestre, qué audiencia tiene mejor CPA, qué formato concentra el spend de Advantage+ Shopping. Si el brief lo escribe el creador desde cero, el resultado es estéticamente bueno pero ciego a la economía de la cuenta. En DayByDay Pablo redacta cada hipótesis con datos del último trimestre (Hook Rate por ángulo, CTR por formato, CPA por audiencia) y entrega al creador UGC un brief de 1 página con la hipótesis cuantificada, las dimensiones cerradas y los criterios de éxito numéricos. Esto baja el % de creatividades fallidas del 60-70% al 25-35%.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuándo descarto una hipótesis creativa que no ha funcionado?</h3><p class="faq-a">Una hipótesis se descarta solo cuando las 3-4 variantes de ese ángulo, cada una con 200-400€ de spend durante 5-7 días, han mostrado Hook Rate <22%, CTR outbound <0,8% y CPA \u003e130% del baseline. Si solo 1 variante ha fallado pero las otras 2-3 no se han llegado a producir, la hipótesis sigue viva. Si las 3-4 variantes han fallado en la misma audiencia, descártala para esa audiencia pero pruébala en una audiencia adyacente antes de matarla del todo. Y documenta siempre por qué se descarta: 'el ángulo dolor físico (espalda) no funcionó en mujer 40-55 con LAL 1% high-value buyers porque la oferta estaba sobreatribuida al beneficio cosmético, no al funcional'. Sin documentación, en 6 meses el equipo vuelve a producir el mismo ángulo fallido.</p></div>
+</section>
+
+
+        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

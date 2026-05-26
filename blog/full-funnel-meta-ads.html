@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estrategia Full-Funnel de Meta Ads para marcas D2C — Guía completa | DayByDay Consulting</title>
+  <meta name="description" content="Aprende a estructurar tus campañas de Meta Ads en tres fases (TOFU, MOFU, BOFU) para captar audiencia fría, cultivarla y convertirla en clientes. Guía completa con ejemplos reales.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/full-funnel-meta-ads">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+<div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+<aside class="file-tree-sidebar" id="sidebar">
+  <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+  <div class="file-tree-section"><div class="file-tree-section-title">Secciones</div>
+    <a href="/" class="file-tree-item">Inicio</a>
+    <a href="/problema.html" class="file-tree-item">Problema</a>
+    <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
+    <a href="/resultados.html" class="file-tree-item">Resultados</a>
+    <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Paid Media</div>
+    <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
+    <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
+    <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
+    <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Automation & AI</div>
+    <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
+    <a href="/analytics.html" class="file-tree-item">Analytics</a>
+    <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Stack Tech</div>
+    <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
+    <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
+    <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+  </div>
+</aside>
+
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Meta Ads</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Meta Ads</span>
+          <span class="reading-time">8 min de lectura</span>
+          <span class="article-date">2026-03-10</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Estrategia Full-Funnel de Meta Ads para marcas D2C — Guía completa</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Aprende a estructurar tus campañas de Meta Ads en tres fases (TOFU, MOFU, BOFU) para captar audiencia fría, cultivarla y convertirla en clientes. Guía completa con ejemplos reales.</p>
+        <div class="article-author">
+          <div class="author-avatar">DB</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirsó · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<h2 class="text-2xl font-black mt-10 mb-4">Qué es el funnel de ventas en Meta Ads y por qué importa</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      La mayoría de anunciantes en Meta Ads cometen el mismo error: lanzar anuncios de conversión directa a audiencias frías y esperar ventas. El problema es que un usuario que no conoce tu marca no está listo para comprar. Necesita pasar por varias fases antes de convertir.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Una estrategia full-funnel organiza tus campañas de Meta Ads para acompañar al usuario en cada etapa: desde que descubre tu marca hasta que compra y repite. Es la diferencia entre quemar presupuesto y construir un sistema de adquisición predecible.
+    </p>
+
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-6">
+      <p class="text-white/40 text-xs uppercase tracking-wider mb-3">Las tres fases del funnel</p>
+      <div class="space-y-2">
+        {[
+          ,
+          ,
+          ,
+        ].map(() => (
+          <div key= class="flex items-start gap-3 text-sm">
+            <span class="font-mono text-[#de0015] font-bold w-14 flex-shrink-0"></span>
+            <div>
+              <span class="text-white font-semibold">: </span>
+              <span class="text-white/60"></span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">TOFU: cómo captar audiencia fría con Meta Ads</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      El TOFU es la fase de descubrimiento. El objetivo no es vender, sino conseguir que usuarios que no te conocen interactúen con tu marca por primera vez. En Meta Ads, el TOFU funciona mejor con contenido que genera curiosidad o emoción, no con anuncios de producto directo.
+    </p>
+
+    <h3 class="text-lg font-bold mt-6 mb-3">Formatos más efectivos para TOFU</h3>
+    <div class="space-y-3 mb-6">
+      {[
+        ,
+        ,
+        ,
+        ,
+      ].map(() => (
+        <div key= class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+          <p class="font-semibold text-white text-sm mb-1"></p>
+          <p class="text-white/55 text-sm"></p>
+        </div>
+      ))}
+    </div>
+
+    <h3 class="text-lg font-bold mt-6 mb-3">Segmentación TOFU: qué funciona en 2026</h3>
+    <p class="text-white/70 leading-relaxed mb-4">
+      La segmentación por intereses ha perdido precisión tras los cambios de iOS y las restricciones de datos. En 2026, las audiencias que mejor funcionan en TOFU son:
+    </p>
+    <div class="space-y-2 mb-5">
+      {[
+        "Advantage+ Audience (dejar que el algoritmo explore sin restricciones de intereses)",
+        "Lookalike 1-3% de compradores de los últimos 180 días",
+        "Lookalike 1-3% de visitantes de producto con tiempo >30s",
+        "Audiencias amplias por país + edad sin segmentación adicional (funciona mejor de lo esperado)",
+      ].map((item) => (
+        <div key= class="flex items-start gap-3 text-sm text-white/70">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">MOFU: retargeting inteligente para usuarios tibios</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      El MOFU es la fase más subestimada del funnel. Aquí trabajas con usuarios que ya te conocen pero no han comprado: visitantes de tu web, personas que vieron tus vídeos, interactuaron con tus posts o guardaron tus anuncios. Están más cerca de comprar que la audiencia fría, pero todavía necesitan un empujón.
+    </p>
+
+    <h3 class="text-lg font-bold mt-6 mb-3">Segmentos MOFU más rentables</h3>
+    <div class="grid grid-cols-1 gap-3 mb-6">
+      {[
+        ,
+        ,
+        ,
+        ,
+      ].map(() => (
+        <div key= class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+          <div class="flex justify-between items-center mb-1">
+            <p class="font-semibold text-white text-sm"></p>
+            <span class="text-white/30 text-xs"></span>
+          </div>
+          <p class="text-white/55 text-sm"></p>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">BOFU: convertir a los usuarios más cercanos a comprar</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      El BOFU es donde ocurren las ventas. Aquí te diriges a usuarios que iniciaron el proceso de compra pero no lo terminaron: quienes añadieron al carrito, iniciaron el checkout, o compraron hace más de 90 días y puedes reactivar.
+    </p>
+
+    <h3 class="text-lg font-bold mt-6 mb-3">Tácticas BOFU de alta conversión</h3>
+    <div class="space-y-3 mb-6">
+      {[
+        "Dynamic Product Ads (DPA): muestra exactamente el producto que vio el usuario",
+        "Carrito abandonado con urgencia temporal: descuento o envío gratis con límite de 24-48h",
+        "Testimonios específicos del producto que visitaron: reduce la objeción de incertidumbre",
+        "Garantías y políticas de devolución: elimina el riesgo percibido en el momento de decisión",
+        "Cross-sell post-compra: a compradores de los últimos 30 días con productos complementarios",
+      ].map((item) => (
+        <div key= class="flex items-start gap-3 text-sm text-white/70">
+          <span class="text-green-400 mt-0.5 flex-shrink-0">✓</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cómo distribuir el presupuesto en el funnel</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Una pregunta habitual: ¿cuánto presupuesto poner en cada fase? No hay una fórmula universal, pero estos son los rangos que usamos como punto de partida según el volumen mensual de inversión:
+    </p>
+    <div class="grid grid-cols-3 gap-3 mb-6">
+      {[
+        ,
+        ,
+        ,
+      ].map(() => (
+        <div key= class="bg-[#1a1616] border border-white/8 rounded-xl p-4 text-center">
+          <div class="text-white/40 text-xs mb-1"></div>
+          <div className=font-bold text-lg $></div>
+          <div class="text-white/40 text-xs mt-1"></div>
+        </div>
+      ))}
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      A medida que el TOFU genera más tráfico y datos, el MOFU y el BOFU se vuelven más eficientes. El ratio cambia con el tiempo: en los primeros meses el TOFU necesita más inversión; en marcas más maduras, el MOFU y BOFU pueden representar hasta un 40% del gasto total.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Caso real: full-funnel en marca D2C de moda con Advantage+</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Una marca española de ropa D2C llegó a DayByDay con campañas centradas únicamente en conversión directa. Su ROAS estaba estancado en 1.8x y el CPA no bajaba de 35€. Reestructuramos su cuenta con una estrategia full-funnel completa.
+    </p>
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-6 mb-5">
+      <div class="grid grid-cols-2 gap-4">
+        {[
+          ,
+          ,
+          ,
+          ,
+        ].map(() => (
+          <div key=>
+            <div class="text-white/40 text-xs uppercase tracking-wider mb-1"></div>
+            <div class="font-bold text-white"></div>
+          </div>
+        ))}
+      </div>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      La clave fue tres cambios simultáneos: mover la prospección a Advantage+ Shopping, separar el retargeting por ventanas de tiempo (7 días vs 30 días con mensajes distintos), y producir UGC específico para cada fase del funnel. Si quieres aplicar esta estrategia en tu negocio, consulta nuestro
+      <a href="/servicios/meta-ads.html">
+        servicio de gestión de Meta Ads
+      </a>
+      o nuestro servicio de
+      <a href="/servicios/ecommerce.html">
+        crecimiento para eCommerce
+      </a>.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Los errores más comunes al implementar un funnel en Meta Ads</h2>
+    <div class="space-y-3 mb-6">
+      {[
+        ,
+        ,
+        ,
+        ,
+        ,
+      ].map(() => (
+        <div key= class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+          <p class="font-semibold text-red-400 text-sm mb-1">✗ </p>
+          <p class="text-white/55 text-sm">→ </p>
+        </div>
+      ))}
+    </div>
+
+    <p class="text-white/70 leading-relaxed">
+      Si quieres entender mejor los términos usados en este artículo, visita nuestro
+      <a href="/glosario.html">
+        glosario de marketing digital
+      </a>. Para una visión completa de cómo estructurar y escalar Meta Ads en tu ecommerce D2C, lee la
+      <a href="/blog/guia-meta-ads-ecommerce-d2c-espana-2026.html">
+        guía completa de Meta Ads para ecommerce en España 2026
+      </a>. Y si prefieres que gestionemos tu estrategia full-funnel directamente, agenda una llamada estratégica gratuita con nuestro equipo.
+    </p>
+        </article>
+
+        
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+  <div class="faq-item"><h3 class="faq-q">¿Qué es una estrategia full-funnel en Meta Ads?</h3><p class="faq-a">Una estrategia full-funnel en Meta Ads significa gestionar la publicidad en las tres fases del proceso de compra: TOFU (captación de audiencia fría nueva), MOFU (consideración y retargeting intermedio) y BOFU (conversión de los usuarios más cercanos a comprar). Cada fase usa formatos, audiencias y objetivos de campaña distintos.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuánto presupuesto necesito para hacer full-funnel en Meta Ads?</h3><p class="faq-a">Para una estrategia full-funnel efectiva en Meta Ads recomendamos un mínimo de 1.500€/mes de inversión publicitaria. La distribución orientativa es 60-70% en prospección (TOFU), 20-25% en retargeting MOFU y 10-15% en BOFU. Con menos presupuesto, el algoritmo no tiene suficientes datos para optimizar cada fase correctamente.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuánto tiempo tarda en funcionar una estrategia full-funnel?</h3><p class="faq-a">Los primeros resultados del funnel completo se ven entre la semana 3 y 6, una vez que las campañas de prospección han acumulado suficiente tráfico para alimentar el retargeting. El sistema alcanza su rendimiento óptimo entre el mes 2 y 3, cuando todos los segmentos tienen datos suficientes para que el algoritmo optimice bien.</p></div>
+</section>
+
+
+        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

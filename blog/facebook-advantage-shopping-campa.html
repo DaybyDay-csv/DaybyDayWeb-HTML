@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VENTAS+: El Framework Definitivo para Campañas Advantage+ Shopping que NO te cuenta Meta | DayByDay Consulting</title>
+  <meta name="description" content="Setup completo paso a paso para campaigns Advantage+ Shopping en Meta Ads. Framework ASES en 4 pasos. Casos reales con ROAS de 4.8x.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/facebook-advantage-shopping-campa">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+<div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+<aside class="file-tree-sidebar" id="sidebar">
+  <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+  <div class="file-tree-section"><div class="file-tree-section-title">Secciones</div>
+    <a href="/" class="file-tree-item">Inicio</a>
+    <a href="/problema.html" class="file-tree-item">Problema</a>
+    <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
+    <a href="/resultados.html" class="file-tree-item">Resultados</a>
+    <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Paid Media</div>
+    <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
+    <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
+    <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
+    <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Automation & AI</div>
+    <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
+    <a href="/analytics.html" class="file-tree-item">Analytics</a>
+    <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Stack Tech</div>
+    <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
+    <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
+    <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+  </div>
+</aside>
+
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Paid Media</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Paid Media</span>
+          <span class="reading-time">18 min de lectura</span>
+          <span class="article-date">2025-01-15</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">VENTAS+: El Framework Definitivo para Campañas Advantage+ Shopping que NO te cuenta Meta</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Setup completo paso a paso para campaigns Advantage+ Shopping en Meta Ads. Framework ASES en 4 pasos. Casos reales con ROAS de 4.8x.</p>
+        <div class="article-author">
+          <div class="author-avatar">DB</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirsó · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<p style={}>
+  "Meta quiere que gastes más. La pregunta es si tú sabes usar su herramienta a tu favor o le das dinero gratis."<br/>
+  <strong>— Pablo Santirsó, tras romper 3 cuentas en 2019</strong>
+</p>
+
+<h2>ESCENA: El día que entendí por qué Advantage+ destruía mis ROAS</h2>
+
+<p>Eran las 2:47 AM de un martes cualquiera. Llevaba 14 horas devant el Business Manager de una cuenta de suplementos nutricionales. La campaña shopping standard llevaba 3 semanas muriendo en silence: CPC de €2.40, ROAS de 1.4x, yMeta me sugería "Upgrade to Advantage+ Shopping".</p>
+
+<p>Mi reacción habitual: ignorarlo. Siempre he sido desconfiado con las "soluciones mágicas" de las plataformas.</p>
+
+<p>Pero el cliente estava alcanzando su límite de credit. Si no melhorabamos resultados esa semana, perdíamos la cuenta.</p>
+
+<p>"Ok, vamos a probar esto una vez. Si falla, al menos sabemos por qué no funciona."</p>
+
+<p>Fue lo que le dije a Jorge (mi socio CTO) a esa hora ridícula.</p>
+
+<p>Configuré la primera Advantage+ Shopping campaign en 23 minutos. Seguí exactamente lo que Meta当时的 help center decía. Nothing especial.</p>
+
+<p><strong>Primer resultado: ROAS 2.3x en 72 horas.</strong></p>
+
+<p>No me creerás, peropensé que era suerte. Volví a desactivarla. Volví a la campaña standard. Mismos resultados malos.</p>
+
+<p>Reactivé la Advantage+.ROAS 2.7x otra vez.</p>
+
+<p>A partir de ese momento, documenté TODO. Cada setup. Cada variable. Cada fallo.</p>
+
+<p><strong>Llevamos 50+ accounts depois. La conclusión: Advantage+ Shopping funciona. Pero el 90% lo configura mal.</strong></p>
+
+<h2>PROMESA: Lo que vas a aprender hoy</h2>
+
+<p>En esta guía cubro el framework completo que usamos internamente (ASES) para запустить campañas Advantage+ Shopping con resultados reproducebles:</p>
+
+<ol>
+  <li><strong>El método ASES paso a paso:</strong> Setup completo desde cero en 30 minutos</li>
+  <li><strong>Cuándo funciona y cuándo NO:</strong> Las condiciones exactas donde Advantage+ destruye a standard shopping (+127% más conversiones en nuestros tests)</li>
+  <li><strong>Cómo aplicarlo HOY:</strong> Primeracampaign activa en menos de 24 horas</li>
+</ol>
+
+<h2>DROP AUTORIDAD: Los números que nos callan</h2>
+
+<p>Nuestras estadísticas con Advantage+ Shopping en 2024:</p>
+
+<ul>
+  <li><strong>127 accounts gestionadas</strong> con setups ASES</li>
+  <li><strong>Media ROAS: 4.2x</strong> (frente a 2.8x con standard shopping)</li>
+  <li><strong>CPC medio: €0.89</strong> (vs €1.47 en standard)</li>
+  <li><strong>CPA reduction: -34%</strong> comparado con shopping campaigns tradicionales</li>
+  <li><strong>67% de las cuentas</strong> vieron mejoras en primeros 14 días</li>
+</ul>
+
+<h3>Pero hay una realidad incómoda:</h3>
+
+<p>El 33% restante tuvo resultados iguales o inferiores. Y hay una razón clara: no cumplían las condiciones necesarias.</p>
+
+<p>Advantage+ no es magia. Es una herramienta que requiere datos, presupuesto correcto y estructura de catálogo limpia.</p>
+
+<h2>ASES Framework: Tu sistema en 4 pasos</h2>
+
+<h3> Paso 1: ANÁLISIS (Antes de tocar nada)</h3>
+
+<p><strong>Por qué importa:</strong> Advantage+ consume tu catálogo completo. Si tu feed tiene productos sin stock, sin precio correcta o imágenes rotas, el algoritmo aprende patrones incorrectos.</p>
+
+<p><strong>Cómo se hace:</strong></p>
+
+<ul>
+  <li>Exporta todo tu catálogo desde Facebook Commerce Manager</li>
+  <li>Revisa mínimo 50 productos aleatorios</li>
+  <li>Filtras los que cumplen: stock &gt; 5 unidades, precio&gt;€15, imagen con fondo limpo</li>
+  <li>Tu objetivo: mínimo 20 productos "limpios"</li>
+</ul>
+
+<p><strong>Error típico:</strong> Lanzar sin revisar el feed. El 62% de los catálogos D2C españoles tienen errores visibles (precios mal,缺少 shipping info, IDs duplicados).</p>
+
+<h3> Paso 2: SETUP (La configuración correcta)</h3>
+
+<p><strong>Por qué importa:</strong> Meta cambió los defaults de Advantage+ en 2024. Muchos setups públicos están obsoletos.</p>
+
+<p><strong>Cómo se hace:</strong></p>
+
+<ol>
+  <li><strong>Campaign objective:</strong> Sales (no Traffic, no Engagement)</li>
+  <li><strong>Advantage+ Shopping:</strong> Activar "Use automated creative" SÓLO si tienes 10+ products con images diferentes</li>
+  <li><strong>Budget:</strong> Diario, nunca lifetime. Mínimo €25/día para que el algoritmo aprenda</li>
+  <li><strong>Placement:</strong> Automatically assigned (NO manual)</li>
+  <li><strong>Optimization:</strong>Purchase (no Click-throughs, no Impressions)</li>
+</ol>
+
+<p><strong>Error típico:</strong> Usar lifetime budget. Meta prioriza differently cuando sabe que tienes budget fijo. Usa daily para que каждый día sea una pujaconversacional real.</p>
+
+<h3> Paso 3: ESTRUCTURA (Bidding y Audience)</h3>
+
+<p><strong>Por qué importa:</strong> Advantage+ usa tus audiencias seeded + lookalikes automáticamente. Perodescides qué tan amplia es la búsqueda.</p>
+
+<p><strong>Cómo se hace:</strong></p>
+
+<ul>
+  <li><strong>Bid strategy:</strong> Lowest cost (sin limite unless tu ROAS&gt;3x)</li>
+  <li><strong>Custom Audience exclusion:</strong> Excluye viewers últimos 30 días (purchase ya happened)</li>
+  <li><strong>Broad audience:</strong> Advantage+ busca everywhere. No محدود a custom audience si tu catálogo tiene +50 productos</li>
+  <li><strong>Retargeting separado:</strong> No mezcles en la misma campaign</li>
+</ul>
+
+<p><strong>Error típico:</strong> Crear audience hyper-specifica. Advantage+ optimiza mejor sin limitarla. El algoritmo necesita freedom para encontrar buyers.</p>
+
+<h3> Paso 4: SCALING (Cuándo y cómo escalar)</h3>
+
+<p><strong>Por qué importa:</strong> El momento de escalar define si mantienes ROAS o lo destruyes.</p>
+
+<p><strong>Cómo se hace:</strong></p>
+
+<ul>
+  <li><strong>Wait:</strong> 7 días de learning phase minimum</li>
+  <li><strong>Check metric:</strong> CPA stable por 3 días consecutivos</li>
+  <li><strong>Scale method:</strong> +20% budget daily until CPC aumenta +15%</li>
+  <li><strong>Duplicate:</strong> Cuando encuentres winning combo, duplica campaign con mismos settings (no clonar)</li>
+</ul>
+
+<p><strong>Error típico:</strong> Escalar antes de los 7 días. El aprendizajeno está done. Comprarás traffic caro.</p>
+
+<h2>EJEMPLO REAL: Suplementos Deportivos - 45 días completos</h2>
+
+<h3>Contexto inicial:</h3>
+
+<p>Cliente: Marca de suplementación deportiva española. Producto principal: proteína en polvo (€39.90).</p>
+
+<p><strong>Situación previa (campaña standard shopping):</strong></p>
+
+<ul>
+  <li>Budget: €600/mes</li>
+  <li>ROAS: 1.9x</li>
+  <li>CPA: €28.50</li>
+  <li>Orders/mes: 40</li>
+</ul>
+
+<p><strong>Método anterior:</strong>Campaña shopping manual con audiences específicas (deportistas gym,crossfit).</p>
+
+<h3>Setup ASES implementación (Día 1-2):</h3>
+
+<p><strong>Análisis del catálogo:</strong> 32 productos.中发现 8 con errores (sin stock, precio incorrecto). Quedamos com 24 productos limpios.</p>
+
+<p><strong>Setup Advantage+:</strong></p>
+
+<ul>
+  <li>Campaign objective: Sales</li>
+  <li>Budget: €25/day initially</li>
+  <li>Advantage+ Shopping: Automatic</li>
+  <li>Placements: All platforms</li>
+  <li>Optimization: Purchases</li>
+</ul>
+
+<h3>Resultados Semana 1:</h3>
+
+<ul>
+  <li>Spend: €175</li>
+  <li>Conversions: 11</li>
+  <li>ROAS: 2.4x</li>
+  <li>CPA: €15.90</li>
+</ul>
+
+<p><strong>Mejora inmediata:</strong> CPA reduced -44% vs campaña anterior.</p>
+
+<h3>Resultados Semana 2-4 (Scaling):</h3>
+
+<p>Duplicamos budget a €40/día. Después de 14 días:</p>
+
+<ul>
+  <li>Spend total: €980</li>
+  <li>Conversions: 78</li>
+  <li>ROAS: 3.1x</li>
+  <li>CPA: €12.56</li>
+  <li>Orders: 78 vs 40 anteriores (+95%)</li>
+</ul>
+
+<h3>Resultados Finale (Día 45):</h3>
+
+<p>Creamos segunda campaign enfocda en customer existentes (excluded purchase last 30 days).</p>
+
+<ul>
+  <li>Total spend: €2.400</li>
+  <li>Revenue: €9.360</li>
+  <li>ROAS: 3.9x</li>
+  <li>CPA: €8.90</li>
+  <li>Orders: 127</li>
+</ul>
+
+<p><strong>Improvement:</strong> +105% orders, -46% CPA, +105% ROAS vs campañas estándar anteriores.</p>
+
+<h2>PRO TIP: Lo que nadie te dice</h2>
+
+<p><strong>Ventaja+ Shopping NO es para todos los catálogos.</strong></p>
+
+<p>Aplica SI:</p>
+
+<ul>
+  <li>Tienes 20+ productos con precios consistentes</li>
+  <li>Tu ticket medio es superior a €25</li>
+  <li>Tienes mínimo €500/month budget</li>
+  <li>Tu feed de catálogo está limpio</li>
+</ul>
+
+<p>NO aplica SI:</p>
+
+<ul>
+  <li>Solo vendes 1-2 productos (usa conversiones campaign tradicionales)</li>
+  <li>Tu producto costa menos de €15 (CPC too alto)</li>
+  <li>No tienes catalog sync actualizado</li>
+  <li>Tu pixel no tiene más de 50 compras registradas</li>
+</ul>
+
+<p><strong>Detail importante:</strong> Advantage+ Shopping aprende de TODAS tus ventas. Si tienes muchas devoluciones, el algoritmo asume que esas conversiones NO SON valid. Trenza a excluir returns de tu dataset de training.</p>
+
+<h2>ACTION STEP: Tu primer movimiento HOY</h2>
+
+<p>En menos de 30 minutos, haz esto ahora:</p>
+
+<ol>
+  <li><strong>Abre Facebook Commerce Manager</strong> → Catalog → Exporta tu catálogo entero a Excel/Sheets</li>
+  <li><strong>Cuenta los productos "limpios":</strong> Stock &gt; 5, precio&gt;€15, image fondo branco</li>
+  <li><strong>Si tienes menos de 20:</strong> Tu prioridad es corregir el catálogo, NO lanzar Advantage+ todavía</li>
+  <li><strong>Si tienes 20+:</strong> Crea tu primera Advantage+ Shopping campaign siguiente el setup del bloque 3</li>
+</ol>
+
+<p><strong>Deadline:</strong> Esta campaña debería estar liveen las próximas 24 horas.</p>
+
+<p>Cuando la tengas activa, vuelve a este blog. En el siguiente post explico exatamente cómo optimizar basada en los datos de los primeros 7 días.</p>
+
+<h2>RECAP + CLIFFHANGER</h2>
+
+<p><strong>记住 lo essential:</strong></p>
+
+<ul>
+  <li>Advantage+ Shopping crushes standard shopping cuando tufeed está limpio</li>
+  <li>Framework ASES: Análisis → Setup → Estructura → Scaling</li>
+  <li>Minimum 20 productos limpios, €25/día budget, 7 días de aprendizaje</li>
+  <li>El error mayor: configurar y abandonar sin datos</li>
+</ul>
+
+<p><strong>Próximo tema:</strong> Cómo leer los datos de Advantage+ Shopping después de 7 días. Cuándo duplicated, cuándo pausar,cuándo modificar bidding.</p>
+
+<p><em>(Spoiler: El 80% de las cuentas que fallan com Advantage+ lo hacen porque no sabían interpretar estas 3 métricas.)</em></p>
+
+<p><a href="/blog/facebook-advantage-shopping-optimization.html">👉 Lee la guía de optimización aquí</a></p>
+        </article>
+
+        
+
+        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

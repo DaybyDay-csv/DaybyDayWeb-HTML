@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automatizaciones y reglas en Meta Ads Manager para escalar (D2C 2026) | DayByDay Consulting</title>
+  <meta name="description" content="Cómo usar reglas automáticas y automatizaciones en Meta Ads Manager para escalar campañas D2C sin romper el learning phase: tipos de reglas (control, escalado, notificación), umbrales realistas, niveles correctos (campaña/ad set/anuncio), errores que rompen el algoritmo y cuándo conviene saltar a Marketing API con scripts externos.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/automatizaciones-reglas-meta-ads-manager">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+<div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+<aside class="file-tree-sidebar" id="sidebar">
+  <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+  <div class="file-tree-section"><div class="file-tree-section-title">Secciones</div>
+    <a href="/" class="file-tree-item">Inicio</a>
+    <a href="/problema.html" class="file-tree-item">Problema</a>
+    <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
+    <a href="/resultados.html" class="file-tree-item">Resultados</a>
+    <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Paid Media</div>
+    <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
+    <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
+    <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
+    <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Automation & AI</div>
+    <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
+    <a href="/analytics.html" class="file-tree-item">Analytics</a>
+    <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Stack Tech</div>
+    <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
+    <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
+    <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+  </div>
+</aside>
+
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Operaciones</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Operaciones</span>
+          <span class="reading-time">9 min de lectura</span>
+          <span class="article-date">2026-05-04</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Automatizaciones y reglas en Meta Ads Manager para escalar (D2C 2026)</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Cómo usar reglas automáticas y automatizaciones en Meta Ads Manager para escalar campañas D2C sin romper el learning phase: tipos de reglas (control, escalado, notificación), umbrales realistas, niveles correctos (campaña/ad set/anuncio), errores que rompen el algoritmo y cuándo conviene saltar a Marketing API con scripts externos.</p>
+        <div class="article-author">
+          <div class="author-avatar">DB</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirsó · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<p class="text-white/70 leading-relaxed mb-5">
+      Las <strong class="text-white">automatizaciones y reglas en Meta Ads Manager</strong> son la diferencia entre una cuenta D2C que escala con disciplina y otra donde el media buyer se pasa el día persiguiendo CPAs y apagando creativos a mano. Bien configuradas amplifican una buena estrategia; mal configuradas rompen el learning phase y dejan la cuenta en bucle de inestabilidad. La gran mayoría de cuentas que auditamos no usan reglas porque "se han quemado" antes — siempre por automatizar acciones demasiado agresivas sobre ventanas demasiado cortas.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-5">
+      En esta guía cubrimos qué reglas merecen la pena, en qué nivel aplicarlas, qué umbrales son seguros y cuándo conviene salir de Ads Manager hacia la Marketing API.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Tres familias de reglas en Meta Ads Manager</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Antes de configurar nada, ubica cada regla en una de estas tres categorías. Mezclarlas en una sola regla mal pensada es la primera fuente de problemas:
+    </p>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Familia</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Qué hace</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Riesgo</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Nivel ideal</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ,
+            ,
+            ,
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white font-medium text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Como recoge la <a href="https://www.facebook.com/business/help/1064323036022510" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">documentación oficial de reglas automatizadas de Meta</a>, las acciones se aplican sobre ventanas que van desde el día actual hasta los últimos 30 días — elegir bien la ventana es lo que separa una regla útil de un cuchillo en la cuenta.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Reglas que merecen la pena en cuentas D2C</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      No todas las reglas que sugiere Meta valen para eCommerce D2C. Estas son las que mantenemos activas en cuentas gestionadas con &gt;5.000€/mes de spend:
+    </p>
+    <div class="space-y-3 mb-6">
+      {[
+        "Pausa creativo fatigado: frequency >4 AND CTR (todos) <0,8% AND impresiones >3.000 últimos 7d → pausar anuncio + notificar. Evita gastar en creativos quemados.",
+        "Pausa ad set sin compras: spend 2x CPA objetivo AND 0 compras en últimos 3 días → pausar ad set + notificar. Solo tiene sentido si hay reposición de ad sets activa.",
+        "Escalado conservador: ROAS últimos 3d ≥ ROAS objetivo × 1,2 AND frequency <3 AND spend ≥70% del presupuesto → subir presupuesto +15%. Máx una vez cada 3 días.",
+        "Bajada por bajo rendimiento: ROAS últimos 3d <ROAS suelo × 0,8 → bajar presupuesto -20% y notificar. No pausar — bajar mantiene aprendizaje vivo.",
+        "Aviso learning limited: ad set en estado 'learning limited' >5 días → email al equipo. Solo notifica, decisión humana.",
+        "Tope de gasto diario: si spend del día >130% del presupuesto plan → pausar campaña + Slack al lead. Red de seguridad, no operativa.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Errores frecuentes que rompen el aprendizaje</h2>
+    <div class="space-y-3 mb-6">
+      {[
+        "Reglas que evalúan cada 30 minutos: Meta optimiza sobre ventanas de 24-72h, nada más corto tiene sentido. Frecuencia de evaluación mínima recomendada: diaria.",
+        "Subidas o bajadas 30% automatizadas: cualquier cambio mayor resetea o degrada el learning. La regla del 15-20% existe por motivos algorítmicos, no por estética.",
+        "Reglas de pausa/reactivación del mismo ad set: cada pausa+reactivación reinicia el aprendizaje. Mejor bajar presupuesto que pausar y reactivar 24h después.",
+        "Reglas que actúan sobre cuentas con <50 conv/sem por ad set: el sistema decide sobre ruido, no sobre patrón. En presupuestos pequeños, mejor revisión manual semanal.",
+        "Reglas de pausa por CPA en evento secundario (ATC, IC) cuando se optimiza a Purchase: confunden la lectura del algoritmo y generan pausas espurias.",
+        "Reglas en Advantage+ Shopping a nivel ad set: en ASC el ad set deja de ser unidad de optimización; las reglas deben ir a nivel campaña o no aplicarse.",
+        "Apilar muchas reglas que se contradicen: una regla sube +15% por ROAS bueno y otra baja -20% por CPA alto el mismo día. Auditar conflictos antes de activar.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cuándo subir a Marketing API y scripts externos</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      Las reglas nativas cubren el 70-80% de casos. El salto a la <a href="https://developers.facebook.com/docs/marketing-apis/" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Marketing API de Meta</a> con scripts en n8n, Make o servidores propios solo compensa cuando hay valor recurrente que las reglas nativas no resuelven:
+    </p>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Caso de uso</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Por qué nativo no llega</th>
+            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Stack típico</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ,
+            ,
+            ,
+            ,
+            ,
+          ].map((row, i) => (
+            <tr key= class="border-b border-white/5 hover:bg-white/2">
+              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
+              <td class="py-3 px-3 text-white/60 text-xs"></td>
+              <td class="py-3 px-3 text-white font-medium text-xs"></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      La regla práctica: si una automatización requiere mantenimiento técnico mensual y no genera al menos 2-3% de eficiencia adicional sobre el spend, no compensa. La fricción de mantener scripts custom (cambios en la API, tokens que caducan, edge cases) suma horas que en cuentas medianas (&lt;30K€/mes spend) rara vez se recuperan.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cómo trabajamos en DayByDay</h2>
+    <div class="space-y-3 mb-6">
+      {[
+        "Auditoría inicial: revisamos qué reglas existen, conflictos entre ellas, frecuencia de evaluación y ventanas. En 8 de cada 10 cuentas hay reglas heredadas que ejecutan acciones sin que nadie las controle.",
+        "Stack base por cuenta: 4-6 reglas nativas máximo, todas con ventanas mínimas de 3 días, evaluación diaria, y limitadas en frecuencia de acción (no más de 1 acción/ad set/semana).",
+        "Documentación obligatoria: cada regla activa tiene una ficha que explica qué hace, por qué, qué umbral usa y qué se mide para validar que rinde. Sin ficha, la regla se elimina.",
+        "Revisión mensual: comparamos qué decisiones tomaron las reglas frente a qué habría decidido un humano con el mismo dato. Si la regla acertó <70% de las veces, se reajusta o se quita.",
+        "Salto a Marketing API solo cuando hay caso de uso recurrente y valor cuantificable: lo más habitual son automatizaciones por inventario y bid caps por margen real, casi nunca lógica de pujas.",
+        "Punto de corte: si la cuenta no tiene volumen suficiente (>5.000€/mes spend, &gt;100 conv/mes), no activamos automatizaciones — la revisión semanal humana rinde más que cualquier regla sobre poco dato.",
+      ].map((item) => (
+        <div key= class="flex items-start gap-2 text-white/60 text-sm">
+          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+
+    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-6 mb-8 text-center">
+      <p class="font-bold text-white text-lg mb-2">¿Tienes reglas activas que nadie revisa hace meses?</p>
+      <p class="text-white/50 text-sm mb-4">Auditoría gratuita 30 min: revisamos todas las reglas activas en tu cuenta Meta Ads, conflictos, ventanas mal configuradas y oportunidades de automatización segura sin romper learning phase.</p>
+      <button>
+        Solicitar auditoría gratuita →
+      </button>
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Artículos relacionados</h2>
+    <div class="space-y-3">
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/escalar-campanas-meta-ads-sin-romper-roas.html">
+          Cómo escalar campañas Meta Ads sin romper el ROAS →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Las reglas de escalado automatizado son una de las palancas — aquí el marco completo para subir presupuesto sin reset</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/presupuesto-minimo-meta-ads-ecommerce.html">
+          Presupuesto mínimo Meta Ads: ¿cuánto necesito invertir? →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Por qué automatizar reglas en cuentas con poco volumen es contraproducente y dónde está el suelo operativo</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/checklist-auditoria-campanas-paid-media.html">
+          Checklist para auditar campañas de paid media →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Cómo detectar reglas heredadas mal configuradas y conflictos entre automatizaciones en una cuenta nueva</p>
+      </div>
+      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
+        <a href="/blog/advantage-plus-shopping-cuando-usarlo-no.html">
+          Advantage+ Shopping Campaign: cuándo usarlo y cuándo no →
+        </a>
+        <p class="text-white/40 text-xs mt-1">Por qué en ASC las reglas deben ir a nivel campaña y no ad set</p>
+      </div>
+    </div>
+        </article>
+
+        
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+  <div class="faq-item"><h3 class="faq-q">¿Qué tipo de reglas automáticas se pueden crear en Meta Ads Manager?</h3><p class="faq-a">Meta Ads Manager permite tres familias de reglas: (1) reglas de control de presupuesto y pausa (apagar ad sets que superen un CPA umbral, pausar creativos con frequency \u003e5, desactivar ad sets con g\u003esto >X y 0 compras); (2) reglas de escalado (subir presupuesto +15-20\u003e si ROAS >objetivo durante 3 días, bajarlo si ROAS <suelo); (3) reglas de notificación (avisar por email cuando un ad set entra en learning limited, cuando un creativo cae por debajo de CTR mínimo, cuando el spend acumulado del día supera el plan). Las dos primeras actúan sobre la cuenta; las terceras solo informan y dejan al equipo decidir.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuándo es contraproducente automatizar reglas en Meta Ads?</h3><p class="faq-a">Automatizar agresivamente sobre cuentas con poco volumen o en learning phase rompe el aprendizaje del algoritmo. Si un ad set tiene <50 conversiones/semana cualquier regla de pausa por CPA opera sobre ruido estadístico — un día malo no significa que el ad set rinda mal. Tampoco compensa automatizar subidas de presupuesto \u003e30% (resetea learning) ni reglas que se ejecuten cada 30 minutos (Meta evalúa rendimiento sobre ventanas de 24-72h). Las reglas funcionan cuando hay volumen suficie\u003ete (>5.000€/m\u003es spend, &gt;100 conversiones/mes) y se aplican sobre ventanas de mínimo 3 días.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo configuro una regla para pausar creativos fatigados automáticamente?</h3><p class="faq-a">Regla típica: condición = frequency \u003e4 AND CTR (todos) <0,8% AND impresi\u003enes >3.000 en últimos 7 días → acción = pausar creativo + notificación email. La frecuencia de evaluación debe ser diaria (no cada hora) y el ámbito a nivel anuncio individual, no ad set. Esta regla se complementa con otra que active rotación: cuando un creativo se pausa, el equipo recibe alerta para introducir variante nueva en 24-48h. Sin sistema de reposición la regla solo apaga inventario y deja la campaña sin combustible.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué reglas de escalado automatizadas funcionan mejor para D2C?</h3><p class="faq-a">La regla de escalado conservador que aplicamos en cuentas D2C: si ROAS últimos 3 días ≥ROAS objetivo × 1,2 AND spend del ad set ≥ 70% del presupuesto AND frequency <3 → subir presupuesto +15% (no más). Evaluación cada 3 días, máximo 2 subidas consecutivas antes de pausar la regla durante 7 días para verificar estabilidad. Para bajadas: si ROAS últimos 3 días <ROAS suelo × 0,8 → bajar presupuesto -20% y notificar. Estas reglas evitan picos manuales emocionales y mantienen la cuenta en una banda controlada, pero no sustituyen la revisión semanal humana del estado del aprendizaje.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Conviene automatizar reglas a nivel de campaña, ad set o anuncio?</h3><p class="faq-a">Depende de la decisión. Reglas de gasto y ROAS funcionan mejor a nivel ad set (es donde Meta optimiza el aprendizaje). Reglas de fatiga creativa van a nivel anuncio (frequency y CTR son del creativo, no del ad set). Reglas de presupuesto diario máximo o de pausa total por gasto excedido conviene tenerlas a nivel campaña como red de seguridad. Si usas Advantage+ Shopping con CBO, la mayoría de reglas se aplican a campaña porque ad sets dejan de ser unidad de optimización. Configurar reglas en el nivel equivocado genera falsos positivos (pausar ad sets enteros cuando solo un creativo fatigaba).</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo combino reglas automáticas con scripts externos o APIs para más control?</h3><p class="faq-a">Meta Ads Manager cubre el 70-80% de los casos comunes con reglas nativas. Para lógica avanzada (cross-cuenta, condiciones que dependan de datos externos como inventario Shopify o métricas LTV) se usa la Marketing API con scripts que corren en n8n, Make o servidores propios. Casos típicos: pausar creativos cuando un SKU se queda sin stock, ajustar bid cap automáticamente según margen del producto, mover presupuesto entre cuentas según ROAS comparado. La regla práctica: empezar siempre con reglas nativas, solo subir a API cuando una limitación específica lo justifica. La API añade fricción de mantenimiento que solo se compensa si genera valor recurrente.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Las reglas automáticas pueden romper el aprendizaje del algoritmo?</h3><p class="faq-a">Sí, y es el error más común. Cualquier cambio de presupuesto \u003e30%, cambio de objetivo, edición de audiencia o pausa/reactivación frecuente del mismo ad set resetea o degrada el aprendizaje. Las reglas que ejecutan acciones fuertes (subir presupuesto +50% al detectar buen ROAS, pausar y reactivar al día siguiente) parecen reactivas pero generan inestabilidad estructural. La regla de oro: las acciones automáticas deben ser conservadoras (±15-20%), evaluarse sobre ventanas mínimas de 72h y limitarse en frecuencia (no más de una acción significativa por ad set por semana). Con esa disciplina las reglas amplifican una buena estrategia; sin ella, la rompen.</p></div>
+</section>
+
+
+        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

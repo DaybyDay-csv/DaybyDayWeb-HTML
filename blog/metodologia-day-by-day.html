@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Metodología DayByDay: Cómo Combinamos IA, Automatización y Paid Media para Escalar tu Negocio | DayByDay Consulting</title>
+  <meta name="description" content="Descubre cómo DayByDay Consulting combina inteligencia artificial, automatización de procesos y estrategia de paid media full-funnel para conseguir más clientes con el mismo equipo.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/metodologia-day-by-day">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+<div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+<aside class="file-tree-sidebar" id="sidebar">
+  <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+  <div class="file-tree-section"><div class="file-tree-section-title">Secciones</div>
+    <a href="/" class="file-tree-item">Inicio</a>
+    <a href="/problema.html" class="file-tree-item">Problema</a>
+    <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
+    <a href="/resultados.html" class="file-tree-item">Resultados</a>
+    <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Paid Media</div>
+    <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
+    <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
+    <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
+    <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Automation & AI</div>
+    <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
+    <a href="/analytics.html" class="file-tree-item">Analytics</a>
+    <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
+  </div>
+  <div class="file-tree-section"><div class="file-tree-section-title">Stack Tech</div>
+    <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
+    <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
+    <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+  </div>
+</aside>
+
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Estrategia</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Estrategia</span>
+          <span class="reading-time">9 min de lectura</span>
+          <span class="article-date">2026-03-10</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">La Metodología DayByDay: Cómo Combinamos IA, Automatización y Paid Media para Escalar tu Negocio</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Descubre cómo DayByDay Consulting combina inteligencia artificial, automatización de procesos y estrategia de paid media full-funnel para conseguir más clientes con el mismo equipo.</p>
+        <div class="article-author">
+          <div class="author-avatar">DB</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirsó · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<h2 class="text-2xl font-black mt-10 mb-4">Por qué la mayoría de agencias de marketing no escalan</h2>
+    <p class="text-white/70 leading-relaxed mb-5">
+      El problema de la mayoría de agencias de marketing digital es que venden servicios, no sistemas. Gestionan tus campañas de Meta Ads o Google Ads, te dan un informe mensual y el siguiente mes repiten el proceso. El rendimiento depende de la habilidad manual del ejecutor y del tiempo disponible — y ambas cosas tienen un techo muy claro.
+    </p>
+    <p class="text-white/70 leading-relaxed mb-5">
+      En DayByDay hemos construido una metodología distinta. En lugar de más horas o más personas, usamos tres pilares que se refuerzan entre sí: inteligencia artificial para procesar datos y anticipar decisiones, automatización de procesos para ejecutar tareas repetitivas sin intervención humana, y paid media full-funnel para traducir esa eficiencia en ingresos reales. El resultado es un sistema de crecimiento que escala contigo, no uno que te frena.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Los tres pilares de la metodología DayByDay</h2>
+
+    <h3 class="text-lg font-bold mt-8 mb-3">Pilar 1: Inteligencia Artificial aplicada al paid media</h3>
+    <p class="text-white/70 leading-relaxed mb-4">
+      La inteligencia artificial no reemplaza la estrategia — la acelera. En DayByDay aplicamos IA en tres puntos críticos del proceso de paid media donde el margen de mejora es mayor:
+    </p>
+    <div class="space-y-3 mb-6">
+      {[
+        {
+          titulo: "Análisis predictivo de audiencias",
+          desc: "Antes de lanzar una campaña, analizamos patrones de comportamiento en los datos históricos para identificar qué segmentos tienen mayor probabilidad de conversión. Esto reduce el periodo de aprendizaje del algoritmo y el coste por resultado en las primeras semanas.",
+        },
+        {
+          titulo: "Optimización dinámica de presupuesto",
+          desc: "Monitorizamos el rendimiento en tiempo real y redistribuimos presupuesto automáticamente hacia los anuncios y audiencias con mejor ROAS. Lo que antes tardaba días en ajustarse manualmente, ahora ocurre en horas.",
+        },
+        {
+          titulo: "Producción y test de creatividades a escala",
+          desc: "Generamos más de 30 variaciones creativas por ciclo (copy, imagen, formato, CTA) y usamos el modelo de Advantage+ de Meta junto con nuestro propio sistema de scoring para identificar las ganadoras en días. La fatiga creativa deja de ser un problema.",
+        },
+      ].map(() => (
+        <div key= class="bg-[#1a1616] border border-white/8 rounded-xl p-5">
+          <div class="font-bold text-sm text-white mb-2"></div>
+          <div class="text-white/60 text-sm leading-relaxed"></div>
+        </div>
+      ))}
+    </div>
+
+    <h3 class="text-lg font-bold mt-8 mb-3">Pilar 2: Automatización de procesos de marketing</h3>
+    <p class="text-white/70 leading-relaxed mb-4">
+      La automatización no es un complemento — es lo que permite que el sistema funcione sin intervención manual constante. Identificamos los procesos repetitivos de tu operación de marketing y los convertimos en flujos automáticos que se ejecutan solos, sin errores y a cualquier hora.
+    </p>
+    <div class="space-y-3 mb-6">
+      {[
+        "Flujos de email marketing automatizados según comportamiento del usuario (abandono de carrito, post-compra, reactivación)",
+        "CRM automatizado con lead scoring y nurturing segmentado por etapa del embudo",
+        "Reporting automático de KPIs con alertas cuando un indicador sale del rango objetivo",
+        "Sincronización automática de datos entre plataformas (Meta, Google, Shopify, CRM)",
+        "Automatización de respuestas en canales de atención al cliente para consultas frecuentes",
+      ].map((item) => (
+        <div key= class="flex items-start gap-3 text-sm text-white/70">
+          <span class="text-[#f0a500] mt-0.5 flex-shrink-0">→</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+    <p class="text-white/70 leading-relaxed mb-4">
+      El resultado directo es que tu equipo dedica tiempo a decisiones estratégicas en lugar de tareas operativas. Y en nuestro caso, que podemos gestionar más cuentas con mayor calidad sin añadir más personas al equipo.
+    </p>
+
+    <h3 class="text-lg font-bold mt-8 mb-3">Pilar 3: Estrategia de paid media full-funnel</h3>
+    <p class="text-white/70 leading-relaxed mb-4">
+      La IA y la automatización no sirven de nada si la estrategia de medios está mal estructurada. El tercer pilar es la estrategia full-funnel: gestionar simultáneamente las tres fases del customer journey para que el sistema de adquisición funcione como un todo coherente.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+      {[
+        {
+          fase: "TOFU",
+          nombre: "Top of Funnel",
+          objetivo: "Conciencia de marca",
+          canales: "Meta Ads (frío), Google Display, YouTube",
+          kpi: "CPM, alcance, tasa de reproducción",
+          color: "text-blue-400",
+        },
+        {
+          fase: "MOFU",
+          nombre: "Middle of Funnel",
+          objetivo: "Consideración",
+          canales: "Meta Ads (retargeting suave), Google Shopping",
+          kpi: "CTR, visitas a ficha de producto, add-to-cart",
+          color: "text-yellow-400",
+        },
+        {
+          fase: "BOFU",
+          nombre: "Bottom of Funnel",
+          objetivo: "Conversión",
+          canales: "Meta Retargeting (7d/14d), Google Brand Search",
+          kpi: "ROAS, CPA, tasa de conversión",
+          color: "text-green-400",
+        },
+      ].map(() => (
+        <div key= class="bg-[#1a1616] border border-white/8 rounded-xl p-5">
+          <div className=font-black text-lg mb-1 $></div>
+          <div class="text-white/40 text-xs mb-3"></div>
+          <div class="text-xs text-white/70 mb-2"><span class="text-white/40">Objetivo: </span></div>
+          <div class="text-xs text-white/70 mb-2"><span class="text-white/40">Canales: </span></div>
+          <div class="text-xs text-white/70"><span class="text-white/40">KPI: </span></div>
+        </div>
+      ))}
+    </div>
+
+    <p class="text-white/70 leading-relaxed mb-5">
+      El error más frecuente en eCommerce es invertir solo en BOFU (retargeting a usuarios que ya han visitado la web) y preguntarse por qué el ROAS cae cada trimestre. La respuesta es sencilla: si no metes audiencias nuevas en el TOFU, el BOFU se agota. Una estrategia full-funnel bien ejecutada mantiene el ROAS estable o creciente a lo largo del tiempo porque siempre hay demanda entrando por arriba.
+    </p>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Cómo se aplica la metodología: el proceso en 4 fases</h2>
+
+    <div class="space-y-4 mb-8">
+      {[
+        {
+          num: "01",
+          titulo: "Diagnóstico y auditoría de datos",
+          desc: "Antes de tocar ninguna campaña, analizamos en profundidad los datos históricos: rendimiento por campaña, segmento y creativo; estructura del pixel de Meta y del tag de Google; calidad del CRM y del flujo de datos entre plataformas. Este diagnóstico define la hoja de ruta completa.",
+        },
+        {
+          num: "02",
+          titulo: "Diseño de la arquitectura de campañas",
+          desc: "Construimos la estructura full-funnel adaptada a tu negocio: qué canales usar en cada fase, qué audiencias construir, qué mensajes llevan cada etapa y cómo se comunican las campañas entre sí. No usamos plantillas — cada arquitectura es específica para el modelo de negocio, el ticket medio y el ciclo de compra del cliente.",
+        },
+        {
+          num: "03",
+          titulo: "Activación con test de aprendizaje acelerado",
+          desc: "En las primeras 4-6 semanas lanzamos versiones paralelas con variaciones controladas (audiencias, creatividades, formatos) para que el algoritmo aprenda rápido. Usamos más de 30 variantes creativas desde el primer día para minimizar el riesgo de fatiga en el periodo de aprendizaje.",
+        },
+        {
+          num: "04",
+          titulo: "Optimización y escalado sistemático",
+          desc: "A partir del mes 2, con datos suficientes, empezamos a escalar lo que funciona y a podar lo que no. El escalado no es solo subir presupuesto — es expandir audiencias, multiplicar los creativos ganadores y activar nuevos canales de forma escalonada para no romper el rendimiento.",
+        },
+      ].map(() => (
+        <div key= class="flex gap-5 bg-[#1a1616] border border-white/8 rounded-xl p-5">
+          <div class="font-black text-3xl text-white/10 flex-shrink-0 leading-none"></div>
+          <div>
+            <div class="font-bold text-white text-sm mb-2"></div>
+            <div class="text-white/60 text-sm leading-relaxed"></div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">Resultados reales con la metodología DayByDay</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      La metodología no es una promesa — es el proceso detrás de los resultados que hemos conseguido para nuestros clientes:
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+      {[
+        {
+          cliente: "Garett España",
+          sector: "eCommerce tecnología",
+          resultado: "CPA de 4,8€",
+          contexto: "3.179€ invertidos, 14.936 clicks, 661 inicios de pago en Meta Ads",
+        },
+        {
+          cliente: "Evercreate × Universidad privada",
+          sector: "Educación superior",
+          resultado: "CTR 10,35% en Google Ads",
+          contexto: "253.679€ gestionados, CPC de 0,24€ en Meta Ads lead gen",
+        },
+        {
+          cliente: "Clientes D2C moda",
+          sector: "Fashion eCommerce",
+          resultado: "ROAS 4x-7x sostenido",
+          contexto: "Full-funnel con +30 variantes creativas por ciclo y Advantage+ Shopping",
+        },
+        {
+          cliente: "Clientes sector salud",
+          sector: "Health & Wellness",
+          resultado: "CAC reducido -35%",
+          contexto: "Automatización CRM + retargeting segmentado por comportamiento de compra",
+        },
+      ].map(() => (
+        <div key= class="bg-[#1a1616] border border-white/8 rounded-xl p-5">
+          <div class="text-white/40 text-xs uppercase tracking-wider mb-1"></div>
+          <div class="font-bold text-white text-sm mb-1"></div>
+          <div class="font-black text-xl text-white mb-2"></div>
+          <div class="text-white/50 text-xs leading-relaxed"></div>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="text-2xl font-black mt-10 mb-4">¿Esta metodología es para tu empresa?</h2>
+    <p class="text-white/70 leading-relaxed mb-4">
+      La metodología DayByDay funciona mejor para empresas con estas características:
+    </p>
+    <div class="space-y-2 mb-6">
+      {[
+        "eCommerce B2C o D2C con facturación mensual de al menos 50.000€",
+        "Inversión en paid media de 5.000€/mes o superior (o voluntad de llegar ahí)",
+        "Producto o servicio con márgenes suficientes para sostener paid media (margen bruto 30%)",
+        "Empresa con voluntad de escalar: no buscar solo 'mantener' sino crecer de forma medible",
+        "Disposición a compartir datos de negocio (márgenes, LTV, datos CRM) para tomar decisiones reales",
+      ].map((item) => (
+        <div key= class="flex items-start gap-3 text-sm text-white/70">
+          <span class="text-green-400 mt-0.5 flex-shrink-0">✓</span>
+          <span></span>
+        </div>
+      ))}
+    </div>
+    <p class="text-white/70 leading-relaxed mb-5">
+      Si tu empresa cumple estos criterios y quieres entender cómo aplicar la metodología DayByDay a tu caso concreto, el primer paso es una consulta estratégica gratuita donde analizamos tu situación actual y te proponemos una hoja de ruta específica.
+    </p>
+    <p class="text-white/70 leading-relaxed">
+      También puedes explorar en detalle cada uno de los servicios que forman la metodología:
+      <a href="/servicios/paid-media.html">estrategia de paid media</a>,
+      <a href="/servicios/automatizacion.html">automatización de marketing</a> y
+      <a href="/servicios/meta-ads.html">gestión de Meta Ads</a>.
+      Si quieres ver la metodología en acción con datos reales, consulta nuestro
+      <a href="/blog/caso-exito-ecommerce-d2c-roas-meta-ads.html">
+        caso de éxito: eCommerce D2C +156% ROAS en 90 días con Meta Ads
+      </a>.
+    </p>
+        </article>
+
+        
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+  <div class="faq-item"><h3 class="faq-q">¿Qué diferencia a DayByDay de otras agencias de marketing digital?</h3><p class="faq-a">La diferencia principal es la combinación de tres pilares que pocas agencias aplican juntos: inteligencia artificial para análisis y optimización en tiempo real, automatización de procesos para reducir trabajo manual y escalar sin aumentar equipo, y estrategia de paid media full-funnel con foco en resultados medibles (ROAS, CPA, CAC). No gestionamos campañas por separado — construimos ecosistemas de crecimiento integrados.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo usa DayByDay la inteligencia artificial en sus campañas?</h3><p class="faq-a">Usamos IA en tres áreas: (1) análisis predictivo de audiencias para identificar los segmentos con mayor probabilidad de conversión antes de lanzar campañas, (2) optimización dinámica de pujas y presupuestos basada en señales de rendimiento en tiempo real, y (3) generación y prueba de variaciones creativas a escala — podemos testear 30+ variantes simultáneas y el algoritmo identifica las ganadoras en horas, no semanas.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué tipo de empresas trabajan con DayByDay?</h3><p class="faq-a">Trabajamos principalmente con empresas B2C y D2C en España con inversiones en paid media de entre 5.000€ y 100.000€ al mes. Nuestros clientes principales están en los sectores de moda, educación, salud y bienestar, y tecnología de consumo. Lo que tienen en común es que quieren crecer de forma escalable sin aumentar el coste fijo de su equipo interno.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué es una estrategia full-funnel y por qué es importante?</h3><p class="faq-a">Una estrategia full-funnel gestiona las tres fases del customer journey: TOFU (conciencia de marca, audiencias frías), MOFU (consideración, usuarios que ya conocen la marca) y BOFU (conversión, retargeting de alta intención). La mayoría de empresas solo invierten en BOFU (retargeting) y se preguntan por qué el ROAS cae con el tiempo: es porque no están alimentando el embudo con audiencias nuevas.</p></div>
+</section>
+
+
+        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
+          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>
