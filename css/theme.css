@@ -105,15 +105,16 @@
   transform: translateX(-50%) translateY(0);
 }
 
-/* Mega Menu for Servicios - left-aligned instead of centered */
+/* Mega Menu for Servicios - centered on button with overflow protection */
 .nav-dropdown-content.mega {
   min-width: 680px;
   max-width: 90vw;
-  left: 0;
-  transform: translateX(0) translateY(8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  overflow-x: auto;
 }
 .nav-dropdown:hover .nav-dropdown-content.mega {
-  transform: translateX(0) translateY(0);
+  transform: translateX(-50%) translateY(0);
 }
 
 /* Grid layout for mega menu */
