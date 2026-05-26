@@ -1,3 +1,46 @@
+/* Navigation Dropdowns */
+.nav-dropdown { position: relative; display: inline-block; }
+.nav-dropdown-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.nav-dropdown-btn:hover { color: var(--text-primary); }
+.nav-dropdown-btn::after { content: '▾'; font-size: 0.7rem; }
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+.nav-dropdown:hover .nav-dropdown-content { display: block; }
+.nav-dropdown-content a {
+  display: block;
+  padding: 0.625rem 0.875rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+}
+.nav-dropdown-content a:hover {
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
 /* Theme CSS - Light/Dark toggle con animation style */
 :root {
   --bg-primary: #0a0a0a;
