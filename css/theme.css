@@ -1,3 +1,52 @@
+/* ===== MAIN NAVBAR STYLES ===== */
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  padding: 0 2rem;
+  background: rgba(10, 10, 10, 0.92);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--border);
+}
+.main-nav .nav-logo {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+.main-nav .nav-menu {
+  display: flex;
+  align-items: center;
+}
+.main-nav .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.main-nav .nav-links li a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+.main-nav .nav-links li a:hover {
+  color: var(--text-primary);
+  background: rgba(255,255,255,0.06);
+}
+
 /* Modern SaaS Dropdowns - 2025-26 Style */
 .nav-dropdown { position: relative; display: inline-block; }
 .nav-dropdown-btn {
