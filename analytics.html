@@ -2,289 +2,180 @@
 <html lang="es" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Analytics para eCommerce D2C | DayByDay Consulting</title>
-  <meta name="description" content="GA4, GTM y dashboards que miden lo que importa. Attribution multi-touch y cohort analysis.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Analytics para D2C · GA4 server-side y cohort analysis | DayByDay Consulting</title>
+  <meta name="description" content="El dashboard del marketing y el dashboard del CFO son dos dashboards distintos. Aquí montamos los dos. GA4 server-side, GTM, Enhanced Conversions y cohortes.">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/analytics.html">
   <link rel="icon" href="/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/theme.css">
-  <link rel="stylesheet" href="/css/sparkles.css">
-  <link rel="stylesheet" href="/css/modern.css">
-  <link rel="stylesheet" href="/css/sidebar.css">
-  <link rel="stylesheet" href="/css/pages.css">
+  <link rel="stylesheet" href="/css/theme.css"><link rel="stylesheet" href="/css/sparkles.css"><link rel="stylesheet" href="/css/modern.css"><link rel="stylesheet" href="/css/sidebar.css"><link rel="stylesheet" href="/css/pages.css">
   <style>
-    :root {
-      --accent-color: #8b5cf6;
-    }
-    .hero-badge {
-      background: #8b5cf61a;
-      border: 1px solid #8b5cf640;
-      color: #8b5cf6;
-    }
-    .feature-icon, .hero-stat-icon {
-      background: linear-gradient(135deg, #8b5cf6, #8b5cf6cc);
-    }
-    .stat-box .value {
-      background: linear-gradient(135deg, #8b5cf6, #8b5cf6cc);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .cta-box::before {
-      background: radial-gradient(ellipse 50% 60% at 50% 0%, #8b5cf620 0%, transparent 60%);
-    }
-    .feature-tag {
-      background: #8b5cf61a;
-      border: 1px solid #8b5cf633;
-      color: #8b5cf6;
-    }
+    :root { --accent-color: #f59e0b; }
+    .hero-badge { background:#f59e0b1a; border:1px solid #f59e0b40; color:#fbbf24; }
+    .lead-by { display:inline-flex;align-items:center;gap:0.5rem;margin-top:1rem;padding:0.35rem 0.75rem;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;font-size:0.78rem;color:var(--text-muted);letter-spacing:0.02em; }
+    .lead-by strong { color:var(--text-secondary);font-weight:600; }
+    .not-block { max-width:720px;margin:1.5rem auto 0;padding:1rem 1.25rem;background:var(--bg-card);border:1px solid var(--border);border-left:2px solid var(--text-muted);border-radius:8px;font-size:0.92rem;color:var(--text-muted); }
+    .not-block strong { color:var(--text-secondary); }
   </style>
-
 </head>
 <body>
-
+  
   <div class="file-tree-overlay" onclick="toggleSidebar()"></div>
-  <aside class="file-tree-sidebar" id="sidebar">
-    <button class="file-tree-close" onclick="toggleSidebar()">x</button>
-    <div class="file-tree-section">
-      <div class="file-tree-section-title">Secciones</div>
-      <a href="/" class="file-tree-item">Inicio</a>
-      <a href="/problema.html" class="file-tree-item">Problema</a>
-      <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
-      <a href="/resultados.html" class="file-tree-item">Resultados</a>
-      <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
-    </div>
-    <div class="file-tree-section">
-      <div class="file-tree-section-title">Paid Media</div>
-      <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
-      <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
-      <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
-      <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
-    </div>
-    <div class="file-tree-section">
-      <div class="file-tree-section-title">Automation & AI</div>
+  <aside class="file-tree-sidebar" id="sidebar"><button class="file-tree-close" onclick="toggleSidebar()">x</button>
+    <div class="file-tree-section"><div class="file-tree-section-title">Tecnología</div>
       <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
-      <a href="/analytics.html" class="file-tree-item">Analytics</a>
+      <a href="/analytics.html" class="file-tree-item active">Analytics</a>
       <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
     </div>
-    <div class="file-tree-section">
-      <div class="file-tree-section-title">Stack Tech</div>
-      <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
-      <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
-      <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
-    </div>
   </aside>
-
-
-<nav class="main-nav">
+  <button class="file-tree-toggle" onclick="toggleSidebar()"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+  <nav class="main-nav">
     <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
       <ul class="nav-links">
-          <li><a href="/problema.html">Problema</a></li>
-          
-          <!-- Cómo Trabajamos + Stack Tech (Grid) -->
-          <li class="nav-dropdown">
-            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
-            <div class="nav-dropdown-content small">
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-btn">Lo que cubre</button>
+          <div class="nav-dropdown-content mega">
+            <div class="mega-grid" style="grid-template-columns:repeat(3,1fr);">
               <div class="mega-section">
-                <div class="mega-section-title">Stack Tecnológico</div>
-                <div class="stack-grid">
-                  <a href="/tech/meta-ads.html">Meta Ads</a>
-                  <a href="/tech/google-ads-tech.html">Google Ads</a>
-                  <a href="/tech/shopify.html">Shopify</a>
-                  <a href="/tech/ga4.html">GA4</a>
-                  <a href="/tech/n8n.html">n8n</a>
-                  <a href="/tech/capi.html">CAPI</a>
-                </div>
+                <div class="mega-section-title">Áreas</div>
+                <a href="/lo-que-cubre.html#paid-media">Paid media</a>
+                <a href="/lo-que-cubre.html#tracking">Tracking &amp; Analytics</a>
+                <a href="/lo-que-cubre.html#automation">Automation</a>
+                <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
+                <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+              </div>
+              <div class="mega-section">
+                <div class="mega-section-title">Servicios</div>
+                <a href="/meta-ads.html">Meta Ads</a>
+                <a href="/google-ads.html">Google Ads</a>
+                <a href="/tiktok-ads.html">TikTok Ads</a>
+                <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                <a href="/automatizacion.html">Automatización</a>
+                <a href="/analytics.html">Analytics</a>
+                <a href="/agentic-ai.html">Agentic AI</a>
+                <a href="/growth-strategy.html">Growth Strategy</a>
+              </div>
+              <div class="mega-section">
+                <div class="mega-section-title">Stack</div>
+                <a href="/tech/ga4.html">GA4</a>
+                <a href="/tech/gtm.html">GTM</a>
+                <a href="/tech/gsc.html">Search Console</a>
+                <a href="/tech/capi.html">CAPI</a>
+                <a href="/tech/n8n.html">n8n</a>
+                <a href="/tech/azure.html">Azure</a>
+                <a href="/tech/shopify.html">Shopify</a>
+                <a href="/tech/dsp.html">DSP</a>
               </div>
             </div>
-          </li>
-          
-          <!-- Servicios (Mega Menu) -->
-          <li class="nav-dropdown">
-            <button class="nav-dropdown-btn">Servicios</button>
-            <div class="nav-dropdown-content">
-              <div class="mega-grid">
-                <div class="mega-column">
-                  <h4>Paid Media</h4>
-                  <a href="/meta-ads.html">Meta Ads</a>
-                  <a href="/google-ads.html">Google Ads</a>
-                  <a href="/tiktok-ads.html">TikTok Ads</a>
-                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
-                </div>
-                <div class="mega-column">
-                  <h4>Growth Strategy</h4>
-                  <a href="/growth-strategy.html">Estrategia</a>
-                  <a href="/growth-partner.html">Growth Partner</a>
-                </div>
-                <div class="mega-column">
-                  <h4>Automation</h4>
-                  <a href="/automatizacion.html">Automatización</a>
-                  <a href="/tech/n8n.html">n8n</a>
-                  <a href="/tech/capi.html">CAPI</a>
-                </div>
-                <div class="mega-column">
-                  <h4>Analytics & AI</h4>
-                  <a href="/analytics.html">Analytics</a>
-                  <a href="/agentic-ai.html">Agentic AI</a>
-                  <a href="/tech/azure.html">Azure AI</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          
-          <li><a href="/blog.html">Blog</a></li>
+          </div>
+        </li>
+        <li><a href="/como-trabajamos.html">Cómo trabajamos</a></li>
+        <li><a href="/resultados.html">Casos</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/contacto.html" class="cta-secondary" style="padding:0.5rem 1rem;font-size:0.85rem;">Pedir auditoría</a></li>
       </ul>
+      <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
     </div>
   </nav>
-
-  <div style="height:64px;"></div>
-
-  <div class="page-wrapper">
-    <div class="bg-orbs">
-      <div class="bg-orb bg-orb-1"></div>
-      <div class="bg-orb bg-orb-2"></div>
-      <div class="bg-orb bg-orb-3"></div>
-      <div class="bg-orb bg-orb-4"></div>
+  <div id="mobile-nav" class="mobile-nav">
+    <div class="mobile-nav-section">
+      <div class="mobile-nav-title">Navegación</div>
+      <a href="/" class="mobile-nav-link">Inicio</a>
+      <a href="/lo-que-cubre.html" class="mobile-nav-link">Lo que cubre</a>
+      <a href="/como-trabajamos.html" class="mobile-nav-link">Cómo trabajamos</a>
+      <a href="/resultados.html" class="mobile-nav-link">Casos</a>
+      <a href="/blog.html" class="mobile-nav-link">Blog</a>
+      <a href="/contacto.html" class="mobile-nav-link">Pedir auditoría</a>
     </div>
- style="position:relative;min-height:100vh;overflow-x:hidden;">
-    <div class="tech-dots"></div>
-    <div class="tech-grid"></div>
-
-    <div class="container">
-      <div class="breadcrumb">
-        <a href="/">Inicio</a><span>/</span><a href="/servicios.html">Servicios</a><span>/</span><span style="color:var(--text-secondary)">Analytics</span>
-      </div>
+    <div class="mobile-nav-section">
+      <div class="mobile-nav-title">Stack</div>
+      <a href="/tech/meta-ads.html" class="mobile-nav-link mobile-nav-sub">Meta Ads</a>
+      <a href="/tech/google-ads-tech.html" class="mobile-nav-link mobile-nav-sub">Google Ads</a>
+      <a href="/tech/tiktok-ads.html" class="mobile-nav-link mobile-nav-sub">TikTok Ads</a>
+      <a href="/tech/linkedin-ads.html" class="mobile-nav-link mobile-nav-sub">LinkedIn Ads</a>
+      <a href="/tech/ga4.html" class="mobile-nav-link mobile-nav-sub">GA4</a>
+      <a href="/tech/gtm.html" class="mobile-nav-link mobile-nav-sub">GTM</a>
+      <a href="/tech/capi.html" class="mobile-nav-link mobile-nav-sub">CAPI</a>
+      <a href="/tech/n8n.html" class="mobile-nav-link mobile-nav-sub">n8n</a>
+      <a href="/tech/azure.html" class="mobile-nav-link mobile-nav-sub">Azure</a>
+      <a href="/tech/shopify.html" class="mobile-nav-link mobile-nav-sub">Shopify</a>
     </div>
+  </div>
 
-    <section class="hero" style="padding:5rem 0 4rem;">
+    <section class="hero hero-centered" style="padding-bottom:2rem;">
       <div class="container">
-        <div class="hero-grid">
-          <div>
-            <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>Analytics</div>
-            <h1>Analytics para eCommerce D2C</h1>
-            <p class="subtitle" style="font-size:1.25rem;color:var(--text-secondary);max-width:540px;line-height:1.6;margin:1rem 0 2rem;">GA4, GTM y dashboards que miden lo que importa. Attribution multi-touch y cohort analysis.</p>
-            <div class="hero-cta">
-              <a href="/contacto.html" class="cta-primary">Hablamos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-              <a href="/resultados.html" class="cta-secondary">Ver resultados</a>
-            </div>
-          </div>
-          <div class="hero-visual">
-            <div class="hero-stat">
-              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M23 6l-9.5 9.5-5-5L1 18"/></svg></div>
-              <div class="hero-stat-content"><div class="hero-stat-value">100%</div><div class="hero-stat-label">tracking coverage</div></div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg></div>
-              <div class="hero-stat-content"><div class="hero-stat-value">30+</div><div class="hero-stat-label">events configurados</div></div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2v4M12 18v4"/></svg></div>
-              <div class="hero-stat-content"><div class="hero-stat-value">5</div><div class="hero-stat-label">dashboards en uso</div></div>
-            </div>
-          </div>
+        <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18M7 16l4-4 4 4 5-5"/></svg>Tecnología · Analytics</div>
+        <h1>El dashboard del marketing y el dashboard del CFO son dos dashboards distintos. Montamos los dos.</h1>
+        <p class="subtitle">Reportamos margen de contribución, payback de CAC y LTV por cohorte. ROAS aparece — como dato secundario, no como métrica de decisión.</p>
+        <span class="lead-by"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg> Lidera <strong>Jorge González</strong> · acompaña Pablo en el reporting de negocio</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header"><div class="eyebrow">El trabajo</div><h2>Setup completo de analytics y reporting de negocio</h2></div>
+        <div class="prose">
+          <p>GA4 server-side, GTM, Enhanced Conversions, consent mode v2 y dashboards de cohorte sobre Looker Studio o BigQuery. Mapeo CRM ↔ ad accounts con atribución real, no estimación.</p>
+          <p>El primer entregable es la separación entre el reporting que sirve al equipo de marketing (campañas, creatividades, audiencias) y el que sirve a la dirección (margen, payback, cohortes).</p>
+        </div>
+        <div class="not-block">
+          <strong>No es:</strong> instalación de GA4 con configuración default. No es reporting de ROAS de plataforma como métrica principal. No es dashboards que solo entiende el equipo que los pidió.
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-header"><div class="eyebrow">Cómo lo operamos</div><h2>Del setup técnico al reporting de cohorte</h2></div>
+        <div class="process-list">
+          <div class="process-step"><div class="process-step-num">01</div><div><h3>GA4 + GTM server-side</h3><p>Migración a server-side tracking. Reducción de pérdida por iOS / ITP, consent mode v2 y eventos custom mapeados al modelo de negocio.</p></div></div>
+          <div class="process-step"><div class="process-step-num">02</div><div><h3>Enhanced Conversions + CAPI</h3><p>Google Enhanced Conversions y Meta CAPI server-side conectados al backend Shopify. Event match quality alta.</p></div></div>
+          <div class="process-step"><div class="process-step-num">03</div><div><h3>Mapeo CRM ↔ ad accounts</h3><p>Cada lead o pedido del CRM lleva utm_source persistente. Sabemos qué canal trajo a cada cliente — no estimación, dato.</p></div></div>
+          <div class="process-step"><div class="process-step-num">04</div><div><h3>Dashboards de cohorte</h3><p>Looker Studio o BigQuery según volumen. Cohortes mensuales de payback, LTV, frecuencia de recompra y churn.</p></div></div>
+          <div class="process-step"><div class="process-step-num">05</div><div><h3>Reporting mensual de negocio</h3><p>Dos versiones: una para marketing y una para dirección. El informe que entregamos al fundador prioriza margen sobre ROAS.</p></div></div>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="section-header">
-          <h2>Qué included</h2>
-          <p>Todo lo que necesitas para implementar y escalar.</p>
-        </div>
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <h3>GA4 setup completo</h3>
-            <p>Included en este servicio.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <h3>GTM server-side</h3>
-            <p>Included en este servicio.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <h3>Dashboards custom</h3>
-            <p>Included en este servicio.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <h3>Cohort analysis</h3>
-            <p>Included en este servicio.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <h3>UTM strategy</h3>
-            <p>Included en este servicio.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <h3>Atribución multi-touch</h3>
-            <p>Included en este servicio.</p>
-          </div>
+        <div class="section-header"><div class="eyebrow">Momento de entrada</div><h2>Contextos donde encaja este trabajo</h2></div>
+        <div class="prose">
+          <p>Negocios con GA4 instalado pero datos poco fiables o incompletos. Necesidad de reporting que el board, el inversor o el banco pueda leer. Cohortes que el negocio quiere entender pero no tiene infraestructura para medir. Migraciones donde el tracking quedó roto.</p>
         </div>
       </div>
     </section>
 
-    <section class="section-sm" style="padding:3rem 0;">
+    <section class="section-sm" style="background:var(--bg-secondary);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
       <div class="container">
-        <div class="stats-row">
-<div class="stat-box"><div class="value">100%</div><div class="label">tracking coverage</div></div><div class="stat-box"><div class="value">30+</div><div class="label">events configurados</div></div><div class="stat-box"><div class="value">5</div><div class="label">dashboards en uso</div></div><div class="stat-box"><div class="value">LTV</div><div class="label">cohort analysis</div></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-sm stack-section" style="padding:3rem 0;background:var(--bg-secondary);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-      <div class="container">
-        <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:1.5rem;text-align:center;">Stack tecnológico</h2>
+        <h2 style="text-align:center;color:var(--text-muted);text-transform:uppercase;font-size:0.78rem;letter-spacing:0.12em;font-weight:600;margin-bottom:1.25rem;">Stack</h2>
         <div class="stack-row">
-<a href="/tech/ga4.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>GA4</a><a href="/tech/gtm.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>GTM</a><a href="/tech/shopify.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Search Console</a><a href="/tech/shopify.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Shopify</a>
+          <a href="/tech/ga4.html" class="stack-pill">GA4</a>
+          <a href="/tech/gtm.html" class="stack-pill">GTM server-side</a>
+          <a href="/tech/capi.html" class="stack-pill">CAPI</a>
+          <a href="/tech/gsc.html" class="stack-pill">Search Console</a>
+          <a href="/tech/shopify.html" class="stack-pill">Shopify</a>
         </div>
       </div>
     </section>
 
-    <section class="section-sm">
-      <div class="container">
-        <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Relacionado</h2>
-        <div class="related-grid">
-<a href="/google-ads.html" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class="related-content"><h4>Google Ads</h4><p>Ver más</p></div></a><a href="/meta-ads.html" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class="related-content"><h4>Meta Ads</h4><p>Ver más</p></div></a><a href="/tech/capi.html" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class="related-content"><h4>CAPI</h4><p>Ver más</p></div></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" style="padding:4rem 0;">
+    <section class="section">
       <div class="container">
         <div class="cta-box">
-          <h2>Medir todo en tu eCommerce?</h2>
-          <p>Setup en 1 semana. Dashboards actualizados en tiempo real.</p>
-          <a href="/contacto.html" class="cta-primary">Hablamos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <h2>Pedir auditoría</h2>
+          <p>30 minutos, gratuita. Revisamos tu setup actual y te decimos qué falta para que el reporting sirva a la decisión de negocio.</p>
+          <div class="hero-cta" style="justify-content:center;"><a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
         </div>
       </div>
     </section>
+  </main>
 
-  </div><!-- end page-wrapper -->
-
-<footer class="footer">
-    <a href="/">Inicio</a>
-    <a href="/servicios.html">Servicios</a>
-    <a href="/blog.html">Blog</a>
-    <p>© 2026 DayByDay Consulting</p>
-  </footer>
-
+  <footer class="footer"><div class="container"><div class="footer-inner"><div><div class="footer-logo">DayByDay Consulting</div><div style="color:var(--text-muted);font-size:0.8rem;margin-top:0.5rem;">Madrid · Growth Partner para D2C</div></div><div class="footer-links"><a href="/problema.html">Problema</a><a href="/como-trabajamos.html">Cómo trabajamos</a><a href="/growth-partner.html">Growth Partner</a><a href="/resultados.html">Casos</a><a href="/blog.html">Blog</a><a href="/contacto.html">Pedir auditoría</a></div></div><div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;"><p class="footer-copy">© 2026 DayByDay Consulting · analizamos · ejecutamos · acompañamos</p></div></div></footer>
   <script src="/js/main.js"></script>
 </body>
 </html>

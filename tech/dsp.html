@@ -1,244 +1,119 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Meta Ads | DayByDay Consulting</title>
-  <meta name="description" content="Campañas Meta Ads con setup completo CAPI: conversión, catálogo, Advantage+, pixel, audiencias custom. ROI documentado: +156% ROAS en 90 días.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>DSP · Display & programmatic para D2C maduro | DayByDay Consulting</title>
+  <meta name="description" content="DSP (DV360, The Trade Desk, Amazon DSP) para D2C con volumen. Programmatic display, CTV y audio. Solo recomendado cuando el spend justifica la complejidad técnica.">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/tech/dsp.html">
   <link rel="icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/theme.css">
-  <link rel="stylesheet" href="/css/sparkles.css">
-  <link rel="stylesheet" href="/css/modern.css">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; color: var(--text-primary); background: var(--bg-primary); min-height: 100vh; }
-    :root { --bg-primary: #050507; --bg-secondary: #0e0e11; --bg-card: #141418; --text-primary: #fafafa; --text-secondary: #a1a1a6; --text-muted: #71717a; --border: #27272a; --accent: #6366f1; }
-    [data-theme="light"] { --bg-primary: #fafafa; --bg-secondary: #f4f4f5; --bg-card: #ffffff; --text-primary: #09090b; --text-secondary: #52525b; --border: #e4e4e7; }
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5,5,7,0.9); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
-    nav .container { display: flex; justify-content: space-between; align-items: center; height: 72px; }
-    .nav-logo { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); text-decoration: none; }
-    .nav-links { display: flex; gap: 1.5rem; list-style: none; align-items: center; }
-    .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; font-weight: 500; }
-    .nav-links a:hover { color: var(--text-primary); }
-    .hero { padding: 12rem 0 6rem; position: relative; overflow: hidden; background: #050507; }
-    .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, var(--bg-primary) 100%); }
-    .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 1.5rem; line-height: 1.1; }
-    .hero p { font-size: 1.25rem; color: var(--text-secondary); max-width: 600px; margin-bottom: 2rem; }
-    .badge { display: inline-block; padding: 0.5rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 9999px; font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 1.5rem; }
-    .section { padding: 5rem 0; }
-    .section-dark { background: var(--bg-secondary); }
-    .section-title { font-size: 2rem; font-weight: 700; margin-bottom: 2rem; }
-    .section-subtitle { font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 3rem; max-width: 600px; }
-    .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; transition: border-color 0.3s; }
-    .card:hover { border-color: #3f3f46; }
-    .card h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; }
-    .card p { color: var(--text-secondary); font-size: 0.95rem; }
-    .card-list { list-style: none; margin-top: 1rem; }
-    .card-list li { padding: 0.5rem 0; border-bottom: 1px solid var(--border); color: var(--text-secondary); font-size: 0.9rem; }
-    .card-list li:last-child { border-bottom: none; }
-    .card-list li::before { content: ''; display: inline-block; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; margin-right: 0.75rem; }
-    .grid-3 { display: grid; gap: 1.5rem; }
-    @media(min-width:768px){ .grid-3 { grid-template-columns: repeat(3,1fr); } }
-    .cta-button { display: inline-block; padding: 1rem 2rem; background: var(--text-primary); color: var(--bg-primary); font-weight: 600; border-radius: 6px; text-decoration: none; transition: transform 0.2s; }
-    .cta-button:hover { transform: scale(1.02); }
-    .metric { padding: 1.5rem; background: var(--bg-card); border-radius: 8px; text-align: center; }
-    .metric-value { font-size: 2rem; font-weight: 700; color: var(--text-primary); }
-    .metric-label { font-size: 0.85rem; color: var(--text-secondary); }
-    footer { background: var(--bg-secondary); padding: 3rem 0; text-align: center; border-top: 1px solid var(--border); }
-    .footer-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
-    .footer-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; }
-    @media(max-width:768px){ .nav-links{display:none} }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css"><link rel="stylesheet" href="/css/sparkles.css"><link rel="stylesheet" href="/css/modern.css"><link rel="stylesheet" href="/css/sidebar.css"><link rel="stylesheet" href="/css/pages.css">
+  <style>:root { --accent-color: #8b5cf6; } .hero-badge { background:#8b5cf61a; border:1px solid #8b5cf640; color:#a78bfa; }</style>
 </head>
 <body>
-
-      <nav class="main-nav">
+  
+  <nav class="main-nav">
     <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
       <ul class="nav-links">
-          <li><a href="/problema.html">Problema</a></li>
-          <li class="nav-dropdown">
-            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
-            <div class="nav-dropdown-content small">
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-btn">Lo que cubre</button>
+          <div class="nav-dropdown-content mega">
+            <div class="mega-grid" style="grid-template-columns:repeat(3,1fr);">
               <div class="mega-section">
-                <div class="mega-section-title">Stack Tecnológico</div>
-                <div class="stack-grid">
-                  <a href="/tech/meta-ads.html">Meta Ads</a>
-                  <a href="/tech/google-ads-tech.html">Google Ads</a>
-                  <a href="/tech/shopify.html">Shopify</a>
-                  <a href="/tech/ga4.html">GA4</a>
-                  <a href="/tech/n8n.html">n8n</a>
-                  <a href="/tech/capi.html">CAPI</a>
-                </div>
+                <div class="mega-section-title">Áreas</div>
+                <a href="/lo-que-cubre.html#paid-media">Paid media</a>
+                <a href="/lo-que-cubre.html#tracking">Tracking &amp; Analytics</a>
+                <a href="/lo-que-cubre.html#automation">Automation</a>
+                <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
+                <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+              </div>
+              <div class="mega-section">
+                <div class="mega-section-title">Servicios</div>
+                <a href="/meta-ads.html">Meta Ads</a>
+                <a href="/google-ads.html">Google Ads</a>
+                <a href="/tiktok-ads.html">TikTok Ads</a>
+                <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                <a href="/automatizacion.html">Automatización</a>
+                <a href="/analytics.html">Analytics</a>
+                <a href="/agentic-ai.html">Agentic AI</a>
+                <a href="/growth-strategy.html">Growth Strategy</a>
+              </div>
+              <div class="mega-section">
+                <div class="mega-section-title">Stack</div>
+                <a href="/tech/ga4.html">GA4</a>
+                <a href="/tech/gtm.html">GTM</a>
+                <a href="/tech/gsc.html">Search Console</a>
+                <a href="/tech/capi.html">CAPI</a>
+                <a href="/tech/n8n.html">n8n</a>
+                <a href="/tech/azure.html">Azure</a>
+                <a href="/tech/shopify.html">Shopify</a>
+                <a href="/tech/dsp.html">DSP</a>
               </div>
             </div>
-          </li>
-          <li class="nav-dropdown">
-            <button class="nav-dropdown-btn">Servicios</button>
-            <div class="nav-dropdown-content">
-              <div class="mega-grid">
-                <div class="mega-column"><h4>Paid Media</h4>
-                  <a href="/meta-ads.html">Meta Ads</a>
-                  <a href="/google-ads.html">Google Ads</a>
-                  <a href="/tiktok-ads.html">TikTok Ads</a>
-                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
-                </div>
-                <div class="mega-column"><h4>Growth Strategy</h4>
-                  <a href="/growth-strategy.html">Estrategia</a>
-                  <a href="/growth-partner.html">Growth Partner</a>
-                </div>
-                <div class="mega-column"><h4>Automation</h4>
-                  <a href="/automatizacion.html">Automatización</a>
-                  <a href="/tech/n8n.html">n8n</a>
-                  <a href="/tech/capi.html">CAPI</a>
-                </div>
-                <div class="mega-column"><h4>Analytics & AI</h4>
-                  <a href="/analytics.html">Analytics</a>
-                  <a href="/agentic-ai.html">Agentic AI</a>
-                  <a href="/tech/azure.html">Azure AI</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li><a href="/blog.html">Blog</a></li>
+          </div>
+        </li>
+        <li><a href="/como-trabajamos.html">Cómo trabajamos</a></li>
+        <li><a href="/resultados.html">Casos</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/contacto.html" class="cta-secondary" style="padding:0.5rem 1rem;font-size:0.85rem;">Pedir auditoría</a></li>
       </ul>
+      <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
     </div>
   </nav>
   <div style="height:64px;"></div>
 
+  <main class="page-wrapper">
+    <div class="container"><div class="breadcrumb"><a href="/">Inicio</a><span>/</span><a href="/lo-que-cubre.html">Lo que cubre</a><span>/</span><span style="color:var(--text-secondary)">DSP</span></div></div>
 
-  <!-- Breadcrumb -->
-  <div style="background:var(--bg-secondary);padding:0.75rem 0;border-bottom:1px solid var(--border);">
-    <div style="max-width:900px;margin:0 auto;padding:0 1.5rem;font-size:0.85rem;">
-      <a href="/" style="color:#71717a;text-decoration:none;">Inicio</a>
-      <span style="color:#52525b;margin:0 0.5rem;">›</span>
-      <a href="/servicios.html" style="color:#71717a;text-decoration:none;">Servicios</a>
-      <span style="color:#52525b;margin:0 0.5rem;">›</span>
-      <a href="/tech/" style="color:#71717a;text-decoration:none;">Stack</a>
-      <span style="color:#52525b;margin:0 0.5rem;">›</span>
-      <span style="color:#fafafa;">Paid Media</span>
-    </div>
-  </div>
-</div>
+    <section class="hero hero-centered" style="padding-bottom:2rem;">
+      <div class="container">
+        <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>Stack · Programmatic</div>
+        <h1>DSP · Programmatic display, CTV y audio</h1>
+        <p class="subtitle">DV360, The Trade Desk, Amazon DSP. Solo lo recomendamos cuando tu spend justifica la complejidad técnica y operativa — antes, te dejará dinero en la mesa.</p>
+        <div class="verbs-row"><span class="verb-pill"><span class="dot"></span>analizamos</span><span class="verb-separator">·</span><span class="verb-pill"><span class="dot"></span>ejecutamos</span><span class="verb-separator">·</span><span class="verb-pill"><span class="dot"></span>acompañamos</span></div>
+      </div>
+    </section>
 
+    <section class="section">
+      <div class="container">
+        <div class="section-header"><div class="eyebrow">Cuándo DSP</div><h2>Si gastas menos de 20K€/mes, DSP no es para ti</h2></div>
+        <div class="prose">
+          <p>DSP añade capas de complejidad técnica (Floodlight, audiences, brand safety, viewability) que solo se rentabilizan cuando hay volumen. Por debajo de cierto spend, paid social y search te dan más margen con menos infraestructura.</p>
+          <p>Cuando sí encaja: marca con awareness importante, presupuesto creativo de calidad, mix de canales que ya saturó Meta + Google y necesita upper-funnel real (CTV, audio, premium display).</p>
+        </div>
+      </div>
+    </section>
 
-  <section class="hero">
-    <div class="container">
-      <span class="badge">Meta Ads</span>
-      <h1>Meta Ads</h1>
-      <p>Setup completo CAPI, pixel avanzado y audiencias propias. No optimizaciones genéricas: estrategias validadas con datos reales de negocio.</p>
-      <a href="#contacto" class="cta-button">Ver casos</a>
-    </div>
-  </section>
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Qué incluimos</h2>
-      <div class="grid-3">
-        <div class="card scroll-animate">
-          <h3>CAPI Setup Completo</h3>
-          <p>Conversions API server-side para tracking preciso sin cookie loss. Event matching quality 100%.</p>
-          <ul class="card-list">
-            <li>Server-side pixel</li>
-            <li>Event deduplication</li>
-            <li>First-party data</li>
-            <li>Offline conversions</li>
-          </ul>
-        </div>
-        <div class="card scroll-animate">
-          <h3>Campañas Conversión</h3>
-          <p>Estrategias por_objective'optimized por stage del funnel:</p>
-          <ul class="card-list">
-            <li>Advantage+ Shopping</li>
-            <li>Campaign budgets CBO</li>
-            <li>Dynamic creative</li>
-            <li>A/B testing</li>
-          </ul>
-        </div>
-        <div class="card scroll-animate">
-          <h3>Audiencias Propias</h3>
-          <p>Datos propios para lookalikes de calidad:</p>
-          <ul class="card-list">
-            <li>Custom Audiences</li>
-            <li>Lookalike 1%</li>
-            <li>Engagement audiences</li>
-            <li>Retargeting sequences</li>
-          </ul>
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-header"><div class="eyebrow">Qué operamos</div><h2>DSPs principales y para qué</h2></div>
+        <div class="features-grid">
+          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg></div><h3>DV360</h3><p>Google's DSP, ideal cuando ya operas Google Ads y necesitas activar inventario premium fuera del search/PMax.</p></div>
+          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></div><h3>The Trade Desk</h3><p>Independiente, fuerte en CTV (TV conectada) y audio. Programmatic premium con inventario cualificado.</p></div>
+          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 3v18h18"/></svg></div><h3>Amazon DSP</h3><p>Activar audiencias propias de Amazon fuera de Amazon. Solo si vendes en Amazon o si tu cliente solapa con el cliente Amazon Prime.</p></div>
+          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Tracking y atribución</h3><p>Floodlight + post-view + post-click. Cómo medir incrementalidad real cuando el canal no tiene click directo (CTV, audio).</p></div>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="section section-dark">
-    <div class="container">
-      <h2 class="section-title">Métricas típicas</h2>
-      <div class="grid-3">
-        <div class="metric">
-          <div class="metric-value">4,8 Eur</div>
-          <div class="metric-label">CPA medio</div>
-        </div>
-        <div class="metric">
-          <div class="metric-value">+156%</div>
-          <div class="metric-label">ROAS vs baseline</div>
-        </div>
-        <div class="metric">
-          <div class="metric-value">2,4%</div>
-          <div class="metric-label">CTR</div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Validar si DSP encaja con tu marca?</h2>
+          <p>Auditoría gratis de 30 min con los dos socios. Si no encaja, te lo decimos.</p>
+          <div class="hero-cta" style="justify-content:center;"><a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Casos de uso</h2>
-      <div class="grid-3">
-        <div class="card">
-          <h3>eCommerce Fashion</h3>
-          <p>Catálogo completo con Advantage+ Shopping. Pixel cross-domain.</p>
-        </div>
-        <div class="card">
-          <h3>SaaS Lead Gen</h3>
-          <p>Form submissions optimizados. Custom conversions para trials.</p>
-        </div>
-        <div class="card">
-          <h3>App Install</h3>
-          <p>Mobile app install campaigns con deep linking.</p>
-        </div>
-        <div class="card">
-          <h3>Retargeting</h3>
-          <p>Carrito abandonado, visitantes con purchase intent.</p>
-        </div>
-        <div class="card">
-          <h3>Prospecting</h3>
-          <p>Broad targeting + lookalikes por mejores clientes.</p>
-        </div>
-        <div class="card">
-          <h3>Video Awareness</h3>
-          <p>In-stream video para consideration.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section" id="contacto">
-    <div class="container" style="text-align:center;">
-      <h2>Tu turno</h2>
-      <p style="color:var(--text-secondary);margin:1rem 0 2rem;">Explícanos tu situación y vemos cómo ayudamos.</p>
-      <a href="mailto:contact@daybydayconsulting.com?subject=Meta Ads" class="cta-button">Contactar</a>
-    </div>
-  </section>
-  <footer>
-    <div class="container">
-      <div class="footer-links">
-        <a href="/">Inicio</a>
-        <a href="/meta-ads.html">Meta Ads</a>
-        <a href="/google-ads.html">Google Ads</a>
-        <a href="/automatizacion.html">Automatización</a>
-        <a href="/analytics.html">Analytics</a>
-      </div>
-      <p style="color:var(--text-muted);font-size:0.8rem;">© 2026 DayByDay Consulting</p>
-    </div>
-  </footer>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container"><div class="footer-inner"><div><div class="footer-logo">DayByDay Consulting</div><div style="color:var(--text-muted);font-size:0.8rem;margin-top:0.5rem;">Madrid · Growth Partner para D2C</div></div><div class="footer-links"><a href="/problema.html">Problema</a><a href="/como-trabajamos.html">Cómo trabajamos</a><a href="/growth-partner.html">Growth Partner</a><a href="/resultados.html">Casos</a><a href="/blog.html">Blog</a><a href="/contacto.html">Pedir auditoría</a></div></div><div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;"><p class="footer-copy">© 2026 DayByDay Consulting · analizamos · ejecutamos · acompañamos</p></div></div></footer>
   <script src="/js/main.js"></script>
 </body>
 </html>

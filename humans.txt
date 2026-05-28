@@ -1,0 +1,26 @@
+/* DayByDay Consulting · humans.txt */
+
+# TEAM
+
+Founder, paid media, estrategia, operaciones
+  Pablo Santirsó
+  LinkedIn: https://es.linkedin.com/in/pablo-santirso-perez
+  Location: Madrid, España
+
+Partner, CTO, automation, agentic AI
+  Jorge González
+  LinkedIn: https://www.linkedin.com/in/jorge-gonz%C3%A1lez-p%C3%A9rez-4091541b6/
+  Location: Madrid, España
+
+# CONTACT
+
+Email: contact@daybydayconsulting.com
+Calendly: https://calendly.com/daybydayconsulting/discovery
+
+# SITE
+
+Last update: 2026/05/27
+Standards: HTML5, CSS3
+Tone: tuteo directo · cifras concretas · 4–12 palabras por frase
+Stack: Plain HTML, Cloudflare Pages
+Verbs: analizamos · ejecutamos · acompañamos

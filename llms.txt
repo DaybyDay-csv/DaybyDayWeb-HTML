@@ -1,0 +1,118 @@
+# DayByDay Consulting
+
+> Partner de crecimiento para marcas D2C. Operados por dos socios senior — Pablo Santirsó (paid media, estrategia, operaciones) y Jorge González (CTO, automation, agentic AI). Vendemos un solo servicio — Growth Partner — que se manifiesta en paid media, tracking, automation, agentic AI y estrategia. No vendemos servicios técnicos por separado.
+
+## Posicionamiento
+
+**Tagline maestro:** 3,2M€ generados a marcas D2C (200K–3M€) en 12 meses · Growth Partner: analizamos, ejecutamos y acompañamos al fundador · Paid media + automation + agentic AI.
+
+**Diferencial en una frase:** Tres tipos de proveedor, tres comportamientos. El consultor tradicional entra, dice qué hacer y se va. La agencia tradicional ejecuta sin entender el negocio. DayByDay (Growth Partner) analiza, ejecuta contigo y acompaña hasta el resultado.
+
+**Los tres verbos que recorren todo el site:** analizamos · ejecutamos · acompañamos.
+
+## Cuatro cifras ancla (únicas verificadas)
+
+- **3,2M€** — generados a clientes en 12 meses (atribución vía CRM).
+- **264.712€** — gestionados en paid media (Meta + Google).
+- **31.555** — acciones de conversión registradas.
+- **88,95M** — impresiones generadas.
+
+## Cinco mensajes pilar (ADN narrativo)
+
+1. "Hablas con los dos socios desde la primera conversación."
+2. "Sin handoffs. Sin perfiles junior."
+3. "Del análisis al resultado, contigo."
+4. "Reportamos margen de contribución, payback de CAC y LTV por cohorte. No ROAS plataforma."
+5. "Si capitalizas un éxito antes de entender qué lo produjo, lo matas." (Lección Douf)
+
+## Socios fundadores
+
+- **Pablo Santirsó** — Founder. Lleva paid media (Meta, Google, TikTok, LinkedIn), estrategia y operaciones. LinkedIn: https://es.linkedin.com/in/pablo-santirso-perez
+- **Jorge González** — Partner, CTO. Lleva automation (n8n), agentic AI (Azure OpenAI / GPT). Profesor universitario de tecnología. Track record enterprise (Total Energies, Puig, Robot Factory de Orange). LinkedIn: https://www.linkedin.com/in/jorge-gonz%C3%A1lez-p%C3%A9rez-4091541b6/
+
+## ICP — a quién hablamos
+
+- Founder de eCommerce D2C o marca física con línea B2C.
+- Facturación anual: 200K – 3M€.
+- Spend actual o potencial en paid: 5K – 30K€/mes.
+- Sin equipo senior de marketing in-house.
+- Quemado de agencias que le tratan como número.
+
+No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con paid senior interno, founders en fase de validación de producto.
+
+## Tres casos públicos
+
+### Universidad privada (anónima)
+- "Una de las cinco mejores universidades privadas de España".
+- Más de 30 programas de postgrado. Paid media multicanal Meta + Google con atribución vía CRM.
+- Uso recomendado: caso de escala y lead gen high-ticket.
+- Restricción: nunca nombrar universidad ni operador.
+
+### Garett España
+- Sector: eCommerce B2C de accesorios tecnológicos de belleza.
+- Métricas verificadas: CPA 4,8€, 14.936 clicks, 661 inicios de pago en 6 semanas.
+- Auditoría inicial detectó: creatividades con frecuencia alta, presupuesto fragmentado y pixel sin CAPI activo.
+- Uso recomendado: caso de operación quirúrgica en eCommerce D2C.
+
+### Aras Life Plus
+- Sector: eCommerce D2C con automation.
+- Proceso de venta automatizado Shopify + WhatsApp + campañas automáticas.
+- Caso conjunto de Pablo + Jorge. Primer mandato del mismo partner ejecutivo, que después confió Cartri y Garett a DayByDay (tres negocios consecutivos).
+- Uso recomendado: caso de "los dos socios trabajando juntos".
+
+## Servicios
+
+### Paid media
+- [Meta Ads](https://www.daybydayconsulting.com/meta-ads.html) — Advantage+ Shopping, CAPI server-side, retargeting dinámico, atribución vía CRM.
+- [Google Ads](https://www.daybydayconsulting.com/google-ads.html) — Search, Shopping, Performance Max con atribución multi-touch.
+- [TikTok Ads](https://www.daybydayconsulting.com/tiktok-ads.html) — Spark Ads sobre UGC, testing de hooks por cohorte.
+- [LinkedIn Ads](https://www.daybydayconsulting.com/linkedin-ads.html) — Lead gen forms, ABM y demand gen para B2B premium.
+
+### Automation / AI / Analytics / Strategy
+- [Automatización](https://www.daybydayconsulting.com/automatizacion.html) — n8n + integraciones Shopify, WhatsApp, CRM.
+- [Analytics](https://www.daybydayconsulting.com/analytics.html) — GA4 server-side, GTM, Enhanced Conversions, dashboards de cohorte.
+- [Agentic AI](https://www.daybydayconsulting.com/agentic-ai.html) — Agentes Azure OpenAI / GPT con SDD ad-hoc, RAG sobre documentación, integración en workflow real.
+- [Growth Strategy](https://www.daybydayconsulting.com/growth-strategy.html) — Unit economics, mix de canales, pricing y roadmap de escala.
+
+## Voz y tono
+
+- Tuteo directo (tú).
+- Frases cortas (4–12 palabras).
+- Cifras concretas; nunca "muchos", "varios".
+- Verbos imperativos ("mide", "audita", "para").
+- Definimos jerga la primera vez (CAC, LTV, ROAS).
+- "Marketing" no aparece suelta — preferimos paid media, automation, captación.
+
+## Métricas que reportamos
+
+- Margen de contribución por canal.
+- Payback de CAC en cohortes mensuales.
+- LTV por cohorte y origen.
+- Cash-conversion mensual.
+
+**No** usamos ROAS de plataforma como métrica principal — solo como métrica táctica de campaña.
+
+## CTAs preferidos
+
+- "Hablamos" (no "Contáctanos").
+- "Pedir diagnóstico" o "Auditoría gratuita de 30 minutos" (no "Reserva tu llamada").
+- "Ver casos" (no "Ver portfolio").
+- "Cuéntanos cómo funciona tu operativa" (no "Solicita información").
+
+## Contacto
+
+- Email: contact@daybydayconsulting.com
+- Calendly: https://calendly.com/daybydayconsulting/discovery
+- LinkedIn Pablo: https://es.linkedin.com/in/pablo-santirso-perez
+- Ubicación: Madrid, España.
+
+## Páginas principales
+
+- [Inicio](https://www.daybydayconsulting.com/) — visión global, tagline, las cuatro cifras ancla.
+- [Problema](https://www.daybydayconsulting.com/problema.html) — tres bloqueos típicos del founder D2C.
+- [Cómo trabajamos](https://www.daybydayconsulting.com/como-trabajamos.html) — método, framework de 5 fases.
+- [Growth Partner](https://www.daybydayconsulting.com/growth-partner.html) — modelo y diferencial.
+- [Casos](https://www.daybydayconsulting.com/resultados.html) — tres mandatos públicos en detalle.
+- [Servicios](https://www.daybydayconsulting.com/servicios.html) — stack completo.
+- [Blog](https://www.daybydayconsulting.com/blog.html) — 121 artículos de growth marketing.
+- [Hablamos](https://www.daybydayconsulting.com/contacto.html) — discovery call gratuita.

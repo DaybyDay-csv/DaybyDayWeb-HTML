@@ -1,4 +1,65 @@
+# DayByDay Consulting — robots.txt
+# Growth Partner para D2C en España — analizamos, ejecutamos, acompañamos
+
 User-agent: *
 Allow: /
+Disallow: /site.zip
+Crawl-delay: 1
 
+# Friendly to AI / LLM crawlers used for answer engines (AEO / GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: ia_archiver
+Allow: /
+
+# Sitemaps
 Sitemap: https://www.daybydayconsulting.com/sitemap.xml
+
+# LLM-friendly summary
+# See: https://www.daybydayconsulting.com/llms.txt

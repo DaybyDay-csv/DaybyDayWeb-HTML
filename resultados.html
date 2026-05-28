@@ -2,44 +2,21 @@
 <html lang="es" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resultados Reales en D2C | DayByDay Consulting</title>
-  <meta name="description" content="Métricas verificadas de clientes activos. No promesas, datos reales.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Casos · Clientes con los que hemos trabajado | DayByDay Consulting</title>
+  <meta name="description" content="Tres clientes: universidad privada (lead gen high-ticket), Garett (CPA 4,8€ en 6 semanas) y Aras Life Plus (Shopify + WhatsApp).">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/resultados.html">
   <link rel="icon" href="/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
-  <link rel="stylesheet" href="/css/sparkles.css">
   <link rel="stylesheet" href="/css/modern.css">
   <link rel="stylesheet" href="/css/sidebar.css">
   <link rel="stylesheet" href="/css/pages.css">
   <style>
-    :root {
-      --accent-color: #6366f1;
-    }
-    .hero-badge {
-      background: #6366f11a;
-      border: 1px solid #6366f140;
-      color: #6366f1;
-    }
-    .feature-icon, .hero-stat-icon {
-      background: linear-gradient(135deg, #6366f1, #6366f1cc);
-    }
-    .stat-box .value {
-      background: linear-gradient(135deg, #6366f1, #6366f1cc);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .cta-box::before {
-      background: radial-gradient(ellipse 50% 60% at 50% 0%, #6366f120 0%, transparent 60%);
-    }
-    .feature-tag {
-      background: #6366f11a;
-      border: 1px solid #6366f133;
-      color: #6366f1;
-    }
+    :root { --accent-color: #10b981; }
+    .hero-badge { background: #10b9811a; border: 1px solid #10b98140; color: #34d399; }
   </style>
-
 </head>
 <body>
 
@@ -47,229 +24,236 @@
   <aside class="file-tree-sidebar" id="sidebar">
     <button class="file-tree-close" onclick="toggleSidebar()">x</button>
     <div class="file-tree-section">
-      <div class="file-tree-section-title">Secciones</div>
+      <div class="file-tree-section-title">Navegación</div>
       <a href="/" class="file-tree-item">Inicio</a>
-      <a href="/problema.html" class="file-tree-item">Problema</a>
-      <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
-      <a href="/resultados.html" class="file-tree-item">Resultados</a>
+      <a href="/lo-que-cubre.html" class="file-tree-item">Lo que cubre</a>
+      <a href="/como-trabajamos.html" class="file-tree-item">Cómo trabajamos</a>
+      <a href="/resultados.html" class="file-tree-item active">Casos</a>
       <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
-    </div>
-    <div class="file-tree-section">
-      <div class="file-tree-section-title">Paid Media</div>
-      <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
-      <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
-      <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
-      <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
-    </div>
-    <div class="file-tree-section">
-      <div class="file-tree-section-title">Automation & AI</div>
-      <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
-      <a href="/analytics.html" class="file-tree-item">Analytics</a>
-      <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
-    </div>
-    <div class="file-tree-section">
-      <div class="file-tree-section-title">Stack Tech</div>
-      <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
-      <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
-      <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+      <a href="/blog.html" class="file-tree-item">Blog</a>
+      <a href="/contacto.html" class="file-tree-item">Pedir auditoría</a>
     </div>
   </aside>
 
+  <button class="file-tree-toggle" onclick="toggleSidebar()">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+  </button>
 
-<nav class="main-nav">
+  <nav class="main-nav">
     <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
       <ul class="nav-links">
-          <li><a href="/problema.html">Problema</a></li>
-          
-          <!-- Cómo Trabajamos + Stack Tech (Grid) -->
-          <li class="nav-dropdown">
-            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
-            <div class="nav-dropdown-content small">
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-btn">Lo que cubre</button>
+          <div class="nav-dropdown-content mega">
+            <div class="mega-grid" style="grid-template-columns:repeat(3,1fr);">
               <div class="mega-section">
-                <div class="mega-section-title">Stack Tecnológico</div>
-                <div class="stack-grid">
-                  <a href="/tech/meta-ads.html">Meta Ads</a>
-                  <a href="/tech/google-ads-tech.html">Google Ads</a>
-                  <a href="/tech/shopify.html">Shopify</a>
-                  <a href="/tech/ga4.html">GA4</a>
-                  <a href="/tech/n8n.html">n8n</a>
-                  <a href="/tech/capi.html">CAPI</a>
-                </div>
+                <div class="mega-section-title">Áreas</div>
+                <a href="/lo-que-cubre.html#paid-media">Paid media</a>
+                <a href="/lo-que-cubre.html#tracking">Tracking &amp; Analytics</a>
+                <a href="/lo-que-cubre.html#automation">Automation</a>
+                <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
+                <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+              </div>
+              <div class="mega-section">
+                <div class="mega-section-title">Servicios</div>
+                <a href="/meta-ads.html">Meta Ads</a>
+                <a href="/google-ads.html">Google Ads</a>
+                <a href="/tiktok-ads.html">TikTok Ads</a>
+                <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                <a href="/automatizacion.html">Automatización</a>
+                <a href="/analytics.html">Analytics</a>
+                <a href="/agentic-ai.html">Agentic AI</a>
+                <a href="/growth-strategy.html">Growth Strategy</a>
+              </div>
+              <div class="mega-section">
+                <div class="mega-section-title">Stack</div>
+                <a href="/tech/ga4.html">GA4</a>
+                <a href="/tech/gtm.html">GTM</a>
+                <a href="/tech/gsc.html">Search Console</a>
+                <a href="/tech/capi.html">CAPI</a>
+                <a href="/tech/n8n.html">n8n</a>
+                <a href="/tech/azure.html">Azure</a>
+                <a href="/tech/shopify.html">Shopify</a>
+                <a href="/tech/dsp.html">DSP</a>
               </div>
             </div>
-          </li>
-          
-          <!-- Servicios (Mega Menu) -->
-          <li class="nav-dropdown">
-            <button class="nav-dropdown-btn">Servicios</button>
-            <div class="nav-dropdown-content">
-              <div class="mega-grid">
-                <div class="mega-column">
-                  <h4>Paid Media</h4>
-                  <a href="/meta-ads.html">Meta Ads</a>
-                  <a href="/google-ads.html">Google Ads</a>
-                  <a href="/tiktok-ads.html">TikTok Ads</a>
-                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
-                </div>
-                <div class="mega-column">
-                  <h4>Growth Strategy</h4>
-                  <a href="/growth-strategy.html">Estrategia</a>
-                  <a href="/growth-partner.html">Growth Partner</a>
-                </div>
-                <div class="mega-column">
-                  <h4>Automation</h4>
-                  <a href="/automatizacion.html">Automatización</a>
-                  <a href="/tech/n8n.html">n8n</a>
-                  <a href="/tech/capi.html">CAPI</a>
-                </div>
-                <div class="mega-column">
-                  <h4>Analytics & AI</h4>
-                  <a href="/analytics.html">Analytics</a>
-                  <a href="/agentic-ai.html">Agentic AI</a>
-                  <a href="/tech/azure.html">Azure AI</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          
-          <li><a href="/blog.html">Blog</a></li>
+          </div>
+        </li>
+        <li><a href="/como-trabajamos.html">Cómo trabajamos</a></li>
+        <li><a href="/resultados.html">Casos</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/contacto.html" class="cta-secondary" style="padding:0.5rem 1rem;font-size:0.85rem;">Pedir auditoría</a></li>
       </ul>
+      <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
     </div>
   </nav>
 
+  <div id="mobile-nav" class="mobile-nav">
+    <a href="/" class="mobile-nav-link">Inicio</a>
+    <a href="/lo-que-cubre.html" class="mobile-nav-link">Lo que cubre</a>
+    <a href="/como-trabajamos.html" class="mobile-nav-link">Cómo trabajamos</a>
+    <a href="/resultados.html" class="mobile-nav-link">Casos</a>
+    <a href="/blog.html" class="mobile-nav-link">Blog</a>
+    <a href="/contacto.html" class="mobile-nav-link">Pedir auditoría</a>
+  </div>
+
   <div style="height:64px;"></div>
 
-  <div class="page-wrapper">
-    <div class="bg-orbs">
-      <div class="bg-orb bg-orb-1"></div>
-      <div class="bg-orb bg-orb-2"></div>
-      <div class="bg-orb bg-orb-3"></div>
-      <div class="bg-orb bg-orb-4"></div>
-    </div>
- style="position:relative;min-height:100vh;overflow-x:hidden;">
-    <div class="tech-dots"></div>
-    <div class="tech-grid"></div>
+  <main class="page-wrapper">
 
     <div class="container">
       <div class="breadcrumb">
-        <a href="/">Inicio</a><span>/</span><a href="/servicios.html">Servicios</a><span>/</span><span style="color:var(--text-secondary)">Resultados Reales en D2C</span>
+        <a href="/">Inicio</a><span>/</span><span style="color:var(--text-secondary)">Casos</span>
       </div>
     </div>
 
-    <section class="hero" style="padding:5rem 0 4rem;">
+    <section class="hero hero-centered">
       <div class="container">
-        <div class="hero-grid">
-          <div>
-            
-            <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 6l-9.5 9.5-5-5L1 18"/></svg>Resultados</div>
-            <h1>Resultados Reales en D2C</h1>
-            <p class="subtitle" style="font-size:1.25rem;color:var(--text-secondary);max-width:540px;line-height:1.6;margin:1rem 0 2rem;">Métricas verificadas de clientes activos. No promesas, datos reales.</p>
-            <div class="hero-cta">
-              <a href="/contacto.html" class="cta-primary">Hablamos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-              <a href="/resultados.html" class="cta-secondary">Ver resultados</a>
-            </div>
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 6l-9.5 9.5-5-5L1 18"/></svg>
+          Clientes
+        </div>
+        <h1>Tres clientes con los que hemos trabajado</h1>
+        <p class="subtitle">
+          Lead gen high-ticket, operación en eCommerce D2C y automation conjunta. Datos verificados. El mismo decisor nos confió tres negocios consecutivos.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-sm" style="padding-top:1rem;">
+      <div class="container">
+        <div class="anchor-stats">
+          <div class="anchor-stat">
+            <div class="anchor-value">3,2M€</div>
+            <div class="anchor-label">Generados a clientes en 12 meses</div>
           </div>
-          <div class="hero-visual">
-            <div class="hero-stat">
-              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M23 6l-9.5 9.5-5-5L1 18"/></svg></div>
-              <div class="hero-stat-content"><div class="hero-stat-value">+156%</div><div class="hero-stat-label">ROAS Meta Ads</div></div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg></div>
-              <div class="hero-stat-content"><div class="hero-stat-value">+23%</div><div class="hero-stat-label">abandoned cart</div></div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2v4M12 18v4"/></svg></div>
-              <div class="hero-stat-content"><div class="hero-stat-value">3x</div><div class="hero-stat-label">frecuencia compra</div></div>
-            </div>
+          <div class="anchor-stat">
+            <div class="anchor-value">264.712€</div>
+            <div class="anchor-label">Gestionados en publicidad</div>
           </div>
+          <div class="anchor-stat">
+            <div class="anchor-value">31.555</div>
+            <div class="anchor-label">Acciones de conversión</div>
+          </div>
+          <div class="anchor-stat">
+            <div class="anchor-value">88,95M</div>
+            <div class="anchor-label">Impresiones generadas</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASO 1 · Universidad -->
+    <section class="section">
+      <div class="container" style="max-width:920px;">
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:2.5rem;">
+          <span class="case-sector" style="margin-bottom:1rem;">Caso 01 · Lead gen high-ticket</span>
+          <h2 style="font-size:1.75rem;font-weight:700;margin:0.75rem 0 1rem;letter-spacing:-0.025em;">Una de las cinco mejores universidades privadas de España</h2>
+          <div class="prose" style="margin-left:0;">
+            <p>Más de 30 programas de postgrado activos. Paid media multicanal Meta + Google con atribución sustentada en el CRM, no en el pixel.</p>
+            <p><strong>Qué hizo DayByDay:</strong> estructura por programa, segmentaciones por intención, attribution model con el CRM como fuente de verdad.</p>
+            <p><strong>Restricción:</strong> caso anónimo bajo NDA.</p>
+          </div>
+          <div class="case-metrics" style="border-top:1px solid var(--border);padding-top:1.5rem;margin-top:1.5rem;">
+            <div class="case-metric"><div class="case-metric-value">30+</div><div class="case-metric-label">Programas activos</div></div>
+            <div class="case-metric"><div class="case-metric-value">Meta + Google</div><div class="case-metric-label">Stack paid</div></div>
+            <div class="case-metric"><div class="case-metric-value">CRM</div><div class="case-metric-label">Atribución</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASO 2 · Garett -->
+    <section class="section">
+      <div class="container" style="max-width:920px;">
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:2.5rem;">
+          <span class="case-sector" style="margin-bottom:1rem;">Caso 02 · Operación quirúrgica D2C</span>
+          <h2 style="font-size:1.75rem;font-weight:700;margin:0.75rem 0 1rem;letter-spacing:-0.025em;">Garett España · accesorios tecnológicos de belleza</h2>
+          <div class="prose" style="margin-left:0;">
+            <p>La auditoría inicial detectó creatividades con frecuencia alta, presupuesto fragmentado y pixel sin CAPI activo.</p>
+            <p><strong>Qué hizo DayByDay:</strong> reconstrucción del árbol de campañas, CAPI server-side y nuevo set creativo testado por hooks.</p>
+            <p><strong>Resultado en 6 semanas:</strong> CPA bajado a 4,8€, 14.936 clicks y 661 inicios de pago.</p>
+          </div>
+          <div class="case-metrics" style="border-top:1px solid var(--border);padding-top:1.5rem;margin-top:1.5rem;">
+            <div class="case-metric"><div class="case-metric-value">4,8€</div><div class="case-metric-label">CPA</div></div>
+            <div class="case-metric"><div class="case-metric-value">14.936</div><div class="case-metric-label">Clicks</div></div>
+            <div class="case-metric"><div class="case-metric-value">661</div><div class="case-metric-label">Inicios de pago</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASO 3 · Aras -->
+    <section class="section">
+      <div class="container" style="max-width:920px;">
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:2.5rem;">
+          <span class="case-sector" style="margin-bottom:1rem;">Caso 03 · Pablo + Jorge en conjunto</span>
+          <h2 style="font-size:1.75rem;font-weight:700;margin:0.75rem 0 1rem;letter-spacing:-0.025em;">Aras Life Plus · D2C con automation Shopify + WhatsApp</h2>
+          <div class="prose" style="margin-left:0;">
+            <p>eCommerce D2C con proceso de venta híbrido: Shopify, WhatsApp y campañas paid auto-optimizadas. Caso conjunto de los dos socios.</p>
+            <p><strong>Qué hizo DayByDay:</strong> Pablo diseñó la estructura paid. Jorge montó la automation Shopify + WhatsApp Business + CRM.</p>
+            <p><strong>Lo relevante:</strong> primer encargo de un decisor que después confió Cartri y Garett. Tres clientes seguidos del mismo decisor.</p>
+          </div>
+          <div class="case-metrics" style="border-top:1px solid var(--border);padding-top:1.5rem;margin-top:1.5rem;">
+            <div class="case-metric"><div class="case-metric-value">3</div><div class="case-metric-label">Negocios seguidos</div></div>
+            <div class="case-metric"><div class="case-metric-value">Shopify + WA</div><div class="case-metric-label">Stack venta</div></div>
+            <div class="case-metric"><div class="case-metric-value">Pablo + Jorge</div><div class="case-metric-label">Equipo</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cómo reportamos -->
+    <section class="section section-dark">
+      <div class="container" style="max-width:760px;">
+        <div class="eyebrow" style="text-align:center;">Cómo reportamos</div>
+        <h2 style="text-align:center;font-size:1.75rem;font-weight:700;margin:0.5rem auto 1.5rem;max-width:640px;letter-spacing:-0.02em;">Margen, payback de CAC y LTV por cohorte</h2>
+        <div class="prose">
+          <p>No reportamos lo que dice la cuenta de publicidad como métrica de negocio. Es útil para optimizar la campaña, pero <strong>no te dice si la cuenta paid mueve caja</strong>.</p>
+          <p>El reporting mensual tiene cuatro bloques: margen de contribución por canal, payback de CAC, LTV de cohorte por origen y cash-conversion del mes.</p>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="section-header">
-          <h2>Qué included</h2>
-          <p>Todo lo que necesitas para implementar y escalar.</p>
-        </div>
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <h3>+156% ROAS Meta Ads</h3>
-            <p>Included en este servicio.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <h3>+23% recuperación carritos</h3>
-            <p>Included en este servicio.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <h3>3x frecuencia compra</h3>
-            <p>Included en este servicio.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <h3>Setup CAPI en 30 días</h3>
-            <p>Included en este servicio.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-sm" style="padding:3rem 0;">
-      <div class="container">
-        <div class="stats-row">
-<div class="stat-box"><div class="value">+156%</div><div class="label">ROAS Meta Ads</div></div><div class="stat-box"><div class="value">+23%</div><div class="label">abandoned cart</div></div><div class="stat-box"><div class="value">3x</div><div class="label">frecuencia compra</div></div><div class="stat-box"><div class="value">30 días</div><div class="label">setup CAPI</div></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-sm stack-section" style="padding:3rem 0;background:var(--bg-secondary);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-      <div class="container">
-        <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:1.5rem;text-align:center;">Stack tecnológico</h2>
-        <div class="stack-row">
-<a href="/meta-ads.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Meta Ads</a><a href="/analytics.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Analytics</a><a href="/tech/capi.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>CAPI</a><a href="/automatizacion.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Automatización</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-sm">
-      <div class="container">
-        <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Relacionado</h2>
-        <div class="related-grid">
-<a href="/problema.html" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class="related-content"><h4>Problema</h4><p>Ver más</p></div></a><a href="/growth-strategy.html" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class="related-content"><h4>Growth Strategy</h4><p>Ver más</p></div></a><a href="/meta-ads.html" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class="related-content"><h4>Meta Ads</h4><p>Ver más</p></div></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" style="padding:4rem 0;">
-      <div class="container">
         <div class="cta-box">
-          <h2>Ver más resultados?</h2>
-          <p>Casos de estudio disponibles bajo NDA.</p>
-          <a href="/contacto.html" class="cta-primary">Hablamos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <h2>Pedir auditoría</h2>
+          <p>30 minutos con Pablo y Jorge. Te devolvemos tres palancas accionables. Si encajamos seguimos. Si no, las palancas te las llevas igual.</p>
+          <div class="hero-cta" style="justify-content:center;">
+            <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="/growth-partner.html" class="cta-secondary">Ver modelo Growth Partner</a>
+          </div>
         </div>
       </div>
     </section>
 
-  </div><!-- end page-wrapper -->
+  </main>
 
-<footer class="footer">
-    <a href="/">Inicio</a>
-    <a href="/servicios.html">Servicios</a>
-    <a href="/blog.html">Blog</a>
-    <p>© 2026 DayByDay Consulting</p>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-logo">DayByDay Consulting</div>
+          <div style="color:var(--text-muted);font-size:0.8rem;margin-top:0.5rem;">Madrid · Partner de crecimiento</div>
+        </div>
+        <div class="footer-links">
+          <a href="/lo-que-cubre.html">Lo que cubre</a>
+          <a href="/como-trabajamos.html">Cómo trabajamos</a>
+          <a href="/resultados.html">Casos</a>
+          <a href="/growth-partner.html">Growth Partner</a>
+          <a href="/blog.html">Blog</a>
+          <a href="/contacto.html">Pedir auditoría</a>
+        </div>
+      </div>
+      <div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;">
+        <p class="footer-copy">© 2026 DayByDay Consulting · analizamos · ejecutamos · acompañamos</p>
+      </div>
+    </div>
   </footer>
 
   <script src="/js/main.js"></script>

@@ -1,17 +1,18 @@
 /* ===== MAIN NAVBAR STYLES ===== */
 .main-nav {
-  position: fixed;
+  position: fixed !important;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 1100;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 64px;
   padding: 0 2rem;
-  background: rgba(10, 10, 10, 0.92);
+  background: rgba(15, 15, 20, 0.85);
   backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-bottom: 1px solid var(--border);
   overflow: visible;
 }
@@ -90,8 +91,8 @@
   top: calc(100% + 8px);
   left: 50%;
   transform: translateX(-50%) translateY(8px);
-  min-width: min(680px, 90vw);
-  max-width: 90vw;
+  min-width: min(820px, 92vw);
+  max-width: 92vw;
   overflow-x: auto;
   background: rgba(14, 14, 17, 0.95);
   backdrop-filter: blur(20px) saturate(180%);
@@ -100,7 +101,7 @@
   border-radius: 12px;
   padding: 0.75rem;
   box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
-  z-index: 1000;
+  z-index: 1100;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .nav-dropdown:hover .nav-dropdown-content {
@@ -258,22 +259,35 @@ a[href^="#"] {
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
 
-/* Theme CSS - Premium SaaS 2025-26 Dark Palette */
+/* Theme CSS - Editorial-Consultoría · v5 */
 :root {
-  --bg-primary: #08080b;
-  --bg-secondary: #0f0f14;
-  --bg-card: #13131a;
-  --bg-elevated: #18181f;
-  --text-primary: #ededef;
-  --text-secondary: #9898a4;
-  --text-muted: #5a5a6e;
-  --accent: #ededef;
+  --bg-primary: #0f0f14;
+  --bg-secondary: #14141b;
+  --bg-card: #17171f;
+  --bg-elevated: #1c1c25;
+  --text-primary: #f5f5f7;
+  --text-secondary: #a3a3ad;
+  --text-muted: #6b6b78;
+  --accent: #ffffff;
   --accent-hover: #ffffff;
-  --border: rgba(255, 255, 255, 0.07);
+  --border: rgba(255, 255, 255, 0.06);
   --border-hover: rgba(255, 255, 255, 0.14);
   --glow: rgba(99, 102, 241, 0.15);
   --shadow: rgba(0, 0, 0, 0.4);
   --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* v5 · kill all "AI gradient" decorative layers */
+.bg-orbs,
+.tech-grid,
+.tech-dots,
+.tech-particles,
+.scanline,
+.corner-frame,
+.noise-bg,
+.mesh-gradient,
+.glow-line {
+  display: none !important;
 }
 
 /* Global dark body */

@@ -1,158 +1,124 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Tag Manager | DayByDay Consulting</title>
-  <meta name="description" content="Google Tag Manager. Gestiona todas tus etiquetas de tracking desde un solo lugar.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Google Tag Manager · GTM server-side para D2C | DayByDay Consulting</title>
+  <meta name="description" content="GTM server-side, consent mode v2 y eventos mapeados al modelo de negocio. Implementación operada por Pablo y Jorge sin handoffs.">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/tech/gtm.html">
   <link rel="icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/theme.css">
-  <link rel="stylesheet" href="/css/modern.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css"><link rel="stylesheet" href="/css/sparkles.css"><link rel="stylesheet" href="/css/modern.css"><link rel="stylesheet" href="/css/sidebar.css"><link rel="stylesheet" href="/css/pages.css">
+  <style>:root { --accent-color: #4285f4; } .hero-badge { background:#4285f41a; border:1px solid #4285f440; color:#4285f4; }</style>
 </head>
 <body>
+  
   <nav class="main-nav">
     <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
       <ul class="nav-links">
-          <li><a href="/problema.html">Problema</a></li>
-          <li class="nav-dropdown">
-            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
-            <div class="nav-dropdown-content small">
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-btn">Lo que cubre</button>
+          <div class="nav-dropdown-content mega">
+            <div class="mega-grid" style="grid-template-columns:repeat(3,1fr);">
               <div class="mega-section">
-                <div class="mega-section-title">Stack Tecnológico</div>
-                <div class="stack-grid">
-                  <a href="/tech/meta-ads.html">Meta Ads</a>
-                  <a href="/tech/google-ads-tech.html">Google Ads</a>
-                  <a href="/tech/shopify.html">Shopify</a>
-                  <a href="/tech/ga4.html">GA4</a>
-                  <a href="/tech/n8n.html">n8n</a>
-                  <a href="/tech/capi.html">CAPI</a>
-                </div>
+                <div class="mega-section-title">Áreas</div>
+                <a href="/lo-que-cubre.html#paid-media">Paid media</a>
+                <a href="/lo-que-cubre.html#tracking">Tracking &amp; Analytics</a>
+                <a href="/lo-que-cubre.html#automation">Automation</a>
+                <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
+                <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+              </div>
+              <div class="mega-section">
+                <div class="mega-section-title">Servicios</div>
+                <a href="/meta-ads.html">Meta Ads</a>
+                <a href="/google-ads.html">Google Ads</a>
+                <a href="/tiktok-ads.html">TikTok Ads</a>
+                <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                <a href="/automatizacion.html">Automatización</a>
+                <a href="/analytics.html">Analytics</a>
+                <a href="/agentic-ai.html">Agentic AI</a>
+                <a href="/growth-strategy.html">Growth Strategy</a>
+              </div>
+              <div class="mega-section">
+                <div class="mega-section-title">Stack</div>
+                <a href="/tech/ga4.html">GA4</a>
+                <a href="/tech/gtm.html">GTM</a>
+                <a href="/tech/gsc.html">Search Console</a>
+                <a href="/tech/capi.html">CAPI</a>
+                <a href="/tech/n8n.html">n8n</a>
+                <a href="/tech/azure.html">Azure</a>
+                <a href="/tech/shopify.html">Shopify</a>
+                <a href="/tech/dsp.html">DSP</a>
               </div>
             </div>
-          </li>
-          <li class="nav-dropdown">
-            <button class="nav-dropdown-btn">Servicios</button>
-            <div class="nav-dropdown-content">
-              <div class="mega-grid">
-                <div class="mega-column"><h4>Paid Media</h4>
-                  <a href="/meta-ads.html">Meta Ads</a>
-                  <a href="/google-ads.html">Google Ads</a>
-                  <a href="/tiktok-ads.html">TikTok Ads</a>
-                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
-                </div>
-                <div class="mega-column"><h4>Growth Strategy</h4>
-                  <a href="/growth-strategy.html">Estrategia</a>
-                  <a href="/growth-partner.html">Growth Partner</a>
-                </div>
-                <div class="mega-column"><h4>Automation</h4>
-                  <a href="/automatizacion.html">Automatización</a>
-                  <a href="/tech/n8n.html">n8n</a>
-                  <a href="/tech/capi.html">CAPI</a>
-                </div>
-                <div class="mega-column"><h4>Analytics & AI</h4>
-                  <a href="/analytics.html">Analytics</a>
-                  <a href="/agentic-ai.html">Agentic AI</a>
-                  <a href="/tech/azure.html">Azure AI</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li><a href="/blog.html">Blog</a></li>
+          </div>
+        </li>
+        <li><a href="/como-trabajamos.html">Cómo trabajamos</a></li>
+        <li><a href="/resultados.html">Casos</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/contacto.html" class="cta-secondary" style="padding:0.5rem 1rem;font-size:0.85rem;">Pedir auditoría</a></li>
       </ul>
+      <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
     </div>
   </nav>
   <div style="height:64px;"></div>
-  <div class="breadcrumb">
-    <div class="container">
-      <a href="/">Inicio</a><span>›</span><a href="/servicios.html">Servicios</a><span>›</span><a href="/tech/">Stack</a><span>›</span><span>Google Tag Manager</span>
-    </div>
-  </div>
 
-  <section class="hero">
-    <div class="container">
-      <span class="badge">Tech Stack</span>
-      <h1>Google Tag Manager</h1>
-      <p class="subtitle">Google Tag Manager. Gestiona todas tus etiquetas de tracking desde un solo lugar.</p>
-    </div>
-  </section>
+  <main class="page-wrapper">
+    <div class="container"><div class="breadcrumb"><a href="/">Inicio</a><span>/</span><a href="/analytics.html">Analytics</a><span>/</span><span style="color:var(--text-secondary)">GTM</span></div></div>
 
-  <section class="section">
-    <div class="container">
-      <h2>Qué included</h2>
-      <div class="grid-2">
-                      <div class="card">
-                <h3>Gestióncentralizada de tags</h3>
-                <p>Todos tus pixels y tags desde GTM. Sin tocar código.</p>
-              </div>
-              <div class="card">
-                <h3>Trigger conditions</h3>
-                <p>Dispara tags según condiciones específicas.</p>
-              </div>
-              <div class="card">
-                <h3>Variables personalizadas</h3>
-                <p>Captura data custom de tu web.</p>
-              </div>
-              <div class="card">
-                <h3>Preview mode</h3>
-                <p>Testea cambios antes de publicar.</p>
-              </div>
-              <div class="card">
-                <h3>Debug mode</h3>
-                <p>Encuentra errores rápido.</p>
-              </div>
-              <div class="card">
-                <h3>Version control</h3>
-                <p>Rollback si algo falla.</p>
-              </div>
-              <div class="card">
-                <h3>Templates community</h3>
-                <p>Miles de tags compartidos.</p>
-              </div>
-
+    <section class="hero hero-centered" style="padding-bottom:2rem;">
+      <div class="container">
+        <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>Stack · Tracking</div>
+        <h1>Google Tag Manager server-side para D2C</h1>
+        <p class="subtitle">GTM bien hecho es la columna vertebral del tracking que alimenta Meta CAPI, Google Enhanced Conversions y tu GA4. Sin server-side, todo lo demás opera con datos cojos.</p>
+        <div class="verbs-row"><span class="verb-pill"><span class="dot"></span>analizamos</span><span class="verb-separator">·</span><span class="verb-pill"><span class="dot"></span>ejecutamos</span><span class="verb-separator">·</span><span class="verb-pill"><span class="dot"></span>acompañamos</span></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section section-dark">
-    <div class="container">
-      <h2>Stack Relacionado</h2>
-      <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-        <a href="/tech/ga4.html" style="padding:0.5rem 1rem;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;color:var(--text-secondary);text-decoration:none;">GA4</a>
-        <a href="/tech/gtm.html" style="padding:0.5rem 1rem;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;color:var(--text-secondary);text-decoration:none;">GTM</a>
-        <a href="/tech/shopify.html" style="padding:0.5rem 1rem;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;color:var(--text-secondary);text-decoration:none;">Shopify</a>
+    <section class="section">
+      <div class="container">
+        <div class="section-header"><div class="eyebrow">Qué implementamos</div><h2>GTM server-side completo, no instalación básica</h2></div>
+        <div class="features-grid">
+          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></div><h3>Server-side container</h3><p>GTM SS desplegado en Cloud Run o App Engine. Reducción de pérdida por iOS/ITP y mejor control de datos.</p></div>
+          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M9 12l2 2 4-4"/></svg></div><h3>Consent mode v2</h3><p>Cumplimiento RGPD con consent mode v2 y modelado de conversiones para usuarios sin consentimiento.</p></div>
+          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Eventos custom mapeados</h3><p>Eventos diseñados según tu modelo de negocio. Add-to-cart, begin-checkout, purchase con valor real, no defaults de Shopify.</p></div>
+          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg></div><h3>Bridge a Meta CAPI</h3><p>Eventos enviados a Meta vía server-side con event match quality &gt; 8.</p></div>
+          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div><h3>Enhanced Conversions Google</h3><p>Enhanced Conversions con hashed email para mejorar atribución en Google Ads y PMax.</p></div>
+          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 3v18h18"/></svg></div><h3>Validación y QA continuo</h3><p>Debug mode, Tag Assistant, validación cruzada con GA4 DebugView y monitorización mensual de drops.</p></div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="container">
-      <h2>Relacionado</h2>
-      <div class="grid-2">
-        <a href="/meta-ads.html" class="card" style="text-decoration:none;">
-          <h3>Paid Media</h3>
-          <p>Ver servicios de publicidad</p>
-        </a>
-        <a href="/automatizacion.html" class="card" style="text-decoration:none;">
-          <h3>Automation</h3>
-          <p>Ver automatización</p>
-        </a>
+    <section class="section section-dark">
+      <div class="container">
+        <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;text-align:center;letter-spacing:-0.02em;">Stack relacionado</h2>
+        <div class="stack-row">
+          <a href="/tech/ga4.html" class="stack-pill">GA4</a>
+          <a href="/tech/capi.html" class="stack-pill">CAPI</a>
+          <a href="/tech/gsc.html" class="stack-pill">Search Console</a>
+          <a href="/tech/shopify.html" class="stack-pill">Shopify</a>
+          <a href="/analytics.html" class="stack-pill">Analytics</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="cta-box">
-    <h2>Implementar Google Tag Manager?</h2>
-    <p>Te ayudamos a configurarlo correctamente.</p>
-    <a href="/contacto.html" class="cta-button">Hablamos</a>
-  </div>
+    <section class="section">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Migrar tu GTM a server-side?</h2>
+          <p>Auditoría gratuita de 30 min con Jorge en la llamada.</p>
+          <div class="hero-cta" style="justify-content:center;"><a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <footer class="footer">
-    <a href="/">Inicio</a>
-    <a href="/servicios.html">Servicios</a>
-    <a href="/blog.html">Blog</a>
-    <p>© 2026 DayByDay Consulting</p>
-  </footer>
+  <footer class="footer"><div class="container"><div class="footer-inner"><div><div class="footer-logo">DayByDay Consulting</div><div style="color:var(--text-muted);font-size:0.8rem;margin-top:0.5rem;">Madrid · Growth Partner para D2C</div></div><div class="footer-links"><a href="/problema.html">Problema</a><a href="/como-trabajamos.html">Cómo trabajamos</a><a href="/growth-partner.html">Growth Partner</a><a href="/resultados.html">Casos</a><a href="/blog.html">Blog</a><a href="/contacto.html">Pedir auditoría</a></div></div><div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;"><p class="footer-copy">© 2026 DayByDay Consulting · analizamos · ejecutamos · acompañamos</p></div></div></footer>
+  <script src="/js/main.js"></script>
 </body>
 </html>
