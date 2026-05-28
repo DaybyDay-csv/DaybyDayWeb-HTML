@@ -1,10 +1,10 @@
 /* ===== MAIN NAVBAR STYLES ===== */
 .main-nav {
-  position: fixed;
+  position: fixed !important;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 1100;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,8 +91,8 @@
   top: calc(100% + 8px);
   left: 50%;
   transform: translateX(-50%) translateY(8px);
-  min-width: min(680px, 90vw);
-  max-width: 90vw;
+  min-width: min(820px, 92vw);
+  max-width: 92vw;
   overflow-x: auto;
   background: rgba(14, 14, 17, 0.95);
   backdrop-filter: blur(20px) saturate(180%);
@@ -101,7 +101,7 @@
   border-radius: 12px;
   padding: 0.75rem;
   box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
-  z-index: 1000;
+  z-index: 1100;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .nav-dropdown:hover .nav-dropdown-content {

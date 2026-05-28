@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Casos · 3,2M€ generados a marcas D2C | DayByDay Consulting</title>
-  <meta name="description" content="Tres clientes: universidad privada (lead gen high-ticket), Garett (CPA 4,8€ en 6 semanas) y Aras Life Plus (Shopify + WhatsApp). Recurrencia de un decisor con tres negocios consecutivos.">
+  <title>Casos · Clientes con los que hemos trabajado | DayByDay Consulting</title>
+  <meta name="description" content="Tres clientes: universidad privada (lead gen high-ticket), Garett (CPA 4,8€ en 6 semanas) y Aras Life Plus (Shopify + WhatsApp). El mismo decisor nos confió tres negocios consecutivos.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.daybydayconsulting.com/resultados.html">
   <link rel="icon" href="/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
-  <link rel="stylesheet" href="/css/sparkles.css">
   <link rel="stylesheet" href="/css/modern.css">
   <link rel="stylesheet" href="/css/sidebar.css">
   <link rel="stylesheet" href="/css/pages.css">
@@ -21,14 +20,164 @@
 </head>
 <body>
 
-  
+  <div class="file-tree-overlay" onclick="toggleSidebar()"></div>
+  <aside class="file-tree-sidebar" id="sidebar">
+    <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+    <div class="file-tree-section">
+      <div class="file-tree-section-title">Navegación</div>
+      <a href="/" class="file-tree-item">Inicio</a>
+      <a href="/lo-que-cubre.html" class="file-tree-item">Lo que cubre</a>
+      <a href="/como-trabajamos.html" class="file-tree-item">Cómo trabajamos</a>
+      <a href="/resultados.html" class="file-tree-item active">Casos</a>
+      <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
+      <a href="/blog.html" class="file-tree-item">Blog</a>
+      <a href="/contacto.html" class="file-tree-item">Pedir auditoría</a>
+    </div>
+  </aside>
+
+  <button class="file-tree-toggle" onclick="toggleSidebar()">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+  </button>
+
+  <nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-btn">Lo que cubre</button>
+          <div class="nav-dropdown-content mega">
+            <div class="mega-grid" style="grid-template-columns:repeat(3,1fr);">
+              <div class="mega-section">
+                <div class="mega-section-title">Áreas</div>
+                <a href="/lo-que-cubre.html#paid-media">Paid media</a>
+                <a href="/lo-que-cubre.html#tracking">Tracking &amp; Analytics</a>
+                <a href="/lo-que-cubre.html#automation">Automation</a>
+                <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
+                <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+              </div>
+              <div class="mega-section">
+                <div class="mega-section-title">Servicios</div>
+                <a href="/meta-ads.html">Meta Ads</a>
+                <a href="/google-ads.html">Google Ads</a>
+                <a href="/tiktok-ads.html">TikTok Ads</a>
+                <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                <a href="/automatizacion.html">Automatización</a>
+                <a href="/analytics.html">Analytics</a>
+                <a href="/agentic-ai.html">Agentic AI</a>
+                <a href="/growth-strategy.html">Growth Strategy</a>
+              </div>
+              <div class="mega-section">
+                <div class="mega-section-title">Stack</div>
+                <a href="/tech/meta-ads.html">Meta Ads</a>
+                <a href="/tech/google-ads-tech.html">Google Ads</a>
+                <a href="/tech/tiktok-ads.html">TikTok Ads</a>
+                <a href="/tech/linkedin-ads.html">LinkedIn Ads</a>
+                <a href="/tech/ga4.html">GA4</a>
+                <a href="/tech/gtm.html">GTM</a>
+                <a href="/tech/gsc.html">Search Console</a>
+                <a href="/tech/capi.html">CAPI</a>
+                <a href="/tech/n8n.html">n8n</a>
+                <a href="/tech/azure.html">Azure</a>
+                <a href="/tech/shopify.html">Shopify</a>
+                <a href="/tech/dsp.html">DSP</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="/como-trabajamos.html">Cómo trabajamos</a></li>
+        <li><a href="/resultados.html">Casos</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/contacto.html" class="cta-secondary" style="padding:0.5rem 1rem;font-size:0.85rem;">Pedir auditoría</a></li>
+      </ul>
+      <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobile-nav" class="mobile-nav">
+    <div class="mobile-nav-section">
+      <div class="mobile-nav-title">Navegación</div>
+      <a href="/" class="mobile-nav-link">Inicio</a>
+      <a href="/lo-que-cubre.html" class="mobile-nav-link">Lo que cubre</a>
+      <a href="/como-trabajamos.html" class="mobile-nav-link">Cómo trabajamos</a>
+      <a href="/resultados.html" class="mobile-nav-link">Casos</a>
+      <a href="/blog.html" class="mobile-nav-link">Blog</a>
+      <a href="/contacto.html" class="mobile-nav-link">Pedir auditoría</a>
+    </div>
+  </div>
+
+  <div style="height:64px;"></div>
+
+  <main class="page-wrapper">
+
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Inicio</a><span>/</span><span style="color:var(--text-secondary)">Casos</span>
+      </div>
+    </div>
+
+    <section class="hero hero-centered">
+      <div class="container">
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 6l-9.5 9.5-5-5L1 18"/></svg>
+          Clientes
+        </div>
+        <h1>Tres clientes con los que hemos trabajado</h1>
+        <p class="subtitle">
+          Lead gen high-ticket, operación en eCommerce D2C y automation conjunta. Datos verificados. El mismo decisor nos confió tres negocios consecutivos.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-sm" style="padding-top:1rem;">
+      <div class="container">
+        <div class="anchor-stats">
+          <div class="anchor-stat">
+            <div class="anchor-value">3,2M€</div>
+            <div class="anchor-label">Generados a clientes en 12 meses (atribución vía CRM)</div>
+          </div>
+          <div class="anchor-stat">
+            <div class="anchor-value">264.712€</div>
+            <div class="anchor-label">Gestionados en publicidad (Meta + Google)</div>
+          </div>
+          <div class="anchor-stat">
+            <div class="anchor-value">31.555</div>
+            <div class="anchor-label">Acciones de conversión registradas</div>
+          </div>
+          <div class="anchor-stat">
+            <div class="anchor-value">88,95M</div>
+            <div class="anchor-label">Impresiones generadas</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASO 1 · Universidad -->
+    <section class="section">
+      <div class="container" style="max-width:920px;">
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:2.5rem;position:relative;overflow:hidden;">
+          <span class="case-sector" style="margin-bottom:1rem;">Caso 01 · Lead gen high-ticket</span>
+          <h2 style="font-size:1.75rem;font-weight:700;margin:0.75rem 0 1rem;letter-spacing:-0.025em;">Una de las cinco mejores universidades privadas de España</h2>
+          <div class="prose" style="margin-left:0;">
+            <p>Más de 30 programas de postgrado activos. Paid media multicanal sobre Meta + Google con atribución sustentada en el CRM, no en el pixel. La métrica que mueve negocio es lead cualificado entregado al equipo comercial, no impresión.</p>
+            <p><strong>Qué hizo DayByDay:</strong> estructura por programa, segmentaciones por intención, attribution model con el CRM como fuente de verdad. Reporting mensual cruzado entre canal paid y conversión a matrícula.</p>
+            <p><strong>Restricción:</strong> caso anónimo bajo NDA. No se nombran ni la universidad ni el operador.</p>
+          </div>
+          <div class="case-metrics" style="border-top:1px solid var(--border);padding-top:1.5rem;margin-top:1.5rem;">
+            <div class="case-metric"><div class="case-metric-value">30+</div><div class="case-metric-label">Programas activos</div></div>
+            <div class="case-metric"><div class="case-metric-value">Meta + Google</div><div class="case-metric-label">Stack paid</div></div>
+            <div class="case-metric"><div class="case-metric-value">CRM</div><div class="case-metric-label">Fuente de atribución</div></div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- CASO 2 · Garett -->
     <section class="section">
       <div class="container" style="max-width:920px;">
         <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:2.5rem;position:relative;overflow:hidden;">
-          <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#10b981,transparent);"></div>
           <span class="case-sector" style="margin-bottom:1rem;">Caso 02 · Operación quirúrgica D2C</span>
           <h2 style="font-size:1.75rem;font-weight:700;margin:0.75rem 0 1rem;letter-spacing:-0.025em;">Garett España · accesorios tecnológicos de belleza</h2>
           <div class="prose" style="margin-left:0;">
@@ -49,13 +198,12 @@
     <section class="section">
       <div class="container" style="max-width:920px;">
         <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:2.5rem;position:relative;overflow:hidden;">
-          <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#10b981,transparent);"></div>
           <span class="case-sector" style="margin-bottom:1rem;">Caso 03 · Pablo + Jorge en conjunto</span>
           <h2 style="font-size:1.75rem;font-weight:700;margin:0.75rem 0 1rem;letter-spacing:-0.025em;">Aras Life Plus · D2C con automation Shopify + WhatsApp</h2>
           <div class="prose" style="margin-left:0;">
             <p>eCommerce D2C con un proceso de venta híbrido: parte automática en la web (Shopify), parte conversacional en WhatsApp y parte sostenida por campañas paid auto-optimizadas. Caso conjunto de los dos socios.</p>
             <p><strong>Qué hizo DayByDay:</strong> Pablo diseñó la estructura paid y la oferta. Jorge montó la automation completa entre Shopify, WhatsApp Business y el CRM, con flujos automáticos para abandono, post-compra y reactivación.</p>
-            <p><strong>Lo relevante:</strong> es el primer mandato de un decisor que después confió a DayByDay otros dos negocios consecutivos — Cartri y Garett. tres clientes seguidos del mismo decisor.</p>
+            <p><strong>Lo relevante:</strong> es el primer encargo de un decisor que después confió a DayByDay otros dos negocios consecutivos — Cartri y Garett. Tres clientes seguidos del mismo decisor.</p>
           </div>
           <div class="case-metrics" style="border-top:1px solid var(--border);padding-top:1.5rem;margin-top:1.5rem;">
             <div class="case-metric"><div class="case-metric-value">3</div><div class="case-metric-label">Negocios seguidos</div></div>
@@ -74,11 +222,6 @@
           <h2>Aras Life · Cartri · Garett</h2>
           <p>El mismo decisor nos confió tres negocios consecutivos. La métrica de confianza más relevante: te vuelven a contratar para el siguiente proyecto.</p>
         </div>
-        <div class="tagline-block">
-          <p class="tagline-strong">
-            <b>Una métrica</b> que no aparece en el ad account: la siguiente reunión empieza con "tengo otro negocio para vosotros".
-          </p>
-        </div>
       </div>
     </section>
 
@@ -86,10 +229,10 @@
     <section class="section">
       <div class="container" style="max-width:760px;">
         <div class="eyebrow" style="text-align:center;">Cómo reportamos</div>
-        <h2 style="text-align:center;font-size:1.75rem;font-weight:700;margin:0.5rem auto 1.5rem;max-width:640px;letter-spacing:-0.02em;">Margen de contribución, payback de CAC, LTV por cohorte</h2>
+        <h2 style="text-align:center;font-size:1.75rem;font-weight:700;margin:0.5rem auto 1.5rem;max-width:640px;letter-spacing:-0.02em;">Margen, payback de CAC y LTV por cohorte</h2>
         <div class="prose">
-          <p>No reportamos ROAS de plataforma como métrica de negocio. El ROAS de Meta o Google es útil para optimizar la campaña, pero <strong>no te dice si la cuenta paid mueve caja</strong>.</p>
-          <p>El reporting mensual de DayByDay tiene cuatro bloques: margen de contribución por canal, payback de CAC en cohortes mensuales, LTV de cohorte por origen, y cash-conversion del mes. Si tu CFO necesita decidir con esto, tiene lo que necesita.</p>
+          <p>No reportamos lo que dice la cuenta de publicidad como métrica de negocio. Es útil para optimizar la campaña, pero <strong>no te dice si la cuenta paid mueve caja</strong>.</p>
+          <p>El reporting mensual de DayByDay tiene cuatro bloques: margen de contribución por canal, payback de CAC en cohortes mensuales, LTV de cohorte por origen y cash-conversion del mes. Si tu CFO necesita decidir con esto, tiene lo que necesita.</p>
         </div>
       </div>
     </section>
@@ -98,8 +241,8 @@
     <section class="section">
       <div class="container">
         <div class="cta-box">
-          <h2>Cuéntanos cómo funciona tu operativa</h2>
-          <p>Auditoría gratuita de 30 minutos. Pablo y Jorge en la llamada. Te devolvemos qué palanca mueve más caja a 90 días.</p>
+          <h2>Pedir auditoría</h2>
+          <p>30 minutos con Pablo y Jorge. Vemos tu cuenta de publicidad y tu funnel, te devolvemos tres palancas accionables. Si encajamos seguimos. Si no, las palancas te las llevas igual.</p>
           <div class="hero-cta" style="justify-content:center;">
             <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             <a href="/growth-partner.html" class="cta-secondary">Ver modelo Growth Partner</a>
@@ -115,19 +258,19 @@
       <div class="footer-inner">
         <div>
           <div class="footer-logo">DayByDay Consulting</div>
-          <div style="color:var(--text-muted);font-size:0.8rem;margin-top:0.5rem;">Madrid · Growth Partner para D2C</div>
+          <div style="color:var(--text-muted);font-size:0.8rem;margin-top:0.5rem;">Madrid · Partner de crecimiento</div>
         </div>
         <div class="footer-links">
-          <a href="/problema.html">Problema</a>
+          <a href="/lo-que-cubre.html">Lo que cubre</a>
           <a href="/como-trabajamos.html">Cómo trabajamos</a>
-          <a href="/growth-partner.html">Growth Partner</a>
           <a href="/resultados.html">Casos</a>
+          <a href="/growth-partner.html">Growth Partner</a>
           <a href="/blog.html">Blog</a>
           <a href="/contacto.html">Pedir auditoría</a>
         </div>
       </div>
       <div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;">
-        <p class="footer-copy">© 2026 DayByDay Consulting · 3,2M€ generados · analizamos · ejecutamos · acompañamos</p>
+        <p class="footer-copy">© 2026 DayByDay Consulting · analizamos · ejecutamos · acompañamos</p>
       </div>
     </div>
   </footer>
