@@ -80,110 +80,50 @@
     <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
       <ul class="nav-links">
-          <li><a href="/problema.html">Problema</a></li>
-          
-          <!-- Cómo Trabajamos + Stack Tech (Grid) -->
-          <li class="nav-dropdown">
-            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
-            <div class="nav-dropdown-content small">
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-btn">Lo que cubre</button>
+          <div class="nav-dropdown-content mega">
+            <div class="mega-grid" style="grid-template-columns:repeat(2,1fr);">
               <div class="mega-section">
-                <div class="mega-section-title">Stack Tecnológico</div>
-                <div class="stack-grid">
-                  <a href="/tech/meta-ads.html">Meta Ads</a>
-                  <a href="/tech/google-ads-tech.html">Google Ads</a>
-                  <a href="/tech/shopify.html">Shopify</a>
-                  <a href="/tech/ga4.html">GA4</a>
-                  <a href="/tech/n8n.html">n8n</a>
-                  <a href="/tech/capi.html">CAPI</a>
-                </div>
+                <div class="mega-section-title">Áreas</div>
+                <a href="/lo-que-cubre.html#paid-media">Paid media</a>
+                <a href="/lo-que-cubre.html#tracking">Tracking &amp; Analytics</a>
+                <a href="/lo-que-cubre.html#automation">Automation</a>
+                <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
+                <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+              </div>
+              <div class="mega-section">
+                <div class="mega-section-title">Stack</div>
+                <a href="/tech/meta-ads.html">Meta Ads</a>
+                <a href="/tech/google-ads-tech.html">Google Ads</a>
+                <a href="/tech/tiktok-ads.html">TikTok Ads</a>
+                <a href="/tech/linkedin-ads.html">LinkedIn Ads</a>
+                <a href="/tech/ga4.html">GA4</a>
+                <a href="/tech/gtm.html">GTM</a>
+                <a href="/tech/capi.html">CAPI</a>
+                <a href="/tech/n8n.html">n8n</a>
+                <a href="/tech/azure.html">Azure</a>
+                <a href="/tech/shopify.html">Shopify</a>
               </div>
             </div>
-          </li>
-          
-          <!-- Servicios (Mega Menu) -->
-          <li class="nav-dropdown">
-            <button class="nav-dropdown-btn">Servicios</button>
-            <div class="nav-dropdown-content">
-              <div class="mega-grid">
-                <div class="mega-column">
-                  <h4>Paid Media</h4>
-                  <a href="/meta-ads.html">Meta Ads</a>
-                  <a href="/google-ads.html">Google Ads</a>
-                  <a href="/tiktok-ads.html">TikTok Ads</a>
-                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
-                </div>
-                <div class="mega-column">
-                  <h4>Growth Strategy</h4>
-                  <a href="/growth-strategy.html">Estrategia</a>
-                  <a href="/growth-partner.html">Growth Partner</a>
-                </div>
-                <div class="mega-column">
-                  <h4>Automation</h4>
-                  <a href="/automatizacion.html">Automatización</a>
-                  <a href="/tech/n8n.html">n8n</a>
-                  <a href="/tech/capi.html">CAPI</a>
-                </div>
-                <div class="mega-column">
-                  <h4>Analytics & AI</h4>
-                  <a href="/analytics.html">Analytics</a>
-                  <a href="/agentic-ai.html">Agentic AI</a>
-                  <a href="/tech/azure.html">Azure AI</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          
-          <li><a href="/blog.html">Blog</a></li>
+          </div>
+        </li>
+        <li><a href="/como-trabajamos.html">Cómo trabajamos</a></li>
+        <li><a href="/resultados.html">Casos</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/contacto.html" class="cta-secondary" style="padding:0.5rem 1rem;font-size:0.85rem;">Pedir auditoría</a></li>
       </ul>
+      <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
     </div>
   </nav>
 
   <div style="height:64px;"></div>
 
   <div class="page-wrapper">
-    <div class="bg-orbs">
-      <div class="bg-orb bg-orb-1"></div>
-      <div class="bg-orb bg-orb-2"></div>
-      <div class="bg-orb bg-orb-3"></div>
-      <div class="bg-orb bg-orb-4"></div>
-    </div>
-
-    <div class="tech-dots"></div>
-    <div class="tech-grid"></div>
-
-    <div class="container">
-      <div class="breadcrumb">
-        <a href="/">Inicio</a><span>/</span><a href="/servicios.html">Servicios</a><span>/</span><span style="color:var(--text-secondary)">n8n Automation</span>
-      </div>
-    </div>
-
-    <section class="hero" style="padding:5rem 0 4rem;">
-      <div class="container">
-        <div class="hero-grid">
-          <div>
-            <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>Stack Tech</div>
-            <h1>n8n Automation para eCommerce</h1>
-            <p class="subtitle" style="font-size:1.25rem;color:var(--text-secondary);max-width:540px;line-height:1.6;margin:1rem 0 2rem;">Automatización open-source que escala contigo. 200+ integraciones y AI nodes nativos.</p>
-            <div class="hero-cta">
-              <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-              <a href="/resultados.html" class="cta-secondary">Ver resultados</a>
-            </div>
-          </div>
-          <div class="hero-visual">
-            <div class="hero-stat">
-              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M23 6l-9.5 9.5-5-5L1 18"/></svg></div>
-              <div class="hero-stat-content"><div class="hero-stat-value">200+</div><div class="hero-stat-label">integraciones</div></div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg></div>
-              <div class="hero-stat-content"><div class="hero-stat-value">99.9%</div><div class="hero-stat-label">uptime</div></div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2v4M12 18v4"/></svg></div>
-              <div class="hero-stat-content"><div class="hero-stat-value">AI</div><div class="hero-stat-label">nodes incluidos</div></div>
-            </div>
-          </div>
-        </div>
+    
       </div>
     </section>
 
@@ -280,7 +220,7 @@
 
 <footer class="footer">
     <a href="/">Inicio</a>
-    <a href="/servicios.html">Servicios</a>
+    <a href="/lo-que-cubre.html">Lo que cubre</a>
     <a href="/blog.html">Blog</a>
     <p>© 2026 DayByDay Consulting</p>
   </footer>

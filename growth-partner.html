@@ -56,12 +56,7 @@
 </head>
 <body>
 
-  <div class="bg-orbs">
-    <div class="bg-orb bg-orb-1"></div>
-    <div class="bg-orb bg-orb-2"></div>
-    <div class="bg-orb bg-orb-3"></div>
-    <div class="bg-orb bg-orb-4"></div>
-  </div>
+  
 
   <div class="file-tree-overlay" onclick="toggleSidebar()"></div>
   <aside class="file-tree-sidebar" id="sidebar">
@@ -84,9 +79,36 @@
     <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
       <ul class="nav-links">
-        <li><a href="/problema.html">Problema</a></li>
-        <li><a href="/como-trabajamos.html">Cómo Trabajamos</a></li>
-        <li><a href="/growth-partner.html">Growth Partner</a></li>
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-btn">Lo que cubre</button>
+          <div class="nav-dropdown-content mega">
+            <div class="mega-grid" style="grid-template-columns:repeat(2,1fr);">
+              <div class="mega-section">
+                <div class="mega-section-title">Áreas</div>
+                <a href="/lo-que-cubre.html#paid-media">Paid media</a>
+                <a href="/lo-que-cubre.html#tracking">Tracking &amp; Analytics</a>
+                <a href="/lo-que-cubre.html#automation">Automation</a>
+                <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
+                <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+              </div>
+              <div class="mega-section">
+                <div class="mega-section-title">Stack</div>
+                <a href="/tech/meta-ads.html">Meta Ads</a>
+                <a href="/tech/google-ads-tech.html">Google Ads</a>
+                <a href="/tech/tiktok-ads.html">TikTok Ads</a>
+                <a href="/tech/linkedin-ads.html">LinkedIn Ads</a>
+                <a href="/tech/ga4.html">GA4</a>
+                <a href="/tech/gtm.html">GTM</a>
+                <a href="/tech/capi.html">CAPI</a>
+                <a href="/tech/n8n.html">n8n</a>
+                <a href="/tech/azure.html">Azure</a>
+                <a href="/tech/shopify.html">Shopify</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="/como-trabajamos.html">Cómo trabajamos</a></li>
         <li><a href="/resultados.html">Casos</a></li>
         <li><a href="/blog.html">Blog</a></li>
         <li><a href="/contacto.html" class="cta-secondary" style="padding:0.5rem 1rem;font-size:0.85rem;">Pedir auditoría</a></li>
@@ -98,24 +120,29 @@
   </nav>
 
   <div id="mobile-nav" class="mobile-nav">
-    <a href="/" class="mobile-nav-link">Inicio</a>
-    <a href="/problema.html" class="mobile-nav-link">Problema</a>
-    <a href="/como-trabajamos.html" class="mobile-nav-link">Cómo Trabajamos</a>
-    <a href="/growth-partner.html" class="mobile-nav-link">Growth Partner</a>
-    <a href="/resultados.html" class="mobile-nav-link">Casos</a>
-    <a href="/blog.html" class="mobile-nav-link">Blog</a>
-    <a href="/contacto.html" class="mobile-nav-link">Pedir auditoría</a>
-  </div>
-
-  <div style="height:64px;"></div>
-
-  <main class="page-wrapper">
-
-    <div class="container">
-      <div class="breadcrumb">
-        <a href="/">Inicio</a><span>/</span><span style="color:var(--text-secondary)">Growth Partner</span>
-      </div>
+    <div class="mobile-nav-section">
+      <div class="mobile-nav-title">Navegación</div>
+      <a href="/" class="mobile-nav-link">Inicio</a>
+      <a href="/lo-que-cubre.html" class="mobile-nav-link">Lo que cubre</a>
+      <a href="/como-trabajamos.html" class="mobile-nav-link">Cómo trabajamos</a>
+      <a href="/resultados.html" class="mobile-nav-link">Casos</a>
+      <a href="/blog.html" class="mobile-nav-link">Blog</a>
+      <a href="/contacto.html" class="mobile-nav-link">Pedir auditoría</a>
     </div>
+    <div class="mobile-nav-section">
+      <div class="mobile-nav-title">Stack</div>
+      <a href="/tech/meta-ads.html" class="mobile-nav-link mobile-nav-sub">Meta Ads</a>
+      <a href="/tech/google-ads-tech.html" class="mobile-nav-link mobile-nav-sub">Google Ads</a>
+      <a href="/tech/tiktok-ads.html" class="mobile-nav-link mobile-nav-sub">TikTok Ads</a>
+      <a href="/tech/linkedin-ads.html" class="mobile-nav-link mobile-nav-sub">LinkedIn Ads</a>
+      <a href="/tech/ga4.html" class="mobile-nav-link mobile-nav-sub">GA4</a>
+      <a href="/tech/gtm.html" class="mobile-nav-link mobile-nav-sub">GTM</a>
+      <a href="/tech/capi.html" class="mobile-nav-link mobile-nav-sub">CAPI</a>
+      <a href="/tech/n8n.html" class="mobile-nav-link mobile-nav-sub">n8n</a>
+      <a href="/tech/azure.html" class="mobile-nav-link mobile-nav-sub">Azure</a>
+      <a href="/tech/shopify.html" class="mobile-nav-link mobile-nav-sub">Shopify</a>
+    </div>
+  </div>
 
     <section class="hero hero-centered">
       <div class="container">
@@ -142,7 +169,7 @@
         <div class="anchor-stats">
           <div class="anchor-stat">
             <div class="anchor-value">3,2M€</div>
-            <div class="anchor-label">Generados a clientes en 12 meses (atribución vía CRM)</div>
+            <div class="anchor-label">Generados a clientes en 12 meses (medición desde tu CRM)</div>
           </div>
           <div class="anchor-stat">
             <div class="anchor-value">264.712€</div>
@@ -192,29 +219,29 @@
     <section class="section section-dark">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">Los cinco principios</div>
+          <div class="eyebrow">Cómo pensamos</div>
           <h2>El ADN de cómo operamos cada cuenta</h2>
         </div>
         <div class="pillars-grid">
           <div class="pillar-card">
             <div class="pillar-quote">"Hablas con los dos socios desde la primera conversación."</div>
-            <div class="pillar-meta">Pilar 1 · sin filtros</div>
+            <div class="pillar-meta">Sin filtros</div>
           </div>
           <div class="pillar-card">
             <div class="pillar-quote">"Sin handoffs. Sin perfiles junior."</div>
-            <div class="pillar-meta">Pilar 2 · quién opera</div>
+            <div class="pillar-meta">Sin handoffs</div>
           </div>
           <div class="pillar-card">
             <div class="pillar-quote">"Del análisis al resultado, contigo."</div>
-            <div class="pillar-meta">Pilar 3 · acompañamiento</div>
+            <div class="pillar-meta">Acompañamiento</div>
           </div>
           <div class="pillar-card">
             <div class="pillar-quote">"Reportamos margen de contribución, payback de CAC y LTV por cohorte. No ROAS plataforma."</div>
-            <div class="pillar-meta">Pilar 4 · métricas reales</div>
+            <div class="pillar-meta">Métricas que importan</div>
           </div>
           <div class="pillar-card" style="grid-column: span 2;">
             <div class="pillar-quote">"Si capitalizas un éxito antes de entender qué lo produjo, lo matas."</div>
-            <div class="pillar-meta">Pilar 5 · Lección Douf</div>
+            <div class="pillar-meta">Lo que aprendimos</div>
           </div>
         </div>
       </div>
@@ -294,15 +321,15 @@
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">Tres casos públicos</div>
-          <h2>Tres mandatos, tres usos del modelo</h2>
+          <div class="eyebrow">Clientes</div>
+          <h2>tres clientes, tres usos del modelo</h2>
           <p>Detalle ampliado en la página de <a href="/resultados.html" style="color:var(--accent-color);">casos</a>.</p>
         </div>
         <div class="cases-grid">
           <article class="case-card">
             <span class="case-sector">Universidad privada</span>
             <h3>Lead gen para 30+ postgrados</h3>
-            <p class="case-desc">Una de las cinco mejores universidades privadas de España. Multicanal Meta + Google con atribución vía CRM.</p>
+            <p class="case-desc">Una de las cinco mejores universidades privadas de España. Multicanal Meta + Google con medición desde tu CRM.</p>
             <div class="case-metrics">
               <div class="case-metric"><div class="case-metric-value">30+</div><div class="case-metric-label">Programas</div></div>
               <div class="case-metric"><div class="case-metric-value">Meta+Google</div><div class="case-metric-label">Canales</div></div>
@@ -324,9 +351,9 @@
           <article class="case-card">
             <span class="case-sector">Aras Life Plus</span>
             <h3>Shopify + WhatsApp + ads auto</h3>
-            <p class="case-desc">Primer mandato de un partner ejecutivo que después confió Cartri y Garett a DayByDay. Tres negocios consecutivos.</p>
+            <p class="case-desc">Primer encargo de un decisor que después confió Cartri y Garett a DayByDay. Tres negocios consecutivos.</p>
             <div class="case-metrics">
-              <div class="case-metric"><div class="case-metric-value">3</div><div class="case-metric-label">Mandatos</div></div>
+              <div class="case-metric"><div class="case-metric-value">3</div><div class="case-metric-label">Negocios</div></div>
               <div class="case-metric"><div class="case-metric-value">Shopify</div><div class="case-metric-label">Plataforma</div></div>
               <div class="case-metric"><div class="case-metric-value">WhatsApp</div><div class="case-metric-label">Venta</div></div>
             </div>
@@ -352,7 +379,6 @@
     <section class="section">
       <div class="container">
         <div class="bru-block">
-          <div class="bru-eyebrow">La frase brújula</div>
           <p class="bru-text">
             Liberamos al fundador del peso del crecimiento para que ejecute la visión por la que vino al mundo. Analizamos contigo. Ejecutamos contigo. Acompañamos contigo. Sin handoffs. Sin perfiles junior. Hablas con los dos socios desde el día uno.
           </p>
