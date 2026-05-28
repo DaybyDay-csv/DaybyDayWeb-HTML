@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Hablamos · Auditoría gratuita de 30 min | DayByDay Consulting</title>
-  <meta name="description" content="Cuéntanos cómo funciona tu operativa. Auditoría gratuita de 30 minutos. Te respondemos en menos de 24 horas. Pablo y Jorge en la llamada — sin filtros.">
+  <title>Pedir auditoría · 30 minutos · gratuita | DayByDay Consulting</title>
+  <meta name="description" content="Auditoría de cuenta paid + funnel D2C. 30 minutos, gratuita. Pablo y Jorge en la llamada. Te llevas tres palancas accionables sobre tu cuenta. Si encajamos seguimos. Si no, las palancas te las llevas igual.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.daybydayconsulting.com/contacto.html">
   <link rel="icon" href="/favicon.ico">
@@ -17,6 +17,37 @@
   <style>
     :root { --accent-color: #6366f1; }
     .hero-badge { background: #6366f11a; border: 1px solid #6366f140; color: #818cf8; }
+    .audit-promise {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 1.75rem 2rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      position: relative;
+    }
+    .audit-promise::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #818cf8, transparent);
+    }
+    .audit-list { display: flex; flex-direction: column; gap: 0.9rem; }
+    .audit-list-item {
+      display: flex; gap: 0.875rem; align-items: flex-start;
+    }
+    .audit-list-icon {
+      width: 28px; height: 28px;
+      border-radius: 8px;
+      background: rgba(99,102,241,0.15);
+      color: #818cf8;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .audit-list-icon svg { width: 14px; height: 14px; }
+    .audit-list-text { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.55; }
+    .audit-list-text strong { color: var(--text-primary); font-weight: 600; }
   </style>
 </head>
 <body>
@@ -39,19 +70,6 @@
       <a href="/resultados.html" class="file-tree-item">Casos</a>
       <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
     </div>
-    <div class="file-tree-section">
-      <div class="file-tree-section-title">Paid Media</div>
-      <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
-      <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
-      <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
-      <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
-    </div>
-    <div class="file-tree-section">
-      <div class="file-tree-section-title">Automation & AI</div>
-      <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
-      <a href="/analytics.html" class="file-tree-item">Analytics</a>
-      <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
-    </div>
   </aside>
 
   <button class="file-tree-toggle" onclick="toggleSidebar()">
@@ -66,7 +84,6 @@
         <li><a href="/como-trabajamos.html">Cómo Trabajamos</a></li>
         <li><a href="/resultados.html">Casos</a></li>
         <li><a href="/blog.html">Blog</a></li>
-        <li><a href="/contacto.html" class="cta-secondary" style="padding:0.5rem 1rem;font-size:0.85rem;">Hablamos</a></li>
       </ul>
       <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
@@ -89,97 +106,92 @@
 
     <div class="container">
       <div class="breadcrumb">
-        <a href="/">Inicio</a><span>/</span><span style="color:var(--text-secondary)">Hablamos</span>
+        <a href="/">Inicio</a><span>/</span><span style="color:var(--text-secondary)">Pedir auditoría</span>
       </div>
     </div>
 
+    <!-- HERO -->
     <section class="hero hero-centered">
       <div class="container">
         <div class="hero-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          Auditoría gratuita · 30 minutos
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          Auditoría · 30 minutos · gratuita
         </div>
-        <h1>Cuéntanos cómo funciona tu operativa</h1>
+        <h1>Auditoría de tu cuenta paid + funnel</h1>
         <p class="subtitle">
-          En la llamada estamos Pablo y Jorge. Ningún filtro, ningún SDR. Te devolvemos qué palanca mueve más caja en los próximos 90 días.
+          Pablo y Jorge en la llamada. Te llevas tres palancas accionables sobre tu cuenta. Si encajamos seguimos. Si no, las palancas te las llevas igual.
         </p>
-        <div class="verbs-row">
-          <span class="verb-pill"><span class="dot"></span>analizamos</span>
-          <span class="verb-separator">·</span>
-          <span class="verb-pill"><span class="dot"></span>ejecutamos</span>
-          <span class="verb-separator">·</span>
-          <span class="verb-pill"><span class="dot"></span>acompañamos</span>
+      </div>
+    </section>
+
+    <!-- QUÉ TE LLEVAS -->
+    <section class="section" style="padding-top:1rem;">
+      <div class="container">
+        <div class="audit-promise">
+          <div class="eyebrow" style="position:static;margin-bottom:1.25rem;">Qué te llevas de la llamada</div>
+          <div class="audit-list">
+            <div class="audit-list-item">
+              <div class="audit-list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+              <div class="audit-list-text"><strong>Tres palancas concretas</strong> sobre tu cuenta paid y tu funnel D2C. Aplicables esa misma semana, contrates o no.</div>
+            </div>
+            <div class="audit-list-item">
+              <div class="audit-list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+              <div class="audit-list-text"><strong>Lectura cruzada</strong> de tu ad account, tu Shopify y tu tracking. Detectamos qué fuga de margen es la más urgente.</div>
+            </div>
+            <div class="audit-list-item">
+              <div class="audit-list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+              <div class="audit-list-text"><strong>Diagnóstico honesto</strong> de encaje. Si tu fase, tu spend o tu estructura no encajan con cómo operamos, te lo decimos en la llamada.</div>
+            </div>
+            <div class="audit-list-item">
+              <div class="audit-list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+              <div class="audit-list-text"><strong>Los dos socios en la sala.</strong> Sin SDR, sin filtros, sin reuniones de seguimiento. La promesa "hablas con los dos" se honra desde el primer minuto.</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" style="padding-top:1rem;">
+    <!-- FORM + CALENDLY -->
+    <section class="section">
       <div class="container" style="max-width:1000px;">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start;">
 
           <div>
-            <div class="eyebrow">Qué esperar de la llamada</div>
-            <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.25rem;letter-spacing:-0.02em;">30 minutos, una decisión accionable</h2>
+            <div class="eyebrow">Reserva directa</div>
+            <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1rem;letter-spacing:-0.02em;">Elige hueco en Calendly</h2>
+            <p style="color:var(--text-secondary);font-size:0.97rem;line-height:1.6;margin-bottom:1.25rem;">
+              Si tienes claro que quieres hablar y sólo necesitas el hueco, el camino más corto es la agenda directa.
+            </p>
+            <a href="https://calendly.com/daybydayconsulting/discovery" target="_blank" rel="noopener" class="cta-primary" style="width:100%;justify-content:center;padding:1rem;">
+              Abrir Calendly
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
 
-            <div style="display:flex;flex-direction:column;gap:1rem;margin-bottom:1.5rem;">
-              <div style="display:flex;gap:0.875rem;align-items:flex-start;">
-                <div style="width:28px;height:28px;border-radius:8px;background:rgba(99,102,241,0.15);color:#818cf8;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;flex-shrink:0;">1</div>
-                <div>
-                  <div style="font-weight:600;color:var(--text-primary);margin-bottom:0.15rem;">Contexto rápido (8 min)</div>
-                  <div style="color:var(--text-secondary);font-size:0.92rem;">Tu negocio, tu spend actual, qué llevas probado y qué te bloquea.</div>
-                </div>
-              </div>
-              <div style="display:flex;gap:0.875rem;align-items:flex-start;">
-                <div style="width:28px;height:28px;border-radius:8px;background:rgba(99,102,241,0.15);color:#818cf8;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;flex-shrink:0;">2</div>
-                <div>
-                  <div style="font-weight:600;color:var(--text-primary);margin-bottom:0.15rem;">Lectura inicial (12 min)</div>
-                  <div style="color:var(--text-secondary);font-size:0.92rem;">Vemos tu ad account, tu Shopify y tu tracking en vivo. Detectamos qué fuga de caja salta primero.</div>
-                </div>
-              </div>
-              <div style="display:flex;gap:0.875rem;align-items:flex-start;">
-                <div style="width:28px;height:28px;border-radius:8px;background:rgba(99,102,241,0.15);color:#818cf8;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;flex-shrink:0;">3</div>
-                <div>
-                  <div style="font-weight:600;color:var(--text-primary);margin-bottom:0.15rem;">Diagnóstico (10 min)</div>
-                  <div style="color:var(--text-secondary);font-size:0.92rem;">Te devolvemos la palanca que mueve más caja a 90 días. Si no encajamos, te lo decimos también.</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="action-box" style="margin-left:0;margin-right:0;">
-              <div class="action-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
-              </div>
-              <div>
-                <div class="action-label">Sin compromiso</div>
-                <h4>Si no encajamos, no perdemos tu tiempo</h4>
-                <p>Si tu fase, tu spend o tu estructura no encajan con cómo operamos, te lo decimos en la llamada y te orientamos hacia el perfil de proveedor que sí.</p>
-              </div>
+            <div style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border);">
+              <div class="eyebrow">Prefieres explicarte primero</div>
+              <p style="color:var(--text-secondary);font-size:0.97rem;line-height:1.6;margin-bottom:1rem;">
+                Cuéntanos brevemente tu situación. Pablo o Jorge responde personalmente en menos de 24 horas laborables.
+              </p>
+              <p style="color:var(--text-secondary);font-size:0.92rem;">
+                <a href="mailto:contact@daybydayconsulting.com" style="color:var(--accent-color);">contact@daybydayconsulting.com</a>
+              </p>
             </div>
           </div>
 
           <div>
             <form class="df-form" action="mailto:contact@daybydayconsulting.com" method="post" enctype="text/plain">
+              <div class="eyebrow" style="position:static;margin-bottom:0.75rem;">Formulario · 3 campos para preparar la llamada</div>
+
               <div class="form-group">
-                <label for="name">Nombre</label>
-                <input id="name" name="name" type="text" placeholder="Tu nombre" required>
+                <label for="name">Nombre y empresa</label>
+                <input id="name" name="name" type="text" placeholder="Tu nombre · mimarca.com" required>
               </div>
+
               <div class="form-group">
                 <label for="email">Email</label>
                 <input id="email" name="email" type="email" placeholder="tu@email.com" required>
               </div>
-              <div class="form-group">
-                <label for="company">Empresa · web</label>
-                <input id="company" name="company" type="text" placeholder="mimarca.com" required>
-              </div>
-              <div class="form-group">
-                <label for="revenue">Facturación anual</label>
-                <select id="revenue" name="revenue">
-                  <option>Menos de 200K€</option>
-                  <option selected>200K – 1M€</option>
-                  <option>1M – 3M€</option>
-                  <option>Más de 3M€</option>
-                </select>
-              </div>
+
               <div class="form-group">
                 <label for="spend">Spend paid mensual actual</label>
                 <select id="spend" name="spend">
@@ -190,12 +202,14 @@
                   <option>Más de 30K€/mes</option>
                 </select>
               </div>
+
               <div class="form-group">
-                <label for="message">Cuéntanos cómo funciona tu operativa</label>
-                <textarea id="message" name="message" rows="5" placeholder="Qué vendes, qué llevas probado, qué te bloquea hoy..."></textarea>
+                <label for="problem">Qué problema vienes a mirar</label>
+                <textarea id="problem" name="problem" rows="4" placeholder="Una o dos líneas. Lo que te preocupa esta semana."></textarea>
               </div>
-              <button type="submit">Hablamos</button>
-              <p style="text-align:center;margin-top:1rem;font-size:0.82rem;color:var(--text-muted);">Te respondemos en menos de 24 horas laborables.</p>
+
+              <button type="submit">Pedir auditoría</button>
+              <p style="text-align:center;margin-top:1rem;font-size:0.82rem;color:var(--text-muted);">Respondemos en menos de 24 horas laborables.</p>
             </form>
           </div>
 
@@ -203,27 +217,14 @@
       </div>
     </section>
 
+    <!-- CONTRATO -->
     <section class="section section-dark">
-      <div class="container" style="text-align:center;">
-        <div class="eyebrow">O directamente</div>
-        <h2 style="font-size:1.5rem;font-weight:700;margin:0.5rem 0 1.5rem;letter-spacing:-0.02em;">Tres canales más para hablar con nosotros</h2>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;max-width:780px;margin:0 auto;">
-          <a href="mailto:contact@daybydayconsulting.com" class="feature-card" style="text-decoration:none;text-align:center;align-items:center;">
-            <div class="feature-icon" style="margin:0 auto;"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg></div>
-            <h3>Email</h3>
-            <p style="font-size:0.85rem;">contact@daybydayconsulting.com</p>
-          </a>
-          <a href="https://calendly.com/daybydayconsulting/discovery" target="_blank" rel="noopener" class="feature-card" style="text-decoration:none;text-align:center;align-items:center;">
-            <div class="feature-icon" style="margin:0 auto;"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
-            <h3>Calendly</h3>
-            <p style="font-size:0.85rem;">30 min, Pablo + Jorge en la llamada</p>
-          </a>
-          <a href="https://es.linkedin.com/in/pablo-santirso-perez" target="_blank" rel="noopener" class="feature-card" style="text-decoration:none;text-align:center;align-items:center;">
-            <div class="feature-icon" style="margin:0 auto;"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/></svg></div>
-            <h3>LinkedIn</h3>
-            <p style="font-size:0.85rem;">Mensaje directo a Pablo</p>
-          </a>
-        </div>
+      <div class="container" style="max-width:780px;text-align:center;">
+        <div class="eyebrow">El contrato implícito</div>
+        <h2 style="font-size:1.4rem;font-weight:700;margin:0.5rem 0 1rem;letter-spacing:-0.02em;">Si encajamos seguimos. Si no, las palancas te las llevas igual.</h2>
+        <p style="color:var(--text-secondary);font-size:0.97rem;line-height:1.65;">
+          La auditoría no es un funnel comercial disfrazado. Si tu fase, tu spend o tu estructura no encajan con cómo operamos, te lo decimos en la llamada y te orientamos hacia el perfil de proveedor que sí encaja. No perdemos tu tiempo.
+        </p>
       </div>
     </section>
 
@@ -245,7 +246,7 @@
         </div>
       </div>
       <div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;">
-        <p class="footer-copy">© 2026 DayByDay Consulting · 3,2M€ generados · analizamos · ejecutamos · acompañamos</p>
+        <p class="footer-copy">© 2026 DayByDay Consulting · analizamos · ejecutamos · acompañamos</p>
       </div>
     </div>
   </footer>

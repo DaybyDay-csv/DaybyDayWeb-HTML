@@ -4,23 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Google Ads para D2C · Search, Shopping y PMax | DayByDay Consulting</title>
-  <meta name="description" content="Search Ads, Shopping y Performance Max para D2C que ya facturan. Atribución multi-touch, feed optimization y lectura de margen en lugar de ROAS de plataforma. Operado por dos socios senior.">
+  <meta name="description" content="Operamos Search, Shopping y Performance Max separando captación real de defensa de marca. Atribución multi-touch sobre CRM. Sin handoffs, sin perfiles junior.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.daybydayconsulting.com/google-ads.html">
   <link rel="icon" href="/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/theme.css">
-  <link rel="stylesheet" href="/css/sparkles.css">
-  <link rel="stylesheet" href="/css/modern.css">
-  <link rel="stylesheet" href="/css/sidebar.css">
-  <link rel="stylesheet" href="/css/pages.css">
-  <style>:root { --accent-color: #4285f4; } .hero-badge { background:#4285f41a; border:1px solid #4285f440; color:#4285f4; }</style>
+  <link rel="stylesheet" href="/css/theme.css"><link rel="stylesheet" href="/css/sparkles.css"><link rel="stylesheet" href="/css/modern.css"><link rel="stylesheet" href="/css/sidebar.css"><link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #4285f4; }
+    .hero-badge { background:#4285f41a; border:1px solid #4285f440; color:#4285f4; }
+    .lead-by { display:inline-flex;align-items:center;gap:0.5rem;margin-top:1rem;padding:0.35rem 0.75rem;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;font-size:0.78rem;color:var(--text-muted);letter-spacing:0.02em; }
+    .lead-by strong { color:var(--text-secondary);font-weight:600; }
+    .not-block { max-width:720px;margin:1.5rem auto 0;padding:1rem 1.25rem;background:var(--bg-card);border:1px solid var(--border);border-left:2px solid var(--text-muted);border-radius:8px;font-size:0.92rem;color:var(--text-muted); }
+    .not-block strong { color:var(--text-secondary); }
+  </style>
 </head>
 <body>
   <div class="bg-orbs"><div class="bg-orb bg-orb-1"></div><div class="bg-orb bg-orb-2"></div><div class="bg-orb bg-orb-3"></div><div class="bg-orb bg-orb-4"></div></div>
   <div class="file-tree-overlay" onclick="toggleSidebar()"></div>
-  <aside class="file-tree-sidebar" id="sidebar">
-    <button class="file-tree-close" onclick="toggleSidebar()">x</button>
+  <aside class="file-tree-sidebar" id="sidebar"><button class="file-tree-close" onclick="toggleSidebar()">x</button>
     <div class="file-tree-section"><div class="file-tree-section-title">Paid Media</div>
       <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
       <a href="/google-ads.html" class="file-tree-item active">Google Ads</a>
@@ -30,27 +32,17 @@
   </aside>
   <button class="file-tree-toggle" onclick="toggleSidebar()"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
 
-  <nav class="main-nav">
-    <a href="/" class="nav-logo">DayByDay</a>
-    <div class="nav-menu">
-      <ul class="nav-links">
-        <li><a href="/problema.html">Problema</a></li>
-        <li><a href="/como-trabajamos.html">Cómo Trabajamos</a></li>
-        <li><a href="/growth-partner.html">Growth Partner</a></li>
-        <li><a href="/resultados.html">Casos</a></li>
-        <li><a href="/blog.html">Blog</a></li>
-        <li><a href="/contacto.html" class="cta-secondary" style="padding:0.5rem 1rem;font-size:0.85rem;">Hablamos</a></li>
-      </ul>
-      <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
-    </div>
-  </nav>
-  <div id="mobile-nav" class="mobile-nav">
-    <a href="/" class="mobile-nav-link">Inicio</a>
-    <a href="/problema.html" class="mobile-nav-link">Problema</a>
-    <a href="/como-trabajamos.html" class="mobile-nav-link">Cómo Trabajamos</a>
-    <a href="/resultados.html" class="mobile-nav-link">Casos</a>
-    <a href="/contacto.html" class="mobile-nav-link">Hablamos</a>
-  </div>
+  <nav class="main-nav"><a href="/" class="nav-logo">DayByDay</a><div class="nav-menu"><ul class="nav-links">
+    <li><a href="/problema.html">Problema</a></li>
+    <li><a href="/como-trabajamos.html">Cómo Trabajamos</a></li>
+    <li><a href="/growth-partner.html">Growth Partner</a></li>
+    <li><a href="/resultados.html">Casos</a></li>
+    <li><a href="/blog.html">Blog</a></li>
+    <li><a href="/contacto.html" class="cta-secondary" style="padding:0.5rem 1rem;font-size:0.85rem;">Pedir auditoría</a></li>
+  </ul>
+  <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+  </div></nav>
+  <div id="mobile-nav" class="mobile-nav"><a href="/" class="mobile-nav-link">Inicio</a><a href="/problema.html" class="mobile-nav-link">Problema</a><a href="/resultados.html" class="mobile-nav-link">Casos</a><a href="/contacto.html" class="mobile-nav-link">Pedir auditoría</a></div>
   <div style="height:64px;"></div>
 
   <main class="page-wrapper">
@@ -59,86 +51,56 @@
     <section class="hero hero-centered" style="padding-bottom:2rem;">
       <div class="container">
         <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>Paid media · Google</div>
-        <h1>Google Ads para D2C · Search, Shopping y Performance Max</h1>
-        <p class="subtitle">Atribución multi-touch sobre CRM, feed optimization y campañas que priorizan margen, no clics baratos. Operado por los dos socios desde la primera conversación.</p>
-        <div class="verbs-row"><span class="verb-pill"><span class="dot"></span>analizamos</span><span class="verb-separator">·</span><span class="verb-pill"><span class="dot"></span>ejecutamos</span><span class="verb-separator">·</span><span class="verb-pill"><span class="dot"></span>acompañamos</span></div>
-        <div class="hero-cta" style="justify-content:center;"><a href="/contacto.html" class="cta-primary">Pedir diagnóstico<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a><a href="/resultados.html" class="cta-secondary">Ver casos</a></div>
-      </div>
-    </section>
-
-    <section class="section-sm">
-      <div class="container">
-        <div class="anchor-stats">
-          <div class="anchor-stat"><div class="anchor-value">3,2M€</div><div class="anchor-label">Generados a clientes en 12 meses</div></div>
-          <div class="anchor-stat"><div class="anchor-value">264.712€</div><div class="anchor-label">Gestionados en paid media</div></div>
-          <div class="anchor-stat"><div class="anchor-value">31.555</div><div class="anchor-label">Acciones de conversión</div></div>
-          <div class="anchor-stat"><div class="anchor-value">88,95M</div><div class="anchor-label">Impresiones generadas</div></div>
-        </div>
+        <h1>El ROAS de Google mezcla captación con defensa de marca. La distinción es el primer entregable.</h1>
+        <p class="subtitle">Search, Shopping y Performance Max bien operados separan lo que ya tenías ganado de lo que estás conquistando. Sin esa separación, el reporte engaña.</p>
+        <span class="lead-by"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg> Lidera <strong>Pablo Santirsó</strong></span>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="section-header">
-          <div class="eyebrow">Escena real</div>
-          <h2>Branded vs no-branded: dónde está el agujero</h2>
-        </div>
+        <div class="section-header"><div class="eyebrow">El trabajo</div><h2>Operación de Search, Shopping y Performance Max</h2></div>
         <div class="prose">
-          <p>El primer hallazgo en casi toda cuenta Google de D2C: el <strong>ROAS está sostenido por búsqueda branded</strong> que la marca habría ganado sin pagar nada. Cuando segregas branded de no-branded, el ROAS real cae a la mitad y aparece la verdad: cuánto cuesta captar tráfico nuevo.</p>
-          <p>Otra trampa frecuente: Performance Max canibalizando Shopping y robándose conversiones que ya iban a entrar. Sin segmentación de feeds y exclusiones bien hechas, PMax sube ROAS porque se come tráfico de otras campañas.</p>
+          <p>Segregación branded vs no-branded, feed optimization para Merchant Center, estructura PMax con exclusiones y atribución multi-touch sobre CRM. Reportamos captación real diferenciada de defensa de marca.</p>
+          <p>El primer entregable es saber qué % de tu ROAS Google es captación nueva y qué % es defensa de tu propio nombre. Ese dato no aparece por defecto en ningún reporting de plataforma.</p>
+        </div>
+        <div class="not-block">
+          <strong>No es:</strong> pujas optimizadas sobre last-click. No es PMax sin exclusiones. No es reportar ROAS agregado sin separar captación de defensa.
         </div>
       </div>
     </section>
 
     <section class="section section-dark">
       <div class="container">
-        <div class="section-header"><div class="eyebrow">Framework Google · 5 fases</div><h2>Cómo operamos una cuenta Google D2C</h2></div>
+        <div class="section-header"><div class="eyebrow">Cómo lo operamos</div><h2>De la segregación branded al reporting de margen</h2></div>
         <div class="process-list">
-          <div class="process-step"><div class="process-step-num">01</div><div><h3>Segregación branded · no-branded</h3><p>Separar lo que ya tenías ganado de lo que estás conquistando. Sin esa segregación, el ROAS te miente sobre cuánto cuesta captar nuevo.</p></div></div>
-          <div class="process-step"><div class="process-step-num">02</div><div><h3>Feed optimization para Shopping y PMax</h3><p>Titles, descriptions y categorización para Google Merchant Center. El feed es el 70% del rendimiento en Shopping — más que las pujas.</p></div></div>
-          <div class="process-step"><div class="process-step-num">03</div><div><h3>Estructura PMax con exclusiones</h3><p>Performance Max con asset groups por intención, exclusión de búsqueda branded y limits para que no canibalice Shopping puro.</p></div></div>
-          <div class="process-step"><div class="process-step-num">04</div><div><h3>Atribución multi-touch sobre CRM</h3><p>Mapeo de Google Click ID al pedido en Shopify y CRM. Reportamos asistencia + conversión real, no last-click.</p></div></div>
-          <div class="process-step"><div class="process-step-num">05</div><div><h3>Escala con criterio</h3><p>Antes de subir presupuesto a una campaña que funciona, identificamos el motivo. Si no lo sabemos, no escalamos.</p></div></div>
+          <div class="process-step"><div class="process-step-num">01</div><div><h3>Segregación branded / no-branded</h3><p>Separamos las campañas que defienden marca de las que captan tráfico nuevo. Cada bloque recibe presupuesto y métricas distintas.</p></div></div>
+          <div class="process-step"><div class="process-step-num">02</div><div><h3>Feed optimization en Merchant Center</h3><p>Titles, descriptions y categorización del feed. En Shopping, el 70% del rendimiento depende del feed — más que de las pujas.</p></div></div>
+          <div class="process-step"><div class="process-step-num">03</div><div><h3>Estructura PMax con exclusiones</h3><p>Asset groups por intención, exclusión de búsqueda branded y limits que evitan que PMax canibalice Shopping puro.</p></div></div>
+          <div class="process-step"><div class="process-step-num">04</div><div><h3>Atribución multi-touch sobre CRM</h3><p>Google Click ID mapeado al pedido en Shopify y al lead en CRM. Reportamos asistencia + conversión real, no last-click de plataforma.</p></div></div>
+          <div class="process-step"><div class="process-step-num">05</div><div><h3>Reporting cruzado de margen</h3><p>Margen por canal, payback de CAC y LTV por cohorte. Lectura combinada con Meta y otros canales activos.</p></div></div>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="section-header"><div class="eyebrow">Qué incluye</div><h2>Implementación y operación continua</h2></div>
-        <div class="features-grid">
-          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/></svg></div><h3>Search Ads</h3><p>Estructura por intención, exact match prioritario, SQR semanal y negative keywords activas.</p></div>
-          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></div><h3>Shopping</h3><p>Merchant Center, feed optimization y campañas estándar con segmentación por margen.</p></div>
-          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M23 6l-9.5 9.5-5-5L1 18"/></svg></div><h3>Performance Max</h3><p>Asset groups por intención, exclusiones de branded y limits para evitar canibalización.</p></div>
-          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg></div><h3>YouTube + Display</h3><p>Demand gen y video sequencing para top-funnel cuando hay producto que se explica.</p></div>
-          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>GA4 + conversiones</h3><p>Server-side tracking, Enhanced Conversions y consent mode v2 para Europa.</p></div>
-          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 3v18h18"/></svg></div><h3>Reporting de negocio</h3><p>Margen por canal, payback de CAC y LTV por cohorte. Lectura cruzada con Meta y otros canales.</p></div>
+        <div class="section-header"><div class="eyebrow">Momento de entrada</div><h2>Contextos donde encaja este trabajo</h2></div>
+        <div class="prose">
+          <p>Cuentas Google D2C con spend activo en Shopping o PMax que muestran ROAS alto pero crecimiento de negocio estancado. Lanzamientos donde feed y attribution no están bien montados. Marcas con dependencia fuerte de búsqueda branded que no han medido cuánto vale ese tráfico realmente.</p>
         </div>
       </div>
     </section>
 
-    <section class="section section-dark">
+    <section class="section-sm" style="background:var(--bg-secondary);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
       <div class="container">
-        <div class="action-box">
-          <div class="action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg></div>
-          <div>
-            <div class="action-label">Action step · 30 min</div>
-            <h4>Calcula tu ROAS no-branded sin tu agencia</h4>
-            <p>Entra en Google Ads. Filtra solo las campañas con keywords no-branded (sin tu nombre de marca). Coge el ROAS de los últimos 90 días. Si baja más del 50% respecto al ROAS total, la cuenta está vendiendo branded como adquisición. Hablamos de eso en el diagnóstico.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;text-align:center;letter-spacing:-0.02em;">Stack tecnológico relacionado</h2>
+        <h2 style="text-align:center;color:var(--text-muted);text-transform:uppercase;font-size:0.78rem;letter-spacing:0.12em;font-weight:600;margin-bottom:1.25rem;">Stack</h2>
         <div class="stack-row">
+          <a href="/tech/google-ads-tech.html" class="stack-pill">Google Ads</a>
           <a href="/tech/ga4.html" class="stack-pill">GA4</a>
           <a href="/tech/gtm.html" class="stack-pill">GTM</a>
           <a href="/tech/gsc.html" class="stack-pill">Search Console</a>
           <a href="/tech/shopify.html" class="stack-pill">Shopify</a>
-          <a href="/tech/google-ads-tech.html" class="stack-pill">Google Ads · tech</a>
         </div>
       </div>
     </section>
@@ -146,23 +108,15 @@
     <section class="section">
       <div class="container">
         <div class="cta-box">
-          <h2>Quieres ver dónde está fugando tu cuenta Google?</h2>
-          <p>Auditoría gratuita de 30 minutos con Pablo y Jorge.</p>
-          <div class="hero-cta" style="justify-content:center;"><a href="/contacto.html" class="cta-primary">Hablamos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+          <h2>Pedir auditoría</h2>
+          <p>30 minutos, gratuita. Pablo y Jorge en la llamada.</p>
+          <div class="hero-cta" style="justify-content:center;"><a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div><div class="footer-logo">DayByDay Consulting</div><div style="color:var(--text-muted);font-size:0.8rem;margin-top:0.5rem;">Madrid · Growth Partner para D2C</div></div>
-        <div class="footer-links"><a href="/problema.html">Problema</a><a href="/como-trabajamos.html">Cómo trabajamos</a><a href="/growth-partner.html">Growth Partner</a><a href="/resultados.html">Casos</a><a href="/blog.html">Blog</a><a href="/contacto.html">Hablamos</a></div>
-      </div>
-      <div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;"><p class="footer-copy">© 2026 DayByDay Consulting · analizamos · ejecutamos · acompañamos</p></div>
-    </div>
-  </footer>
+  <footer class="footer"><div class="container"><div class="footer-inner"><div><div class="footer-logo">DayByDay Consulting</div><div style="color:var(--text-muted);font-size:0.8rem;margin-top:0.5rem;">Madrid · Growth Partner para D2C</div></div><div class="footer-links"><a href="/problema.html">Problema</a><a href="/como-trabajamos.html">Cómo trabajamos</a><a href="/growth-partner.html">Growth Partner</a><a href="/resultados.html">Casos</a><a href="/blog.html">Blog</a><a href="/contacto.html">Pedir auditoría</a></div></div><div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;"><p class="footer-copy">© 2026 DayByDay Consulting · analizamos · ejecutamos · acompañamos</p></div></div></footer>
   <script src="/js/main.js"></script>
 </body>
 </html>

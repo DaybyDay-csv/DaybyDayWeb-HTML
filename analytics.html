@@ -3,22 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Analytics para D2C · GA4, server-side y cohort analysis | DayByDay Consulting</title>
-  <meta name="description" content="Analytics que lee margen, payback de CAC y LTV por cohorte. GA4 server-side, GTM, Enhanced Conversions y dashboards de negocio. No reportamos ROAS de plataforma como métrica.">
+  <title>Analytics para D2C · GA4 server-side y cohort analysis | DayByDay Consulting</title>
+  <meta name="description" content="El dashboard del marketing y el dashboard del CFO son dos dashboards distintos. Aquí montamos los dos. GA4 server-side, GTM, Enhanced Conversions y cohortes.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.daybydayconsulting.com/analytics.html">
   <link rel="icon" href="/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css"><link rel="stylesheet" href="/css/sparkles.css"><link rel="stylesheet" href="/css/modern.css"><link rel="stylesheet" href="/css/sidebar.css"><link rel="stylesheet" href="/css/pages.css">
-  <style>:root { --accent-color: #f59e0b; } .hero-badge { background:#f59e0b1a; border:1px solid #f59e0b40; color:#fbbf24; }</style>
+  <style>
+    :root { --accent-color: #f59e0b; }
+    .hero-badge { background:#f59e0b1a; border:1px solid #f59e0b40; color:#fbbf24; }
+    .lead-by { display:inline-flex;align-items:center;gap:0.5rem;margin-top:1rem;padding:0.35rem 0.75rem;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;font-size:0.78rem;color:var(--text-muted);letter-spacing:0.02em; }
+    .lead-by strong { color:var(--text-secondary);font-weight:600; }
+    .not-block { max-width:720px;margin:1.5rem auto 0;padding:1rem 1.25rem;background:var(--bg-card);border:1px solid var(--border);border-left:2px solid var(--text-muted);border-radius:8px;font-size:0.92rem;color:var(--text-muted); }
+    .not-block strong { color:var(--text-secondary); }
+  </style>
 </head>
 <body>
   <div class="bg-orbs"><div class="bg-orb bg-orb-1"></div><div class="bg-orb bg-orb-2"></div><div class="bg-orb bg-orb-3"></div><div class="bg-orb bg-orb-4"></div></div>
   <div class="file-tree-overlay" onclick="toggleSidebar()"></div>
-  <aside class="file-tree-sidebar" id="sidebar"><button class="file-tree-close" onclick="toggleSidebar()">x</button><div class="file-tree-section"><div class="file-tree-section-title">Automation & AI</div><a href="/automatizacion.html" class="file-tree-item">Automatización</a><a href="/analytics.html" class="file-tree-item active">Analytics</a><a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a></div></aside>
+  <aside class="file-tree-sidebar" id="sidebar"><button class="file-tree-close" onclick="toggleSidebar()">x</button>
+    <div class="file-tree-section"><div class="file-tree-section-title">Tecnología</div>
+      <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
+      <a href="/analytics.html" class="file-tree-item active">Analytics</a>
+      <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
+    </div>
+  </aside>
   <button class="file-tree-toggle" onclick="toggleSidebar()"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
-  <nav class="main-nav"><a href="/" class="nav-logo">DayByDay</a><div class="nav-menu"><ul class="nav-links"><li><a href="/problema.html">Problema</a></li><li><a href="/como-trabajamos.html">Cómo Trabajamos</a></li><li><a href="/growth-partner.html">Growth Partner</a></li><li><a href="/resultados.html">Casos</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/contacto.html" class="cta-secondary" style="padding:0.5rem 1rem;font-size:0.85rem;">Hablamos</a></li></ul><button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button></div></nav>
-  <div id="mobile-nav" class="mobile-nav"><a href="/" class="mobile-nav-link">Inicio</a><a href="/problema.html" class="mobile-nav-link">Problema</a><a href="/como-trabajamos.html" class="mobile-nav-link">Cómo Trabajamos</a><a href="/resultados.html" class="mobile-nav-link">Casos</a><a href="/contacto.html" class="mobile-nav-link">Hablamos</a></div>
+  <nav class="main-nav"><a href="/" class="nav-logo">DayByDay</a><div class="nav-menu"><ul class="nav-links">
+    <li><a href="/problema.html">Problema</a></li>
+    <li><a href="/como-trabajamos.html">Cómo Trabajamos</a></li>
+    <li><a href="/growth-partner.html">Growth Partner</a></li>
+    <li><a href="/resultados.html">Casos</a></li>
+    <li><a href="/blog.html">Blog</a></li>
+    <li><a href="/contacto.html" class="cta-secondary" style="padding:0.5rem 1rem;font-size:0.85rem;">Pedir auditoría</a></li>
+  </ul>
+  <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+  </div></nav>
+  <div id="mobile-nav" class="mobile-nav"><a href="/" class="mobile-nav-link">Inicio</a><a href="/problema.html" class="mobile-nav-link">Problema</a><a href="/resultados.html" class="mobile-nav-link">Casos</a><a href="/contacto.html" class="mobile-nav-link">Pedir auditoría</a></div>
   <div style="height:64px;"></div>
 
   <main class="page-wrapper">
@@ -26,69 +48,56 @@
 
     <section class="hero hero-centered" style="padding-bottom:2rem;">
       <div class="container">
-        <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18M7 16l4-4 4 4 5-5"/></svg>Analytics</div>
-        <h1>Analytics que lee margen, no ROAS de plataforma</h1>
-        <p class="subtitle">GA4 server-side, GTM, Enhanced Conversions y dashboards de cohorte. Reportamos margen de contribución, payback de CAC y LTV por cohorte — no impresiones.</p>
-        <div class="verbs-row"><span class="verb-pill"><span class="dot"></span>analizamos</span><span class="verb-separator">·</span><span class="verb-pill"><span class="dot"></span>ejecutamos</span><span class="verb-separator">·</span><span class="verb-pill"><span class="dot"></span>acompañamos</span></div>
-        <div class="hero-cta" style="justify-content:center;"><a href="/contacto.html" class="cta-primary">Pedir diagnóstico<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
-      </div>
-    </section>
-
-    <section class="section-sm">
-      <div class="container">
-        <div class="anchor-stats">
-          <div class="anchor-stat"><div class="anchor-value">3,2M€</div><div class="anchor-label">Generados a clientes en 12 meses</div></div>
-          <div class="anchor-stat"><div class="anchor-value">264.712€</div><div class="anchor-label">Gestionados en paid media</div></div>
-          <div class="anchor-stat"><div class="anchor-value">31.555</div><div class="anchor-label">Acciones de conversión</div></div>
-          <div class="anchor-stat"><div class="anchor-value">88,95M</div><div class="anchor-label">Impresiones generadas</div></div>
-        </div>
+        <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18M7 16l4-4 4 4 5-5"/></svg>Tecnología · Analytics</div>
+        <h1>El dashboard del marketing y el dashboard del CFO son dos dashboards distintos. Montamos los dos.</h1>
+        <p class="subtitle">Reportamos margen de contribución, payback de CAC y LTV por cohorte. ROAS aparece — como dato secundario, no como métrica de decisión.</p>
+        <span class="lead-by"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg> Lidera <strong>Jorge González</strong> · acompaña Pablo en el reporting de negocio</span>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="section-header"><div class="eyebrow">El error frecuente</div><h2>Tu ROAS dice 4 y tu banco dice que no hay caja</h2></div>
+        <div class="section-header"><div class="eyebrow">El trabajo</div><h2>Setup completo de analytics y reporting de negocio</h2></div>
         <div class="prose">
-          <p>El ad account te reporta ROAS de plataforma: ingreso atribuido dividido entre spend. Suena bien hasta que descuentas COGS, envío, agencia, devoluciones y promociones. Lo que queda — si queda algo — es <strong>margen de contribución</strong>.</p>
-          <p>Si nadie está midiendo esto, no hay manera de saber qué palanca mueve caja. Por eso la primera entrega de DayByDay siempre incluye dashboard de margen por canal, payback de CAC en cohortes y LTV por origen.</p>
+          <p>GA4 server-side, GTM, Enhanced Conversions, consent mode v2 y dashboards de cohorte sobre Looker Studio o BigQuery. Mapeo CRM ↔ ad accounts con atribución real, no estimación.</p>
+          <p>El primer entregable es la separación entre el reporting que sirve al equipo de marketing (campañas, creatividades, audiencias) y el que sirve a la dirección (margen, payback, cohortes).</p>
+        </div>
+        <div class="not-block">
+          <strong>No es:</strong> instalación de GA4 con configuración default. No es reporting de ROAS de plataforma como métrica principal. No es dashboards que solo entiende el equipo que los pidió.
         </div>
       </div>
     </section>
 
     <section class="section section-dark">
       <div class="container">
-        <div class="section-header"><div class="eyebrow">Framework analytics · 5 fases</div><h2>Cómo montamos analytics que sirve al CFO</h2></div>
+        <div class="section-header"><div class="eyebrow">Cómo lo operamos</div><h2>Del setup técnico al reporting de cohorte</h2></div>
         <div class="process-list">
-          <div class="process-step"><div class="process-step-num">01</div><div><h3>GA4 + GTM server-side</h3><p>Migración a server-side tracking. Reducción de pérdida por iOS/ITP, consent mode v2, eventos custom mapeados a tu modelo de negocio.</p></div></div>
-          <div class="process-step"><div class="process-step-num">02</div><div><h3>Enhanced Conversions + CAPI</h3><p>Google Enhanced Conversions y Meta CAPI server-side conectados al backend Shopify. Match quality &gt; 8.</p></div></div>
-          <div class="process-step"><div class="process-step-num">03</div><div><h3>Mapeo CRM ↔ ad accounts</h3><p>Cada lead/pedido del CRM lleva utm_source persistente. Sabemos qué canal trajo a cada cliente — no estimación, dato.</p></div></div>
+          <div class="process-step"><div class="process-step-num">01</div><div><h3>GA4 + GTM server-side</h3><p>Migración a server-side tracking. Reducción de pérdida por iOS / ITP, consent mode v2 y eventos custom mapeados al modelo de negocio.</p></div></div>
+          <div class="process-step"><div class="process-step-num">02</div><div><h3>Enhanced Conversions + CAPI</h3><p>Google Enhanced Conversions y Meta CAPI server-side conectados al backend Shopify. Event match quality alta.</p></div></div>
+          <div class="process-step"><div class="process-step-num">03</div><div><h3>Mapeo CRM ↔ ad accounts</h3><p>Cada lead o pedido del CRM lleva utm_source persistente. Sabemos qué canal trajo a cada cliente — no estimación, dato.</p></div></div>
           <div class="process-step"><div class="process-step-num">04</div><div><h3>Dashboards de cohorte</h3><p>Looker Studio o BigQuery según volumen. Cohortes mensuales de payback, LTV, frecuencia de recompra y churn.</p></div></div>
-          <div class="process-step"><div class="process-step-num">05</div><div><h3>Reporting mensual de negocio</h3><p>El informe que entregamos al fundador tiene margen, payback y LTV. El ROAS aparece — pero como dato secundario, no principal.</p></div></div>
+          <div class="process-step"><div class="process-step-num">05</div><div><h3>Reporting mensual de negocio</h3><p>Dos versiones: una para marketing y una para dirección. El informe que entregamos al fundador prioriza margen sobre ROAS.</p></div></div>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="action-box">
-          <div class="action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg></div>
-          <div>
-            <div class="action-label">Action step · 30 min</div>
-            <h4>Compara cohorte mes a mes en tu Shopify</h4>
-            <p>Entra en Shopify → Customers → Reports. Compara la cohorte de pedidos por mes de adquisición durante 6 meses. Si la del mes pasado tiene menos repeat orders que la de hace 5 meses al mismo tiempo de vida, tu LTV está cayendo. Eso explica más cosas que cualquier reporting de ad account.</p>
-          </div>
+        <div class="section-header"><div class="eyebrow">Momento de entrada</div><h2>Contextos donde encaja este trabajo</h2></div>
+        <div class="prose">
+          <p>Negocios con GA4 instalado pero datos poco fiables o incompletos. Necesidad de reporting que el board, el inversor o el banco pueda leer. Cohortes que el negocio quiere entender pero no tiene infraestructura para medir. Migraciones donde el tracking quedó roto.</p>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section-sm" style="background:var(--bg-secondary);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
       <div class="container">
-        <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;text-align:center;letter-spacing:-0.02em;">Stack tecnológico relacionado</h2>
+        <h2 style="text-align:center;color:var(--text-muted);text-transform:uppercase;font-size:0.78rem;letter-spacing:0.12em;font-weight:600;margin-bottom:1.25rem;">Stack</h2>
         <div class="stack-row">
           <a href="/tech/ga4.html" class="stack-pill">GA4</a>
-          <a href="/tech/gtm.html" class="stack-pill">GTM</a>
-          <a href="/tech/gsc.html" class="stack-pill">Search Console</a>
+          <a href="/tech/gtm.html" class="stack-pill">GTM server-side</a>
           <a href="/tech/capi.html" class="stack-pill">CAPI</a>
+          <a href="/tech/gsc.html" class="stack-pill">Search Console</a>
           <a href="/tech/shopify.html" class="stack-pill">Shopify</a>
         </div>
       </div>
@@ -97,15 +106,15 @@
     <section class="section">
       <div class="container">
         <div class="cta-box">
-          <h2>Montar analytics que lea negocio?</h2>
-          <p>Auditoría gratuita de 30 min con los dos socios. Revisamos tu setup actual.</p>
-          <div class="hero-cta" style="justify-content:center;"><a href="/contacto.html" class="cta-primary">Hablamos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+          <h2>Pedir auditoría</h2>
+          <p>30 minutos, gratuita. Revisamos tu setup actual y te decimos qué falta para que el reporting sirva a la decisión de negocio.</p>
+          <div class="hero-cta" style="justify-content:center;"><a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer"><div class="container"><div class="footer-inner"><div><div class="footer-logo">DayByDay Consulting</div><div style="color:var(--text-muted);font-size:0.8rem;margin-top:0.5rem;">Madrid · Growth Partner para D2C</div></div><div class="footer-links"><a href="/problema.html">Problema</a><a href="/como-trabajamos.html">Cómo trabajamos</a><a href="/growth-partner.html">Growth Partner</a><a href="/resultados.html">Casos</a><a href="/blog.html">Blog</a><a href="/contacto.html">Hablamos</a></div></div><div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;"><p class="footer-copy">© 2026 DayByDay Consulting · analizamos · ejecutamos · acompañamos</p></div></div></footer>
+  <footer class="footer"><div class="container"><div class="footer-inner"><div><div class="footer-logo">DayByDay Consulting</div><div style="color:var(--text-muted);font-size:0.8rem;margin-top:0.5rem;">Madrid · Growth Partner para D2C</div></div><div class="footer-links"><a href="/problema.html">Problema</a><a href="/como-trabajamos.html">Cómo trabajamos</a><a href="/growth-partner.html">Growth Partner</a><a href="/resultados.html">Casos</a><a href="/blog.html">Blog</a><a href="/contacto.html">Pedir auditoría</a></div></div><div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;"><p class="footer-copy">© 2026 DayByDay Consulting · analizamos · ejecutamos · acompañamos</p></div></div></footer>
   <script src="/js/main.js"></script>
 </body>
 </html>

@@ -3,210 +3,160 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Meta Ads para D2C · Advantage+, CAPI, atribución real | DayByDay Consulting</title>
-  <meta name="description" content="Reconstruimos cuentas Meta de D2C que ya facturan. Advantage+ Shopping, CAPI server-side, atribución vía CRM. Operado por Pablo y Jorge, sin handoffs ni perfiles junior.">
+  <title>Meta Ads para D2C · Advantage+, CAPI y atribución | DayByDay Consulting</title>
+  <meta name="description" content="Operamos cuentas Meta D2C desde la lectura, no desde la creatividad. Estructura Advantage+, CAPI server-side y atribución cruzada con CRM. Sin handoffs, sin perfiles junior.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.daybydayconsulting.com/meta-ads.html">
   <link rel="icon" href="/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/theme.css">
-  <link rel="stylesheet" href="/css/sparkles.css">
-  <link rel="stylesheet" href="/css/modern.css">
-  <link rel="stylesheet" href="/css/sidebar.css">
-  <link rel="stylesheet" href="/css/pages.css">
-  <style>:root { --accent-color: #1877f2; } .hero-badge { background:#1877f21a; border:1px solid #1877f240; color:#1877f2; }</style>
+  <link rel="stylesheet" href="/css/theme.css"><link rel="stylesheet" href="/css/sparkles.css"><link rel="stylesheet" href="/css/modern.css"><link rel="stylesheet" href="/css/sidebar.css"><link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #1877f2; }
+    .hero-badge { background:#1877f21a; border:1px solid #1877f240; color:#1877f2; }
+    .lead-by {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      margin-top: 1rem;
+      padding: 0.35rem 0.75rem;
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.78rem; color: var(--text-muted);
+      letter-spacing: 0.02em;
+    }
+    .lead-by strong { color: var(--text-secondary); font-weight: 600; }
+    .not-block {
+      max-width: 720px; margin: 1.5rem auto 0;
+      padding: 1rem 1.25rem;
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-left: 2px solid var(--text-muted);
+      border-radius: 8px;
+      font-size: 0.92rem; color: var(--text-muted);
+    }
+    .not-block strong { color: var(--text-secondary); }
+  </style>
 </head>
 <body>
-
   <div class="bg-orbs"><div class="bg-orb bg-orb-1"></div><div class="bg-orb bg-orb-2"></div><div class="bg-orb bg-orb-3"></div><div class="bg-orb bg-orb-4"></div></div>
-
   <div class="file-tree-overlay" onclick="toggleSidebar()"></div>
-  <aside class="file-tree-sidebar" id="sidebar">
-    <button class="file-tree-close" onclick="toggleSidebar()">x</button>
-    <div class="file-tree-section">
-      <div class="file-tree-section-title">Paid Media</div>
+  <aside class="file-tree-sidebar" id="sidebar"><button class="file-tree-close" onclick="toggleSidebar()">x</button>
+    <div class="file-tree-section"><div class="file-tree-section-title">Paid Media</div>
       <a href="/meta-ads.html" class="file-tree-item active">Meta Ads</a>
       <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
       <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
       <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
     </div>
-    <div class="file-tree-section">
-      <div class="file-tree-section-title">Stack relacionado</div>
-      <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
-      <a href="/tech/ga4.html" class="file-tree-item">GA4</a>
-      <a href="/tech/shopify.html" class="file-tree-item">Shopify</a>
-    </div>
   </aside>
   <button class="file-tree-toggle" onclick="toggleSidebar()"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
 
-  <nav class="main-nav">
-    <a href="/" class="nav-logo">DayByDay</a>
-    <div class="nav-menu">
-      <ul class="nav-links">
-        <li><a href="/problema.html">Problema</a></li>
-        <li><a href="/como-trabajamos.html">Cómo Trabajamos</a></li>
-        <li><a href="/growth-partner.html">Growth Partner</a></li>
-        <li><a href="/resultados.html">Casos</a></li>
-        <li><a href="/blog.html">Blog</a></li>
-        <li><a href="/contacto.html" class="cta-secondary" style="padding:0.5rem 1rem;font-size:0.85rem;">Hablamos</a></li>
-      </ul>
-      <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
-    </div>
-  </nav>
-
+  <nav class="main-nav"><a href="/" class="nav-logo">DayByDay</a><div class="nav-menu"><ul class="nav-links">
+    <li><a href="/problema.html">Problema</a></li>
+    <li><a href="/como-trabajamos.html">Cómo Trabajamos</a></li>
+    <li><a href="/growth-partner.html">Growth Partner</a></li>
+    <li><a href="/resultados.html">Casos</a></li>
+    <li><a href="/blog.html">Blog</a></li>
+    <li><a href="/contacto.html" class="cta-secondary" style="padding:0.5rem 1rem;font-size:0.85rem;">Pedir auditoría</a></li>
+  </ul>
+  <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+  </div></nav>
   <div id="mobile-nav" class="mobile-nav">
     <a href="/" class="mobile-nav-link">Inicio</a>
     <a href="/problema.html" class="mobile-nav-link">Problema</a>
     <a href="/como-trabajamos.html" class="mobile-nav-link">Cómo Trabajamos</a>
     <a href="/resultados.html" class="mobile-nav-link">Casos</a>
-    <a href="/blog.html" class="mobile-nav-link">Blog</a>
-    <a href="/contacto.html" class="mobile-nav-link">Hablamos</a>
+    <a href="/contacto.html" class="mobile-nav-link">Pedir auditoría</a>
   </div>
-
   <div style="height:64px;"></div>
 
   <main class="page-wrapper">
-    <div class="container">
-      <div class="breadcrumb">
-        <a href="/">Inicio</a><span>/</span><a href="/servicios.html">Servicios</a><span>/</span><span style="color:var(--text-secondary)">Meta Ads</span>
-      </div>
-    </div>
+    <div class="container"><div class="breadcrumb"><a href="/">Inicio</a><span>/</span><a href="/servicios.html">Servicios</a><span>/</span><span style="color:var(--text-secondary)">Meta Ads</span></div></div>
 
+    <!-- HERO declarativo -->
     <section class="hero hero-centered" style="padding-bottom:2rem;">
       <div class="container">
         <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>Paid media · Meta</div>
-        <h1>Meta Ads para D2C que ya factura</h1>
-        <p class="subtitle">Reconstruimos cuentas Meta con Advantage+ Shopping, CAPI server-side y atribución vía CRM. No ROAS de plataforma — margen de contribución, payback de CAC y LTV por cohorte.</p>
-        <div class="verbs-row"><span class="verb-pill"><span class="dot"></span>analizamos</span><span class="verb-separator">·</span><span class="verb-pill"><span class="dot"></span>ejecutamos</span><span class="verb-separator">·</span><span class="verb-pill"><span class="dot"></span>acompañamos</span></div>
-        <div class="hero-cta" style="justify-content:center;">
-          <a href="/contacto.html" class="cta-primary">Pedir diagnóstico<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-          <a href="/resultados.html" class="cta-secondary">Ver casos</a>
-        </div>
+        <h1>Antes de optimizar, leer. Antes de leer, medir bien.</h1>
+        <p class="subtitle">Operamos cuentas Meta D2C desde la lectura, no desde la creatividad. La estructura, el CAPI y la atribución existen para que la decisión esté sobre datos reales.</p>
+        <span class="lead-by"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg> Lidera <strong>Pablo Santirsó</strong> · acompaña Jorge cuando aplica</span>
       </div>
     </section>
 
-    <section class="section-sm">
-      <div class="container">
-        <div class="anchor-stats">
-          <div class="anchor-stat"><div class="anchor-value">3,2M€</div><div class="anchor-label">Generados a clientes en 12 meses</div></div>
-          <div class="anchor-stat"><div class="anchor-value">264.712€</div><div class="anchor-label">Gestionados en paid media</div></div>
-          <div class="anchor-stat"><div class="anchor-value">31.555</div><div class="anchor-label">Acciones de conversión</div></div>
-          <div class="anchor-stat"><div class="anchor-value">88,95M</div><div class="anchor-label">Impresiones generadas</div></div>
-        </div>
-      </div>
-    </section>
-
+    <!-- EL TRABAJO -->
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">Escena real</div>
-          <h2>Una auditoría típica de Meta para un D2C de 1M€</h2>
-          <p>Lo que encontramos casi siempre antes de tocar nada.</p>
+          <div class="eyebrow">El trabajo</div>
+          <h2>Operación end-to-end de cuentas Meta para D2C</h2>
         </div>
         <div class="prose">
-          <p>Una de las primeras cuentas Meta que reconstruimos para Garett España. La auditoría inicial detectó tres síntomas frecuentes: <strong>creatividades con frecuencia alta</strong> que ya no convertían, <strong>presupuesto fragmentado</strong> entre demasiadas campañas paralelas y <strong>pixel sin CAPI</strong> activo — lo que significa que entre el 20% y el 40% de las conversiones nunca llegaban a Meta para entrenar el algoritmo.</p>
-          <p>En 6 semanas: <strong>CPA de 4,8€, 14.936 clicks y 661 inicios de pago.</strong> Pero esa no es la métrica importante: lo importante es que el margen real subió porque dejamos de pagar por audiencias que ya nos habían comprado.</p>
+          <p>Estructura Advantage+ Shopping, retargeting dinámico, CAPI server-side y sistema creativo modular. Atribución cruzada con tu Shopify y tu CRM. Reportamos lo que mueve negocio, no lo que sube el reporting de plataforma.</p>
+          <p>El primer entregable no es una creatividad nueva. Es una lectura clara de qué euro está pagando ruido y qué euro está construyendo cliente.</p>
+        </div>
+        <div class="not-block">
+          <strong>No es:</strong> un account manager que ejecuta lo que ya estaba. No es optimización de pujas sobre la estructura heredada. No es reporting de ROAS de plataforma como métrica de decisión.
         </div>
       </div>
     </section>
 
+    <!-- CÓMO LO OPERAMOS -->
     <section class="section section-dark">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">Framework Meta · 6 fases</div>
-          <h2>Cómo reconstruimos una cuenta Meta D2C</h2>
+          <div class="eyebrow">Cómo lo operamos</div>
+          <h2>Del diagnóstico al reporting de margen</h2>
         </div>
         <div class="process-list">
-          <div class="process-step"><div class="process-step-num">01</div><div><h3>Diagnóstico de cuenta y pixel</h3><p>Revisamos frecuencia, solapamiento de audiencias, fragmentación, calidad del pixel y deduplicación con CAPI. Detectamos qué euro está pagando ruido.</p></div></div>
-          <div class="process-step"><div class="process-step-num">02</div><div><h3>CAPI + server-side tracking</h3><p>Implementación de Conversions API server-side con event match quality &gt; 8/10. Sin CAPI, Advantage+ no entrena bien y todo lo demás sufre.</p></div></div>
-          <div class="process-step"><div class="process-step-num">03</div><div><h3>Reestructura del árbol de campañas</h3><p>Consolidación en pocas campañas Advantage+ Shopping + capa de retargeting dinámico con catalog sales. Audiencias amplias, presupuesto agregado.</p></div></div>
-          <div class="process-step"><div class="process-step-num">04</div><div><h3>Creative system con hooks testados</h3><p>Producción modular: 5–8 hooks por mes, 3 formatos por hook, testing por cohorte. Definimos qué pasa de creative library a always-on.</p></div></div>
-          <div class="process-step"><div class="process-step-num">05</div><div><h3>Atribución cruzada con CRM</h3><p>Reportamos margen de contribución por canal usando datos del Shopify y del CRM, no last-click de plataforma. La verdad está en el CRM.</p></div></div>
-          <div class="process-step"><div class="process-step-num">06</div><div><h3>Escala con criterio</h3><p>Cuando una creatividad o campaña funciona, primero entendemos por qué. Después escalamos. Lección Douf aplicada a Meta.</p></div></div>
+          <div class="process-step"><div class="process-step-num">01</div><div><h3>Diagnóstico técnico de cuenta y atribución</h3><p>Revisión de frecuencia, solapamiento, fragmentación de presupuesto, calidad de pixel y deduplicación con CAPI. Detectamos qué euro está pagando ruido.</p></div></div>
+          <div class="process-step"><div class="process-step-num">02</div><div><h3>CAPI server-side</h3><p>Conversions API con event match quality &gt; 8/10. Sin CAPI bien implementado, Advantage+ no entrena bien y todo lo demás opera con datos cojos.</p></div></div>
+          <div class="process-step"><div class="process-step-num">03</div><div><h3>Reestructura del árbol de campañas</h3><p>Consolidación en pocas campañas Advantage+ Shopping con capa de retargeting dinámico y catalog sales. Audiencias amplias, presupuesto agregado.</p></div></div>
+          <div class="process-step"><div class="process-step-num">04</div><div><h3>Sistema creativo modular</h3><p>Producción ordenada de hooks y formatos. Testing por arquetipo de audiencia. Definimos qué pasa de creative library a always-on basado en datos.</p></div></div>
+          <div class="process-step"><div class="process-step-num">05</div><div><h3>Reporting mensual de negocio</h3><p>Margen de contribución por canal, payback de CAC y LTV por cohorte cruzados con tu Shopify y tu CRM.</p></div></div>
         </div>
       </div>
     </section>
 
+    <!-- MOMENTO DE ENTRADA -->
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">Qué incluye</div>
-          <h2>Implementación, operación y reporting</h2>
+          <div class="eyebrow">Momento de entrada</div>
+          <h2>Contextos donde encaja este trabajo</h2>
         </div>
-        <div class="features-grid">
-          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div><h3>Advantage+ Shopping</h3><p>Setup completo con budget caps, exclusiones y atribución cruzada para producto físico.</p></div>
-          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>CAPI server-side</h3><p>Conversions API con calidad de match alta. Sin esto, todo lo demás opera con datos incompletos.</p></div>
-          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg></div><h3>Catalog sales · DPA</h3><p>Catálogo Shopify sincronizado, retargeting dinámico, recuperación de carrito y cross-sell.</p></div>
-          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div><h3>Creative testing</h3><p>5–8 hooks/mes, 3 formatos por hook. Definimos qué pasa a always-on basado en datos, no en gusto.</p></div>
-          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 21l-4.35-4.35"/><circle cx="11" cy="11" r="8"/></svg></div><h3>Audience optimization</h3><p>Detección de solapamiento, audiencias amplias para Advantage+ y exclusiones que evitan pagar dos veces.</p></div>
-          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 3v18h18"/></svg></div><h3>Reporting de negocio</h3><p>Margen por canal, payback de CAC y LTV por cohorte. No ROAS plataforma como métrica principal.</p></div>
+        <div class="prose">
+          <p>Cuentas Meta maduras con spend mensual entre 5K y 30K€ que requieren diagnóstico, reconstrucción o escala. Migraciones donde pixel y CAPI quedaron mal configurados tras un cambio de plataforma. Marcas con histórico paid que necesitan una lectura clara de qué está moviendo realmente el negocio.</p>
         </div>
       </div>
     </section>
 
-    <section class="section section-dark">
+    <!-- STACK -->
+    <section class="section-sm" style="background:var(--bg-secondary);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
       <div class="container">
-        <div class="action-box">
-          <div class="action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg></div>
-          <div>
-            <div class="action-label">Action step · 30 min</div>
-            <h4>Comprueba la calidad de tu CAPI sin necesidad de tu agencia</h4>
-            <p>Entra en Events Manager. Mira el Event Match Quality de tu Purchase Event. Si está por debajo de 7, estás perdiendo señal y Advantage+ no aprende. La auditoría de CAPI suele ser la primera palanca de margen.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;text-align:center;letter-spacing:-0.02em;">Stack tecnológico relacionado</h2>
+        <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:1.25rem;text-align:center;letter-spacing:-0.01em;color:var(--text-muted);text-transform:uppercase;font-size:0.78rem;letter-spacing:0.12em;">Stack</h2>
         <div class="stack-row">
-          <a href="/tech/capi.html" class="stack-pill">CAPI</a>
+          <a href="/tech/meta-ads.html" class="stack-pill">Meta Ads</a>
+          <a href="/tech/capi.html" class="stack-pill">CAPI server-side</a>
+          <a href="/tech/shopify.html" class="stack-pill">Shopify</a>
           <a href="/tech/ga4.html" class="stack-pill">GA4</a>
           <a href="/tech/gtm.html" class="stack-pill">GTM</a>
-          <a href="/tech/shopify.html" class="stack-pill">Shopify</a>
           <a href="/tech/n8n.html" class="stack-pill">n8n</a>
-          <a href="/tech/meta-ads.html" class="stack-pill">Meta Ads · tech</a>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;letter-spacing:-0.02em;">Relacionado</h2>
-        <div class="related-grid">
-          <a href="/google-ads.html" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/></svg></div><div class="related-content"><h4>Google Ads</h4><p>Search · Shopping · PMax</p></div></a>
-          <a href="/analytics.html" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/></svg></div><div class="related-content"><h4>Analytics</h4><p>GA4 · cohortes · LTV</p></div></a>
-          <a href="/automatizacion.html" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></div><div class="related-content"><h4>Automation</h4><p>n8n · CAPI · CRM</p></div></a>
-        </div>
-      </div>
-    </section>
-
+    <!-- CTA -->
     <section class="section">
       <div class="container">
         <div class="cta-box">
-          <h2>Reconstruir tu cuenta Meta?</h2>
-          <p>Auditoría gratuita de 30 minutos con Pablo y Jorge. Te decimos si tu cuenta necesita reconstrucción o solo afinado.</p>
+          <h2>Pedir auditoría</h2>
+          <p>30 minutos, gratuita. Pablo y Jorge en la llamada. Te llevas tres palancas accionables sobre tu cuenta Meta.</p>
           <div class="hero-cta" style="justify-content:center;">
-            <a href="/contacto.html" class="cta-primary">Hablamos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-            <a href="/resultados.html" class="cta-secondary">Caso Garett</a>
+            <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="/resultados.html" class="cta-secondary">Ver caso Garett</a>
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div><div class="footer-logo">DayByDay Consulting</div><div style="color:var(--text-muted);font-size:0.8rem;margin-top:0.5rem;">Madrid · Growth Partner para D2C</div></div>
-        <div class="footer-links"><a href="/problema.html">Problema</a><a href="/como-trabajamos.html">Cómo trabajamos</a><a href="/growth-partner.html">Growth Partner</a><a href="/resultados.html">Casos</a><a href="/blog.html">Blog</a><a href="/contacto.html">Hablamos</a></div>
-      </div>
-      <div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;"><p class="footer-copy">© 2026 DayByDay Consulting · analizamos · ejecutamos · acompañamos</p></div>
-    </div>
-  </footer>
-
+  <footer class="footer"><div class="container"><div class="footer-inner"><div><div class="footer-logo">DayByDay Consulting</div><div style="color:var(--text-muted);font-size:0.8rem;margin-top:0.5rem;">Madrid · Growth Partner para D2C</div></div><div class="footer-links"><a href="/problema.html">Problema</a><a href="/como-trabajamos.html">Cómo trabajamos</a><a href="/growth-partner.html">Growth Partner</a><a href="/resultados.html">Casos</a><a href="/blog.html">Blog</a><a href="/contacto.html">Pedir auditoría</a></div></div><div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;"><p class="footer-copy">© 2026 DayByDay Consulting · analizamos · ejecutamos · acompañamos</p></div></div></footer>
   <script src="/js/main.js"></script>
 </body>
 </html>
