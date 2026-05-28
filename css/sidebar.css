@@ -5,7 +5,7 @@
   top: 64px;
   bottom: 0;
   width: 280px;
-  background: rgba(10, 10, 10, 0.95);
+  background: var(--bg-card);
   backdrop-filter: blur(12px);
   border-right: 1px solid var(--border);
   overflow-y: auto;
@@ -26,7 +26,7 @@
   z-index: 60;
   width: 44px;
   height: 44px;
-  background: rgba(10, 10, 10, 0.9);
+  background: var(--bg-card);
   backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-radius: 8px;
