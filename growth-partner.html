@@ -2,10 +2,11 @@
 <html lang="es" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Growth Partner para D2C en España | DayByDay Consulting</title>
-  <meta name="description" content="Socios de crecimiento para D2C que ya facturan. Operamos con criterio sobre margen, payback CAC, LTV.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Growth Partner para D2C · Modelo y diferencial | DayByDay Consulting</title>
+  <meta name="description" content="Operamos como Growth Partner: analizamos, ejecutamos y acompañamos. Dos socios senior al lado del fundador. Tres casos públicos, modelo de fees flexible, sin handoffs.">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/growth-partner.html">
   <link rel="icon" href="/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
@@ -14,34 +15,53 @@
   <link rel="stylesheet" href="/css/sidebar.css">
   <link rel="stylesheet" href="/css/pages.css">
   <style>
-    :root {
-      --accent-color: #6366f1;
+    :root { --accent-color: #8b5cf6; }
+    .hero-badge { background: #8b5cf61a; border: 1px solid #8b5cf640; color: #a78bfa; }
+    .bru-block {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 3rem 2.5rem;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, transparent 70%), var(--bg-card);
+      border: 1px solid color-mix(in srgb, #8b5cf6 30%, transparent);
+      border-radius: 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
     }
-    .hero-badge {
-      background: #6366f11a;
-      border: 1px solid #6366f140;
-      color: #6366f1;
+    .bru-block::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #a78bfa, transparent);
     }
-    .feature-icon, .hero-stat-icon {
-      background: linear-gradient(135deg, #6366f1, #6366f1cc);
+    .bru-eyebrow {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #a78bfa;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
     }
-    .stat-box .value {
-      background: linear-gradient(135deg, #6366f1, #6366f1cc);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .cta-box::before {
-      background: radial-gradient(ellipse 50% 60% at 50% 0%, #6366f120 0%, transparent 60%);
-    }
-    .feature-tag {
-      background: #6366f11a;
-      border: 1px solid #6366f133;
-      color: #6366f1;
+    .bru-text {
+      font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+      line-height: 1.45;
+      color: var(--text-primary);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      max-width: 700px;
+      margin: 0 auto;
     }
   </style>
-
 </head>
 <body>
+
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
 
   <div class="file-tree-overlay" onclick="toggleSidebar()"></div>
   <aside class="file-tree-sidebar" id="sidebar">
@@ -51,137 +71,90 @@
       <a href="/" class="file-tree-item">Inicio</a>
       <a href="/problema.html" class="file-tree-item">Problema</a>
       <a href="/como-trabajamos.html" class="file-tree-item">Cómo Trabajamos</a>
-      <a href="/resultados.html" class="file-tree-item">Resultados</a>
-      <a href="/growth-partner.html" class="file-tree-item">Growth Partner</a>
-    </div>
-    <div class="file-tree-section">
-      <div class="file-tree-section-title">Paid Media</div>
-      <a href="/google-ads.html" class="file-tree-item">Google Ads</a>
-      <a href="/meta-ads.html" class="file-tree-item">Meta Ads</a>
-      <a href="/tiktok-ads.html" class="file-tree-item">TikTok Ads</a>
-      <a href="/linkedin-ads.html" class="file-tree-item">LinkedIn Ads</a>
-    </div>
-    <div class="file-tree-section">
-      <div class="file-tree-section-title">Automation & AI</div>
-      <a href="/automatizacion.html" class="file-tree-item">Automatización</a>
-      <a href="/analytics.html" class="file-tree-item">Analytics</a>
-      <a href="/agentic-ai.html" class="file-tree-item">Agentic AI</a>
-    </div>
-    <div class="file-tree-section">
-      <div class="file-tree-section-title">Stack Tech</div>
-      <a href="/tech/n8n.html" class="file-tree-item">n8n</a>
-      <a href="/tech/capi.html" class="file-tree-item">CAPI</a>
-      <a href="/tech/azure.html" class="file-tree-item">Azure AI</a>
+      <a href="/resultados.html" class="file-tree-item">Casos</a>
+      <a href="/growth-partner.html" class="file-tree-item active">Growth Partner</a>
     </div>
   </aside>
 
+  <button class="file-tree-toggle" onclick="toggleSidebar()">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+  </button>
 
-<nav class="main-nav">
+  <nav class="main-nav">
     <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
       <ul class="nav-links">
-          <li><a href="/problema.html">Problema</a></li>
-          
-          <!-- Cómo Trabajamos + Stack Tech (Grid) -->
-          <li class="nav-dropdown">
-            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
-            <div class="nav-dropdown-content small">
-              <div class="mega-section">
-                <div class="mega-section-title">Stack Tecnológico</div>
-                <div class="stack-grid">
-                  <a href="/tech/meta-ads.html">Meta Ads</a>
-                  <a href="/tech/google-ads-tech.html">Google Ads</a>
-                  <a href="/tech/shopify.html">Shopify</a>
-                  <a href="/tech/ga4.html">GA4</a>
-                  <a href="/tech/n8n.html">n8n</a>
-                  <a href="/tech/capi.html">CAPI</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          
-          <!-- Servicios (Mega Menu) -->
-          <li class="nav-dropdown">
-            <button class="nav-dropdown-btn">Servicios</button>
-            <div class="nav-dropdown-content">
-              <div class="mega-grid">
-                <div class="mega-column">
-                  <h4>Paid Media</h4>
-                  <a href="/meta-ads.html">Meta Ads</a>
-                  <a href="/google-ads.html">Google Ads</a>
-                  <a href="/tiktok-ads.html">TikTok Ads</a>
-                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
-                </div>
-                <div class="mega-column">
-                  <h4>Growth Strategy</h4>
-                  <a href="/growth-strategy.html">Estrategia</a>
-                  <a href="/growth-partner.html">Growth Partner</a>
-                </div>
-                <div class="mega-column">
-                  <h4>Automation</h4>
-                  <a href="/automatizacion.html">Automatización</a>
-                  <a href="/tech/n8n.html">n8n</a>
-                  <a href="/tech/capi.html">CAPI</a>
-                </div>
-                <div class="mega-column">
-                  <h4>Analytics & AI</h4>
-                  <a href="/analytics.html">Analytics</a>
-                  <a href="/agentic-ai.html">Agentic AI</a>
-                  <a href="/tech/azure.html">Azure AI</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          
-          <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/problema.html">Problema</a></li>
+        <li><a href="/como-trabajamos.html">Cómo Trabajamos</a></li>
+        <li><a href="/growth-partner.html">Growth Partner</a></li>
+        <li><a href="/resultados.html">Casos</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/contacto.html" class="cta-secondary" style="padding:0.5rem 1rem;font-size:0.85rem;">Pedir auditoría</a></li>
       </ul>
+      <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
     </div>
   </nav>
 
+  <div id="mobile-nav" class="mobile-nav">
+    <a href="/" class="mobile-nav-link">Inicio</a>
+    <a href="/problema.html" class="mobile-nav-link">Problema</a>
+    <a href="/como-trabajamos.html" class="mobile-nav-link">Cómo Trabajamos</a>
+    <a href="/growth-partner.html" class="mobile-nav-link">Growth Partner</a>
+    <a href="/resultados.html" class="mobile-nav-link">Casos</a>
+    <a href="/blog.html" class="mobile-nav-link">Blog</a>
+    <a href="/contacto.html" class="mobile-nav-link">Pedir auditoría</a>
+  </div>
+
   <div style="height:64px;"></div>
 
-  <div class="page-wrapper">
-    <div class="bg-orbs">
-      <div class="bg-orb bg-orb-1"></div>
-      <div class="bg-orb bg-orb-2"></div>
-      <div class="bg-orb bg-orb-3"></div>
-      <div class="bg-orb bg-orb-4"></div>
-    </div>
- style="position:relative;min-height:100vh;overflow-x:hidden;">
-    <div class="tech-dots"></div>
-    <div class="tech-grid"></div>
+  <main class="page-wrapper">
 
     <div class="container">
       <div class="breadcrumb">
-        <a href="/">Inicio</a><span>/</span><a href="/servicios.html">Servicios</a><span>/</span><span style="color:var(--text-secondary)">Growth Partner</span>
+        <a href="/">Inicio</a><span>/</span><span style="color:var(--text-secondary)">Growth Partner</span>
       </div>
     </div>
 
-    <section class="hero" style="padding:5rem 0 4rem;">
+    <section class="hero hero-centered">
       <div class="container">
-        <div class="hero-grid">
-          <div>
-            <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>Growth Strategy</div>
-            <h1>Growth Partner para D2C en España</h1>
-            <p class="subtitle" style="font-size:1.25rem;color:var(--text-secondary);max-width:540px;line-height:1.6;margin:1rem 0 2rem;">Socios de crecimiento para D2C que ya facturan. Operamos con criterio sobre margen, payback CAC, LTV.</p>
-            <div class="hero-cta">
-              <a href="/contacto.html" class="cta-primary">Hablamos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-              <a href="/resultados.html" class="cta-secondary">Ver resultados</a>
-            </div>
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
+          Modelo Growth Partner
+        </div>
+        <h1>Un socio que se sienta al lado del fundador, no un proveedor por horas</h1>
+        <p class="subtitle">
+          Operamos como Growth Partner. Analizamos el negocio, ejecutamos las palancas y acompañamos al fundador hasta el resultado. Pablo y Jorge en cada conversación.
+        </p>
+        <div class="verbs-row">
+          <span class="verb-pill"><span class="dot"></span>analizamos</span>
+          <span class="verb-separator">·</span>
+          <span class="verb-pill"><span class="dot"></span>ejecutamos</span>
+          <span class="verb-separator">·</span>
+          <span class="verb-pill"><span class="dot"></span>acompañamos</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-sm" style="padding-top:1rem;">
+      <div class="container">
+        <div class="anchor-stats">
+          <div class="anchor-stat">
+            <div class="anchor-value">3,2M€</div>
+            <div class="anchor-label">Generados a clientes en 12 meses (atribución vía CRM)</div>
           </div>
-          <div class="hero-visual">
-            <div class="hero-stat">
-              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M23 6l-9.5 9.5-5-5L1 18"/></svg></div>
-              <div class="hero-stat-content"><div class="hero-stat-value">+200%</div><div class="hero-stat-label">escalado en 12 meses</div></div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg></div>
-              <div class="hero-stat-content"><div class="hero-stat-value">LTV</div><div class="hero-stat-label">por cohorte</div></div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2v4M12 18v4"/></svg></div>
-              <div class="hero-stat-content"><div class="hero-stat-value">CAC</div><div class="hero-stat-label">payback < 6 meses</div></div>
-            </div>
+          <div class="anchor-stat">
+            <div class="anchor-value">264.712€</div>
+            <div class="anchor-label">Gestionados en paid media (Meta + Google)</div>
+          </div>
+          <div class="anchor-stat">
+            <div class="anchor-value">31.555</div>
+            <div class="anchor-label">Acciones de conversión registradas</div>
+          </div>
+          <div class="anchor-stat">
+            <div class="anchor-value">88,95M</div>
+            <div class="anchor-label">Impresiones generadas</div>
           </div>
         </div>
       </div>
@@ -190,99 +163,238 @@
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <h2>Qué included</h2>
-          <p>Todo lo que necesitas para implementar y escalar.</p>
+          <div class="eyebrow">El diferencial</div>
+          <h2>Tres tipos de proveedor. Tres comportamientos.</h2>
+        </div>
+        <div class="compare-grid">
+          <div class="compare-col">
+            <div class="compare-type">Consultor tradicional</div>
+            <h3>Asesora y se va</h3>
+            <p>Diagnóstico en PDF, recomendaciones que tu equipo tiene que ejecutar solo. Cuando aparece el problema real de implementación, ya facturó.</p>
+            <span class="compare-action">Solo asesora</span>
+          </div>
+          <div class="compare-col">
+            <div class="compare-type">Agencia tradicional</div>
+            <h3>Ejecuta sin entender</h3>
+            <p>Account manager, ROAS de plataforma, optimización de pujas. Sin contexto del margen real, del LTV o del cash-conversion.</p>
+            <span class="compare-action">Solo opera</span>
+          </div>
+          <div class="compare-col highlight">
+            <div class="compare-type">DayByDay</div>
+            <h3>Growth Partner</h3>
+            <p>Analizamos · ejecutamos · acompañamos. Hablas con los dos socios desde la primera llamada. Diseño SDD/PDD ad-hoc. Reporting de margen, no de ROAS.</p>
+            <span class="compare-action">Contigo del análisis al resultado</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Los cinco principios</div>
+          <h2>El ADN de cómo operamos cada cuenta</h2>
+        </div>
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-quote">"Hablas con los dos socios desde la primera conversación."</div>
+            <div class="pillar-meta">Pilar 1 · sin filtros</div>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-quote">"Sin handoffs. Sin perfiles junior."</div>
+            <div class="pillar-meta">Pilar 2 · quién opera</div>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-quote">"Del análisis al resultado, contigo."</div>
+            <div class="pillar-meta">Pilar 3 · acompañamiento</div>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-quote">"Reportamos margen de contribución, payback de CAC y LTV por cohorte. No ROAS plataforma."</div>
+            <div class="pillar-meta">Pilar 4 · métricas reales</div>
+          </div>
+          <div class="pillar-card" style="grid-column: span 2;">
+            <div class="pillar-quote">"Si capitalizas un éxito antes de entender qué lo produjo, lo matas."</div>
+            <div class="pillar-meta">Pilar 5 · Lección Douf</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Modelo de fees</div>
+          <h2>Cuatro formas de trabajar juntos</h2>
+          <p>El modelo se adapta a la fase y al riesgo del proyecto. La conversación de fees se cierra en la auditoría inicial.</p>
         </div>
         <div class="features-grid">
           <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <h3>Roadmap de crecimiento</h3>
-            <p>Included en este servicio.</p>
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/></svg></div>
+            <h3>Mensualidad fija</h3>
+            <p>Retainer mensual con scope cerrado y duración mínima de 3 meses para tener cohortes comparables.</p>
           </div>
           <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <h3>Unit economics analysis</h3>
-            <p>Included en este servicio.</p>
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M23 6l-9.5 9.5-5-5L1 18"/></svg></div>
+            <h3>Modelo a éxito</h3>
+            <p>Variable indexado a métricas de negocio acordadas. Solo cuando el caso lo permite y la atribución es limpia.</p>
           </div>
           <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <h3>Mix de canales</h3>
-            <p>Included en este servicio.</p>
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2v4M12 18v4"/></svg></div>
+            <h3>Retainer evolutivo</h3>
+            <p>Base + variable. La base cubre operación; el variable se activa con hitos de crecimiento del negocio.</p>
           </div>
           <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <h3>Expansion strategy</h3>
-            <p>Included en este servicio.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <h3>Pitch deck</h3>
-            <p>Included en este servicio.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
-            <h3>Due diligence</h3>
-            <p>Included en este servicio.</p>
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M9 12l2 2 4-4"/></svg></div>
+            <h3>Trabajo específico</h3>
+            <p>Proyecto cerrado con entregable definido: reconstrucción de cuenta, setup de analytics, diseño de agente AI, etc.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-sm" style="padding:3rem 0;">
+    <section class="section section-dark">
       <div class="container">
-        <div class="stats-row">
-<div class="stat-box"><div class="value">+200%</div><div class="label">escalado en 12 meses</div></div><div class="stat-box"><div class="value">LTV</div><div class="label">por cohorte</div></div><div class="stat-box"><div class="value">CAC</div><div class="label">payback < 6 meses</div></div><div class="stat-box"><div class="value">margin</div><div class="label">contribución > 40%</div></div>
+        <div class="section-header">
+          <div class="eyebrow">A quién hablamos</div>
+          <h2>El cliente que encaja con DayByDay</h2>
+          <p>Founder de eCommerce D2C o marca física con línea B2C.</p>
+        </div>
+        <div class="icp-grid" style="max-width:880px;margin:0 auto;">
+          <div class="icp-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <div><div class="icp-label">Facturación anual</div><div class="icp-value">200K – 3M€</div></div>
+          </div>
+          <div class="icp-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <div><div class="icp-label">Spend paid mensual</div><div class="icp-value">5K – 30K€ actual o potencial</div></div>
+          </div>
+          <div class="icp-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <div><div class="icp-label">Equipo interno</div><div class="icp-value">Sin senior de marketing in-house</div></div>
+          </div>
+          <div class="icp-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <div><div class="icp-label">Madurez de producto</div><div class="icp-value">Producto sólido, no en validación</div></div>
+          </div>
+          <div class="icp-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <div><div class="icp-label">Sector</div><div class="icp-value">D2C, marca física con línea B2C</div></div>
+          </div>
+          <div class="icp-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <div><div class="icp-label">Lo que necesita oír</div><div class="icp-value">Te tratamos como dueño, no como factura</div></div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:1.5rem;color:var(--text-muted);font-size:0.92rem;">
+          <strong style="color:var(--text-secondary);">Fuera de scope:</strong> empresas medianas con CMO en plantilla · startups Series A+ con paid senior interno · founders en validación de producto.
         </div>
       </div>
     </section>
 
-    <section class="section-sm stack-section" style="padding:3rem 0;background:var(--bg-secondary);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <section class="section">
       <div class="container">
-        <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:1.5rem;text-align:center;">Stack tecnológico</h2>
-        <div class="stack-row">
-<a href="/meta-ads.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Meta Ads</a><a href="/analytics.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Analytics</a><a href="/tech/shopify.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Shopify</a><a href="/tech/capi.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>CAPI</a>
+        <div class="section-header">
+          <div class="eyebrow">Tres casos públicos</div>
+          <h2>Tres mandatos, tres usos del modelo</h2>
+          <p>Detalle ampliado en la página de <a href="/resultados.html" style="color:var(--accent-color);">casos</a>.</p>
+        </div>
+        <div class="cases-grid">
+          <article class="case-card">
+            <span class="case-sector">Universidad privada</span>
+            <h3>Lead gen para 30+ postgrados</h3>
+            <p class="case-desc">Una de las cinco mejores universidades privadas de España. Multicanal Meta + Google con atribución vía CRM.</p>
+            <div class="case-metrics">
+              <div class="case-metric"><div class="case-metric-value">30+</div><div class="case-metric-label">Programas</div></div>
+              <div class="case-metric"><div class="case-metric-value">Meta+Google</div><div class="case-metric-label">Canales</div></div>
+              <div class="case-metric"><div class="case-metric-value">CRM</div><div class="case-metric-label">Atribución</div></div>
+            </div>
+            <div class="case-use">Lead gen high-ticket</div>
+          </article>
+          <article class="case-card">
+            <span class="case-sector">Garett España</span>
+            <h3>eCommerce D2C en 6 semanas</h3>
+            <p class="case-desc">Auditoría inicial: frecuencias altas, presupuesto fragmentado, pixel sin CAPI. Reconstrucción completa de la cuenta.</p>
+            <div class="case-metrics">
+              <div class="case-metric"><div class="case-metric-value">4,8€</div><div class="case-metric-label">CPA</div></div>
+              <div class="case-metric"><div class="case-metric-value">14.936</div><div class="case-metric-label">Clicks</div></div>
+              <div class="case-metric"><div class="case-metric-value">661</div><div class="case-metric-label">Inicios pago</div></div>
+            </div>
+            <div class="case-use">Operación quirúrgica D2C</div>
+          </article>
+          <article class="case-card">
+            <span class="case-sector">Aras Life Plus</span>
+            <h3>Shopify + WhatsApp + ads auto</h3>
+            <p class="case-desc">Primer mandato de un partner ejecutivo que después confió Cartri y Garett a DayByDay. Tres negocios consecutivos.</p>
+            <div class="case-metrics">
+              <div class="case-metric"><div class="case-metric-value">3</div><div class="case-metric-label">Mandatos</div></div>
+              <div class="case-metric"><div class="case-metric-value">Shopify</div><div class="case-metric-label">Plataforma</div></div>
+              <div class="case-metric"><div class="case-metric-value">WhatsApp</div><div class="case-metric-label">Venta</div></div>
+            </div>
+            <div class="case-use">Pablo + Jorge en conjunto</div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section-sm">
+    <section class="section">
+      <div class="container" style="max-width:760px;">
+        <div class="eyebrow" style="text-align:center;">Acompañamiento</div>
+        <h2 style="text-align:center;font-size:1.75rem;font-weight:700;margin:0.5rem 0 1.5rem;letter-spacing:-0.02em;">Lo que significa acompañar</h2>
+        <div class="prose">
+          <p>Acompañar no es estar disponible en Slack.</p>
+          <p>Acompañar es leer tu margen contigo cada mes y decirte cuándo escalar y cuándo parar. Es entrar en la reunión de banco si hace falta. Es revisar el pricing antes de meter una promoción. Es decirte "esto está funcionando pero todavía no sabemos por qué — no lo escalamos hasta saberlo".</p>
+          <p>Acompañar es no soltar la decisión cuando se pone difícil.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FRASE BRÚJULA -->
+    <section class="section">
       <div class="container">
-        <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Relacionado</h2>
-        <div class="related-grid">
-<a href="/growth-strategy.html" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class="related-content"><h4>Growth Strategy</h4><p>Ver más</p></div></a><a href="/problema.html" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class="related-content"><h4>Problema</h4><p>Ver más</p></div></a><a href="/resultados.html" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class="related-content"><h4>Resultados</h4><p>Ver más</p></div></a>
+        <div class="bru-block">
+          <div class="bru-eyebrow">La frase brújula</div>
+          <p class="bru-text">
+            Liberamos al fundador del peso del crecimiento para que ejecute la visión por la que vino al mundo. Analizamos contigo. Ejecutamos contigo. Acompañamos contigo. Sin handoffs. Sin perfiles junior. Hablas con los dos socios desde el día uno.
+          </p>
         </div>
       </div>
     </section>
 
-    <section class="section" style="padding:4rem 0;">
+    <section class="section">
       <div class="container">
         <div class="cta-box">
-          <h2>Convertirte en Growth Partner?</h2>
-          <p>Sesión initial de discovery incluida. Sin retainer mínimo.</p>
-          <a href="/contacto.html" class="cta-primary">Hablamos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <h2>Pedir auditoría</h2>
+          <p>30 minutos, gratuita. Pablo y Jorge en la llamada. Te llevas tres palancas accionables. Si encajamos seguimos. Si no, las palancas te las llevas igual.</p>
+          <div class="hero-cta" style="justify-content:center;">
+            <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="/como-trabajamos.html" class="cta-secondary">Ver método</a>
+          </div>
         </div>
       </div>
     </section>
 
-  </div><!-- end page-wrapper -->
+  </main>
 
-<footer class="footer">
-    <a href="/">Inicio</a>
-    <a href="/servicios.html">Servicios</a>
-    <a href="/blog.html">Blog</a>
-    <p>© 2026 DayByDay Consulting</p>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-logo">DayByDay Consulting</div>
+          <div style="color:var(--text-muted);font-size:0.8rem;margin-top:0.5rem;">Madrid · Growth Partner para D2C</div>
+        </div>
+        <div class="footer-links">
+          <a href="/problema.html">Problema</a>
+          <a href="/como-trabajamos.html">Cómo trabajamos</a>
+          <a href="/growth-partner.html">Growth Partner</a>
+          <a href="/resultados.html">Casos</a>
+          <a href="/blog.html">Blog</a>
+          <a href="/contacto.html">Pedir auditoría</a>
+        </div>
+      </div>
+      <div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;">
+        <p class="footer-copy">© 2026 DayByDay Consulting · analizamos · ejecutamos · acompañamos</p>
+      </div>
+    </div>
   </footer>
 
   <script src="/js/main.js"></script>
