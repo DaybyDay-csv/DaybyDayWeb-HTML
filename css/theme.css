@@ -186,9 +186,14 @@
   gap: 0.25rem;
 }
 
+/* v6 · Kill legacy file-tree sidebar + its toggle (removes the 2nd hamburger) */
+.file-tree-toggle,
+.file-tree-sidebar,
+.file-tree-overlay { display: none !important; }
+
 /* Responsive Mobile Menu */
 .mobile-menu-btn { display: none; }
-.mobile-nav { display: none; position: fixed; top: 64px; left: 0; right: 0; bottom: 0; background: rgba(5,5,7,0.98); backdrop-filter: blur(20px); z-index: 999; overflow-y: auto; padding: 1.5rem; }
+.mobile-nav { display: none; position: fixed; top: 64px; left: 0; right: 0; bottom: 0; background: var(--bg-primary); backdrop-filter: blur(20px); z-index: 999; overflow-y: auto; padding: 1.5rem; }
 .mobile-nav.active { display: block; }
 .mobile-nav-section { margin-bottom: 1.5rem; }
 .mobile-nav-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.75rem; }
