@@ -1676,6 +1676,52 @@
 /* v5 · Pillar / quote cards - dimmer accent bar */
 .pillar-card::before { background: var(--border-hover) !important; }
 
+/* v5 · Testimonial block — quiet, authoritative */
+.testimonial {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 2.5rem 2.5rem 2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  position: relative;
+}
+
+.testimonial .quote {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  font-weight: 400;
+}
+
+.testimonial .quote::before {
+  content: '"';
+  display: block;
+  font-size: 3rem;
+  line-height: 0.5;
+  color: var(--border-hover);
+  margin-bottom: 1rem;
+  font-family: Georgia, serif;
+}
+
+.testimonial .attribution {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.testimonial .attribution strong { color: var(--text-primary); font-weight: 600; }
+
+.testimonial .chain {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
 /* v5 · Stack pills neutral by default */
 .stack-pill {
   border-color: var(--border);
