@@ -16,6 +16,41 @@ document.addEventListener('DOMContentLoaded', function() {
       localStorage.setItem('theme', next);
     });
   });
+
+  // Megamenu: hover is CSS-driven (.nav-dropdown:hover .nav-dropdown-content),
+  // but touch devices need a click handler. We add an .is-open class on tap
+  // and a document-level click to close when tapping outside.
+  var dropdowns = document.querySelectorAll('.nav-dropdown');
+  dropdowns.forEach(function(dd) {
+    var btn = dd.querySelector('.nav-dropdown-btn');
+    if (!btn) return;
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var wasOpen = dd.classList.contains('is-open');
+      // Close all other open dropdowns first
+      document.querySelectorAll('.nav-dropdown.is-open').forEach(function(o) {
+        o.classList.remove('is-open');
+      });
+      if (!wasOpen) dd.classList.add('is-open');
+    });
+  });
+  // Close on click outside
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-dropdown')) {
+      document.querySelectorAll('.nav-dropdown.is-open').forEach(function(o) {
+        o.classList.remove('is-open');
+      });
+    }
+  });
+  // Close on Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.nav-dropdown.is-open').forEach(function(o) {
+        o.classList.remove('is-open');
+      });
+    }
+  });
 });
 
 // Scroll Animations - Intersection Observer
