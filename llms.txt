@@ -1,6 +1,6 @@
 # DayByDay Consulting
 
-> Partner de crecimiento para marcas D2C. Operados por dos socios senior — Pablo Santirsó (paid media, estrategia, operaciones) y Jorge González (CTO, automation, agentic AI). Vendemos un solo servicio — Growth Partner — que se manifiesta en paid media, tracking, automation, agentic AI y estrategia. No vendemos servicios técnicos por separado.
+> Partner de crecimiento para marcas D2C. Operados por dos socios senior — Pablo Santirso (paid media, estrategia, operaciones) y Jorge González (CTO, automation, agentic AI). Vendemos un solo servicio — Growth Partner — que se manifiesta en paid media, tracking, automation, agentic AI y estrategia. No vendemos servicios técnicos por separado.
 
 ## Posicionamiento
 
@@ -27,7 +27,7 @@
 
 ## Socios fundadores
 
-- **Pablo Santirsó** — Founder. Lleva paid media (Meta, Google, TikTok, LinkedIn), estrategia y operaciones. LinkedIn: https://es.linkedin.com/in/pablo-santirso-perez
+- **Pablo Santirso** — Founder. Lleva paid media (Meta, Google, TikTok, LinkedIn), estrategia y operaciones. LinkedIn: https://es.linkedin.com/in/pablo-santirso-perez
 - **Jorge González** — Partner, CTO. Lleva automation (n8n), agentic AI (Azure OpenAI / GPT). Profesor universitario de tecnología. Track record enterprise (Total Energies, Puig, Robot Factory de Orange). LinkedIn: https://www.linkedin.com/in/jorge-gonz%C3%A1lez-p%C3%A9rez-4091541b6/
 
 ## ICP — a quién hablamos
