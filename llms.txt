@@ -1,6 +1,6 @@
 # DayByDay Consulting
 
-> Partner de crecimiento para marcas D2C. Operados por dos socios senior — Pablo Santirso (paid media, estrategia, operaciones) y Jorge González (CTO, automation, agentic AI). Vendemos un solo servicio — Growth Partner — que se manifiesta en paid media, tracking, automation, agentic AI y estrategia. No vendemos servicios técnicos por separado.
+> Partner de crecimiento para marcas D2C. Operados por el equipo fundador — Pablo Santirso (paid media, estrategia, operaciones) y Jorge González (CTO, automation, agentic AI). Vendemos un solo servicio — Growth Partner — que se manifiesta en paid media, tracking, automation, agentic AI y estrategia. No vendemos servicios técnicos por separado.
 
 ## Posicionamiento
 
@@ -19,7 +19,7 @@
 
 ## Cinco mensajes pilar (ADN narrativo)
 
-1. "Hablas con los dos socios desde la primera conversación."
+1. "Hablas con Pablo y Jorge desde la primera llamada."
 2. "Sin handoffs. Sin perfiles junior."
 3. "Del análisis al resultado, contigo."
 4. "Reportamos margen de contribución, payback de CAC y LTV por cohorte. No ROAS plataforma."
@@ -58,7 +58,7 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 - Sector: eCommerce D2C con automation.
 - Proceso de venta automatizado Shopify + WhatsApp + campañas automáticas.
 - Caso conjunto de Pablo + Jorge. Primer mandato del mismo partner ejecutivo, que después confió Cartri y Garett a DayByDay (tres negocios consecutivos).
-- Uso recomendado: caso de "los dos socios trabajando juntos".
+- Uso recomendado: caso del "equipo fundador trabajando junto".
 
 ## Servicios
 
