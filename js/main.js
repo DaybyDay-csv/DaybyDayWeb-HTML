@@ -18,24 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// Sidebar Toggle
-function toggleSidebar() {
-  const sidebar = document.getElementById('sidebar');
-  const overlay = document.querySelector('.file-tree-overlay');
-  sidebar.classList.toggle('open');
-  overlay.classList.toggle('display');
-}
-
-// Close sidebar on escape key
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    const sidebar = document.getElementById('sidebar');
-    if (sidebar && sidebar.classList.contains('open')) {
-      toggleSidebar();
-    }
-  }
-});
-
 // Scroll Animations - Intersection Observer
 (function() {
   var observerOptions = {

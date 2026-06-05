@@ -187,11 +187,6 @@
   gap: 0.25rem;
 }
 
-/* v6 · Kill legacy file-tree sidebar + its toggle (removes the 2nd hamburger) */
-.file-tree-toggle,
-.file-tree-sidebar,
-.file-tree-overlay { display: none !important; }
-
 /* Responsive Mobile Menu */
 .mobile-menu-btn { display: none; }
 .mobile-nav { display: none; position: fixed; top: 64px; left: 0; right: 0; bottom: 0; background: var(--bg-primary); backdrop-filter: blur(20px); z-index: 999; overflow-y: auto; padding: 1.5rem; }
@@ -211,8 +206,7 @@
 }
 
 /* Mobile menu button */
-.mobile-menu-btn,
-.file-tree-toggle {
+.mobile-menu-btn {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 8px;
