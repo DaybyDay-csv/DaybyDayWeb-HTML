@@ -77,6 +77,10 @@
         <li><a href="/blog.html">Blog</a></li>
         <li><a href="/contacto.html" class="cta-secondary" style="padding:0.5rem 1rem;font-size:0.85rem;">Pedir auditoría</a></li>
       </ul>
+      <button class="theme-toggle-btn" aria-label="Cambiar tema" title="Cambiar tema">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      </button>
       <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
       </button>
@@ -110,8 +114,8 @@
     <section class="hero hero-centered" style="padding-bottom:2rem;">
       <div class="container">
         <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18M7 16l4-4 4 4 5-5"/></svg>Tecnología · Analytics</div>
-        <h1>El dashboard del marketing y el dashboard del CFO son dos dashboards distintos. Montamos los dos.</h1>
-        <p class="subtitle">Reportamos margen de contribución, payback de CAC y LTV por cohorte. ROAS aparece — como dato secundario, no como métrica de decisión.</p>
+        <h1>El informe de quien lleva los anuncios y el informe de quien lleva el negocio no son lo mismo. Montamos los dos.</h1>
+        <p class="subtitle">Reportamos lo que de verdad queda después de costes, cuánto tardas en recuperar un cliente nuevo y cuánto te deja con el tiempo. La métrica de la plataforma sigue ahí, pero como dato secundario.</p>
         <span class="lead-by"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg> Lidera <strong>Jorge González</strong> · acompaña Pablo en el reporting de negocio</span>
       </div>
     </section>
@@ -120,8 +124,8 @@
       <div class="container">
         <div class="section-header"><div class="eyebrow">El trabajo</div><h2>Setup completo de analytics y reporting de negocio</h2></div>
         <div class="prose">
-          <p>GA4 server-side, GTM, Enhanced Conversions, consent mode v2 y dashboards de cohorte sobre Looker Studio o BigQuery. Mapeo CRM ↔ ad accounts con atribución real, no estimación.</p>
-          <p>El primer entregable es la separación entre el reporting que sirve al equipo de marketing (campañas, creatividades, audiencias) y el que sirve a la dirección (margen, payback, cohortes).</p>
+          <p>Medición desde tu servidor, no solo desde el navegador. Cumplimiento de la ley de cookies. Informes que cruzan tus ventas reales con tus anuncios, no estimaciones.</p>
+          <p>Lo primero que entregamos es la separación entre los datos que necesita quien lleva los anuncios y los que necesita quien lleva el negocio.</p>
         </div>
         <div class="not-block">
           <strong>No es:</strong> instalación de GA4 con configuración default. No es reporting de ROAS de plataforma como métrica principal. No es dashboards que solo entiende el equipo que los pidió.
@@ -131,7 +135,7 @@
 
     <section class="section section-dark">
       <div class="container">
-        <div class="section-header"><div class="eyebrow">Cómo lo operamos</div><h2>Del setup técnico al reporting de cohorte</h2></div>
+        <div class="section-header"><div class="eyebrow">Cómo lo operamos</div><h2>Del montaje técnico al informe que tu dirección puede leer</h2></div>
         <div class="process-list">
           <div class="process-step"><div class="process-step-num">01</div><div><h3>GA4 + GTM server-side</h3><p>Migración a server-side tracking. Reducción de pérdida por iOS / ITP, consent mode v2 y eventos custom mapeados al modelo de negocio.</p></div></div>
           <div class="process-step"><div class="process-step-num">02</div><div><h3>Enhanced Conversions + CAPI</h3><p>Google Enhanced Conversions y Meta CAPI server-side conectados al backend Shopify. Event match quality alta.</p></div></div>

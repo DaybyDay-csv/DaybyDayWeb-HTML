@@ -1,23 +1,22 @@
-// Theme Toggle Logic
+// Theme Toggle Logic - applies on first paint to avoid flicker
 (function() {
-  const toggle = document.querySelector('.theme-toggle');
-  if (!toggle) return;
-
-  // Check saved preference or default to dark
-  const saved = localStorage.getItem('theme');
-  
+  var saved = localStorage.getItem('theme');
   if (saved) {
     document.documentElement.setAttribute('data-theme', saved);
   }
-
-  toggle.addEventListener('click', function() {
-    const current = document.documentElement.getAttribute('data-theme');
-    const next = current === 'light' ? 'dark' : 'light';
-    
-    document.documentElement.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
-  });
 })();
+
+document.addEventListener('DOMContentLoaded', function() {
+  var toggles = document.querySelectorAll('.theme-toggle-btn, .theme-toggle');
+  toggles.forEach(function(toggle) {
+    toggle.addEventListener('click', function() {
+      var current = document.documentElement.getAttribute('data-theme') || 'dark';
+      var next = current === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  });
+});
 
 // Sidebar Toggle
 function toggleSidebar() {
