@@ -7,7 +7,7 @@
 })();
 
 document.addEventListener('DOMContentLoaded', function() {
-  var toggles = document.querySelectorAll('.theme-toggle-btn, .theme-toggle');
+  var toggles = document.querySelectorAll('.theme-toggle-btn');
   toggles.forEach(function(toggle) {
     toggle.addEventListener('click', function() {
       var current = document.documentElement.getAttribute('data-theme') || 'dark';
@@ -25,45 +25,6 @@ function toggleSidebar() {
   sidebar.classList.toggle('open');
   overlay.classList.toggle('display');
 }
-
-// Theme Toggle (Light/Dark)
-function toggleTheme() {
-  const html = document.documentElement;
-  const sunIcon = document.querySelector('.sun-icon');
-  const moonIcon = document.querySelector('.moon-icon');
-  const isDark = html.getAttribute('data-theme') !== 'light';
-  
-  if (isDark) {
-    html.setAttribute('data-theme', 'light');
-    localStorage.setItem('theme', 'light');
-    if (sunIcon) sunIcon.style.display = 'none';
-    if (moonIcon) moonIcon.style.display = 'block';
-  } else {
-    html.setAttribute('data-theme', 'dark');
-    localStorage.setItem('theme', 'dark');
-    if (sunIcon) sunIcon.style.display = 'block';
-    if (moonIcon) moonIcon.style.display = 'none';
-  }
-}
-
-// Init theme on load
-(function() {
-  const saved = localStorage.getItem('theme');
-  const html = document.documentElement;
-  const sunIcon = document.querySelector('.sun-icon');
-  const moonIcon = document.querySelector('.moon-icon');
-  
-  if (saved === 'light') {
-    html.setAttribute('data-theme', 'light');
-    if (sunIcon) sunIcon.style.display = 'none';
-    if (moonIcon) moonIcon.style.display = 'block';
-  } else {
-    // Default to light
-    html.setAttribute('data-theme', 'light');
-    if (sunIcon) sunIcon.style.display = 'none';
-    if (moonIcon) moonIcon.style.display = 'block';
-  }
-})();
 
 // Close sidebar on escape key
 document.addEventListener('keydown', function(e) {
