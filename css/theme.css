@@ -91,6 +91,33 @@
   transform: translateY(-1px);
 }
 
+/* Language switcher (ES | EN) */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-right: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.lang-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.25rem 0.4rem;
+  border-radius: 4px;
+  transition: color 0.15s ease;
+}
+.lang-link:hover { color: var(--text-primary); }
+.lang-link.active {
+  color: var(--text-primary);
+  background: var(--bg-elevated);
+}
+.lang-sep {
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+
 /* Skip-to-content — invisible until focused via keyboard */
 .skip-link {
   position: absolute;
