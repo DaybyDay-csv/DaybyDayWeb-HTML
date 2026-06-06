@@ -51,6 +51,16 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   });
+
+  // Mobile menu toggle (replaces inline onclick="..." on the hamburger)
+  var menuBtn = document.querySelector('.mobile-menu-btn');
+  var mobileNav = document.getElementById('mobile-nav');
+  if (menuBtn && mobileNav) {
+    menuBtn.addEventListener('click', function() {
+      var isOpen = mobileNav.classList.toggle('active');
+      menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
 });
 
 // Scroll Animations - Intersection Observer

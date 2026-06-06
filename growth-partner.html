@@ -57,7 +57,9 @@
 
   
 
-  <nav class="main-nav">
+  
+  <a href="#main" class="skip-link">Saltar al contenido principal</a>
+<nav class="main-nav">
     <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
       <ul class="nav-links">
@@ -102,13 +104,13 @@
         <li><a href="/como-trabajamos.html">Cómo trabajamos</a></li>
         <li><a href="/resultados.html">Casos</a></li>
         <li><a href="/blog.html">Blog</a></li>
-        <li><a href="/contacto.html" class="cta-secondary" style="padding:0.5rem 1rem;font-size:0.85rem;">Pedir auditoría</a></li>
+        <li><a href="/contacto.html" class="nav-cta">Pedir auditoría</a></li>
       </ul>
       <button class="theme-toggle-btn" aria-label="Cambiar tema" title="Cambiar tema">
         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
       </button>
-      <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+      <button class="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
       </button>
     </div>
@@ -138,6 +140,8 @@
       <a href="/tech/shopify.html" class="mobile-nav-link mobile-nav-sub">Shopify</a>
     </div>
   </div>
+
+  <main id="main" class="page-wrapper">
 
     <section class="hero hero-centered">
       <div class="container">
@@ -394,7 +398,7 @@
       </div>
     </section>
 
-  </main>
+
 
   <footer class="footer">
     <div class="container">
