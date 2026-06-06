@@ -1,0 +1,28 @@
+name = "daybyday-post-deploy"
+main = "src/index.ts"
+compatibility_date = "2026-06-06"
+
+[observability]
+enabled = true
+
+# KV namespace for state. Create with:
+#   wrangler kv:namespace create BLOG_KV
+# Then put the returned id below.
+# [[kv_namespaces]]
+# binding = "BLOG_KV"
+# id = "<your-namespace-id>"
+
+# Plain-text env vars
+[vars]
+SITE = "https://www.daybydayconsulting.com"
+
+# Encrypted secrets — set with:
+#   wrangler secret put INDEXNOW_KEY
+#   wrangler secret put TELEGRAM_BOT_TOKEN
+#   wrangler secret put TELEGRAM_CHAT_ID
+
+# Cron triggers
+# Sun 06:00 UTC: re-ping IndexNow (last 50 URLs)
+# Sun 07:30 UTC: sitemap freshness check
+[triggers]
+crons = ["0 6 * * 0", "30 7 * * 0"]

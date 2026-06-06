@@ -116,3 +116,39 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 - [Servicios](https://www.daybydayconsulting.com/servicios.html) — stack completo.
 - [Blog](https://www.daybydayconsulting.com/blog.html) — 121 artículos de growth marketing.
 - [Hablamos](https://www.daybydayconsulting.com/contacto.html) — discovery call gratuita.
+## Artículos destacados (top 30 más recientes)
+
+- [TITLE: CAPI server-side Shopify: lo que cambia en 2026](https://www.daybydayconsulting.com/blog/capi-server-side-y-emq-en-2026-qué-cambia-y-cómo-implementarlo-en-shopify-sin-pe.html) — Estrategia · 2026-06-06
+- [Presupuesto mínimo Meta Ads sin tirar dinero: Guía práctica 2026](https://www.daybydayconsulting.com/blog/presupuesto-minimo-meta-ads-sin-tirar-dinero.html) — Estrategia · 2026-05-26
+- [Cómo Testar Nuevas Campañas en Meta Ads: Sistema de Experimentación 2026](https://www.daybydayconsulting.com/blog/test-campaigns-meta-ads.html) — Meta Ads · 2026-05-24
+- [Framework de Testing de Creatives para Meta Ads: Guía Completa para Ecommerce](https://www.daybydayconsulting.com/blog/meta-ads-creative-testing-framewor.html) — Meta Ads · 2026-05-24
+- [Estrategia Creativa de Meta Ads 2026: Guía Completa para D2C](https://www.daybydayconsulting.com/blog/meta-ads-creative-strategy2026.html) — Meta Ads · 2026-05-24
+- [Advantage+ Shopping en Meta Ads: Guía Completa 2026](https://www.daybydayconsulting.com/blog/advantage-plus-shopping-meta-ads.html) — Meta Ads · 2026-05-24
+- [Optimización de Conversión Ecommerce: Guía Completa 2026](https://www.daybydayconsulting.com/blog/optimizacion-conversion-ecommerce-2026.html) — Ecommerce · 2026-05-23
+- [Mejores agencias de paid media en España para eCommerce D2C (2026)](https://www.daybydayconsulting.com/blog/mejores-agencias-paid-media-espana-ecommerce-d2c.html) — Estrategia · 2026-05-23
+- [Estrategia Completa de Remarketing con Meta Ads en 2025](https://www.daybydayconsulting.com/blog/estrategia-remarketing-meta-2026.html) — Meta Ads · 2026-05-23
+- [Cuánto Presupuesto Necesitas para Meta Ads en 2026: Guía por Sector](https://www.daybydayconsulting.com/blog/budget-meta-ads.html) — Meta Ads · 2026-05-23
+- [El Momento Perfecto para Escalar tus Campañas de Meta Ads](https://www.daybydayconsulting.com/blog/cuando-escalar-campanas-meta-ads.html) — Estrategia · 2026-05-22
+- [KPIs de paid media para CFO/CEO: cómo presentar resultados sin tecnicismos (2026)](https://www.daybydayconsulting.com/blog/kpis-paid-media-cfo-ceo-d2c.html) — Reporting · 2026-05-21
+- [Pixel híbrido (cliente + servidor) en Meta Ads: guía de implementación práctica 2026](https://www.daybydayconsulting.com/blog/pixel-meta-hibrido-cliente-servidor-implementacion.html) — Tracking · 2026-05-20
+- [CBO vs ABO Meta Ads 2026: cuál gana en eCommerce España](https://www.daybydayconsulting.com/blog/como-empezar-con-meta-ads-en2026siendo-ecommerce-espana.html) — Paid Media · 2026-05-20
+- [Smart Bidding en Google Ads para D2C: cuándo confiar y cuándo intervenir (2026)](https://www.daybydayconsulting.com/blog/smart-bidding-google-ads-d2c.html) — Google Ads · 2026-05-19
+- [Pixel híbrido (cliente + servidor) en Meta Ads: implementación práctica paso a paso (2026)](https://www.daybydayconsulting.com/blog/pixel-meta-hibrido-cliente-servidor.html) — Tracking · 2026-05-19
+- [Customer journey D2C: del primer impacto publicitario a la repetición de compra (2026)](https://www.daybydayconsulting.com/blog/customer-journey-d2c.html) — Estrategia D2C · 2026-05-19
+- [WhatsApp + Meta Ads: el funnel BOFU que usan los D2C que más escalan (2026)](https://www.daybydayconsulting.com/blog/whatsapp-meta-ads-funnel-bofu-d2c.html) — Canales emergentes · 2026-05-18
+- [Juicio cross-funcional: por qué un founder D2C no puede delegar la decisión, solo la ejecución](https://www.daybydayconsulting.com/blog/juicio-cross-funcional-founder-d2c.html) — Decisiones de negocio · 2026-05-18
+- [Cuándo subir precio antes que invertir más en paid: framework de decisión para D2C](https://www.daybydayconsulting.com/blog/decision-cuando-subir-precio-d2c.html) — Decisiones de negocio · 2026-05-17
+- [Dashboard de paid media: qué métricas debe ver un founder D2C cada lunes (2026)](https://www.daybydayconsulting.com/blog/dashboard-paid-media-founder-d2c.html) — Reporting · 2026-05-17
+- [El rol del media buyer en 2027: por qué la categoría se evapora y qué la sustituye](https://www.daybydayconsulting.com/blog/rol-media-buyer2027.html) — Decisiones de negocio · 2026-05-16
+- [Partnership Ads en Meta para D2C: cómo escalar UGC con cuentas de creators (2026)](https://www.daybydayconsulting.com/blog/partnership-ads-meta-creators-d2c.html) — Creatividades · 2026-05-16
+- [GA4 + Meta Ads para D2C: implementación de eventos custom paso a paso (2026)](https://www.daybydayconsulting.com/blog/ga4meta-ads-eventos-custom-d2c.html) — Tracking · 2026-05-16
+- [Internacionalizar un D2C español con Meta Ads: pasos y errores en EU](https://www.daybydayconsulting.com/blog/internacionalizar-d2c-espanol-meta-ads-eu.html) — Internacionalización · 2026-05-15
+- [Adquisición vs retención: cómo separar presupuestos de paid media en D2C](https://www.daybydayconsulting.com/blog/adquisicion-vs-retencion-paid-media-d2c.html) — Estructura de cuenta · 2026-05-15
+- [Moat real para D2C en la era de la IA: por qué el playbook de paid no es defendible](https://www.daybydayconsulting.com/blog/moat-real-d2c-era-ia.html) — Decisiones de negocio · 2026-05-14
+- [Framework de hipótesis creativas Meta Ads: cómo briefar antes de gastar en producción](https://www.daybydayconsulting.com/blog/framework-hipotesis-creatividades-meta-ads.html) — Creatividades · 2026-05-14
+- [Dynamic Product Ads en Meta para Shopify: guía técnica D2C 2026](https://www.daybydayconsulting.com/blog/dynamic-product-ads-meta-shopify.html) — Meta Ads · 2026-05-14
+- [CBO vs ABO en Meta Ads 2026: qué estructura usar para escalar D2C](https://www.daybydayconsulting.com/blog/cbo-vs-abo-meta-ads2026d2c.html) — Estructura de cuenta · 2026-05-13
+
+Lista completa en [sitemap.xml](https://www.daybydayconsulting.com/sitemap.xml).
+RSS: [feed.xml](https://www.daybydayconsulting.com/feed.xml).
+Contenido íntegro para AI ingestion: [llms-full.txt](https://www.daybydayconsulting.com/llms-full.txt).

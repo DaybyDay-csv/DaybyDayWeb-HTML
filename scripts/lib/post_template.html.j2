@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="${lang}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${title}</title>
+  <meta name="description" content="${meta_description}">
+  <meta name="author" content="DayByDay Consulting">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="article:published_time" content="${date}">
+  <meta name="article:author" content="Pablo Santirso">
+  <link rel="canonical" href="${canonical}">
+  <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="DayByDay Blog RSS">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="${og_title}">
+  <meta property="og:description" content="${meta_description}">
+  <meta property="og:url" content="${canonical}">
+  <meta property="og:site_name" content="DayByDay Consulting">
+  <meta property="og:locale" content="es_ES">
+  <meta property="article:published_time" content="${date}">
+  <meta property="article:author" content="Pablo Santirso">
+  <meta property="article:section" content="${category}">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${og_title}">
+  <meta name="twitter:description" content="${meta_description}">
+
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/pages.css">
+
+  <script type="application/ld+json">
+${jsonld_article}
+  </script>
+  <script type="application/ld+json">
+${jsonld_faq}
+  </script>
+  <script type="application/ld+json">
+${jsonld_breadcrumb}
+  </script>
+  <script type="application/ld+json">
+${jsonld_person}
+  </script>
+
+  <style>
+    :root { --accent-color: ${accent_color}; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.55rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); line-height: 1.3; }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body a:hover { text-decoration-thickness: 2px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.92rem; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); font-weight: 600; }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body tbody tr:last-child td { border-bottom: none; }
+    .article-body tbody tr:hover { background: var(--bg-elevated); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding: 0.5rem 0 0.5rem 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body blockquote p { margin-bottom: 0.5rem; }
+    .article-body code { background: var(--bg-elevated); padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
+    .abstract { font-size: 1.1rem; color: var(--text-primary); background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); padding: 1rem 1.25rem; border-radius: 8px; margin: 1.5rem 0; line-height: 1.6; }
+    .takeaways { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.25rem 1.25rem 2.5rem; margin: 1.5rem 0; }
+    .takeaways-title { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.75rem; }
+    .takeaways li { font-size: 0.95rem; color: var(--text-secondary); }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.25rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: ${accent_color}1a; border: 1px solid ${accent_color}40; color: ${accent_color}; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 44px; height: 44px; border-radius: 50%; background: ${accent_color}; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; gap: 1rem; flex-wrap: wrap; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+    .related-posts { margin: 2.5rem 0; }
+    .related-posts-title { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem; }
+    .related-card { display: block; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 0.75rem; text-decoration: none; transition: border-color 0.2s; }
+    .related-card:hover { border-color: var(--accent-color, #6366f1); }
+    .related-card-title { color: var(--text-primary); font-weight: 600; font-size: 0.98rem; line-height: 1.4; margin-bottom: 0.25rem; }
+    .related-card-meta { color: var(--text-muted); font-size: 0.78rem; }
+    .bar-chart { display:flex; flex-direction:column; gap:0.5rem; margin:1.5rem 0; }
+    .bar-row { display:grid; grid-template-columns: 140px 1fr 80px; gap:0.75rem; align-items:center; }
+    .bar-label { color:var(--text-secondary); font-size:0.9rem; }
+    .bar-track { background:var(--bg-elevated); border-radius:4px; height:14px; overflow:hidden; }
+    .bar-fill { display:block; height:100%; background:linear-gradient(90deg, ${accent_color}, #8b5cf6); }
+    .bar-value { color:var(--text-primary); font-weight:600; font-size:0.9rem; text-align:right; }
+    .si-no-grid { display:grid; grid-template-columns: 1fr 1fr; gap:1rem; margin:1.5rem 0; }
+    .si-card { background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:1.25rem; }
+    .si-card h3 { font-size:1rem; margin:0 0 0.75rem 0; }
+    .si-card ul { margin:0; padding-left:1.25rem; }
+    .si-card li { margin-bottom:0.4rem; line-height:1.5; color:var(--text-secondary); font-size:0.95rem; }
+    @media (max-width: 640px) { .si-no-grid { grid-template-columns: 1fr; } .bar-row { grid-template-columns: 100px 1fr 60px; } }
+    ol.steps { counter-reset: step; list-style:none; padding:0; margin:1.5rem 0; }
+    ol.steps > li { counter-increment: step; position:relative; padding:0.75rem 0 0.75rem 3rem; border-bottom:1px solid var(--border); }
+    ol.steps > li::before { content: counter(step); position:absolute; left:0; top:0.65rem; width:2rem; height:2rem; background:var(--accent-color,#6366f1); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.9rem; }
+    ol.steps > li:last-child { border-bottom:none; }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido principal</a>
+  <nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/como-trabajamos.html">Cómo trabajamos</a></li>
+        <li><a href="/resultados.html">Casos</a></li>
+        <li><a href="/blog.html" aria-current="page">Blog</a></li>
+        <li><a href="/contacto.html" class="nav-cta">Pedir auditoría</a></li>
+      </ul>
+      <button class="theme-toggle-btn" aria-label="Cambiar tema" title="Cambiar tema">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div style="height:64px;"></div>
+
+  <div class="page-wrapper">
+    <main id="main" class="page-wrapper">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">${category}</span>
+        </div>
+
+        <section style="padding:3rem 0 1.5rem;">
+          <div style="max-width:760px;margin:0 auto;">
+            <div class="article-meta">
+              <span class="category-badge">${category}</span>
+              <span class="reading-time">${reading_time} min de lectura</span>
+              <span class="article-date">${date_display}</span>
+            </div>
+            <h1 style="font-size:clamp(1.85rem,4.5vw,2.85rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;color:var(--text-primary);">${title}</h1>
+            <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">${meta_description}</p>
+            <div class="article-author">
+              <div class="author-avatar">PS</div>
+              <div class="author-info">
+                <div class="name">Pablo Santirso · DayByDay Consulting</div>
+                <div class="role">Founder · Paid Media &amp; Estrategia D2C</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section style="padding:1rem 0 3rem;">
+          <div style="max-width:760px;margin:0 auto;">
+            <article class="article-body">
+              <p class="abstract" data-speakable="true">${abstract_html}</p>
+
+              <div class="takeaways" data-speakable="true">
+                <div class="takeaways-title">Lo que te llevas</div>
+                ${key_takeaways_html}
+              </div>
+
+              ${article_body_html}
+
+              ${main_table_html}
+
+              ${ranking_list_html}
+
+              ${contrarian_block_html}
+
+              <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin:2.5rem 0;text-align:center;">
+                <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;color:var(--text-primary);">¿Quieres aplicar esto a tu cuenta?</h3>
+                <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">Auditoría gratuita de 30 minutos. Revisamos tu situación y decimos exactamente qué haríamos primero.</p>
+                <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,${accent_color});color:white;font-weight:600;padding:0.85rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.98rem;">Hablamos →</a>
+              </div>
+
+              ${related_posts_html}
+
+              <section class="faq-section" data-speakable="true">
+                <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+                ${faqs_html}
+              </section>
+
+              <div class="post-nav">
+                <a href="/blog.html">← Ver todos los artículos</a>
+                <a href="/contacto.html">Pedir diagnóstico →</a>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting · partner de crecimiento para D2C España</p>
+  </footer>
+  <script src="/js/main.js"></script>
+</body>
+</html>

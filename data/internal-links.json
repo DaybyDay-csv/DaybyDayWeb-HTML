@@ -1,0 +1,1624 @@
+{
+  "schema_version": "1.0",
+  "last_updated": "2026-06-06T01:58:39.890823+00:00",
+  "total_edges": 231,
+  "edges": [
+    {
+      "from": "optimizacion-conversion-ecommerce-2026",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "cuando-escalar-campanas-meta-ads",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "cuando-escalar-campanas-meta-ads",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "kpis-paid-media-cfo-ceo-d2c",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "kpis-paid-media-cfo-ceo-d2c",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "como-empezar-con-meta-ads-en2026siendo-ecommerce-espana",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "como-empezar-con-meta-ads-en2026siendo-ecommerce-espana",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "smart-bidding-google-ads-d2c",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "smart-bidding-google-ads-d2c",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "customer-journey-d2c",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "customer-journey-d2c",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "whatsapp-meta-ads-funnel-bofu-d2c",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "whatsapp-meta-ads-funnel-bofu-d2c",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "decision-cuando-subir-precio-d2c",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "decision-cuando-subir-precio-d2c",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "dashboard-paid-media-founder-d2c",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "dashboard-paid-media-founder-d2c",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "rol-media-buyer2027",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "rol-media-buyer2027",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "moat-real-d2c-era-ia",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "moat-real-d2c-era-ia",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "que-no-automatiza-ia-d2c",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "que-no-automatiza-ia-d2c",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "suscripciones-ecommerce-ltv-cac-d2c",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "suscripciones-ecommerce-ltv-cac-d2c",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "growth-partner-vs-agencia-paid-media",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "growth-partner-vs-agencia-paid-media",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "aumentar-aov-ecommerce-d2c-palancas",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "aumentar-aov-ecommerce-d2c-palancas",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "ai-proof-skills-founder-d2c2027",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "ai-proof-skills-founder-d2c2027",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "margen-contribucion-vs-roas-ecommerce",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "margen-contribucion-vs-roas-ecommerce",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "tik-tok-ads-ecommerce-d2c-espana2026",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "tik-tok-ads-ecommerce-d2c-espana2026",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "performance-max-ecommerce-d2ccuando-usar",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "performance-max-ecommerce-d2ccuando-usar",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "email-marketing-meta-ads-ltv-d2c",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "email-marketing-meta-ads-ltv-d2c",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "cohort-analysis-ecommerce-d2c",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "cohort-analysis-ecommerce-d2c",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "cac-blended-vs-cac-canal-ecommerce",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "cac-blended-vs-cac-canal-ecommerce",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "automatizaciones-reglas-meta-ads-manager",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "automatizaciones-reglas-meta-ads-manager",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "abtesting-meta-ads-que-testar-primero",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "abtesting-meta-ads-que-testar-primero",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "remarketing-dinamico-ecommerce-guia-practica",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "remarketing-dinamico-ecommerce-guia-practica",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "performance-max-vs-meta-ads-espana",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "performance-max-vs-meta-ads-espana",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "cuanto-invertir-meta-ads-calculadora",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "cuanto-invertir-meta-ads-calculadora",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "cacvs-ltvecommerce",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "cacvs-ltvecommerce",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "escalar-ecommerce-d2c100k1m",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "escalar-ecommerce-d2c100k1m",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "metricas-meta-ads",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "metricas-meta-ads",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "escalar-campanas-meta-ads-sin-romper-roas",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "escalar-campanas-meta-ads-sin-romper-roas",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "guia-meta-ads-ecommerce-d2cespana2026",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "guia-meta-ads-ecommerce-d2cespana2026",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "ugcmeta-ads",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "ugcmeta-ads",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "tareas-automatizar",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "tareas-automatizar",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "metodologia-day-by-day",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "metodologia-day-by-day",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "estrategias-puja-meta-ads",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "estrategias-puja-meta-ads",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "estado-paid-media-d2cespana2026",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "estado-paid-media-d2cespana2026",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "automatizacion-marketing",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "automatizacion-marketing",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "calcular-roas-real-d2c",
+      "to": "presupuesto-minimo-meta-ads-sin-tirar-dinero",
+      "anchor": "presupuesto minimo meta ads sin tirar dinero",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "calcular-roas-real-d2c",
+      "to": "optimizacion-conversion-ecommerce-2026",
+      "anchor": "optimizacion conversion eCommerce 2026",
+      "context": "same_cluster:unit-economics",
+      "auto_generated": true
+    },
+    {
+      "from": "advantage-plus-shopping-meta-ads",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "estrategia-remarketing-meta-2026",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "estrategia-remarketing-meta-2026",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "budget-meta-ads",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "budget-meta-ads",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "internacionalizar-d2c-espanol-meta-ads-eu",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "internacionalizar-d2c-espanol-meta-ads-eu",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "adquisicion-vs-retencion-paid-media-d2c",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "adquisicion-vs-retencion-paid-media-d2c",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "dynamic-product-ads-meta-shopify",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "dynamic-product-ads-meta-shopify",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "cbo-vs-abo-meta-ads2026d2c",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "cbo-vs-abo-meta-ads2026d2c",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "automatizacion-paid-media-proximos24meses",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "automatizacion-paid-media-proximos24meses",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "cro-landing--meta-ads-d2c",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "cro-landing--meta-ads-d2c",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "black-friday-meta-ads-d2c-preparacion",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "black-friday-meta-ads-d2c-preparacion",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "presupuesto-minimo-meta-ads-ecommerce",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "presupuesto-minimo-meta-ads-ecommerce",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "retargeting-meta-ads-ecommerce2026",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "retargeting-meta-ads-ecommerce2026",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "audiencias-lookalike-meta-alta-calidad",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "audiencias-lookalike-meta-alta-calidad",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "estrategia-full-funnel-d2c",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "estrategia-full-funnel-d2c",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "combinar-google-ads-meta-ads-d2c",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "combinar-google-ads-meta-ads-d2c",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "por-que-anuncios-meta-no-convierten",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "por-que-anuncios-meta-no-convierten",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "advantage-plus-shopping",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "advantage-plus-shopping",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "creative-testing-meta-ads",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "creative-testing-meta-ads",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "como-mejorar-roasmeta-ads",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "como-mejorar-roasmeta-ads",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "benchmark-roassector-espana",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "benchmark-roassector-espana",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "caso-exito-ecommerce-roas",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "caso-exito-ecommerce-roas",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "checklist-auditoria-campanas",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "checklist-auditoria-campanas",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "que-es-paid-media",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "que-es-paid-media",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "preguntas-agencia",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "preguntas-agencia",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "full-funnel-meta-ads",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "full-funnel-meta-ads",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "escalar-meta-ads",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "escalar-meta-ads",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "embudo-captacion",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "embudo-captacion",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "buen-roasnichos",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "buen-roasnichos",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "roas",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "roas",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "meta-vs-google",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "meta-vs-google",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "cpa",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "cpa",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "cbo-vs-abo-meta-ads2026cual-gana-en-ecommerce-espana",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "cbo-vs-abo-meta-ads2026cual-gana-en-ecommerce-espana",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "mejorar-roas-meta-ads-2026",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "mejorar-roas-meta-ads-2026",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "como-empezar-con-meta-ads-en-2026-siendo-ecommerce-espana",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "como-empezar-con-meta-ads-en-2026-siendo-ecommerce-espana",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "mejorar-roas-meta-2026",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "mejorar-roas-meta-2026",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "meta-advantage-shopping-setup",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "meta-advantage-shopping-setup",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "meta-ads-roas-optimization",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "meta-ads-roas-optimization",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "meta-ads-cbo-vs-abo",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "meta-ads-cbo-vs-abo",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "meta-ads-cbo-campaigns",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "meta-ads-cbo-campaigns",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "facebook-advantage-shopping-campa",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "facebook-advantage-shopping-campa",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "cpa-meta-ads-demasiado-alto",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "cpa-meta-ads-demasiado-alto",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "meta-ads-retargeting-strategy",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "meta-ads-retargeting-strategy",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "meta-advantage-shopping",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "meta-advantage-shopping",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "porque-meta-ads-no-genera-ventas-ecommerce-d2c-espana",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "porque-meta-ads-no-genera-ventas-ecommerce-d2c-espana",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "meta-ads-creative-testing2026d2c",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "meta-ads-creative-testing2026d2c",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "index",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "index",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "estrategia-meta-ads2026",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "estrategia-meta-ads2026",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "estrategia-meta-ads-2026",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "estrategia-meta-ads-2026",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "estrategia-meta-ads",
+      "to": "test-campaigns-meta-ads",
+      "anchor": "test campaigns meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "estrategia-meta-ads",
+      "to": "advantage-plus-shopping-meta-ads",
+      "anchor": "advantage plus shopping meta ads",
+      "context": "same_cluster:paid-media-foundations",
+      "auto_generated": true
+    },
+    {
+      "from": "meta-ads-creative-strategy2026",
+      "to": "meta-ads-creative-testing-framewor",
+      "anchor": "meta ads creative testing framewor",
+      "context": "same_cluster:creative-testing",
+      "auto_generated": true
+    },
+    {
+      "from": "partnership-ads-meta-creators-d2c",
+      "to": "meta-ads-creative-testing-framewor",
+      "anchor": "meta ads creative testing framewor",
+      "context": "same_cluster:creative-testing",
+      "auto_generated": true
+    },
+    {
+      "from": "partnership-ads-meta-creators-d2c",
+      "to": "meta-ads-creative-strategy2026",
+      "anchor": "meta ads creative strategy2026",
+      "context": "same_cluster:creative-testing",
+      "auto_generated": true
+    },
+    {
+      "from": "framework-hipotesis-creatividades-meta-ads",
+      "to": "meta-ads-creative-testing-framewor",
+      "anchor": "meta ads creative testing framewor",
+      "context": "same_cluster:creative-testing",
+      "auto_generated": true
+    },
+    {
+      "from": "framework-hipotesis-creatividades-meta-ads",
+      "to": "meta-ads-creative-strategy2026",
+      "anchor": "meta ads creative strategy2026",
+      "context": "same_cluster:creative-testing",
+      "auto_generated": true
+    },
+    {
+      "from": "ad-fatigue-meta-ads-rotacion-creativa",
+      "to": "meta-ads-creative-testing-framewor",
+      "anchor": "meta ads creative testing framewor",
+      "context": "same_cluster:creative-testing",
+      "auto_generated": true
+    },
+    {
+      "from": "ad-fatigue-meta-ads-rotacion-creativa",
+      "to": "meta-ads-creative-strategy2026",
+      "anchor": "meta ads creative strategy2026",
+      "context": "same_cluster:creative-testing",
+      "auto_generated": true
+    },
+    {
+      "from": "meta-ads-library-analisis-competencia",
+      "to": "meta-ads-creative-testing-framewor",
+      "anchor": "meta ads creative testing framewor",
+      "context": "same_cluster:creative-testing",
+      "auto_generated": true
+    },
+    {
+      "from": "meta-ads-library-analisis-competencia",
+      "to": "meta-ads-creative-strategy2026",
+      "anchor": "meta ads creative strategy2026",
+      "context": "same_cluster:creative-testing",
+      "auto_generated": true
+    },
+    {
+      "from": "juicio-cross-funcional-founder-d2c",
+      "to": "mejores-agencias-paid-media-espana-ecommerce-d2c",
+      "anchor": "mejores agencias paid media España eCommerce D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "como-elegir-agencia-meta-ads-ecommerce",
+      "to": "mejores-agencias-paid-media-espana-ecommerce-d2c",
+      "anchor": "mejores agencias paid media España eCommerce D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "como-elegir-agencia-meta-ads-ecommerce",
+      "to": "juicio-cross-funcional-founder-d2c",
+      "anchor": "juicio cross funcional founder D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "senales-agencia-no-rinde",
+      "to": "mejores-agencias-paid-media-espana-ecommerce-d2c",
+      "anchor": "mejores agencias paid media España eCommerce D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "senales-agencia-no-rinde",
+      "to": "juicio-cross-funcional-founder-d2c",
+      "anchor": "juicio cross funcional founder D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "que-es-un-media-buyer",
+      "to": "mejores-agencias-paid-media-espana-ecommerce-d2c",
+      "anchor": "mejores agencias paid media España eCommerce D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "que-es-un-media-buyer",
+      "to": "juicio-cross-funcional-founder-d2c",
+      "anchor": "juicio cross funcional founder D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "cuanto-cobra-media-buyer",
+      "to": "mejores-agencias-paid-media-espana-ecommerce-d2c",
+      "anchor": "mejores agencias paid media España eCommerce D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "cuanto-cobra-media-buyer",
+      "to": "juicio-cross-funcional-founder-d2c",
+      "anchor": "juicio cross funcional founder D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "top-agencias-marketing",
+      "to": "mejores-agencias-paid-media-espana-ecommerce-d2c",
+      "anchor": "mejores agencias paid media España eCommerce D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "top-agencias-marketing",
+      "to": "juicio-cross-funcional-founder-d2c",
+      "anchor": "juicio cross funcional founder D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "mejores-agencias-paid-media",
+      "to": "mejores-agencias-paid-media-espana-ecommerce-d2c",
+      "anchor": "mejores agencias paid media España eCommerce D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "mejores-agencias-paid-media",
+      "to": "juicio-cross-funcional-founder-d2c",
+      "anchor": "juicio cross funcional founder D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "media-buyer-vs-agencia",
+      "to": "mejores-agencias-paid-media-espana-ecommerce-d2c",
+      "anchor": "mejores agencias paid media España eCommerce D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "media-buyer-vs-agencia",
+      "to": "juicio-cross-funcional-founder-d2c",
+      "anchor": "juicio cross funcional founder D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "elegir-agencia-meta-ads",
+      "to": "mejores-agencias-paid-media-espana-ecommerce-d2c",
+      "anchor": "mejores agencias paid media España eCommerce D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "elegir-agencia-meta-ads",
+      "to": "juicio-cross-funcional-founder-d2c",
+      "anchor": "juicio cross funcional founder D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "cuanto-cuesta-agencia-paid-media",
+      "to": "mejores-agencias-paid-media-espana-ecommerce-d2c",
+      "anchor": "mejores agencias paid media España eCommerce D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "cuanto-cuesta-agencia-paid-media",
+      "to": "juicio-cross-funcional-founder-d2c",
+      "anchor": "juicio cross funcional founder D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "agencia-paid-media-vs-generalista",
+      "to": "mejores-agencias-paid-media-espana-ecommerce-d2c",
+      "anchor": "mejores agencias paid media España eCommerce D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "agencia-paid-media-vs-generalista",
+      "to": "juicio-cross-funcional-founder-d2c",
+      "anchor": "juicio cross funcional founder D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "iamarketing-digital",
+      "to": "mejores-agencias-paid-media-espana-ecommerce-d2c",
+      "anchor": "mejores agencias paid media España eCommerce D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "iamarketing-digital",
+      "to": "juicio-cross-funcional-founder-d2c",
+      "anchor": "juicio cross funcional founder D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "agencia-vs-inhouse",
+      "to": "mejores-agencias-paid-media-espana-ecommerce-d2c",
+      "anchor": "mejores agencias paid media España eCommerce D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "agencia-vs-inhouse",
+      "to": "juicio-cross-funcional-founder-d2c",
+      "anchor": "juicio cross funcional founder D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "facebook-ads-vs-instagram-ads-ecomm",
+      "to": "mejores-agencias-paid-media-espana-ecommerce-d2c",
+      "anchor": "mejores agencias paid media España eCommerce D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "facebook-ads-vs-instagram-ads-ecomm",
+      "to": "juicio-cross-funcional-founder-d2c",
+      "anchor": "juicio cross funcional founder D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "advantage-plus-shopping-cuando-usarlo-no",
+      "to": "mejores-agencias-paid-media-espana-ecommerce-d2c",
+      "anchor": "mejores agencias paid media España eCommerce D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "advantage-plus-shopping-cuando-usarlo-no",
+      "to": "juicio-cross-funcional-founder-d2c",
+      "anchor": "juicio cross funcional founder D2C",
+      "context": "same_cluster:agency-selection",
+      "auto_generated": true
+    },
+    {
+      "from": "pixel-meta-hibrido-cliente-servidor",
+      "to": "pixel-meta-hibrido-cliente-servidor-implementacion",
+      "anchor": "pixel meta hibrido cliente servidor implementacion",
+      "context": "same_cluster:attribution-tracking",
+      "auto_generated": true
+    },
+    {
+      "from": "ga4meta-ads-eventos-custom-d2c",
+      "to": "pixel-meta-hibrido-cliente-servidor-implementacion",
+      "anchor": "pixel meta hibrido cliente servidor implementacion",
+      "context": "same_cluster:attribution-tracking",
+      "auto_generated": true
+    },
+    {
+      "from": "ga4meta-ads-eventos-custom-d2c",
+      "to": "pixel-meta-hibrido-cliente-servidor",
+      "anchor": "pixel meta hibrido cliente servidor",
+      "context": "same_cluster:attribution-tracking",
+      "auto_generated": true
+    },
+    {
+      "from": "incrementality-testing-meta-ads",
+      "to": "pixel-meta-hibrido-cliente-servidor-implementacion",
+      "anchor": "pixel meta hibrido cliente servidor implementacion",
+      "context": "same_cluster:attribution-tracking",
+      "auto_generated": true
+    },
+    {
+      "from": "incrementality-testing-meta-ads",
+      "to": "pixel-meta-hibrido-cliente-servidor",
+      "anchor": "pixel meta hibrido cliente servidor",
+      "context": "same_cluster:attribution-tracking",
+      "auto_generated": true
+    },
+    {
+      "from": "server-side-tracking-shopify-conversions-api",
+      "to": "pixel-meta-hibrido-cliente-servidor-implementacion",
+      "anchor": "pixel meta hibrido cliente servidor implementacion",
+      "context": "same_cluster:attribution-tracking",
+      "auto_generated": true
+    },
+    {
+      "from": "server-side-tracking-shopify-conversions-api",
+      "to": "pixel-meta-hibrido-cliente-servidor",
+      "anchor": "pixel meta hibrido cliente servidor",
+      "context": "same_cluster:attribution-tracking",
+      "auto_generated": true
+    },
+    {
+      "from": "ios-atribucion-meta-ads2026d2c",
+      "to": "pixel-meta-hibrido-cliente-servidor-implementacion",
+      "anchor": "pixel meta hibrido cliente servidor implementacion",
+      "context": "same_cluster:attribution-tracking",
+      "auto_generated": true
+    },
+    {
+      "from": "ios-atribucion-meta-ads2026d2c",
+      "to": "pixel-meta-hibrido-cliente-servidor",
+      "anchor": "pixel meta hibrido cliente servidor",
+      "context": "same_cluster:attribution-tracking",
+      "auto_generated": true
+    },
+    {
+      "from": "modelos-atribucion-ecommerce-d2c",
+      "to": "pixel-meta-hibrido-cliente-servidor-implementacion",
+      "anchor": "pixel meta hibrido cliente servidor implementacion",
+      "context": "same_cluster:attribution-tracking",
+      "auto_generated": true
+    },
+    {
+      "from": "modelos-atribucion-ecommerce-d2c",
+      "to": "pixel-meta-hibrido-cliente-servidor",
+      "anchor": "pixel meta hibrido cliente servidor",
+      "context": "same_cluster:attribution-tracking",
+      "auto_generated": true
+    },
+    {
+      "from": "marketing-mix-modeling-ecommerce-d2c",
+      "to": "pixel-meta-hibrido-cliente-servidor-implementacion",
+      "anchor": "pixel meta hibrido cliente servidor implementacion",
+      "context": "same_cluster:attribution-tracking",
+      "auto_generated": true
+    },
+    {
+      "from": "marketing-mix-modeling-ecommerce-d2c",
+      "to": "pixel-meta-hibrido-cliente-servidor",
+      "anchor": "pixel meta hibrido cliente servidor",
+      "context": "same_cluster:attribution-tracking",
+      "auto_generated": true
+    },
+    {
+      "from": "guia-api-conversiones-meta-shopify",
+      "to": "pixel-meta-hibrido-cliente-servidor-implementacion",
+      "anchor": "pixel meta hibrido cliente servidor implementacion",
+      "context": "same_cluster:attribution-tracking",
+      "auto_generated": true
+    },
+    {
+      "from": "guia-api-conversiones-meta-shopify",
+      "to": "pixel-meta-hibrido-cliente-servidor",
+      "anchor": "pixel meta hibrido cliente servidor",
+      "context": "same_cluster:attribution-tracking",
+      "auto_generated": true
+    },
+    {
+      "from": "ga4meta-server-side-tracking-shopify-sin-dolores-de-cabeza",
+      "to": "pixel-meta-hibrido-cliente-servidor-implementacion",
+      "anchor": "pixel meta hibrido cliente servidor implementacion",
+      "context": "same_cluster:attribution-tracking",
+      "auto_generated": true
+    },
+    {
+      "from": "ga4meta-server-side-tracking-shopify-sin-dolores-de-cabeza",
+      "to": "pixel-meta-hibrido-cliente-servidor",
+      "anchor": "pixel meta hibrido cliente servidor",
+      "context": "same_cluster:attribution-tracking",
+      "auto_generated": true
+    },
+    {
+      "from": "kpis-ecommerce-d2c",
+      "to": "pixel-meta-hibrido-cliente-servidor-implementacion",
+      "anchor": "pixel meta hibrido cliente servidor implementacion",
+      "context": "same_cluster:attribution-tracking",
+      "auto_generated": true
+    },
+    {
+      "from": "kpis-ecommerce-d2c",
+      "to": "pixel-meta-hibrido-cliente-servidor",
+      "anchor": "pixel meta hibrido cliente servidor",
+      "context": "same_cluster:attribution-tracking",
+      "auto_generated": true
+    }
+  ]
+}

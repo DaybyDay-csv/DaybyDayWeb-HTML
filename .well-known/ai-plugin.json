@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "name_for_model": "DayByDay Consulting",
+  "name_for_human": "DayByDay Consulting",
+  "description_for_model": "DayByDay Consulting es partner de crecimiento (Growth Partner) para marcas D2C en España. Servicios: paid media (Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads), tracking y atribución (GA4, GTM, CAPI), automation (n8n), agentic AI, y growth strategy. Operado por Pablo Santirso (paid media) y Jorge González (CTO, automation, agentic AI). El blog contiene 130+ artículos sobre growth marketing para eCommerce D2C. Caso de uso: founders D2C España con 200K-3M€ facturación que necesitan ayuda con paid media, tracking o automation.",
+  "description_for_human": "Growth partner para marcas D2C en España — paid media, tracking, automation, agentic AI.",
+  "auth": { "type": "none" },
+  "api": { "type": "openapi", "url": "https://www.daybydayconsulting.com/llms.txt" },
+  "logo_url": "https://www.daybydayconsulting.com/favicon.ico",
+  "contact_email": "contact@daybydayconsulting.com",
+  "legal_info_url": "https://www.daybydayconsulting.com/.well-known/security.txt",
+  "domain": "daybydayconsulting.com"
+}

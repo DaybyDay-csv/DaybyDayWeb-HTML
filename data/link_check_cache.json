@@ -1,0 +1,186 @@
+{
+  "https://developers.facebook.com/docs/marketing-api/conversions-api": {
+    "ok": true,
+    "status": 200,
+    "final_url": "https://developers.facebook.com/documentation/ads-commerce/conversions-api",
+    "wayback": null,
+    "trusted": true,
+    "checked_at": "2026-06-06T10:38:38.257406+00:00"
+  },
+  "https://www.facebook.com/business/help/765081025912308": {
+    "ok": false,
+    "status": 404,
+    "final_url": "https://www.facebook.com/business/help/765081025912308",
+    "wayback": null,
+    "trusted": true,
+    "checked_at": "2026-06-06T10:38:39.807900+00:00"
+  },
+  "https://help.shopify.com/en/manual/online-sales-channels/facebook": {
+    "ok": false,
+    "status": 403,
+    "final_url": "https://help.shopify.com/en/manual/online-sales-channels/facebook",
+    "wayback": "http://web.archive.org/web/20220928040127/https://help.shopify.com/en/manual/online-sales-channels/facebook",
+    "trusted": true,
+    "checked_at": "2026-06-06T10:38:40.943179+00:00"
+  },
+  "https://developers.facebook.com/docs/marketing-api/conversions-api/parameters": {
+    "ok": true,
+    "status": 200,
+    "final_url": "https://developers.facebook.com/documentation/ads-commerce/conversions-api/parameters",
+    "wayback": null,
+    "trusted": true,
+    "checked_at": "2026-06-06T10:38:41.861283+00:00"
+  },
+  "https://www.facebook.com/business/help/203336300585595": {
+    "ok": false,
+    "status": 404,
+    "final_url": "https://www.facebook.com/business/help/203336300585595",
+    "wayback": null,
+    "trusted": true,
+    "checked_at": "2026-06-06T11:11:31.818038+00:00"
+  },
+  "https://www.facebook.com/business/help/765081316991894": {
+    "ok": false,
+    "status": 404,
+    "final_url": "https://www.facebook.com/business/help/765081316991894",
+    "wayback": null,
+    "trusted": true,
+    "checked_at": "2026-06-06T11:11:34.760558+00:00"
+  },
+  "https://www.facebook.com/business/help/952192712548362": {
+    "ok": false,
+    "status": 404,
+    "final_url": "https://www.facebook.com/business/help/952192712548362",
+    "wayback": null,
+    "trusted": true,
+    "checked_at": "2026-06-06T11:27:10.893231+00:00"
+  },
+  "https://www.facebook.com/business/help/430291176997542": {
+    "ok": true,
+    "status": 200,
+    "final_url": "https://www.facebook.com/business/help/430291176997542",
+    "wayback": null,
+    "trusted": true,
+    "checked_at": "2026-06-06T11:27:17.114982+00:00"
+  },
+  "https://shopify.dev/docs/apps/marketing": {
+    "ok": true,
+    "status": 200,
+    "final_url": "https://shopify.dev/docs/apps/build/marketing-analytics",
+    "wayback": null,
+    "trusted": true,
+    "checked_at": "2026-06-06T11:27:18.231632+00:00"
+  },
+  "https://stape.io/blog/server-side-tracking-shopify": {
+    "ok": false,
+    "status": 404,
+    "final_url": "https://stape.io/blog/server-side-tracking-shopify",
+    "wayback": null,
+    "trusted": false,
+    "checked_at": "2026-06-06T11:27:18.893089+00:00"
+  },
+  "https://www.facebook.com/business/help/884858632998304": {
+    "ok": false,
+    "status": 404,
+    "final_url": "https://www.facebook.com/business/help/884858632998304",
+    "wayback": null,
+    "trusted": true,
+    "checked_at": "2026-06-06T12:19:42.999289+00:00"
+  },
+  "https://help.shopify.com/en/manual/privacy-and-security/privacy/customer-data-sharing/facebook-pixel": {
+    "ok": true,
+    "status": 200,
+    "final_url": "https://help.shopify.com/en/manual/privacy-and-security/privacy",
+    "wayback": null,
+    "trusted": true,
+    "checked_at": "2026-06-06T12:19:46.092533+00:00"
+  },
+  "https://www.iabspain.es/": {
+    "ok": true,
+    "status": 200,
+    "final_url": "https://iabspain.es/",
+    "wayback": null,
+    "trusted": true,
+    "checked_at": "2026-06-06T12:19:47.198388+00:00"
+  },
+  "https://www.facebook.com/business/help/765081237991954": {
+    "ok": true,
+    "status": 200,
+    "final_url": "https://www.facebook.com/business/help/765081237991954",
+    "wayback": null,
+    "trusted": true,
+    "checked_at": "2026-06-06T12:26:00.949611+00:00"
+  },
+  "https://shopify.dev/docs/apps/build/customer-events": {
+    "ok": false,
+    "status": 404,
+    "final_url": "https://shopify.dev/docs/apps/build/customer-events",
+    "wayback": null,
+    "trusted": true,
+    "checked_at": "2026-06-06T12:26:01.883448+00:00"
+  },
+  "https://www.stape.io/blog/facebook-conversions-api-gateway": {
+    "ok": false,
+    "status": 404,
+    "final_url": "https://www.stape.io/blog/facebook-conversions-api-gateway",
+    "wayback": null,
+    "trusted": false,
+    "checked_at": "2026-06-06T12:26:07.629054+00:00"
+  },
+  "https://www.facebook.com/business/help/765081237991654": {
+    "ok": false,
+    "status": 404,
+    "final_url": "https://www.facebook.com/business/help/765081237991654",
+    "wayback": null,
+    "trusted": true,
+    "checked_at": "2026-06-06T12:48:16.328701+00:00"
+  },
+  "https://www.facebook.com/business/help/411961729979820": {
+    "ok": false,
+    "status": 404,
+    "final_url": "https://www.facebook.com/business/help/411961729979820",
+    "wayback": null,
+    "trusted": true,
+    "checked_at": "2026-06-06T13:00:30.216065+00:00"
+  },
+  "https://developers.google.com/tag-platform/tag-manager/server-side": {
+    "ok": true,
+    "status": 200,
+    "final_url": "https://developers.google.com/tag-platform/tag-manager/server-side",
+    "wayback": null,
+    "trusted": true,
+    "checked_at": "2026-06-06T13:00:38.007022+00:00"
+  },
+  "https://shopify.dev/docs/apps/marketing/channels": {
+    "ok": false,
+    "status": 404,
+    "final_url": "https://shopify.dev/docs/apps/marketing/channels",
+    "wayback": null,
+    "trusted": true,
+    "checked_at": "2026-06-06T13:10:31.511355+00:00"
+  },
+  "https://developers.facebook.com/docs/marketing-api/conversions-api/": {
+    "ok": true,
+    "status": 200,
+    "final_url": "https://developers.facebook.com/documentation/ads-commerce/conversions-api",
+    "wayback": null,
+    "trusted": true,
+    "checked_at": "2026-06-06T13:42:38.929853+00:00"
+  },
+  "https://shopify.dev/docs/api/web-pixels": {
+    "ok": false,
+    "status": 404,
+    "final_url": "https://shopify.dev/docs/api/web-pixels",
+    "wayback": null,
+    "trusted": true,
+    "checked_at": "2026-06-06T13:48:16.544803+00:00"
+  },
+  "https://developers.facebook.com/docs/marketing-api/conversions-api/event-match-quality": {
+    "ok": false,
+    "status": 404,
+    "final_url": "https://developers.facebook.com/docs/marketing-api/conversions-api/event-match-quality",
+    "wayback": null,
+    "trusted": true,
+    "checked_at": "2026-06-06T13:54:26.238047+00:00"
+  }
+}
