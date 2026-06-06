@@ -91,31 +91,25 @@
   transform: translateY(-1px);
 }
 
-/* Language switcher (ES | EN) */
+/* Language switcher — single link to the opposite language.
+   Smaller and spaced away from the nav CTA. */
 .lang-switch {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  margin-left: 1.25rem;
   margin-right: 0.5rem;
-  font-size: 0.8rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.7rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
-}
-.lang-link {
+  letter-spacing: 0.08em;
   color: var(--text-muted);
   text-decoration: none;
-  padding: 0.25rem 0.4rem;
   border-radius: 4px;
-  transition: color 0.15s ease;
+  transition: color 0.15s ease, background 0.15s ease;
 }
-.lang-link:hover { color: var(--text-primary); }
-.lang-link.active {
+.lang-switch:hover {
   color: var(--text-primary);
   background: var(--bg-elevated);
-}
-.lang-sep {
-  color: var(--text-muted);
-  opacity: 0.5;
 }
 
 /* Skip-to-content — invisible until focused via keyboard */
