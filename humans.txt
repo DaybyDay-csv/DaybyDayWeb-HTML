@@ -19,8 +19,20 @@ Calendly: https://calendly.com/daybydayconsulting/discovery
 
 # SITE
 
-Last update: 2026/05/27
+Last update: 2026/06/06
 Standards: HTML5, CSS3
 Tone: tuteo directo · cifras concretas · 4–12 palabras por frase
 Stack: Plain HTML, Cloudflare Pages
 Verbs: analizamos · ejecutamos · acompañamos
+AI assistance: contenido asistido por MiniMax M3 y revisado/editado por Pablo Santirso
+  antes de publicar. La auditoría humana es no opcional — el LLM propone, nosotros
+  firmamos. Cero post publicado sin revisión.
+
+# CONTENT
+
+Blog: 123+ artículos en /blog/ y /en/blog/
+RSS: https://www.daybydayconsulting.com/feed.xml
+LLMs.txt: https://www.daybydayconsulting.com/llms.txt
+llms-full.txt: contenido íntegro para AI ingestion
+Cadencia: 3 posts/semana en español
+Cluster: 5 (paid-media-foundations · attribution-tracking · creative-testing · unit-economics · agency-selection)

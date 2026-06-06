@@ -1,0 +1,22 @@
+[2026-06-06T13:09:50] === revision_agent started for T100 (max_cycles=4) ===
+[2026-06-06T13:09:50] --- cycle 1/4 ---
+[2026-06-06T13:09:50] $ /usr/local/opt/python@3.14/bin/python3.14 scripts/generate_post.py --topic T100 --skip-audit
+[2026-06-06T13:24:50]   rc=124 classification=timeout
+[2026-06-06T13:24:50]   ✗ failed (timeout). Tail: subprocess timeout after 900s: Command '['/usr/local/opt/python@3.14/bin/python3.14', 'scripts/generate_post.py', '--topic', 'T100', '--skip-audit']' timed out after 900 seconds
+[2026-06-06T13:24:50]   applied fixes: ['Increased adaptive timeout base 180s -> 300s', 'Reduced max_tokens by factor 0.7 in generate_post.py']
+[2026-06-06T13:24:50] --- cycle 2/4 ---
+[2026-06-06T13:24:50] $ /usr/local/opt/python@3.14/bin/python3.14 scripts/generate_post.py --topic T100 --skip-audit
+[2026-06-06T14:10:34]   rc=124 classification=timeout
+[2026-06-06T14:10:34]   ✗ failed (timeout). Tail: subprocess timeout after 900s: Command '['/usr/local/opt/python@3.14/bin/python3.14', 'scripts/generate_post.py', '--topic', 'T100', '--skip-audit']' timed out after 900 seconds
+[2026-06-06T14:10:34]   applied fixes: ['No timeout line matched', 'No max_tokens lines matched']
+[2026-06-06T14:10:34] --- cycle 3/4 ---
+[2026-06-06T14:10:34] $ /usr/local/opt/python@3.14/bin/python3.14 scripts/generate_post.py --topic T100 --skip-audit
+[2026-06-06T14:14:45]   rc=1 classification=truncated
+[2026-06-06T14:14:45]   ✗ failed (truncated). Tail: lo/DaybyDayWeb-HTML/scripts/lib/llm_client.py", line 169, in call_json
+    text = self.call(modules, user_input, temperature, max_tokens, max_retries, json_mode=True)
+  File "/Users/pablo/DaybyDayWeb-HTML/scripts/lib/llm_client.py", line 158, in call
+    raise LLMError(f"LLM call failed after {max_retries} attempts: {last_err}")
+lib.llm_client.LLMError: LLM call failed after 3 attempts: truncated
+[2026-06-06T14:14:45]   applied fixes: ['No max_tokens lines matched', 'Bumped max_retries 3 -> 6 in llm_client.py']
+[2026-06-06T14:14:45] --- cycle 4/4 ---
+[2026-06-06T14:14:45] $ /usr/local/opt/python@3.14/bin/python3.14 scripts/generate_post.py --topic T100 --skip-audit

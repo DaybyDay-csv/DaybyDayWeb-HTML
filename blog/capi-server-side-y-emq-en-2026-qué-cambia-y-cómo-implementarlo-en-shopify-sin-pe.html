@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAPI server-side Shopify 2026: setup en 30 minutos | DayByDay Consulting</title>
+  <meta name="description" content="Cambios 2026 de Meta CAPI en Shopify. Setup rápido, errores típicos y cómo subir el EMQ por encima de 7. Datos accionables para e-commerce D2C España.">
+  <meta name="author" content="DayByDay Consulting">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="article:published_time" content="2026-06-06">
+  <meta name="article:author" content="Pablo Santirso">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/capi-server-side-y-emq-en-2026-qué-cambia-y-cómo-implementarlo-en-shopify-sin-pe.html">
+  <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="DayByDay Blog RSS">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="CAPI server-side Shopify 2026: setup en 30 minutos">
+  <meta property="og:description" content="Cambios 2026 de Meta CAPI en Shopify. Setup rápido, errores típicos y cómo subir el EMQ por encima de 7.">
+  <meta property="og:url" content="https://www.daybydayconsulting.com/blog/capi-server-side-y-emq-en-2026-qué-cambia-y-cómo-implementarlo-en-shopify-sin-pe.html">
+  <meta property="og:site_name" content="DayByDay Consulting">
+  <meta property="og:locale" content="es_ES">
+  <meta property="article:published_time" content="2026-06-06">
+  <meta property="article:author" content="Pablo Santirso">
+  <meta property="article:section" content="Estrategia">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CAPI server-side Shopify 2026: setup en 30 minutos">
+  <meta name="twitter:description" content="Cambios 2026 de Meta CAPI en Shopify. Setup rápido, errores típicos y cómo subir el EMQ por encima de 7.">
+
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/pages.css">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "CAPI server-side Shopify 2026: setup en 30 minutos",
+  "description": "",
+  "datePublished": "2026-06-06",
+  "dateModified": "2026-06-06",
+  "inLanguage": "es-ES",
+  "author": {
+    "@type": "Person",
+    "name": "Pablo Santirso",
+    "url": "https://es.linkedin.com/in/pablo-santirso-perez",
+    "jobTitle": "Founder, DayByDay Consulting",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "DayByDay Consulting"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "DayByDay Consulting",
+    "url": "https://www.daybydayconsulting.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.daybydayconsulting.com/favicon.ico"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.daybydayconsulting.com/blog/capi-server-side-y-emq-en-2026-qué-cambia-y-cómo-implementarlo-en-shopify-sin-pe.html"
+  },
+  "articleSection": "Estrategia",
+  "keywords": "TITLE"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es EMQ en Meta Ads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Event Match Quality mide la calidad de los parámetros enviados en cada evento. Un EMQ bajo reduce atribución y optimización. Apunta a 6+ en Purchase."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo implementar CAPI en Shopify?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usa Stape o Elevar como contenedor server-side. Configura event_id idéntico al Pixel, hashea datos de cliente y valida todo en Events Manager."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué se pierden eventos CAPI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bloqueadores, iOS 14+, cookies third-party y timeouts del contenedor. Prioriza server-side, usa first-party cookies y monitoriza duplicados cada semana."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿CAPI sustituye al Pixel de Meta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. El Pixel aporta señales del navegador. CAPI añade datos del servidor. Mantén ambos y deduplica cada evento con un event_id compartido.\n```"
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://www.daybydayconsulting.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://www.daybydayconsulting.com/blog.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "CAPI server-side Shopify 2026: setup en 30 minutos",
+      "item": "https://www.daybydayconsulting.com/blog/capi-server-side-y-emq-en-2026-qué-cambia-y-cómo-implementarlo-en-shopify-sin-pe.html"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Pablo Santirso",
+  "url": "https://www.daybydayconsulting.com",
+  "sameAs": [
+    "https://es.linkedin.com/in/pablo-santirso-perez"
+  ],
+  "jobTitle": "Founder, DayByDay Consulting",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "DayByDay Consulting",
+    "url": "https://www.daybydayconsulting.com"
+  },
+  "knowsAbout": [
+    "Meta Ads",
+    "Google Ads",
+    "TikTok Ads",
+    "LinkedIn Ads",
+    "Conversions API",
+    "Server-side tracking",
+    "GA4",
+    "Unit Economics",
+    "D2C eCommerce",
+    "Paid Media"
+  ]
+}
+  </script>
+
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.55rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); line-height: 1.3; }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body a:hover { text-decoration-thickness: 2px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.92rem; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); font-weight: 600; }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body tbody tr:last-child td { border-bottom: none; }
+    .article-body tbody tr:hover { background: var(--bg-elevated); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding: 0.5rem 0 0.5rem 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body blockquote p { margin-bottom: 0.5rem; }
+    .article-body code { background: var(--bg-elevated); padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
+    .abstract { font-size: 1.1rem; color: var(--text-primary); background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); padding: 1rem 1.25rem; border-radius: 8px; margin: 1.5rem 0; line-height: 1.6; }
+    .takeaways { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.25rem 1.25rem 2.5rem; margin: 1.5rem 0; }
+    .takeaways-title { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.75rem; }
+    .takeaways li { font-size: 0.95rem; color: var(--text-secondary); }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.25rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 44px; height: 44px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; gap: 1rem; flex-wrap: wrap; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+    .related-posts { margin: 2.5rem 0; }
+    .related-posts-title { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem; }
+    .related-card { display: block; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 0.75rem; text-decoration: none; transition: border-color 0.2s; }
+    .related-card:hover { border-color: var(--accent-color, #6366f1); }
+    .related-card-title { color: var(--text-primary); font-weight: 600; font-size: 0.98rem; line-height: 1.4; margin-bottom: 0.25rem; }
+    .related-card-meta { color: var(--text-muted); font-size: 0.78rem; }
+    .bar-chart { display:flex; flex-direction:column; gap:0.5rem; margin:1.5rem 0; }
+    .bar-row { display:grid; grid-template-columns: 140px 1fr 80px; gap:0.75rem; align-items:center; }
+    .bar-label { color:var(--text-secondary); font-size:0.9rem; }
+    .bar-track { background:var(--bg-elevated); border-radius:4px; height:14px; overflow:hidden; }
+    .bar-fill { display:block; height:100%; background:linear-gradient(90deg, #6366f1, #8b5cf6); }
+    .bar-value { color:var(--text-primary); font-weight:600; font-size:0.9rem; text-align:right; }
+    .si-no-grid { display:grid; grid-template-columns: 1fr 1fr; gap:1rem; margin:1.5rem 0; }
+    .si-card { background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:1.25rem; }
+    .si-card h3 { font-size:1rem; margin:0 0 0.75rem 0; }
+    .si-card ul { margin:0; padding-left:1.25rem; }
+    .si-card li { margin-bottom:0.4rem; line-height:1.5; color:var(--text-secondary); font-size:0.95rem; }
+    @media (max-width: 640px) { .si-no-grid { grid-template-columns: 1fr; } .bar-row { grid-template-columns: 100px 1fr 60px; } }
+    ol.steps { counter-reset: step; list-style:none; padding:0; margin:1.5rem 0; }
+    ol.steps > li { counter-increment: step; position:relative; padding:0.75rem 0 0.75rem 3rem; border-bottom:1px solid var(--border); }
+    ol.steps > li::before { content: counter(step); position:absolute; left:0; top:0.65rem; width:2rem; height:2rem; background:var(--accent-color,#6366f1); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.9rem; }
+    ol.steps > li:last-child { border-bottom:none; }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido principal</a>
+  <nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/como-trabajamos.html">Cómo trabajamos</a></li>
+        <li><a href="/resultados.html">Casos</a></li>
+        <li><a href="/blog.html" aria-current="page">Blog</a></li>
+        <li><a href="/contacto.html" class="nav-cta">Pedir auditoría</a></li>
+      </ul>
+      <button class="theme-toggle-btn" aria-label="Cambiar tema" title="Cambiar tema">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div style="height:64px;"></div>
+
+  <div class="page-wrapper">
+    <main id="main" class="page-wrapper">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Estrategia</span>
+        </div>
+
+        <section style="padding:3rem 0 1.5rem;">
+          <div style="max-width:760px;margin:0 auto;">
+            <div class="article-meta">
+              <span class="category-badge">Estrategia</span>
+              <span class="reading-time">1 min de lectura</span>
+              <span class="article-date">6 de junio de 2026</span>
+            </div>
+            <h1 style="font-size:clamp(1.85rem,4.5vw,2.85rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;color:var(--text-primary);">CAPI server-side Shopify 2026: setup en 30 minutos</h1>
+            <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;"></p>
+            <div class="article-author">
+              <div class="author-avatar">PS</div>
+              <div class="author-info">
+                <div class="name">Pablo Santirso · DayByDay Consulting</div>
+                <div class="role">Founder · Paid Media &amp; Estrategia D2C</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section style="padding:1rem 0 3rem;">
+          <div style="max-width:760px;margin:0 auto;">
+            <article class="article-body">
+              <p class="abstract" data-speakable="true"></p>
+
+              <div class="takeaways" data-speakable="true">
+                <div class="takeaways-title">Lo que te llevas</div>
+                <ul><li>Mide EMQ cada semana; no lo des por bueno.</li><li>Implementa CAPI con deduplicación event_id desde día uno.</li><li>Audita eventos perdidos en Events Manager cada lunes.</li></ul>
+              </div>
+
+              <h2>EMQ: la métrica que Meta penaliza</h2>
+<p>EMQ mide la calidad de los parámetros user_data que envías en cada evento. Meta lo calcula del 0 al 10 y lo muestra por evento en Events Manager. Si compras con un EMQ inferior a 6, Meta reduce atribución y empeora optimización de campañas.</p><p>Meta pide un Purchase con EMQ ≥ 6.0 en 2026. AddToCart requiere 5.5+, ViewContent 5.0+. Por debajo de 5 pierdes señal de conversión y el algoritmo optimiza contra ruido. Consulta la <a href="https://developers.facebook.com/docs/marketing-api/conversions-api/event-match-quality" target="_blank" rel="noopener noreferrer">guía de Event Match Quality de Meta</a> para afinar el diagnóstico.</p>
+<h2>Stack CAPI server-side en Shopify</h2>
+<p>El stack mínimo en Shopify usa un contenedor server-side como Stape o Elevar, conectado vía webhook a la tienda. Antes de cablear, entiende el modelo de datos con nuestra <a href="/blog/atribucion-shopify-meta-ads">guía de atribución en Shopify con Meta Ads</a>.</p><p>El mapeo envía Purchase, AddToCart, InitiateCheckout y ViewContent. Cada evento lleva user_data hasheada (email, phone, external_id) y un event_id idéntico al Pixel. Prioriza Purchase y AddToCart, son los que más optimizan. Sigue la <a href="https://www.facebook.com/business/help/765081237991954" target="_blank" rel="noopener noreferrer">documentación oficial de Meta sobre Conversions API</a>.</p>
+<h2>Errores que matan tus eventos</h2>
+<p>Deduplicación rota es el error más caro: si el event_id no coincide entre Pixel y servidor, Meta cuenta la conversión dos veces o ninguna. Esto infla audiencias y dispara CPA. Si ves discrepancias, revisa nuestra <a href="/blog/auditoria-paid-media-ecommerce">auditoría de paid media ecommerce</a>.</p><p>Bloqueadores de anuncios, Safari ITP y cookies third-party matan señales del Pixel. La solución pasa por server-side con first-party cookies en el contenedor Stape o Elevar. También valida timeouts: si el webhook tarda más de 5 segundos, Meta descarta el evento. Monitoriza todo desde Events Manager.</p>
+
+              <table><thead><tr><th>Evento</th><th>EMQ mínimo aceptable</th><th>Impacto si baja de 5</th></tr></thead><tbody><tr><td>Purchase</td><td>6.0+</td><td>Atribución rota, optimización descontrolada</td></tr><tr><td>AddToCart</td><td>5.5+</td><td>Audiencias frías infladas, CPA dispara</td></tr><tr><td>InitiateCheckout</td><td>5.5+</td><td>Modelado de embudo sesgado</td></tr><tr><td>ViewContent</td><td>5.0+</td><td>Retargeting pierde señal de intención</td></tr></tbody></table>
+
+              
+
+              
+
+              <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin:2.5rem 0;text-align:center;">
+                <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;color:var(--text-primary);">¿Quieres aplicar esto a tu cuenta?</h3>
+                <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">Auditoría gratuita de 30 minutos. Revisamos tu situación y decimos exactamente qué haríamos primero.</p>
+                <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.85rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.98rem;">Hablamos →</a>
+              </div>
+
+              <div class="related-posts"><div class="related-posts-title">Sigue leyendo</div><a class="related-card" href="/blog/pixel-meta-hibrido-cliente-servidor-implementacion.html"><div class="related-card-title">Pixel híbrido (cliente + servidor) en Meta Ads: guía de implementación práctica 2026</div><div class="related-card-meta">Tracking · 2026-05-20</div></a>
+<a class="related-card" href="/blog/pixel-meta-hibrido-cliente-servidor.html"><div class="related-card-title">Pixel híbrido (cliente + servidor) en Meta Ads: implementación práctica paso a paso (2026)</div><div class="related-card-meta">Tracking · 2026-05-19</div></a>
+<a class="related-card" href="/blog/ga4meta-ads-eventos-custom-d2c.html"><div class="related-card-title">GA4 + Meta Ads para D2C: implementación de eventos custom paso a paso (2026)</div><div class="related-card-meta">Tracking · 2026-05-16</div></a></div>
+
+              <section class="faq-section" data-speakable="true">
+                <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+                <div class="faq-item"><h3>¿Qué es EMQ en Meta Ads?</h3>Event Match Quality mide la calidad de los parámetros enviados en cada evento. Un EMQ bajo reduce atribución y optimización. Apunta a 6+ en Purchase.</div>
+<div class="faq-item"><h3>¿Cómo implementar CAPI en Shopify?</h3>Usa Stape o Elevar como contenedor server-side. Configura event_id idéntico al Pixel, hashea datos de cliente y valida todo en Events Manager.</div>
+<div class="faq-item"><h3>¿Por qué se pierden eventos CAPI?</h3>Bloqueadores, iOS 14+, cookies third-party y timeouts del contenedor. Prioriza server-side, usa first-party cookies y monitoriza duplicados cada semana.</div>
+<div class="faq-item"><h3>¿CAPI sustituye al Pixel de Meta?</h3>No. El Pixel aporta señales del navegador. CAPI añade datos del servidor. Mantén ambos y deduplica cada evento con un event_id compartido.
+```</div>
+              </section>
+
+              <div class="post-nav">
+                <a href="/blog.html">← Ver todos los artículos</a>
+                <a href="/contacto.html">Pedir diagnóstico →</a>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting · partner de crecimiento para D2C España</p>
+  </footer>
+  <script src="/js/main.js"></script>
+</body>
+</html>

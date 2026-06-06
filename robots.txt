@@ -4,6 +4,11 @@
 User-agent: *
 Allow: /
 Disallow: /site.zip
+Disallow: /drafts/
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /*.json$
+Disallow: /*.md$
 Crawl-delay: 1
 
 # Friendly to AI / LLM crawlers used for answer engines (AEO / GEO)
@@ -61,5 +66,10 @@ Allow: /
 # Sitemaps
 Sitemap: https://www.daybydayconsulting.com/sitemap.xml
 
-# LLM-friendly summary
+# LLM-friendly summaries
 # See: https://www.daybydayconsulting.com/llms.txt
+# Full content for AI ingestion: https://www.daybydayconsulting.com/llms-full.txt
+# RSS feed: https://www.daybydayconsulting.com/feed.xml
+
+# IndexNow key file location
+# https://www.daybydayconsulting.com/indexnow-7de9e111be6418906030e2ec7be8cb62.txt
