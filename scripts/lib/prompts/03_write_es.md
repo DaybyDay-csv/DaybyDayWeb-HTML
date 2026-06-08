@@ -71,8 +71,10 @@ Recibes: keyword_principal, abstract_60w, key_takeaways (3 frases), h2_structure
 - table: 4 filas en tbody.
 - contrarian: 1 frase, máximo 2 oraciones.
 
-## Enlaces
+## Enlaces (REGLA CRÍTICA)
+- Las URLs externas en `trusted_urls_disponibles` están verificadas. ÚSALAS TAL CUAL.
+- Si la investigación pasó external_authority_targets vacíos (porque no había URL adecuada en el pool), entonces el post no lleva enlaces externos. NO inventes URLs.
 - Internos: usa los slugs del research. Formato `<a href="/blog/SLUG">anchor</a>`.
-- Externos: usa las URLs del research. Formato `<a href="URL" target="_blank" rel="noopener noreferrer">anchor</a>`.
+- Externos: formato `<a href="URL" target="_blank" rel="noopener noreferrer">anchor</a>`.
 - Distribuye 2 internos + 2 externos entre los 3 H2 (no todos en uno).
 - Anchor descriptivo. Nunca "click aquí", "este post", "pincha aquí".

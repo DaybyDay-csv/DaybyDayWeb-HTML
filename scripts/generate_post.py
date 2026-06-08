@@ -39,17 +39,17 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 
 from lib.llm_client import LLMClient, LLMError
-from lib.authority_link_checker import check as check_link
+from lib.authority_link_checker import check_with_relevance, filter_survivors
 from lib.post_builder import build as build_post_html
 from lib.markdown_parser import parse as parse_md
 
 DATA = REPO / "data"
 BLOG = REPO / "blog"
 TEMPLATE = REPO / "scripts" / "lib" / "post_template.html.j2"
+TRUSTED_URLS = DATA / "trusted-urls.json"
 
 POSTS_JSON = DATA / "posts.json"
 QUEUE_JSON = DATA / "topic-queue.json"
-LINKS_JSON = DATA / "data" / "internal-links.json"  # may not exist yet
 LINKS_JSON = DATA / "internal-links.json"
 CLUSTERS_JSON = DATA / "clusters.json"
 
@@ -102,40 +102,62 @@ def pick_related(cluster: str, all_posts: list, exclude_slug: str, n: int = 3) -
 
 def step_research(client: LLMClient, topic: dict) -> dict:
     print(f"[1/9] Research pass for: {topic['topic'][:70]}")
+    trusted = load_trusted_urls_for_cluster(topic.get("cluster", ""))
+    # Compress trusted to just url+tags+why to save tokens
+    compressed = [{"url": e["url"], "tags": e.get("topic_tags", []), "why": e.get("why", "")} for e in trusted]
     user = json.dumps({
         "topic": topic["topic"],
         "cluster": topic["cluster"],
         "search_intent": topic.get("search_intent", "informational"),
         "rationale": topic.get("rationale", ""),
+        "trusted_urls_disponibles": compressed,  # LLM picks from this, never invents
     }, ensure_ascii=False)
     brief = client.call_json(
         ["00_voice.md", "01_research.md"],
         user_input=user,
         temperature=0.3,
-        max_tokens=3500,
+        max_tokens=4000,
     )
     return brief
 
 
-def step_verify_links(brief: dict) -> dict:
-    print(f"[2/9] Verifying {len(brief.get('external_authority_targets', []))} external links…")
+def load_trusted_urls_for_cluster(cluster: str) -> list[dict]:
+    """Return the trusted-urls entries for a cluster (or [] if missing)."""
+    if not TRUSTED_URLS.exists():
+        print(f"  [WARN] {TRUSTED_URLS} missing — external links will be empty.")
+        return []
+    data = json.loads(TRUSTED_URLS.read_text(encoding="utf-8"))
+    return data.get("by_cluster", {}).get(cluster, [])
+
+
+def step_verify_links(brief: dict, client: LLMClient, topic_title: str) -> dict:
+    """HEAD + Wayback + LLM relevance check. Topic is the article's title for relevance."""
+    print(f"[2/9] Verifying {len(brief.get('external_authority_targets', []))} external links (HEAD + Wayback + LLM relevance)…")
     targets = brief.get("external_authority_targets", [])
     if not targets:
+        brief["external_authority_targets_verified"] = []
         return brief
+    # Relevance check is the most expensive — only run if HEAD passes (saves time)
     verified = []
     for t in targets:
         url = t.get("url", "")
         if not url:
             continue
-        r = check_link(url, use_cache=True)
+        r = check_with_relevance(url, topic_title, client=client, min_relevance=5)
         if r["ok"]:
-            verified.append({**t, "ok": True, "status": r["status"]})
+            tag = "OK"
+            if r.get("relevance_reason"):
+                tag += f" rel={r['relevance']}/10"
+            print(f"  ✓ [{r['status']}] {tag} {url[:70]}")
+            verified.append({**t, "ok": True, "status": r["status"],
+                             "relevance": r.get("relevance", 0),
+                             "relevance_reason": r.get("relevance_reason", "")})
         elif r.get("wayback"):
-            # Substitute wayback as the link
-            print(f"  [fallback] {url} -> wayback")
+            print(f"  ↪ [wayback] {url[:70]}")
             verified.append({**t, "ok": False, "wayback": r["wayback"], "status": r["status"]})
         else:
-            print(f"  [skip] {url} (status {r['status']})")
+            reason = r.get("fail_reason", str(r["status"]))
+            print(f"  ✗ [{r['status']}] ({reason}) {url[:70]}")
     brief["external_authority_targets_verified"] = verified
     return brief
 
@@ -305,10 +327,10 @@ def main():
 
     client = LLMClient()
 
-    # Step 1-2: research + verify
+    # Step 1-2: research + verify (with LLM relevance)
     brief = step_research(client, topic)
     if not args.dry_run:
-        brief = step_verify_links(brief)
+        brief = step_verify_links(brief, client, topic["topic"])
     # Map internal_link_targets to {slug, anchor} pairs from posts_index
     by_slug = {p["slug"]: p for p in posts_index["posts"]}
     internal_links = []

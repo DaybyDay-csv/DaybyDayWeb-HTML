@@ -146,6 +146,24 @@ def parse(md: str) -> dict:
         seen_ext.add(k)
         dedup_ext.append(l)
     out["external_links_used"] = dedup_ext
+    # Final scrub: belt-and-suspenders against LLM directive leaks
+    LEAK_PREFIXES = (
+        "TITLE:", "Title:", "title:",
+        "META:", "META DESCRIPTION:", "Meta:", "Meta Description:",
+        "# ", "## ", "### ",
+    )
+    def _scrub(t: str) -> str:
+        t = (t or "").strip()
+        changed = True
+        while changed:
+            changed = False
+            for p in LEAK_PREFIXES:
+                if t.startswith(p):
+                    t = t[len(p):].lstrip()
+                    changed = True
+        return t.strip()
+    out["title"] = _scrub(out["title"])
+    out["meta_description"] = _scrub(out["meta_description"])
     return out
 
 

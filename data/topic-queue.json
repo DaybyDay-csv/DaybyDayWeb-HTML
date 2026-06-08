@@ -11,16 +11,18 @@
   ],
   "pending_tasks": [
     {
+      "id": "T101",
+      "slug": "advantage-shopping-vs-campañas-manuales-en-meta-ads-2026-cuándo-cada-una-rinde-m",
       "topic": "Advantage+ Shopping vs campañas manuales en Meta Ads 2026: cuándo cada una rinde más",
       "cluster": "paid-media-foundations",
+      "completed_at": "2026-06-07T21:37:48.921847+00:00",
+      "publish_date": "2026-06-07",
+      "score": 90,
       "search_intent": "commercial",
       "rationale": "Quora top question — recurring debate since 2024. Updated 2026 data with case.",
       "source": "quora:meta-ads-espana",
-      "score": 90,
-      "slug": "advantage-shopping-vs-campañas-manuales-en-meta-ads-2026-cuándo-cada-una-rinde-m",
-      "discovered_at": "2026-06-06T01:59:53.823183+00:00",
-      "status": "pending",
-      "id": "T101"
+      "discovered_at": "2026-06-06T00:00:00Z",
+      "status": "pending"
     },
     {
       "topic": "TikTok Shop España 2026: funciona de verdad para D2C o es humo",
@@ -232,7 +234,7 @@
     }
   ],
   "schema_version": "1.0",
-  "last_updated": "2026-06-06T13:56:22.131187+00:00",
+  "last_updated": "2026-06-07T21:37:48.921873+00:00",
   "total_pending": 17,
   "total_completed": 1,
   "source_note": "Seeded from D2C España trends May/June 2026. Extended weekly by scripts/topic_research.py."

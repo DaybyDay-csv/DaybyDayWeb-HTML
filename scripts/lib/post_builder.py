@@ -69,6 +69,34 @@ def _date_display(date_iso: str) -> str:
         return date_iso
 
 
+# Directive prefixes the LLM sometimes leaks into title/meta fields.
+# The parser should strip them, but we also defend in depth here so the
+# final HTML never ships with "TITLE:" or "META:" visible to users.
+_LEAKED_PREFIXES = (
+    "TITLE:", "Title:", "title:",
+    "META:", "META DESCRIPTION:", "Meta:", "Meta Description:",
+    "# ", "## ", "### ",
+)
+
+
+def _scrub_title(t: str) -> str:
+    """Defensively strip leaked LLM directive prefixes from a title."""
+    if not t:
+        return ""
+    t = t.strip()
+    # Iteratively strip if multiple prefixes stacked
+    changed = True
+    while changed:
+        changed = False
+        for p in _LEAKED_PREFIXES:
+            if t.startswith(p):
+                t = t[len(p):].lstrip()
+                changed = True
+    # Strip suffix the template will add anyway
+    t = re.sub(r"\s*\|\s*DayByDay Consulting\s*$", "", t)
+    return t.strip()
+
+
 def _word_count_estimate(html: str) -> int:
     text = re.sub(r"<[^>]+>", " ", html)
     text = re.sub(r"\s+", " ", text).strip()
@@ -225,6 +253,8 @@ def build(llm: dict, meta: dict, template_str: str, related_slugs: list, all_pos
     accent = _accent(meta["category"])
     date_display = _date_display(meta["date"])
     canonical = f"https://www.daybydayconsulting.com/blog/{meta['slug']}.html"
+    # Defensive scrub of any LLM-leaked prefixes
+    meta = {**meta, "title": _scrub_title(meta.get("title", ""))}
     og_title = meta["title"]
 
     article_body = _build_article_body(llm)

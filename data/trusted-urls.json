@@ -1,0 +1,1731 @@
+{
+  "schema_version": "1.0",
+  "last_updated": "2026-06-07T21:28:51.489035+00:00",
+  "total_urls": 111,
+  "total_failed": 38,
+  "by_cluster": {
+    "attribution-tracking": [
+      {
+        "url": "https://developers.facebook.com/docs/marketing-api/conversions-api",
+        "topic_tags": [
+          "capi",
+          "developers",
+          "meta"
+        ],
+        "why": "CAPI developer reference",
+        "status": 200,
+        "verified_at": "2026-06-07T21:23:10.380001+00:00"
+      },
+      {
+        "url": "https://developers.facebook.com/docs/marketing-api/conversions-api/parameters",
+        "topic_tags": [
+          "capi",
+          "parameters",
+          "meta"
+        ],
+        "why": "CAPI parameter reference",
+        "status": 200,
+        "verified_at": "2026-06-07T21:23:11.582766+00:00"
+      },
+      {
+        "url": "https://developers.google.com/analytics/devguides/collection/ga4",
+        "topic_tags": [
+          "ga4",
+          "developers",
+          "api"
+        ],
+        "why": "GA4 Measurement Protocol",
+        "status": 200,
+        "verified_at": "2026-06-07T21:23:24.664981+00:00"
+      },
+      {
+        "url": "https://developers.google.com/tag-platform/tag-manager/server-side",
+        "topic_tags": [
+          "gtm",
+          "server-side",
+          "sst"
+        ],
+        "why": "Server-side GTM",
+        "status": 200,
+        "verified_at": "2026-06-07T21:23:26.231303+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/apps/marketing/pixels",
+        "topic_tags": [
+          "shopify",
+          "pixels",
+          "customer events"
+        ],
+        "why": "Shopify customer events/pixels",
+        "status": 200,
+        "verified_at": "2026-06-07T21:23:27.659057+00:00"
+      },
+      {
+        "url": "https://www.aepd.es/es",
+        "topic_tags": [
+          "aepd",
+          "gdpr",
+          "privacidad",
+          "spain"
+        ],
+        "why": "AEPD — Spanish data protection",
+        "status": 200,
+        "verified_at": "2026-06-07T21:23:39.472079+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/connections/CashTrackingAdjustmentConnection",
+        "topic_tags": [
+          "pixel",
+          "capi",
+          "tracking",
+          "analytics",
+          "consent",
+          "privacy",
+          "customer-event",
+          "web-pixel"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:37.854665+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/connections/CashTrackingSessionConnection",
+        "topic_tags": [
+          "pixel",
+          "capi",
+          "tracking",
+          "analytics",
+          "consent",
+          "privacy",
+          "customer-event",
+          "web-pixel"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:38.369107+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/enums/AppInstallationPrivacy",
+        "topic_tags": [
+          "pixel",
+          "capi",
+          "tracking",
+          "analytics",
+          "consent",
+          "privacy",
+          "customer-event",
+          "web-pixel"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:38.884805+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/enums/CashTrackingSessionsSortKeys",
+        "topic_tags": [
+          "pixel",
+          "capi",
+          "tracking",
+          "analytics",
+          "consent",
+          "privacy",
+          "customer-event",
+          "web-pixel"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:39.430421+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/enums/CashTrackingSessionTransactionsSortKeys",
+        "topic_tags": [
+          "pixel",
+          "capi",
+          "tracking",
+          "analytics",
+          "consent",
+          "privacy",
+          "customer-event",
+          "web-pixel"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:39.923871+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/enums/ConsentPolicyErrorCode",
+        "topic_tags": [
+          "pixel",
+          "capi",
+          "tracking",
+          "analytics",
+          "consent",
+          "privacy",
+          "customer-event",
+          "web-pixel"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:40.427024+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/enums/CustomerConsentCollectedFrom",
+        "topic_tags": [
+          "pixel",
+          "capi",
+          "tracking",
+          "analytics",
+          "consent",
+          "privacy",
+          "customer-event",
+          "web-pixel"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:40.953214+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/enums/CustomerEmailAddressOpenTrackingLevel",
+        "topic_tags": [
+          "pixel",
+          "capi",
+          "tracking",
+          "analytics",
+          "consent",
+          "privacy",
+          "customer-event",
+          "web-pixel"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:41.492379+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/enums/CustomerEmailMarketingConsentUpdateUserErrorCode",
+        "topic_tags": [
+          "pixel",
+          "capi",
+          "tracking",
+          "analytics",
+          "consent",
+          "privacy",
+          "customer-event",
+          "web-pixel"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:42.017048+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/enums/CustomerSmsMarketingConsentErrorCode",
+        "topic_tags": [
+          "pixel",
+          "capi",
+          "tracking",
+          "analytics",
+          "consent",
+          "privacy",
+          "customer-event",
+          "web-pixel"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:42.532780+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/enums/ErrorsServerPixelUserErrorCode",
+        "topic_tags": [
+          "pixel",
+          "capi",
+          "tracking",
+          "analytics",
+          "consent",
+          "privacy",
+          "customer-event",
+          "web-pixel"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:43.055799+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/enums/ErrorsWebPixelUserErrorCode",
+        "topic_tags": [
+          "pixel",
+          "capi",
+          "tracking",
+          "analytics",
+          "consent",
+          "privacy",
+          "customer-event",
+          "web-pixel"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:43.614781+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/enums/InventoryShipmentSetTrackingUserErrorCode",
+        "topic_tags": [
+          "pixel",
+          "capi",
+          "tracking",
+          "analytics",
+          "consent",
+          "privacy",
+          "customer-event",
+          "web-pixel"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:44.113833+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/enums/PrivacyCountryCode",
+        "topic_tags": [
+          "pixel",
+          "capi",
+          "tracking",
+          "analytics",
+          "consent",
+          "privacy",
+          "customer-event",
+          "web-pixel"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:44.666644+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/enums/PrivacyFeaturesDisableUserErrorCode",
+        "topic_tags": [
+          "pixel",
+          "capi",
+          "tracking",
+          "analytics",
+          "consent",
+          "privacy",
+          "customer-event",
+          "web-pixel"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:45.150996+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/enums/PrivacyFeaturesEnum",
+        "topic_tags": [
+          "pixel",
+          "capi",
+          "tracking",
+          "analytics",
+          "consent",
+          "privacy",
+          "customer-event",
+          "web-pixel"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:45.692811+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/enums/ServerPixelStatus",
+        "topic_tags": [
+          "pixel",
+          "capi",
+          "tracking",
+          "analytics",
+          "consent",
+          "privacy",
+          "customer-event",
+          "web-pixel"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:46.227751+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/input-objects/ConsentPolicyInput",
+        "topic_tags": [
+          "pixel",
+          "capi",
+          "tracking",
+          "analytics",
+          "consent",
+          "privacy",
+          "customer-event",
+          "web-pixel"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:46.756492+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/input-objects/CustomerEmailMarketingConsentInput",
+        "topic_tags": [
+          "pixel",
+          "capi",
+          "tracking",
+          "analytics",
+          "consent",
+          "privacy",
+          "customer-event",
+          "web-pixel"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:47.263335+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/input-objects/CustomerEmailMarketingConsentUpdateInput",
+        "topic_tags": [
+          "pixel",
+          "capi",
+          "tracking",
+          "analytics",
+          "consent",
+          "privacy",
+          "customer-event",
+          "web-pixel"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:47.774811+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/input-objects/CustomerSmsMarketingConsentInput",
+        "topic_tags": [
+          "pixel",
+          "capi",
+          "tracking",
+          "analytics",
+          "consent",
+          "privacy",
+          "customer-event",
+          "web-pixel"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:48.300059+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/input-objects/CustomerSmsMarketingConsentUpdateInput",
+        "topic_tags": [
+          "pixel",
+          "capi",
+          "tracking",
+          "analytics",
+          "consent",
+          "privacy",
+          "customer-event",
+          "web-pixel"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:48.826446+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/input-objects/FulfillmentTrackingInput",
+        "topic_tags": [
+          "pixel",
+          "capi",
+          "tracking",
+          "analytics",
+          "consent",
+          "privacy",
+          "customer-event",
+          "web-pixel"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:49.363579+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/input-objects/InventoryShipmentTrackingInput",
+        "topic_tags": [
+          "pixel",
+          "capi",
+          "tracking",
+          "analytics",
+          "consent",
+          "privacy",
+          "customer-event",
+          "web-pixel"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:49.968695+00:00"
+      }
+    ],
+    "paid-media-foundations": [
+      {
+        "url": "https://www.linkedin.com/help/lms/answer/a424238",
+        "topic_tags": [
+          "linkedin",
+          "ads",
+          "campaign manager"
+        ],
+        "why": "LinkedIn Campaign Manager",
+        "status": 200,
+        "verified_at": "2026-06-07T21:23:30.016948+00:00"
+      },
+      {
+        "url": "https://business.linkedin.com/advertise",
+        "topic_tags": [
+          "linkedin",
+          "ads",
+          "advertise"
+        ],
+        "why": "LinkedIn Ads product page",
+        "status": 200,
+        "verified_at": "2026-06-07T21:23:30.595264+00:00"
+      },
+      {
+        "url": "https://ads.tiktok.com/help/article/get-started",
+        "topic_tags": [
+          "tiktok",
+          "ads",
+          "get started"
+        ],
+        "why": "TikTok Ads get started",
+        "status": 200,
+        "verified_at": "2026-06-07T21:23:32.388944+00:00"
+      },
+      {
+        "url": "https://ads.tiktok.com/help/article/smart-performance-campaign",
+        "topic_tags": [
+          "tiktok",
+          "smart performance",
+          "campaign"
+        ],
+        "why": "TikTok Smart Performance",
+        "status": 200,
+        "verified_at": "2026-06-07T21:23:34.233065+00:00"
+      },
+      {
+        "url": "https://ads.tiktok.com/help/article/tiktok-shop",
+        "topic_tags": [
+          "tiktok shop",
+          "ecommerce",
+          "d2c"
+        ],
+        "why": "TikTok Shop",
+        "status": 200,
+        "verified_at": "2026-06-07T21:23:36.192473+00:00"
+      },
+      {
+        "url": "https://iabspain.es/",
+        "topic_tags": [
+          "iab",
+          "spain",
+          "marketing digital"
+        ],
+        "why": "IAB Spain home",
+        "status": 200,
+        "verified_at": "2026-06-07T21:23:37.089382+00:00"
+      },
+      {
+        "url": "https://iabspain.es/topics/publicidad-digital/",
+        "topic_tags": [
+          "iab",
+          "publicidad digital",
+          "spain"
+        ],
+        "why": "IAB Spain publicidad digital",
+        "status": 200,
+        "verified_at": "2026-06-07T21:23:38.468964+00:00"
+      },
+      {
+        "url": "https://marketing4ecommerce.net/",
+        "topic_tags": [
+          "marketing4ecommerce",
+          "blog es",
+          "d2c"
+        ],
+        "why": "Marketing4ecommerce",
+        "status": 200,
+        "verified_at": "2026-06-07T21:23:53.101780+00:00"
+      },
+      {
+        "url": "https://www.brainsins.com/",
+        "topic_tags": [
+          "brainsins",
+          "blog es",
+          "ecommerce"
+        ],
+        "why": "Brainsins",
+        "status": 200,
+        "verified_at": "2026-06-07T21:23:54.536046+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest",
+        "topic_tags": [
+          "marketing",
+          "shop",
+          "storefront",
+          "sales-channel",
+          "api/marketing"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:50.909708+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/connections/AbandonedCheckoutConnection",
+        "topic_tags": [
+          "marketing",
+          "shop",
+          "storefront",
+          "sales-channel",
+          "api/marketing"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:51.462556+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/connections/AbandonedCheckoutLineItemConnection",
+        "topic_tags": [
+          "marketing",
+          "shop",
+          "storefront",
+          "sales-channel",
+          "api/marketing"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:51.973337+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/connections/AppConnection",
+        "topic_tags": [
+          "marketing",
+          "shop",
+          "storefront",
+          "sales-channel",
+          "api/marketing"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:52.516099+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/connections/AppCreditConnection",
+        "topic_tags": [
+          "marketing",
+          "shop",
+          "storefront",
+          "sales-channel",
+          "api/marketing"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:53.027400+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/connections/AppDiscountTypeConnection",
+        "topic_tags": [
+          "marketing",
+          "shop",
+          "storefront",
+          "sales-channel",
+          "api/marketing"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:53.569716+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/connections/AppInstallationConnection",
+        "topic_tags": [
+          "marketing",
+          "shop",
+          "storefront",
+          "sales-channel",
+          "api/marketing"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:54.073592+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/connections/AppPurchaseOneTimeConnection",
+        "topic_tags": [
+          "marketing",
+          "shop",
+          "storefront",
+          "sales-channel",
+          "api/marketing"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:54.599052+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/connections/AppRevenueAttributionRecordConnection",
+        "topic_tags": [
+          "marketing",
+          "shop",
+          "storefront",
+          "sales-channel",
+          "api/marketing"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:55.128054+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/connections/AppSubscriptionConnection",
+        "topic_tags": [
+          "marketing",
+          "shop",
+          "storefront",
+          "sales-channel",
+          "api/marketing"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:55.648409+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/connections/AppUsageRecordConnection",
+        "topic_tags": [
+          "marketing",
+          "shop",
+          "storefront",
+          "sales-channel",
+          "api/marketing"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:56.191096+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/connections/ArticleAuthorConnection",
+        "topic_tags": [
+          "marketing",
+          "shop",
+          "storefront",
+          "sales-channel",
+          "api/marketing"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:56.707246+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/connections/ArticleConnection",
+        "topic_tags": [
+          "marketing",
+          "shop",
+          "storefront",
+          "sales-channel",
+          "api/marketing"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:57.231676+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/connections/BlogConnection",
+        "topic_tags": [
+          "marketing",
+          "shop",
+          "storefront",
+          "sales-channel",
+          "api/marketing"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:57.736608+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/connections/BulkOperationConnection",
+        "topic_tags": [
+          "marketing",
+          "shop",
+          "storefront",
+          "sales-channel",
+          "api/marketing"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:58.264030+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/connections/CalculatedDiscountApplicationConnection",
+        "topic_tags": [
+          "marketing",
+          "shop",
+          "storefront",
+          "sales-channel",
+          "api/marketing"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:58.814077+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/connections/CalculatedLineItemConnection",
+        "topic_tags": [
+          "marketing",
+          "shop",
+          "storefront",
+          "sales-channel",
+          "api/marketing"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:59.309949+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/connections/CartTransformConnection",
+        "topic_tags": [
+          "marketing",
+          "shop",
+          "storefront",
+          "sales-channel",
+          "api/marketing"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:26:59.834643+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/connections/CashActivityConnection",
+        "topic_tags": [
+          "marketing",
+          "shop",
+          "storefront",
+          "sales-channel",
+          "api/marketing"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:27:00.360811+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/connections/CashDrawerConnection",
+        "topic_tags": [
+          "marketing",
+          "shop",
+          "storefront",
+          "sales-channel",
+          "api/marketing"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:27:00.872405+00:00"
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/latest/connections/CashManagementReasonCodeConnection",
+        "topic_tags": [
+          "marketing",
+          "shop",
+          "storefront",
+          "sales-channel",
+          "api/marketing"
+        ],
+        "why": "Auto-discovered from https://shopify.dev/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:27:01.394920+00:00"
+      }
+    ],
+    "unit-economics": [
+      {
+        "url": "https://hbr.org/topic/subject/marketing",
+        "topic_tags": [
+          "hbr",
+          "marketing",
+          "general"
+        ],
+        "why": "HBR marketing topic",
+        "status": 200,
+        "verified_at": "2026-06-07T21:23:43.029314+00:00"
+      },
+      {
+        "url": "https://www.shopify.com/blog/customer-acquisition-cost",
+        "topic_tags": [
+          "shopify",
+          "cac",
+          "customer acquisition cost"
+        ],
+        "why": "Shopify blog — CAC",
+        "status": 200,
+        "verified_at": "2026-06-07T21:23:56.366280+00:00"
+      },
+      {
+        "url": "https://www.shopify.com/first-sale/product-pricing-calculator",
+        "topic_tags": [
+          "cac",
+          "ltv",
+          "lifetime",
+          "customer-acquisition",
+          "retention",
+          "pricing",
+          "cohort",
+          "aov"
+        ],
+        "why": "Auto-discovered from https://www.shopify.com/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:27:24.775515+00:00"
+      },
+      {
+        "url": "https://www.shopify.com/international/pricing",
+        "topic_tags": [
+          "cac",
+          "ltv",
+          "lifetime",
+          "customer-acquisition",
+          "retention",
+          "pricing",
+          "cohort",
+          "aov"
+        ],
+        "why": "Auto-discovered from https://www.shopify.com/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:27:25.031390+00:00"
+      },
+      {
+        "url": "https://www.shopify.com/legal/shopify-gold-pricing-definitions",
+        "topic_tags": [
+          "cac",
+          "ltv",
+          "lifetime",
+          "customer-acquisition",
+          "retention",
+          "pricing",
+          "cohort",
+          "aov"
+        ],
+        "why": "Auto-discovered from https://www.shopify.com/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:27:26.215942+00:00"
+      },
+      {
+        "url": "https://www.shopify.com/legal/shopify-plus-pricing-definitions",
+        "topic_tags": [
+          "cac",
+          "ltv",
+          "lifetime",
+          "customer-acquisition",
+          "retention",
+          "pricing",
+          "cohort",
+          "aov"
+        ],
+        "why": "Auto-discovered from https://www.shopify.com/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:27:27.596429+00:00"
+      },
+      {
+        "url": "https://www.shopify.com/plus/pricing",
+        "topic_tags": [
+          "cac",
+          "ltv",
+          "lifetime",
+          "customer-acquisition",
+          "retention",
+          "pricing",
+          "cohort",
+          "aov"
+        ],
+        "why": "Auto-discovered from https://www.shopify.com/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:27:27.921586+00:00"
+      },
+      {
+        "url": "https://www.shopify.com/pos/pricing",
+        "topic_tags": [
+          "cac",
+          "ltv",
+          "lifetime",
+          "customer-acquisition",
+          "retention",
+          "pricing",
+          "cohort",
+          "aov"
+        ],
+        "why": "Auto-discovered from https://www.shopify.com/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:27:28.188801+00:00"
+      },
+      {
+        "url": "https://www.shopify.com/pricing",
+        "topic_tags": [
+          "cac",
+          "ltv",
+          "lifetime",
+          "customer-acquisition",
+          "retention",
+          "pricing",
+          "cohort",
+          "aov"
+        ],
+        "why": "Auto-discovered from https://www.shopify.com/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:27:28.498697+00:00"
+      },
+      {
+        "url": "https://www.shopify.com/resources/retention/bloomreach",
+        "topic_tags": [
+          "cac",
+          "ltv",
+          "lifetime",
+          "customer-acquisition",
+          "retention",
+          "pricing",
+          "cohort",
+          "aov"
+        ],
+        "why": "Auto-discovered from https://www.shopify.com/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:27:29.863280+00:00"
+      },
+      {
+        "url": "https://www.shopify.com/resources/retention/forter",
+        "topic_tags": [
+          "cac",
+          "ltv",
+          "lifetime",
+          "customer-acquisition",
+          "retention",
+          "pricing",
+          "cohort",
+          "aov"
+        ],
+        "why": "Auto-discovered from https://www.shopify.com/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:27:31.066592+00:00"
+      },
+      {
+        "url": "https://www.shopify.com/resources/retention/ordergroove",
+        "topic_tags": [
+          "cac",
+          "ltv",
+          "lifetime",
+          "customer-acquisition",
+          "retention",
+          "pricing",
+          "cohort",
+          "aov"
+        ],
+        "why": "Auto-discovered from https://www.shopify.com/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:27:33.165034+00:00"
+      },
+      {
+        "url": "https://www.shopify.com/resources/retention/yotpo",
+        "topic_tags": [
+          "cac",
+          "ltv",
+          "lifetime",
+          "customer-acquisition",
+          "retention",
+          "pricing",
+          "cohort",
+          "aov"
+        ],
+        "why": "Auto-discovered from https://www.shopify.com/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:27:34.076211+00:00"
+      },
+      {
+        "url": "https://www.shopify.com/webinar/customer-retention-2024",
+        "topic_tags": [
+          "cac",
+          "ltv",
+          "lifetime",
+          "customer-acquisition",
+          "retention",
+          "pricing",
+          "cohort",
+          "aov"
+        ],
+        "why": "Auto-discovered from https://www.shopify.com/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:27:35.257762+00:00"
+      },
+      {
+        "url": "https://www.shopify.com/webinar/retail-store-customer-acquisition",
+        "topic_tags": [
+          "cac",
+          "ltv",
+          "lifetime",
+          "customer-acquisition",
+          "retention",
+          "pricing",
+          "cohort",
+          "aov"
+        ],
+        "why": "Auto-discovered from https://www.shopify.com/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:27:36.314317+00:00"
+      },
+      {
+        "url": "https://iabspain.es/save-the-date-estudio-millennials-vs-generacion-x/",
+        "topic_tags": [
+          "inversion",
+          "estudio",
+          "ecommerce",
+          "negocio",
+          "roi",
+          "presupuesto"
+        ],
+        "why": "Auto-discovered from https://iabspain.es/post-sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:28:03.050410+00:00"
+      },
+      {
+        "url": "https://iabspain.es/el-primer-chief-economist-de-iab-europe-te-da-las-claves-para-mejorar-tu-negocio/",
+        "topic_tags": [
+          "inversion",
+          "estudio",
+          "ecommerce",
+          "negocio",
+          "roi",
+          "presupuesto"
+        ],
+        "why": "Auto-discovered from https://iabspain.es/post-sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:28:03.769178+00:00"
+      },
+      {
+        "url": "https://iabspain.es/iab-spain-organiza-el-primer-evento-atm-agencies-tech-marathon-un-speed-networking-enfocado-mejorar-tu-negocio/",
+        "topic_tags": [
+          "inversion",
+          "estudio",
+          "ecommerce",
+          "negocio",
+          "roi",
+          "presupuesto"
+        ],
+        "why": "Auto-discovered from https://iabspain.es/post-sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:28:04.499580+00:00"
+      },
+      {
+        "url": "https://iabspain.es/save-date-presentacion-del-estudio-de-audio-online-14-de-mayo/",
+        "topic_tags": [
+          "inversion",
+          "estudio",
+          "ecommerce",
+          "negocio",
+          "roi",
+          "presupuesto"
+        ],
+        "why": "Auto-discovered from https://iabspain.es/post-sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:28:05.242069+00:00"
+      },
+      {
+        "url": "https://iabspain.es/la-inversion-publicitaria-en-medios-digitales-crece-un-9-en-2017/",
+        "topic_tags": [
+          "inversion",
+          "estudio",
+          "ecommerce",
+          "negocio",
+          "roi",
+          "presupuesto"
+        ],
+        "why": "Auto-discovered from https://iabspain.es/post-sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:28:05.868710+00:00"
+      },
+      {
+        "url": "https://iabspain.es/crecimiento-moderado-de-la-inversion-publicitaria-en-medios-digitales-en-s1-2017/",
+        "topic_tags": [
+          "inversion",
+          "estudio",
+          "ecommerce",
+          "negocio",
+          "roi",
+          "presupuesto"
+        ],
+        "why": "Auto-discovered from https://iabspain.es/post-sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:28:06.589898+00:00"
+      },
+      {
+        "url": "https://iabspain.es/la-inversion-publicitaria-en-medios-digitales-crece-un-215-en-2016/",
+        "topic_tags": [
+          "inversion",
+          "estudio",
+          "ecommerce",
+          "negocio",
+          "roi",
+          "presupuesto"
+        ],
+        "why": "Auto-discovered from https://iabspain.es/post-sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:28:07.440879+00:00"
+      },
+      {
+        "url": "https://iabspain.es/la-inversion-publicitaria-en-medios-digitales-crece-un-24-en-el-primer-semestre-de-2016/",
+        "topic_tags": [
+          "inversion",
+          "estudio",
+          "ecommerce",
+          "negocio",
+          "roi",
+          "presupuesto"
+        ],
+        "why": "Auto-discovered from https://iabspain.es/post-sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:28:08.158409+00:00"
+      },
+      {
+        "url": "https://iabspain.es/iab-spain-crea-un-comite-de-expertos-para-su-estudio-de-inversion-en-publicidad-digital/",
+        "topic_tags": [
+          "inversion",
+          "estudio",
+          "ecommerce",
+          "negocio",
+          "roi",
+          "presupuesto"
+        ],
+        "why": "Auto-discovered from https://iabspain.es/post-sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:28:08.914125+00:00"
+      },
+      {
+        "url": "https://iabspain.es/la-inversion-en-publicitaria-en-medios-digitales-crece-un-21-en-2015/",
+        "topic_tags": [
+          "inversion",
+          "estudio",
+          "ecommerce",
+          "negocio",
+          "roi",
+          "presupuesto"
+        ],
+        "why": "Auto-discovered from https://iabspain.es/post-sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:28:09.662202+00:00"
+      },
+      {
+        "url": "https://iabspain.es/xv-seminario-de-publicidad-y-comunicacion-digital-iab-aea-ecommerce/",
+        "topic_tags": [
+          "inversion",
+          "estudio",
+          "ecommerce",
+          "negocio",
+          "roi",
+          "presupuesto"
+        ],
+        "why": "Auto-discovered from https://iabspain.es/post-sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:28:10.386385+00:00"
+      },
+      {
+        "url": "https://iabspain.es/festival-inspirational-2015-nucleo-de-comunicacion-innovacion-negocio-y-experiencia/",
+        "topic_tags": [
+          "inversion",
+          "estudio",
+          "ecommerce",
+          "negocio",
+          "roi",
+          "presupuesto"
+        ],
+        "why": "Auto-discovered from https://iabspain.es/post-sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:28:11.017905+00:00"
+      },
+      {
+        "url": "https://iabspain.es/la-inversion-en-publicidad-digital-en-2014-ha-sido-de-1-0656-me-un-crecimiento-del-99-respecto-a-2013/",
+        "topic_tags": [
+          "inversion",
+          "estudio",
+          "ecommerce",
+          "negocio",
+          "roi",
+          "presupuesto"
+        ],
+        "why": "Auto-discovered from https://iabspain.es/post-sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:28:11.764314+00:00"
+      },
+      {
+        "url": "https://iabspain.es/conoce-los-datos-mas-interesantes-del-estudio-millennials-vs-generacion-x/",
+        "topic_tags": [
+          "inversion",
+          "estudio",
+          "ecommerce",
+          "negocio",
+          "roi",
+          "presupuesto"
+        ],
+        "why": "Auto-discovered from https://iabspain.es/post-sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:28:12.486851+00:00"
+      },
+      {
+        "url": "https://iabspain.es/la-creacion-la-innovacion-y-los-nuevos-escenarios-de-negocio-protagonizan-inspirational20/",
+        "topic_tags": [
+          "inversion",
+          "estudio",
+          "ecommerce",
+          "negocio",
+          "roi",
+          "presupuesto"
+        ],
+        "why": "Auto-discovered from https://iabspain.es/post-sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:28:13.215642+00:00"
+      }
+    ],
+    "creative-testing": [
+      {
+        "url": "https://business.instagram.com/creators",
+        "topic_tags": [
+          "instagram",
+          "creators",
+          "ugc",
+          "partnership ads"
+        ],
+        "why": "Instagram creators / partnership ads",
+        "status": 200,
+        "verified_at": "2026-06-07T21:23:45.627970+00:00"
+      },
+      {
+        "url": "https://www.thinkwithgoogle.com/intl/en-145/creative-asset-collection/",
+        "topic_tags": [
+          "google",
+          "creative",
+          "ads"
+        ],
+        "why": "Google creative examples",
+        "status": 200,
+        "verified_at": "2026-06-07T21:23:52.313320+00:00"
+      },
+      {
+        "url": "https://platform.openai.com/docs/guides/embeddings",
+        "topic_tags": [
+          "openai",
+          "ai",
+          "embeddings"
+        ],
+        "why": "OpenAI embeddings guide",
+        "status": 200,
+        "verified_at": "2026-06-07T21:23:58.252726+00:00"
+      },
+      {
+        "url": "https://www.shopify.com/collabs/creators",
+        "topic_tags": [
+          "creative",
+          "ugc",
+          "video",
+          "creator",
+          "content"
+        ],
+        "why": "Auto-discovered from https://www.shopify.com/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:27:36.743808+00:00"
+      },
+      {
+        "url": "https://www.shopify.com/first-sale/creative-brief-for-product-photography",
+        "topic_tags": [
+          "creative",
+          "ugc",
+          "video",
+          "creator",
+          "content"
+        ],
+        "why": "Auto-discovered from https://www.shopify.com/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:27:37.538706+00:00"
+      },
+      {
+        "url": "https://www.shopify.com/first-sale/creative-brief-for-video-shoot",
+        "topic_tags": [
+          "creative",
+          "ugc",
+          "video",
+          "creator",
+          "content"
+        ],
+        "why": "Auto-discovered from https://www.shopify.com/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:27:38.310565+00:00"
+      },
+      {
+        "url": "https://www.shopify.com/first-sale/video-ad-strategy-template",
+        "topic_tags": [
+          "creative",
+          "ugc",
+          "video",
+          "creator",
+          "content"
+        ],
+        "why": "Auto-discovered from https://www.shopify.com/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:27:39.540627+00:00"
+      },
+      {
+        "url": "https://www.shopify.com/plus/contact-sales-content-nurture",
+        "topic_tags": [
+          "creative",
+          "ugc",
+          "video",
+          "creator",
+          "content"
+        ],
+        "why": "Auto-discovered from https://www.shopify.com/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:27:40.795992+00:00"
+      },
+      {
+        "url": "https://www.shopify.com/resource/innovation-in-action/video",
+        "topic_tags": [
+          "creative",
+          "ugc",
+          "video",
+          "creator",
+          "content"
+        ],
+        "why": "Auto-discovered from https://www.shopify.com/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:27:42.294332+00:00"
+      },
+      {
+        "url": "https://www.shopify.com/resources/templates/creative-brief-templates",
+        "topic_tags": [
+          "creative",
+          "ugc",
+          "video",
+          "creator",
+          "content"
+        ],
+        "why": "Auto-discovered from https://www.shopify.com/sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:27:43.513693+00:00"
+      }
+    ],
+    "agency-selection": [
+      {
+        "url": "https://iabspain.es/automocion-un-sector-con-grandes-numeros-en-marketing-digital/",
+        "topic_tags": [
+          "agencia",
+          "proveedor",
+          "consultora",
+          "sector"
+        ],
+        "why": "Auto-discovered from https://iabspain.es/post-sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:28:43.484963+00:00"
+      },
+      {
+        "url": "https://iabspain.es/ddb-spain-agencia-del-ano-y-su-campana-hola-tiguan-volkswagen-connect-gran-premio-inspirational/",
+        "topic_tags": [
+          "agencia",
+          "proveedor",
+          "consultora",
+          "sector"
+        ],
+        "why": "Auto-discovered from https://iabspain.es/post-sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:28:44.672631+00:00"
+      },
+      {
+        "url": "https://iabspain.es/ddb-agencia-del-ano-y-su-campana-hologramas-por-la-libertad-gran-premio-inspirational/",
+        "topic_tags": [
+          "agencia",
+          "proveedor",
+          "consultora",
+          "sector"
+        ],
+        "why": "Auto-discovered from https://iabspain.es/post-sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:28:45.511829+00:00"
+      },
+      {
+        "url": "https://iabspain.es/iab-spain-da-soporte-al-sector-digital-ofreciendo-formacion-sobre-la-nueva-guia-de-cookies/",
+        "topic_tags": [
+          "agencia",
+          "proveedor",
+          "consultora",
+          "sector"
+        ],
+        "why": "Auto-discovered from https://iabspain.es/post-sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:28:46.159929+00:00"
+      },
+      {
+        "url": "https://iabspain.es/la-tv-conectada-reune-en-barcelona-a-profesionales-clave-del-sector/",
+        "topic_tags": [
+          "agencia",
+          "proveedor",
+          "consultora",
+          "sector"
+        ],
+        "why": "Auto-discovered from https://iabspain.es/post-sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:28:47.147259+00:00"
+      },
+      {
+        "url": "https://iabspain.es/iab-spain-presenta-el-observatorio-digital-de-marketing-en-el-sector-retail/",
+        "topic_tags": [
+          "agencia",
+          "proveedor",
+          "consultora",
+          "sector"
+        ],
+        "why": "Auto-discovered from https://iabspain.es/post-sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:28:47.791816+00:00"
+      },
+      {
+        "url": "https://iabspain.es/iab-spain-presenta-el-estudio-top-love-brands-del-sector-travel-en-espana/",
+        "topic_tags": [
+          "agencia",
+          "proveedor",
+          "consultora",
+          "sector"
+        ],
+        "why": "Auto-discovered from https://iabspain.es/post-sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:28:48.475930+00:00"
+      },
+      {
+        "url": "https://iabspain.es/iab-spain-presenta-el-estudio-top-love-brands-en-rrss-del-sector-alimentacion-en-espana/",
+        "topic_tags": [
+          "agencia",
+          "proveedor",
+          "consultora",
+          "sector"
+        ],
+        "why": "Auto-discovered from https://iabspain.es/post-sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:28:49.181383+00:00"
+      },
+      {
+        "url": "https://iabspain.es/iab-spain-y-alkemy-iberia-presentan-la-segunda-edicion-del-estudio-top-love-brands-en-rrss-del-sector-travel/",
+        "topic_tags": [
+          "agencia",
+          "proveedor",
+          "consultora",
+          "sector"
+        ],
+        "why": "Auto-discovered from https://iabspain.es/post-sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:28:49.843084+00:00"
+      },
+      {
+        "url": "https://iabspain.es/declaraciones-ante-la-ultima-reclamacion-interpuesta-ante-la-agencia-de-proteccion-de-datos/",
+        "topic_tags": [
+          "agencia",
+          "proveedor",
+          "consultora",
+          "sector"
+        ],
+        "why": "Auto-discovered from https://iabspain.es/post-sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:28:50.542615+00:00"
+      },
+      {
+        "url": "https://iabspain.es/anteproyecto-ley-publicidad-sector-publico/",
+        "topic_tags": [
+          "agencia",
+          "proveedor",
+          "consultora",
+          "sector"
+        ],
+        "why": "Auto-discovered from https://iabspain.es/post-sitemap.xml",
+        "status": 200,
+        "verified_at": "2026-06-07T21:28:51.282715+00:00"
+      }
+    ]
+  },
+  "failed_urls": [
+    {
+      "url": "https://www.facebook.com/business/help/421906290152553",
+      "status": 404,
+      "cluster": "attribution-tracking"
+    },
+    {
+      "url": "https://www.facebook.com/business/help/169316596175124",
+      "status": 404,
+      "cluster": "attribution-tracking"
+    },
+    {
+      "url": "https://www.facebook.com/business/help/1488409651585626",
+      "status": 404,
+      "cluster": "attribution-tracking"
+    },
+    {
+      "url": "https://www.facebook.com/business/help/1426236512972090",
+      "status": 404,
+      "cluster": "attribution-tracking"
+    },
+    {
+      "url": "https://business.facebook.com/business/help/169316596175124",
+      "status": 404,
+      "cluster": "attribution-tracking"
+    },
+    {
+      "url": "https://developers.facebook.com/docs/marketing-api/conversions-api/deduplication",
+      "status": 404,
+      "cluster": "attribution-tracking"
+    },
+    {
+      "url": "https://www.facebook.com/business/help/430291176997024",
+      "status": 404,
+      "cluster": "paid-media-foundations"
+    },
+    {
+      "url": "https://www.facebook.com/business/help/3971033805044420",
+      "status": 404,
+      "cluster": "paid-media-foundations"
+    },
+    {
+      "url": "https://www.facebook.com/business/help/263980900807067",
+      "status": 404,
+      "cluster": "paid-media-foundations"
+    },
+    {
+      "url": "https://www.facebook.com/business/help/1670944254683867",
+      "status": 404,
+      "cluster": "paid-media-foundations"
+    },
+    {
+      "url": "https://www.facebook.com/business/help/289260651495255",
+      "status": 404,
+      "cluster": "paid-media-foundations"
+    },
+    {
+      "url": "https://www.facebook.com/business/help/466024386882094",
+      "status": 404,
+      "cluster": "paid-media-foundations"
+    },
+    {
+      "url": "https://www.facebook.com/business/help/431829847254471",
+      "status": 404,
+      "cluster": "paid-media-foundations"
+    },
+    {
+      "url": "https://www.facebook.com/business/help/341746126413053",
+      "status": 404,
+      "cluster": "paid-media-foundations"
+    },
+    {
+      "url": "https://www.facebook.com/business/help/2221112508194999",
+      "status": 404,
+      "cluster": "paid-media-foundations"
+    },
+    {
+      "url": "https://support.google.com/google-ads/answer/6167101",
+      "status": 404,
+      "cluster": "paid-media-foundations"
+    },
+    {
+      "url": "https://support.google.com/google-ads/answer/14090408",
+      "status": 404,
+      "cluster": "paid-media-foundations"
+    },
+    {
+      "url": "https://support.google.com/google-ads/answer/6357362",
+      "status": 404,
+      "cluster": "paid-media-foundations"
+    },
+    {
+      "url": "https://support.google.com/google-ads/answer/14090391",
+      "status": 404,
+      "cluster": "paid-media-foundations"
+    },
+    {
+      "url": "https://support.google.com/google-ads/answer/6167094",
+      "status": 404,
+      "cluster": "paid-media-foundations"
+    },
+    {
+      "url": "https://support.google.com/google-ads/answer/9175566",
+      "status": 404,
+      "cluster": "paid-media-foundations"
+    },
+    {
+      "url": "https://support.google.com/analytics/answer/10089681",
+      "status": 404,
+      "cluster": "attribution-tracking"
+    },
+    {
+      "url": "https://support.google.com/analytics/answer/12195621",
+      "status": 404,
+      "cluster": "attribution-tracking"
+    },
+    {
+      "url": "https://support.google.com/analytics/answer/9539598",
+      "status": 404,
+      "cluster": "attribution-tracking"
+    },
+    {
+      "url": "https://support.google.com/tagmanager/answer/3441262",
+      "status": 404,
+      "cluster": "attribution-tracking"
+    },
+    {
+      "url": "https://support.google.com/tagmanager/answer/9205819",
+      "status": 404,
+      "cluster": "attribution-tracking"
+    },
+    {
+      "url": "https://help.shopify.com/en/manual/online-sales-channels/facebook",
+      "status": 403,
+      "cluster": "attribution-tracking"
+    },
+    {
+      "url": "https://help.shopify.com/en/manual/privacy-and-security",
+      "status": 403,
+      "cluster": "attribution-tracking"
+    },
+    {
+      "url": "https://shopify.dev/docs/api/marketing",
+      "status": 404,
+      "cluster": "paid-media-foundations"
+    },
+    {
+      "url": "https://help.shopify.com/en/manual/online-sales-channels",
+      "status": 403,
+      "cluster": "paid-media-foundations"
+    },
+    {
+      "url": "https://iabspain.es/estudios-de-inversion-publicitaria/",
+      "status": 404,
+      "cluster": "unit-economics"
+    },
+    {
+      "url": "https://iabspain.es/topics/comercio-electronico/",
+      "status": 404,
+      "cluster": "unit-economics"
+    },
+    {
+      "url": "https://www.aeat.es/wps/internet/es_es/",
+      "status": 0,
+      "cluster": "agency-selection"
+    },
+    {
+      "url": "https://hbr.org/2007/10/how-to-sell-more-by-pricing-less",
+      "status": 404,
+      "cluster": "unit-economics"
+    },
+    {
+      "url": "https://hbr.org/2014/09/a-refresher-on-marketing-mix-modeling",
+      "status": 404,
+      "cluster": "unit-economics"
+    },
+    {
+      "url": "https://www.facebook.com/business/creative",
+      "status": 404,
+      "cluster": "creative-testing"
+    },
+    {
+      "url": "https://www.iabspain.es/estudio-el-comercio-electronico-en-espana/",
+      "status": 404,
+      "cluster": "unit-economics"
+    },
+    {
+      "url": "https://www.shopify.com/blog/lifetime-value",
+      "status": 404,
+      "cluster": "unit-economics"
+    }
+  ],
+  "notes": "Re-run quarterly. Update after a URL is consistently 404. Add new URLs by editing the SEED list in scripts/build_trusted_urls.py."
+}
