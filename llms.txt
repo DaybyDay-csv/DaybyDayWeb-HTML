@@ -116,3 +116,8 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 - [Servicios](https://www.daybydayconsulting.com/servicios.html) — stack completo.
 - [Blog](https://www.daybydayconsulting.com/blog.html) — 121 artículos de growth marketing.
 - [Hablamos](https://www.daybydayconsulting.com/contacto.html) — discovery call gratuita.
+
+## Posts recientes
+<!-- auto:que-es-un-growth-partner -->
+- [Qué es un Growth Partner: 3 verbos y cómo auditarlo](https://www.daybydayconsulting.com/blog/que-es-un-growth-partner.html) — Qué es un Growth Partner y qué no es. La definición operativa, los 3 verbos (analizamos, ejecutamos, acompañamos), cifras reales y 3 preguntas para auditar a tu proveedor.
+<!-- /auto -->
