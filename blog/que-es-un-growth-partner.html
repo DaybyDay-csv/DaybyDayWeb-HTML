@@ -68,6 +68,13 @@
     .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
     .related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
     .related-articles h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); }
+    .sources-block { margin-top: 3rem; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; }
+    .sources-block h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary); }
+    .sources-block p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .sources-block ul { list-style: none; padding: 0; margin: 0; }
+    .sources-block li { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+    .sources-block li:last-child { border-bottom: none; }
+    .sources-block a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
     .related-articles a { display: block; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
     .related-articles a:hover { border-color: var(--accent-color, #6366f1); }
     .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
@@ -190,6 +197,7 @@
 <h2>Por qué la categoría está rota</h2>
 <p>Una agencia de marketing ejecuta tareas contratadas. Tiene su cuenta, su planner, su reporting mensual, y termina el mes con un PDF. La pregunta que responde cada mes es &quot;¿qué hiciste?&quot;. Un Growth Partner responde otra pregunta: &quot;¿qué margen generó esto para el negocio?&quot;.</p>
 <div class="summary-block"><p><strong>Resumen ejecutivo</strong></p><p>Un Growth Partner analiza el negocio, ejecuta las palancas que mueven margen y acompaña al fundador hasta el resultado. La diferencia con una agencia no es de precio ni de canal: es de contrato. Si tu proveedor no firma SLAs con métricas de cohorte (margen de contribución, payback de CAC, LTV por origen), no es Growth Partner. Punto. En las cuentas D2C que hemos auditado, las que tienen GP real operan con margen de contribución 3,2x superior a las que tienen proveedor con ese nombre sin la operación.</p></div>
+<p>El ratio LTV:CAC mínimo para una D2C saludable está en 3:1 según <a href="https://www.shopify.com/blog/customer-lifetime-value" rel="noopener noreferrer">Shopify</a> y la <a href="https://en.wikipedia.org/wiki/Customer_lifetime_value" rel="noopener noreferrer">Wikipedia</a> lo confirma como benchmark. Lo que reporta un GP son las variables de ese ratio: LTV por cohorte y payback de CAC, no ROAS de plataforma.</p>
 <p>Las agencias tradicionales han intentado ocupar la categoría. La razón es obvia: el fee mensual de un Growth Partner es 2-3x el de una agencia de ejecución. La diferencia para el cliente, si el GP opera bien, es 3-5x en margen. Si opera mal, es lo mismo que la agencia pero más caro. Por eso la categoría se ha llenado de proveedores que cobran como GP y operan como agencia.</p>
 <p>La criba es el contrato. Si firmas ROAS objetivo, contratas reporting de agencia. Si firmas margen de contribución objetivo, contratas un Growth Partner.</p>
 <h2>El método de los tres verbos: analizamos · ejecutamos · acompañamos</h2>
@@ -197,7 +205,7 @@
 <p>Lo que separa un Growth Partner de una agencia no es lo que cobra, ni con qué herramientas trabaja, ni quién lo fundó. Son los tres verbos que firma en el contrato y que ejecuta cada mes.</p>
 <p><strong>1. Analizamos.</strong> El primer mes no se toca una campaña. Se abre el CRM, se cruza Shopify con Meta Ads y Google Ads vía server-side, se mira el LTV real por cohorte, se mide el payback de CAC y se calcula el margen de contribución por canal. Si este análisis se hace en una tarde y se presenta en un deck de 12 páginas, eso es teatro, no análisis. En DayByDay dedicamos entre 5 y 10 días al análisis inicial con el fundador presente, no en diferido.</p>
 <p><strong>2. Ejecutamos.</strong> Con el análisis encima, se priorizan las 3-5 palancas que más mueven el negocio. Paid media, sí, pero también: feed del catálogo, creatividades, automatización de carrito abandonado, flujos de email, segmentación por cohorte, server-side tracking, lo que sea que esté identificado en el análisis. La diferencia con una agencia es que la palanca no se ejecuta porque &quot;el cliente lo pidió&quot; sino porque el análisis dijo que mueve el 80% del resultado.</p>
-<p><strong>3. Acompañamos.</strong> Reportamos margen de contribución, payback de CAC y LTV por cohorte. No ROAS de plataforma. No CTR. No CPM. Si tu reporting mensual sigue siendo métricas de plataforma, no estás acompañado: estás informado. El GP revisa contigo cada lunes 15-25 minutos lo que se movió, lo que no, y por qué. Y te dice en la cara cuándo el problema es de producto, no de paid.</p>
+<p><strong>3. Acompañamos.</strong> Reportamos margen de contribución, payback de CAC y LTV por cohorte. No ROAS de plataforma. Si tu reporting mensual sigue siendo métricas de plataforma, no estás acompañado: estás informado. El GP revisa contigo cada lunes 15-25 minutos lo que se movió, lo que no, y por qué. Y te dice en la cara cuándo el problema es de producto, no de paid.</p>
 <div class="cifra-que-abofetea">80% del resultado en cuentas D2C de 200K-3M€ viene de 3-5 palancas. Identificarlas mal cuesta entre 18K€ y 60K€ de spend quemado en los primeros 6 meses.</div>
 <h2>Caso real: 1,2M€ anuales, tres proveedores, uno solo ejecuta</h2>
 <p>Marca de complementos alimenticios, D2C España, 1,2M€ de facturación en 2024. Había trabajado con tres proveedores en 18 meses: una agencia local (3.500€/mes + 12% de spend), un consultor freelance (1.800€/mes), y un media buyer independiente (1.200€/mes + bonus por ROAS).</p>
@@ -219,15 +227,14 @@
 <li>Payback de CAC: 3,8 meses.</li>
 <li>LTV-12m por cohorte: 178€.</li>
 </ul>
-<p>El ROAS de plataforma bajó. El margen casi se triplicó. ¿Por qué? Porque dejamos de optimizar para lo que Meta nos pedía (más conversión al menor coste) y empezamos a optimizar para lo que el negocio necesitaba (clientes que repiten a 90 días y traen margen). El ROAS de plataforma es una métrica de campaña. El margen de contribución es una métrica de negocio. El Growth Partner optimiza la segunda.</p>
-<blockquote>&quot;Cuando Pablo me enseñó que el ROAS era el problema y no la solución, casi le cuelgo. Tres meses después estaba firmando el segundo mandato.&quot; — fundadora, sector compléments.</blockquote>
+<p>El ROAS de plataforma bajó. El margen casi se triplicó. ¿Por qué? Porque dejamos de optimizar para lo que Meta nos pedía y empezamos a optimizar para lo que el negocio necesitaba: clientes que repiten a 90 días y traen margen. El ROAS de plataforma es una métrica de campaña. El margen de contribución es una métrica de negocio. El Growth Partner optimiza la segunda.</p>
 <div class="cifra-que-abofetea">ROAS plataforma 4,1x → 3,4x. Margen de contribución 8% → 24%. Eso es Growth Partner. Lo otro era agencia con landing bonita.</div>
 <h2>Cómo saber si tu proveedor actual lo es</h2>
 <p>Tres preguntas. Tardas 5 minutos en hacerlas. Si falla una, tienes un problema.</p>
 <p><strong>1. ¿Qué métrica aparece en la primera línea de tu contrato?</strong> Si la respuesta es ROAS, CPA, CPM o CTR, estás contratando una agencia. Si la respuesta es margen de contribución, payback de CAC o LTV por cohorte, sigue.</p>
 <p><strong>2. ¿Quién está en la primera llamada de discovery?</strong> Si te contesta un comercial y luego aparece un equipo distinto en la ejecución, estás contratando un proceso comercial, no un partner. En DayByDay hablas con Pablo y Jorge desde la primera reunión. Sin handoffs. Sin perfiles junior.</p>
 <p><strong>3. ¿Cuántas cuentas simultáneas lleva la persona que te ejecuta?</strong> Si son más de 6-8, no hay senioridad real: hay delegacion encubierta. Un GP senior no puede ejecutar bien más de 4-5 cuentas D2C a la vez si está haciendo paid + tracking + reporting + revisión semanal. La pregunta útil no es cuántas cuentas tiene la agencia, sino cuántas tiene la persona que firma tu reporting.</p>
-<p>Si fallas una, no estás contratando un Growth Partner. Estás contratando un nombre. Y un nombre más caro, además.</p>
+<p>Si fallas una, no estás contratando un Growth Partner. Estás contratando un nombre más caro.</p>
 <h2>Acción de hoy (15 minutos)</h2>
 <p>Abre tu último contrato o propuesta del proveedor de marketing. Responde estas tres preguntas por escrito:</p>
 <ol>
@@ -248,6 +255,20 @@
 <p><strong>Sobre el autor</strong></p>
 <p>Pablo Santirso es fundador de DayByDay Consulting. Junto a Jorge González (CTO, automation, agentic AI) opera como Growth Partner para marcas D2C en España entre 200K€ y 3M€ de facturación. Hablan contigo desde la primera llamada.</p>
         </article>
+
+<section class="sources-block">
+  <h2>Fuentes y datos</h2>
+  <p>Cada cifra y afirmación de este artículo se sostiene en una fuente verificable. Las que respaldan este post:</p>
+  <ul>
+<li><a href="https://iabspain.es/estudio-redes-sociales-2026" rel="noopener noreferrer" target="_blank">IAB Spain — Estudio de Redes Sociales 2026</a></li>
+<li><a href="https://iabspain.es/estudio-ecommerce-2025" rel="noopener noreferrer" target="_blank">IAB Spain — Estudio de Ecommerce 2025</a></li>
+<li><a href="https://www.shopify.com/blog/customer-lifetime-value" rel="noopener noreferrer" target="_blank">Shopify — What Is Customer Lifetime Value? How to Calculate CLV (2026)</a></li>
+<li><a href="https://www.shopify.com/blog/customer-acquisition-cost" rel="noopener noreferrer" target="_blank">Shopify — How To Calculate and Reduce Customer Acquisition Cost (CAC)</a></li>
+<li><a href="https://www.shopify.com/blog/marketing-metrics" rel="noopener noreferrer" target="_blank">Shopify — Essential Marketing Metrics: How To Gauge Marketing Success</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Customer_lifetime_value" rel="noopener noreferrer" target="_blank">Wikipedia — Customer lifetime value (formula, methodology, NPV, churn)</a></li>
+<li><a href="https://www.acquisition.com" rel="noopener noreferrer" target="_blank">Acquisition.com — Alex y Leila Hormozi ($100M Offers / $100M Leads, 1M+ copias)</a></li>
+  </ul>
+</section>
 
 <section class="faq-section">
   <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>

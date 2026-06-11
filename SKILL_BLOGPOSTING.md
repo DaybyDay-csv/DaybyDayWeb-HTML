@@ -19,8 +19,12 @@ Receive the positioning thesis (e.g. "qué es un Growth Partner"). Ask nothing e
 - Pull keyword pack: primary + 3 secondary + 3 long-tail + 3 FAQ.
 - Verify all candidate external URLs with HEAD request; only keep 200s.
 - Classify search intent: informational / commercial / comparison.
+- Find 3-7 authoritative external sources for the chiffres, methodologies, or definitions cited in the body. These must be:
+  - Authoritative (industry body, primary research, official documentation, Wikipedia, established publisher).
+  - Verifiable (live URL, not behind a paywall or a 404).
+  - Relevant to a *specific claim* in the body, not generic anchors.
 
-Output: `content/<slug>.md` frontmatter with `primary_keyword`, `secondary_keywords`, `faq[]`.
+Output: `content/<slug>.md` frontmatter with `primary_keyword`, `secondary_keywords`, `faq[]`, and `sources[]` (an array of `{label, url}` objects). The renderer emits these as a "Fuentes y datos" block at the end of the article body, before the FAQ. Inline citations are optional but recommended for the strongest claims.
 
 ## STEP 3 — OUTLINE
 
@@ -55,6 +59,13 @@ Required scores:
 - F · SEO = 4/4
 - G · cierre = cliffhanger present
 - word count 1200-1500 (tolerance 1100-1700)
+
+## STEP 5.5 — EXTERNAL LINKS GATE (block publish if not green)
+
+Every external URL cited in the body or in the `sources[]` frontmatter field must HEAD-respond with 200 (or 3xx that resolves to 200 within 3 hops). Run `node scripts/verify-external-links.mjs <slug>`. The script reports `failed: 0` to pass. If it reports any failure, the URL is either 404, 5xx, or times out — fix the source by either removing the citation or replacing it with a verified alternative.
+
+Known limitations:
+- `support.google.com/*` returns 404 to the verify script's `User-Agent` (Google bot detection). This is a false positive. Skip these and document them in the post if you must cite Google Support.
 
 ## STEP 6 — RENDER + SEO PACK
 

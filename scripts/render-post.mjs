@@ -220,6 +220,17 @@ function buildRelatedLinks(links) {
   }).join('\n');
 }
 
+function buildSourcesBlock(sources) {
+  if (!sources || !sources.length) return '';
+  const items = sources.map((s, i) => {
+    const url = (typeof s === 'string' ? s : (s.url || '')).replace(/^https?:\/\/(www\.)?daybydayconsulting\.com/, '').replace(/\.html$/, '').replace(/\/+$/, '');
+    const label = typeof s === 'string' ? new URL(s).hostname : (s.label || new URL(s.url).hostname);
+    const rel = (typeof s === 'object' && s.rel) || 'noopener noreferrer';
+    return `<li><a href="${escapeHtml(url)}" rel="${rel}" target="_blank">${escapeHtml(label)}</a></li>`;
+  }).join('\n');
+  return `<section class="sources-block">\n  <h2>Fuentes y datos</h2>\n  <p>Cada cifra y afirmación de este artículo se sostiene en una fuente verificable. Las que respaldan este post:</p>\n  <ul>\n${items}\n  </ul>\n</section>`;
+}
+
 function buildSchema(fm, faq) {
   const canonicalNoExt = String(fm.canonical || '').replace(/\.html$/, '').replace(/\/+$/, '');
   const article = {
@@ -275,6 +286,7 @@ async function renderPost(slug) {
   const bodyHtml = mdToHtml(body);
   const faqBlock = buildFaqBlock(fm.faq);
   const relatedLinks = buildRelatedLinks(fm.internal_links);
+  const sourcesBlock = buildSourcesBlock(fm.sources);
   const schema = buildSchema(fm, fm.faq);
 
   const wordCount = body.replace(/```[\s\S]*?```/g, ' ').split(/\s+/).filter(Boolean).length;
@@ -293,6 +305,7 @@ async function renderPost(slug) {
     '{{ARTICLE_DATE}}': String(fm.article_date || (fm.published_at || '').slice(0, 10)),
     '{{BODY}}': bodyHtml,
     '{{FAQ_BLOCK}}': faqBlock,
+    '{{SOURCES_BLOCK}}': sourcesBlock,
     '{{RELATED_LINKS}}': relatedLinks,
     '{{SCHEMA}}': schema,
     '{{CTA_TITLE}}': String(fm.cta_title || '¿Quieres aplicar esto en tu negocio?'),

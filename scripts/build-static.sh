@@ -29,6 +29,11 @@ render_one() {
     fi
     return $rc
   fi
+  echo "==> [$slug] verifying external links"
+  if ! node scripts/verify-external-links.mjs "$slug"; then
+    echo "    verify-external-links found broken external URLs. Fix or remove them, then retry."
+    return 1
+  fi
   echo "==> [$slug] rendering"
   node scripts/render-post.mjs "$slug"
   echo "==> [$slug] seo-pack validation"
