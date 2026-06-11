@@ -47,6 +47,7 @@ const TECH_PAGES = [
 
 const PILLARS = new Set([
   'que-es-un-growth-partner',
+  'cuando-necesitas-un-growth-partner',
   'growth-partner-vs-agencia-paid-media',
   'agencia-vs-inhouse',
   'que-es-paid-media',
@@ -101,7 +102,7 @@ async function buildSitemap() {
     let priority = 0.55;
     if (PILLARS.has(slug)) priority = 0.8;
     else if (slug.startsWith('agencia') || slug.startsWith('metodologia')) priority = 0.7;
-    lines.push(urlEntry(`/blog/${f}`, priority, 'monthly', lm));
+    lines.push(urlEntry(`/blog/${slug}`, priority, 'monthly', lm));
   }
 
   lines.push('</urlset>');

@@ -28,8 +28,13 @@ function parseFrontmatter(text) {
     const key = m[1].trim();
     let value = m[2].trim();
     if (value.startsWith('[') && value.endsWith(']')) {
-      try { value = JSON.parse(value.replace(/'/g, '"')); }
-      catch { value = value.slice(1, -1).split(',').map(s => s.trim()).filter(Boolean); }
+      try {
+        value = JSON.parse(value);
+      } catch {
+        const normalized = value.replace(/'/g, '"').replace(/\\"/g, '\u0001').replace(/"/g, '\\"').replace(/\u0001/g, '\\"');
+        try { value = JSON.parse(normalized); }
+        catch { value = []; }
+      }
     } else if (value.startsWith('"') && value.endsWith('"')) {
       value = value.slice(1, -1);
     }
@@ -52,7 +57,11 @@ function inlineMd(text) {
   out = out.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
   out = out.replace(/(^|[^*])\*([^*]+)\*(?!\*)/g, '$1<em>$2</em>');
   out = out.replace(/`([^`]+)`/g, '<code>$1</code>');
-  out = out.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" rel="noopener noreferrer">$1</a>');
+  out = out.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (m, text, url) => {
+    const cleanUrl = url.replace(/^https?:\/\/(www\.)?daybydayconsulting\.com/, '').replace(/\.html$/, '').replace(/\/+$/, '');
+    const finalUrl = cleanUrl.startsWith('/') || cleanUrl.startsWith('http') ? cleanUrl : `/${cleanUrl}`;
+    return `<a href="${finalUrl}" rel="noopener noreferrer">${text}</a>`;
+  });
   return out;
 }
 
@@ -205,12 +214,14 @@ function buildFaqBlock(faq) {
 function buildRelatedLinks(links) {
   if (!links || !links.length) return '';
   return links.map(l => {
-    const url = l.url.startsWith('http') ? l.url : (l.url.startsWith('/') ? l.url : `/${l.url}`);
+    let url = l.url.startsWith('http') ? l.url : (l.url.startsWith('/') ? l.url : `/${l.url}`);
+    url = url.replace(/\.html$/, '').replace(/\/+$/, '');
     return `          <a href="${escapeHtml(url)}">${escapeHtml(l.anchor)}</a>`;
   }).join('\n');
 }
 
 function buildSchema(fm, faq) {
+  const canonicalNoExt = String(fm.canonical || '').replace(/\.html$/, '').replace(/\/+$/, '');
   const article = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -230,7 +241,7 @@ function buildSchema(fm, faq) {
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': fm.canonical
+      '@id': canonicalNoExt
     }
   };
   const faqSchema = faq && faq.length ? {
@@ -268,10 +279,13 @@ async function renderPost(slug) {
 
   const wordCount = body.replace(/```[\s\S]*?```/g, ' ').split(/\s+/).filter(Boolean).length;
 
+  let canonical = String(fm.canonical || `https://www.daybydayconsulting.com/blog/${slug}.html`);
+  canonical = canonical.replace(/\.html$/, '').replace(/\/+$/, '');
+
   const replacements = {
     '{{TITLE}}': String(fm.title || ''),
     '{{META_DESC}}': String(fm.meta_desc || ''),
-    '{{CANONICAL}}': String(fm.canonical || `https://www.daybydayconsulting.com/blog/${slug}.html`),
+    '{{CANONICAL}}': canonical,
     '{{PUBLISHED_AT}}': String(fm.published_at || new Date().toISOString()),
     '{{CATEGORY}}': String(fm.category || 'Estrategia'),
     '{{H1}}': String(fm.h1 || fm.title || ''),
