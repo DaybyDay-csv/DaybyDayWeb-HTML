@@ -121,3 +121,6 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 <!-- auto:que-es-un-growth-partner -->
 - [Qué es un Growth Partner: 3 verbos y cómo auditarlo](https://www.daybydayconsulting.com/blog/que-es-un-growth-partner.html) — Qué es un Growth Partner y qué no es. La definición operativa, los 3 verbos (analizamos, ejecutamos, acompañamos), cifras reales y 3 preguntas para auditar a tu proveedor.
 <!-- /auto -->
+<!-- auto:cuando-necesitas-un-growth-partner -->
+- [Cuándo necesitas un Growth Partner — y cuándo no](https://www.daybydayconsulting.com/blog/cuando-necesitas-un-growth-partner.html) — Cuándo tiene sentido contratar un Growth Partner y cuándo no. 4 señales de que sí, 3 contra-señales de que no, y 5 preguntas que criban al 80% de los proveedores del mercado español.
+<!-- /auto -->
