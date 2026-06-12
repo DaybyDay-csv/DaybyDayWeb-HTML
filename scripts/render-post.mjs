@@ -6,42 +6,11 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { parseFrontmatter } from './lib/frontmatter.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT = path.resolve(__dirname, '..');
-
-function parseFrontmatter(text) {
-  if (!text.startsWith('---')) {
-    throw new Error('Missing frontmatter (---) at top of file');
-  }
-  const end = text.indexOf('\n---', 3);
-  if (end === -1) {
-    throw new Error('Unterminated frontmatter (no closing ---)');
-  }
-  const raw = text.slice(3, end).trim();
-  const body = text.slice(end + 4).replace(/^\n/, '');
-  const fm = {};
-  for (const line of raw.split('\n')) {
-    const m = line.match(/^([a-zA-Z0-9_-]+):\s*(.*)$/);
-    if (!m) continue;
-    const key = m[1].trim();
-    let value = m[2].trim();
-    if (value.startsWith('[') && value.endsWith(']')) {
-      try {
-        value = JSON.parse(value);
-      } catch {
-        const normalized = value.replace(/'/g, '"').replace(/\\"/g, '\u0001').replace(/"/g, '\\"').replace(/\u0001/g, '\\"');
-        try { value = JSON.parse(normalized); }
-        catch { value = []; }
-      }
-    } else if (value.startsWith('"') && value.endsWith('"')) {
-      value = value.slice(1, -1);
-    }
-    fm[key] = value;
-  }
-  return { fm, body };
-}
 
 function escapeHtml(s) {
   return String(s)
@@ -280,7 +249,7 @@ async function renderPost(slug) {
     throw new Error(`Source markdown not found: ${mdPath}`);
   }
   const raw = await readFile(mdPath, 'utf8');
-  const { fm, body } = parseFrontmatter(raw);
+  const { fm, body } = parseFrontmatter(raw, { strict: true });
   const tpl = await readFile(path.join(ROOT, 'templates', 'post.html'), 'utf8');
 
   const bodyHtml = mdToHtml(body);
