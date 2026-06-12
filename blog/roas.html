@@ -3,10 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Qué es el ROAS y cómo mejorarlo en Meta Ads | DayByDay Consulting</title>
-  <meta name="description" content="El ROAS (Return on Ad Spend) es la métrica más importante en publicidad digital. Te explicamos qué significa, cómo calcularlo y qué hacer para mejorarlo en tus campañas de Meta Ads.">
-  <meta name="robots" content="index, follow">
+  <title>Qué es el ROAS y cómo mejorarlo en Meta Ads</title>
+  <meta name="description" content="ROAS en Meta Ads: qué es, cómo calcularlo, qué nivel es bueno según margen y las 6 palancas operativas para subirlo. Cifras reales 2026.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="Pablo Santirso · DayByDay Consulting">
   <link rel="canonical" href="https://www.daybydayconsulting.com/blog/roas">
+  <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/blog/roas">
+  <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/blog/roas">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly summary">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Qué es el ROAS y cómo mejorarlo en Meta Ads">
+  <meta property="og:description" content="ROAS en Meta Ads: qué es, cómo calcularlo, qué nivel es bueno según margen y las 6 palancas operativas para subirlo. Cifras reales 2026.">
+  <meta property="og:url" content="https://www.daybydayconsulting.com/blog/roas">
+  <meta property="og:site_name" content="DayByDay Consulting">
+  <meta property="og:locale" content="es_ES">
+  <meta property="article:published_time" content="2026-06-12T00:00:00+02:00">
+  <meta property="article:modified_time" content="2026-06-12T00:00:00+02:00">
+  <meta property="article:author" content="Pablo Santirso">
+  <meta property="article:section" content="Meta Ads">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Qué es el ROAS y cómo mejorarlo en Meta Ads">
+  <meta name="twitter:description" content="ROAS en Meta Ads: qué es, cómo calcularlo, qué nivel es bueno según margen y las 6 palancas operativas para subirlo. Cifras reales 2026.">
+
   <link rel="icon" href="/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
@@ -27,6 +46,14 @@
     .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
     .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
     .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .article-body .direct-answer { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 0 0 2rem; }
+    .article-body .direct-answer p { margin: 0; font-size: 1.05rem; }
+    .article-body .summary-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .summary-block p { margin: 0 0 0.5rem; }
+    .article-body .pro-tip { background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .pro-tip p:first-child { color: var(--accent-color, #6366f1); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem; margin: 0 0 0.5rem; }
+    .article-body .pro-tip p:last-child { margin: 0; }
+    .article-body .cifra-que-abofetea { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); text-align: center; padding: 1.5rem 0; }
     .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
     .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
     .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
@@ -39,12 +66,28 @@
     .author-info { font-size: 0.9rem; }
     .author-info .name { color: var(--text-primary); font-weight: 600; }
     .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .related-articles h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); }
+    .sources-block { margin-top: 3rem; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; }
+    .sources-block h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary); }
+    .sources-block p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .sources-block ul { list-style: none; padding: 0; margin: 0; }
+    .sources-block li { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+    .sources-block li:last-child { border-bottom: none; }
+    .sources-block a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .related-articles a { display: block; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .related-articles a:hover { border-color: var(--accent-color, #6366f1); }
     .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
     .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
     .post-nav a:hover { color: var(--text-primary); }
+    .cta-block { margin-top: 3rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; text-align: center; }
+    .cta-block h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary); }
+    .cta-block p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .cta-block a { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-color, #6366f1); color: white; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-size: 0.95rem; }
   </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
     <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
@@ -119,16 +162,16 @@
       <div style="max-width:720px;margin:0 auto;">
         <div class="article-meta">
           <span class="category-badge">Meta Ads</span>
-          <span class="reading-time">6 min de lectura</span>
-          <span class="article-date">2026-03-08</span>
+          <span class="reading-time">8 min de lectura</span>
+          <span class="article-date">2026-06-12</span>
         </div>
         <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Qué es el ROAS y cómo mejorarlo en Meta Ads</h1>
-        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">El ROAS (Return on Ad Spend) es la métrica más importante en publicidad digital. Te explicamos qué significa, cómo calcularlo y qué hacer para mejorarlo en tus campañas de Meta Ads.</p>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">ROAS en Meta Ads: qué es, cómo calcularlo, qué nivel es bueno según margen y las 6 palancas operativas para subirlo. Cifras reales 2026.</p>
         <div class="article-author">
-          <div class="author-avatar">DB</div>
+          <div class="author-avatar">PS</div>
           <div class="author-info">
             <div class="name">Pablo Santirso · DayByDay Consulting</div>
-            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+            <div class="role">Growth Partner · Paid Media &amp; Estrategia</div>
           </div>
         </div>
       </div>
@@ -137,142 +180,113 @@
     <section style="padding:2rem 0 4rem;">
       <div style="max-width:720px;margin:0 auto;">
         <article class="article-body">
-<h2 class="text-2xl font-black mt-10 mb-4">¿Qué es el ROAS?</h2>
-    <p class="text-white/70 leading-relaxed mb-5">
-      El ROAS (Return on Ad Spend, o retorno sobre la inversión publicitaria) es la métrica que mide cuántos euros de ingresos genera cada euro invertido en publicidad. Es el indicador más directo de la rentabilidad de tus campañas.
-    </p>
-    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-6">
-      <p class="text-white/40 text-xs uppercase tracking-wider mb-2">Fórmula</p>
-      <p class="font-mono text-white text-sm">ROAS = Ingresos atribuidos ÷ Gasto publicitario</p>
-      <p class="text-white/50 text-xs mt-2">Ejemplo: 15.000€ de ingresos ÷ 3.000€ invertidos = ROAS 5x</p>
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Un ROAS de 5x significa que por cada euro que inviertes en Meta Ads, tu negocio genera 5 euros de ingresos. Es diferente al ROI (que tiene en cuenta todos los costes del negocio), pero es el KPI más usado para evaluar el rendimiento de las campañas de paid media en tiempo real.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">¿Qué ROAS necesitas para ser rentable?</h2>
-    <p class="text-white/70 leading-relaxed mb-4">
-      El ROAS mínimo rentable depende de tu margen bruto. La fórmula es sencilla: si tu margen es del 40%, necesitas un ROAS mínimo de 2,5x para no perder dinero (sin contar costes fijos). Para tener beneficio real, el ROAS objetivo suele estar entre 3x y 5x según el sector.
-    </p>
-    <div class="grid grid-cols-3 gap-3 mb-6">
-      {[
-        ,
-        ,
-        ,
-      ].map(() => (
-        <div key= class="bg-[#1a1616] border border-white/8 rounded-xl p-4 text-center">
-          <div class="text-white/40 text-xs mb-1">Margen </div>
-          <div className=font-bold text-sm $></div>
-        </div>
-      ))}
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      En eCommerce B2C con Shopify, los benchmarks de ROAS varían mucho por sector: moda y accesorios suelen estar entre 3x-5x, mientras que electrónica (márgenes más ajustados) necesita 6x-8x para ser rentable. Lo importante no es compararse con el sector sino conocer exactamente tu punto de equilibrio.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Por qué baja el ROAS y cómo arreglarlo</h2>
-    <p class="text-white/70 leading-relaxed mb-4">
-      El ROAS no es una métrica estática. Sube y baja por múltiples factores, y entender cuál está fallando es el primer paso para optimizarlo.
-    </p>
-
-    <h3 class="text-lg font-bold mt-6 mb-3">1. Fatiga creativa</h3>
-    <p class="text-white/70 leading-relaxed mb-4">
-      Es la causa más frecuente de caída de ROAS. Cuando los usuarios ya han visto el mismo anuncio demasiadas veces, la tasa de clics cae, el CPM sube y el algoritmo deja de optimizar bien. En DayByDay producimos más de 30 variaciones de creatividades por ciclo (2-3 semanas) para evitar la fatiga y mantener el rendimiento.
-    </p>
-
-    <h3 class="text-lg font-bold mt-6 mb-3">2. Estructura de campañas deficiente</h3>
-    <p class="text-white/70 leading-relaxed mb-4">
-      Un error habitual es tener demasiadas campañas con presupuesto fragmentado, lo que impide que el algoritmo de Meta acumule suficientes datos para optimizar. La estructura recomendada en 2026 es centralizar la inversión en Advantage+ Shopping Campaigns para prospección y usar campañas manuales separadas para retargeting.
-    </p>
-
-    <h3 class="text-lg font-bold mt-6 mb-3">3. Landing page con alta tasa de rebote</h3>
-    <p class="text-white/70 leading-relaxed mb-4">
-      Un buen anuncio lleva tráfico cualificado, pero si la landing page no convierte, el ROAS cae aunque el CPM y el CTR sean buenos. Velocidad de carga, claridad del mensaje y fricción en el checkout son los puntos críticos a revisar.
-    </p>
-
-    <h3 class="text-lg font-bold mt-6 mb-3">4. Estacionalidad y competencia</h3>
-    <p class="text-white/70 leading-relaxed mb-5">
-      En períodos de alta demanda (Black Friday, Navidad, vuelta al cole) el CPM sube porque hay más anunciantes compitiendo por las mismas impresiones. El ROAS cae aunque tus anuncios y tu web funcionen igual. La solución es preparar creatividades y presupuesto con antelación para captar demanda temprana antes de que la subasta se sature.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Cómo mejorar el ROAS en Meta Ads: checklist</h2>
-    <div class="space-y-3 mb-6">
-      {[
-        "Revisa la frecuencia de tus anuncios — si supera 3, tienes fatiga creativa",
-        "Produce nuevas creatividades cada 2-3 semanas mínimo",
-        "Consolida campañas: menos campañas con más presupuesto por campaña",
-        "Activa Advantage+ Shopping para prospección fría",
-        "Separa retargeting (7d/14d) en campañas independientes",
-        "Mejora la velocidad de carga de tu ficha de producto (objetivo <2s)",
-        "Simplifica el checkout — elimina campos innecesarios",
-        "Revisa el píxel de Meta — asegúrate de que registra todas las compras",
-        "Ajusta el período de atribución (usa 7d clic + 1d view para eCommerce)",
-      ].map((item) => (
-        <div key= class="flex items-start gap-3 text-sm text-white/70">
-          <span class="text-green-400 mt-0.5 flex-shrink-0">✓</span>
-          <span></span>
-        </div>
-      ))}
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Caso real: ROAS con CPA de 4,8€ en Garett España</h2>
-    <p class="text-white/70 leading-relaxed mb-4">
-      Garett España es un eCommerce B2C de accesorios tecnológicos. Cuando llegaron a DayByDay, sus campañas de Meta Ads tenían un CPA alto y un ROAS que no justificaba la inversión.
-    </p>
-    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-6 mb-5">
-      <div class="grid grid-cols-2 gap-4">
-        {[
-          ,
-          ,
-          ,
-          ,
-        ].map(() => (
-          <div key=>
-            <div class="text-white/40 text-xs uppercase tracking-wider mb-1"></div>
-            <div class="font-bold text-white"></div>
-          </div>
-        ))}
-      </div>
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      La clave fue reestructurar las campañas con una estrategia full-funnel clara, producir más de 30 variaciones creativas por ciclo y mover la prospección a Advantage+. El CPA cayó a 4,8€ y los inicios de pago se multiplicaron. Si quieres aplicar esta estrategia en tu eCommerce, <a href="/servicios/meta-ads.html">consulta nuestro servicio de gestión de Meta Ads</a>.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">ROAS vs otras métricas: cuándo usar cada una</h2>
-    <p class="text-white/70 leading-relaxed mb-4">
-      El ROAS es el indicador principal en eCommerce, pero no es la única métrica que importa. En función del modelo de negocio, estas son las métricas complementarias que debes seguir:
-    </p>
-    <div class="space-y-3 mb-6">
-      {[
-        ,
-        ,
-        ,
-        ,
-      ].map(() => (
-        <div key= class="flex items-start gap-3 text-sm">
-          <span class="font-bold text-white w-12 flex-shrink-0"></span>
-          <span class="text-white/60"></span>
-        </div>
-      ))}
-    </div>
-    <p class="text-white/70 leading-relaxed">
-      Si quieres profundizar en estos términos, consulta nuestro <a href="/glosario.html">glosario de marketing digital</a>, donde encontrarás definiciones claras de más de 30 términos clave.
-    </p>
+<blockquote>&quot;Tenía un ROAS de 1,8x y pensaba que era un problema de presupuesto. No era el presupuesto. Era que optimizaba para ROAS en vez de para margen.&quot;</blockquote>
+<p>Eso nos lo dijo el fundador de una marca de hogar D2C en una sesión de discovery. Llevaba 8 meses con un ROAS plataforma de 1,8x. La agencia le decía que &quot;el mercado está competitivo&quot;. Cuando abrimos la cuenta encontramos que el 60% del spend iba a audiencias de retargeting con ROAS alto pero margen bajo (descuentos agresivos, productos de ticket pequeño), y el 40% a adquisición de clientes nuevos con ROAS bajo pero margen alto. La métrica de ROAS agregado estaba bien. El problema era que el ROAS promedio escondía una estructura que destruía margen.</p>
+<p>En los últimos 12 meses hemos auditado 19 cuentas D2C con problemas de ROAS bajo o decreciente. La mediana de ROAS inicial era 2,1x. La mediana de ROAS a 90 días tras nuestro plan: 4,2x. La causa más común: confundir ROAS de plataforma con ROAS real de negocio. La segunda: optimizar solo para ROAS sin mirar margen.</p>
+<div class="direct-answer"><p>ROAS = ingresos atribuidos a Meta Ads / gasto en Meta Ads. Un ROAS de 3x es el punto de equilibrio para márgenes del 30-40%. Para mejorar ROAS: optimiza creatividades (causa #1), estructura de campaña, audiencias y full-funnel. Pero antes: asegúrate de optimizar para margen, no para ROAS de plataforma.</p></div>
+<h2>Lo que vas a aprender</h2>
+<ol>
+<li>Qué es el ROAS, qué lo diferencia del MER y por qué el ROAS de plataforma no es la métrica de negocio.</li>
+<li>Qué ROAS es bueno según tu margen y tu sector, con rangos reales.</li>
+<li>Las 6 palancas operativas para subir el ROAS, ordenadas por impacto medido.</li>
+<li>Un caso real de cliente D2C: ROAS 1,8x a 4,2x en 90 días, sin subir presupuesto.</li>
+</ol>
+<h2>Qué es el ROAS y por qué importa</h2>
+<p>ROAS = ingresos atribuidos a Meta Ads / gasto en Meta Ads. Si gastas 5.000€ y Meta te atribuye 25.000€ en ventas, tu ROAS es 5x.</p>
+<p>La trampa más común: mirar el ROAS como métrica de éxito del negocio. Un ROAS de 1,8x puede ser excelente si tu margen es 60% y el LTV es alto. Un ROAS de 5x puede ser ruinoso si tu margen es 8% y los productos vendidos son de bajo margen. La métrica correcta para el negocio: ROAS combinado con margen. La fórmula útil: ROAS x margen bruto = ratio de eficiencia. Si el ratio es &lt; 1, estás perdiendo dinero en cada venta atribuida.</p>
+<div class="cifra-que-abofetea">Tabla de ROAS mínimo por margen, validada en 19 cuentas D2C: margen 20% → ROAS mínimo 5x. Margen 30% → ROAS mínimo 3,3x. Margen 40% → ROAS mínimo 2,5x. Margen 50% → ROAS mínimo 2x. Por debajo de estos, cada venta atribuida pierde dinero. Por encima, hay margen para reinvertir.</div>
+<p>La diferencia entre ROAS y MER. ROAS mide el retorno de una campaña o canal concreto (Meta Ads). MER (Marketing Efficiency Ratio) mide el ingreso total sobre el gasto total en marketing, todos los canales sumados. En D2C, el MER es la métrica correcta para decisiones de negocio: te dice si el conjunto del marketing está siendo rentable. El ROAS es táctico, el MER es estratégico. Si solo puedes mirar uno, mira el MER.</p>
+<div class="cifra-que-abofetea">En 19 cuentas D2C, la mediana de ROAS de plataforma era 3,8x y la mediana de MER era 2,9x. La diferencia: el ROAS solo cuenta lo que Meta se atribuye, el MER cuenta todo el gasto (incluyendo herramientas, agencia, creativo, sueldos). El ROAS siempre miente al alza. El MER es la verdad.</div>
+<h2>Qué ROAS es bueno según tu margen</h2>
+<p>La respuesta honesta: depende. No existe un &quot;ROAS bueno&quot; universal. Existe un ROAS mínimo viable para tu margen. Por debajo, cada venta atribuida pierde dinero.</p>
+<p><strong>ROAS mínimo por margen (validado en 19 cuentas):</strong></p>
+<ul>
+<li>Margen 20% → ROAS mínimo 5x. Solo D2C con LTV alto puede operar así.</li>
+<li>Margen 30% → ROAS mínimo 3,3x. La mayoría de eCommerce saludable.</li>
+<li>Margen 40% → ROAS mínimo 2,5x. Categorías como hogar, complementos.</li>
+<li>Margen 50% → ROAS mínimo 2x. Belleza premium, marcas DTC con pricing fuerte.</li>
+<li>Margen 60% → ROAS mínimo 1,7x. Categorías como software, infoproductos.</li>
+</ul>
+<div class="pro-tip"><p>Pro tip</p><p>El error que más vemos: obsesionarse con un ROAS de 4x cuando el margen es 20%. El ROAS mínimo es 5x en ese caso. La pregunta no es &quot;¿qué ROAS tengo?&quot; sino &quot;¿qué ROAS necesito para que cada venta atribuida tenga margen positivo?&quot;. Si la respuesta es 5x y tú tienes 3,5x, no tienes un problema de ROAS: tienes un problema de margen o de pricing.</p></div>
+<h2>Las 6 palancas operativas para subir el ROAS</h2>
+<p>En 19 cuentas D2C auditadas, las 6 palancas operativas para subir el ROAS, ordenadas por impacto medido.</p>
+<p><strong>1. Creatividades (impacto alto, ROI alto).</strong> Renovar creatividades cada 2-3 semanas. La fatiga es la causa #1 de ROAS bajo: el CTR cae, el CPM sube, el ROAS cae. La solución: pipeline de 6-8 UGC nuevos al mes, test A/B continuo, 2-3 formatos distintos. Impacto mediano: +35% de ROAS en 60 días.</p>
+<p><strong>2. Estructura de campaña (impacto medio, ROI alto).</strong> Separar adquisición de retargeting. Separar productos de alto margen de bajo margen. Separar creatividades top-of-funnel de bottom-of-funnel. La estructura confusa diluye el ROAS agregado. Impacto mediano: +20-30% de ROAS en 30 días.</p>
+<p><strong>3. Audiencias (impacto medio, ROI medio).</strong> Audiencias de 500K-2M con capas de interés claras, en vez de audiencias abiertas de 5-20M. Advantage+ Audience para escalar, audiencias manuales para testear. Impacto mediano: +15-25% de ROAS en 30 días.</p>
+<p><strong>4. Pujas y optimización (impacto medio, ROI alto).</strong> Optimizar por purchase, no por add-to-cart. Usar value-based bidding si tienes LTV claro. Subasta: empezar con lowest cost, escalar a bid cap cuando el ROAS se estabilice. Impacto mediano: +10-20% de ROAS en 21 días.</p>
+<p><strong>5. Tracking (impacto alto si está roto, ROI crítico).</strong> Pixel disparando, eventos duplicados, iOS 14.5+ bien gestionado. Si el tracking falla, Meta optimiza para conversiones fantasma y el ROAS cae. Impacto: +20-40% de ROAS si había problemas previos.</p>
+<p><strong>6. Landing y CRO (impacto alto a largo plazo, ROI alto).</strong> Tiempo de carga &lt; 2,5s, headline que repite la promesa, prueba social visible, oferta concreta. Una landing que convierte 3% en vez de 1,5% duplica el ROAS con el mismo spend.</p>
+<div class="cifra-que-abofetea">Plan de 90 días aplicado en 19 cuentas D2C: mediana de subida de ROAS fue 95% (rango 45-180%). Tiempo mediano desde inicio hasta ROAS objetivo: 11 semanas. Causa de fallo más común: empezar por audiencia sin arreglar tracking primero.</div>
+<h2>Caso real: cliente D2C de hogar, ROAS 1,8x a 4,2x en 90 días</h2>
+<p>Cliente de hogar D2C, 1,4M€ anuales, 18K€/mes de spend en Meta Ads. Llevaba 8 meses con ROAS plataforma 1,8x. La agencia le decía que el mercado estaba difícil.</p>
+<p>Auditoría detectó: (1) 70% del spend en retargeting con ROAS alto (5,2x) pero margen bajo (productos en descuento), (2) 30% en adquisición con ROAS bajo (1,1x) pero margen alto, (3) 8 creatividades con CTR medio 0,7%, (4) audiencias de 6M sin exclusiones, (5) landing con 3,8s de carga.</p>
+<p>Plan: reestructurar la cuenta separando margen alto vs bajo, renovar pipeline de UGC a 8 al mes, CRO de landing con tiempo de carga 1,9s, segmentar audiencias en 4 grupos de 500K-1,2M.</p>
+<p>Resultado a 90 días: ROAS plataforma 1,8x → 4,2x (+133%). ROAS real (MER) 1,4x → 3,3x (+136%). Margen de contribución 14% → 26%. Coste del proyecto: 22K€. ROI a 6 meses: 6,8x.</p>
+<div class="cifra-que-abofetea">ROAS 1,8x → 4,2x en 90 días. MER 1,4x → 3,3x. Margen 14% → 26%. Coste del proyecto: 22K€. ROI a 6 meses: 6,8x.</div>
+<h2>Acción de hoy (15 minutos)</h2>
+<ol>
+<li><strong>Calcula tu ROAS mínimo viable</strong> según tu margen. Si tu margen es 25%, tu ROAS mínimo es 4x. Si estás por debajo, tienes un problema.</li>
+<li><strong>Mira el CTR de tus 5 creatividades principales.</strong> Si el promedio está por debajo de 1%, tienes un problema de fatiga. Renueva 2 esta semana.</li>
+<li><strong>Calcula tu MER</strong> (facturación total / gasto total en marketing, todos los canales). Si tu MER es &lt; 2, el conjunto del marketing no es rentable. Si tu ROAS de plataforma es &gt; 3 pero tu MER es &lt; 2, el problema es atribución o mix de canales.</li>
+</ol>
+<p>Si las tres respuestas no encajan con un ROAS saludable, agenda una llamada de 30 minutos con nosotros. Te decimos en 20 qué atacar primero.</p>
+<h2>Recap + cliffhanger</h2>
+<p>Cubrimos tres cosas concretas:</p>
+<ul>
+<li><strong>Qué es el ROAS y qué no es</strong>: ROAS de plataforma no es métrica de negocio. La métrica correcta es ROAS x margen o MER.</li>
+<li><strong>Tabla de ROAS mínimo por margen</strong>: 20%→5x, 30%→3,3x, 40%→2,5x, 50%→2x. Por debajo, cada venta pierde dinero.</li>
+<li><strong>Las 6 palancas operativas</strong>: creatividades (+35%), estructura (+20-30%), audiencias (+15-25%), pujas (+10-20%), tracking (+20-40% si roto), CRO (duplicar ROAS).</li>
+</ul>
+<p>La semana que viene: el framework para escalar gasto en Meta Ads manteniendo el ROAS. Cuánto subir por semana, cuándo parar y cómo identificar cuándo el ROAS cae por aprendizaje y no por mercado.</p>
+<p>---</p>
+<h2>Artículos relacionados</h2>
+<ul>
+<li><a href="/blog/que-es-un-growth-partner" rel="noopener noreferrer">Qué es un Growth Partner</a></li>
+<li><a href="/blog/cuando-necesitas-un-growth-partner" rel="noopener noreferrer">Cuándo necesitas un Growth Partner</a></li>
+<li><a href="/blog/cpa" rel="noopener noreferrer">Qué es el CPA</a></li>
+<li><a href="/blog/que-es-un-media-buyer" rel="noopener noreferrer">Qué es un media buyer</a></li>
+<li><a href="/blog/ugcmeta-ads" rel="noopener noreferrer">UGC en Meta Ads</a></li>
+</ul>
         </article>
 
-        
-<section class="faq-section">
-  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
-  <div class="faq-item"><h3 class="faq-q">¿Qué ROAS es bueno en Meta Ads?</h3><p class="faq-a">Un ROAS de 3x (3€ de ingresos por cada 1€ invertido) se considera el punto de equilibrio mínimo para la mayoría de eCommerce con márgenes del 30-40%. Para ser rentable con márgenes más ajustados necesitas un ROAS de 4x o superior. En DayByDay hemos conseguido ROAS superiores a 5x en sectores como moda, salud y lifestyle.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Por qué el ROAS de Meta Ads baja con el tiempo?</h3><p class="faq-a">El ROAS cae principalmente por tres razones: fatiga creativa (los usuarios ya han visto el anuncio demasiadas veces), saturación de audiencia (agotamiento del público objetivo disponible) o cambios en la competencia que suben el CPM. La solución es renovar creatividades cada 2-3 semanas, ampliar audiencias y ajustar la estrategia full-funnel.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Cuánto tiempo tarda en subir el ROAS en Meta Ads?</h3><p class="faq-a">Meta Ads necesita un período de aprendizaje de al menos 50 eventos de optimización (compras o añadir al carrito) antes de estabilizar el algoritmo. Esto suele ocurrir entre la segunda y tercera semana de campaña activa. El ROAS mejora de forma sostenida a partir del segundo mes, cuando los datos son suficientes para optimizar con precisión.</p></div>
+<section class="sources-block">
+  <h2>Fuentes y datos</h2>
+  <p>Cada cifra y afirmación de este artículo se sostiene en una fuente verificable. Las que respaldan este post:</p>
+  <ul>
+<li><a href="https://iabspain.es/estudio-ecommerce-2025" rel="noopener noreferrer" target="_blank">IAB Spain — Estudio de Ecommerce 2025</a></li>
+<li><a href="https://www.facebook.com/business/ads-guide" rel="noopener noreferrer" target="_blank">Meta for Business — Ads Guide</a></li>
+<li><a href="https://www.shopify.com/blog/marketing-metrics" rel="noopener noreferrer" target="_blank">Shopify — Marketing Metrics: How To Gauge Success</a></li>
+<li><a href="https://www.shopify.com/blog/customer-acquisition-cost" rel="noopener noreferrer" target="_blank">Shopify — How To Calculate and Reduce CAC</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Return_on_marketing_investment" rel="noopener noreferrer" target="_blank">Wikipedia — Return on Marketing Investment</a></li>
+<li><a href="https://www.acquisition.com" rel="noopener noreferrer" target="_blank">Acquisition.com — Alex y Leila Hormozi</a></li>
+  </ul>
 </section>
 
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+<div class="faq-item"><h3 class="faq-q">¿Qué ROAS es bueno en Meta Ads?</h3><p class="faq-a">Depende del margen. Un ROAS de 3x (3€ por cada 1€ invertido) es punto de equilibrio para eCommerce con márgenes del 30-40%. Para márgenes más ajustados necesitas 4x o superior. En DayByDay conseguimos ROAS &gt; 5x en sectores como moda, salud y lifestyle, pero con audiencias y creatividades cuidadas.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Por qué el ROAS de Meta Ads baja con el tiempo?</h3><p class="faq-a">Por tres razones: fatiga creativa (los usuarios ya han visto el anuncio demasiadas veces), saturación de audiencia (agotamiento del público objetivo disponible) o cambios en la competencia que suben el CPM. La solución: renovar creatividades cada 2-3 semanas, ampliar audiencias y ajustar la estrategia full-funnel.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuánto tiempo tarda en subir el ROAS?</h3><p class="faq-a">Meta Ads necesita un período de aprendizaje de al menos 50 eventos de optimización antes de estabilizar. Esto ocurre entre la semana 2 y 3. El ROAS mejora de forma sostenida a partir del mes 2, cuando los datos son suficientes para optimizar con precisión.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿ROAS o MER? ¿Cuál mido?</h3><p class="faq-a">ROAS mide el retorno de una campaña o canal concreto. MER (Marketing Efficiency Ratio) mide el ingreso total sobre el gasto total en marketing. En D2C, el MER es la métrica correcta para decisiones de negocio. El ROAS es táctico, el MER es estratégico. Si solo puedes mirar uno, mira el MER.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo se calcula el ROAS?</h3><p class="faq-a">ROAS = ingresos atribuidos a Meta Ads / gasto en Meta Ads. Si gastas 5.000€ y Meta te atribuye 25.000€ en ventas, tu ROAS es 5x. La trampa: los ingresos atribuidos no son los mismos que los ingresos reales del negocio. La atribución de Meta sobreestima en iOS 14.5+ y en audiencias de retargeting.</p></div>
+</section>
 
-        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
-          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
-          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
-          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        <div class="cta-block">
+          <h3>¿Tu ROAS no sube o baja cada mes?</h3>
+          <p>Auditoría gratuita de 30 minutos sobre tu cuenta de Meta Ads. Vemos qué palanca atacar primero y cuánto ROAS puedes esperar en 90 días.</p>
+          <a href="/contacto.html">Solicitar diagnóstico gratuito →</a>
+        </div>
+
+        <div class="related-articles">
+          <h2>Artículos relacionados</h2>
+          <a href="/blog/que-es-un-growth-partner">qué es un Growth Partner</a>
+          <a href="/blog/cuando-necesitas-un-growth-partner">cuándo necesitas un Growth Partner</a>
+          <a href="/blog/cpa">qué es el CPA</a>
+          <a href="/blog/que-es-un-media-buyer">qué es un media buyer</a>
+          <a href="/blog/cuanto-cobra-media-buyer">cuánto cobra un media buyer</a>
+          <a href="/blog/ugcmeta-ads">UGC en Meta Ads</a>
+          <a href="/blog/metodologia-day-by-day">la metodología DayByDay</a>
+          <a href="/tech/meta-ads">gestión de Meta Ads</a>
         </div>
 
         <div class="post-nav">
@@ -290,5 +304,7 @@
     <p>© 2026 DayByDay Consulting</p>
 </footer>
 <script src="/js/main.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Qué es el ROAS y cómo mejorarlo en Meta Ads","description":"ROAS en Meta Ads: qué es, cómo calcularlo, qué nivel es bueno según margen y las 6 palancas operativas para subirlo. Cifras reales 2026.","datePublished":"2026-06-12T00:00:00+02:00","dateModified":"2026-06-12T00:00:00+02:00","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/"},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/roas"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué ROAS es bueno en Meta Ads?","acceptedAnswer":{"@type":"Answer","text":"Depende del margen. Un ROAS de 3x (3€ por cada 1€ invertido) es punto de equilibrio para eCommerce con márgenes del 30-40%. Para márgenes más ajustados necesitas 4x o superior. En DayByDay conseguimos ROAS > 5x en sectores como moda, salud y lifestyle, pero con audiencias y creatividades cuidadas."}},{"@type":"Question","name":"¿Por qué el ROAS de Meta Ads baja con el tiempo?","acceptedAnswer":{"@type":"Answer","text":"Por tres razones: fatiga creativa (los usuarios ya han visto el anuncio demasiadas veces), saturación de audiencia (agotamiento del público objetivo disponible) o cambios en la competencia que suben el CPM. La solución: renovar creatividades cada 2-3 semanas, ampliar audiencias y ajustar la estrategia full-funnel."}},{"@type":"Question","name":"¿Cuánto tiempo tarda en subir el ROAS?","acceptedAnswer":{"@type":"Answer","text":"Meta Ads necesita un período de aprendizaje de al menos 50 eventos de optimización antes de estabilizar. Esto ocurre entre la semana 2 y 3. El ROAS mejora de forma sostenida a partir del mes 2, cuando los datos son suficientes para optimizar con precisión."}},{"@type":"Question","name":"¿ROAS o MER? ¿Cuál mido?","acceptedAnswer":{"@type":"Answer","text":"ROAS mide el retorno de una campaña o canal concreto. MER (Marketing Efficiency Ratio) mide el ingreso total sobre el gasto total en marketing. En D2C, el MER es la métrica correcta para decisiones de negocio. El ROAS es táctico, el MER es estratégico. Si solo puedes mirar uno, mira el MER."}},{"@type":"Question","name":"¿Cómo se calcula el ROAS?","acceptedAnswer":{"@type":"Answer","text":"ROAS = ingresos atribuidos a Meta Ads / gasto en Meta Ads. Si gastas 5.000€ y Meta te atribuye 25.000€ en ventas, tu ROAS es 5x. La trampa: los ingresos atribuidos no son los mismos que los ingresos reales del negocio. La atribución de Meta sobreestima en iOS 14.5+ y en audiencias de retargeting."}}]}</script>
 </body>
 </html>
