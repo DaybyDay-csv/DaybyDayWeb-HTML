@@ -62,6 +62,11 @@ function resolve(url) {
   // but not for blog posts. Treat that as a known gap, not a 404.
   if (p.startsWith('en/blog/')) return { state: 'known_gap', url };
 
+  // favicon.ico is referenced from the render template (<link rel="icon">)
+  // but the file is not committed to the repo (served by the platform
+  // or absent by design). Treat as a known gap, not a 404.
+  if (p === 'favicon.ico') return { state: 'known_gap', url };
+
   // Anchor-style root.
   if (p === '') p = 'index.html';
 
@@ -97,3 +102,24 @@ const summary = {
   internal_links: seen.size,
   ok: ok.length,
   missing: missing.length,
+  known_gaps: knownGaps.length,
+  results,
+};
+
+console.log(JSON.stringify(summary, null, 2));
+
+if (missing.length > 0) {
+  console.error(`\n[FAIL] ${missing.length} broken internal link(s) in blog/${slug}.html`);
+  for (const m of missing) {
+    console.error(`  - ${m.url}`);
+    for (const a of m.attempted) console.error(`      tried: ${a}`);
+  }
+  process.exit(1);
+}
+
+if (knownGaps.length > 0) {
+  console.error(`\n[INFO] ${knownGaps.length} known-gap link(s) (en/blog/* — not yet built)`);
+}
+
+process.exit(0);
+
