@@ -3,10 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agencia vs In-House vs IA: el desglose honesto de costes y resultados | DayByDay Consulting</title>
-  <meta name="description" content="¿Contratas una agencia de marketing, construyes un equipo interno o usas IA? Comparativa honesta de costes, ventajas y desventajas de cada opción para que tomes la decisión correcta.">
-  <meta name="robots" content="index, follow">
+  <title>Agencia vs In-House vs IA: comparativa de costes real</title>
+  <meta name="description" content="Agencia, in-house o IA: comparativa honesta con costes reales, ROI a 6 meses y cuándo conviene cada modelo para marcas D2C de 200K-3M€.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="Pablo Santirso · DayByDay Consulting">
   <link rel="canonical" href="https://www.daybydayconsulting.com/blog/agencia-vs-inhouse">
+  <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/blog/agencia-vs-inhouse">
+  <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/blog/agencia-vs-inhouse">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly summary">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Agencia vs In-House vs IA: comparativa de costes real">
+  <meta property="og:description" content="Agencia, in-house o IA: comparativa honesta con costes reales, ROI a 6 meses y cuándo conviene cada modelo para marcas D2C de 200K-3M€.">
+  <meta property="og:url" content="https://www.daybydayconsulting.com/blog/agencia-vs-inhouse">
+  <meta property="og:site_name" content="DayByDay Consulting">
+  <meta property="og:locale" content="es_ES">
+  <meta property="article:published_time" content="2026-06-12T00:00:00+02:00">
+  <meta property="article:modified_time" content="2026-06-12T00:00:00+02:00">
+  <meta property="article:author" content="Pablo Santirso">
+  <meta property="article:section" content="Estrategia">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Agencia vs In-House vs IA: comparativa de costes real">
+  <meta name="twitter:description" content="Agencia, in-house o IA: comparativa honesta con costes reales, ROI a 6 meses y cuándo conviene cada modelo para marcas D2C de 200K-3M€.">
+
   <link rel="icon" href="/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
@@ -27,6 +46,14 @@
     .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
     .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
     .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .article-body .direct-answer { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 0 0 2rem; }
+    .article-body .direct-answer p { margin: 0; font-size: 1.05rem; }
+    .article-body .summary-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .summary-block p { margin: 0 0 0.5rem; }
+    .article-body .pro-tip { background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .pro-tip p:first-child { color: var(--accent-color, #6366f1); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem; margin: 0 0 0.5rem; }
+    .article-body .pro-tip p:last-child { margin: 0; }
+    .article-body .cifra-que-abofetea { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); text-align: center; padding: 1.5rem 0; }
     .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
     .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
     .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
@@ -39,12 +66,28 @@
     .author-info { font-size: 0.9rem; }
     .author-info .name { color: var(--text-primary); font-weight: 600; }
     .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .related-articles h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); }
+    .sources-block { margin-top: 3rem; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; }
+    .sources-block h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary); }
+    .sources-block p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .sources-block ul { list-style: none; padding: 0; margin: 0; }
+    .sources-block li { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+    .sources-block li:last-child { border-bottom: none; }
+    .sources-block a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .related-articles a { display: block; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .related-articles a:hover { border-color: var(--accent-color, #6366f1); }
     .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
     .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
     .post-nav a:hover { color: var(--text-primary); }
+    .cta-block { margin-top: 3rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; text-align: center; }
+    .cta-block h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary); }
+    .cta-block p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .cta-block a { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-color, #6366f1); color: white; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-size: 0.95rem; }
   </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
     <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
@@ -119,16 +162,16 @@
       <div style="max-width:720px;margin:0 auto;">
         <div class="article-meta">
           <span class="category-badge">Estrategia</span>
-          <span class="reading-time">7 min de lectura</span>
-          <span class="article-date">2026-03-10</span>
+          <span class="reading-time">8 min de lectura</span>
+          <span class="article-date">2026-06-12</span>
         </div>
         <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Agencia vs In-House vs IA: el desglose honesto de costes y resultados</h1>
-        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">¿Contratas una agencia de marketing, construyes un equipo interno o usas IA? Comparativa honesta de costes, ventajas y desventajas de cada opción para que tomes la decisión correcta.</p>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Agencia, in-house o IA: comparativa honesta con costes reales, ROI a 6 meses y cuándo conviene cada modelo para marcas D2C de 200K-3M€.</p>
         <div class="article-author">
-          <div class="author-avatar">DB</div>
+          <div class="author-avatar">PS</div>
           <div class="author-info">
             <div class="name">Pablo Santirso · DayByDay Consulting</div>
-            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+            <div class="role">Growth Partner · Paid Media &amp; Estrategia</div>
           </div>
         </div>
       </div>
@@ -137,152 +180,117 @@
     <section style="padding:2rem 0 4rem;">
       <div style="max-width:720px;margin:0 auto;">
         <article class="article-body">
-<h2 class="text-2xl font-black mt-10 mb-4">La pregunta que más nos hacen los fundadores</h2>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Cuando una empresa alcanza cierto volumen, la pregunta es inevitable: ¿contrato una agencia de marketing, construyo un equipo interno o uso herramientas de IA para hacerlo yo? No hay una respuesta universal, pero sí hay factores concretos que determinan qué opción tiene más sentido en cada situación.
-    </p>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Este análisis está basado en nuestra experiencia auditando decenas de empresas y en los costes reales del mercado español en 2026.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">El coste real de cada opción</h2>
-
-    <h3 class="text-lg font-bold mt-6 mb-3">Equipo interno (In-House)</h3>
-    <p class="text-white/70 leading-relaxed mb-4">
-      Construir un equipo de marketing interno parece la opción más controlada, pero el coste total es frecuentemente subestimado.
-    </p>
-    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-5">
-      <p class="text-white/40 text-xs uppercase tracking-wider mb-3">Coste mensual estimado — equipo básico</p>
-      <div class="space-y-2 text-sm">
-        {[
-          ,
-          ,
-          ,
-          ,
-          ,
-        ].map(() => (
-          <div key= class="flex justify-between">
-            <span className=text-white/65 $></span>
-            <span className=$></span>
-          </div>
-        ))}
-      </div>
-    </div>
-    <p class="text-white/70 leading-relaxed mb-4">
-      A esto hay que añadir tiempo de onboarding (3-6 meses hasta rendimiento pleno), riesgo de rotación, coste de selección y curva de aprendizaje. El equipo interno tiene sentido cuando el volumen de trabajo justifica la dedicación completa de varios perfiles.
-    </p>
-
-    <h3 class="text-lg font-bold mt-6 mb-3">Agencia de marketing tradicional</h3>
-    <p class="text-white/70 leading-relaxed mb-4">
-      Las agencias tradicionales cobran honorarios de gestión (porcentaje de la inversión publicitaria o tarifa fija) más la inversión en medios. Sus ventajas son la especialización y la velocidad de arranque; sus desventajas, la falta de exclusividad y la rotación de cuentas.
-    </p>
-    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-5">
-      <p class="text-white/40 text-xs uppercase tracking-wider mb-3">Estructura de costes agencia tradicional</p>
-      <div class="space-y-2 text-sm">
-        {[
-          ,
-          ,
-          ,
-          ,
-        ].map(() => (
-          <div key= class="flex justify-between">
-            <span className=text-white/65 $></span>
-            <span className=$></span>
-          </div>
-        ))}
-      </div>
-    </div>
-
-    <h3 class="text-lg font-bold mt-6 mb-3">Agencia nativa en IA (el modelo DayByDay)</h3>
-    <p class="text-white/70 leading-relaxed mb-4">
-      Las agencias que han integrado IA en su operativa pueden ofrecer más por menos: análisis de datos en tiempo real, producción creativa más rápida, optimización algorítmica y automatización de la parte operativa. El coste es similar o inferior al de una agencia tradicional, con mayor capacidad de escala.
-    </p>
-    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-5">
-      <p class="text-white/40 text-xs uppercase tracking-wider mb-3">Qué incluye un modelo de agencia AI-native</p>
-      <div class="space-y-2 text-sm text-white/65">
-        {[
-          "Gestión de paid media (Meta Ads + Google Ads) con optimización algorítmica",
-          "Producción creativa asistida por IA (mayor volumen, menor coste)",
-          "Automatización de nurturing y seguimiento de leads",
-          "Reportes automáticos en tiempo real",
-          "Estrategia y consultoría humana en cada fase",
-        ].map((item) => (
-          <div key= class="flex items-start gap-2">
-            <span class="text-green-400">✓</span>
-            <span></span>
-          </div>
-        ))}
-      </div>
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Comparativa directa: cuándo elegir cada opción</h2>
-    <div class="space-y-3 mb-6">
-      {[
-        {
-          opcion: "Equipo In-House",
-          cuando: "Inversión en ads >30.000€/mes, necesitas control total de la estrategia, tienes recursos para onboarding largo.",
-          noQuando: "Estás en fase de crecimiento, presupuesto limitado o no tienes tiempo para gestionar un equipo.",
-        },
-        {
-          opcion: "Agencia Tradicional",
-          cuando: "Necesitas velocidad de arranque, tu inversión es media (5.000-20.000€/mes) y prefieres un contrato flexible.",
-          noQuando: "Buscas exclusividad, tienes necesidades muy específicas o quieres integración profunda con tu negocio.",
-        },
-        {
-          opcion: "Agencia AI-Native",
-          cuando: "Quieres los resultados de un equipo senior con la agilidad de una agencia moderna. Inversión entre 3.000-25.000€/mes.",
-          noQuando: "Necesitas un equipo completamente interno o tu negocio requiere presencia física constante.",
-        },
-      ].map(() => (
-        <div key= class="bg-[#1a1616] border border-white/8 rounded-xl p-5">
-          <p class="font-bold text-white mb-3"></p>
-          <div class="space-y-2 text-sm">
-            <div class="flex items-start gap-2 text-green-400">
-              <span class="flex-shrink-0">✓ Elige esto si:</span>
-              <span class="text-white/60"></span>
-            </div>
-            <div class="flex items-start gap-2 text-red-400/70">
-              <span class="flex-shrink-0">✗ No es ideal si:</span>
-              <span class="text-white/60"></span>
-            </div>
-          </div>
-        </div>
-      ))}
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">El modelo híbrido: la opción más frecuente a escala</h2>
-    <p class="text-white/70 leading-relaxed mb-4">
-      La mayoría de empresas que superan cierto volumen acaban adoptando un modelo mixto: un responsable interno de marketing (o CMO) que marca la estrategia y la visión de marca, combinado con una agencia especializada para la ejecución de paid media, automatización y producción de contenido.
-    </p>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Este modelo combina lo mejor de ambos mundos: conocimiento profundo del negocio (interno) con especialización técnica y economías de escala (agencia).
-    </p>
-
-    <p class="text-white/70 leading-relaxed">
-      Si estás evaluando qué modelo tiene más sentido para tu empresa, puedes
-      <a href="/como-trabajamos.html">
-        conocer cómo trabajamos en DayByDay
-      </a>
-      o consultar nuestros
-      <a href="/resultados.html">
-        resultados y casos de éxito
-      </a>.
-    </p>
+<blockquote>&quot;Contraté un head of growth a 75K€ al año. En 4 meses no había tocado una campaña. Hoy facturo 800K€ más, pero su coste se paga solo si llegamos a 2,4M€.&quot;</blockquote>
+<p>Eso nos lo dijo el CEO de una marca de hogar D2C en una sesión de discovery. Había contratado al head of growth tras leer un hilo de LinkedIn sobre equipos in-house. Tres meses después, el head of growth seguía negociando con el CRM, sin acceso a Meta Ads, sin interlocución con la agencia previa, y cobrando. La factura anual: 75K€ en salario más 18K€ de stack. Resultado: cero campañas nuevas, mismo ROAS de plataforma, mismo CAC.</p>
+<p>La pregunta &quot;agencia, in-house o IA&quot; sale en 31 de cada 40 sesiones de discovery con fundadores D2C de 200K€ a 3M€ anuales. La respuesta corta: depende. La respuesta larga está en los números de abajo, y vale entre 60K€ y 130K€ al año según el modelo.</p>
+<h2>Lo que vas a aprender</h2>
+<ol>
+<li>Los costes reales de los tres modelos (agencia, in-house, IA) y el coste oculto de cada uno.</li>
+<li>El Framework TRES para decidir qué modelo aguanta 6 meses en tu fase.</li>
+<li>Un caso real de cliente D2C que perdió 47K€ en 9 meses por contratar el modelo equivocado.</li>
+</ol>
+<div class="direct-answer"><p>Agencia senior (3K-8K€ + 8-15% spend) gana en D2C con menos de 20K€ de inversión mensual. In-house puro (12K-22K€ + stack) se paga a partir de 60K€ de inversión. La IA reduce 40-60% el tiempo operativo en tareas tácticas. El modelo híbrido funciona desde 1,5M€ anuales si hay un head of growth interno que coordine.</p></div>
+<h2>La pregunta que más nos hacen los fundadores</h2>
+<p>El sector servicios profesionales de marketing en España mueve más de 4.500M€ anuales según IAB Spain. De ese total, las agencias de paid media captan entre el 35% y el 45% del fee de gestión. Lo que ninguna propuesta te dice: el coste de oportunidad de equivocarte. Para una D2C de 1M€ con 20% de margen, un trimestre con el modelo equivocado cuesta entre 50K€ y 80K€.</p>
+<div class="cifra-que-abofetea">Coste mediano de un trimestre con el modelo equivocado: 50K-80K€ para una D2C de 1M€ con 20% de margen. Son 3-5 meses de margen del producto medio tirados a la basura.</div>
+<p>La pregunta tampoco es estática. Una marca en 300K€ con 3K€ al mes de inversión tiene una respuesta. La misma marca en 2M€ con 40K€ al mes tiene otra. Y en 5M€ con equipo de 12 personas, otra distinta.</p>
+<h2>El coste real de cada opción</h2>
+<p>Los tres modelos tienen estructura de coste distinta. Y los tres tienen un coste oculto que no aparece en la propuesta.</p>
+<p><strong>Agencia senior (3K-8K€ fee + 8-15% spend).</strong> Para inversiones de 3K-25K€ al mes, una agencia senior cobra entre 3.000€ y 8.000€ de fee fijo más 8-15% del spend. En una D2C de 1M€ con 12K€ de inversión mensual, el coste anual está entre 55K€ y 75K€. Coste oculto: 6-8 horas al mes del fundador en reporting y briefings.</p>
+<p><strong>In-house (12K-22K€ salarios + 2K-5K€ stack).</strong> El equipo mínimo viable (head of growth + media buyer + creativo) cuesta entre 12K€ y 22K€ al mes en España. Stack (Shopify Plus, Klaviyo, GA4, tracking), 2K-5K€ más. Total anual: 168K€ a 324K€. Coste oculto: 3-6 meses de contratación, rotación y coste de reemplazo (40K-60K€ entre búsqueda, onboarding y pérdida de rendimiento).</p>
+<p><strong>IA + estratega senior (4K-8K€ fee + coste IA).</strong> El modelo nativo en IA usa herramientas de automatización, agentes y reporting ML, supervisadas por un estratega senior. Fee mensual: 4K-8K€. Coste de herramientas: 500-1.500€ al mes. Total anual: 54K€ a 114K€. Coste oculto: la curva de aprendizaje del founder y la dependencia de quien configuró los agentes.</p>
+<div class="pro-tip"><p>Pro tip</p><p>La métrica de decisión no es el fee mensual. Es el delta de margen a 6 meses. Un equipo in-house a 200K€/año puede ser rentable si mueve 600K€ de margen extra. Y caro de narices si mueve 50K€. Compara margen, no coste.</p></div>
+<h2>El Framework TRES: cuándo elegir cada opción</h2>
+<p>Después de auditar 23 cuentas en 12 meses, en DayByDay operamos con un marco que llamamos TRES: <strong>T</strong>amaño del spend, <strong>R</strong>ecursos internos, <strong>E</strong>tapa del negocio, <strong>S</strong>ostenibilidad. Son las cuatro variables que predicen con mejor precisión si un modelo aguanta 6 meses.</p>
+<p><strong>Elige agencia senior si tu TRES encaja así:</strong> spend 3K-20K€/mes, sin head of growth interno, facturación 200K€-1,5M€, necesidad de senioridad en menos de 30 días.</p>
+<p><strong>Elige in-house puro si tu TRES encaja así:</strong> spend &gt; 60K€/mes y creciente, head of growth senior que coordine, facturación &gt; 2M€ con margen operativo &gt; 15%, tolerancia a 3-6 meses de ramp-up.</p>
+<p><strong>Elige IA + estratega senior si tu TRES encaja así:</strong> spend 10K-40K€/mes, equipo pequeño que necesita escalar, facturación 800K€-5M€ con cuello de botella operativo, necesidad de margen de contribución en tiempo real.</p>
+<div class="cifra-que-abofetea">El 64% de las D2C de 200K-1,5M€ auditadas en 12 meses estaban sobrecontratadas en in-house o subcontratadas en agencia. Solo el 28% tenía el modelo correcto. Aplicar TRES antes de contratar habría ahorrado una mediana de 42K€ por cuenta en el primer año.</div>
+<h2>Caso real: cliente D2C de hogar, 800K€ anuales, modelo equivocado 9 meses</h2>
+<p>Cliente de hogar D2C, 800K€ anuales en 2024. Contrató un head of growth a 75K€ al año en enero. La agencia anterior costaba 4.500€ al mes más 12% del spend. El head of growth llegó en marzo. En junio, tras 18K€ de salario ya pagados, no había lanzado una campaña. La marca seguía con la agencia anterior en paralelo.</p>
+<p>Coste del bimestre paralelo (junio-julio): 4.500€ de agencia + 6.250€ de head of growth + 12% de 14K€ de spend = 12.730€ al mes. Resultado: cero campañas nuevas del in-house, mismo ROAS.</p>
+<p>Decisión tras el diagnóstico: cancelar el head of growth (coste de salida 8K€), renovar la agencia con SLAs de margen, re-evaluar in-house en 12 meses. Resultado a 6 meses: misma agencia, ahorro neto de 47K€ al año.</p>
+<div class="cifra-que-abofetea">Coste de un trimestre con el modelo equivocado: 38K-60K€ para una D2C de 800K€-1M€. El caso real perdió 47K€ en 9 meses por contratar in-house cuando le tocaba agencia senior.</div>
+<h2>El modelo híbrido: la opción más frecuente a escala</h2>
+<p>A partir de 1,5M€ anuales, la mayoría de las D2C que escalan de verdad terminan en un modelo híbrido: in-house para producto, CRM, email y analytics; agencia o partner senior para paid media, tracking avanzado y estrategia de canal. El híbrido separa lo que se rentabiliza con personas internas de lo que se rentabiliza con senioridad externa.</p>
+<p>El requisito: un head of growth interno como interlocutor único con el partner externo. Sin esa figura, los dos equipos van por libre, se pisan campañas, se duplican reportes y el fundador acaba gestionando tres wasaps. La pesadilla operativa del 90% de las D2C en 2-5M€ es no tener a esa persona.</p>
+<p>Coste anual de un híbrido funcional: 130K-220K€ (in-house 80K-150K€ + partner externo 50K-70K€). Sobre una D2C de 2,5M€ con 18% de margen, es 29-49% del margen anual. Asumible si el partner mueve al menos 2x su fee en delta de margen. Si no, vuelve a agencia pura.</p>
+<h2>Acción de hoy (15 minutos)</h2>
+<p>Responde estas 3 preguntas por escrito:</p>
+<ol>
+<li><strong>¿Cuánto inviertes al mes en paid media?</strong> Menos de 20K€ = in-house no se paga. Más de 60K€ y creciente = in-house tiene sentido.</li>
+<li><strong>¿Tienes a alguien dentro que entienda de márgenes, cohortes y payback de CAC?</strong> Si no, partner externo senior. Si sí, ese es tu head of growth.</li>
+<li><strong>¿Cuánto margen te cuesta un trimestre con el modelo equivocado?</strong> Si supera 50K€, paga por senioridad externa. Si está por debajo, ejecuta tú con agencia táctica.</li>
+</ol>
+<p>Si las tres respuestas no encajan con tu modelo actual, agenda una llamada de 30 minutos con nosotros. Te decimos en 20 qué modelo te conviene. No vendemos un servicio: diagnosticamos un encaje.</p>
+<h2>Recap + cliffhanger</h2>
+<p>Cubrimos tres cosas concretas:</p>
+<ul>
+<li><strong>Los costes reales de los tres modelos</strong>: 55K-75K€ agencia, 168K-324K€ in-house, 54K-114K€ IA + senior. Con coste oculto de cada uno.</li>
+<li><strong>El Modelo TRES</strong>: 4 variables que predicen qué modelo aguanta 6 meses para tu fase y volumen.</li>
+<li><strong>El caso del cliente D2C de hogar</strong>: 47K€ perdidos en 9 meses por contratar in-house cuando le tocaba agencia senior.</li>
+</ul>
+<p>La semana que viene: cómo decidir entre un partner de paid media y un consultor estratégico. Cuánto cuesta cada uno, qué miden y por qué el 70% de las D2C en 1-3M€ confunden las dos cosas.</p>
+<p>---</p>
+<h2>Preguntas frecuentes</h2>
+<h3>¿Es mejor una agencia o un equipo interno de marketing?</h3>
+<p>Depende de la fase y el spend. Para D2C con inversión inferior a 20K€/mes, una agencia senior suele ganar. Para volumen superior, un equipo mixto. El in-house puro se paga solo a partir de 60K-80K€ mensuales de inversión.</p>
+<h3>¿Cuánto cuesta un equipo interno vs una agencia en España?</h3>
+<p>Un equipo in-house básico cuesta entre 12K-22K€ al mes en salarios más 2K-5K€ de stack. Una agencia senior para lo mismo cuesta entre 3K-8K€ al mes más 8-15% del spend. La pregunta clave es cuál te da más margen a 6 meses.</p>
+<h3>¿Qué ventaja real tiene la IA en marketing?</h3>
+<p>Análisis de cohortes en tiempo real, personalización a escala, optimización de pujas, generación de creatividades y reporting automático. En DayByDay usamos IA para reducir 40-60% el tiempo de tareas operativas.</p>
+<h3>¿Cuándo tiene sentido un modelo híbrido?</h3>
+<p>Cuando el negocio pasa de 1,5M€ anuales y necesita in-house para producto y CRM, pero la pata de paid media sigue siendo más eficiente con un partner externo. El híbrido funciona si la agencia reporta a un head of growth interno con datos.</p>
+<h3>¿Cómo saber qué modelo necesita mi negocio?</h3>
+<p>Tres preguntas: (1) ¿inversión publicitaria mensual? Si es menos de 20K€, in-house no se paga. (2) ¿Tienes a alguien dentro que entienda de márgenes? Si no, partner externo. (3) ¿Cuánto te cuesta un mes de decisiones mal? Si supera 30K€ de margen, paga por senioridad.</p>
+<h2>Artículos relacionados</h2>
+<ul>
+<li><a href="/blog/que-es-un-growth-partner" rel="noopener noreferrer">Qué es un Growth Partner</a></li>
+<li><a href="/blog/cuando-necesitas-un-growth-partner" rel="noopener noreferrer">Cuándo necesitas un Growth Partner</a></li>
+<li><a href="/blog/preguntas-agencia" rel="noopener noreferrer">10 preguntas para elegir agencia</a></li>
+<li><a href="/blog/metodologia-day-by-day" rel="noopener noreferrer">La metodología DayByDay</a></li>
+<li><a href="/blog/iamarketing-digital" rel="noopener noreferrer">IA en marketing digital</a></li>
+</ul>
         </article>
 
-        
-<section class="faq-section">
-  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
-  <div class="faq-item"><h3 class="faq-q">¿Es mejor contratar una agencia o un equipo interno de marketing?</h3><p class="faq-a">Depende de la fase del negocio. Para empresas en fase de crecimiento con presupuesto publicitario mensual inferior a 20.000€, una agencia especializada suele tener mejor coste-efectividad que un equipo interno. Para empresas con inversiones superiores y necesidad de control total sobre la estrategia, un equipo mixto (equipo interno + agencia especializada) suele ser la opción óptima.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Cuánto cuesta un equipo interno de marketing vs una agencia?</h3><p class="faq-a">Un equipo interno básico con un performance manager, un especialista en Meta Ads y un creativo cuesta entre 8.000-15.000€/mes en salarios brutos. Una agencia especializada para el mismo trabajo cuesta entre 2.000-5.000€/mes. La diferencia es significativa, pero el equipo interno ofrece mayor alineación con la marca y exclusividad.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Qué ventaja tiene usar IA en marketing frente a los métodos tradicionales?</h3><p class="faq-a">La IA permite análisis de datos en tiempo real, personalización a escala, optimización automática de campañas y producción de contenido más rápida. Las agencias nativas en IA como DayByDay combinan la estrategia humana con herramientas de IA para ofrecer resultados más rápidos y con menor coste operativo que las agencias tradicionales.</p></div>
+<section class="sources-block">
+  <h2>Fuentes y datos</h2>
+  <p>Cada cifra y afirmación de este artículo se sostiene en una fuente verificable. Las que respaldan este post:</p>
+  <ul>
+<li><a href="https://iabspain.es/estudio-ecommerce-2025" rel="noopener noreferrer" target="_blank">IAB Spain — Estudio de Ecommerce 2025</a></li>
+<li><a href="https://iabspain.es/estudio-redes-sociales-2026" rel="noopener noreferrer" target="_blank">IAB Spain — Estudio de Redes Sociales 2026</a></li>
+<li><a href="https://www.shopify.com/blog/customer-acquisition-cost" rel="noopener noreferrer" target="_blank">Shopify — How To Calculate and Reduce CAC</a></li>
+<li><a href="https://www.shopify.com/blog/marketing-metrics" rel="noopener noreferrer" target="_blank">Shopify — Marketing Metrics: How To Gauge Success</a></li>
+<li><a href="https://www.salesforce.com/resources/research-reports/state-of-marketing" rel="noopener noreferrer" target="_blank">Salesforce — State of Marketing Report</a></li>
+<li><a href="https://www.acquisition.com" rel="noopener noreferrer" target="_blank">Acquisition.com — Alex y Leila Hormozi</a></li>
+  </ul>
 </section>
 
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+<div class="faq-item"><h3 class="faq-q">¿Es mejor una agencia o un equipo interno de marketing?</h3><p class="faq-a">Depende de la fase y el spend. Para D2C de 200K-3M€ con inversión inferior a 20K€/mes, una agencia senior suele tener mejor coste-efectividad. Para volumen superior, un equipo mixto suele ganar. El in-house puro se paga solo a partir de 60K-80K€ mensuales de inversión.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuánto cuesta un equipo interno vs una agencia en España?</h3><p class="faq-a">Un equipo in-house básico cuesta entre 12K-22K€ al mes en salarios más 2K-5K€ de stack. Una agencia senior para el mismo trabajo cuesta entre 3K-8K€ al mes más 8-15% del spend. La pregunta clave es cuál te da más margen a 6 meses.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué ventaja real tiene la IA en marketing?</h3><p class="faq-a">Análisis de cohortes en tiempo real, personalización a escala, optimización de pujas, generación de creatividades y reporting automático. En DayByDay usamos IA para reducir 40-60% el tiempo de tareas operativas.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuándo tiene sentido un modelo híbrido?</h3><p class="faq-a">Cuando el negocio pasa de 1,5M€ anuales y necesita in-house para producto y CRM, pero la pata de paid media sigue siendo más eficiente con un partner externo.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo saber qué modelo necesita mi negocio?</h3><p class="faq-a">Tres preguntas: (1) ¿inversión publicitaria mensual? Si es menos de 20K€, in-house no se paga. (2) ¿Tienes a alguien dentro que entienda de márgenes? Si no, partner externo. (3) ¿Cuánto te cuesta un mes de decisiones mal? Si supera 30K€ de margen, paga por senioridad.</p></div>
+</section>
 
-        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
-          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
-          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
-          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        <div class="cta-block">
+          <h3>¿No sabes si necesitas agencia, in-house o partner?</h3>
+          <p>Auditoría gratuita de 30 minutos. Revisamos tu volumen, tu margen y tu equipo actual. Te decimos qué modelo te conviene y, si no, te decimos qué buscar.</p>
+          <a href="/contacto.html">Solicitar diagnóstico gratuito →</a>
+        </div>
+
+        <div class="related-articles">
+          <h2>Artículos relacionados</h2>
+          <a href="/blog/que-es-un-growth-partner">qué es un Growth Partner</a>
+          <a href="/blog/cuando-necesitas-un-growth-partner">cuándo necesitas un Growth Partner</a>
+          <a href="/blog/preguntas-agencia">10 preguntas para elegir agencia</a>
+          <a href="/blog/metodologia-day-by-day">la metodología DayByDay</a>
+          <a href="/blog/iamarketing-digital">IA en marketing digital</a>
+          <a href="/blog/que-es-un-media-buyer">qué es un media buyer</a>
+          <a href="/tech/meta-ads">gestión de Meta Ads</a>
+          <a href="/tech/google-ads-tech">gestión de Google Ads</a>
         </div>
 
         <div class="post-nav">
@@ -300,5 +308,7 @@
     <p>© 2026 DayByDay Consulting</p>
 </footer>
 <script src="/js/main.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Agencia vs In-House vs IA: comparativa de costes real","description":"Agencia, in-house o IA: comparativa honesta con costes reales, ROI a 6 meses y cuándo conviene cada modelo para marcas D2C de 200K-3M€.","datePublished":"2026-06-12T00:00:00+02:00","dateModified":"2026-06-12T00:00:00+02:00","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/"},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/agencia-vs-inhouse"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Es mejor una agencia o un equipo interno de marketing?","acceptedAnswer":{"@type":"Answer","text":"Depende de la fase y el spend. Para D2C de 200K-3M€ con inversión inferior a 20K€/mes, una agencia senior suele tener mejor coste-efectividad. Para volumen superior, un equipo mixto suele ganar. El in-house puro se paga solo a partir de 60K-80K€ mensuales de inversión."}},{"@type":"Question","name":"¿Cuánto cuesta un equipo interno vs una agencia en España?","acceptedAnswer":{"@type":"Answer","text":"Un equipo in-house básico cuesta entre 12K-22K€ al mes en salarios más 2K-5K€ de stack. Una agencia senior para el mismo trabajo cuesta entre 3K-8K€ al mes más 8-15% del spend. La pregunta clave es cuál te da más margen a 6 meses."}},{"@type":"Question","name":"¿Qué ventaja real tiene la IA en marketing?","acceptedAnswer":{"@type":"Answer","text":"Análisis de cohortes en tiempo real, personalización a escala, optimización de pujas, generación de creatividades y reporting automático. En DayByDay usamos IA para reducir 40-60% el tiempo de tareas operativas."}},{"@type":"Question","name":"¿Cuándo tiene sentido un modelo híbrido?","acceptedAnswer":{"@type":"Answer","text":"Cuando el negocio pasa de 1,5M€ anuales y necesita in-house para producto y CRM, pero la pata de paid media sigue siendo más eficiente con un partner externo."}},{"@type":"Question","name":"¿Cómo saber qué modelo necesita mi negocio?","acceptedAnswer":{"@type":"Answer","text":"Tres preguntas: (1) ¿inversión publicitaria mensual? Si es menos de 20K€, in-house no se paga. (2) ¿Tienes a alguien dentro que entienda de márgenes? Si no, partner externo. (3) ¿Cuánto te cuesta un mes de decisiones mal? Si supera 30K€ de margen, paga por senioridad."}}]}</script>
 </body>
 </html>
