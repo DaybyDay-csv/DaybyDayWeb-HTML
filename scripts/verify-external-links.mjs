@@ -16,6 +16,7 @@
 import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { parseFrontmatter } from './lib/frontmatter.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -24,33 +25,6 @@ const ROOT = path.resolve(__dirname, '..');
 const TIMEOUT_MS = 8000;
 const MAX_REDIRECTS = 3;
 const CONCURRENCY = 8;
-
-function extractFrontmatter(text) {
-  if (!text.startsWith('---')) return { fm: {}, body: text };
-  const end = text.indexOf('\n---', 3);
-  if (end === -1) return { fm: {}, body: text };
-  const raw = text.slice(3, end).trim();
-  const body = text.slice(end + 4).replace(/^\n/, '');
-  const fm = {};
-  for (const line of raw.split('\n')) {
-    const m = line.match(/^([a-zA-Z0-9_-]+):\s*(.*)$/);
-    if (!m) continue;
-    const key = m[1].trim();
-    let value = m[2].trim();
-    if (value.startsWith('[') && value.endsWith(']')) {
-      try {
-        value = JSON.parse(value);
-      } catch {
-        const normalized = value.replace(/'/g, '"').replace(/\\"/g, '\u0001').replace(/"/g, '\\"').replace(/\u0001/g, '\\"');
-        try { value = JSON.parse(normalized); } catch { value = []; }
-      }
-    } else if (value.startsWith('"') && value.endsWith('"')) {
-      value = value.slice(1, -1);
-    }
-    fm[key] = value;
-  }
-  return { fm, body };
-}
 
 function findExternalUrls(text) {
   const urlRe = /https?:\/\/[^\s)\]"'<>]+/g;
@@ -131,7 +105,7 @@ async function checkBatch(urls) {
 async function processFile(slug) {
   const fp = path.join(ROOT, 'content', `${slug}.md`);
   const raw = await readFile(fp, 'utf8');
-  const { fm, body } = extractFrontmatter(raw);
+  const { fm, body } = parseFrontmatter(raw);
   const allUrls = findExternalUrls(body);
   const sourceUrls = Array.isArray(fm.sources) ? fm.sources.map(s => typeof s === 'string' ? s : s.url).filter(Boolean) : [];
   const combined = [...new Set([...allUrls, ...sourceUrls])];
