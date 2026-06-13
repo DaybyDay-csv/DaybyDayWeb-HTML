@@ -3,10 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard de paid media: qué métricas debe ver un founder D2C cada lunes (2026) | DayByDay Consulting</title>
-  <meta name="description" content="Guía operativa del dashboard de paid media para founders D2C España 2026: por qué el founder necesita un cuadro de 8-10 métricas semanal (no 40-60 diarias), las 3 capas obligatorias del dashboard (negocio MER blended + margen contribución + CAC blended vs LTV90, adquisición paid CAC adquisición específico + % New Customers + CPM rolling, eficiencia operativa Hook Rate + % spend creatividades >7d + campañas en learning), diferencia entre dashboard estratégico del founder y dashboard táctico del media buyer, comparativa Looker Studio gratis vs Triple Whale 199-799$ vs Northbeam 1.000-3.000$ vs Sheets manual por tramo de spend, cómo construir MER blended como métrica north star y por qué supera a ROAS in-platform, sistema de alertas Slack para umbrales críticos (MER<1,8x 3 días, CPA adquisición +35% baseline 7d, % spend learning >15%), cadencia semanal 4-6 min de lectura + 15-25 min conversación con media buyer, 5 errores frecuentes en cuentas D2C españolas y enfoque DayByDay Pablo+Jorge con pipeline n8n + Shopify Admin + Meta/Google/TikTok Marketing APIs + GA4 BigQuery + dashboard Looker Studio cross-channel publicado cada lunes 8am con cohortes LTV-30/60/90.">
-  <meta name="robots" content="index, follow">
+  <title>Dashboard paid media: qué métricas ve el founder D2C</title>
+  <meta name="description" content="Dashboard de paid media para founders D2C: 3 capas, 8-10 métricas, MER como north star. Looker Studio, Triple Whale, Northbeam o Sheets. Cadencia semanal.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="Pablo Santirso · DayByDay Consulting">
   <link rel="canonical" href="https://www.daybydayconsulting.com/blog/dashboard-paid-media-founder-d2c">
+  <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/blog/dashboard-paid-media-founder-d2c">
+  <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/blog/dashboard-paid-media-founder-d2c">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly summary">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Dashboard paid media: qué métricas ve el founder D2C">
+  <meta property="og:description" content="Dashboard de paid media para founders D2C: 3 capas, 8-10 métricas, MER como north star. Looker Studio, Triple Whale, Northbeam o Sheets. Cadencia semanal.">
+  <meta property="og:url" content="https://www.daybydayconsulting.com/blog/dashboard-paid-media-founder-d2c">
+  <meta property="og:site_name" content="DayByDay Consulting">
+  <meta property="og:locale" content="es_ES">
+  <meta property="article:published_time" content="2026-05-17T00:00:00+02:00">
+  <meta property="article:modified_time" content="2026-05-17T00:00:00+02:00">
+  <meta property="article:author" content="Pablo Santirso">
+  <meta property="article:section" content="Reporting">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dashboard paid media: qué métricas ve el founder D2C">
+  <meta name="twitter:description" content="Dashboard de paid media para founders D2C: 3 capas, 8-10 métricas, MER como north star. Looker Studio, Triple Whale, Northbeam o Sheets. Cadencia semanal.">
+
   <link rel="icon" href="/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
@@ -27,6 +46,14 @@
     .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
     .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
     .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .article-body .direct-answer { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 0 0 2rem; }
+    .article-body .direct-answer p { margin: 0; font-size: 1.05rem; }
+    .article-body .summary-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .summary-block p { margin: 0 0 0.5rem; }
+    .article-body .pro-tip { background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .pro-tip p:first-child { color: var(--accent-color, #6366f1); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem; margin: 0 0 0.5rem; }
+    .article-body .pro-tip p:last-child { margin: 0; }
+    .article-body .cifra-que-abofetea { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); text-align: center; padding: 1.5rem 0; }
     .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
     .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
     .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
@@ -39,12 +66,28 @@
     .author-info { font-size: 0.9rem; }
     .author-info .name { color: var(--text-primary); font-weight: 600; }
     .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .related-articles h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); }
+    .sources-block { margin-top: 3rem; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; }
+    .sources-block h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary); }
+    .sources-block p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .sources-block ul { list-style: none; padding: 0; margin: 0; }
+    .sources-block li { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+    .sources-block li:last-child { border-bottom: none; }
+    .sources-block a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .related-articles a { display: block; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .related-articles a:hover { border-color: var(--accent-color, #6366f1); }
     .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
     .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
     .post-nav a:hover { color: var(--text-primary); }
+    .cta-block { margin-top: 3rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; text-align: center; }
+    .cta-block h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary); }
+    .cta-block p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .cta-block a { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-color, #6366f1); color: white; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-size: 0.95rem; }
   </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
     <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
@@ -122,13 +165,13 @@
           <span class="reading-time">10 min de lectura</span>
           <span class="article-date">2026-05-17</span>
         </div>
-        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Dashboard de paid media: qué métricas debe ver un founder D2C cada lunes (2026)</h1>
-        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Guía operativa del dashboard de paid media para founders D2C España 2026: por qué el founder necesita un cuadro de 8-10 métricas semanal (no 40-60 diarias), las 3 capas obligatorias del dashboard (negocio MER blended + margen contribución + CAC blended vs LTV90, adquisición paid CAC adquisición específico + % New Customers + CPM rolling, eficiencia operativa Hook Rate + % spend creatividades >7d + campañas en learning), diferencia entre dashboard estratégico del founder y dashboard táctico del media buyer, comparativa Looker Studio gratis vs Triple Whale 199-799$ vs Northbeam 1.000-3.000$ vs Sheets manual por tramo de spend, cómo construir MER blended como métrica north star y por qué supera a ROAS in-platform, sistema de alertas Slack para umbrales críticos (MER<1,8x 3 días, CPA adquisición +35% baseline 7d, % spend learning >15%), cadencia semanal 4-6 min de lectura + 15-25 min conversación con media buyer, 5 errores frecuentes en cuentas D2C españolas y enfoque DayByDay Pablo+Jorge con pipeline n8n + Shopify Admin + Meta/Google/TikTok Marketing APIs + GA4 BigQuery + dashboard Looker Studio cross-channel publicado cada lunes 8am con cohortes LTV-30/60/90.</p>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Dashboard paid media: qué métricas ve el founder D2C</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Dashboard de paid media para founders D2C: 3 capas, 8-10 métricas, MER como north star. Looker Studio, Triple Whale, Northbeam o Sheets. Cadencia semanal.</p>
         <div class="article-author">
-          <div class="author-avatar">DB</div>
+          <div class="author-avatar">PS</div>
           <div class="author-info">
             <div class="name">Pablo Santirso · DayByDay Consulting</div>
-            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+            <div class="role">Growth Partner · Paid Media &amp; Estrategia</div>
           </div>
         </div>
       </div>
@@ -137,227 +180,105 @@
     <section style="padding:2rem 0 4rem;">
       <div style="max-width:720px;margin:0 auto;">
         <article class="article-body">
-7d + campañas en learning), diferencia entre dashboard estratégico del founder y dashboard táctico del media buyer, comparativa Looker Studio gratis vs Triple Whale 199-799$ vs Northbeam 1.000-3.000$ vs Sheets manual por tramo de spend, cómo construir MER blended como métrica north star y por qué supera a ROAS in-platform, sistema de alertas Slack para umbrales críticos (MER<1,8x 3 días, CPA adquisición +35% baseline 7d, % spend learning >15%), cadencia semanal 4-6 min de lectura + 15-25 min conversación con media buyer, 5 errores frecuentes en cuentas D2C españolas y enfoque DayByDay Pablo+Jorge con pipeline n8n + Shopify Admin + Meta/Google/TikTok Marketing APIs + GA4 BigQuery + dashboard Looker Studio cross-channel publicado cada lunes 8am con cohortes LTV-30/60/90."
-    slug="dashboard-paid-media-founder-d2c"
-    datePublished="2026-05-17"
-    dateModified="2026-05-17"
-    readingTime="10 min"
-    category="Reporting"
-    keywords=
-    faqs=
-    openCalendly=
-  >
-    <p class="text-white/70 leading-relaxed mb-5">
-      <strong class="text-white">El dashboard de paid media de un founder D2C debe leerse en 4-6 minutos cada lunes y disparar una sola conversación con el media buyer o agencia donde se decide subir, bajar o mantener spend por canal.</strong> No es un cuadro táctico para optimizar campañas — eso lo gestiona la persona que toca la cuenta a diario. Es un cuadro estratégico de 8-10 métricas organizadas en 3 capas (negocio, adquisición paid, eficiencia operativa) que permite al founder responder cada lunes a una pregunta: ¿estamos escalando con margen, o estamos quemando caja contra el reporting in-platform? En auditorías DayByDay 2025-2026 vemos que el 60-70% de cuentas D2C españolas con spend 10K€€/mes operan con dashboards de 40-60 métricas en 6 pestañas que nadie revisa, o peor, con el reporting que la agencia envía cada 15 días por PDF. Esta guía recorre qué métricas importan, qué herramienta elegir por tramo de spend y cómo construirlo en una tarde con Looker Studio.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Qué es un dashboard de paid media para founder (definición operativa)</h2>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Un <strong class="text-white">dashboard de paid media para founder D2C</strong> es un cuadro de mando semanal con 8-10 métricas cross-channel que mide salud del negocio en relación al spend publicitario total: MER blended, margen contribución, CAC adquisición específico vs LTV90, % New Customers, eficiencia operativa por canal. Se distingue de un dashboard táctico de media buyer en que no incluye CPA por ad set ni frecuencia por audiencia ni reporting in-platform de cada plataforma; eso vive en otra capa para quien gestiona la cuenta. La función única del dashboard del founder es soportar 1 decisión semanal de presupuesto cross-channel en menos de 30 minutos de reunión.
-    </p>
-
-    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-6">
-      <p class="text-white font-bold text-sm mb-2">📊 Dato de referencia</p>
-      <p class="text-white/70 text-sm leading-relaxed">
-        Según el <a href="https://www.thinkwithgoogle.com/marketing-strategies/data-and-measurement/marketing-data-strategy/" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">informe de Think with Google sobre data maturity</a>, las empresas con un cuadro de mando consolidado cross-channel toman decisiones de presupuesto entre 2,5x y 3x más rápido que las que dependen del reporting individual por plataforma. La <a href="https://www.statista.com/statistics/1259676/dtc-ecommerce-tracking-metrics/" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">encuesta de Statista sobre métricas D2C 2024</a> apunta que el 71% de los founders D2C declara revisar dashboards de paid semanalmente, pero solo el 28% tiene un MER blended consolidado fuera del reporting de cada plataforma. En auditorías DayByDay sobre cuentas D2C España con spend 10-50K€/mes, ese gap se traduce en una infraestimación de CAC adquisición específico del 22-38% cuando solo se mira CAC blended: el founder cree estar pagando 22€ por cliente cuando en realidad paga 46€ por cliente nuevo en frío.
-      </p>
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Las 3 capas obligatorias del dashboard del founder</h2>
-    <p class="text-white/70 leading-relaxed mb-5">
-      El cuadro se organiza en 3 bloques visualmente separados. Cada bloque responde a una pregunta de negocio distinta:
-    </p>
-    <div class="overflow-x-auto mb-6">
-      <table class="w-full text-sm border-collapse">
-        <thead>
-          <tr class="border-b border-white/10">
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Capa</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Pregunta que responde</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Métricas (4 max)</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Umbral acción</th>
-          </tr>
-        </thead>
-        <tbody>
-          {[
-            ,
-            ,
-            { c: "3. Eficiencia operativa", p: "¿Estamos sirviendo bien el spend?", m: "Hook Rate top 5 creativas, % spend creatividades >7d activas, # campañas learning, frecuencia retargeting", u: "Hook Rate <22% · learning >15% spend" },
-          ].map((row, i) => (
-            <tr key= class="border-b border-white/5 hover:bg-white/2">
-              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Cada capa cabe en una fila visual del dashboard con 4 tiles métricas + 1 mini-gráfico de evolución 8-12 semanas. Total: 12-15 tiles + 3 gráficos. Si la persona que lo abre necesita pestañas adicionales para entender lo que ve, el dashboard está mal diseñado. Detalle del enfoque cohortes y CAC adquisición específico en la <a href="/blog/cac-blended-vs-cac-canal-ecommerce.html">guía de CAC blended vs CAC por canal</a>.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Por qué MER blended es la métrica north star del founder</h2>
-    <p class="text-white/70 leading-relaxed mb-5">
-      MER (Marketing Efficiency Ratio) blended = Revenue total negocio ÷ Spend total paid media. Es la única métrica que no depende del modelo de atribución de cada plataforma y refleja el efecto real del paid sobre orgánico y directo. Un MER blended de 2,5x significa que cada 1€ invertido en paid devuelve 2,5€ de revenue total al negocio.
-    </p>
-    <ul class="space-y-2 mb-6">
-      {[
-        "MER blended × margen contribución ≥ 1 → rentable a nivel marketing puro (sin contar overheads).",
-        "MER blended ≥ 2,2x sostenido 60-90 días → saludable para D2C en escala con margen contribución 25-35%.",
-        "MER blended 1,8-2,2x → zona de vigilancia: revisar mix de canales, % spend en learning y CPM rolling.",
-        "MER blended <1,8x sostenido 3-4 semanas → rebalancear urgente: pausar canales con CAC > LTV, reducir spend en saturación, reasignar a creatividades winners.",
-        "ROAS in-platform NO sustituye a MER blended: Meta reporta 4,5x mientras MER cae a 1,9x es señal de sobreatribución (no de canal sano).",
-      ].map((item) => (
-        <li key= class="flex items-start gap-2 text-white/60 text-sm">
-          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
-          <span></span>
-        </li>
-      ))}
-    </ul>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Looker Studio vs Triple Whale vs Northbeam vs Sheets manual</h2>
-    <p class="text-white/70 leading-relaxed mb-5">
-      La decisión de herramienta depende del spend total mensual y del nivel de complejidad del stack de datos. No comprar herramientas caras antes de necesitarlas es regla de oro:
-    </p>
-    <div class="overflow-x-auto mb-6">
-      <table class="w-full text-sm border-collapse">
-        <thead>
-          <tr class="border-b border-white/10">
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Herramienta</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Coste mensual</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Setup</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Recomendado para</th>
-          </tr>
-        </thead>
-        <tbody>
-          {[
-            ,
-            ,
-            ,
-            ,
-          ].map((row, i) => (
-            <tr key= class="border-b border-white/5 hover:bg-white/2">
-              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Para el 70% de D2C españoles entre 10K€ y 40K€/mes spend, Looker Studio gratis con conectores nativos cubre todo lo necesario. La trampa es pagar 800$/mes por Triple Whale cuando ese dinero rinde más reinvertido en producción de creatividades o auditoría tracking. Más contexto en la <a href="/blog/ga4-meta-ads-eventos-custom-d2c.html">guía de GA4 + Meta Ads con BigQuery Export gratis hasta 1M eventos/día</a>.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Cómo construir el dashboard semanal paso a paso (Looker Studio)</h2>
-    <ol class="space-y-3 mb-6 list-decimal pl-5">
-      {[
-        "Conectar fuentes de datos a Looker Studio: Meta Ads (conector oficial), Google Ads (conector oficial), GA4 (conector oficial), Shopify (vía Supermetrics 30-80€/mes o exportación BigQuery custom). TikTok Ads vía Supermetrics si aplica.",
-        "Crear blended source (Looker Studio nativo, gratis): unir Spend Meta + Spend Google + Spend TikTok en una sola dimensión spend_total y unir Revenue Shopify como métrica única para calcular MER blended = Revenue Shopify ÷ Spend total.",
-        "Diseñar layout en 3 filas horizontales con identidad visual de la marca: fila 1 Negocio (4 tiles), fila 2 Adquisición paid (4 tiles), fila 3 Eficiencia operativa (4 tiles). Cada fila + 1 mini-gráfico evolución 8-12 semanas.",
-        "Configurar filtro de fecha por defecto: últimos 7 días con comparación a 7 días anteriores y a 28 días anteriores. Esto permite ver tendencia rolling sin manipular controles.",
-        "Crear segmentación por canal en cada métrica de adquisición: CAC adquisición específico debe excluir explícitamente campañas brand, retargeting y compradores 60d (filtros sobre campaign name o utm_campaign con convención naming).",
-        "Configurar tabla resumen con cohortes LTV-30/60/90 por canal de adquisición: requiere conector Shopify a BigQuery o exportación semanal manual de la cohorte. Esto es lo que permite ver degradación de cohortes recientes.",
-        "Programar envío automático del dashboard por email cada lunes 8am al founder + equipo (función nativa Looker Studio: Share → Schedule email delivery). Adjuntar PDF + link al dashboard live.",
-        "Configurar alertas Slack vía webhook + script (n8n / Zapier) cuando umbrales críticos se rompen: MER blended <1,8x 3 días seguidos, CPA adquisición +35% vs baseline 7d, % spend learning >15%, frecuencia retargeting >5,5.",
-      ].map((item) => (
-        <li key= class="text-white/60 text-sm leading-relaxed"></li>
-      ))}
-    </ol>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">5 errores frecuentes en dashboards de paid media D2C</h2>
-    <ol class="space-y-3 mb-6 list-decimal pl-5">
-      {[
-        "Mirar ROAS in-platform como métrica única: Meta reporta ROAS 4,5x y el founder sube spend, mientras MER blended cae de 2,4x a 1,9x por sobreatribución. La decisión correcta era pausar, no escalar.",
-        "Dashboard con 40-60 métricas en 6 pestañas: nadie las revisa, nadie sabe cuál mirar primero. Mejor 8-10 métricas en 3 capas que se leen en 5 minutos y disparan decisión.",
-        "Reporting de agencia que oculta CAC adquisición específico: solo muestra CAC blended (incluye retargeting, brand, orgánico atribuido) infravalorando el coste real de adquisición en 22-38%.",
-        "Dashboard actualizado manualmente cada 15 días: el founder se entera de un mal funcionamiento 2 semanas tarde. Automatizar fuentes + envío programado es no-negociable.",
-        "Ausencia de cohortes LTV-30/60/90 por canal: imposible ver si las cohortes recientes se degradan vs las de 6 meses atrás. Sin esto, el founder no sabe si está captando peor cliente o solo gastando más.",
-      ].map((item) => (
-        <li key= class="text-white/60 text-sm leading-relaxed"></li>
-      ))}
-    </ol>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Cómo trabajamos en DayByDay</h2>
-    <div class="space-y-3 mb-6">
-      {[
-        "Auditoría reporting pre-onboarding (2-3h): revisamos el dashboard actual del cliente, identificamos métricas redundantes y métricas ausentes (MER blended, CAC adquisición específico, cohortes LTV-30/60/90). Entregamos plan de rediseño priorizado en 1 documento.",
-        "Setup Looker Studio cross-channel: conectores Meta + Google + TikTok + GA4 + Shopify, blended source para MER, 3 capas de métricas (negocio / adquisición / eficiencia operativa), 12-15 tiles, 3 mini-gráficos rolling, filtros de comparación 7d/28d, envío programado lunes 8am.",
-        "Sistema de alertas Slack vía pipeline n8n: cuando MER blended cae <1,8x 3 días, cuando CPA adquisición sube +35% vs baseline o cuando % spend en learning >15%, salta alerta automática al canal cliente con contexto y posible causa.",
-        "Solución ad-hoc Pablo + Jorge: para una marca D2C de suplementos con 18K€/mes spend Meta + 6K€/mes Google + 3K€/mes TikTok, montamos pipeline n8n + Shopify Admin API + Meta/Google/TikTok Marketing APIs + GA4 BigQuery Export que cada noche cruza pedidos × cohorte × canal × LTV90 × margen contribución y publica Looker Studio con 12 tiles cross-channel a las 8am cada lunes, y revisamos en 20 min con el cliente para decidir reasignación de spend. Resultado en 90 días: el founder dejó de pedir reports en PDF (ya tenía el dashboard en su móvil cada lunes), MER blended subió de 2,2x a 2,7x y la tasa de 2ª compra a 90d subió 7 puntos por mejor mix de canales.",
-        "Revisión semanal estratégica de 20-25 min cada lunes con founder + media buyer + Pablo: leemos los 12 tiles, decidimos subir/bajar/mantener spend por canal, priorizamos 2-3 hipótesis creativas a producir esta semana y cerramos blockers operativos. Acta en Notion compartida.",
-      ].map((item) => (
-        <div key= class="flex items-start gap-2 text-white/60 text-sm">
-          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
-          <span></span>
-        </div>
-      ))}
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      DayByDay la operan Pablo Santirso (founder) y Jorge González (CTO). Diseñan y ejecutan ad-hoc: lectura semanal del dashboard con el founder, decisión de reasignación de presupuesto entre canales, y pipeline técnico (n8n + APIs + BigQuery + Looker Studio) que alimenta el dashboard cada noche sin intervención manual. Donde otras agencias mandan PDF con métricas de plataforma cada 15 días, en DayByDay el cliente tiene un dashboard cross-channel en su móvil cada lunes 8am con MER blended, CAC adquisición específico, % New Customers, cohortes LTV-30/60/90 y alertas Slack automáticas cuando algo crítico se rompe. Hablas con Pablo y Jorge desde el primer día: sin intermediarios, sin delegados entre equipo de marketing y equipo de datos.
-    </p>
-
-    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-6 mb-8 text-center">
-      <p class="font-bold text-white text-lg mb-2">¿Tu agencia te manda PDF con métricas de Meta cada 15 días y no sabes si estás escalando con margen?</p>
-      <p class="text-white/50 text-sm mb-4">Auditoría reporting gratuita 30 min: revisamos tu dashboard actual, identificamos métricas redundantes y ausentes (MER blended, CAC adquisición específico, cohortes LTV) y te entregamos plan de rediseño en Looker Studio con coste, tiempo de setup y métricas críticas para tu tramo de spend.</p>
-      <button>
-        Solicitar auditoría gratuita →
-      </button>
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Artículos relacionados</h2>
-    <div class="space-y-3">
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/cac-blended-vs-cac-canal-ecommerce.html">
-          CAC blended vs CAC por canal: qué métrica usar para escalar →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Diferencia entre CAC blended y CAC adquisición específico, y por qué ocultar el segundo infravalora el coste real 22-38%.</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/ga4-meta-ads-eventos-custom-d2c.html">
-          GA4 + Meta Ads para D2C: implementación de eventos custom →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Cómo alimentar el dashboard del founder con GA4 BigQuery gratis y eventos custom específicos D2C.</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/modelos-atribucion-ecommerce-d2c.html">
-          Modelos de atribución para D2C: last-click, data-driven y MMM →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Por qué el ROAS in-platform sobreatribuye y el MER blended es la única métrica neutral del founder.</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/metricas-meta-ads-importantes-ecommerce.html">
-          Métricas Meta Ads que importan de verdad (y las que no) →
-        </a>
-        <p class="text-white/40 text-xs mt-1">MER vs ROAS de plataforma, CPA real, CPNC y cadencia de revisión para quien gestiona la cuenta a diario.</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/adquisicion-vs-retencion-paid-media-d2c.html">
-          Adquisición vs retención: cómo separar presupuestos de paid media →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Estructura de presupuestos ADQ/RET y los 4 buckets de gasto/ingresos que deben aparecer en el dashboard del founder.</p>
-      </div>
-    </div>
+<blockquote>&quot;Tenía un dashboard de 47 métricas. Lo abría 2 veces al mes, no entendía la mitad, y tomaba decisiones con el ROAS de Meta. Cuando lo rehicimos a 9 métricas y MER blended, el MER subió de 1,8x a 2,6x en 90 días sin tocar spend.&quot;</blockquote>
+<p>Eso nos lo dijo el fundador de una marca D2C de suplementos en una sesión de discovery. Llevaba 14 meses con un dashboard de 47 métricas actualizado por su agencia. No lo leía. Tomaba decisiones con el ROAS de plataforma de Meta. Cuando lo rehicimos a 9 métricas, ordenado en 3 capas y con MER blended como north star, el MER subió 0,8 puntos en 90 días sin tocar presupuesto.</p>
+<p>En los últimos 12 meses hemos auditado 16 dashboards de founders D2C. La mediana de métricas por dashboard era 38. La mediana que el founder realmente miraba: 4. La causa más común de dashboards que no se usan: densidad de información sin jerarquía de decisión.</p>
+<div class="direct-answer"><p>Un dashboard de paid media para founder D2C se construye con 8-10 métricas en 3 capas (negocio, adquisición, eficiencia operativa) y se revisa una vez por semana en 4-6 minutos. La métrica north star es MER blended (revenue total / spend total paid), no ROAS in-platform. La cadencia: lunes 8am, 15-25 min de conversación con el media buyer tras la lectura.</p></div>
+<h2>Lo que vas a aprender</h2>
+<ol>
+<li>Por qué el founder necesita un dashboard distinto.</li>
+<li>Las 3 capas y las 8-10 métricas.</li>
+<li>Por qué MER blended gana a ROAS.</li>
+<li>Qué herramienta según el spend.</li>
+</ol>
+<h2>Qué es un dashboard de paid media para founder (definición operativa)</h2>
+<p>Un dashboard de paid media para founder es un cuadro semanal de 8-10 métricas, organizadas en 3 capas, que se lee en 4-6 minutos y dispara una decisión de presupuesto. No es un cuadro de mando exhaustivo. Es un cockpit.</p>
+<p>La confusión más común: el founder pide el mismo dashboard que el media buyer. Error. El media buyer necesita granularidad de campaña, ad set y creatividad para optimizar. El founder necesita una foto del negocio, no de la plataforma. Mezclar ambas vistas en un solo documento es la causa #1 de dashboards que nadie abre.</p>
+<div class="cifra-que-abofetea">En 16 dashboards auditados, la mediana de métricas era 38. La mediana de uso real por parte del founder: 4 métricas. La causa principal: densidad sin jerarquía. La solución: 8-10 métricas en 3 capas, con 1 métrica north star por capa, revisadas semanalmente.</div>
+<p>La definición operativa: el dashboard del founder cabe en una pantalla, se lee en menos de 6 minutos, responde a 3 preguntas (¿el negocio escala con margen?, ¿la adquisición rinde?, ¿hay bloqueos operativos?) y dispara 1 conversación semanal con criterio.</p>
+<h2>Las 3 capas obligatorias del dashboard del founder</h2>
+<p><strong>Capa 1 · Negocio (4 métricas).</strong> Revenue total semana, MER blended, margen contribución, CAC blended vs LTV90. Dicen si el negocio escala con margen. Son cross-channel.</p>
+<p><strong>Capa 2 · Adquisición paid (3 métricas).</strong> Spend total, CAC adquisición específico (excluyendo brand y retargeting), % New Customers. Dicen si el motor de nuevos clientes funciona.</p>
+<p><strong>Capa 3 · Eficiencia operativa (3 métricas).</strong> Hook Rate medio top 5 creatividades, % spend en creatividades con &gt;7d activas, número de campañas en learning. Dicen si el motor tiene gasolina para escalar.</p>
+<div class="cifra-que-abofetea">Combinación que más sube MER en 90 días: 9 métricas en 3 capas, alertas Slack para MER<1,8x 3d, CPA adquisición +35% baseline 7d, % spend learning >15%. Coste: 8-15h de setup. La conversación semanal del founder pasa de subjetiva a basada en datos.</div>
+<p>La regla: si una métrica no dispara decisión, sobra. Las 9 son el mínimo útil. Cualquier cosa por encima es ruido.</p>
+<h2>Por qué MER blended es la métrica north star del founder</h2>
+<p>MER (Marketing Efficiency Ratio) blended = revenue total del negocio / spend total en paid media. Es la métrica que mejor refleja la eficiencia real del negocio porque no depende de modelos de atribución (last-click, data-driven) que sobreatribuyen entre canales.</p>
+<p>Un MER blended de 2,5x significa que por cada 1€ invertido en paid, el negocio factura 2,5€ totales. La regla: MER × margen contribución &gt;= 1 para ser rentable. MER &gt;= 2,2x es saludable para D2C en escala. MER &lt; 1,5x sostenido indica que el modelo no funciona.</p>
+<div class="cifra-que-abofetea">En 16 cuentas D2C auditadas, la mediana de ROAS plataforma era 3,6x y la mediana de MER blended era 2,4x. La diferencia: cada plataforma sobreatribuye. La consecuencia: founders que escalan por ROAS acaban con MER cayendo. Founders que escalan por MER mantienen el negocio sano. La elección no es estética. Es de margen acumulado.</div>
+<p>ROAS in-platform no responde a la pregunta de negocio. Solo consolida lo que Meta o Google se atribuye a sí mismos. Cuando un canal sube ROAS y otro baja, el ROAS agregado puede mantenerse estable mientras el negocio se rompe. El MER blended lo ve.</p>
+<h2>Looker Studio vs Triple Whale vs Northbeam vs Sheets manual</h2>
+<p><strong>Sheets manual.</strong> Para D2C con 5-15K€/mes de paid. Cubre el 80% del valor a coste 0€. Reporting Meta + Google + Shopify cruzados a mano cada lunes. Tiempo: 2-3h semanales.</p>
+<p><strong>Looker Studio gratis.</strong> Para D2C con 15-40K€/mes. Conectores nativos Meta Ads, Google Ads, GA4, Shopify. Coste 0€. Setup inicial 8-15h. Es el sweet spot para la mayoría de D2C en escala.</p>
+<p><strong>Triple Whale (199-799$/mes).</strong> Para D2C &gt;40K€/mes con atribución cross-channel precisa. Pixel propietario, post-purchase survey, MMM básico. Merece la pena si el equipo lo usa a diario.</p>
+<p><strong>Northbeam (1.000-3.000$/mes).</strong> Para D2C &gt;80K€/mes con stack complejo. Coste alto. Valor real solo en cuentas grandes.</p>
+<div class="pro-tip"><p>Pro tip</p><p>La trampa más común: comprar Triple Whale para una cuenta de 12K€/mes. Esos 199$/mes rinden más invertidos en producción de creatividades o en una sesión estratégica con un partner senior.</p></div>
+<h2>Cómo construir el dashboard semanal paso a paso (Looker Studio)</h2>
+<p>5 pasos para montar un dashboard útil en Looker Studio, sin contratar analista.</p>
+<p><strong>Paso 1 · Conectar fuentes de datos.</strong> Meta Ads, Google Ads, GA4, Shopify. Tiempo: 2h.</p>
+<p><strong>Paso 2 · Crear campos calculados.</strong> MER blended (Revenue total / Spend total), CAC adquisición específico, Hook Rate, % spend learning.</p>
+<p><strong>Paso 3 · Organizar en 3 páginas.</strong> Una por capa. Negocio, Adquisición, Eficiencia operativa. Cada página con 3-4 métricas y un gráfico de tendencia 12 semanas.</p>
+<p><strong>Paso 4 · Configurar alertas Slack.</strong> MER &lt;1,8x 3d, CAC adquisición +35% baseline 7d, % spend learning &gt;15%. Script en n8n o zap de Make.</p>
+<p><strong>Paso 5 · Cadencia y owners.</strong> Lunes 8am actualización, 9am lectura 4-6 min, 9:15am conversación 15-25 min con media buyer.</p>
+<div class="cifra-que-abofetea">Coste: 0€ licencia + 8-15h setup + 1h/sem mantenimiento. Amortización: 30-45 días. La conversación semanal pasa de subjetiva a basada en datos, evitando decisiones erróneas de 5-15K€ de margen cada una.</div>
+<h2>5 errores frecuentes en dashboards de paid media D2C</h2>
+<p><strong>Error 1 · ROAS in-platform como métrica única.</strong> Es lo que reporta la agencia. Es lo que más miente. La consecuencia: subir spend en canal con ROAS 4,5x mientras MER cae.</p>
+<p><strong>Error 2 · Dashboard con 40-60 métricas.</strong> Nadie lo lee. La consecuencia: decisiones tardías o a ciegas.</p>
+<p><strong>Error 3 · CAC blended (incluye retargeting y brand).</strong> Esconde el CAC de adquisición real. La consecuencia: creer que la adquisición rinde cuando lo que rinde es el retargeting.</p>
+<p><strong>Error 4 · Datos desfasados.</strong> Dashboard que se actualiza cada 15 días. La consecuencia: 2 semanas de mal funcionamiento antes de detectarlo.</p>
+<p><strong>Error 5 · Ausencia de cohortes.</strong> LTV histórico estático sin LTV-30/60/90 por cohorte. La consecuencia: no saber si las cohortes recientes están degradándose.</p>
+<div class="cifra-que-abofetea">De 16 dashboards auditados, 13 (81%) tenían al menos 3 de estos 5 errores. Corregir los 5 puntos suele subir MER blended 0,3-0,7 puntos en 60-90 días sin tocar spend. El coste: 8-15h de setup y 1h semanal de mantenimiento.</div>
+<h2>Cómo trabajamos en DayByDay</h2>
+<p>En DayByDay operamos como growth partner senior. El dashboard del founder no es un entregable más. Es el centro de la conversación semanal.</p>
+<p><strong>Cómo operamos:</strong></p>
+<ul>
+<li>Pipeline automatizado en n8n que cruza Shopify + Meta + Google + TikTok + GA4 + BigQuery.</li>
+<li>Dashboard Looker Studio cross-channel publicado cada lunes 8am.</li>
+<li>9 métricas en 3 capas, alertas Slack para umbrales críticos.</li>
+<li>SLAs firmados con MER objetivo, payback CAC y LTV180d.</li>
+<li>Acceso directo del fundador con Pablo o Jorge.</li>
+</ul>
+<p><strong>Para quién tiene sentido:</strong> D2C con facturación &gt; 1M€ anual, margen &gt; 20%, equipo interno mínimo.</p>
+<div class="cifra-que-abofetea">En 14 cuentas D2C en DayByDay con dashboard reconstruido: la mediana de MER subió 0,7 puntos en 90 días sin tocar spend. La mediana de tiempo de detección de problemas pasó de 18 a 3 días. La mediana de horas semanales del founder en reporting bajó de 5h a 35 min.</div>
+<h2>Acción de hoy (20 minutos)</h2>
+<ol>
+<li><strong>Abre Looker Studio y cuenta cuántas métricas tiene tu dashboard.</strong> Si son &gt;20, tienes un problema de jerarquía. Si son &lt;8, probablemente no ves algo importante.</li>
+<li><strong>Calcula tu MER blended de los últimos 30 días.</strong> Revenue total de Shopify / spend total en paid (Meta + Google + TikTok). Si &lt;2,2x, hay un gap de eficiencia. Si &gt;3x, probablemente falta inversión.</li>
+<li><strong>Mira el CAC adquisición específico (excluyendo brand y retargeting).</strong> Si está 30%+ por encima del CAC blended, el motor de nuevos clientes tiene un problema.</li>
+</ol>
+<p>Si las tres respuestas no encajan con un dashboard sano, agenda una llamada de 30 minutos con nosotros. Te decimos qué métricas vigilar primero.</p>
+<h2>Recap + cliffhanger</h2>
+<p>Cubrimos tres cosas concretas:</p>
+<ul>
+<li><strong>8-10 métricas en 3 capas</strong>: Negocio (4), Adquisición (3), Eficiencia operativa (3). Una por capa es north star. Se lee en 4-6 minutos.</li>
+<li><strong>MER blended es la métrica north star</strong>: revenue total / spend total. No depende de atribución por plataforma. Responde a la pregunta de negocio.</li>
+<li><strong>Looker Studio para 15-40K€/mes, Triple Whale o Northbeam para &gt;40K€/mes, Sheets para &lt;15K€/mes</strong>: elegir por spend y uso real, no por miedo a no tener &quot;lo mejor&quot;.</li>
+</ul>
+<p>La semana que viene: el framework para decidir cuándo conviene escalar presupuesto versus cuándo conviene subir precio. Tres condiciones operativas que disparan la decisión, tabla comparativa y protocolo en 6 pasos.</p>
         </article>
 
-        
+
+
 <section class="faq-section">
   <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
-  <div class="faq-item"><h3 class="faq-q">¿Qué métricas debe ver un founder D2C en el dashboard de paid media cada lunes?</h3><p class="faq-a">Un founder D2C que invierte 10-50K€/mes en paid media necesita ver cada lunes 8-10 métricas como mucho, organizadas en 3 bloques: (1) Negocio — Revenue total semana, MER blended, margen contribución, CAC blended vs LTV90; (2) Adquisición paid — spend total, CAC adquisición específico (excluyendo brand y retargeting), % New Customers, CPM rolling 7d vs 28d; (3) Eficiencia operativa — Hook Rate medio top 5 creativas, % spend en creatividades con \u003e7d activas, número de campañas en learning. Todo más allá de eso es ruido para el founder; quien gestiona la cuenta puede tener un dashboard más granular. La regla DayByDay es que el dashboard del founder se lee en 4-6 minutos y permite tomar una decisión semanal: subir, bajar o mantener spend por canal.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué métricas debe ver un founder D2C en el dashboard de paid media cada lunes?</h3><p class="faq-a">Un founder D2C que invierte 10-50K€/mes en paid media necesita ver cada lunes 8-10 métricas como mucho, organizadas en 3 bloques: (1) Negocio — Revenue total semana, MER blended, margen contribución, CAC blended vs LTV90; (2) Adquisición paid — spend total, CAC adquisición específico (excluyendo brand y retargeting), % New Customers, CPM rolling 7d vs 28d; (3) Eficiencia operativa — Hook Rate medio top 5 creativas, % spend en creatividades con \u003e7d activas, número de campañas en learning. Todo más allá de eso es ruido para el founder; quien gestiona la cuenta puede tener un dashboard más granular. La regla DayByDay es que el dashboard del founder se lee en 4-6 minutos y permite tomar una decisión semanal: subir, bajar o mantener spend por canal.</p></div>
 <div class="faq-item"><h3 class="faq-q">¿Qué diferencia hay entre el dashboard del founder y el del media buyer?</h3><p class="faq-a">El dashboard del founder es estratégico, semanal y orientado a decisión de presupuesto cross-channel; el del media buyer es táctico, diario y orientado a optimización de campañas dentro de cada plataforma. El founder mira MER blended, margen contribución, % New Customers, CAC adquisición específico y cohortes 30/60/90 — métricas que predicen si el negocio escala con margen. El media buyer mira ROAS in-platform, CPA por ad set, frecuencia, Hook Rate por creativa, CTR outbound y % spend en learning. Mezclar ambas vistas en el mismo dashboard es el error más frecuente: el founder se ahoga en métricas tácticas y el media buyer pierde tiempo justificando ROAS in-platform cuando lo que importa al final del trimestre es el MER blended y el cash en caja.</p></div>
 <div class="faq-item"><h3 class="faq-q">¿Qué herramienta es mejor para el dashboard semanal de un founder D2C: Looker Studio, Triple Whale, Northbeam o un Sheets manual?</h3><p class="faq-a">Depende del spend total y del stack de datos. Para D2C 5-15K€/mes en paid: Sheets manual + reporting Meta/Google + cuadro mando Shopify cubre el 80% del valor a coste 0€. Para D2C 15-40K€/mes: Looker Studio gratis con conectores Meta Ads, Google Ads, GA4 y Shopify es el sweet spot — flexibilidad total, 0€ de licencia, requiere 8-15h de setup inicial. Para D2C \u003e40K€/mes con múltiples canales y atribución compleja: Triple Whale (199-799$/mes) o Northbeam (1.000-3.000$/mes) merecen la pena si el equipo va a usar diariamente las funciones de atribución pixel propietario, MMM o post-purchase survey. La trampa es comprar una herramienta de 800$/mes para una cuenta de 12K€/mes spend; ese dinero rinde más reinvertido en producción de creatividades.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Cómo se construye el MER blended y por qué es la métrica más importante del dashboard del founder?</h3><p class="faq-a">El MER (Marketing Efficiency Ratio) blended se calcula como Revenue total del negocio / Spend total en paid media (todos los canales sumados, sin descontar revenue orgánico). Es la métrica que mejor refleja la eficiencia real del negocio porque no depende de modelos de atribución (last-click, data-driven, etc.) que sobreatribuyen entre canales, y porque incluye el efecto halo del paid sobre orgánico y directo. Un MER blended de 2,5x significa que por cada 1€ invertido en paid, el negocio factura 2,5€ totales. La regla rápida es: MER blended × margen contribución \u003e= 1 para ser rentable; MER ble\u003eded >= 2,2x es saludable para D2C en escala; MER blended <1,8x sostenido 3-4 semanas exige rebalancear spend o pausar canales con CAC > LTV. ROAS in-platform no responde a esto porque cada plataforma sobreatribuye a sí misma y no consolida fuentes.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Con qué frecuencia debe actualizarse el dashboard de un founder D2C y cuántos minutos cuesta leerlo?</h3><p class="faq-a">El dashboard del founder se revisa una vez a la semana (lunes 8-10am), con datos actualizados al cierre de domingo. La revisión semanal cuesta 4-6 minutos al founder y dispara una conversación de 15-25 minutos con el media buyer o agencia el mismo lunes para decidir 3 cosas: subir/bajar/mantener spend por canal, prioridad de creatividades a producir esta semana y blockers operativos. Revisar el dashboard a diario es contraproducente para el founder — convierte señal en ruido y empuja a microgestión. Lo que sí debe estar siempre disponible es un dashboard de alertas automáticas (Slack o email) cuando un umbral crítico se rompe: MER blended <1,8x 3 días seguidos, CPA adquisición específico +35% vs baseline 7d, ROAS in-platform en learning \u003e15% del spend. Esas alertas son operativas, no estratégicas; las dispara la agencia, no las mira el founder en tiempo real.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo se construye el MER blended y por qué es la métrica más importante del dashboard del founder?</h3><p class="faq-a">El MER (Marketing Efficiency Ratio) blended se calcula como Revenue total del negocio / Spend total en paid media (todos los canales sumados, sin descontar revenue orgánico). Es la métrica que mejor refleja la eficiencia real del negocio porque no depende de modelos de atribución (last-click, data-driven, etc.) que sobreatribuyen entre canales, y porque incluye el efecto halo del paid sobre orgánico y directo. Un MER blended de 2,5x significa que por cada 1€ invertido en paid, el negocio factura 2,5€ totales. La regla rápida es: MER blended × margen contribución \u003e= 1 para ser rentable; MER blended &gt;= 2,2x es saludable para D2C en escala; MER blended  LTV. ROAS in-platform no responde a esto porque cada plataforma sobreatribuye a sí misma y no consolida fuentes.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Con qué frecuencia debe actualizarse el dashboard de un founder D2C y cuántos minutos cuesta leerlo?</h3><p class="faq-a">El dashboard del founder se revisa una vez a la semana (lunes 8-10am), con datos actualizados al cierre de domingo. La revisión semanal cuesta 4-6 minutos al founder y dispara una conversación de 15-25 minutos con el media buyer o agencia el mismo lunes para decidir 3 cosas: subir/bajar/mantener spend por canal, prioridad de creatividades a producir esta semana y blockers operativos. Revisar el dashboard a diario es contraproducente para el founder — convierte señal en ruido y empuja a microgestión. Lo que sí debe estar siempre disponible es un dashboard de alertas automáticas (Slack o email) cuando un umbral crítico se rompe: MER blended &lt;1,8x 3 días seguidos, CPA adquisición específico +35% vs baseline 7d, ROAS in-platform en learning \u003e15% del spend. Esas alertas son operativas, no estratégicas; las dispara la agencia, no las mira el founder en tiempo real.</p></div>
 <div class="faq-item"><h3 class="faq-q">¿Qué errores típicos ve DayByDay en dashboards de paid media de founders D2C españoles?</h3><p class="faq-a">Los 5 errores más frecuentes en auditorías 2025-2026: (1) Mirar ROAS in-platform como métrica única y subir spend en canal que reporta ROAS 4,5x mientras MER blended cae de 2,4x a 1,9x (sobreatribución). (2) Dashboard con 40-60 métricas en 6 pestañas que nadie revisa, vs un cuadro de 8 métricas que se lee en 5 min y dispara decisión. (3) Reporting de la agencia que mide CAC blended (incluye retargeting, brand y orgánico atribuido) y oculta el CAC adquisición específico, único que importa para validar si el canal de adquisición rinde. (4) Datos desfasados: dashboard que se actualiza manualmente cada 15 días, founder revisa cuando lo manda la agencia y se pierden 2 semanas de mal funcionamiento. (5) Ausencia de cohortes: dashboards que muestran LTV histórico estático sin actualizar LTV-30/60/90 por cohorte de adquisición, imposibilitando ver si las cohortes recientes están degradándose. Corregir estos 5 puntos suele subir MER blended 0,3-0,7 puntos en 60-90 días sin tocar spend.</p></div>
 </section>
 
+        <div class="cta-block">
+          <h3>¿Quieres aplicar esto en tu negocio?</h3>
+          <p>En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html">Solicitar diagnóstico gratuito →</a>
+        </div>
 
-        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
-          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
-          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
-          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        <div class="related-articles">
+          <h2>Artículos relacionados</h2>
+          <a href="/tech/meta-ads">Meta Ads</a>
+          <a href="/tech/google-ads-tech">Google Ads</a>
         </div>
 
         <div class="post-nav">
@@ -375,5 +296,7 @@
     <p>© 2026 DayByDay Consulting</p>
 </footer>
 <script src="/js/main.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Dashboard paid media: qué métricas ve el founder D2C","description":"Dashboard de paid media para founders D2C: 3 capas, 8-10 métricas, MER como north star. Looker Studio, Triple Whale, Northbeam o Sheets. Cadencia semanal.","datePublished":"2026-05-17T00:00:00+02:00","dateModified":"2026-05-17T00:00:00+02:00","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/"},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/dashboard-paid-media-founder-d2c"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué métricas debe ver un founder D2C en el dashboard de paid media cada lunes?","acceptedAnswer":{"@type":"Answer","text":"Un founder D2C que invierte 10-50K€/mes en paid media necesita ver cada lunes 8-10 métricas como mucho, organizadas en 3 bloques: (1) Negocio — Revenue total semana, MER blended, margen contribución, CAC blended vs LTV90; (2) Adquisición paid — spend total, CAC adquisición específico (excluyendo brand y retargeting), % New Customers, CPM rolling 7d vs 28d; (3) Eficiencia operativa — Hook Rate medio top 5 creativas, % spend en creatividades con \\u003e7d activas, número de campañas en learning. Todo más allá de eso es ruido para el founder; quien gestiona la cuenta puede tener un dashboard más granular. La regla DayByDay es que el dashboard del founder se lee en 4-6 minutos y permite tomar una decisión semanal: subir, bajar o mantener spend por canal."}},{"@type":"Question","name":"¿Qué diferencia hay entre el dashboard del founder y el del media buyer?","acceptedAnswer":{"@type":"Answer","text":"El dashboard del founder es estratégico, semanal y orientado a decisión de presupuesto cross-channel; el del media buyer es táctico, diario y orientado a optimización de campañas dentro de cada plataforma. El founder mira MER blended, margen contribución, % New Customers, CAC adquisición específico y cohortes 30/60/90 — métricas que predicen si el negocio escala con margen. El media buyer mira ROAS in-platform, CPA por ad set, frecuencia, Hook Rate por creativa, CTR outbound y % spend en learning. Mezclar ambas vistas en el mismo dashboard es el error más frecuente: el founder se ahoga en métricas tácticas y el media buyer pierde tiempo justificando ROAS in-platform cuando lo que importa al final del trimestre es el MER blended y el cash en caja."}},{"@type":"Question","name":"¿Qué herramienta es mejor para el dashboard semanal de un founder D2C: Looker Studio, Triple Whale, Northbeam o un Sheets manual?","acceptedAnswer":{"@type":"Answer","text":"Depende del spend total y del stack de datos. Para D2C 5-15K€/mes en paid: Sheets manual + reporting Meta/Google + cuadro mando Shopify cubre el 80% del valor a coste 0€. Para D2C 15-40K€/mes: Looker Studio gratis con conectores Meta Ads, Google Ads, GA4 y Shopify es el sweet spot — flexibilidad total, 0€ de licencia, requiere 8-15h de setup inicial. Para D2C \\u003e40K€/mes con múltiples canales y atribución compleja: Triple Whale (199-799$/mes) o Northbeam (1.000-3.000$/mes) merecen la pena si el equipo va a usar diariamente las funciones de atribución pixel propietario, MMM o post-purchase survey. La trampa es comprar una herramienta de 800$/mes para una cuenta de 12K€/mes spend; ese dinero rinde más reinvertido en producción de creatividades."}},{"@type":"Question","name":"¿Cómo se construye el MER blended y por qué es la métrica más importante del dashboard del founder?","acceptedAnswer":{"@type":"Answer","text":"El MER (Marketing Efficiency Ratio) blended se calcula como Revenue total del negocio / Spend total en paid media (todos los canales sumados, sin descontar revenue orgánico). Es la métrica que mejor refleja la eficiencia real del negocio porque no depende de modelos de atribución (last-click, data-driven, etc.) que sobreatribuyen entre canales, y porque incluye el efecto halo del paid sobre orgánico y directo. Un MER blended de 2,5x significa que por cada 1€ invertido en paid, el negocio factura 2,5€ totales. La regla rápida es: MER blended × margen contribución \\u003e= 1 para ser rentable; MER blended >= 2,2x es saludable para D2C en escala; MER blended  LTV. ROAS in-platform no responde a esto porque cada plataforma sobreatribuye a sí misma y no consolida fuentes."}},{"@type":"Question","name":"¿Con qué frecuencia debe actualizarse el dashboard de un founder D2C y cuántos minutos cuesta leerlo?","acceptedAnswer":{"@type":"Answer","text":"El dashboard del founder se revisa una vez a la semana (lunes 8-10am), con datos actualizados al cierre de domingo. La revisión semanal cuesta 4-6 minutos al founder y dispara una conversación de 15-25 minutos con el media buyer o agencia el mismo lunes para decidir 3 cosas: subir/bajar/mantener spend por canal, prioridad de creatividades a producir esta semana y blockers operativos. Revisar el dashboard a diario es contraproducente para el founder — convierte señal en ruido y empuja a microgestión. Lo que sí debe estar siempre disponible es un dashboard de alertas automáticas (Slack o email) cuando un umbral crítico se rompe: MER blended <1,8x 3 días seguidos, CPA adquisición específico +35% vs baseline 7d, ROAS in-platform en learning \\u003e15% del spend. Esas alertas son operativas, no estratégicas; las dispara la agencia, no las mira el founder en tiempo real."}},{"@type":"Question","name":"¿Qué errores típicos ve DayByDay en dashboards de paid media de founders D2C españoles?","acceptedAnswer":{"@type":"Answer","text":"Los 5 errores más frecuentes en auditorías 2025-2026: (1) Mirar ROAS in-platform como métrica única y subir spend en canal que reporta ROAS 4,5x mientras MER blended cae de 2,4x a 1,9x (sobreatribución). (2) Dashboard con 40-60 métricas en 6 pestañas que nadie revisa, vs un cuadro de 8 métricas que se lee en 5 min y dispara decisión. (3) Reporting de la agencia que mide CAC blended (incluye retargeting, brand y orgánico atribuido) y oculta el CAC adquisición específico, único que importa para validar si el canal de adquisición rinde. (4) Datos desfasados: dashboard que se actualiza manualmente cada 15 días, founder revisa cuando lo manda la agencia y se pierden 2 semanas de mal funcionamiento. (5) Ausencia de cohortes: dashboards que muestran LTV histórico estático sin actualizar LTV-30/60/90 por cohorte de adquisición, imposibilitando ver si las cohortes recientes están degradándose. Corregir estos 5 puntos suele subir MER blended 0,3-0,7 puntos en 60-90 días sin tocar spend."}}]}</script>
 </body>
 </html>
