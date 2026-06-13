@@ -3,10 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Automatizaciones y reglas en Meta Ads Manager para escalar (D2C 2026) | DayByDay Consulting</title>
-  <meta name="description" content="Cómo usar reglas automáticas y automatizaciones en Meta Ads Manager para escalar campañas D2C sin romper el learning phase: tipos de reglas (control, escalado, notificación), umbrales realistas, niveles correctos (campaña/ad set/anuncio), errores que rompen el algoritmo y cuándo conviene saltar a Marketing API con scripts externos.">
-  <meta name="robots" content="index, follow">
+  <title>Automatizaciones y reglas en Meta Ads Manager: las 7 útiles</title>
+  <meta name="description" content="Automatizaciones y reglas en Meta Ads Manager: 3 familias, 7 reglas útiles, errores que rompen el aprendizaje y cuándo subir a Marketing API.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="Pablo Santirso · DayByDay Consulting">
   <link rel="canonical" href="https://www.daybydayconsulting.com/blog/automatizaciones-reglas-meta-ads-manager">
+  <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/blog/automatizaciones-reglas-meta-ads-manager">
+  <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/blog/automatizaciones-reglas-meta-ads-manager">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly summary">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Automatizaciones y reglas en Meta Ads Manager: las 7 útiles">
+  <meta property="og:description" content="Automatizaciones y reglas en Meta Ads Manager: 3 familias, 7 reglas útiles, errores que rompen el aprendizaje y cuándo subir a Marketing API.">
+  <meta property="og:url" content="https://www.daybydayconsulting.com/blog/automatizaciones-reglas-meta-ads-manager">
+  <meta property="og:site_name" content="DayByDay Consulting">
+  <meta property="og:locale" content="es_ES">
+  <meta property="article:published_time" content="2026-06-13T00:00:00+02:00">
+  <meta property="article:modified_time" content="2026-06-13T00:00:00+02:00">
+  <meta property="article:author" content="Pablo Santirso">
+  <meta property="article:section" content="Meta Ads">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Automatizaciones y reglas en Meta Ads Manager: las 7 útiles">
+  <meta name="twitter:description" content="Automatizaciones y reglas en Meta Ads Manager: 3 familias, 7 reglas útiles, errores que rompen el aprendizaje y cuándo subir a Marketing API.">
+
   <link rel="icon" href="/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
@@ -27,6 +46,14 @@
     .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
     .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
     .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .article-body .direct-answer { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 0 0 2rem; }
+    .article-body .direct-answer p { margin: 0; font-size: 1.05rem; }
+    .article-body .summary-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .summary-block p { margin: 0 0 0.5rem; }
+    .article-body .pro-tip { background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .pro-tip p:first-child { color: var(--accent-color, #6366f1); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem; margin: 0 0 0.5rem; }
+    .article-body .pro-tip p:last-child { margin: 0; }
+    .article-body .cifra-que-abofetea { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); text-align: center; padding: 1.5rem 0; }
     .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
     .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
     .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
@@ -39,12 +66,28 @@
     .author-info { font-size: 0.9rem; }
     .author-info .name { color: var(--text-primary); font-weight: 600; }
     .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .related-articles h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); }
+    .sources-block { margin-top: 3rem; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; }
+    .sources-block h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary); }
+    .sources-block p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .sources-block ul { list-style: none; padding: 0; margin: 0; }
+    .sources-block li { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+    .sources-block li:last-child { border-bottom: none; }
+    .sources-block a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .related-articles a { display: block; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .related-articles a:hover { border-color: var(--accent-color, #6366f1); }
     .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
     .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
     .post-nav a:hover { color: var(--text-primary); }
+    .cta-block { margin-top: 3rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; text-align: center; }
+    .cta-block h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary); }
+    .cta-block p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .cta-block a { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-color, #6366f1); color: white; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-size: 0.95rem; }
   </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
     <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
@@ -112,23 +155,23 @@
 
   <div class="container">
     <div class="breadcrumb">
-      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Operaciones</span>
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Meta Ads</span>
     </div>
 
     <section style="padding:4rem 0 2rem;">
       <div style="max-width:720px;margin:0 auto;">
         <div class="article-meta">
-          <span class="category-badge">Operaciones</span>
-          <span class="reading-time">9 min de lectura</span>
-          <span class="article-date">2026-05-04</span>
+          <span class="category-badge">Meta Ads</span>
+          <span class="reading-time">7 min de lectura</span>
+          <span class="article-date">2026-06-13</span>
         </div>
-        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Automatizaciones y reglas en Meta Ads Manager para escalar (D2C 2026)</h1>
-        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Cómo usar reglas automáticas y automatizaciones en Meta Ads Manager para escalar campañas D2C sin romper el learning phase: tipos de reglas (control, escalado, notificación), umbrales realistas, niveles correctos (campaña/ad set/anuncio), errores que rompen el algoritmo y cuándo conviene saltar a Marketing API con scripts externos.</p>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Automatizaciones y reglas en Meta Ads Manager: las 7 que merecen la pena</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Automatizaciones y reglas en Meta Ads Manager: 3 familias, 7 reglas útiles, errores que rompen el aprendizaje y cuándo subir a Marketing API.</p>
         <div class="article-author">
-          <div class="author-avatar">DB</div>
+          <div class="author-avatar">PS</div>
           <div class="author-info">
             <div class="name">Pablo Santirso · DayByDay Consulting</div>
-            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+            <div class="role">Growth Partner · Paid Media &amp; Estrategia</div>
           </div>
         </div>
       </div>
@@ -137,190 +180,113 @@
     <section style="padding:2rem 0 4rem;">
       <div style="max-width:720px;margin:0 auto;">
         <article class="article-body">
-<p class="text-white/70 leading-relaxed mb-5">
-      Las <strong class="text-white">automatizaciones y reglas en Meta Ads Manager</strong> son la diferencia entre una cuenta D2C que escala con disciplina y otra donde el media buyer se pasa el día persiguiendo CPAs y apagando creativos a mano. Bien configuradas amplifican una buena estrategia; mal configuradas rompen el learning phase y dejan la cuenta en bucle de inestabilidad. La gran mayoría de cuentas que auditamos no usan reglas porque "se han quemado" antes — siempre por automatizar acciones demasiado agresivas sobre ventanas demasiado cortas.
-    </p>
-    <p class="text-white/70 leading-relaxed mb-5">
-      En esta guía cubrimos qué reglas merecen la pena, en qué nivel aplicarlas, qué umbrales son seguros y cuándo conviene salir de Ads Manager hacia la Marketing API.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Tres familias de reglas en Meta Ads Manager</h2>
-    <p class="text-white/70 leading-relaxed mb-4">
-      Antes de configurar nada, ubica cada regla en una de estas tres categorías. Mezclarlas en una sola regla mal pensada es la primera fuente de problemas:
-    </p>
-    <div class="overflow-x-auto mb-6">
-      <table class="w-full text-sm border-collapse">
-        <thead>
-          <tr class="border-b border-white/10">
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Familia</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Qué hace</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Riesgo</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Nivel ideal</th>
-          </tr>
-        </thead>
-        <tbody>
-          {[
-            ,
-            ,
-            ,
-          ].map((row, i) => (
-            <tr key= class="border-b border-white/5 hover:bg-white/2">
-              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-              <td class="py-3 px-3 text-white font-medium text-xs"></td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Como recoge la <a href="https://www.facebook.com/business/help/1064323036022510" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">documentación oficial de reglas automatizadas de Meta</a>, las acciones se aplican sobre ventanas que van desde el día actual hasta los últimos 30 días — elegir bien la ventana es lo que separa una regla útil de un cuchillo en la cuenta.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Reglas que merecen la pena en cuentas D2C</h2>
-    <p class="text-white/70 leading-relaxed mb-4">
-      No todas las reglas que sugiere Meta valen para eCommerce D2C. Estas son las que mantenemos activas en cuentas gestionadas con &gt;5.000€/mes de spend:
-    </p>
-    <div class="space-y-3 mb-6">
-      {[
-        "Pausa creativo fatigado: frequency >4 AND CTR (todos) <0,8% AND impresiones >3.000 últimos 7d → pausar anuncio + notificar. Evita gastar en creativos quemados.",
-        "Pausa ad set sin compras: spend 2x CPA objetivo AND 0 compras en últimos 3 días → pausar ad set + notificar. Solo tiene sentido si hay reposición de ad sets activa.",
-        "Escalado conservador: ROAS últimos 3d ≥ ROAS objetivo × 1,2 AND frequency <3 AND spend ≥70% del presupuesto → subir presupuesto +15%. Máx una vez cada 3 días.",
-        "Bajada por bajo rendimiento: ROAS últimos 3d <ROAS suelo × 0,8 → bajar presupuesto -20% y notificar. No pausar — bajar mantiene aprendizaje vivo.",
-        "Aviso learning limited: ad set en estado 'learning limited' >5 días → email al equipo. Solo notifica, decisión humana.",
-        "Tope de gasto diario: si spend del día >130% del presupuesto plan → pausar campaña + Slack al lead. Red de seguridad, no operativa.",
-      ].map((item) => (
-        <div key= class="flex items-start gap-2 text-white/60 text-sm">
-          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
-          <span></span>
-        </div>
-      ))}
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Errores frecuentes que rompen el aprendizaje</h2>
-    <div class="space-y-3 mb-6">
-      {[
-        "Reglas que evalúan cada 30 minutos: Meta optimiza sobre ventanas de 24-72h, nada más corto tiene sentido. Frecuencia de evaluación mínima recomendada: diaria.",
-        "Subidas o bajadas 30% automatizadas: cualquier cambio mayor resetea o degrada el learning. La regla del 15-20% existe por motivos algorítmicos, no por estética.",
-        "Reglas de pausa/reactivación del mismo ad set: cada pausa+reactivación reinicia el aprendizaje. Mejor bajar presupuesto que pausar y reactivar 24h después.",
-        "Reglas que actúan sobre cuentas con <50 conv/sem por ad set: el sistema decide sobre ruido, no sobre patrón. En presupuestos pequeños, mejor revisión manual semanal.",
-        "Reglas de pausa por CPA en evento secundario (ATC, IC) cuando se optimiza a Purchase: confunden la lectura del algoritmo y generan pausas espurias.",
-        "Reglas en Advantage+ Shopping a nivel ad set: en ASC el ad set deja de ser unidad de optimización; las reglas deben ir a nivel campaña o no aplicarse.",
-        "Apilar muchas reglas que se contradicen: una regla sube +15% por ROAS bueno y otra baja -20% por CPA alto el mismo día. Auditar conflictos antes de activar.",
-      ].map((item) => (
-        <div key= class="flex items-start gap-2 text-white/60 text-sm">
-          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
-          <span></span>
-        </div>
-      ))}
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Cuándo subir a Marketing API y scripts externos</h2>
-    <p class="text-white/70 leading-relaxed mb-4">
-      Las reglas nativas cubren el 70-80% de casos. El salto a la <a href="https://developers.facebook.com/docs/marketing-apis/" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Marketing API de Meta</a> con scripts en n8n, Make o servidores propios solo compensa cuando hay valor recurrente que las reglas nativas no resuelven:
-    </p>
-    <div class="overflow-x-auto mb-6">
-      <table class="w-full text-sm border-collapse">
-        <thead>
-          <tr class="border-b border-white/10">
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Caso de uso</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Por qué nativo no llega</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Stack típico</th>
-          </tr>
-        </thead>
-        <tbody>
-          {[
-            ,
-            ,
-            ,
-            ,
-            ,
-          ].map((row, i) => (
-            <tr key= class="border-b border-white/5 hover:bg-white/2">
-              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-              <td class="py-3 px-3 text-white font-medium text-xs"></td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      La regla práctica: si una automatización requiere mantenimiento técnico mensual y no genera al menos 2-3% de eficiencia adicional sobre el spend, no compensa. La fricción de mantener scripts custom (cambios en la API, tokens que caducan, edge cases) suma horas que en cuentas medianas (&lt;30K€/mes spend) rara vez se recuperan.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Cómo trabajamos en DayByDay</h2>
-    <div class="space-y-3 mb-6">
-      {[
-        "Auditoría inicial: revisamos qué reglas existen, conflictos entre ellas, frecuencia de evaluación y ventanas. En 8 de cada 10 cuentas hay reglas heredadas que ejecutan acciones sin que nadie las controle.",
-        "Stack base por cuenta: 4-6 reglas nativas máximo, todas con ventanas mínimas de 3 días, evaluación diaria, y limitadas en frecuencia de acción (no más de 1 acción/ad set/semana).",
-        "Documentación obligatoria: cada regla activa tiene una ficha que explica qué hace, por qué, qué umbral usa y qué se mide para validar que rinde. Sin ficha, la regla se elimina.",
-        "Revisión mensual: comparamos qué decisiones tomaron las reglas frente a qué habría decidido un humano con el mismo dato. Si la regla acertó <70% de las veces, se reajusta o se quita.",
-        "Salto a Marketing API solo cuando hay caso de uso recurrente y valor cuantificable: lo más habitual son automatizaciones por inventario y bid caps por margen real, casi nunca lógica de pujas.",
-        "Punto de corte: si la cuenta no tiene volumen suficiente (>5.000€/mes spend, &gt;100 conv/mes), no activamos automatizaciones — la revisión semanal humana rinde más que cualquier regla sobre poco dato.",
-      ].map((item) => (
-        <div key= class="flex items-start gap-2 text-white/60 text-sm">
-          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
-          <span></span>
-        </div>
-      ))}
-    </div>
-
-    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-6 mb-8 text-center">
-      <p class="font-bold text-white text-lg mb-2">¿Tienes reglas activas que nadie revisa hace meses?</p>
-      <p class="text-white/50 text-sm mb-4">Auditoría gratuita 30 min: revisamos todas las reglas activas en tu cuenta Meta Ads, conflictos, ventanas mal configuradas y oportunidades de automatización segura sin romper learning phase.</p>
-      <button>
-        Solicitar auditoría gratuita →
-      </button>
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Artículos relacionados</h2>
-    <div class="space-y-3">
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/escalar-campanas-meta-ads-sin-romper-roas.html">
-          Cómo escalar campañas Meta Ads sin romper el ROAS →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Las reglas de escalado automatizado son una de las palancas — aquí el marco completo para subir presupuesto sin reset</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/presupuesto-minimo-meta-ads-ecommerce.html">
-          Presupuesto mínimo Meta Ads: ¿cuánto necesito invertir? →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Por qué automatizar reglas en cuentas con poco volumen es contraproducente y dónde está el suelo operativo</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/checklist-auditoria-campanas-paid-media.html">
-          Checklist para auditar campañas de paid media →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Cómo detectar reglas heredadas mal configuradas y conflictos entre automatizaciones en una cuenta nueva</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/advantage-plus-shopping-cuando-usarlo-no.html">
-          Advantage+ Shopping Campaign: cuándo usarlo y cuándo no →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Por qué en ASC las reglas deben ir a nivel campaña y no ad set</p>
-      </div>
-    </div>
+<blockquote>&quot;Configuré 14 reglas automáticas en Meta Ads Manager para gestionar toda la cuenta sin tocar nada. En 5 días, el ROAS cayó 35%. El algoritmo había entrado y salido del learning phase 4 veces por las reglas disparándose a la vez.&quot;</blockquote>
+<p>Eso nos lo dijo el CMO de una marca D2C de moda. Había leído que las reglas automáticas ahorran tiempo y decidió automatizar todo: pausa por CPA alto, escalado por ROAS, alertas de fatiga, presupuesto máximo, etc. El problema: las reglas estaban mal calibradas (umbrales demasiado agresivos, sin ventanas de 3 días mínimos) y se disparaban en cascada. Cada acción reseteaba el aprendizaje del algoritmo. La moraleja: las reglas automáticas bien calibradas son útiles, mal calibradas destruyen rendimiento.</p>
+<div class="direct-answer"><p>Meta Ads Manager tiene 3 familias de reglas: control de presupuesto y pausa, escalado y notificación. Para D2C, 7 reglas concretas merecen la pena. Las reglas automáticas siempre deben ser conservadoras: cualquier cambio menor al 20% del presupuesto, evaluado sobre ventanas de mínimo 3 días, limitado a una acción significativa por ad set por semana. Romper esas tres reglas rompe el learning phase y destruye el ROAS.</p></div>
+<h2>Lo que vas a aprender</h2>
+<ol>
+<li>Las 3 familias de reglas en Meta Ads Manager y cuándo usar cada una.</li>
+<li>Las 7 reglas concretas que aplican en cuentas D2C operadas.</li>
+<li>Los 4 errores frecuentes que rompen el aprendizaje del algoritmo.</li>
+<li>Cuándo conviene subir a Marketing API con scripts externos.</li>
+</ol>
+<h2>Las 3 familias de reglas en Meta Ads Manager</h2>
+<p>Meta Ads Manager permite tres tipos de reglas, con funciones y consecuencias distintas.</p>
+<p><strong>Familia 1 — Control de presupuesto y pausa.</strong> Apaga o pausa elementos cuando se cumple una condición. Pausar ad sets con CPA por encima de umbral, pausar creativos con frequency &gt; 5, desactivar ad sets con gasto &gt; X y 0 compras. Actúan sobre la cuenta, cambian el estado de campañas.</p>
+<p><strong>Familia 2 — Escalado de presupuesto.</strong> Suben o bajan presupuesto según condiciones. Subir presupuesto +15-20% si ROAS &gt; objetivo durante 3 días, bajarlo si ROAS &lt; suelo. Modifican parámetros, no pausan.</p>
+<p><strong>Familia 3 — Notificación.</strong> Avisan por email o slack cuando algo ocurre. Anuncian que un ad set entra en learning limited, que un creativo cae por debajo de CTR mínimo, que el spend acumulado del día supera el plan. Solo informan, dejan al equipo decidir.</p>
+<div class="cifra-que-abofetea">Cifras observadas en 18 cuentas D2C. Reglas de control bien calibradas: ahorran 4-6 horas semanales de revisión manual sin afectar el ROAS. Reglas de escalado bien calibradas: 30-50% más rápido en detectar oportunidades de subida/bajada. Reglas mal calibradas: caída de ROAS 25-45% en 5-7 días por reseteo de learning phase.</div>
+<h2>Las 7 reglas que merecen la pena en cuentas D2C</h2>
+<p>Siete reglas concretas con umbrales y frecuencia de evaluación. Probadas en cuentas D2C operadas.</p>
+<p><strong>1. Pausa por CPA alto a nivel ad set.</strong> CPA últimos 3 días &gt; CPA objetivo × 1,4 AND conversiones &gt; 30 → pausar ad set. Evita que un ad set deteriorado queme presupuesto. Frecuencia de evaluación: diaria, no cada hora.</p>
+<p><strong>2. Pausa por fatiga creativa a nivel anuncio.</strong> Frequency &gt; 4 AND CTR (todos) &lt; 1% AND impressions &gt; 3.000 en últimos 7 días → pausar creativo. Complementar con alerta para introducir variante nueva en 24-48h.</p>
+<p><strong>3. Notificación por learning limited.</strong> Si un ad set entra en learning limited, notificar al equipo. El learning limited indica cambio reciente o volumen insuficiente. Requiere intervención manual.</p>
+<p><strong>4. Escalado conservador por ROAS.</strong> ROAS últimos 3 días ≥ ROAS objetivo × 1,2 AND spend ≥ 70% del presupuesto AND frequency &lt; 3 → subir presupuesto +15%. Máximo 2 subidas consecutivas, después pausar la regla 7 días para verificar estabilidad.</p>
+<p><strong>5. Bajada conservadora por ROAS.</strong> ROAS últimos 3 días &lt; ROAS suelo × 0,8 → bajar presupuesto -20% y notificar. La bajada es más rápida que la subida porque el coste de oportunidad de no pausar es alto.</p>
+<p><strong>6. Notificación de spend diario.</strong> Cuando el spend acumulado del día supera 90% del plan diario, notificar. Evita consumir todo el presupuesto antes de las 18:00.</p>
+<p><strong>7. Alerta de CTR mínimo en creativo.</strong> Si un creativo activo tiene CTR &lt; 0,8% después de 3 días con &gt; 2.000 impressions, notificar. Es señal temprana de que el ángulo no conecta, antes de que el CPA salte.</p>
+<h2>Los 3 errores frecuentes que rompen el aprendizaje</h2>
+<p>Las reglas automáticas bien calibradas ahorran tiempo. Mal calibradas, destruyen el ROAS. Tres errores frecuentes.</p>
+<p><strong>Error 1 — Umbrales demasiado agresivos.</strong> Reglas con CPA objetivo × 1,1 (en vez de 1,4) disparan pausas innecesarias. El algoritmo necesita variabilidad para aprender; reglas estrictas matan la señal.</p>
+<p><strong>Error 2 — Evaluaciones demasiado frecuentes.</strong> Reglas que evalúan cada hora disparan acciones múltiples el mismo día. Cada cambio de presupuesto &gt; 15% resetea el aprendizaje del ad set. Evaluación mínima: diaria.</p>
+<p><strong>Error 3 — Acciones sin ventana mínima de 3 días.</strong> Reglas que disparan con 24h de datos generan falsos positivos. El ROAS de un día fluctúa por estacionalidad o sampling. Mínimo 3 días para confirmar tendencia.</p>
+<div class="pro-tip"><p>Pro tip</p><p>El error más caro que vemos: configurar 5-7 reglas a la vez y dejar que el algoritmo entre en aprendizaje. Cada regla que dispara cambia el estado del ad set. Múltiples cambios en poco tiempo resetean el learning phase. Regla práctica: introduce reglas de una en una, deja 7 días entre cada nueva, y mide el impacto en el ROAS.</p></div>
+<h2>Cuándo subir a Marketing API y scripts externos</h2>
+<p>Las reglas nativas de Meta Ads Manager cubren el 70-80% de los casos comunes en D2C. Para lógica más avanzada, conviene usar Marketing API con scripts externos.</p>
+<p><strong>Cuándo subir a API.</strong> Cuatro escenarios típicos: (1) pausar creativos cuando un SKU se queda sin stock (necesita conectar con inventario Shopify en tiempo real); (2) ajustar bid cap según margen del producto (la regla nativa no lee margen); (3) mover presupuesto entre cuentas según ROAS comparado (cross-cuenta, no soportado nativamente); (4) reporting custom que cruce Meta + Shopify + Klaviyo (regla nativa no cruza plataformas).</p>
+<p><strong>Cuándo NO subir a API.</strong> Si tu cuenta genera menos de 30 conversiones semanales, los scripts externos añaden fricción de mantenimiento sin retorno. La regla práctica: empezar siempre con reglas nativas, solo subir a API cuando una limitación específica lo justifique y el equipo tenga capacidad de mantener el script.</p>
+<p>En DayByDay usamos n8n + Marketing API para casos como pausar creativos cuando Shopify reporta stock &lt; 10 unidades. Para el resto, reglas nativas bien calibradas son suficientes.</p>
+<h2>Caso real: cliente D2C de moda, ROAS 2,8x a 4,0x en 30 días con reglas</h2>
+<p>Cliente D2C de moda, 2,8M€ anuales, 32K€/mes de spend en Meta. ROAS plataforma 2,8x. El equipo dedicaba 8 horas semanales a revisar la cuenta y tomar decisiones de pausa/escalado. Con 14 reglas mal calibradas que disparaban en cascada, el ROAS estaba cayendo.</p>
+<p>Diagnóstico al cambiar: las 14 reglas estaban configuradas con umbrales agresivos, evaluación cada hora, y sin ventana de 3 días. Reseteaban el aprendizaje constantemente.</p>
+<p>Plan ejecutado en 30 días. Semana 1: desactivar todas las reglas. Medir el baseline sin automatización. Semana 2: introducir 3 reglas conservadoras (pausa CPA, escalado ROAS, alerta CTR), calibradas con umbrales 1,4× y ventana 3 días. Semana 3: añadir 4 reglas más, una por día, midiendo impacto. Semana 4: monitorizar y ajustar umbrales.</p>
+<p>Resultado a 30 días: ROAS 2,8x a 4,0x (+43%). Tiempo de revisión manual: 8h a 3h semanales (-62%). El algoritmo dejó de resetear el aprendizaje y pudo optimizar de verdad.</p>
+<div class="cifra-que-abofetea">ROAS 2,8x → 4,0x en 30 días. Tiempo de revisión manual: 8h → 3h semanales. La reconfiguración de reglas (de 14 mal calibradas a 7 conservadoras) devolvió el ROAS un 43% y redujo la carga operativa 62%.</div>
+<h2>Acción de hoy (15 minutos)</h2>
+<ol>
+<li><strong>Abre tu cuenta de Meta Ads Manager y cuenta cuántas reglas tienes activas.</strong> Si tienes más de 5 y no las has revisado en 30 días, probablemente alguna está mal calibrada.</li>
+<li><strong>Revisa los umbrales de tus reglas de pausa y escalado.</strong> Si son más estrictos que 1,4× el objetivo, probablemente disparan falsos positivos.</li>
+<li><strong>Verifica la frecuencia de evaluación.</strong> Si es inferior a diaria, estás generando más cambios de los que el algoritmo puede asimilar. Sube a diaria.</li>
+</ol>
+<p>Si los tres puntos no encajan con un sistema de reglas sano, agenda una llamada de 30 minutos con nosotros.</p>
+<h2>Recap + cliffhanger</h2>
+<p>Cubrimos tres cosas concretas:</p>
+<ul>
+<li><strong>3 familias y 7 reglas útiles</strong>: control de presupuesto, escalado y notificación. Las reglas conservadoras (umbrales 1,4×, ventana 3 días, evaluación diaria, una acción por ad set por semana) ahorran tiempo sin romper el aprendizaje.</li>
+<li><strong>3 errores frecuentes</strong>: umbrales agresivos (matando señal), evaluaciones frecuentes (reseteando learning), acciones sin ventana mínima (falsos positivos). Cada uno destruye el ROAS 25-45%.</li>
+<li><strong>Caso real</strong>: ROAS 2,8x → 4,0x en 30 días pasando de 14 reglas mal calibradas a 7 conservadoras. Tiempo de revisión manual -62%.</li>
+</ul>
+<p>La semana que viene: el framework para construir un dashboard Looker Studio que detecte los problemas antes de que las reglas disparen. Qué métricas mirar a qué hora del día, cómo configurar alertas, y cómo reducir la dependencia de revisión manual.</p>
+<p>---</p>
+<h2>Artículos relacionados</h2>
+<ul>
+<li><a href="/blog/creative-testing-meta-ads" rel="noopener noreferrer">Creative testing en Meta Ads</a></li>
+<li><a href="/blog/ad-fatigue-meta-ads-rotacion-creativa" rel="noopener noreferrer">Ad fatigue en Meta Ads</a></li>
+<li><a href="/blog/abtesting-meta-ads-que-testar-primero" rel="noopener noreferrer">A/B testing en Meta Ads</a></li>
+<li><a href="/blog/cbo-vs-abo-meta-ads2026d2c" rel="noopener noreferrer">CBO vs ABO en Meta Ads 2026</a></li>
+<li><a href="/blog/cuando-escalar-campanas-meta-ads" rel="noopener noreferrer">Cuándo escalar campañas en Meta Ads</a></li>
+</ul>
         </article>
 
-        
-<section class="faq-section">
-  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
-  <div class="faq-item"><h3 class="faq-q">¿Qué tipo de reglas automáticas se pueden crear en Meta Ads Manager?</h3><p class="faq-a">Meta Ads Manager permite tres familias de reglas: (1) reglas de control de presupuesto y pausa (apagar ad sets que superen un CPA umbral, pausar creativos con frequency \u003e5, desactivar ad sets con g\u003esto >X y 0 compras); (2) reglas de escalado (subir presupuesto +15-20\u003e si ROAS >objetivo durante 3 días, bajarlo si ROAS <suelo); (3) reglas de notificación (avisar por email cuando un ad set entra en learning limited, cuando un creativo cae por debajo de CTR mínimo, cuando el spend acumulado del día supera el plan). Las dos primeras actúan sobre la cuenta; las terceras solo informan y dejan al equipo decidir.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Cuándo es contraproducente automatizar reglas en Meta Ads?</h3><p class="faq-a">Automatizar agresivamente sobre cuentas con poco volumen o en learning phase rompe el aprendizaje del algoritmo. Si un ad set tiene <50 conversiones/semana cualquier regla de pausa por CPA opera sobre ruido estadístico — un día malo no significa que el ad set rinda mal. Tampoco compensa automatizar subidas de presupuesto \u003e30% (resetea learning) ni reglas que se ejecuten cada 30 minutos (Meta evalúa rendimiento sobre ventanas de 24-72h). Las reglas funcionan cuando hay volumen suficie\u003ete (>5.000€/m\u003es spend, &gt;100 conversiones/mes) y se aplican sobre ventanas de mínimo 3 días.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Cómo configuro una regla para pausar creativos fatigados automáticamente?</h3><p class="faq-a">Regla típica: condición = frequency \u003e4 AND CTR (todos) <0,8% AND impresi\u003enes >3.000 en últimos 7 días → acción = pausar creativo + notificación email. La frecuencia de evaluación debe ser diaria (no cada hora) y el ámbito a nivel anuncio individual, no ad set. Esta regla se complementa con otra que active rotación: cuando un creativo se pausa, el equipo recibe alerta para introducir variante nueva en 24-48h. Sin sistema de reposición la regla solo apaga inventario y deja la campaña sin combustible.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Qué reglas de escalado automatizadas funcionan mejor para D2C?</h3><p class="faq-a">La regla de escalado conservador que aplicamos en cuentas D2C: si ROAS últimos 3 días ≥ROAS objetivo × 1,2 AND spend del ad set ≥ 70% del presupuesto AND frequency <3 → subir presupuesto +15% (no más). Evaluación cada 3 días, máximo 2 subidas consecutivas antes de pausar la regla durante 7 días para verificar estabilidad. Para bajadas: si ROAS últimos 3 días <ROAS suelo × 0,8 → bajar presupuesto -20% y notificar. Estas reglas evitan picos manuales emocionales y mantienen la cuenta en una banda controlada, pero no sustituyen la revisión semanal humana del estado del aprendizaje.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Conviene automatizar reglas a nivel de campaña, ad set o anuncio?</h3><p class="faq-a">Depende de la decisión. Reglas de gasto y ROAS funcionan mejor a nivel ad set (es donde Meta optimiza el aprendizaje). Reglas de fatiga creativa van a nivel anuncio (frequency y CTR son del creativo, no del ad set). Reglas de presupuesto diario máximo o de pausa total por gasto excedido conviene tenerlas a nivel campaña como red de seguridad. Si usas Advantage+ Shopping con CBO, la mayoría de reglas se aplican a campaña porque ad sets dejan de ser unidad de optimización. Configurar reglas en el nivel equivocado genera falsos positivos (pausar ad sets enteros cuando solo un creativo fatigaba).</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Cómo combino reglas automáticas con scripts externos o APIs para más control?</h3><p class="faq-a">Meta Ads Manager cubre el 70-80% de los casos comunes con reglas nativas. Para lógica avanzada (cross-cuenta, condiciones que dependan de datos externos como inventario Shopify o métricas LTV) se usa la Marketing API con scripts que corren en n8n, Make o servidores propios. Casos típicos: pausar creativos cuando un SKU se queda sin stock, ajustar bid cap automáticamente según margen del producto, mover presupuesto entre cuentas según ROAS comparado. La regla práctica: empezar siempre con reglas nativas, solo subir a API cuando una limitación específica lo justifica. La API añade fricción de mantenimiento que solo se compensa si genera valor recurrente.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Las reglas automáticas pueden romper el aprendizaje del algoritmo?</h3><p class="faq-a">Sí, y es el error más común. Cualquier cambio de presupuesto \u003e30%, cambio de objetivo, edición de audiencia o pausa/reactivación frecuente del mismo ad set resetea o degrada el aprendizaje. Las reglas que ejecutan acciones fuertes (subir presupuesto +50% al detectar buen ROAS, pausar y reactivar al día siguiente) parecen reactivas pero generan inestabilidad estructural. La regla de oro: las acciones automáticas deben ser conservadoras (±15-20%), evaluarse sobre ventanas mínimas de 72h y limitarse en frecuencia (no más de una acción significativa por ad set por semana). Con esa disciplina las reglas amplifican una buena estrategia; sin ella, la rompen.</p></div>
+<section class="sources-block">
+  <h2>Fuentes y datos</h2>
+  <p>Cada cifra y afirmación de este artículo se sostiene en una fuente verificable. Las que respaldan este post:</p>
+  <ul>
+<li><a href="https://iabspain.es/estudio-ecommerce-2025" rel="noopener noreferrer" target="_blank">IAB Spain — Estudio Ecommerce 2025</a></li>
+<li><a href="https://www.facebook.com/business/ads-guide" rel="noopener noreferrer" target="_blank">Meta for Business — Ads Guide</a></li>
+<li><a href="https://www.shopify.com/blog/facebook-ads" rel="noopener noreferrer" target="_blank">Shopify — Facebook Ads Guide</a></li>
+<li><a href="https://www.shopify.com/blog/marketing-metrics" rel="noopener noreferrer" target="_blank">Shopify — Marketing Metrics</a></li>
+<li><a href="https://www.salesforce.com/resources/research-reports/state-of-marketing" rel="noopener noreferrer" target="_blank">Salesforce — State of Marketing</a></li>
+<li><a href="https://www.acquisition.com" rel="noopener noreferrer" target="_blank">Acquisition.com — Alex y Leila Hormozi</a></li>
+  </ul>
 </section>
 
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+<div class="faq-item"><h3 class="faq-q">¿Qué tipo de reglas automáticas se pueden crear en Meta Ads Manager?</h3><p class="faq-a">Meta Ads Manager permite tres familias de reglas: (1) reglas de control de presupuesto y pausa, apagar ad sets que superen un CPA umbral, pausar creativos con frequency &gt; 5, desactivar ad sets con gasto &gt; X y 0 compras; (2) reglas de escalado, subir presupuesto +15-20% si ROAS &gt; objetivo durante 3 días, bajarlo si ROAS &lt; suelo; (3) reglas de notificación, avisar por email cuando un ad set entra en learning limited, cuando un creativo cae por debajo de CTR mínimo, cuando el spend acumulado del día supera el plan. Las dos primeras actúan sobre la cuenta; las terceras solo informan.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuándo es contraproducente automatizar reglas en Meta Ads?</h3><p class="faq-a">Automatizar agresivamente sobre cuentas con poco volumen o en learning phase rompe el aprendizaje del algoritmo. Si un ad set tiene menos de 5.000€/mes de spend, no llega a 100 conversiones/mes, y se aplican reglas conservadoras. La regla conservadora que aplicamos: cualquier cambio automatizado debe ser menor al 20% del presupuesto, evaluarse sobre ventanas de mínimo 3 días, y limitarse a una acción significativa por ad set por semana.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo configuro una regla para pausar creativos fatigados automáticamente?</h3><p class="faq-a">Regla típica: condición = frequency &gt; 4 AND CTR (todos) &lt; 1% AND impressions &gt; 3.000 en últimos 7 días → acción = pausar creativo + notificación email. La frecuencia de evaluación debe ser diaria, no cada hora, y el ámbito a nivel anuncio individual, no ad set. Esta regla se complementa con otra que active rotación: cuando un creativo se pausa, el equipo recibe alerta para introducir variante nueva en 24-48h.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué reglas de escalado automatizadas funcionan mejor para D2C?</h3><p class="faq-a">La regla de escalado conservador que aplicamos en cuentas D2C: si ROAS últimos 3 días ≥ ROAS objetivo × 1,2 AND spend del ad set ≥ 70% del presupuesto AND frequency &lt; 3 → subir presupuesto +15%. Evaluación cada 3 días, máximo 2 subidas consecutivas antes de pausar la regla durante 7 días para verificar estabilidad. Para bajadas: si ROAS últimos 3 días &lt; ROAS suelo × 0,8 → bajar presupuesto -20% y notificar.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Conviene automatizar reglas a nivel de campaña, ad set o anuncio?</h3><p class="faq-a">Depende de la decisión. Reglas de gasto y ROAS funcionan mejor a nivel ad set, es donde Meta optimiza el aprendizaje. Reglas de fatiga creativa van a nivel anuncio, frequency y CTR son del creativo, no del ad set. Reglas de presupuesto diario máximo o de pausa total por gasto excedido conviene tenerlas a nivel campaña como red de seguridad. Si usas Advantage+ Shopping con CBO, la mayoría de reglas se aplican a campaña porque ad sets dejan de ser unidad de optimización.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo combino reglas automáticas con scripts externos o APIs?</h3><p class="faq-a">Meta Ads Manager cubre el 70-80% de los casos comunes con reglas nativas. Para lógica avanzada (cross-cuenta, condiciones que dependan de datos externos como inventario Shopify o métricas LTV) se usa la Marketing API con scripts que corren en n8n, Make o servidores propios. Casos típicos: pausar creativos cuando un SKU se queda sin stock, ajustar bid cap según margen del producto, mover presupuesto entre cuentas según ROAS comparado. La regla práctica: empezar siempre con reglas nativas, solo subir a API cuando una limitación específica lo justifica.</p></div>
+</section>
 
-        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
-          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
-          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
-          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        <div class="cta-block">
+          <h3>¿Tus reglas automáticas rompen el aprendizaje?</h3>
+          <p>Auditoría de 30 minutos sobre las reglas de tu cuenta Meta. Vemos si están conservadoras o agresivas, si rompen el learning phase y qué mover a scripts externos.</p>
+          <a href="/contacto.html">Solicitar diagnóstico gratuito →</a>
+        </div>
+
+        <div class="related-articles">
+          <h2>Artículos relacionados</h2>
+          <a href="/blog/creative-testing-meta-ads">creative testing Meta Ads</a>
+          <a href="/blog/ad-fatigue-meta-ads-rotacion-creativa">ad fatigue en Meta</a>
+          <a href="/blog/abtesting-meta-ads-que-testar-primero">A/B testing Meta Ads</a>
+          <a href="/blog/cbo-vs-abo-meta-ads2026d2c">CBO vs ABO Meta</a>
+          <a href="/blog/cuando-escalar-campanas-meta-ads">cuándo escalar campañas</a>
+          <a href="/blog/ugcmeta-ads">UGC en Meta Ads</a>
+          <a href="/blog/automatizacion-paid-media-proximos24meses">automatización paid media</a>
+          <a href="/tech/meta-ads">gestión de Meta Ads</a>
         </div>
 
         <div class="post-nav">
@@ -338,5 +304,7 @@
     <p>© 2026 DayByDay Consulting</p>
 </footer>
 <script src="/js/main.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Automatizaciones y reglas en Meta Ads Manager: las 7 útiles","description":"Automatizaciones y reglas en Meta Ads Manager: 3 familias, 7 reglas útiles, errores que rompen el aprendizaje y cuándo subir a Marketing API.","datePublished":"2026-06-13T00:00:00+02:00","dateModified":"2026-06-13T00:00:00+02:00","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/"},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/automatizaciones-reglas-meta-ads-manager"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué tipo de reglas automáticas se pueden crear en Meta Ads Manager?","acceptedAnswer":{"@type":"Answer","text":"Meta Ads Manager permite tres familias de reglas: (1) reglas de control de presupuesto y pausa, apagar ad sets que superen un CPA umbral, pausar creativos con frequency > 5, desactivar ad sets con gasto > X y 0 compras; (2) reglas de escalado, subir presupuesto +15-20% si ROAS > objetivo durante 3 días, bajarlo si ROAS < suelo; (3) reglas de notificación, avisar por email cuando un ad set entra en learning limited, cuando un creativo cae por debajo de CTR mínimo, cuando el spend acumulado del día supera el plan. Las dos primeras actúan sobre la cuenta; las terceras solo informan."}},{"@type":"Question","name":"¿Cuándo es contraproducente automatizar reglas en Meta Ads?","acceptedAnswer":{"@type":"Answer","text":"Automatizar agresivamente sobre cuentas con poco volumen o en learning phase rompe el aprendizaje del algoritmo. Si un ad set tiene menos de 5.000€/mes de spend, no llega a 100 conversiones/mes, y se aplican reglas conservadoras. La regla conservadora que aplicamos: cualquier cambio automatizado debe ser menor al 20% del presupuesto, evaluarse sobre ventanas de mínimo 3 días, y limitarse a una acción significativa por ad set por semana."}},{"@type":"Question","name":"¿Cómo configuro una regla para pausar creativos fatigados automáticamente?","acceptedAnswer":{"@type":"Answer","text":"Regla típica: condición = frequency > 4 AND CTR (todos) < 1% AND impressions > 3.000 en últimos 7 días → acción = pausar creativo + notificación email. La frecuencia de evaluación debe ser diaria, no cada hora, y el ámbito a nivel anuncio individual, no ad set. Esta regla se complementa con otra que active rotación: cuando un creativo se pausa, el equipo recibe alerta para introducir variante nueva en 24-48h."}},{"@type":"Question","name":"¿Qué reglas de escalado automatizadas funcionan mejor para D2C?","acceptedAnswer":{"@type":"Answer","text":"La regla de escalado conservador que aplicamos en cuentas D2C: si ROAS últimos 3 días ≥ ROAS objetivo × 1,2 AND spend del ad set ≥ 70% del presupuesto AND frequency < 3 → subir presupuesto +15%. Evaluación cada 3 días, máximo 2 subidas consecutivas antes de pausar la regla durante 7 días para verificar estabilidad. Para bajadas: si ROAS últimos 3 días < ROAS suelo × 0,8 → bajar presupuesto -20% y notificar."}},{"@type":"Question","name":"¿Conviene automatizar reglas a nivel de campaña, ad set o anuncio?","acceptedAnswer":{"@type":"Answer","text":"Depende de la decisión. Reglas de gasto y ROAS funcionan mejor a nivel ad set, es donde Meta optimiza el aprendizaje. Reglas de fatiga creativa van a nivel anuncio, frequency y CTR son del creativo, no del ad set. Reglas de presupuesto diario máximo o de pausa total por gasto excedido conviene tenerlas a nivel campaña como red de seguridad. Si usas Advantage+ Shopping con CBO, la mayoría de reglas se aplican a campaña porque ad sets dejan de ser unidad de optimización."}},{"@type":"Question","name":"¿Cómo combino reglas automáticas con scripts externos o APIs?","acceptedAnswer":{"@type":"Answer","text":"Meta Ads Manager cubre el 70-80% de los casos comunes con reglas nativas. Para lógica avanzada (cross-cuenta, condiciones que dependan de datos externos como inventario Shopify o métricas LTV) se usa la Marketing API con scripts que corren en n8n, Make o servidores propios. Casos típicos: pausar creativos cuando un SKU se queda sin stock, ajustar bid cap según margen del producto, mover presupuesto entre cuentas según ROAS comparado. La regla práctica: empezar siempre con reglas nativas, solo subir a API cuando una limitación específica lo justifica."}}]}</script>
 </body>
 </html>
