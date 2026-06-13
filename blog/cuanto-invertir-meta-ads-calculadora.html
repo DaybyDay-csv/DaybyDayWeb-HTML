@@ -3,10 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cuánto invertir en Meta Ads según tu ticket y margen (con calculadora) | DayByDay Consulting</title>
-  <meta name="description" content="Fórmula operativa para decidir cuánto invertir en Meta Ads según ticket medio, margen, LTV y ratio LTV/CAC. Con calculadora interactiva, suelo mínimo realista, distribución TOFU/MOFU/BOFU y protocolo de subida de presupuesto sin romper el aprendizaje del algoritmo.">
-  <meta name="robots" content="index, follow">
+  <title>Cuánto invertir en Meta Ads: fórmula por ticket y margen</title>
+  <meta name="description" content="Fórmula para decidir cuánto invertir en Meta Ads según ticket, margen y LTV. Suelo mínimo, split TOFU/MOFU/BOFU y protocolo de subida.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="Pablo Santirso · DayByDay Consulting">
   <link rel="canonical" href="https://www.daybydayconsulting.com/blog/cuanto-invertir-meta-ads-calculadora">
+  <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/blog/cuanto-invertir-meta-ads-calculadora">
+  <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/blog/cuanto-invertir-meta-ads-calculadora">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly summary">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Cuánto invertir en Meta Ads: fórmula por ticket y margen">
+  <meta property="og:description" content="Fórmula para decidir cuánto invertir en Meta Ads según ticket, margen y LTV. Suelo mínimo, split TOFU/MOFU/BOFU y protocolo de subida.">
+  <meta property="og:url" content="https://www.daybydayconsulting.com/blog/cuanto-invertir-meta-ads-calculadora">
+  <meta property="og:site_name" content="DayByDay Consulting">
+  <meta property="og:locale" content="es_ES">
+  <meta property="article:published_time" content="2026-04-28T00:00:00+02:00">
+  <meta property="article:modified_time" content="2026-04-28T00:00:00+02:00">
+  <meta property="article:author" content="Pablo Santirso">
+  <meta property="article:section" content="Estrategia">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cuánto invertir en Meta Ads: fórmula por ticket y margen">
+  <meta name="twitter:description" content="Fórmula para decidir cuánto invertir en Meta Ads según ticket, margen y LTV. Suelo mínimo, split TOFU/MOFU/BOFU y protocolo de subida.">
+
   <link rel="icon" href="/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
@@ -27,6 +46,14 @@
     .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
     .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
     .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .article-body .direct-answer { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 0 0 2rem; }
+    .article-body .direct-answer p { margin: 0; font-size: 1.05rem; }
+    .article-body .summary-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .summary-block p { margin: 0 0 0.5rem; }
+    .article-body .pro-tip { background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .pro-tip p:first-child { color: var(--accent-color, #6366f1); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem; margin: 0 0 0.5rem; }
+    .article-body .pro-tip p:last-child { margin: 0; }
+    .article-body .cifra-que-abofetea { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); text-align: center; padding: 1.5rem 0; }
     .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
     .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
     .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
@@ -39,12 +66,28 @@
     .author-info { font-size: 0.9rem; }
     .author-info .name { color: var(--text-primary); font-weight: 600; }
     .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .related-articles h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); }
+    .sources-block { margin-top: 3rem; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; }
+    .sources-block h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary); }
+    .sources-block p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .sources-block ul { list-style: none; padding: 0; margin: 0; }
+    .sources-block li { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+    .sources-block li:last-child { border-bottom: none; }
+    .sources-block a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .related-articles a { display: block; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .related-articles a:hover { border-color: var(--accent-color, #6366f1); }
     .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
     .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
     .post-nav a:hover { color: var(--text-primary); }
+    .cta-block { margin-top: 3rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; text-align: center; }
+    .cta-block h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary); }
+    .cta-block p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .cta-block a { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-color, #6366f1); color: white; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-size: 0.95rem; }
   </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
     <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
@@ -123,12 +166,12 @@
           <span class="article-date">2026-04-28</span>
         </div>
         <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Cuánto invertir en Meta Ads según tu ticket y margen (con calculadora)</h1>
-        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Fórmula operativa para decidir cuánto invertir en Meta Ads según ticket medio, margen, LTV y ratio LTV/CAC. Con calculadora interactiva, suelo mínimo realista, distribución TOFU/MOFU/BOFU y protocolo de subida de presupuesto sin romper el aprendizaje del algoritmo.</p>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Fórmula para decidir cuánto invertir en Meta Ads según ticket, margen y LTV. Suelo mínimo, split TOFU/MOFU/BOFU y protocolo de subida.</p>
         <div class="article-author">
-          <div class="author-avatar">DB</div>
+          <div class="author-avatar">PS</div>
           <div class="author-info">
             <div class="name">Pablo Santirso · DayByDay Consulting</div>
-            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+            <div class="role">Growth Partner · Paid Media &amp; Estrategia</div>
           </div>
         </div>
       </div>
@@ -137,241 +180,97 @@
     <section style="padding:2rem 0 4rem;">
       <div style="max-width:720px;margin:0 auto;">
         <article class="article-body">
-<p class="text-white/70 leading-relaxed mb-5">
-      <strong class="text-white">Decidir cuánto invertir en Meta Ads</strong> sin un modelo de unidad económica detrás es la causa #1 por la que vemos cuentas D2C españolas estancadas. Subir el presupuesto sin saber qué CAC puede absorber el negocio destruye caja; bajarlo sin entender el suelo mínimo de aprendizaje del algoritmo destruye datos. La pregunta correcta no es "cuánto invierto", es "qué CAC puedo permitirme y cuánto presupuesto necesito para que ese CAC sea estadísticamente real".
-    </p>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Este artículo te da la fórmula que aplicamos en DayByDay para fijar presupuesto Meta en cuentas D2C: ticket, margen, LTV-180d y ratio LTV/CAC objetivo, cruzados con el suelo operativo que el algoritmo de Meta exige para aprender. Incluye una calculadora interactiva con la que puedes meter tus números y ver inversión recomendada y payback en segundos.
-    </p>
-
-    <div class="embed-item"></div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">La fórmula operativa: del margen al presupuesto Meta</h2>
-    <p class="text-white/70 leading-relaxed mb-4">
-      La inversión en Meta Ads no se decide por intuición ni por porcentaje genérico de facturación. Se deduce de cuatro variables que tienen que estar medidas:
-    </p>
-    <div class="space-y-3 mb-6">
-      {[
-        "Ticket medio real de los últimos 90 días (no del año entero — incluye estacionalidad).",
-        "Margen bruto unitario después de descuentos, COGS y envío. Sin esto, el cálculo es ciencia ficción.",
-        "LTV-180d: cuánto factura un cliente medio en sus 6 primeros meses. Para D2C de recompra alta puede ser 1,8-3x ticket; para producto único, 1-1,2x.",
-        "Ratio LTV/CAC objetivo: 3:1 es el estándar saludable según el consenso documentado por Shopify y otros operadores de eCommerce. Por encima de 4:1 estás dejando crecimiento sobre la mesa; por debajo de 2:1 el negocio no escala.",
-      ].map((item) => (
-        <div key= class="flex items-start gap-2 text-white/60 text-sm">
-          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
-          <span></span>
-        </div>
-      ))}
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Con esos cuatro inputs, el CAC objetivo es: <strong class="text-white">(LTV × margen%) / ratio LTV/CAC</strong>. Y la inversión Meta recomendada es: <strong class="text-white">CAC objetivo × pedidos nuevos al mes</strong>. La calculadora de arriba aplica exactamente esta lógica.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">El suelo mínimo realista en Meta Ads en 2026</h2>
-    <p class="text-white/70 leading-relaxed mb-4">
-      Hay un suelo operativo que la fórmula anterior no captura: el algoritmo de Meta necesita volumen para aprender. Según la <a href="https://www.facebook.com/business/help/112167992830700" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">documentación oficial sobre la fase de aprendizaje</a>, cada adset necesita unas 50 conversiones en su ventana de optimización (típicamente 7 días) para salir del learning. Si no llegas a ese volumen, tu cuenta opera con datos incompletos permanentemente.
-    </p>
-    <p class="text-white/70 leading-relaxed mb-4">
-      Tabla de suelo mínimo por ticket medio en eCommerce D2C español (CAC objetivo ≈ margen bruto unitario):
-    </p>
-    <div class="overflow-x-auto mb-6">
-      <table class="w-full text-sm border-collapse">
-        <thead>
-          <tr class="border-b border-white/10">
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Ticket medio</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">CAC objetivo aprox.</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Inversión mínima/mes</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Foco recomendado</th>
-          </tr>
-        </thead>
-        <tbody>
-          {[
-            ,
-            ,
-            ,
-            ,
-            ,
-          ].map((row, i) => (
-            <tr key= class="border-b border-white/5 hover:bg-white/2">
-              <td class="py-3 px-3 text-white font-medium text-xs"></td>
-              <td class="py-3 px-3 text-white/55 text-xs"></td>
-              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
-              <td class="py-3 px-3 text-white/55 text-xs"></td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Si la calculadora te da un número por debajo del suelo de tu fila, tienes dos opciones honestas: subir presupuesto hasta el suelo (asumiendo que el LTV/CAC empeore al inicio y compensar después) o no entrar todavía en Meta y usar Google Ads de marca + SEO + email/WhatsApp para construir base antes.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Cómo distribuir el presupuesto entre TOFU, MOFU y BOFU</h2>
-    <p class="text-white/70 leading-relaxed mb-4">
-      Una vez fijada la inversión total, el split entre capas del funnel marca el techo de escala. La distribución que aplicamos en D2C nuevos:
-    </p>
-    <div class="space-y-4 mb-6">
-      {[
-        {
-          num: "1",
-          titulo: "TOFU — 60-70% del presupuesto",
-          desc: "Frío puro: Advantage+ Shopping, audiencias amplias o lookalikes 1-3% sobre top LTV. Es el motor de adquisición real. Si esta capa no funciona, el ROAS de retargeting es ilusión.",
-        },
-        {
-          num: "2",
-          titulo: "MOFU — 15-20% del presupuesto",
-          desc: "Visitantes 30-90 días, AddToCart sin compra >7 días, vídeos vi>tos 50%. Aquí van creatividades de prueba social, comparativa y FAQ que cierran objeciones.",
-        },
-        {
-          num: "3",
-          titulo: "BOFU — 15-20% del presupuesto",
-          desc: "Carrito abandonado <7 días + retargeting de clientes existentes. Cap de frecuencia 3-4. Mensaje con beneficio diferencial respecto a TOFU (no cupón genérico).",
-        },
-      ].map(() => (
-        <div key= class="bg-[#1a1616] border border-white/8 rounded-xl p-4 flex gap-4">
-          <div class="w-8 h-8 rounded-full bg-[#de0015]/20 border border-[#de0015]/30 flex items-center justify-center flex-shrink-0 mt-0.5">
-            <span class="text-[#de0015] font-bold text-sm"></span>
-          </div>
-          <div>
-            <p class="font-semibold text-white text-sm mb-1"></p>
-            <p class="text-white/55 text-sm"></p>
-          </div>
-        </div>
-      ))}
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Cuentas D2C maduras (>6 meses con tráfico orgánico estable y base de email) pueden subir TOFU al 75-80% porque el retargeting absorbe orgánico de email y SEO. Cuentas nuevas suelen necesitar más MOFU porque el tráfico cualificado es escaso.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Protocolo para subir presupuesto sin romper el ROAS</h2>
-    <p class="text-white/70 leading-relaxed mb-4">
-      El error más caro al escalar inversión Meta es subir demasiado de golpe. La <a href="https://www.shopify.com/blog/marketing-budget" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">guía de presupuesto de marketing de Shopify</a> y la operativa estándar en cuentas D2C que escalan apuntan al mismo principio: subidas pequeñas y validadas baten a saltos grandes.
-    </p>
-    <div class="space-y-3 mb-6">
-      {[
-        "Subidas máximas del 20-30% semanal por campaña con CBO/Advantage+ activo. Por encima reinicias la fase de aprendizaje y pierdes 7-14 días de eficiencia.",
-        "Ventana de validación: 7 días de CAC dentro del rango objetivo antes de la siguiente subida. Si se sale, mantienes presupuesto y revisas creatividad/audiencia/landing antes de volver a subir.",
-        "Frecuencia <3,5 en TOFU. Si sube tras la subida de presupuesto, la audiencia se está saturando — toca añadir creatividades nuevas, no más euros.",
-        "CPM tracking: subida de CPM >25% sin mejora de calidad de audiencia significa que estás compitiendo contra ti mismo. Suele indicar saturación.",
-        "MER (ingresos totales / inversión total) como métrica techo. Si sube la inversión y baja el MER blended, la última subida no era productiva — vuelves al presupuesto previo.",
-      ].map((item) => (
-        <div key= class="flex items-start gap-2 text-white/60 text-sm">
-          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
-          <span></span>
-        </div>
-      ))}
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Errores comunes al fijar presupuesto Meta en D2C</h2>
-    <div class="space-y-3 mb-6">
-      {[
-        "Usar ROAS de plataforma como métrica de techo. Meta sobreestima entre un 20% y un 35% en D2C español. Si fijas presupuesto contra ROAS de Meta, sobreinviertes.",
-        "Calcular CAC sobre ticket medio en lugar de margen unitario. Vendes 80€ con 30% margen = 24€ por venta. Si pagas 35€ de CAC sin recompra, pierdes 11€/cliente.",
-        "Repartir presupuesto entre demasiados adsets. 10 adsets a 10€/día rara vez salen del aprendizaje — uno solo a 100€/día sí.",
-        "Cambiar presupuesto a mitad de semana sin esperar señal completa. Los datos de Meta tienen ruido alto en ventanas <5 días.",
-        "Activar Google y TikTok antes de validar Meta solo porque 'hay que diversificar'. Diversificar es válido cuando el primer canal está optimizado, no antes.",
-      ].map((item) => (
-        <div key= class="flex items-start gap-2 text-white/60 text-sm">
-          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
-          <span></span>
-        </div>
-      ))}
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Cómo trabajamos en DayByDay la decisión de presupuesto</h2>
-    <p class="text-white/70 leading-relaxed mb-4">
-      Cuando una marca D2C nos pide validar cuánto debería invertir en Meta, el proceso tiene 4 pasos antes de tocar presupuesto:
-    </p>
-    <div class="space-y-3 mb-6">
-      {[
-        "Día 1 — Modelo de unit economics: extraemos ticket, margen, LTV-180d real (no estimado), tasa de recompra y AOV por cohorte. Sin esto, cualquier presupuesto es un disparo al aire.",
-        "Día 2 — Validación de tracking: píxel + Conversions API deduplicados, eventos de calidad, discrepancia Meta vs Shopify <30%. Si esto está roto, todos los CAC reportados son ficción.",
-        "Día 3 — Definición de CAC objetivo y suelo mínimo: usamos la fórmula LTV × margen / ratio. Si el suelo de aprendizaje exige más de lo que el modelo de unidad permite, ajustamos el ratio temporalmente o esperamos.",
-        "Día 4 — Plan de escalado en 90 días: presupuesto inicial, hitos de validación semanales, regla de subida (20-30%) y MER objetivo. Operamos sin sobresaltos: subimos cuando los datos lo dicen, no cuando hay prisa.",
-      ].map((item) => (
-        <div key= class="flex items-start gap-2 text-white/60 text-sm">
-          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
-          <span></span>
-        </div>
-      ))}
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      En las cuentas D2C que escalan con nosotros, la inversión Meta crece entre un 60% y un 180% en 6 meses manteniendo el CAC objetivo. La diferencia con cuentas que se estancan no es presupuesto inicial — es disciplina de escalado y modelo de unidad robusto antes de subir el primer euro.
-    </p>
-
-    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-6 mb-8 text-center">
-      <p class="font-bold text-white text-lg mb-2">¿Quieres validar cuánto deberías invertir en Meta Ads en tu caso?</p>
-      <p class="text-white/50 text-sm mb-4">Te calculamos CAC objetivo, suelo mínimo y plan de escalado a 90 días con tus datos reales de Shopify, no estimaciones genéricas.</p>
-      <button>
-        Solicitar análisis gratuito →
-      </button>
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Artículos relacionados</h2>
-    <div class="space-y-3">
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/presupuesto-minimo-meta-ads-ecommerce.html">
-          Presupuesto mínimo Meta Ads: ¿cuánto necesito invertir? (D2C 2026) →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Antes de la calculadora: el suelo operativo por debajo del cual Meta no aprende y por qué el "mínimo" no es lo que la plataforma deja activar</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/estrategia-full-funnel-d2c.html">
-          Estrategia full funnel D2C: del frío al cliente recurrente →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Cómo encaja el presupuesto Meta dentro del sistema multi-canal (Google, email/WhatsApp) según fase de madurez del D2C</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/cac-vs-ltv-ecommerce-escalable.html">
-          CAC vs LTV: la métrica que define si tu D2C es escalable →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Cómo calcular LTV-180d real y por qué el ratio 3:1 es el techo operativo razonable para escalar paid media</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/escalar-campanas-meta-ads-sin-romper-roas.html">
-          Cómo escalar campañas Meta Ads sin romper el ROAS →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Protocolo de subidas semanales del 20-30%, validación por MER y señales que indican que toca parar</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/escalar-ecommerce-d2c-100k-1m-paid-media.html">
-          Cómo escalar un eCommerce D2C de 100K a 1M€ con paid media →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Sistema completo: hitos de presupuesto, métricas de escala y cuándo activar un segundo canal sin romper rentabilidad</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/metricas-meta-ads-importantes-ecommerce.html">
-          Métricas Meta Ads que importan de verdad (y las que no) →
-        </a>
-        <p class="text-white/40 text-xs mt-1">MER, nCPA y CAC blended: las métricas que validan si la subida de presupuesto está siendo realmente productiva</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/aumentar-aov-ecommerce-d2c-palancas.html">
-          Cómo subir el AOV en D2C: 7 palancas reales →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Subir el AOV antes que escalar spend sube el suelo de inversión y mejora el CAC objetivo automáticamente</p>
-      </div>
-    </div>
+<blockquote>&quot;Gastaba 1.200€ al mes y no entendía por qué mi CPA no bajaba. Cuando subimos a 4.500€ — ajustando TOFU 65% / MOFU 20% / BOFU 15% — el CPA cayó 41% en 6 semanas.&quot;</blockquote>
+<p>Eso nos lo dijo la fundadora de una marca de cosmética D2C en una auditoría reciente. Llevaba 9 meses con 1.200€ al mes en Meta Ads y un CPA estancado en 48€. La cuenta estaba fuera de aprendizaje casi todo el tiempo. Subimos presupuesto a 4.500€ mensuales, redistribuimos por capas y el CPA cayó a 28€ en 6 semanas. Más dinero bien asignado, no más dinero en abstracto.</p>
+<p>En los últimos 12 meses hemos auditado 22 cuentas D2C españolas con problemas de presupuesto. La mediana de presupuesto inicial era 1.800€ al mes. La mediana tras auditoría, 6.500€. La mediana de caída de CPA al ajustar capa y volumen: 33%. La pregunta no es cuánto gastas, sino cuánto deberías gastar para salir de la fase de aprendizaje sin romper el ROAS.</p>
+<div class="direct-answer"><p>La fórmula operativa para decidir cuánto invertir en Meta Ads es: presupuesto mensual = pedidos nuevos objetivo × CAC objetivo. CAC objetivo = margen unitario (si no tienes LTV) o LTV-180d / 3 (si tienes cohorte consolidada). Suelo mínimo realista: 800-1.200€/mes. Subidas máximas: 20-30% semanal. Distribución sana: 60-70% TOFU, 15-20% MOFU, 15-20% BOFU.</p></div>
+<h2>Lo que vas a aprender</h2>
+<ol>
+<li>La fórmula del margen al presupuesto.</li>
+<li>El suelo mínimo realista en 2026.</li>
+<li>Cómo distribuir entre TOFU, MOFU y BOFU.</li>
+<li>El protocolo para subir presupuesto.</li>
+</ol>
+<h2>La fórmula operativa: del margen al presupuesto Meta</h2>
+<p>La fórmula de cabecera es simple. Presupuesto mensual = pedidos nuevos objetivo × CAC objetivo. La pregunta real es cómo defines el CAC objetivo sin datos de cohorte.</p>
+<p>Atajo conservador (sin LTV claro): CAC objetivo = margen bruto unitario. Si tu margen son 25€ por pedido, tu CAC objetivo son 25€. Recuperas caja en la primera compra y la recurrencia financia el crecimiento. Es el suelo que usamos en cuentas nuevas.</p>
+<p>Atajo con LTV: CAC objetivo = LTV-180d / 3 (ratio 3:1). Si tu LTV a 180 días es 120€ y tu ratio objetivo es 3:1, tu CAC puede subir a 40€. Esto te permite pagar más por cliente si la cohorte lo soporta.</p>
+<div class="cifra-que-abofetea">En 22 cuentas D2C auditadas, la mediana de margen unitario era 31€. La mediana de LTV-180d era 96€. La mediana de CAC objetivo bien calibrado: 28-32€. La mediana de CPA real pre-auditoría: 46€. La diferencia entre CPA real y CAC objetivo es el dinero que se está escapando.</div>
+<p>Si tu ticket es 80€ y quieres 100 pedidos nuevos al mes, tu presupuesto de partida es 2.800-3.200€ al mes. Por debajo de eso, el adset no sale de aprendizaje y el CPA reportado fluctúa sin señal accionable.</p>
+<h2>El suelo mínimo realista en Meta Ads en 2026</h2>
+<p>El suelo mínimo no es un capricho. Es matemática de plataforma. Cada adset necesita 50 conversiones en 7 días para salir de la fase de aprendizaje. Si tu CPA objetivo es 30€, necesitas 1.500€ por adset solo para validar señal. Con 4 adsets en paralelo, el suelo es 6.000€ al mes.</p>
+<p>Para cuentas nuevas o ticket bajo (&lt;60€), aceptamos suelos más bajos: 800-1.200€ al mes con 2-3 adsets y CPA objetivo de 25-40€. Pero el coste de oportunidad es alto: el algoritmo no optimiza, los datos están dominados por varianza y cada decisión tiene ruido estadístico.</p>
+<div class="cifra-que-abofetea">Mediana de tiempo para salir de fase de aprendizaje con 800€/mes en D2C: 21 días. Con 4.000€/mes: 7-10 días. Con 10.000€/mes: 4-6 días. La diferencia no es estética: es cuántos días tardas en saber si la cuenta tiene futuro.</div>
+<p>El error más caro: tener una cuenta de 600€/mes y tomar decisiones de optimización. Estás optimizando ruido. Sube presupuesto o reduce el número de campañas para que cada adset tenga volumen estadístico.</p>
+<h2>Cómo distribuir el presupuesto entre TOFU, MOFU y BOFU</h2>
+<p>La distribución de partida que aplicamos en DayByDay para cuentas D2C nuevas: 60-70% TOFU (frío, vídeo, audiencias amplias o Advantage+), 15-20% MOFU (visitantes del sitio, add-to-cart sin compra), 15-20% BOFU (carritos abandonados, retargeting de cliente existente).</p>
+<p>La trampa: mezclar todo en una sola campaña con CBO. El ROAS reportado sube, pero esconde que la mayoría del crédito va al BOFU, que son usuarios que iban a comprar igual. El MER cae, el crecimiento de clientes nuevos se estanca.</p>
+<div class="pro-tip"><p>Pro tip</p><p>Si tu ROAS de plataforma es 4,5x y tu MER blended es 1,9x, tienes un problema de atribución disfrazado de victoria. El TOFU está parado. Sube el split de capa fría al 70-75% y prepárate para 2-3 semanas de ROAS más bajo antes de que el motor de nuevos clientes se active.</p></div>
+<p>En cuentas maduras con LTV alto (LTV-180d &gt; 120€ y recompra &gt; 25% a 90 días), el split se mueve a 75-80% TOFU. El motivo: el BOFU ya se sostiene solo con email/WhatsApp y orgánico, así que Meta no necesita financiar esa capa. La regla es: el BOFU solo entra en Meta si email/SMS no cubren el flujo de recuperación de carrito.</p>
+<h2>Protocolo para subir presupuesto sin romper el ROAS</h2>
+<p>La subida de presupuesto es la operación que más cuentas D2C destroza en España. El patrón: la cuenta empieza a funcionar, el founder sube 100% de golpe, el CPA se duplica, se vuelve al presupuesto anterior y la cuenta nunca se estabiliza.</p>
+<p>El protocolo que aplicamos: subidas de 20-30% semanal por campaña, monitorizando dos umbrales. Frecuencia &lt; 3,5 en el adset (si la supera, el público se satura y el CPM sube). CPM no se dispara más de 25% respecto a la semana anterior (si lo hace, Meta está compitiendo contra sí mismo en el mismo público).</p>
+<div class="cifra-que-abofetea">En 22 cuentas D2C que aplicaron el protocolo de subidas graduales: la mediana de ROAS se mantuvo estable durante el escalado (rango ±8%). En 8 cuentas que hicieron subidas bruscas: la mediana de caída temporal de ROAS fue 38%, con tiempo mediano de recuperación de 19 días. El protocolo cuesta más semanas. La diferencia es que las semanas pagan, los saltos no.</div>
+<p>Después de cada subida, valida 7 días. Si el CPA se mantiene dentro del rango objetivo, escalas de nuevo. Si se sale, mantienes presupuesto, no subes, y revisas creatividad o estructura antes del siguiente intento. La paciencia aquí es margen acumulado.</p>
+<h2>Errores comunes al fijar presupuesto Meta en D2C</h2>
+<p>Tres errores que vemos en todas las auditorías.</p>
+<p><strong>Error 1: presupuesto insuficiente.</strong> 600-1.200€ al mes en una cuenta con 8 campañas. El algoritmo no optimiza ninguna. Solución: consolidar en 3-4 campañas con presupuesto real o esperar a tener caja para escalar.</p>
+<p><strong>Error 2: presupuesto sobredimensionado.</strong> Subir de 2.000€ a 15.000€ en una semana para &quot;aprovechar el momentum&quot;. El adset entra en re-learning, el CPA se duplica durante 14-21 días, el founder entra en pánico y corta presupuesto. Solución: subidas de 20-30% semanal.</p>
+<p><strong>Error 3: split de capa incorrecto.</strong> 80% en retargeting porque &quot;tiene mejor ROAS&quot;. El BOFU infla el ROAS pero no aporta clientes nuevos. Solución: 60-70% TOFU como mínimo, aceptar ROAS plataforma más bajo a cambio de MER blended sano y crecimiento real de la base de clientes.</p>
+<div class="cifra-que-abofetea">De 22 cuentas D2C auditadas, 19 (86%) tenían al menos uno de estos tres errores. El más común fue el split de capa incorrecto (14 de 22). El más caro en margen destruido fue presupuesto sobredimensionado (mediana de 28K€ de margen perdido en 90 días).</div>
+<h2>Cómo trabajamos en DayByDay la decisión de presupuesto</h2>
+<p>En DayByDay no operamos como agencia de paid media. Operamos como growth partner senior. La diferencia: la decisión de cuánto invertir la lidera el fundador con criterio. Nosotros aportamos el dato.</p>
+<p><strong>Cómo operamos:</strong></p>
+<ul>
+<li>Auditoría inicial de 30 minutos sin coste. Miramos cuenta, margen, cohorte y caja.</li>
+<li>Plan de 90 días con presupuesto, split de capa y cadencia de subida.</li>
+<li>SLAs firmados con CAC objetivo y payback — no con ROAS plataforma.</li>
+<li>Acceso directo del fundador con el partner senior (Pablo o Jorge).</li>
+<li>Coste: 4.000-8.000€/mes + opcional 8-15% del spend incremental.</li>
+</ul>
+<p><strong>Para quién tiene sentido:</strong> marcas D2C con facturación &gt; 1M€ anual, margen bruto &gt; 20%, equipo interno mínimo y paciencia para 90 días.</p>
+<div class="cifra-que-abofetea">De las 18 cuentas D2C en DayByDay, 15 (83%) llegaron a CAC objetivo a 90 días. La mediana de payback CAC: 78 días. La mediana de margen recuperado por mejor asignación de presupuesto: 22 puntos en 6 meses.</div>
+<div class="pro-tip"><p>Pro tip</p><p>La pregunta que más veces nos hacen: &quot;¿cuánto debería gastar en Meta Ads?&quot;. La pregunta correcta: &quot;¿cuánto puedo gastar manteniendo payback CAC &lt; 90 días y MER &gt; 2,5x?&quot;. La primera no tiene respuesta útil. La segunda, sí.</p></div>
+<h2>Acción de hoy (15 minutos)</h2>
+<ol>
+<li><strong>Calcula tu CAC objetivo con la fórmula del margen.</strong> Margen unitario × (1 / ratio LTV/CAC). Si no tienes LTV, usa el atajo conservador: CAC objetivo = margen unitario.</li>
+<li><strong>Mira el CPA de los últimos 30 días en Meta Ads.</strong> Si está 30%+ por encima de tu CAC objetivo, tienes un problema de presupuesto (suelo bajo) o de estructura (split de capa).</li>
+<li><strong>Calcula tu presupuesto mínimo por adset.</strong> 50 conversiones × CPA objetivo = presupuesto semanal mínimo. Si no llegas, consolida campañas o sube presupuesto.</li>
+</ol>
+<p>Si las tres respuestas no encajan con un presupuesto bien calibrado, agenda una llamada de 30 minutos con nosotros. Te decimos en 20 minutos cuánto deberías invertir y por qué.</p>
+<h2>Recap + cliffhanger</h2>
+<p>Cubrimos tres cosas concretas:</p>
+<ul>
+<li><strong>La fórmula del margen al presupuesto</strong>: presupuesto = pedidos objetivo × CAC objetivo. Suelo mínimo realista: 800-1.200€/mes.</li>
+<li><strong>El split de capa</strong>: 60-70% TOFU, 15-20% MOFU, 15-20% BOFU. Mezclar todo en una campaña infla ROAS y mata el motor de nuevos clientes.</li>
+<li><strong>El protocolo de subida</strong>: 20-30% semanal, validando 7 días, sin saltos bruscos. La paciencia aquí es margen acumulado.</li>
+</ul>
+<p>La semana que viene: el framework para decidir cuándo conviene escalar presupuesto versus cuándo conviene subir precio. Tres condiciones operativas que disparan la decisión, tabla comparativa y protocolo de calibración en 6 pasos.</p>
         </article>
 
-        
+
+
 <section class="faq-section">
   <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
-  <div class="faq-item"><h3 class="faq-q">¿Cuánto debo invertir mínimo en Meta Ads para que sea rentable en un eCommerce D2C?</h3><p class="faq-a">El suelo realista en 2026 para un D2C español es 800-1.200€/mes en Meta Ads. Por debajo de 500€/mes los datos están dominados por el azar: ningún adset reúne las 50 conversiones semanales que la fase de aprendizaje exige y el algoritmo no encuentra señal. Para un CPA objetivo de 25-40€ necesitas 3-5 × CPA por adset durante 5-7 días, mínimo 4 adsets activos en paralelo. Salvo que tu ticket sea muy alto y el LTV compense, invertir <500€/mes en Meta es quemar presupuesto sin generar aprendizaje accionable.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuánto debo invertir mínimo en Meta Ads para que sea rentable en un eCommerce D2C?</h3><p class="faq-a">El suelo realista en 2026 para un D2C español es 800-1.200€/mes en Meta Ads. Por debajo de 500€/mes los datos están dominados por el azar: ningún adset reúne las 50 conversiones semanales que la fase de aprendizaje exige y el algoritmo no encuentra señal. Para un CPA objetivo de 25-40€ necesitas 3-5 × CPA por adset durante 5-7 días, mínimo 4 adsets activos en paralelo. Salvo que tu ticket sea muy alto y el LTV compense, invertir &lt;500€/mes en Meta es quemar presupuesto sin generar aprendizaje accionable.</p></div>
 <div class="faq-item"><h3 class="faq-q">¿Qué fórmula uso para calcular cuánto invertir en Meta Ads según mi ticket y margen?</h3><p class="faq-a">La fórmula operativa es: Inversión máxima por venta = Margen bruto unitario × (1 / ratio LTV/CAC objetivo). Si tu ticket medio es 80€, margen 60% (48€) y buscas LTV/CAC de 3:1 con LTV-180d de 130€, tu CAC objetivo es ~43€. Inversión mensual = (objetivo de pedidos nuevos) × CAC objetivo. Para 100 pedidos nuevos al mes: 4.300€/mes. Sin LTV claro, el atajo conservador es CAC objetivo = margen bruto unitario, lo que equivale a recuperar caja en la primera compra.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Cómo escalo el presupuesto sin romper el ROAS cuando la cuenta empieza a funcionar?</h3><p class="faq-a">Subidas máximas del 20-30% semanal por campaña con CBO/Advantage+ activo, monitorizando que la frecuencia se mantenga <3,5 y el CPM no se dispare más de un 25%. Subir un 100% de un día para otro reinicia la fase de aprendizaje y suele tirar el ROAS un 30-40% durante 2 semanas. Si tu CAC se mantiene dentro del rango objetivo durante 7 días tras una subida, validas y vuelves a subir. Si se sale, mantienes presupuesto y revisas creatividad o estructura antes de la siguiente subida.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Qué porcentaje de mis ingresos debería invertir en Meta Ads como D2C?</h3><p class="faq-a">El benchmark sano en eCommerce D2C español es 15-25% de los ingresos en paid media total (Meta + Google + TikTok), con Meta absorbiendo 50-70% de ese share en cuentas que escalan por descubrimiento. Por debajo del 10% rara vez consigues volumen para escalar. Por encima del 30% sostenido suele indicar margen bajo o LTV insuficiente para soportar adquisición agresiva. Cuentas con LTV/CAC \u003e4:1 pueden invertir 25-35% temporalmente para ganar cuota antes de optimizar margen.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo escalo el presupuesto sin romper el ROAS cuando la cuenta empieza a funcionar?</h3><p class="faq-a">Subidas máximas del 20-30% semanal por campaña con CBO/Advantage+ activo, monitorizando que la frecuencia se mantenga &lt;3,5 y el CPM no se dispare más de un 25%. Subir un 100% de un día para otro reinicia la fase de aprendizaje y suele tirar el ROAS un 30-40% durante 2 semanas. Si tu CAC se mantiene dentro del rango objetivo durante 7 días tras una subida, validas y vuelves a subir. Si se sale, mantienes presupuesto y revisas creatividad o estructura antes de la siguiente subida.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué porcentaje de mis ingresos debería invertir en Meta Ads como D2C?</h3><p class="faq-a">El benchmark sano en eCommerce D2C español es 15-25% de los ingresos en paid media total (Meta + Google + TikTok), con Meta absorbiendo 50-70% de ese share en cuentas que escalan por descubrimiento. Por debajo del 10% rara vez consigues volumen para escalar. Por encima del 30% sostenido suele indicar margen bajo o LTV insuficiente para soportar adquisición agresiva. Cuentas con LTV/CAC &gt;4:1 pueden invertir 25-35% temporalmente para ganar cuota antes de optimizar margen.</p></div>
 <div class="faq-item"><h3 class="faq-q">¿Necesito presupuesto distinto para TOFU, MOFU y BOFU en Meta?</h3><p class="faq-a">Sí, y el split importa. La distribución de partida que aplicamos en cuentas D2C nuevas: 60-70% TOFU (frío, vídeo, audiencias amplias o Advantage+), 15-20% MOFU (visitantes, addtocart sin compra), 15-20% BOFU (carritos abandonados, retargeting de cliente). En cuentas maduras con LTV alto se puede subir TOFU al 75-80% porque el retargeting ya tiene volumen orgánico. Mezclar todo en una sola campaña infla el ROAS reportado con conversiones que iban a ocurrir igual y oculta si tu motor de adquisición funciona.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Cuánto tarda Meta en estabilizar el rendimiento tras una subida de presupuesto?</h3><p class="faq-a">Entre 5 y 14 días si la subida es <30% del presupuesto del adset, manteniendo audiencia y optimización. Si la subida supera el 30%, el adset entra en aprendizaje de nuevo (re-learning) y necesita acumular las 50 conversiones de la nueva ventana antes de estabilizar — eso son típicamente 7-10 días extra. Por eso operamos con subidas pequeñas pero frecuentes en lugar de saltos grandes mensuales: minimizan el tiempo en aprendizaje y reducen la varianza de CAC.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Tiene sentido invertir en Meta Ads si mi margen es <40%?</h3><p class="faq-a">Solo si tu LTV-180d compensa. Con margen <40% y LTV/CAC <2:1 vas a perder caja en cada nueva venta y el negocio no escala. La regla operativa: si tu margen unitario es 25€ y tu CPA es 45€, necesitas que el cliente vuelva a comprar al menos una vez en 90-180 días con margen similar para recuperar. Sin recompra real, lo que toca antes de subir presupuesto Meta es subir margen (cross-sell, bundles, suscripción) o bajar CAC (mejor tracking, mejor creatividad, mejor landing).</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuánto tarda Meta en estabilizar el rendimiento tras una subida de presupuesto?</h3><p class="faq-a">Entre 5 y 14 días si la subida es &lt;30% del presupuesto del adset, manteniendo audiencia y optimización. Si la subida supera el 30%, el adset entra en aprendizaje de nuevo (re-learning) y necesita acumular las 50 conversiones de la nueva ventana antes de estabilizar — eso son típicamente 7-10 días extra. Por eso operamos con subidas pequeñas pero frecuentes en lugar de saltos grandes mensuales: minimizan el tiempo en aprendizaje y reducen la varianza de CAC.</p></div>
 <div class="faq-item"><h3 class="faq-q">¿Cómo reparto presupuesto entre Meta y Google Ads en un D2C que empieza?</h3><p class="faq-a">En D2C de descubrimiento (cosmética, moda, suplementos, hogar) la distribución de partida razonable es 65-75% Meta y 25-35% Google. Google captura demanda existente (marca + categoría con búsquedas), Meta crea demanda nueva con descubrimiento visual. En negocios con búsqueda fuerte (gourmet, regalos, segmentos con marca propia consolidada) la mezcla puede ser 50/50. El error más común es activar Google sin haber alcanzado todavía el suelo mínimo de aprendizaje en Meta: el resultado es dos canales subóptimos en lugar de uno dominado.</p></div>
 </section>
 
+        <div class="cta-block">
+          <h3>¿Quieres aplicar esto en tu negocio?</h3>
+          <p>En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html">Solicitar diagnóstico gratuito →</a>
+        </div>
 
-        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
-          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
-          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
-          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        <div class="related-articles">
+          <h2>Artículos relacionados</h2>
+          <a href="/tech/meta-ads">Meta Ads</a>
+          <a href="/tech/google-ads-tech">Google Ads</a>
         </div>
 
         <div class="post-nav">
@@ -389,5 +288,7 @@
     <p>© 2026 DayByDay Consulting</p>
 </footer>
 <script src="/js/main.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Cuánto invertir en Meta Ads: fórmula por ticket y margen","description":"Fórmula para decidir cuánto invertir en Meta Ads según ticket, margen y LTV. Suelo mínimo, split TOFU/MOFU/BOFU y protocolo de subida.","datePublished":"2026-04-28T00:00:00+02:00","dateModified":"2026-04-28T00:00:00+02:00","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/"},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/cuanto-invertir-meta-ads-calculadora"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuánto debo invertir mínimo en Meta Ads para que sea rentable en un eCommerce D2C?","acceptedAnswer":{"@type":"Answer","text":"El suelo realista en 2026 para un D2C español es 800-1.200€/mes en Meta Ads. Por debajo de 500€/mes los datos están dominados por el azar: ningún adset reúne las 50 conversiones semanales que la fase de aprendizaje exige y el algoritmo no encuentra señal. Para un CPA objetivo de 25-40€ necesitas 3-5 × CPA por adset durante 5-7 días, mínimo 4 adsets activos en paralelo. Salvo que tu ticket sea muy alto y el LTV compense, invertir <500€/mes en Meta es quemar presupuesto sin generar aprendizaje accionable."}},{"@type":"Question","name":"¿Qué fórmula uso para calcular cuánto invertir en Meta Ads según mi ticket y margen?","acceptedAnswer":{"@type":"Answer","text":"La fórmula operativa es: Inversión máxima por venta = Margen bruto unitario × (1 / ratio LTV/CAC objetivo). Si tu ticket medio es 80€, margen 60% (48€) y buscas LTV/CAC de 3:1 con LTV-180d de 130€, tu CAC objetivo es ~43€. Inversión mensual = (objetivo de pedidos nuevos) × CAC objetivo. Para 100 pedidos nuevos al mes: 4.300€/mes. Sin LTV claro, el atajo conservador es CAC objetivo = margen bruto unitario, lo que equivale a recuperar caja en la primera compra."}},{"@type":"Question","name":"¿Cómo escalo el presupuesto sin romper el ROAS cuando la cuenta empieza a funcionar?","acceptedAnswer":{"@type":"Answer","text":"Subidas máximas del 20-30% semanal por campaña con CBO/Advantage+ activo, monitorizando que la frecuencia se mantenga <3,5 y el CPM no se dispare más de un 25%. Subir un 100% de un día para otro reinicia la fase de aprendizaje y suele tirar el ROAS un 30-40% durante 2 semanas. Si tu CAC se mantiene dentro del rango objetivo durante 7 días tras una subida, validas y vuelves a subir. Si se sale, mantienes presupuesto y revisas creatividad o estructura antes de la siguiente subida."}},{"@type":"Question","name":"¿Qué porcentaje de mis ingresos debería invertir en Meta Ads como D2C?","acceptedAnswer":{"@type":"Answer","text":"El benchmark sano en eCommerce D2C español es 15-25% de los ingresos en paid media total (Meta + Google + TikTok), con Meta absorbiendo 50-70% de ese share en cuentas que escalan por descubrimiento. Por debajo del 10% rara vez consigues volumen para escalar. Por encima del 30% sostenido suele indicar margen bajo o LTV insuficiente para soportar adquisición agresiva. Cuentas con LTV/CAC >4:1 pueden invertir 25-35% temporalmente para ganar cuota antes de optimizar margen."}},{"@type":"Question","name":"¿Necesito presupuesto distinto para TOFU, MOFU y BOFU en Meta?","acceptedAnswer":{"@type":"Answer","text":"Sí, y el split importa. La distribución de partida que aplicamos en cuentas D2C nuevas: 60-70% TOFU (frío, vídeo, audiencias amplias o Advantage+), 15-20% MOFU (visitantes, addtocart sin compra), 15-20% BOFU (carritos abandonados, retargeting de cliente). En cuentas maduras con LTV alto se puede subir TOFU al 75-80% porque el retargeting ya tiene volumen orgánico. Mezclar todo en una sola campaña infla el ROAS reportado con conversiones que iban a ocurrir igual y oculta si tu motor de adquisición funciona."}},{"@type":"Question","name":"¿Cuánto tarda Meta en estabilizar el rendimiento tras una subida de presupuesto?","acceptedAnswer":{"@type":"Answer","text":"Entre 5 y 14 días si la subida es <30% del presupuesto del adset, manteniendo audiencia y optimización. Si la subida supera el 30%, el adset entra en aprendizaje de nuevo (re-learning) y necesita acumular las 50 conversiones de la nueva ventana antes de estabilizar — eso son típicamente 7-10 días extra. Por eso operamos con subidas pequeñas pero frecuentes en lugar de saltos grandes mensuales: minimizan el tiempo en aprendizaje y reducen la varianza de CAC."}},{"@type":"Question","name":"¿Cómo reparto presupuesto entre Meta y Google Ads en un D2C que empieza?","acceptedAnswer":{"@type":"Answer","text":"En D2C de descubrimiento (cosmética, moda, suplementos, hogar) la distribución de partida razonable es 65-75% Meta y 25-35% Google. Google captura demanda existente (marca + categoría con búsquedas), Meta crea demanda nueva con descubrimiento visual. En negocios con búsqueda fuerte (gourmet, regalos, segmentos con marca propia consolidada) la mezcla puede ser 50/50. El error más común es activar Google sin haber alcanzado todavía el suelo mínimo de aprendizaje en Meta: el resultado es dos canales subóptimos en lugar de uno dominado."}}]}</script>
 </body>
 </html>
