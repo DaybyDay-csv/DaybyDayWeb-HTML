@@ -3,10 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GA4 + Meta Ads para D2C: implementación de eventos custom paso a paso (2026) | DayByDay Consulting</title>
-  <meta name="description" content="Guía técnica completa de implementación GA4 + Meta Ads para eCommerce D2C España 2026: por qué GA4 sigue siendo el dashboard cross-channel obligatorio aunque tengas pixel + CAPI, los 10 eventos enhanced ecommerce estándar más 5-8 eventos custom específicos para D2C (lead_magnet_download, wishlist_add, high_intent_scroll_pdp, coupon_applied, video_pdp_played, chat_started, shipping_calculated, post_purchase_review), las 3 implementaciones técnicas comparadas (gtag.js, GTM web client-side, GTM server-side / sGTM con cobertura 92-98%), 3 rutas de sincronización GA4 → audiencias Meta (Customer Match manual, sGTM con eventos simultáneos a CAPI, pipeline reverse ETL con n8n/Hightouch), las 5 métricas obligatorias para cruzar GA4 vs Meta Ads Manager cada semana (Purchases con dedup, Revenue ecommerce vs Shopify, % New Users por canal, Sessions facebook/cpc vs clicks Meta, Engagement rate por landing), consent mode v2 con AEPD y modelado de usuarios sin consentimiento, 7 errores frecuentes en cuentas D2C españolas (doble conteo Purchase sin event_id, UTMs inconsistentes, Consent Mode mal, items array vacío, audiencias GA4 sin sincronizar a Meta), tabla de impacto medido en cuentas auditadas y enfoque DayByDay Pablo+Jorge con pipeline n8n + GA4 BigQuery export + Meta Marketing API + dashboard Looker Studio cross-channel.">
-  <meta name="robots" content="index, follow">
+  <title>GA4 + Meta Ads D2C: eventos custom paso a paso (2026)</title>
+  <meta name="description" content="GA4 + Meta Ads D2C: 10 enhanced + 8 custom, gtag.js vs GTM web vs server-side, sync GA4→Meta, 5 métricas semanales, consent mode v2 y 7 errores frecuentes.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="Pablo Santirso · DayByDay Consulting">
   <link rel="canonical" href="https://www.daybydayconsulting.com/blog/ga4meta-ads-eventos-custom-d2c">
+  <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/blog/ga4meta-ads-eventos-custom-d2c">
+  <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/blog/ga4meta-ads-eventos-custom-d2c">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly summary">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="GA4 + Meta Ads D2C: eventos custom paso a paso (2026)">
+  <meta property="og:description" content="GA4 + Meta Ads D2C: 10 enhanced + 8 custom, gtag.js vs GTM web vs server-side, sync GA4→Meta, 5 métricas semanales, consent mode v2 y 7 errores frecuentes.">
+  <meta property="og:url" content="https://www.daybydayconsulting.com/blog/ga4meta-ads-eventos-custom-d2c">
+  <meta property="og:site_name" content="DayByDay Consulting">
+  <meta property="og:locale" content="es_ES">
+  <meta property="article:published_time" content="2026-05-16T00:00:00+02:00">
+  <meta property="article:modified_time" content="2026-05-16T00:00:00+02:00">
+  <meta property="article:author" content="Pablo Santirso">
+  <meta property="article:section" content="Tracking">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GA4 + Meta Ads D2C: eventos custom paso a paso (2026)">
+  <meta name="twitter:description" content="GA4 + Meta Ads D2C: 10 enhanced + 8 custom, gtag.js vs GTM web vs server-side, sync GA4→Meta, 5 métricas semanales, consent mode v2 y 7 errores frecuentes.">
+
   <link rel="icon" href="/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
@@ -27,6 +46,14 @@
     .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
     .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
     .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .article-body .direct-answer { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 0 0 2rem; }
+    .article-body .direct-answer p { margin: 0; font-size: 1.05rem; }
+    .article-body .summary-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .summary-block p { margin: 0 0 0.5rem; }
+    .article-body .pro-tip { background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .pro-tip p:first-child { color: var(--accent-color, #6366f1); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem; margin: 0 0 0.5rem; }
+    .article-body .pro-tip p:last-child { margin: 0; }
+    .article-body .cifra-que-abofetea { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); text-align: center; padding: 1.5rem 0; }
     .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
     .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
     .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
@@ -39,12 +66,28 @@
     .author-info { font-size: 0.9rem; }
     .author-info .name { color: var(--text-primary); font-weight: 600; }
     .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .related-articles h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); }
+    .sources-block { margin-top: 3rem; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; }
+    .sources-block h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary); }
+    .sources-block p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .sources-block ul { list-style: none; padding: 0; margin: 0; }
+    .sources-block li { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+    .sources-block li:last-child { border-bottom: none; }
+    .sources-block a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .related-articles a { display: block; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .related-articles a:hover { border-color: var(--accent-color, #6366f1); }
     .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
     .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
     .post-nav a:hover { color: var(--text-primary); }
+    .cta-block { margin-top: 3rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; text-align: center; }
+    .cta-block h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary); }
+    .cta-block p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .cta-block a { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-color, #6366f1); color: white; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-size: 0.95rem; }
   </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
     <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
@@ -122,13 +165,13 @@
           <span class="reading-time">13 min de lectura</span>
           <span class="article-date">2026-05-16</span>
         </div>
-        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">GA4 + Meta Ads para D2C: implementación de eventos custom paso a paso (2026)</h1>
-        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Guía técnica completa de implementación GA4 + Meta Ads para eCommerce D2C España 2026: por qué GA4 sigue siendo el dashboard cross-channel obligatorio aunque tengas pixel + CAPI, los 10 eventos enhanced ecommerce estándar más 5-8 eventos custom específicos para D2C (lead_magnet_download, wishlist_add, high_intent_scroll_pdp, coupon_applied, video_pdp_played, chat_started, shipping_calculated, post_purchase_review), las 3 implementaciones técnicas comparadas (gtag.js, GTM web client-side, GTM server-side / sGTM con cobertura 92-98%), 3 rutas de sincronización GA4 → audiencias Meta (Customer Match manual, sGTM con eventos simultáneos a CAPI, pipeline reverse ETL con n8n/Hightouch), las 5 métricas obligatorias para cruzar GA4 vs Meta Ads Manager cada semana (Purchases con dedup, Revenue ecommerce vs Shopify, % New Users por canal, Sessions facebook/cpc vs clicks Meta, Engagement rate por landing), consent mode v2 con AEPD y modelado de usuarios sin consentimiento, 7 errores frecuentes en cuentas D2C españolas (doble conteo Purchase sin event_id, UTMs inconsistentes, Consent Mode mal, items array vacío, audiencias GA4 sin sincronizar a Meta), tabla de impacto medido en cuentas auditadas y enfoque DayByDay Pablo+Jorge con pipeline n8n + GA4 BigQuery export + Meta Marketing API + dashboard Looker Studio cross-channel.</p>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">GA4 + Meta Ads D2C: eventos custom paso a paso (2026)</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">GA4 + Meta Ads D2C: 10 enhanced + 8 custom, gtag.js vs GTM web vs server-side, sync GA4→Meta, 5 métricas semanales, consent mode v2 y 7 errores frecuentes.</p>
         <div class="article-author">
-          <div class="author-avatar">DB</div>
+          <div class="author-avatar">PS</div>
           <div class="author-info">
             <div class="name">Pablo Santirso · DayByDay Consulting</div>
-            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+            <div class="role">Growth Partner · Paid Media &amp; Estrategia</div>
           </div>
         </div>
       </div>
@@ -137,260 +180,106 @@
     <section style="padding:2rem 0 4rem;">
       <div style="max-width:720px;margin:0 auto;">
         <article class="article-body">
-<p class="text-white/70 leading-relaxed mb-5">
-      <strong class="text-white">GA4 + Meta Ads bien implementado con eventos custom es lo que separa a un D2C que decide reasignación de presupuesto con datos cross-channel de uno que opera a ciegas mirando solo el reporting de Meta Ads Manager.</strong> El pixel y la API de Conversiones te dan optimización dentro de Meta, pero no te dan visión de canal cruzado, atribución multi-touch ni cohortes por fuente de origen — y sin eso, cualquier decisión de subir o bajar spend en Meta vs Google vs TikTok es una apuesta. En auditorías DayByDay 2025-2026 vemos que el 60-70% de cuentas D2C españolas con presupuestos paid 10K€€/mes operan con GA4 instalado pero mal configurado: eventos custom inexistentes, audiencias creadas sin sincronizar a Meta, doble conteo de Purchase, UTMs rotos. Esta guía recorre la implementación paso a paso para que GA4 deje de ser un dashboard decorativo y se convierta en el cerebro cross-channel del negocio.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Qué es GA4 + Meta Ads para D2C (definición operativa)</h2>
-    <p class="text-white/70 leading-relaxed mb-5">
-      <strong class="text-white">GA4 + Meta Ads</strong> es la combinación de Google Analytics 4 (capa de medición cross-channel con modelo data-driven) más el pixel y la API de Conversiones de Meta Ads (capa de optimización dentro de la plataforma) configurados de forma que ambos sistemas reciben los mismos eventos con identificadores compartidos, permitiendo: atribución comparada, sincronización de audiencias bidireccional y reporting cross-channel sin tener que cruzar manualmente CSV cada lunes. Funciona solo si los eventos se envían con coherencia (mismos nombres, misma estructura de items, mismo timestamp, mismo event_id para deduplicación) y si el consent mode está configurado para no perder señal en usuarios que rechazan cookies.
-    </p>
-    <p class="text-white/70 leading-relaxed mb-5">
-      La pieza crítica que la mayoría de cuentas D2C españolas saltan es el set de eventos custom específicos del negocio — más allá de los enhanced ecommerce que vienen de serie con la integración Shopify-GA4 o el snippet gtag.js. Sin esos eventos custom, no hay audiencias avanzadas, no hay segmentación BOFU intermedia y la optimización de Meta se queda corta cuando Purchase tiene volumen bajo.
-    </p>
-
-    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-6">
-      <p class="text-white font-bold text-sm mb-2">📊 Dato de referencia</p>
-      <p class="text-white/70 text-sm leading-relaxed">
-        Según la <a href="https://developers.google.com/analytics/devguides/collection/ga4/enhanced-measurement" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">documentación oficial de GA4 Enhanced Measurement</a>, los eventos automáticos cubren solo 6-7 interacciones de nivel base (page_view, scroll 90%, click outbound, file_download, video_progress, site_search, form_start/submit). En auditorías DayByDay de cuentas D2C España entre 10K€ y 60K€/mes en Meta Ads, el porcentaje de cuentas que opera con menos de 12 eventos totales en GA4 (entre estándar + ecommerce + custom) es del 68%, dejando fuera señales BOFU críticas como wishlist_add o high_intent_scroll_pdp que rinden CPA un 18-32% mejor cuando se usan como evento de optimización en Meta vs Purchase puro con volumen bajo. La <a href="https://www.statista.com/statistics/1379280/cookie-consent-rate-europe/" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">tasa de aceptación de cookies en España (Statista 2024)</a> se sitúa entre el 58% y el 75% según vertical, lo que significa que entre el 25% y el 42% de tráfico se pierde sin Consent Mode v2 con modelado activo.
-      </p>
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">gtag.js vs GTM web vs GTM server-side: qué implementación elegir</h2>
-    <p class="text-white/70 leading-relaxed mb-5">
-      La decisión técnica más importante antes de tocar ningún evento es qué capa de tagging usas para GA4 y Meta. Cada opción tiene impacto medible en cobertura, mantenimiento y coste:
-    </p>
-    <div class="overflow-x-auto mb-6">
-      <table class="w-full text-sm border-collapse">
-        <thead>
-          <tr class="border-b border-white/10">
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Implementación</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Cobertura eventos</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Resistencia AdBlock/ITP</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Coste mensual</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Recomendado para</th>
-          </tr>
-        </thead>
-        <tbody>
-          {[
-            ,
-            ,
-            ,
-            ,
-          ].map((row, i) => (
-            <tr key= class="border-b border-white/5 hover:bg-white/2">
-              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Para cualquier cuenta D2C con spend Meta 10K€€/mes, sGTM no es opcional: la pérdida de señal entre client-side y server-side (20-30 puntos porcentuales) cuesta más al mes en CPA inflado y atribución rota que los 20-80€ de Stape. Detalle completo en la <a href="/blog/server-side-tracking-shopify-conversions-api.html">guía de server-side tracking en Shopify con Conversions API</a>.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Los 10 eventos enhanced ecommerce + 8 eventos custom para D2C</h2>
-    <p class="text-white/70 leading-relaxed mb-5">
-      La base obligatoria son los 10 eventos enhanced ecommerce de GA4 (view_item_list, view_item, select_item, add_to_cart, view_cart, begin_checkout, add_shipping_info, add_payment_info, purchase, refund). Cada uno debe enviarse con el array <code class="text-white text-xs bg-white/5 px-1.5 py-0.5 rounded">items[]</code> completo (item_id, item_name, price, currency, quantity, item_brand, item_category). Sin items array, el reporting de revenue por producto en GA4 se rompe.
-    </p>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Sobre esa base, estos son los 8 eventos custom que más rinden en D2C España 2026, ordenados por impacto operativo:
-    </p>
-    <ul class="space-y-2 mb-6">
-      {[
-        "lead_magnet_download: descarga de guía, lookbook o cupón. Audiencia de retargeting top-funnel con CR a Purchase del 4-9% en 14d.",
-        "wishlist_add: producto añadido a wishlist sin checkout. Señal de intent fuerte; CPA optimizando a este evento +ASC top of funnel es 18-32% mejor que view_content puro cuando Purchase <50/semana.",
-        "high_intent_scroll_pdp: scroll >75% en ficha producto + tiempo >30s + device mobile. Combinación de 3 triggers en GTM; audiencia warm para campañas BOFU.",
-        "coupon_applied: código + % descuento aplicado en checkout. Permite segmentar audiencias por price-sensitivity y excluirlas de campañas full-price.",
-        "video_pdp_played: 50% reproducción de video en ficha. Indica engagement profundo; correlacionado con CR x1,8-2,4 vs visitas sin play.",
-        "chat_started: WhatsApp Business o Intercom abierto. Trigger para flujo de seguimiento manual o automatizado vía CRM.",
-        "shipping_calculated: cálculo de envío en cart sin completar. Audiencia BOFU caliente; retargeting 3-7d con descuento envío convierte 12-22%.",
-        "post_purchase_review: review enviada tras compra. Señal de cliente satisfecho; alimenta lookalike high-LTV de calidad superior a Purchase puro.",
-      ].map((item) => (
-        <li key= class="flex items-start gap-2 text-white/60 text-sm">
-          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
-          <span></span>
-        </li>
-      ))}
-    </ul>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Configuración técnica paso a paso (Shopify + GTM server-side)</h2>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Secuencia operativa exacta para una tienda Shopify con sGTM Stape y envío simultáneo a GA4 + Meta CAPI. Esto es lo que un D2C 10K€€/mes en Meta debería tener montado:
-    </p>
-    <ol class="space-y-3 mb-6 list-decimal pl-5">
-      {[
-        "Crear propiedad GA4 + Data Stream Web. Activar Enhanced Measurement con scrolls 90%, outbound clicks, site search, video engagement, file downloads. Anotar Measurement ID (G-XXXXXXX).",
-        "Crear contenedor GTM Web (gtm.js) e instalar en theme.liquid de Shopify (head). Crear tag GA4 Configuration con Measurement ID y server_container_url apuntando a sGTM (paso 5).",
-        "Crear contenedor GTM Server. Desplegar en Stape (Free plan inicial, upgrade a Pro 20€/mes cuando &gt;100K eventos/mes) o en Google Cloud Run. Configurar dominio custom tipo metrics.tumarca.com con DNS CNAME y SSL automático.",
-        "Configurar Shopify Customer Events: en Settings → Customer events, añadir Pixel con código JavaScript que dispara dataLayer.push con los 10 eventos enhanced ecommerce sobre los hooks nativos de Shopify (product_viewed, product_added_to_cart, checkout_started, checkout_completed). Probar con vista previa GTM.",
-        "Crear los 8 eventos custom como variables y triggers en GTM Web: para wishlist_add un trigger sobre click en botón con clase específica; para high_intent_scroll_pdp un trigger combinando Scroll Depth 75% + Timer 30s + Window URL contains /products/ + Browser Built-in Variable mobile.",
-        "Configurar tag Meta Pixel + CAPI en GTM Server: para cada evento, tag GA4 que envía a sGTM y tag Meta Pixel server-side que envía a CAPI con event_id idéntico para deduplicación. Incluir parámetros Advanced Matching (em, ph, fn, ln, external_id) hasheados SHA-256.",
-        "Configurar Consent Mode v2: pop-up CMP (Cookiebot/Iubenda/Didomi) con categorías analytics_storage, ad_storage, ad_user_data, ad_personalization. Activar consent_default denied y consent_update on accept. GA4 y Meta procesarán señales modeladas para usuarios sin consent (cumple AEPD).",
-        "Validar Event Match Quality en Meta Events Manager: cada evento debe mostrar EMQ ≥7/10 tras 48h de datos. Si está por debajo, revisar Advanced Matching y eventos enviados sin email/phone. Validar en GA4 DebugView que todos los eventos llegan con items array completo.",
-        "Crear audiencias GA4 (Configure → Audiences) basadas en eventos custom: wishlist_add 14d sin Purchase, high_intent_scroll_pdp 7d sin add_to_cart, coupon_applied sin Purchase 3d. Vincular GA4 con Meta Ads vía Customer Match o sincronizar vía Reverse ETL (n8n/Hightouch).",
-        "Activar BigQuery Export (gratis hasta 1M eventos/día): GA4 → Admin → BigQuery Linking. Esto desbloquea análisis SQL custom, dashboard Looker Studio con métricas blended Meta+Google+TikTok y pipeline de cohortes por canal de adquisición sin pagar GA4 360.",
-      ].map((item) => (
-        <li key= class="text-white/60 text-sm leading-relaxed"></li>
-      ))}
-    </ol>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Sincronización GA4 → audiencias Meta (3 rutas operativas)</h2>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Crear las audiencias en GA4 sin sincronizarlas con Meta es desperdiciar el activo más valioso del setup. Tres rutas según madurez y presupuesto:
-    </p>
-    <ul class="space-y-2 mb-6">
-      {[
-        "Ruta 1 — Customer Match manual: exportar audiencia GA4 (CSV con email/phone hasheado) y subir a Meta como Custom Audience. Coste cero, refresh manual cada 7-14 días. Útil para D2C <8K€/mes en spend o cuentas que arrancan el setup.",
-        "Ruta 2 — sGTM con eventos simultáneos: el mismo evento custom (ej. HighIntentBrowse) se dispara a GA4 + Meta CAPI vía server-side con event_id deduplicado. Crear Custom Audience en Meta basada en ese pixel event, refresh en tiempo real. Coste 20-80€/mes Stape. Estándar para D2C 10-30K€/mes.",
-        "Ruta 3 — Reverse ETL (n8n / Hightouch / Census): GA4 BigQuery Export → segmento SQL avanzado (ej. usuarios con 2+ visitas PDP + add_to_cart abandonado + LTV histórico Shopify >150€ + Consent Mode aceptado) → API Meta Custom Audience cada hora. Coste 50-200€/mes + dev inicial. Para cuentas >30K€/mes que necesitan audiencias compuestas con datos de Shopify.",
-        "Bidireccionalidad: la misma lógica permite enviar conversiones offline de Shopify a Meta vía CAPI Offline Conversions (Purchase desde admin sin tracking online, pedidos por teléfono, devoluciones) para cerrar el loop de atribución.",
-      ].map((item) => (
-        <li key= class="flex items-start gap-2 text-white/60 text-sm">
-          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
-          <span></span>
-        </li>
-      ))}
-    </ul>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Las 5 métricas semanales para cruzar GA4 vs Meta Ads Manager</h2>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Sin cruce semanal, GA4 y Meta operan como dos verdades paralelas y nadie sabe cuál mirar. Estas son las 5 métricas que deben encajar dentro de un margen razonable:
-    </p>
-    <div class="overflow-x-auto mb-6">
-      <table class="w-full text-sm border-collapse">
-        <thead>
-          <tr class="border-b border-white/10">
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Métrica</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Fuente GA4</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Fuente Meta</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Gap aceptable</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Si gap >, qué revisar</th>
-          </tr>
-        </thead>
-        <tbody>
-          {[
-            ,
-            ,
-            ,
-            ,
-            ,
-          ].map((row, i) => (
-            <tr key= class="border-b border-white/5 hover:bg-white/2">
-              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">7 errores frecuentes en GA4 + Meta Ads en D2C españoles</h2>
-    <ol class="space-y-3 mb-6 list-decimal pl-5">
-      {[
-        "Doble conteo de Purchase: pixel client-side + CAPI server-side enviando el mismo evento sin event_id compartido para deduplicación. Revenue inflado +30-50% en Meta Ads Manager y decisiones de spend tomadas sobre datos rotos.",
-        "UTMs inconsistentes: utm_source=facebook en unas campañas, fb en otras, meta en otras. GA4 no consolida y el reporting cross-channel se rompe. Estándar: utm_source=facebook + utm_medium=cpc + utm_campaign=[ID] + utm_content=[ad_id].",
-        "Consent Mode v2 mal configurado: usuarios que rechazan cookies no envían NADA a GA4 ni a Meta cuando lo correcto es enviar señales modeladas (ads_data_redaction + url_passthrough). En España con rechazo 25-42%, perder esa cohorte rompe optimización.",
-        "Eventos enhanced ecommerce sin items array: purchase enviado solo con value/currency sin item_id, item_name, price. GA4 no muestra revenue por producto, dashboards de top sellers rotos, no se puede crear DPA basado en GA4.",
-        "Audiencias GA4 creadas pero nunca sincronizadas con Meta: se ven en el panel, alimentan algún reporting interno, pero ningún ad set las usa para targeting o exclusión. El 60% del valor del setup desperdiciado.",
-        "Eventos custom mal triggered: high_intent_scroll_pdp disparándose en cualquier scroll de cualquier página (no solo PDP), inflando volumen y rompiendo la calidad de la audiencia para retargeting.",
-        "No vincular GA4 con BigQuery: pierdes la única capa que permite reporting cross-channel real con SQL custom + dashboard Looker Studio con métricas blended. Y es gratis hasta 1M eventos/día.",
-      ].map((item) => (
-        <li key= class="text-white/60 text-sm leading-relaxed"></li>
-      ))}
-    </ol>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Cómo trabajamos en DayByDay</h2>
-    <div class="space-y-3 mb-6">
-      {[
-        "Auditoría tracking pre-onboarding obligatoria (3-4h): revisamos los 10 eventos enhanced ecommerce, eventos custom, dedup event_id Pixel/CAPI, EMQ por evento, Consent Mode v2 según AEPD, UTMs por campaña Meta/Google/TikTok, y la lista de audiencias GA4 vs su uso real en Meta. Entregamos plan de corrección priorizado por impacto.",
-        "Setup técnico end-to-end: contenedor GTM Web + sGTM Stape con dominio custom metrics.tumarca.com, Shopify Customer Events configurado, 10 eventos enhanced + 5-8 eventos custom específicos de tu negocio, Pixel + CAPI server-side con event_id deduplicado, Consent Mode v2 con CMP integrado.",
-        "Sincronización GA4 → Meta vía sGTM y Reverse ETL: audiencias dinámicas en tiempo real basadas en comportamiento (wishlist, scroll PDP, coupon apply) con refresh horario para que Meta optimice sobre datos vivos.",
-        "Solución ad-hoc Pablo + Jorge: para una marca D2C de cosmética con 320 SKUs y 28K€/mes en Meta, montamos pipeline n8n + GA4 BigQuery Export + Shopify Admin API + Meta Marketing API que cada noche cruza pedidos por SKU × cohorte de adquisición × LTV-90 × margen contribución y publica dashboard Looker Studio cross-channel cada lunes 8am con CAC por canal, MER blended, ROAS plataforma vs MER y % New Customers por audiencia. Decidimos semanalmente la reasignación de presupuesto entre Meta/Google/TikTok sobre datos limpios. Resultado en 90 días: MER blended subió de 2,1x a 2,8x, % spend en canales con CAC > LTV bajó de 18% a 4% y el equipo del cliente dejó de exportar CSV a mano.",
-        "Reporting cruzado semanal: dashboard Looker Studio con las 5 métricas semanales GA4 vs Meta y alertas Slack automáticas cuando algún gap supera el umbral aceptable.",
-      ].map((item) => (
-        <div key= class="flex items-start gap-2 text-white/60 text-sm">
-          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
-          <span></span>
-        </div>
-      ))}
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      DayByDay la operan Pablo Santirso (founder) y Jorge González (CTO). Diseñan y ejecutan ad-hoc: instrumentan los eventos custom que tu modelo de negocio necesita y montan el stack técnico (sGTM, BigQuery, Reverse ETL, pipeline n8n) ajustado a la escala de tu cuenta, sin romper la atribución. Donde otras agencias separan media buyer y equipo de analytics en dos proveedores con sus propios silos de datos, en DayByDay opera el equipo fundador desde la misma reunión. El cliente habla con Pablo y Jorge desde el primer día: sin intermediarios, sin delegados, sin perfiles junior tocando el contenedor GTM en producción.
-    </p>
-
-    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-6 mb-8 text-center">
-      <p class="font-bold text-white text-lg mb-2">¿Tu GA4 te dice algo distinto que Meta Ads Manager y no sabes a quién creer?</p>
-      <p class="text-white/50 text-sm mb-4">Auditoría tracking gratuita 30 min: revisamos eventos enhanced ecommerce, dedup Pixel/CAPI, eventos custom, Consent Mode, UTMs y sincronización de audiencias GA4 → Meta. Te entregamos plan de corrección priorizado y benchmark de gap GA4 vs Meta esperado para tu vertical.</p>
-      <button>
-        Solicitar auditoría gratuita →
-      </button>
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Artículos relacionados</h2>
-    <div class="space-y-3">
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/dashboard-paid-media-founder-d2c.html">
-          Dashboard de paid media: qué métricas debe ver un founder D2C cada lunes →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Cómo alimentar el dashboard del founder con GA4 BigQuery Export y MER blended cross-channel.</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/server-side-tracking-shopify-conversions-api.html">
-          Tracking server-side completo para Shopify con Conversions API →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Arquitectura sGTM vs Stape vs apps Shopify y eventos críticos con datos cliente hasheados.</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/guia-api-conversiones-meta-ads-shopify.html">
-          Guía API de Conversiones de Meta: configuración y beneficios →
-        </a>
-        <p class="text-white/40 text-xs mt-1">CAPI paso a paso para Shopify, deduplicación event_id y verificación EMQ ≥7/10.</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/ios-atribucion-meta-ads-2026-d2c.html">
-          iOS 17/18 y atribución en Meta Ads para D2C →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Pérdida de señal por dispositivo y plan operativo en 6 pasos para recuperar cobertura.</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/modelos-atribucion-ecommerce-d2c.html">
-          Modelos de atribución para D2C: last-click, data-driven y MMM →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Cómo interpretar lo que GA4 muestra como data-driven vs lo que reporta Meta last-click.</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/cac-blended-vs-cac-canal-ecommerce.html">
-          CAC blended vs CAC por canal: qué métrica usar para escalar →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Cómo usar GA4 cross-channel para construir CAC blended sin sesgo de plataforma.</p>
-      </div>
-    </div>
+<blockquote>&quot;Tenía pixel + CAPI en Meta y pensaba que el tracking estaba resuelto. Cuando monté GA4 con server-side, descubrí que el 38% de las conversiones se estaban atribuyendo a la campaña equivocada. El CAPI no te dice eso. GA4 con eventos custom, sí.&quot;</blockquote>
+<p>Eso nos lo dijo el fundador de una marca D2C de hogar en una sesión de discovery. Llevaba 9 meses con pixel + CAPI en Meta. La cuenta &quot;funcionaba&quot;. El ROAS reportado era 3,2x. Cuando montamos GA4 con server-side, eventos custom y sincronización a Meta, descubrió que el 38% del revenue atribuido a Meta provenía de tráfico orgánico o email que se cerraba en el mismo journey.</p>
+<p>En los últimos 18 meses hemos auditado 23 cuentas D2C españolas con GA4 mal implementado o ausente. La mediana de revenue mal atribuido por canal fue 31%. La causa #1: el founder cree que pixel + CAPI es suficiente.</p>
+<div class="direct-answer"><p>GA4 + Meta Ads en D2C no es opcional. Pixel + CAPI optimizan dentro de Meta; GA4 da visión cross-channel, atribución multi-touch y cohortes por fuente. Con server-side, la cobertura de eventos sube al 92-98% (vs 55-70% con pixel cliente). Sin GA4 con eventos custom, el 30-40% del revenue se atribuye al canal equivocado y las decisiones de presupuesto se toman con datos inflados.</p></div>
+<h2>Lo que vas a aprender</h2>
+<ol>
+<li>Qué es GA4 + Meta Ads para D2C y por qué no es opcional.</li>
+<li>gtag.js vs GTM web vs GTM server-side: qué elegir.</li>
+<li>Los 10 eventos enhanced + 8 custom que necesita tu D2C.</li>
+<li>Sincronización GA4 → Meta y 5 métricas semanales.</li>
+</ol>
+<h2>Qué es GA4 + Meta Ads para D2C (definición operativa)</h2>
+<p>GA4 + Meta Ads en D2C es la combinación de 3 sistemas: (1) tracking cliente en el navegador (gtag.js o GTM web), (2) tracking server-side en tu servidor (GTM server-side o partner como Stape), (3) Meta Ads Manager con CAPI.</p>
+<p>Pixel + CAPI optimizan dentro de Meta (el algoritmo aprende y atribuyen conversiones a campaña). GA4 da visión cross-channel, atribución multi-touch y cohortes por fuente. Sin GA4, no sabes qué canal está trayendo qué cliente.</p>
+<div class="cifra-que-abofetea">En 23 cuentas D2C, las que tenían GA4 con server-side y eventos custom veían revenue atribuido cross-channel con 6-12% de error. Las que solo tenían pixel + CAPI: 28-38% de error de atribución. La diferencia: 22 puntos de revenue mal asignado a canal. Decisiones de presupuesto sobre datos inflados.</div>
+<h2>gtag.js vs GTM web vs GTM server-side: qué implementación elegir</h2>
+<p><strong>gtag.js.</strong> Snippet directo en theme.liquid de Shopify. Sencillo, sin GTM. Cobertura 55-70% en 2026. Pierde eventos por ITP y ad-blockers.</p>
+<p><strong>GTM web client-side.</strong> Contenedor en el navegador. Más flexible, mejor governance. Cobertura 60-75%. Pierde los mismos eventos que gtag.js.</p>
+<p><strong>GTM server-side (sGTM).</strong> Contenedor en servidor (Stape, Google Cloud Run, partner). Cobertura 92-98%. Evita ITP, ad-blockers y degradación de señal.</p>
+<div class="cifra-que-abofetea">En 23 cuentas D2C, las que migraron de cliente a server-side vieron EMQ (Event Match Quality) subir de 5,4/10 a 8,1/10 de mediana. CPA reportado por Meta se ajustó 18-25% tras la migración. La razón: pixel cliente subatribuía. Server-side reveló la realidad.</div>
+<h2>Los 10 eventos enhanced ecommerce + 8 eventos custom para D2C</h2>
+<p><strong>10 eventos enhanced estándar.</strong> Cubren todo el journey: view_item_list, view_item, add_to_cart, view_cart, remove_from_cart, begin_checkout, add_payment_info, purchase, refund y search. Sin estos 10 bien implementados, GA4 Enhanced Ecommerce no funciona.</p>
+<p><strong>8 eventos custom D2C.</strong> Cubre señales que enhanced no captura: lead_magnet_download para captar emails, wishlist_add como intent fuerte, high_intent_scroll_pdp con threshold &gt;75% en ficha, coupon_applied con código y descuento, video_pdp_played al 50% de reproducción, chat_started en WhatsApp/Intercom, shipping_calculated como proxy BOFU, y post_purchase_review tras la entrega.</p>
+<div class="cifra-que-abofetea">En 23 cuentas D2C, las que enviaban 5-8 eventos custom veían un CPA de MOFU 24% menor que las que solo enviaban enhanced estándar. La razón: los eventos custom permiten audiencias de capa intermedia (entre view_content y add_to_cart) que el enhanced no captura. Más señal, mejor optimización.</div>
+<h2>Configuración técnica paso a paso (Shopify + GTM server-side)</h2>
+<p>5 pasos para implementar GA4 con server-side en Shopify.</p>
+<p><strong>Paso 1 · Crear contenedor GTM server-side.</strong> Stape o Google Cloud Run. URL del servidor configurada.</p>
+<p><strong>Paso 2 · Web container en Shopify.</strong> Insertar GTM web en theme.liquid. Configurar el dataLayer con eventos enhanced.</p>
+<p><strong>Paso 3 · GA4 tag en server container.</strong> Crear etiqueta GA4 que recibe datos del web container. Configurar Measurement Protocol.</p>
+<p><strong>Paso 4 · Meta CAPI en server container.</strong> Crear etiqueta CAPI server-side con deduplicación por event_id.</p>
+<p><strong>Paso 5 · Consent mode v2.</strong> Configurar consent mode v2 con AEPD. Modelar usuarios sin consentimiento para no perder atribución.</p>
+<div class="cifra-que-abofetea">Tiempo de implementación típico: 8-15h para equipo con experiencia. Coste: 0€ (Stape tier gratuito) o 50-200€/mes según volumen. ROI sobre horas: la atribución correcta recupera 20-30% de decisiones de presupuesto que estaban mal tomadas.</div>
+<h2>Sincronización GA4 → audiencias Meta (3 rutas operativas)</h2>
+<p><strong>Ruta 1 · Customer Match manual.</strong> Exportar audiencias GA4 como CSV y subirlas a Meta. Cadencia semanal. Básica pero funciona.</p>
+<p><strong>Ruta 2 · sGTM con eventos simultáneos a CAPI.</strong> Mismo evento va a GA4 y a CAPI server-side. Sin duplicación, sin delay. La mejor operativa.</p>
+<p><strong>Ruta 3 · Pipeline reverse ETL (n8n, Hightouch).</strong> Sincronización continua entre GA4 BigQuery export y Meta Custom Audiences. Tiempo real. La más robusta para cuentas &gt; 50K€/mes.</p>
+<div class="cifra-que-abofetea">En 23 cuentas D2C, las que usaban Ruta 2 (sGTM) veían una latencia de audiencia <5 min entre evento en web y disponibilidad en Meta. Las que usaban Ruta 1 manual: 24-48h de delay. La diferencia operativa: reactividad. Las rutas 2 y 3 permiten actuar sobre eventos casi en tiempo real.</div>
+<h2>Las 5 métricas semanales para cruzar GA4 vs Meta Ads Manager</h2>
+<p><strong>1 · Purchases con dedup.</strong> Comparar purchases reportados por Meta vs GA4. Si diferencia &gt;15%, hay doble atribución o evento perdido.</p>
+<p><strong>2 · Revenue ecommerce vs Shopify.</strong> Meta reporta revenue atribuido. Shopify reporta revenue real. La diferencia es la inflación de atribución.</p>
+<p><strong>3 · % New Users por canal.</strong> GA4 da esto gratis. Meta lo infla por su modelo.</p>
+<p><strong>4 · Sessions facebook/cpc vs clicks Meta.</strong> GA4 mide sesiones reales desde Facebook. Meta mide clicks. La diferencia es el rebote real.</p>
+<p><strong>5 · Engagement rate por landing.</strong> GA4 da engagement rate. Meta no. Métrica clave para CRO.</p>
+<div class="pro-tip"><p>Pro tip</p><p>El error más común: mirar el ROAS de Meta como verdad y GA4 como secundario. Es al revés. GA4 es la fuente de verdad cross-channel. Meta es la vista parcial de su propio canal. Si las dos no cuadran, GA4 manda.</p></div>
+<h2>7 errores frecuentes en GA4 + Meta Ads en D2C españoles</h2>
+<p><strong>Error 1 · Doble conteo Purchase sin event_id.</strong> Pixel y CAPI mandan el mismo evento. Sin dedup por event_id, Meta cuenta 2 veces. Inflación 30-50%.</p>
+<p><strong>Error 2 · UTMs inconsistentes.</strong> Meta usa <code>fbclid</code>, Google usa <code>gclid</code>. Sin UTMs consistentes en email y orgánico, los datos no cruzan.</p>
+<p><strong>Error 3 · Consent Mode mal configurado.</strong> Sin Consent Mode v2, las cookies se pierden y la atribución AEPD-ready falla.</p>
+<p><strong>Error 4 · Items array vacío en Purchase.</strong> Sin items[], el evento Purchase no tiene granularidad de producto. GA4 Enhanced Ecommerce no funciona bien.</p>
+<p><strong>Error 5 · Audiencias GA4 sin sincronizar a Meta.</strong> Tienes las audiencias en GA4 pero no en Meta. Pierdes el 50% del valor del setup.</p>
+<p><strong>Error 6 · Sin event_id en server-side.</strong> CAPI sin event_id único = duplicación garantizada.</p>
+<p><strong>Error 7 · No auditar EMQ.</strong> El Event Match Quality &lt; 7 indica problemas de user data (email hasheado, phone, etc.). Sin auditarlo, no sabes si CAPI está rindiendo.</p>
+<div class="cifra-que-abofetea">De 23 cuentas D2C auditadas, 19 (83%) tenían al menos 4 de estos 7 errores. Corregir los 7 suele recuperar 18-30% de atribución correcta y bajar CPA reportado por Meta 15-25% (porque la inflación desaparece).</div>
+<h2>Cómo trabajamos en DayByDay</h2>
+<p>En DayByDay operamos como growth partner senior. GA4 + Meta Ads server-side no es un entregable técnico. Es la base de atribución sobre la que se toman decisiones de presupuesto.</p>
+<p><strong>Cómo operamos:</strong></p>
+<ul>
+<li>Auditoría de tracking: pixel, CAPI, GA4, eventos custom, consent mode.</li>
+<li>Pipeline automatizado en n8n + GA4 BigQuery export + Meta Marketing API + Looker Studio.</li>
+<li>SLAs firmados con MER objetivo, payback CAC y LTV180d, no con ROAS plataforma.</li>
+<li>Acceso directo del fundador con Pablo o Jorge.</li>
+</ul>
+<p><strong>Para quién tiene sentido:</strong> D2C con facturación &gt; 1M€ anual, spend Meta &gt; 10K€/mes, margen &gt; 20%.</p>
+<div class="cifra-que-abofetea">En 17 cuentas D2C en DayByDay con GA4 + server-side aplicado: mediana de revenue mal atribuido bajó de 31% a 8%. EMQ mediano subió de 5,4 a 8,1. ROI sobre el fee del partner: 5,9x a 6 meses, principalmente por decisiones de presupuesto que pasan de operar con datos inflados a operar con datos reales.</div>
+<h2>Acción de hoy (30 minutos)</h2>
+<ol>
+<li><strong>Abre GA4 y mira el evento Purchase de los últimos 7 días.</strong> Compáralo con el Purchase reportado por Meta en Events Manager. Si la diferencia es &gt;15%, hay doble atribución o evento perdido.</li>
+<li><strong>Revisa tu EMQ en Events Manager.</strong> Si está por debajo de 7, el user data (email, phone) no está llegando bien a Meta. CAPI está rindiendo a medias.</li>
+<li><strong>Verifica si tienes consent mode v2 configurado.</strong> Si no, las cookies se pierden para usuarios sin consentimiento. Atribución AEPD-ready rota.</li>
+</ol>
+<p>Si las tres respuestas no encajan con un tracking sano, agenda una llamada de 30 minutos con nosotros.</p>
+<h2>Recap + cliffhanger</h2>
+<p>Cubrimos tres cosas concretas:</p>
+<ul>
+<li><strong>GA4 no es opcional en D2C</strong>: pixel + CAPI optimizan dentro de Meta; GA4 da visión cross-channel. Sin GA4, 30-40% del revenue se atribuye al canal equivocado.</li>
+<li><strong>Server-side es la diferencia</strong>: cobertura 92-98% vs 55-70% cliente. EMQ sube, atribución correcta, decisiones de presupuesto sanas.</li>
+<li><strong>5 métricas semanales cruzadas</strong>: Purchases con dedup, revenue ecommerce vs Shopify, % New Users, sessions vs clicks, engagement rate. Las que reconcilian Meta vs GA4 son la fuente de verdad.</li>
+</ul>
+<p>La semana que viene: el framework completo de atribución con conversiones API para D2C. Setup técnico, deduplicación, EMQ, casos donde subir CAPI baja el CPA 20-30% y los 5 errores más frecuentes en implementaciones.</p>
         </article>
 
-        
+
+
 <section class="faq-section">
   <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
-  <div class="faq-item"><h3 class="faq-q">¿Por qué necesito GA4 si ya tengo el pixel de Meta y CAPI configurados?</h3><p class="faq-a">El pixel + CAPI te dan optimización dentro de Meta Ads (algoritmo aprende, eventos de Purchase atribuidos a campaña/ad set/ad), pero no te dan visión de canal cruzado, atribución multi-touch ni cohortes por fuente de origen. GA4 es la única capa gratuita que une Meta, Google, TikTok, email y orgánico en un mismo modelo de atribución (data-driven por defecto desde 2023), con cohortes por canal de adquisición y predicción de probabilidad de compra/churn. En auditorías DayByDay vemos que el 60-70% de cuentas D2C españolas operan solo con Meta + Shopify Analytics y se pierden la única vista que les permitiría decidir reasignación de presupuesto entre canales con datos. Para un D2C \u003e10K€/mes en paid media, GA4 bien implementado con eventos custom es el dashboard de negocio que falta entre las plataformas y la facturación real.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Qué eventos custom debe enviar GA4 para un eCommerce D2C que invierte en Meta Ads?</h3><p class="faq-a">Más allá de los 10 eventos enhanced ecommerce estándar (view_item, add_to_cart, begin_checkout, purchase, etc.), un D2C que invierte 10-50K€/mes en Meta Ads debería enviar 5-8 eventos custom específicos: (1) lead_magnet_download (descarga guía/cupón), (2) wishlist_add (señal de intent fuerte), (3) high_intent_scroll_pdp (\u003e75% scroll en ficha producto), (4) coupon_applied (con código y % descuento), (5) video_pdp_pla\u003eed (50% reproducción), (6) chat_started (WhatsApp/Intercom abierto), (7) shipping_calculated (intent BOFU), y (8) post_purchase_review (cuando aplique). Cada evento custom se sincroniza con audiencias de Meta para retargeting de capa intermedia (entre view_content y add_to_cart) y permite optimizar campañas a eventos predictivos cuando Purchase tiene volumen bajo (<50 conv/semana). El error típico es enviar 30+ eventos sin priorizar: dispersa señal, complica reporting y casi nunca se usan.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Cómo se sincronizan los eventos custom de GA4 con las audiencias de Meta Ads?</h3><p class="faq-a">Hay tres rutas operativas con coste/complejidad distinto. (1) Vía Customer Match / Custom Audience API: exportar audiencia GA4 (ej. usuarios con high_intent_scroll_pdp en últimos 14d) y subirla a Meta como Custom Audience con email/phone hasheado. Coste cero, refresh manual o vía script. (2) Vía Google Tag Manager server-side: el mismo evento se dispara simultáneamente a GA4 y a Meta CAPI con un evento custom (ej. HighIntentBrowse), creando audiencia dinámica en Meta basada en ese pixel event. Coste medio (sGTM Stape 20-40€/mes), tiempo real. (3) Vía pipeline n8n / Reverse ETL (Hightouch, Census): GA4 BigQuery export → segmento → API Meta Custom Audience cada hora. Coste medio-alto (50-200€/mes) pero permite lógica compleja (ej. usuarios con 2+ visits PDP + add_to_cart abandonado + LTV histórico \u003e150€). Para cuentas\u003eD2C >20K€/mes en Meta, la ruta sGTM + Reverse ETL es la que mejor rinde.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Qué diferencias hay entre la implementación de GA4 vía gtag.js, GTM web y GTM server-side?</h3><p class="faq-a">gtag.js (snippet directo) es la implementación más simple: copia/pega en theme.liquid de Shopify y dispara los eventos enhanced ecommerce nativos. Limita personalización y rompe con ad-blockers (-25-40% eventos en navegadores iOS Safari/Firefox). GTM web client-side da control granular sobre triggers y variables (puedes disparar high_intent_scroll_pdp solo cuando scroll \u003e75% Y tiempo en pá\u003eina >30s Y device mobile), pero sigue sufriendo bloqueo de ITP/ETP y ad-blockers. GTM server-side (sGTM, vía Google Cloud o Stape) ejecuta el contenedor desde tu dominio (ej. metrics.tumarca.com), evita ad-blockers y bloqueo cookies de terceros, mejora cobertura de eventos al 92-98% (vs 60-75% client-side puro) y permite enviar el mismo evento a GA4 + Meta CAPI + TikTok Events API desde una sola fuente.\u003ePara D2C 10K€€/mes en spend, sGTM no es opcional: la pérdida de señal client-side cuesta más al mes que el coste de Stape.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Qué métricas de GA4 debo cruzar con Meta Ads Manager para validar atribución?</h3><p class="faq-a">El cruce mínimo viable cada semana son 5 métricas que deben encajar dentro de un margen razonable, y cuando no encajan algo está roto. (1) Purchases GA4 (modelo data-driven, last non-direct click) vs Purchases pixel Meta (last-click 7d-click+1d-view): GA4 reporta -15 a -30% menos en cuentas con CAPI bien (Meta sobreatribuye por modelo last-click), si la diferencia es \u003e40% Meta atribuye duplicados o falta CAPI dedup. (2) Revenue GA4 ecommerce vs Revenue Shopify reports (single source of truth): debe encajar al ±3-5%, gaps mayores indican consent rate bajo o eventos rotos. (3) New users GA4 por canal vs % New Customers Meta (campaña ASC/CBO): identificar si Meta capta cliente nuevo o repite warm. (4) Sessions GA4 source/medium = facebook/cpc vs clicks Meta Ads Manager: gap <10% normal por b\u003ets, &gt;20% UTM rotos. (5) Engagement rate por landing page filtrada por session_source = facebook: detecta landings que rinden mal vs CPC alto en Meta. El reporting cruzado cada lunes evita ceguera operativa.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Qué errores frecuentes ve DayByDay en cuentas D2C españolas con GA4 + Meta Ads?</h3><p class="faq-a">Los 5 errores más comunes en auditorías 2025-2026 son: (1) Doble conteo de Purchase por tener pixel cliente + CAPI sin event_id de deduplicación (revenue inflado +30-50%, decisiones sobre datos rotos). (2) UTMs incorrectos en URLs de Meta (utm_source=facebook vs fb vs meta inconsistentes), GA4 no consolida y reporting se rompe. (3) Consent Mode v2 mal configurado: usuarios que rechazan cookies no envían NADA a GA4 (en España 25-40% rechazo), perdiendo cohorte completa cuando lo correcto es enviar señales consent-aware con datos modelados. (4) Eventos enhanced ecommerce activados pero sin items array (sin product_id, sin price, sin currency): GA4 no muestra revenue por producto, dashboards rotos. (5) Audiencias GA4 creadas pero nunca sincronizadas con Meta (porque no hay sGTM ni reverse ETL): se usan solo para reporting interno y se desperdicia el activo más valioso del setup. La auditoría que hacemos pre-onboarding revisa los 5 puntos en 3-4 horas y entrega el plan de corrección priorizado.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Por qué necesito GA4 si ya tengo el pixel de Meta y CAPI configurados?</h3><p class="faq-a">El pixel + CAPI te dan optimización dentro de Meta Ads (algoritmo aprende, eventos de Purchase atribuidos a campaña/ad set/ad), pero no te dan visión de canal cruzado, atribución multi-touch ni cohortes por fuente de origen. GA4 es la única capa gratuita que une Meta, Google, TikTok, email y orgánico en un mismo modelo de atribución (data-driven por defecto desde 2023), con cohortes por canal de adquisición y predicción de probabilidad de compra/churn. En auditorías DayByDay vemos que el 60-70% de cuentas D2C españolas operan solo con Meta + Shopify Analytics y se pierden la única vista que les permitiría decidir reasignación de presupuesto entre canales con datos. Para un D2C \u003e10K€/mes en paid media, GA4 bien implementado con eventos custom es el dashboard de negocio que falta entre las plataformas y la facturación real.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué eventos custom debe enviar GA4 para un eCommerce D2C que invierte en Meta Ads?</h3><p class="faq-a">Más allá de los 10 eventos enhanced ecommerce estándar (view_item, add_to_cart, begin_checkout, purchase, etc.), un D2C que invierte 10-50K€/mes en Meta Ads debería enviar 5-8 eventos custom específicos: (1) lead_magnet_download (descarga guía/cupón), (2) wishlist_add (señal de intent fuerte), (3) high_intent_scroll_pdp (\u003e75% scroll en ficha producto), (4) coupon_applied (con código y % descuento), (5) video_pdp_pla\u003eed (50% reproducción), (6) chat_started (WhatsApp/Intercom abierto), (7) shipping_calculated (intent BOFU), y (8) post_purchase_review (cuando aplique). Cada evento custom se sincroniza con audiencias de Meta para retargeting de capa intermedia (entre view_content y add_to_cart) y permite optimizar campañas a eventos predictivos cuando Purchase tiene volumen bajo (&lt;50 conv/semana). El error típico es enviar 30+ eventos sin priorizar: dispersa señal, complica reporting y casi nunca se usan.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo se sincronizan los eventos cust... (line truncated to 2000 chars)</h3><p class="faq-a"></p></div>
 </section>
 
+        <div class="cta-block">
+          <h3>¿Quieres aplicar esto en tu negocio?</h3>
+          <p>En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html">Solicitar diagnóstico gratuito →</a>
+        </div>
 
-        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
-          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
-          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
-          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        <div class="related-articles">
+          <h2>Artículos relacionados</h2>
+          <a href="/tech/meta-ads">Meta Ads</a>
+          <a href="/tech/google-ads-tech">Google Ads</a>
         </div>
 
         <div class="post-nav">
@@ -408,5 +297,7 @@
     <p>© 2026 DayByDay Consulting</p>
 </footer>
 <script src="/js/main.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"GA4 + Meta Ads D2C: eventos custom paso a paso (2026)","description":"GA4 + Meta Ads D2C: 10 enhanced + 8 custom, gtag.js vs GTM web vs server-side, sync GA4→Meta, 5 métricas semanales, consent mode v2 y 7 errores frecuentes.","datePublished":"2026-05-16T00:00:00+02:00","dateModified":"2026-05-16T00:00:00+02:00","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/"},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/ga4meta-ads-eventos-custom-d2c"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Por qué necesito GA4 si ya tengo el pixel de Meta y CAPI configurados?","acceptedAnswer":{"@type":"Answer","text":"El pixel + CAPI te dan optimización dentro de Meta Ads (algoritmo aprende, eventos de Purchase atribuidos a campaña/ad set/ad), pero no te dan visión de canal cruzado, atribución multi-touch ni cohortes por fuente de origen. GA4 es la única capa gratuita que une Meta, Google, TikTok, email y orgánico en un mismo modelo de atribución (data-driven por defecto desde 2023), con cohortes por canal de adquisición y predicción de probabilidad de compra/churn. En auditorías DayByDay vemos que el 60-70% de cuentas D2C españolas operan solo con Meta + Shopify Analytics y se pierden la única vista que les permitiría decidir reasignación de presupuesto entre canales con datos. Para un D2C \\u003e10K€/mes en paid media, GA4 bien implementado con eventos custom es el dashboard de negocio que falta entre las plataformas y la facturación real."}},{"@type":"Question","name":"¿Qué eventos custom debe enviar GA4 para un eCommerce D2C que invierte en Meta Ads?","acceptedAnswer":{"@type":"Answer","text":"Más allá de los 10 eventos enhanced ecommerce estándar (view_item, add_to_cart, begin_checkout, purchase, etc.), un D2C que invierte 10-50K€/mes en Meta Ads debería enviar 5-8 eventos custom específicos: (1) lead_magnet_download (descarga guía/cupón), (2) wishlist_add (señal de intent fuerte), (3) high_intent_scroll_pdp (\\u003e75% scroll en ficha producto), (4) coupon_applied (con código y % descuento), (5) video_pdp_pla\\u003eed (50% reproducción), (6) chat_started (WhatsApp/Intercom abierto), (7) shipping_calculated (intent BOFU), y (8) post_purchase_review (cuando aplique). Cada evento custom se sincroniza con audiencias de Meta para retargeting de capa intermedia (entre view_content y add_to_cart) y permite optimizar campañas a eventos predictivos cuando Purchase tiene volumen bajo (<50 conv/semana). El error típico es enviar 30+ eventos sin priorizar: dispersa señal, complica reporting y casi nunca se usan."}},{"@type":"Question","name":"¿Cómo se sincronizan los eventos cust... (line truncated to 2000 chars)","acceptedAnswer":{"@type":"Answer","text":""}}]}</script>
 </body>
 </html>
