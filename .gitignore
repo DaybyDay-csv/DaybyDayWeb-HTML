@@ -1,4 +1,8 @@
 *.zip
+__pycache__/
+*.pyc
+.last-write-raw.md
+.last-write-*
 
 # wrangler files
 .wrangler
