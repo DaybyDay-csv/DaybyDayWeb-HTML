@@ -26,7 +26,7 @@ migration_state: "good"
 
 Eso nos lo dijo el fundador de una marca D2C de fitness en una sesión de discovery. Llevaba 6 meses con un media buyer freelance a 2.500€/mes. El ROAS plataforma era aceptable (3,4x) pero el margen real no se movía: el freelancer optimizaba para ROAS, no para margen. Cuando le cambiamos a un modelo de Growth Partner con SLAs firmados, el ROAS bajó de 3,4x a 3,1x pero el margen de contribución subió 14 puntos. La pregunta clave no es qué hace un media buyer, sino qué nivel de seniority y qué tipo de partner necesitas.
 
-En los últimos 24 meses hemos colocado media buyers en 18 cuentas D2C en España. La mediana de tiempo de un media buyer junior en una cuenta es 9 meses. La de un senior, 22 meses. La diferencia operativa entre un media buyer y un growth partner: el media buyer optimiza campañas, el growth partner optimiza el negocio.
+En los últimos 24 meses hemos colocado media buyers en 18 cuentas D2C en España. La mediana de tiempo de un media buyer junior en una cuenta es 9 meses. La de un senior, 22 meses. El media buyer optimiza campañas. El growth partner optimiza el negocio.
 
 :::direct-answer
 Un media buyer es el profesional que gestiona y optimiza la inversión publicitaria de pago: Meta Ads, Google Ads, TikTok Ads. En D2C, su rol incluye estructura de campañas, pujas, audiencias, creatividades y reporting de ROAS/CPA. Un media buyer junior ejecuta. Un senior estrategia y partner. Un growth partner opera como extensión del equipo directivo con SLAs de margen.
@@ -53,7 +53,7 @@ Un media buyer gestiona la compra y optimización de espacios publicitarios de p
 
 **Función 5 · Reporting.** Construir y mantener el reporting: ROAS, CPA, LTV, MER, por campaña y canal. El reporting manual lleva 4-8 horas/semana si no hay automatización.
 
-**Función 6 · Coordinación con el cliente.** Reuniones semanales o quincenales con el equipo del cliente, alineación de objetivos, propuestas de mejora. Esta función es la que más diferencia a un senior de un junior.
+**Función 6 · Coordinación con el cliente.** Reuniones semanales o quincenales con el equipo del cliente, alineación de objetivos, propuestas de mejora. La función que más diferencia a un senior de un junior.
 
 :::cifra
 En 18 cuentas D2C, las 6 funciones ocupan una mediana de 18 horas/semana del media buyer. Distribución: 30% estructura y pujas, 20% audiencias, 15% creatividades, 20% reporting, 15% coordinación. La función más subestimada: coordinación. La más cara de hacer mal: estructura.
@@ -71,11 +71,11 @@ La confusión más común: tratar como sinónimos perfiles que son muy distintos
 
 **Community manager (CM).** Gestiona la presencia orgánica y la comunidad en redes. Métrica principal: engagement, alcance. Output: contenido, respuestas, comunidad activa.
 
-**Trafficker.** Versión técnica del media buyer, centrada en implementación: píxeles, conversiones API, catálogos. Métrica principal: implementación correcta, atribución fiable. Output: cuentas impecables.
+**Trafficker.** Versión técnica del media buyer, centrada en implementación: píxeles, conversiones API, catálogos. Output: cuentas impecables.
 
-**Growth marketer.** Ejecuta experimentos de crecimiento en todo el funnel: acquisition, activation, retention, revenue. Métrica principal: north star metric, experimentos validados.
+**Growth marketer.** Ejecuta experimentos de crecimiento en todo el funnel: acquisition, activation, retention, revenue. Métrica: north star, experimentos validados.
 
-**Growth partner.** Senior estratégico que opera como extensión del equipo directivo. SLAs firmados con métricas de cohorte: margen, payback de CAC, LTV. Output: decisiones de negocio ejecutadas, no solo campañas optimizadas.
+**Growth partner.** Senior estratégico que opera como extensión del equipo directivo. SLAs firmados con métricas de cohorte: margen, payback de CAC, LTV. Output: decisiones de negocio ejecutadas.
 
 :::cifra
 En 18 cuentas D2C, la mezcla que más funciona es media buyer + growth partner (1 de cada). El media buyer ejecuta, el growth partner valida la dirección y firma SLAs. Un CM es útil pero complementario, no sustituye al media buyer en paid media.
@@ -85,13 +85,32 @@ En 18 cuentas D2C, la mezcla que más funciona es media buyer + growth partner (
 
 La pregunta freelance vs agencia no es una sola. Depende del volumen, la complejidad y la tolerancia al riesgo de rotación. En 18 cuentas D2C, hemos visto los 3 modelos funcionar y fallar.
 
-**Freelance media buyer si:**\n- Volumen de spend < 5K€/mes.\n- Necesitas ejecución, no estrategia senior.\n- Tienes equipo interno que aporta la dirección.\n- Toleras el riesgo de rotación (mediana 14 meses).\n- Coste: 1.500-5.000€/mes, sin capacidad de backup.
+**Freelance media buyer si:**
 
-**Agencia de paid media si:**\n- Volumen 5K-25K€/mes.\n- Necesitas ejecución profesional con reporting estructurado.\n- Quieres propiedad de las cuentas en tu nombre.\n- Tu equipo interno es mínimo.\n- Coste: 800-3.000€/mes de fee + 10-20% del spend.
+- Volumen de spend < 5K€/mes.
+- Necesitas ejecución, no estrategia senior.
+- Tienes equipo interno que aporta la dirección.
+- Toleras el riesgo de rotación (mediana 14 meses).
+- Coste: 1.500-5.000€/mes, sin capacidad de backup.
 
-**Growth partner senior si:**\n- Volumen > 10K€/mes y creciente.\n- Necesitas partner estratégico con SLAs de margen.\n- El fundador no quiere gestionar equipo interno grande.\n- Tu facturación > 1,5M€ anuales.\n- Coste: 4.000-8.000€/mes con SLAs firmados.
+**Agencia de paid media si:**
 
-:::cifra\nCoste total anual de cada modelo para una cuenta con 15K€/mes de spend: freelance 21-30K€/año (con 1 rotación), agencia 36-48K€/año, growth partner 60-96K€/año. El growth partner cuesta 2-3x más, pero el ROI mediano es 6-8x, dejando margen 4-5x superior al freelance.
+- Volumen 5K-25K€/mes.
+- Necesitas ejecución profesional con reporting estructurado.
+- Quieres propiedad de las cuentas en tu nombre.
+- Tu equipo interno es mínimo.
+- Coste: 800-3.000€/mes de fee + 10-20% del spend.
+
+**Growth partner senior si:**
+
+- Volumen > 10K€/mes y creciente.
+- Necesitas partner estratégico con SLAs de margen.
+- El fundador no quiere gestionar equipo interno grande.
+- Tu facturación > 1,5M€ anuales.
+- Coste: 4.000-8.000€/mes con SLAs firmados.
+
+:::cifra
+Coste total anual de cada modelo para una cuenta con 15K€/mes de spend: freelance 21-30K€/año (con 1 rotación), agencia 36-48K€/año, growth partner 60-96K€/año. El growth partner cuesta 2-3x más, pero el ROI mediano es 6-8x, dejando margen 4-5x superior al freelance.
 :::
 
 ## Las 6 señales de que necesitas un media buyer (o cambiarlo)
@@ -111,16 +130,28 @@ En 18 cuentas D2C, estas son las 6 señales de que necesitas un media buyer, o d
 **Señal 6 · El proveedor no te firma SLAs.** Si no hay compromiso firmado de margen, payback de CAC o ROAS mínimo, el proveedor opera sin riesgo. La consecuencia: ninguna accountability real.
 
 :::cifra
-De las 18 cuentas D2C auditadas, 14 (78%) reconocieron 3+ señales. La más común: reporting manual que lleva días (12 de 14). La más cara: optimización de ROAS sin foco en margen (9 de 14, con pérdida mediana de 28K€/año de margen no capturado).
+De las 18 cuentas D2C auditadas, 14 (78%) reconocieron 3+ señales. La más común: reporting manual que lleva días (12 de 14). La más cara: optimización de ROAS sin foco en margen (9 de 14, pérdida mediana de 28K€/año de margen).
 :::
 
 ## Cómo trabajamos en DayByDay
 
 En DayByDay operamos como Growth Partner senior, no como agencia de ejecución ni como media buyer freelance. La diferencia: firmamos SLAs de margen, no de ROAS de plataforma. El compromiso es con el resultado de negocio.
 
-**Cómo operamos:**\n- Auditoría inicial de 30 minutos sin coste.\n- Plan de 90 días con entregables por fase.\n- SLAs firmados con margen de contribución y payback de CAC.\n- Acceso directo del fundador con el partner senior (Pablo o Jorge).\n- Propiedad de cuentas siempre en el cliente.\n- Coste: 4.000-8.000€/mes + opcional 8-15% del spend incremental.
+**Cómo operamos:**
 
-**Para quién tiene sentido:**\n- Marcas D2C con facturación > 1M€ anual.\n- Equipos internos mínimos (1-2 personas).\n- Margen bruto > 20%.\n- Paciencia para 90 días (no es sprint).
+- Auditoría inicial de 30 minutos sin coste.
+- Plan de 90 días con entregables por fase.
+- SLAs firmados con margen de contribución y payback de CAC.
+- Acceso directo del fundador con el partner senior (Pablo o Jorge).
+- Propiedad de cuentas siempre en el cliente.
+- Coste: 4.000-8.000€/mes + opcional 8-15% del spend incremental.
+
+**Para quién tiene sentido:**
+
+- Marcas D2C con facturación > 1M€ anual.
+- Equipos internos mínimos (1-2 personas).
+- Margen bruto > 20%.
+- Paciencia para 90 días (no es sprint).
 
 :::cifra
 De las 18 cuentas D2C en DayByDay, 15 (83%) llegaron a margen objetivo a 90 días. La mediana de subida de margen: 18 puntos. La mediana de ROI sobre el fee del partner: 7,2x a 6 meses. La duración mediana de la relación: 28 meses (vs 14 meses del freelance promedio).
@@ -128,7 +159,11 @@ De las 18 cuentas D2C en DayByDay, 15 (83%) llegaron a margen objetivo a 90 día
 
 ## Acción de hoy (15 minutos)
 
-1. **Cuenta cuántas señales reconoces** de las 6 listadas. Si son 3+, hay un problema operativo que un nuevo perfil puede resolver.\n2. **Mira quién es propietario de tus cuentas de Meta y Google.** Si están a nombre de la agencia o freelance, mueve la propiedad a tu empresa esta semana. Es un clic y un email al soporte.\n3. **Pregúntale a tu media buyer qué métricas de cohorte reporta.** Si solo reporta ROAS y CPA, optimiza para plataforma. Si reporta margen y LTV, opera como partner.\n\nSi las tres respuestas no encajan con un partner estratégico, agenda una llamada de 30 minutos con nosotros. Te decimos en 20 qué perfil necesitas.
+1. **Cuenta cuántas señales reconoces** de las 6 listadas. Si son 3+, hay un problema operativo que un nuevo perfil puede resolver.
+2. **Mira quién es propietario de tus cuentas de Meta y Google.** Si están a nombre de la agencia o freelance, mueve la propiedad a tu empresa esta semana. Es un clic y un email al soporte.
+3. **Pregúntale a tu media buyer qué métricas de cohorte reporta.** Si solo reporta ROAS y CPA, optimiza para plataforma. Si reporta margen y LTV, opera como partner.
+
+Si las tres respuestas no encajan con un partner estratégico, agenda una llamada de 30 minutos con nosotros. Te decimos en 20 qué perfil necesitas.
 
 ## Recap + cliffhanger
 
