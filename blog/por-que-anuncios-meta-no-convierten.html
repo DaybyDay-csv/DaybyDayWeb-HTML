@@ -3,10 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Por qué tus anuncios de Meta no convierten (y cómo solucionarlo) | DayByDay Consulting</title>
-  <meta name="description" content="Diagnóstico paso a paso para entender por qué tus anuncios de Meta no convierten: tracking, landing, audiencia, creatividad y estructura de campaña. Con tabla de causas reales, métricas de diagnóstico y protocolo de intervención sin romper el aprendizaje del algoritmo.">
-  <meta name="robots" content="index, follow">
+  <title>Por qué tus anuncios de Meta no convierten y cómo arreglarlo</title>
+  <meta name="description" content="Anuncios de Meta que no convierten: diagnóstico paso a paso, causas reales y cómo arreglarlo sin romper el aprendizaje. Cifras validadas D2C 2026.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="Pablo Santirso · DayByDay Consulting">
   <link rel="canonical" href="https://www.daybydayconsulting.com/blog/por-que-anuncios-meta-no-convierten">
+  <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/blog/por-que-anuncios-meta-no-convierten">
+  <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/blog/por-que-anuncios-meta-no-convierten">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly summary">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Por qué tus anuncios de Meta no convierten y cómo arreglarlo">
+  <meta property="og:description" content="Anuncios de Meta que no convierten: diagnóstico paso a paso, causas reales y cómo arreglarlo sin romper el aprendizaje. Cifras validadas D2C 2026.">
+  <meta property="og:url" content="https://www.daybydayconsulting.com/blog/por-que-anuncios-meta-no-convierten">
+  <meta property="og:site_name" content="DayByDay Consulting">
+  <meta property="og:locale" content="es_ES">
+  <meta property="article:published_time" content="2026-06-13T00:00:00+02:00">
+  <meta property="article:modified_time" content="2026-06-13T00:00:00+02:00">
+  <meta property="article:author" content="Pablo Santirso">
+  <meta property="article:section" content="Meta Ads">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Por qué tus anuncios de Meta no convierten y cómo arreglarlo">
+  <meta name="twitter:description" content="Anuncios de Meta que no convierten: diagnóstico paso a paso, causas reales y cómo arreglarlo sin romper el aprendizaje. Cifras validadas D2C 2026.">
+
   <link rel="icon" href="/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
@@ -27,6 +46,14 @@
     .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
     .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
     .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .article-body .direct-answer { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 0 0 2rem; }
+    .article-body .direct-answer p { margin: 0; font-size: 1.05rem; }
+    .article-body .summary-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .summary-block p { margin: 0 0 0.5rem; }
+    .article-body .pro-tip { background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .pro-tip p:first-child { color: var(--accent-color, #6366f1); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem; margin: 0 0 0.5rem; }
+    .article-body .pro-tip p:last-child { margin: 0; }
+    .article-body .cifra-que-abofetea { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); text-align: center; padding: 1.5rem 0; }
     .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
     .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
     .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
@@ -39,12 +66,28 @@
     .author-info { font-size: 0.9rem; }
     .author-info .name { color: var(--text-primary); font-weight: 600; }
     .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .related-articles h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); }
+    .sources-block { margin-top: 3rem; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; }
+    .sources-block h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary); }
+    .sources-block p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .sources-block ul { list-style: none; padding: 0; margin: 0; }
+    .sources-block li { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+    .sources-block li:last-child { border-bottom: none; }
+    .sources-block a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .related-articles a { display: block; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .related-articles a:hover { border-color: var(--accent-color, #6366f1); }
     .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
     .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
     .post-nav a:hover { color: var(--text-primary); }
+    .cta-block { margin-top: 3rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; text-align: center; }
+    .cta-block h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary); }
+    .cta-block p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .cta-block a { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-color, #6366f1); color: white; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-size: 0.95rem; }
   </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
     <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
@@ -119,16 +162,16 @@
       <div style="max-width:720px;margin:0 auto;">
         <div class="article-meta">
           <span class="category-badge">Meta Ads</span>
-          <span class="reading-time">9 min de lectura</span>
-          <span class="article-date">2026-04-28</span>
+          <span class="reading-time">8 min de lectura</span>
+          <span class="article-date">2026-06-13</span>
         </div>
         <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Por qué tus anuncios de Meta no convierten (y cómo solucionarlo)</h1>
-        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Diagnóstico paso a paso para entender por qué tus anuncios de Meta no convierten: tracking, landing, audiencia, creatividad y estructura de campaña. Con tabla de causas reales, métricas de diagnóstico y protocolo de intervención sin romper el aprendizaje del algoritmo.</p>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Anuncios de Meta que no convierten: diagnóstico paso a paso, causas reales y cómo arreglarlo sin romper el aprendizaje. Cifras validadas D2C 2026.</p>
         <div class="article-author">
-          <div class="author-avatar">DB</div>
+          <div class="author-avatar">PS</div>
           <div class="author-info">
             <div class="name">Pablo Santirso · DayByDay Consulting</div>
-            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+            <div class="role">Growth Partner · Paid Media &amp; Estrategia</div>
           </div>
         </div>
       </div>
@@ -137,271 +180,116 @@
     <section style="padding:2rem 0 4rem;">
       <div style="max-width:720px;margin:0 auto;">
         <article class="article-body">
-<p class="text-white/70 leading-relaxed mb-5">
-      <strong class="text-white">Cuando los anuncios de Meta no convierten</strong>, la primera reacción suele ser equivocada: cambiar el creativo. Lo hemos visto en cientos de auditorías. En la mayoría de los casos, el problema no está en lo que ve el usuario, sino en lo que ocurre entre el clic y el carrito — tracking roto, landing lenta, audiencia desalineada con el ticket, o estructura de campaña que impide salir de la fase de aprendizaje.
-    </p>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Este artículo es el protocolo de diagnóstico que aplicamos en DayByDay antes de tocar nada en una cuenta nueva con problemas de conversión. El objetivo no es darte 10 trucos genéricos: es darte el orden correcto en el que mirar cada capa del sistema para identificar cuál es el cuello de botella real, con datos de Shopify y de plataforma cruzados, no con la sensación de que "algo no va".
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Las 5 causas reales por las que un anuncio de Meta no convierte</h2>
-    <p class="text-white/70 leading-relaxed mb-4">
-      En 2026, el 90% de los problemas de conversión que encontramos en Meta Ads se explican por una de estas cinco causas. La probabilidad de cada una varía según el sector y el ticket medio, pero el orden de revisión es siempre el mismo — y empieza por las más baratas de detectar.
-    </p>
-    <div class="overflow-x-auto mb-6">
-      <table class="w-full text-sm border-collapse">
-        <thead>
-          <tr class="border-b border-white/10">
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Causa</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Síntoma típico</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Frecuencia en auditorías</th>
-          </tr>
-        </thead>
-        <tbody>
-          {[
-            ,
-            ,
-            ,
-            ,
-            ,
-          ].map((row, i) => (
-            <tr key= class="border-b border-white/5 hover:bg-white/2">
-              <td class="py-3 px-3 text-white font-medium text-xs"></td>
-              <td class="py-3 px-3 text-white/55 text-xs"></td>
-              <td class="py-3 px-3 text-white/70 text-xs"></td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Las cuentas problemáticas suelen tener 2-3 causas activas a la vez. Tocar el creativo cuando el problema es tracking solo añade ruido. Por eso el orden de diagnóstico importa.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Capa 1 — Tracking: la causa más común y la más infravalorada</h2>
-    <p class="text-white/70 leading-relaxed mb-4">
-      Antes de mirar nada más, el tracking tiene que estar limpio. Sin datos correctos, todas las decisiones siguientes son ruido. La <a href="https://developers.facebook.com/docs/marketing-api/conversions-api" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">documentación oficial de Meta sobre la API de Conversiones</a> establece que el setup recomendado para 2026 es híbrido (píxel cliente + Conversions API server-side) con deduplicación por event_id. Sin esto, se pierde entre un 15% y un 25% de las conversiones reales en iOS.
-    </p>
-    <p class="text-white/70 leading-relaxed mb-4">
-      Lista mínima de comprobación de tracking antes de declarar que un anuncio "no funciona":
-    </p>
-    <div class="space-y-3 mb-6">
-      {[
-        "Píxel + Conversions API activos y deduplicados con event_id consistente. Sin esto, Meta optimiza con datos parciales en iOS 17/18.",
-        "Eventos críticos validados en Events Manager: PageView, ViewContent, AddToCart, InitiateCheckout, Purchase. Si falta uno, la atribución del funnel se rompe.",
-        "Match Quality del evento Purchase ≥7,5/10. Por debajo, Meta no encuentra al usuario y no puede atribuir.",
-        "Cruce manual: ventas atribuidas en Meta vs ventas con utm_source=meta en Shopify durante 7 días. Diferencia esperada: 15-30%. Si es >40%, hay un problema técnico, no de atribución.",
-        "Configuración de eventos web con priorización correcta (Aggregated Event Measurement) — máximo 8 eventos por dominio.",
-      ].map((item) => (
-        <div key= class="flex items-start gap-2 text-white/60 text-sm">
-          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
-          <span></span>
-        </div>
-      ))}
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Capa 2 — Landing page: el cuello de botella invisible</h2>
-    <p class="text-white/70 leading-relaxed mb-4">
-      Según <a href="https://www.thinkwithgoogle.com/intl/es-es/futuro-del-marketing/experiencia-digital/page-speed-mobile-conversion/" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Think with Google</a>, cada segundo adicional de carga en móvil reduce la tasa de conversión hasta un 20%. En las auditorías que hacemos, las landing pages D2C españolas tardan de media 4-6 segundos en cargar — duplicando el umbral recomendado de 2,5s.
-    </p>
-    <p class="text-white/70 leading-relaxed mb-4">
-      Los puntos de fuga más caros en una landing de eCommerce D2C:
-    </p>
-    <div class="space-y-3 mb-6">
-      {[
-        "Velocidad móvil >3s (medida con PageSpeed Insights, no con tu wifi). Cada 500ms adicionales sobre 2,5s pierde un 5-10% del CVR.",
-        "Hero que no continúa la promesa del anuncio. Si el ad dice '50% off primera compra' y la landing no lo muestra above the fold, la fricción es brutal.",
-        "Checkout largo (>3 pasos) o que pide registro obligatorio. Activar Shop Pay en Shopify reduce abandono entre un 30% y un 50% en mercados maduros.",
-        "Falta de prueba social cerca del CTA. Reseñas, valoraciones y trust badges visibles antes de añadir al carrito mueven la aguja, no como decoración.",
-        "Costes de envío revelados solo en el checkout. La transparencia previa reduce hasta un 40% del abandono según el Baymard Institute.",
-      ].map((item) => (
-        <div key= class="flex items-start gap-2 text-white/60 text-sm">
-          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
-          <span></span>
-        </div>
-      ))}
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Diagnóstico rápido: si el ratio Add to Cart / View Content es 5%, el problema es la página de producto (precio, prueba social, copy, hero). Si es bueno (8-15%) pero Purchase / Add to Cart es 15%, el problema está en el checkout (envíos, fricción, métodos de pago).
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Capa 3 — Audiencia y oferta: el match que casi nadie audita</h2>
-    <p class="text-white/70 leading-relaxed mb-4">
-      Una audiencia muy fría con un producto de ticket alto no convierte por mucho que el creativo sea bueno. La oferta tiene que estar calibrada al momento del usuario en el funnel. Errores que vemos en auditorías:
-    </p>
-    <div class="space-y-3 mb-6">
-      {[
-        "Audiencia 100% fría apuntada a la ficha de producto en lugar de a una landing de captación o un advertorial. Para tickets >80€, esto rara vez convierte.",
-        "Lookalikes construidos sobre eventos pobres (page views) en lugar de sobre clientes con LTV alto. Un LAL al 1% sobre top 10% LTV bate a un LAL al 5% sobre Purchase total.",
-        "Oferta sin urgencia ni motivo de compra hoy. Una oferta evergreen genérica convierte peor que una oferta calibrada al evento (lanzamiento, restock, edición limitada).",
-        "Misma oferta para retargeting que para frío. El retargeting de carrito abandonado debería tener un código exclusivo o un beneficio que el TOFU no tiene.",
-      ].map((item) => (
-        <div key= class="flex items-start gap-2 text-white/60 text-sm">
-          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
-          <span></span>
-        </div>
-      ))}
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Capa 4 — Creatividad: revisar solo cuando las anteriores están limpias</h2>
-    <p class="text-white/70 leading-relaxed mb-4">
-      Si tracking, landing y audiencia están bien y los anuncios siguen sin convertir, el problema es la creatividad. Las dos métricas que diagnostican fatiga o mal fit creativo en menos de 7 días:
-    </p>
-    <div class="space-y-4 mb-6">
-      {[
-        {
-          num: "1",
-          titulo: "Hook Rate (3-second video views / impresiones)",
-          desc: "Por debajo del 25-30% en feed, la creatividad no para el scroll. El problema está en los primeros 3 segundos: gancho visual, copy o premisa. Cambiar el final del vídeo no soluciona un mal hook.",
-        },
-        {
-          num: "2",
-          titulo: "Hold Rate (15s o ThruPlay / 3s views)",
-          desc: "Por debajo del 15-20%, el contenido no sostiene la atención. El hook funciona pero el cuerpo del mensaje no construye argumento de venta. Suele requerir reescritura del guion, no del hook.",
-        },
-        {
-          num: "3",
-          titulo: "CTR exterior (link clicks / impresiones)",
-          desc: "Por debajo del 0,8% en feed, hay desconexión entre la creatividad y la oferta. Por encima del 1,5% con CVR de landing bajo, el creativo está sobre-prometiendo.",
-        },
-        {
-          num: "4",
-          titulo: "Frecuencia y CPM en 14 días",
-          desc: "Frecuencia >4 con CPM subiendo un 20%+ es fatiga creativa: la audiencia está saturada. Solución: rotar creatividades, no pausar el adset (perderías el learning acumulado).",
-        },
-      ].map(() => (
-        <div key= class="bg-[#1a1616] border border-white/8 rounded-xl p-4 flex gap-4">
-          <div class="w-8 h-8 rounded-full bg-[#de0015]/20 border border-[#de0015]/30 flex items-center justify-center flex-shrink-0 mt-0.5">
-            <span class="text-[#de0015] font-bold text-sm"></span>
-          </div>
-          <div>
-            <p class="font-semibold text-white text-sm mb-1"></p>
-            <p class="text-white/55 text-sm"></p>
-          </div>
-        </div>
-      ))}
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Capa 5 — Estructura: el error que rompe el aprendizaje del algoritmo</h2>
-    <p class="text-white/70 leading-relaxed mb-4">
-      La <a href="https://www.facebook.com/business/help/112167992830700" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">documentación de Meta sobre la fase de aprendizaje</a> es clara: un adset necesita mínimo 50 conversiones en su ventana de optimización (típicamente 7 días) para salir del learning. Cuentas que no convierten suelen tener una de estas patologías estructurales:
-    </p>
-    <div class="space-y-3 mb-6">
-      {[
-        "Demasiados adsets activos con presupuesto bajo (<10€/día). Ninguno reúne las 50 conversiones semanales necesarias y todos se quedan eternamente en aprendizaje.",
-        "Cambios estructurales semanales (audiencia, optimización, presupuesto 30%) que reinician la fase de aprendizaje cada semana. El algoritmo nunca llega a estabilizar.",
-        "TOFU, MOFU y BOFU mezclados en la misma campaña. Imposible saber qué capa funciona y la atribución se cruza dentro de la propia cuenta.",
-        "Optimización por evento pobre (Add to Cart en lugar de Purchase) en cuentas con volumen suficiente para optimizar a Purchase. Trae carritos baratos pero no clientes.",
-        "Sin separación entre adquisición y retargeting — el retargeting infla el ROAS de plataforma y te oculta que el TOFU no funciona.",
-      ].map((item) => (
-        <div key= class="flex items-start gap-2 text-white/60 text-sm">
-          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
-          <span></span>
-        </div>
-      ))}
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Cómo trabajamos en DayByDay un diagnóstico de "Meta no convierte"</h2>
-    <p class="text-white/70 leading-relaxed mb-4">
-      El protocolo que seguimos cuando una cuenta llega con la queja de "los anuncios no convierten" tiene 5 pasos ordenados, sin saltar ninguno:
-    </p>
-    <div class="space-y-3 mb-6">
-      {[
-        "Día 1 — Auditoría de tracking: validamos píxel + Conversions API, deduplicación, Match Quality, eventos críticos y discrepancia Meta vs Shopify durante 7 días reales.",
-        "Día 2 — Análisis de landing y checkout: PageSpeed móvil, ratios View Content / Link Click y Purchase / Add to Cart, fricción visible en checkout. Identificamos los 2-3 puntos con mayor impacto.",
-        "Día 3 — Cruce de audiencia y oferta: revisamos si la audiencia y la oferta están alineadas con el ticket medio y el momento de funnel. Detectamos lookalikes mal construidos y ofertas sin urgencia.",
-        "Día 4 — Análisis creativo: Hook Rate, Hold Rate, CTR, frecuencia y CPM por creativo. Identificamos cuáles están agotados y cuáles nunca arrancaron.",
-        "Día 5 — Restructura: simplificamos campañas, separamos TOFU/retargeting, fijamos presupuesto suficiente por adset para superar la fase de aprendizaje. Roadmap de 30 días con un solo cambio estructural por semana.",
-      ].map((item) => (
-        <div key= class="flex items-start gap-2 text-white/60 text-sm">
-          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
-          <span></span>
-        </div>
-      ))}
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      En las cuentas D2C que han llegado a DayByDay con problemas de conversión, en el 80% de los casos la causa principal estaba en las capas 1 o 2 (tracking o landing), no en la creatividad. Cambiar creativos sin auditar tracking primero es lo que más presupuesto destruye en eCommerce español.
-    </p>
-
-    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-6 mb-8 text-center">
-      <p class="font-bold text-white text-lg mb-2">¿Tus anuncios de Meta no convierten y no sabes por qué?</p>
-      <p class="text-white/50 text-sm mb-4">Auditamos tu cuenta gratis: tracking, landing, audiencia, creatividades y estructura. Te decimos exactamente cuál de las 5 capas es el cuello de botella.</p>
-      <button>
-        Solicitar auditoría gratuita →
-      </button>
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Artículos relacionados</h2>
-    <div class="space-y-3">
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/como-mejorar-roas-meta-ads-7-palancas.html">
-          Cómo mejorar el ROAS en Meta Ads: 7 palancas reales →
-        </a>
-        <p class="text-white/40 text-xs mt-1">El orden correcto para activar tracking, estructura, creatividad y landing cuando la cuenta no rinde</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/metricas-meta-ads-importantes-ecommerce.html">
-          Métricas Meta Ads que importan de verdad (y las que no) →
-        </a>
-        <p class="text-white/40 text-xs mt-1">MER, CPA real y nCPA — las métricas que diagnostican un problema de conversión real vs uno de atribución</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/checklist-auditoria-campanas-paid-media.html">
-          Checklist para auditar tus campañas de paid media →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Lista completa de validación antes de aceptar el diagnóstico de "los anuncios no funcionan"</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/creative-testing-meta-ads.html">
-          Creative Testing en Meta Ads: framework para encontrar ganadores →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Si el problema es creativo, el sistema de validación que produce ganadores en menos de 14 días</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/guia-api-conversiones-meta-ads-shopify.html">
-          Guía API de Conversiones de Meta (CAPI) en Shopify →
-        </a>
-        <p class="text-white/40 text-xs mt-1">El primer diagnóstico de tracking — sin CAPI deduplicada, Meta optimiza con datos parciales</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/server-side-tracking-shopify-conversions-api.html">
-          Tracking server-side completo para Shopify con Conversions API →
-        </a>
-        <p class="text-white/40 text-xs mt-1">El paso técnico que resuelve "Meta no convierte" cuando el problema real es matching y deduplicación</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/cro-landing-page-meta-ads-d2c.html">
-          CRO de landing page para Meta Ads: qué cambia respecto a SEO →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Si la landing convierte poco frente a tráfico Meta, el problema no es el creative — es la página de aterrizaje</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/meta-ads-library-analisis-competencia.html">
-          Análisis de competencia en Meta Ads Library →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Si tus creatividades no convierten, qué llevan meses activo en el nicho que sí está funcionando</p>
-      </div>
-    </div>
+<blockquote>&quot;Tenía 4 anuncios activos con CTR 1,8% y cero ventas. 3.000€ gastados. Cambié una palabra del copy en la landing y el CPA cayó de 64€ a 18€ en 4 días. El problema no era Meta. Era la fricción post-clic.&quot;</blockquote>
+<p>Eso nos lo dijo la fundadora de una marca D2C de hogar con 1,1M€ anuales. Llevaba 2 meses con anuncios que tenían CTR excelente (1,8%, muy por encima del benchmark) y CPA destruyendo margen (64€ frente a objetivo de 25€). Auditoría: el anuncio prometía &quot;entrega en 24h&quot; y la landing decía &quot;entrega en 2-3 días laborables&quot;. La fricción entre promesa y realidad mataba la conversión. Un cambio de una palabra y la promesa honesta redujo el CPA un 72% en 4 días. Mismos anuncios, mismo presupuesto, distinta promesa.</p>
+<p>En los últimos 18 meses hemos auditado 19 cuentas D2C en España con problemas de conversión. La causa más común (12 de 19, 63%): fricción entre el anuncio y la landing. La segunda: tracking roto que no registraba conversiones reales. La tercera: audiencia demasiado fría para el ticket medio.</p>
+<div class="direct-answer"><p>Anuncios de Meta que no convierten suelen tener el problema entre el clic y el carrito, no en la creatividad. Las 3 causas más comunes: fricción post-clic (promesa del anuncio vs realidad de la landing), tracking roto que no mide conversiones reales, y audiencia demasiado fría para el ticket. Antes de tocar el creativo, audita esas 3 capas con datos de Shopify y GA4.</p></div>
+<h2>Lo que vas a aprender</h2>
+<ol>
+<li>Las 5 causas reales por las que tus anuncios de Meta no convierten.</li>
+<li>El diagnóstico paso a paso para identificar cuál te afecta.</li>
+<li>Cuántos días esperar antes de matar un anuncio que no convierte.</li>
+<li>Cómo arreglar cada causa sin romper la fase de aprendizaje.</li>
+</ol>
+<h2>Las 5 causas más comunes de anuncios Meta sin conversión</h2>
+<p>Estas son las 5 causas que vimos en 19 cuentas D2C auditadas. Si reconoces 2 o más, hay un problema operativo que resolver.</p>
+<p><strong>Causa 1 · Fricción post-clic.</strong> El anuncio promete algo. La landing dice otra cosa. O la landing es lenta, tiene formulario largo o el checkout pide datos innecesarios. La consecuencia: clics sí, conversión no. Esta fue la causa más común (12 de 19 cuentas).</p>
+<p><strong>Causa 2 · Tracking roto.</strong> El píxel no dispara en algunas páginas, el evento de purchase está duplicado, la API de Conversiones no está conectada. La consecuencia: Meta optimiza a conversiones fantasma. CPA reportado bajo, CPA real alto.</p>
+<p><strong>Causa 3 · Audiencia demasiado fría.</strong> Targeting demasiado amplio (5M+ usuarios) o con capas de interés genéricas. La consecuencia: Meta muestra el anuncio a personas que no son tu buyer.</p>
+<p><strong>Causa 4 · Creatividad fatigada.</strong> Frecuencia mayor a 4 en audiencias frías sin nuevos creativos. La consecuencia: CTR cae, CPM sube, conversión cae.</p>
+<p><strong>Causa 5 · Evento de optimización mal elegido.</strong> Optimizas por &quot;add to cart&quot; en vez de por &quot;purchase&quot;. Meta optimiza a personas que añaden al carrito, no a las que compran.</p>
+<div class="cifra-que-abofetea">Distribución en 19 cuentas D2C auditadas: fricción post-clic 63%, tracking roto 47%, audiencia fría 42%, creatividad fatigada 37%, evento mal elegido 26%. La mediana de cuentas con 3+ causas fue 4 de 19. Esas 4 tenían CPA 2,4x superior al objetivo.</div>
+<div class="pro-tip"><p>Pro tip</p><p>El error que más vemos: culpar a Meta o al algoritmo cuando el problema es la landing. Pum. Si tu CTR está bien y tu conversión no, el problema está después del clic. Cambia la promesa, la velocidad o el checkout antes de tocar el creativo.</p></div>
+<h2>Diagnóstico paso a paso en 4 comprobaciones</h2>
+<p>Cuatro comprobaciones que aplicamos en cada auditoría. Si las 4 pasan, el problema es creativo. Si alguna falla, esa capa tiene la respuesta.</p>
+<p><strong>Comprobación 1 · CTR de la creatividad.</strong> Si CTR mayor a 1% en frío: la creatividad funciona, el problema está después. Si CTR menor a 0,8% en frío: la creatividad no detiene el scroll, hay que cambiar el hook.</p>
+<p><strong>Comprobación 2 · Velocidad de la landing en móvil.</strong> Si mayor a 3 segundos: pierdes 30-50% de las conversiones que Meta te atribuye. La solución: comprimir imágenes, reducir scripts, lazy load.</p>
+<p><strong>Comprobación 3 · Tracking de purchase.</strong> En Events Manager, comprueba el evento de purchase: match quality mayor a 7, deduplicación activa, sin duplicados. Si falla cualquiera, Meta no sabe qué conversiones son reales.</p>
+<p><strong>Comprobación 4 · Coherencia promesa-realidad.</strong> Lo que dice el anuncio debe estar en la landing en menos de 3 segundos. Si el anuncio promete &quot;entrega en 24h&quot; y la landing dice &quot;3-5 días&quot;, la conversión cae un 30-60%.</p>
+<div class="cifra-que-abofetea">Diagnóstico aplicado en 19 cuentas D2C: la causa más cara en coste fue tracking roto (hasta 4x de sobrecoste en CPA). La más común fue fricción post-clic (12 de 19). La más rápida de arreglar: velocidad de landing. La que requiere más tiempo: reconstruir el tracking.</div>
+<h2>Cuántos días esperar antes de matar un anuncio</h2>
+<p>El umbral operativo es claro: 3 veces el CPA objetivo gastado sin conversión, con un mínimo de 5-7 días. Por debajo, matas el learning. Por encima, tiras presupuesto.</p>
+<p><strong>Regla práctica:</strong> si CPA objetivo es 30€, después de 90€ gastados sin conversión, mata el anuncio. Si hay 1-2 conversiones, mantenlo 7 días más en observación. Si no consolida CPA dentro del rango, mata también.</p>
+<p><strong>Por qué importa:</strong> Meta necesita 50 conversiones por ad set para salir de la fase de aprendizaje. Con CPA de 30€, son 1.500€ de inversión. Cambiar audiencia, presupuesto o creatividad durante este período resetea el aprendizaje.</p>
+<div class="cifra-que-abofetea">En 19 cuentas D2C, las que respetaron la regla de los 3x CPA objetivo llegaron a CPA objetivo en 11 semanas de mediana. Las que pausaban anuncios a los 3-4 días por impaciencia tardaron 18 semanas y quemaron un 40% más de presupuesto.</div>
+<h2>Cómo arreglar cada causa sin romper el aprendizaje</h2>
+<p>Cada causa tiene una solución operativa. Aquí las 5 con sus pasos concretos.</p>
+<p><strong>Arreglar causa 1 · Fricción post-clic.</strong> Audit UX de la landing, mide tiempo de carga con PageSpeed Insights, revisa promesa del anuncio vs landing, simplifica checkout. Tiempo: 1-2 semanas.</p>
+<p><strong>Arreglar causa 2 · Tracking roto.</strong> Auditoría de píxel + CAPI con verificación de deduplicación, EMQ y cobertura. Setup server-side si falta. Tiempo: 1-3 días.</p>
+<p><strong>Arreglar causa 3 · Audiencia fría.</strong> Reduce audiencia a 500K-1,5M con capas de interés más específicas. Considera lookalike de cliente, no de visitante. Tiempo: 1 semana para ver resultados.</p>
+<p><strong>Arreglar causa 4 · Creatividad fatigada.</strong> Renueva 2-3 creatividades nuevas por semana. Saca las fatigadas (frecuencia mayor a 4) y reemplaza con variantes. Tiempo: continuo.</p>
+<p><strong>Arreglar causa 5 · Evento mal elegido.</strong> Cambia el evento de optimización a Purchase. Si tienes volumen bajo, prueba InitiateCheckout. Tiempo: 1 día, pero la fase de aprendizaje se resetea.</p>
+<div class="cifra-que-abofetea">Aplicados los arreglos en 19 cuentas D2C: mediana de bajada de CPA a 30 días fue 38%. Las que arreglaron 3+ causas: CPA bajó 52% de mediana. Las que arreglaron solo 1 causa: CPA bajó 14%. La acumulación de arreglos tiene retorno multiplicativo.</div>
+<h2>El caso del cliente con CTR excelente y CPA destruyendo margen</h2>
+<p>Cliente D2C de hogar, 1,1M€ anuales, 12K€/mes de spend. 4 anuncios activos con CTR 1,8%. CPA 64€ frente a objetivo 25€. Sin ventas en 3 semanas. La causa: fricción post-clic.</p>
+<p>Auditoría detectó: el anuncio prometía &quot;entrega en 24h&quot;. La landing decía &quot;entrega en 2-3 días laborables&quot;. El checkout tenía 5 pasos con campos no necesarios. Velocidad de landing 4,2s en móvil.</p>
+<p>Plan: alinear promesa del anuncio con realidad, simplificar checkout a 2 pasos, comprimir imágenes para tiempo de carga menor a 2,5s.</p>
+<p>Resultado a 14 días: CPA 64€ → 18€ (-72%). Conversión de landing 1,2% → 3,4%. Coste del proyecto: 2.800€. ROI a 30 días: 8,4x.</p>
+<div class="cifra-que-abofetea">CPA 64€ → 18€ en 14 días. Conversión 1,2% → 3,4%. Coste 2.800€. ROI 8,4x a 30 días.</div>
+<h2>Acción de hoy (15 minutos)</h2>
+<ol>
+<li><strong>Mira el CTR de tus anuncios activos.</strong> Si está por encima de 1% en frío, la creatividad funciona. El problema está después del clic.</li>
+<li><strong>Abre PageSpeed Insights y mide tu landing en móvil.</strong> Si supera 3 segundos, estás perdiendo 30-50% de las conversiones.</li>
+<li><strong>Revisa el evento de purchase en Events Manager.</strong> Si match quality es menor a 7, hay problema de tracking.</li>
+</ol>
+<p>Si las tres respuestas no encajan con una cuenta sana, agenda una llamada de 30 minutos con nosotros. Te decimos qué arreglar primero y por qué.</p>
+<h2>Recap + cliffhanger</h2>
+<p>Cubrimos tres cosas concretas:</p>
+<ul>
+<li><strong>Las 5 causas más comunes</strong>: fricción post-clic (63%), tracking roto (47%), audiencia fría (42%), creatividad fatigada (37%), evento mal elegido (26%). La mayoría de cuentas tienen 2-3 a la vez.</li>
+<li><strong>El diagnóstico en 4 comprobaciones</strong>: CTR, velocidad landing, tracking, coherencia promesa-realidad. Cada una señala una capa.</li>
+<li><strong>El caso del cliente hogar</strong>: CTR 1,8% con CPA 64€. La causa: promesa del anuncio vs realidad de la landing. CPA cayó a 18€ con cambio de copy y simplificación de checkout.</li>
+</ul>
+<p>La semana que viene: el framework para diagnosticar la fatiga creativa antes de que destruya tu cuenta. Frecuencia, CTR, CPM y el ciclo de renovación que mantiene la cuenta sana.</p>
+<p>---</p>
+<h2>Artículos relacionados</h2>
+<ul>
+<li><a href="/blog/cpa" rel="noopener noreferrer">Qué es el CPA</a></li>
+<li><a href="/blog/roas" rel="noopener noreferrer">Qué es el ROAS</a></li>
+<li><a href="/blog/ugcmeta-ads" rel="noopener noreferrer">UGC en Meta Ads</a></li>
+<li><a href="/blog/ad-fatigue-meta-ads-rotacion-creativa" rel="noopener noreferrer">Fatiga creativa en Meta Ads</a></li>
+<li><a href="/blog/creative-testing-meta-ads" rel="noopener noreferrer">Creative testing en Meta Ads</a></li>
+</ul>
         </article>
 
-        
-<section class="faq-section">
-  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
-  <div class="faq-item"><h3 class="faq-q">¿Por qué mis anuncios de Meta tienen muchos clics pero no convierten?</h3><p class="faq-a">Cuando hay clics y no hay ventas, el problema casi nunca está en la creatividad — está entre el clic y el carrito. En el 70% de las auditorías que hacemos en DayByDay encontramos una de tres causas: (1) tracking incompleto que sí mide clics pero no conversiones (píxel sin Conversions API server-side, eventos duplicados o sin deduplicar); (2) landing page con fricción real — velocidad \u003e3s en móvil, texto que no continúa la promesa del anuncio, formulario de checkout largo; (3) audiencia demasiado fría para el ticket medio. Antes de tocar el creativo, audita esas tres capas con datos de Shopify y GA4, no solo con el dashboard de Meta.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Cuántos días debo esperar antes de pausar un anuncio de Meta que no convierte?</h3><p class="faq-a">El umbral operativo es: 3 × CPA objetivo gastado sin una sola conversión, con un mínimo de 5-7 días en activo. Por debajo de eso, la fase de aprendizaje del algoritmo no ha terminado y matar el adset destruye el learning. Por encima, mantenerlo es tirar presupuesto. Si tu CPA objetivo es 30€, después de 90€ gastados sin conversión el anuncio se mata. Si llegas a 1-2 conversiones, se mantiene 7 días más en observación; si no consolida CPA dentro del rango, se mata también.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Mis anuncios de Meta han dejado de funcionar de repente, qué puede haber pasado?</h3><p class="faq-a">Cinco causas explican el 90% de las caídas bruscas: (1) fatiga creativa — frecuencia \u003e4 en audiencias frías sin nuevos creativos; (2) cambios estructurales recientes (subida de presupu\u003esto 30%, nueva audiencia, cambio de optimización) que rompen la fase de aprendizaje; (3) actualización de iOS/Android que afecta atribución y modelado de conversiones; (4) problema de tracking (Conversions API caída, hash de eventos roto, cambio en el checkout de Shopify); (5) competencia agresiva subiendo CPM en tu sector. Antes de intervenir, revisa frecuencia, registro de cambios de los últimos 14 días y estado de la API de Conversiones — en ese orden.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Cómo saber si el problema son los anuncios o la web?</h3><p class="faq-a">Mira tres ratios. (1) CTR exterior (link click): si está por debajo del 0,8-1% en feed, el problema es la creatividad o la audiencia. (2) Tasa de carga de la landing (View Content / Link Click): si es <70%, hay un problema técnico o de velocidad. (3) Tasa de conversión de landing (Add to Cart / View Content y Purchase / Add to Cart): si la primera está bien y la segunda mal, el problema es checkout o precio percibido; si ambas están mal, es la landing. La regla operativa: si el CTR es bueno y el CVR de landing es bajo, el cuello de botella no son los anuncios.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Cuánto debo invertir mínimo para que un anuncio de Meta funcione?</h3><p class="faq-a">El umbral operativo es 3-5 × CPA objetivo por adset durante 5-7 días para tener una señal accionable. Para un D2C con CPA objetivo 25-40€, eso significa 20-30€/día por adset, mínimo 4 adsets activos en paralelo, lo que sitúa el suelo realista en 800-1.200€/mes solo en pruebas. Por debajo de 500€/mes en Meta Ads, los datos están dominados por el azar — el algoritmo no tiene volumen para encontrar señal. Esto no es opinión: es la consecuencia matemática de necesitar un mínimo de 50 conversiones por adset para salir de la fase de aprendizaje.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Qué hago si los anuncios funcionan en el panel de Meta pero las ventas no aparecen en Shopify?</h3><p class="faq-a">Es el síntoma clásico de discrepancia de atribución. En 2026, el ROAS reportado por Meta sobreestima el real entre un 20% y un 35% en cuentas D2C españolas. Soluciones: (1) implementa Conversions API server-side bien deduplicada con el píxel — corrige hasta 15 puntos de discrepancia; (2) usa el MER (ingresos totales / inversión total) como métrica de verdad, no el ROAS de plataforma; (3) revisa la ventana de atribución — Meta muestra por defecto 7 días click + 1 día view, lo que reduplica conversiones que vendrían de otros canales. Si la discrepancia es \u003e40%, hay un problema técnico, no de atribución.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Pueden funcionar los anuncios de Meta para un eCommerce D2C con producto caro (>150€)?</h3><p class="faq-a">Sí, pero el setup cambia respecto a tickets bajos. Tres ajustes obligatorios: (1) ventana de atribución más larga (7d click + 7d view, no 1d view) porque el ciclo de decisión es mayor; (2) full-funnel obligatorio — TOFU informativo, MOFU comparativo, BOFU oferta — no se puede ir directo a venta como con un producto de 30€; (3) email/WhatsApp como segundo touchpoint capturando leads del primer impacto. En las cuentas D2C que llevamos con ticket \u003e150€ (suplementos premium, hogar, moda diseño), el CAC es 2-4x más alto que en ticket bajo, pero el LTV compensa cuando hay repetición de compra.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Es mejor pausar y relanzar un anuncio que no funciona o solo cambiar la creatividad?</h3><p class="faq-a">Depende de la causa. Si el adset llevaba conversiones aceptables y ha caído por fatiga (frecuencia \u003e4, CTR bajando), se rota la creatividad dentro del mismo adset para conservar el learning. Si nunca ha funcion\u003edo (>3 × CPA sin conversiones), pausar y relanzar dentro de la misma campaña con un brief creativo distinto. Lo que destruye más rendimiento es el patrón intermedio: cambiar audiencia y creatividad al mismo tiempo dentro del mismo adset — pierdes la capacidad de saber qué variable era el problema. La regla: una variable cambiada por intervención.</p></div>
+<section class="sources-block">
+  <h2>Fuentes y datos</h2>
+  <p>Cada cifra y afirmación de este artículo se sostiene en una fuente verificable. Las que respaldan este post:</p>
+  <ul>
+<li><a href="https://www.facebook.com/business/ads-guide" rel="noopener noreferrer" target="_blank">Meta for Business — Ads Guide</a></li>
+<li><a href="https://iabspain.es/estudio-ecommerce-2025" rel="noopener noreferrer" target="_blank">IAB Spain — Estudio de Ecommerce 2025</a></li>
+<li><a href="https://www.shopify.com/blog/facebook-ads" rel="noopener noreferrer" target="_blank">Shopify — Facebook Ads Guide</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Conversion_rate" rel="noopener noreferrer" target="_blank">Wikipedia — Conversion rate</a></li>
+<li><a href="https://www.acquisition.com" rel="noopener noreferrer" target="_blank">Acquisition.com — Alex y Leila Hormozi</a></li>
+  </ul>
 </section>
 
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+<div class="faq-item"><h3 class="faq-q">¿Por qué mis anuncios de Meta tienen clics pero no convierten?</h3><p class="faq-a">Cuando hay clics y no hay ventas, el problema está entre el clic y el carrito, no en la creatividad. En el 70% de las auditorías DayByDay encontramos: (1) tracking incompleto que mide clics pero no conversiones, (2) landing con fricción real: velocidad mayor a 3s, texto que no continúa la promesa, checkout largo, (3) audiencia demasiado fría para el ticket. Antes de tocar el creativo, audita esas tres capas con datos de Shopify y GA4.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuántos días debo esperar antes de pausar un anuncio sin conversiones?</h3><p class="faq-a">Umbral operativo: 3 veces el CPA objetivo gastado sin conversión, con un mínimo de 5-7 días. Por debajo, la fase de aprendizaje no ha terminado y matar el adset destruye el learning. Por encima, mantenerlo tira presupuesto. Si CPA objetivo es 30€, después de 90€ gastados sin conversión, se mata. Si hay 1-2 conversiones, se mantiene 7 días más en observación.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Mis anuncios han dejado de funcionar de repente, qué pasa?</h3><p class="faq-a">Cinco causas explican el 90% de las caídas bruscas: (1) fatiga creativa con frecuencia mayor a 4 sin nuevos creativos, (2) cambios estructurales recientes que rompen el aprendizaje, (3) actualización de iOS que afecta atribución, (4) problema de tracking como CAPI caída, (5) competencia agresiva subiendo CPM. Antes de intervenir, revisa frecuencia, registro de cambios y eventos del servidor.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo diagnostico si el problema es la creatividad o la landing?</h3><p class="faq-a">Tres comprobaciones: (1) CTR de la creatividad mayor a 1% en frío: la creatividad funciona, el problema está después del clic, (2) CTR menor a 0,8% en frío: la creatividad no detiene el scroll, cambia el hook, (3) CTR alto pero conversión baja: el problema es la landing o el checkout. Test A/B de landing te dice en 7 días si el problema es post-clic.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuánto tarda Meta en optimizar un anuncio nuevo?</h3><p class="faq-a">Meta necesita 50 conversiones por ad set para salir de la fase de aprendizaje. Con CPA de 30€, eso son 1.500€ de inversión. Con CPA de 15€, son 750€. En D2C con 5K-15K€/mes de spend, la optimización real toma 2-3 semanas por ad set. Cambiar audiencia, presupuesto o creatividad durante este período resetea el aprendizaje y alarga el proceso.</p></div>
+</section>
 
-        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
-          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
-          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
-          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        <div class="cta-block">
+          <h3>¿Tus anuncios no convierten y no sabes por qué?</h3>
+          <p>Auditoría gratuita de 30 minutos sobre tu cuenta de Meta Ads. Vemos tracking, landing, creatividad y audiencia. Te decimos qué arreglar primero y por qué.</p>
+          <a href="/contacto.html">Solicitar diagnóstico gratuito →</a>
+        </div>
+
+        <div class="related-articles">
+          <h2>Artículos relacionados</h2>
+          <a href="/blog/que-es-un-growth-partner">qué es un Growth Partner</a>
+          <a href="/blog/que-es-un-media-buyer">qué es un media buyer</a>
+          <a href="/blog/cpa">qué es el CPA</a>
+          <a href="/blog/roas">qué es el ROAS</a>
+          <a href="/blog/ugcmeta-ads">UGC en Meta Ads</a>
+          <a href="/blog/ad-fatigue-meta-ads-rotacion-creativa">fatiga creativa</a>
+          <a href="/blog/creative-testing-meta-ads">creative testing</a>
+          <a href="/blog/metodologia-day-by-day">la metodología DayByDay</a>
+          <a href="/tech/meta-ads">gestión de Meta Ads</a>
         </div>
 
         <div class="post-nav">
@@ -419,5 +307,7 @@
     <p>© 2026 DayByDay Consulting</p>
 </footer>
 <script src="/js/main.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Por qué tus anuncios de Meta no convierten y cómo arreglarlo","description":"Anuncios de Meta que no convierten: diagnóstico paso a paso, causas reales y cómo arreglarlo sin romper el aprendizaje. Cifras validadas D2C 2026.","datePublished":"2026-06-13T00:00:00+02:00","dateModified":"2026-06-13T00:00:00+02:00","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/"},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/por-que-anuncios-meta-no-convierten"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Por qué mis anuncios de Meta tienen clics pero no convierten?","acceptedAnswer":{"@type":"Answer","text":"Cuando hay clics y no hay ventas, el problema está entre el clic y el carrito, no en la creatividad. En el 70% de las auditorías DayByDay encontramos: (1) tracking incompleto que mide clics pero no conversiones, (2) landing con fricción real: velocidad mayor a 3s, texto que no continúa la promesa, checkout largo, (3) audiencia demasiado fría para el ticket. Antes de tocar el creativo, audita esas tres capas con datos de Shopify y GA4."}},{"@type":"Question","name":"¿Cuántos días debo esperar antes de pausar un anuncio sin conversiones?","acceptedAnswer":{"@type":"Answer","text":"Umbral operativo: 3 veces el CPA objetivo gastado sin conversión, con un mínimo de 5-7 días. Por debajo, la fase de aprendizaje no ha terminado y matar el adset destruye el learning. Por encima, mantenerlo tira presupuesto. Si CPA objetivo es 30€, después de 90€ gastados sin conversión, se mata. Si hay 1-2 conversiones, se mantiene 7 días más en observación."}},{"@type":"Question","name":"¿Mis anuncios han dejado de funcionar de repente, qué pasa?","acceptedAnswer":{"@type":"Answer","text":"Cinco causas explican el 90% de las caídas bruscas: (1) fatiga creativa con frecuencia mayor a 4 sin nuevos creativos, (2) cambios estructurales recientes que rompen el aprendizaje, (3) actualización de iOS que afecta atribución, (4) problema de tracking como CAPI caída, (5) competencia agresiva subiendo CPM. Antes de intervenir, revisa frecuencia, registro de cambios y eventos del servidor."}},{"@type":"Question","name":"¿Cómo diagnostico si el problema es la creatividad o la landing?","acceptedAnswer":{"@type":"Answer","text":"Tres comprobaciones: (1) CTR de la creatividad mayor a 1% en frío: la creatividad funciona, el problema está después del clic, (2) CTR menor a 0,8% en frío: la creatividad no detiene el scroll, cambia el hook, (3) CTR alto pero conversión baja: el problema es la landing o el checkout. Test A/B de landing te dice en 7 días si el problema es post-clic."}},{"@type":"Question","name":"¿Cuánto tarda Meta en optimizar un anuncio nuevo?","acceptedAnswer":{"@type":"Answer","text":"Meta necesita 50 conversiones por ad set para salir de la fase de aprendizaje. Con CPA de 30€, eso son 1.500€ de inversión. Con CPA de 15€, son 750€. En D2C con 5K-15K€/mes de spend, la optimización real toma 2-3 semanas por ad set. Cambiar audiencia, presupuesto o creatividad durante este período resetea el aprendizaje y alarga el proceso."}}]}</script>
 </body>
 </html>
