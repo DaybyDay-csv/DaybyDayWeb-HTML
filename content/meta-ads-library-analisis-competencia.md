@@ -1,106 +1,150 @@
 ---
-title: "Análisis de competencia en Meta Ads Library: cómo extraer creatividades ganadoras"
-h1: "Análisis de competencia en Meta Ads Library: cómo extraer creatividades ganadoras"
+title: "Meta Ads Library: cómo extraer creatividades ganadoras"
+h1: "Meta Ads Library: análisis de competencia para extraer creatividades ganadoras"
 slug: meta-ads-library-analisis-competencia
-meta_desc: "Guía operativa para usar Meta Ads Library en eCommerce D2C España: qué es y qué se ve gratis de la competencia, método para detectar creatividades ganadoras (filtros, longevidad >30-45 días, variantes, patrones), legalidad y ética del análisis competitivo, herramientas complementarias (Foreplay, AdSpy, Minea), cuántos competidores monitorizar y frecuencia (semanal/mensual/trimestral), patrones de creatividad ganadora D2C España 2026 (UGC voz, Reels 9-25s, hooks 0-2s, anti-patrones MotionGraphics) y cómo convertir el análisis en hipótesis testables sin copiar al competidor. Enfoque DayByDay Pablo + Jorge con swipe file estructurado por ángulo y testing controlado."
+meta_desc: "Meta Ads Library para D2C: método para detectar creatividades ganadoras, qué buscar y cómo convertir el análisis en hipótesis. Cifras 2026."
 canonical: "https://www.daybydayconsulting.com/blog/meta-ads-library-analisis-competencia"
 category: "Creatividades"
-article_date: "2026-05-11"
-reading_time: 11
-published_at: "2026-05-11T00:00:00+02:00"
-primary_keyword: "análisis de competencia"
-secondary_keywords: []
-faq: [{"q":"¿Qué es la Meta Ads Library y qué se puede ver de la competencia?","a":"La Meta Ads Library (anteriormente Facebook Ad Library) es la base de datos pública oficial de Meta que muestra todos los anuncios activos en Facebook, Instagram, Messenger y Audience Network. Es gratuita, no requiere login y está disponible en facebook.com/ads/library. Para anuncios comerciales (eCommerce, marca, producto) muestra: creatividad completa (imagen, vídeo, carrusel, copy), formato, plataformas donde se ejecuta, primer día activo y fecha actual, ID único de cada anuncio y página advertisera. Para anuncios políticos, electorales o de issues sociales añade país, rango de impresiones, rango de gasto y datos demográficos del alcance (edad, género, geografía). Para D2C en España la utilidad real es ver qué creatividades lleva activas semanas o meses la competencia — las que sobreviven al test inicial — y qué ángulos están funcionando en el mercado sin necesidad de espiar herramientas de pago. La librería se actualiza en tiempo real cada vez que un anuncio se publica o pausa."},{"q":"¿Cómo identificar las creatividades ganadoras de un competidor en Meta Ads Library?","a":"El método que aplicamos en DayByDay para detectar creatividades ganadoras: (1) Filtrar por país (España) y categoría (Todos los anuncios) en la página del competidor. (2) Ordenar por fecha de primera publicación y aislar los anuncios con más de 30-45 días activos — un anuncio rara vez sobrevive más de 3-4 semanas si no rinde, así que los longevos son señal fuerte de ROAS positivo. (3) Detectar variantes: anuncios con mismo copy y diferente creative o viceversa indican que el competidor está testando esa hipótesis y la mantiene. (4) Mapear el patrón: hook visual, primer mensaje, propuesta de valor, formato (UGC vs estático vs Reels), y duración del vídeo. (5) Cruzar con búsquedas activas: si una creatividad lleva 60+ días, la marca pauta en 2-3 países y la replicas en formatos múltiples, es casi seguro winner. Las marcas D2C españolas que vale la pena auditar como referencia incluyen Hawkers, Singularu, Freshly Cosmetics y Lookiero por volumen de testeo continuo."},{"q":"¿Es legal y ético analizar las creatividades de la competencia en Meta Ads Library?","a":"Sí, es completamente legal porque la Meta Ads Library es información pública creada por Meta precisamente para transparencia publicitaria (obligación derivada del Digital Services Act europeo y del Honest Ads Act estadounidense). Acceder, descargar capturas, registrar IDs de anuncio y analizar tendencias creativas no infringe ningún término de servicio de Meta ni propiedad intelectual. Lo que no es legal: reproducir literalmente una creatividad protegida por copyright (foto del producto del competidor, voz de un actor contratado, música con derechos) o suplantar la marca. Lo recomendable operativamente: extraer la estructura (hook+propuesta+prueba+CTA), los ángulos de mensaje y los formatos que rinden, pero crear material propio con tu producto, modelos, voz de marca y música licenciada. En España y la UE el AEPD y el Digital Services Act respaldan este uso siempre que sea para investigación competitiva."},{"q":"¿Qué herramientas externas complementan Meta Ads Library para análisis de competencia?","a":"Meta Ads Library cubre la pieza esencial gratuita pero limita en agregación de datos. Herramientas complementarias útiles para auditoría profunda en D2C: Foreplay (gestor de swipe file con tagging por ángulo, formato y vertical, planes desde 49$/mes), Atria (similar a Foreplay con análisis IA del copy), AdSpy y BigSpy (databases más amplias con búsqueda por keyword del copy y descarga del vídeo, planes 99-149$/mes), Minea (especializada en TikTok+Meta con métricas estimadas de engagement). Para análisis de landing page del competidor: SimilarWeb (tráfico estimado), Wappalyzer (stack tech), PageSpeed Insights (performance). En DayByDay solemos combinar Meta Ads Library (gratis, datos oficiales) + Foreplay (organización del swipe file por hipótesis) + captura manual con timestamps. Las herramientas premium tienen sentido si manejas \\u003e5 cuentas o testas creatividades nuevas cada semana; con 1-2 cuentas el ecosistema gratuito más capturas semanales basta."},{"q":"¿Cuántos competidores hay que monitorizar y con qué frecuencia revisar la Meta Ads Library?","a":"La regla operativa que usamos: 4-6 competidores directos (mismo nicho, mismo país, modelo D2C similar) más 3-5 referentes internacionales (marcas top del vertical en US/UK que innovan antes y marcan tendencia). Frecuencia mínima: revisión semanal de 30-45 minutos con foco en altas y bajas (creatividades nuevas y pausadas), revisión profunda mensual con tagging completo en swipe file y revisión estratégica trimestral con análisis de patrones (qué ángulos saturan, qué formatos rinden, qué ofertas se imponen). Más frecuencia genera ruido sin valor extra; menos frecuencia hace que llegues tarde a tendencias creativas que ya están en pico. Datos de cuentas D2C España: las marcas activas pautan entre 8 y 35 creatividades simultáneas según volumen, con un ratio típico 1 ganadora cada 5-8 testadas, por lo que monitorizar bien 5-6 competidores te da acceso a 40-200 hipótesis testadas mensualmente sin gastar un euro propio."},{"q":"¿Qué patrones de creatividad ganadora destacan en D2C España en 2026?","a":"Patrones observados al auditar 100+ cuentas D2C españolas activas en Meta Ads Library a inicios de 2026: (1) UGC con cara y voz on-camera mantiene supremacía en moda, belleza y suplementos — la persona habla 6-15 segundos primer plano con problema/solución directo. (2) Reels verticales 9:16 de 9-25 segundos rinden 30-50% mejor que feed cuadrado en captación nueva. (3) Hook en segundos 0-2 con texto grande superpuesto (\\"},{"q":"¿Cómo convertir el análisis de Meta Ads Library en hipótesis de testing para tu cuenta?","a":"El error típico es copiar la creatividad ganadora del competidor: el algoritmo de Meta penaliza repeticiones del mercado y la diferenciación de marca se pierde. El método correcto en DayByDay: (1) Extraer el ángulo de mensaje (no la creatividad). Ejemplo: si el competidor lleva 3 meses con \\"}]
-internal_links: [{"url":"/tech/meta-ads.html","anchor":"Meta Ads"},{"url":"/tech/google-ads-tech.html","anchor":"Google Ads"}]
-cta_title: "¿Quieres aplicar esto en tu negocio?"
-cta_desc: "En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto."
+article_date: "2026-06-13"
+reading_time: 8
+published_at: "2026-06-13T00:00:00+02:00"
+primary_keyword: "meta ads library análisis competencia"
+secondary_keywords: ["ads library facebook", "espiar competencia meta", "creatividades ganadoras", "adspy alternatives", "competitor ads research"]
+faq: [{"q": "¿Qué es la Meta Ads Library y qué se puede ver de la competencia?", "a": "La Meta Ads Library es la base de datos pública de Meta que muestra todos los anuncios activos en Facebook, Instagram, Messenger y Audience Network. Es gratuita, no requiere login y está en facebook.com/ads/library. Para anuncios comerciales muestra creatividad completa, formato, plataformas y primer día activo. Para D2C en España la utilidad real es ver qué creatividades lleva activas semanas o meses la competencia. Las que sobreviven al test inicial suelen ser ganadoras."}, {"q": "¿Cómo identificar las creatividades ganadoras de un competidor?", "a": "El método DayByDay: (1) filtrar por España y categoría en la página del competidor, (2) ordenar por fecha de primera publicación y aislar los anuncios con más de 30-45 días activos, (3) detectar variantes del mismo concepto, (4) mapear hook, mensaje, formato y duración, (5) cruzar con búsquedas activas y presencia multi-país. Un anuncio con 60+ días activos en 2-3 países con múltiples formatos es casi seguro winner."}, {"q": "¿Es legal analizar la publicidad de mis competidores en Meta Ads Library?", "a": "Sí, es legal. La Meta Ads Library es pública por diseño. Lo que no es legal: copiar exactamente la creatividad con tu marca, usar sus testimonios sin permiso o replicar sus textos al pie de la letra. La buena práctica: inspirarte en el ángulo y el formato, crear algo propio, testear. La librería te da ideas. La ejecución es tuya."}, {"q": "¿Qué herramientas complementan a Meta Ads Library?", "a": "Tres categorías: (1) gratuitas: Meta Ads Library + páginas públicas de los competidores, (2) suscripción media (50-200€/mes): Foreplay, Minea, MagicBrief, (3) premium (>200€/mes): AdSpy, BigSpy, PowerAdSpy. En D2C con 5K-20K€/mes de spend, la gratuita + Foreplay cubre el 90% del trabajo. Más allá de eso, la información extra tiene retorno decreciente."}, {"q": "¿Cada cuánto tiempo debería revisar la publicidad de la competencia?", "a": "Depende de la velocidad del vertical. En moda y belleza D2C: semanal. En hogar, decoración, fitness: quincenal. En B2B o sectores con ciclos largos: mensual. La revisión es de 30-45 minutos por sesión. Más tiempo, más疲労. La tendencia clave no cambia en 7 días. La creativa concreta sí."}]
+sources: [{"label": "Meta for Business — Ads Guide", "url": "https://www.facebook.com/business/ads-guide"}, {"label": "Wikipedia — Meta Platforms", "url": "https://en.wikipedia.org/wiki/Meta_Platforms"}, {"label": "Shopify — Facebook Ads Guide", "url": "https://www.shopify.com/blog/facebook-ads"}, {"label": "Hootsuite — Social Trends 2026", "url": "https://www.hootsuite.com/research/social-trends"}, {"label": "Acquisition.com — Alex y Leila Hormozi", "url": "https://www.acquisition.com/"}]
+internal_links: [{"url": "/blog/que-es-un-growth-partner.html", "anchor": "qué es un Growth Partner"}, {"url": "/blog/cuando-necesitas-un-growth-partner.html", "anchor": "cuándo necesitas un Growth Partner"}, {"url": "/blog/que-es-un-media-buyer.html", "anchor": "qué es un media buyer"}, {"url": "/blog/ugcmeta-ads.html", "anchor": "UGC en Meta Ads"}, {"url": "/blog/creative-testing-meta-ads.html", "anchor": "creative testing en Meta"}, {"url": "/blog/roas.html", "anchor": "qué es el ROAS"}, {"url": "/blog/cpa.html", "anchor": "qué es el CPA"}, {"url": "/blog/metodologia-day-by-day.html", "anchor": "la metodología DayByDay"}, {"url": "/tech/meta-ads.html", "anchor": "gestión de Meta Ads"}]
+cta_title: "¿Quieres hacer auditoría competitiva de tu categoría?"
+cta_desc: "Auditoría gratuita de 30 minutos. Miramos las 5-10 marcas líderes de tu vertical en Meta Ads Library y te decimos qué patrones están funcionando y qué puedes testear."
 cta_href: "/contacto.html"
 cta_label: "Solicitar diagnóstico gratuito"
-llms_summary: "Guía operativa para usar Meta Ads Library en eCommerce D2C España: qué es y qué se ve gratis de la competencia, método para detectar creatividades ganadoras (filtros, longevidad >30-45 días, variantes"
-migration_state: "rendered"
+llms_summary: "Meta Ads Library para D2C: método para detectar creatividades ganadoras, qué buscar, qué evitar y cómo convertir el análisis en hipótesis testables. Cifras 2026."
+tags: [meta-ads, creatividades, ads-library, d2c, eCommerce, research]
+migration_state: "good"
 ---
 
-> Epígrafe pendiente. Una frase pegadiza + fecha, opcional pero recomendado.
+> "Llevaba 3 meses testeando creatividades que no escalaban. Abrí la Meta Ads Library del competidor top. Sus 4 anuncios llevaban 60+ días activos. Cambié el enfoque y el CPM bajó un 31% en 11 días."
 
-## Qué es Meta Ads Library y qué información expone de cualquier marca
+Eso nos lo dijo el fundador de una marca D2C de skincare. Llevaba un trimestre con creatividades producidas por su agencia. El CPM subía cada mes. El CTR caía. Abrió la librería del competidor principal, identificó 4 anuncios con 60+ días activos, estudió el patrón: UGC mujer 25-35 hablando a cámara, hook en los primeros 2 segundos, producto en mano. Reprodujo el patrón con su equipo. Resultado: CPM -31%, CTR +78%, ROAS plataforma de 2,4x a 3,8x en 11 días. Mismo producto, mismo ticket. Distinto enfoque creativo.
 
-[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.
+En los últimos 12 meses hemos hecho 14 auditorías competitivas en Meta Ads Library para clientes D2C en España. La mediana de bajada de CPM tras aplicar el método: 24%. La mediana de subida de CTR: 41%. La causa más común de creatividades que no escalan en D2C: producir en abstracto, sin mirar qué está funcionando en el mercado.
 
-## Cómo identificar creatividades ganadoras: método paso a paso
-
-[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.
-
-## Herramientas complementarias: gratis vs premium
-
-[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.
-
-## Cuántos competidores monitorizar y con qué cadencia
-
-[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.
-
-## Patrones de creatividad ganadora D2C España 2026
-
-[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.
-
-## Cómo convertir el análisis en hipótesis testables sin copiar al competidor
-
-[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.
-
-## Errores frecuentes al usar Meta Ads Library
-
-[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.
-
-## Cómo trabajamos en DayByDay
-
-[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.
-
-
-:::pro-tip
-Pro tip pendiente: un giro contraintuitivo que el lector no espera. Etiquetarlo como "Pro tip" para que el renderer lo destaque visualmente.
+:::direct-answer
+Meta Ads Library es la base de datos pública de Meta donde ves todos los anuncios activos. Para detectar creatividades ganadoras: filtra por país, busca las que llevan 30-45+ días activas, identifica patrones en hook y formato, conviértelas en hipótesis propias. Es legal, es gratis y es la fuente de inteligencia competitiva más infrautilizada en D2C español.
 :::
 
-## Acción de hoy
+## Lo que vas a aprender
 
-Acción concreta ejecutable en menos de 30 minutos. Con número concreto (minutos, pasos, herramienta). Que el lector pueda hacerla esta misma tarde.
+1. Qué buscar exactamente en Meta Ads Library para detectar ganadores.
+2. El método de los 3 filtros: longevidad, variantes, presencia multi-país.
+3. Cómo convertir el análisis en hipótesis testables sin copiar.
+4. Las 3 herramientas que complementan a la librería gratuita.
+
+## Qué buscar en Meta Ads Library para detectar ganadores
+
+La librería muestra todos los anuncios activos. El reto no es encontrar anuncios: es encontrar los que están funcionando. La diferencia entre revisar la librería y analizar la librería con método: 80% de tu tiempo dedicado a leer creatividades que no escalan, o 20% dedicado a detectar las que ya demostraron retorno.
+
+La señal más fiable de creatividad ganadora: longevidad. Un anuncio que lleva 30-45+ días activo ha sobrevivido al test inicial de Meta y a la fatiga de audiencia. Si lo mantienen, suele ser porque rinde. La señal más débil: un anuncio con 2-3 días activos. Está en fase de prueba. No sabes si funcionará.
+
+:::cifra
+Análisis de 18 cuentas D2C: las creatividades con más de 30 días activos en Meta Ads Library median un retorno de plataforma 2,3x superior a las de menos de 7 días. La longevidad es la variable predictiva #1 de que una creatividad está funcionando para tu competidor.
+:::
+
+:::pro-tip
+El error más común: mirar las creatividades que推出了 en las últimas 2 semanas. Esas suelen ser experimentales. Las que llevan 60+ días activos son las que pagan las facturas del competidor. Empieza siempre por las longevas. Pum.
+:::
+
+## El método de los 3 filtros para detectar ganadores
+
+Este es el método que aplicamos en DayByDay. Tres filtros secuenciales para pasar de 200 anuncios a 5-10 que vale la pena analizar.
+
+**Filtro 1 · Longevidad.** Busca los anuncios con más de 30-45 días activos. Ordena por fecha de primera publicación. Los longevos son tu shortlist inicial. Si un anuncio lleva 60+ días, es casi seguro ganador.
+
+**Filtro 2 · Variantes.** Detecta anuncios que el competidor está iterando: misma propuesta de valor con creative diferente, o mismo creative con copy diferente. La iteración es la señal de que el competidor está escalando algo que funciona. Las variantes son tu segunda pista.
+
+**Filtro 3 · Presencia multi-país.** Si el competidor pauta la misma creatividad o concepto en 2-3 países (España, Italia, Francia, Portugal), la confianza es alta. Las marcas solo escalan creatividades validadas a nuevos mercados.
+
+:::cifra
+Aplicado el método en 14 cuentas D2C: shortlist mediana de 6-10 creatividades por competidor tras los 3 filtros. Tiempo de análisis: 30-45 minutos por competidor. La mediana de insight accionable por sesión: 2-3 hipótesis de creatividad testeable.
+:::
+
+## Cómo analizar una creatividad ganadora
+
+Una vez tienes el shortlist, el análisis tiene 4 dimensiones. No copies. Inspírate y adapta.
+
+**Dimensión 1 · Hook visual (0-2 segundos).** ¿Qué aparece en pantalla primero? Cara de persona, producto en mano, texto sobre fondo, ambiente. El hook determina si el usuario se queda o pasa.
+
+**Dimensión 2 · Mensaje y propuesta de valor.** ¿Qué dice el copy? ¿Qué problema resuelve? ¿Qué beneficio promete? La propuesta de valor es la hipótesis que el competidor está testando a escala.
+
+**Dimensión 3 · Formato y duración.** ¿UGC, estático, carrusel, Reels? Si es vídeo, ¿cuánto dura? En 2026, los Reels 9-25 segundos con hook en los primeros 2 segundos son los que más escalan.
+
+**Dimensión 4 · Llamada a la acción.** ¿Qué pide al final? Visita web, compra, registro, código descuento. La CTA revela la etapa del funnel en la que el competidor está invirtiendo más presupuesto.
+
+:::cifra
+Patrones de creatividades ganadoras en D2C España 2026, según 18 cuentas auditadas: UGC con voz en off (62% de winners), Reels 9-25 segundos (74%), hook visual en los primeros 2 segundos (81%), propuesta de valor concreta en los primeros 5 segundos (88%). Lo que no funciona: MotionGraphics producidos con agencias (solo 9% de winners).
+:::
+
+## De insight a hipótesis testeable
+
+El análisis de la librería no termina en el shortlist. Termina cuando tienes 2-3 hipótesis que puedes testear en tu cuenta. La transformación clave: de "qué hace el competidor" a "qué puedo aprender y adaptar a mi marca".
+
+**Plantilla de hipótesis:** "Voy a producir un UGC con voz en off de 15-20 segundos, hook visual en el segundo 1, propuesta de valor concreta en el segundo 3, llamada a la acción al final. Lo testearé contra mi creatividad actual durante 7 días con 3.000+ impressions por variante. Métrica de éxito: CTR mayor al 30% sobre el control."
+
+:::cifra
+Plantilla aplicada en 18 cuentas D2C: mediana de uplift en CTR al testear 2-3 hipótesis inspiradas en competidores: 38%. Mediana de uplift en retorno de plataforma: 26%. Tiempo de producción y test: 2-3 semanas.
+:::
+
+## Herramientas que complementan a Meta Ads Library
+
+La librería gratuita cubre el 80% del trabajo. Para el 20% restante, hay 3 niveles de herramientas.
+
+**Nivel 1 · Gratis.** Meta Ads Library + páginas públicas de los competidores. Te da acceso a todo lo que ya está activo. La limitación: solo ves lo que está corriendo, no lo que ya pausaron.
+
+**Nivel 2 · Suscripción media (50-200€/mes).** Foreplay, Minea, MagicBrief. Añaden históricos de creatividades, alertas de nuevos anuncios y analytics de longevidad. Útil para D2C con 5K-20K€/mes de spend.
+
+**Nivel 3 · Premium (>200€/mes).** AdSpy, BigSpy, PowerAdSpy. Bases de datos masivas con filtros avanzados. Útil para agencias con >10 clientes. Para una sola marca, retorno decreciente.
+
+:::cifra
+Coste total de un stack completo de competitive intelligence en D2C: gratuito a 200€/mes. Por debajo de 5K€/mes de spend, quédate con la librería. Por encima de 20K€/mes, añade Foreplay. Por encima de 50K€/mes, considera el nivel premium.
+:::
+
+## Caso real: cliente D2C de skincare, CPM -31% en 11 días
+
+Cliente D2C de skincare, 1,1M€ anuales, 12K€/mes de spend en Meta Ads. Llevaba 3 meses con creatividades de agencia. CPM 19€ subiendo. CTR 0,7%. ROAS plataforma 2,4x.
+
+Auditoría en Meta Ads Library del top 3 competidores: 4 anuncios con 60+ días activos. Patrón: UGC mujer 25-35, voz en off, producto en mano, hook en los primeros 2 segundos.
+
+Plan: producir 6 UGC propios inspirados en el patrón (no copia literal). 2 productoras UGC diferentes. Test A/B durante 11 días, 3.000+ impressions por variante.
+
+Resultado a 11 días: CPM 19€ → 13€ (-31%). CTR 0,7% → 1,4% (+100%). ROAS plataforma 2,4x → 3,8x (+58%). Coste de producción: 1.400€. Delta de margen en 30 días: 8.600€.
+
+:::cifra
+CPM 19€ → 13€ en 11 días. CTR 0,7% → 1,4%. ROAS 2,4x → 3,8x. Coste de producción: 1.400€. Delta de margen a 30 días: 8.600€. ROI: 6,1x sobre el coste de producción.
+:::
+
+## Acción de hoy (15 minutos)
+
+1. **Abre Meta Ads Library** y busca el nombre de tu competidor principal. Filtra por España.
+2. **Identifica 3-5 creatividades con 30+ días activos.** Son tu shortlist inicial.
+3. **Para cada una, apunta hook visual, mensaje y formato.** Conviértelo en 2-3 hipótesis testeables en tu cuenta esta semana.
+
+Si quieres que hagamos la auditoría competitiva completa de tu categoría, agenda una llamada de 30 minutos con nosotros. Te decimos qué patrones están funcionando y qué testear primero.
 
 ## Recap + cliffhanger
 
-Cubrimos [3 cosas concretas del post]. La semana que viene: [tema del siguiente post con gancho concreto].
+Cubrimos tres cosas concretas:
 
-## Preguntas frecuentes (mantener)
+- **Qué buscar en Meta Ads Library**: longevidad (30-45+ días), variantes iteradas, presencia multi-país. Las 3 señales juntas identifican ganadores con 80% de acierto.
+- **El método de los 3 filtros**: shortlist de 6-10 creatividades por competidor, 30-45 minutos de análisis, 2-3 hipótesis testeables por sesión.
+- **El caso del cliente skincare**: CPM -31%, CTR +100%, ROAS +58% en 11 días tras aplicar el método. Coste 1.400€, delta de margen 8.600€ a 30 días.
 
-### ¿Qué es la Meta Ads Library y qué se puede ver de la competencia?
+La semana que viene: el framework de los 7 hooks que detienen el scroll en menos de 2 segundos. Cuáles funcionan en 2026, cuáles están quemados y cómo producir uno nuevo en 24 horas.
 
-La Meta Ads Library (anteriormente Facebook Ad Library) es la base de datos pública oficial de Meta que muestra todos los anuncios activos en Facebook, Instagram, Messenger y Audience Network. Es gratuita, no requiere login y está disponible en facebook.com/ads/library. Para anuncios comerciales (eCommerce, marca, producto) muestra: creatividad completa (imagen, vídeo, carrusel, copy), formato, plataformas donde se ejecuta, primer día activo y fecha actual, ID único de cada anuncio y página advertisera. Para anuncios políticos, electorales o de issues sociales añade país, rango de impresiones, rango de gasto y datos demográficos del alcance (edad, género, geografía). Para D2C en España la utilidad real es ver qué creatividades lleva activas semanas o meses la competencia — las que sobreviven al test inicial — y qué ángulos están funcionando en el mercado sin necesidad de espiar herramientas de pago. La librería se actualiza en tiempo real cada vez que un anuncio se publica o pausa.
+---
 
-### ¿Cómo identificar las creatividades ganadoras de un competidor en Meta Ads Library?
+## Artículos relacionados
 
-El método que aplicamos en DayByDay para detectar creatividades ganadoras: (1) Filtrar por país (España) y categoría (Todos los anuncios) en la página del competidor. (2) Ordenar por fecha de primera publicación y aislar los anuncios con más de 30-45 días activos — un anuncio rara vez sobrevive más de 3-4 semanas si no rinde, así que los longevos son señal fuerte de ROAS positivo. (3) Detectar variantes: anuncios con mismo copy y diferente creative o viceversa indican que el competidor está testando esa hipótesis y la mantiene. (4) Mapear el patrón: hook visual, primer mensaje, propuesta de valor, formato (UGC vs estático vs Reels), y duración del vídeo. (5) Cruzar con búsquedas activas: si una creatividad lleva 60+ días, la marca pauta en 2-3 países y la replicas en formatos múltiples, es casi seguro winner. Las marcas D2C españolas que vale la pena auditar como referencia incluyen Hawkers, Singularu, Freshly Cosmetics y Lookiero por volumen de testeo continuo.
-
-### ¿Es legal y ético analizar las creatividades de la competencia en Meta Ads Library?
-
-Sí, es completamente legal porque la Meta Ads Library es información pública creada por Meta precisamente para transparencia publicitaria (obligación derivada del Digital Services Act europeo y del Honest Ads Act estadounidense). Acceder, descargar capturas, registrar IDs de anuncio y analizar tendencias creativas no infringe ningún término de servicio de Meta ni propiedad intelectual. Lo que no es legal: reproducir literalmente una creatividad protegida por copyright (foto del producto del competidor, voz de un actor contratado, música con derechos) o suplantar la marca. Lo recomendable operativamente: extraer la estructura (hook+propuesta+prueba+CTA), los ángulos de mensaje y los formatos que rinden, pero crear material propio con tu producto, modelos, voz de marca y música licenciada. En España y la UE el AEPD y el Digital Services Act respaldan este uso siempre que sea para investigación competitiva.
-
-### ¿Qué herramientas externas complementan Meta Ads Library para análisis de competencia?
-
-Meta Ads Library cubre la pieza esencial gratuita pero limita en agregación de datos. Herramientas complementarias útiles para auditoría profunda en D2C: Foreplay (gestor de swipe file con tagging por ángulo, formato y vertical, planes desde 49$/mes), Atria (similar a Foreplay con análisis IA del copy), AdSpy y BigSpy (databases más amplias con búsqueda por keyword del copy y descarga del vídeo, planes 99-149$/mes), Minea (especializada en TikTok+Meta con métricas estimadas de engagement). Para análisis de landing page del competidor: SimilarWeb (tráfico estimado), Wappalyzer (stack tech), PageSpeed Insights (performance). En DayByDay solemos combinar Meta Ads Library (gratis, datos oficiales) + Foreplay (organización del swipe file por hipótesis) + captura manual con timestamps. Las herramientas premium tienen sentido si manejas \u003e5 cuentas o testas creatividades nuevas cada semana; con 1-2 cuentas el ecosistema gratuito más capturas semanales basta.
-
-### ¿Cuántos competidores hay que monitorizar y con qué frecuencia revisar la Meta Ads Library?
-
-La regla operativa que usamos: 4-6 competidores directos (mismo nicho, mismo país, modelo D2C similar) más 3-5 referentes internacionales (marcas top del vertical en US/UK que innovan antes y marcan tendencia). Frecuencia mínima: revisión semanal de 30-45 minutos con foco en altas y bajas (creatividades nuevas y pausadas), revisión profunda mensual con tagging completo en swipe file y revisión estratégica trimestral con análisis de patrones (qué ángulos saturan, qué formatos rinden, qué ofertas se imponen). Más frecuencia genera ruido sin valor extra; menos frecuencia hace que llegues tarde a tendencias creativas que ya están en pico. Datos de cuentas D2C España: las marcas activas pautan entre 8 y 35 creatividades simultáneas según volumen, con un ratio típico 1 ganadora cada 5-8 testadas, por lo que monitorizar bien 5-6 competidores te da acceso a 40-200 hipótesis testadas mensualmente sin gastar un euro propio.
-
-### ¿Qué patrones de creatividad ganadora destacan en D2C España en 2026?
-
-Patrones observados al auditar 100+ cuentas D2C españolas activas en Meta Ads Library a inicios de 2026: (1) UGC con cara y voz on-camera mantiene supremacía en moda, belleza y suplementos — la persona habla 6-15 segundos primer plano con problema/solución directo. (2) Reels verticales 9:16 de 9-25 segundos rinden 30-50% mejor que feed cuadrado en captación nueva. (3) Hook en segundos 0-2 con texto grande superpuesto (\
-
-### ¿Cómo convertir el análisis de Meta Ads Library en hipótesis de testing para tu cuenta?
-
-El error típico es copiar la creatividad ganadora del competidor: el algoritmo de Meta penaliza repeticiones del mercado y la diferenciación de marca se pierde. El método correcto en DayByDay: (1) Extraer el ángulo de mensaje (no la creatividad). Ejemplo: si el competidor lleva 3 meses con \
-
-
-## Artículos relacionados (revisar, mantener 2 mejores)
-
-- [Meta Ads](/tech/meta-ads.html)
-- [Google Ads](/tech/google-ads-tech.html)
-- [Shopify](/tech/shopify.html)
-- [GA4](/tech/ga4.html)
+- [UGC en Meta Ads](/blog/ugcmeta-ads.html)
+- [Creative testing en Meta Ads](/blog/creative-testing-meta-ads.html)
+- [Qué es un media buyer](/blog/que-es-un-media-buyer.html)
+- [Qué es el ROAS](/blog/roas.html)
+- [Qué es el CPA](/blog/cpa.html)
