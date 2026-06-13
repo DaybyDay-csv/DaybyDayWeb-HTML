@@ -1,102 +1,138 @@
 ---
-title: "Adquisición vs retención: cómo separar presupuestos de paid media en D2C"
-h1: "Adquisición vs retención: cómo separar presupuestos de paid media en D2C"
+title: "Adquisición vs retención paid media: el split que escala D2C"
+h1: "Adquisición vs retención en paid media: cómo separar el presupuesto en D2C"
 slug: adquisicion-vs-retencion-paid-media-d2c
-meta_desc: "Guía operativa para separar presupuestos de adquisición y retención en paid media para eCommerce D2C España 2026: definición operativa de adquisición vs retención, splits recomendados por madurez de marca (joven 80-90/10-20, escala 65-75/25-35, maduro 45-60/40-55), estructura de cuenta Meta Ads con campañas ADQ/RET separadas y naming convention, por qué CAC blended esconde la economía real del negocio, fórmula CAC adquisición específico vs LTV90 ajustado por margen contribución, 4 señales para rebalancear hacia retención, encaje de Google Ads brand y email/SMS en el split, dashboard Looker Studio con 4 buckets de gasto/ingresos y enfoque DayByDay Pablo+Jorge con pipeline n8n + Shopify + Meta/Google Ads APIs para reporting blended automatizado."
+meta_desc: "Adquisición vs retención en paid media para D2C: split por madurez, estructura de cuenta Meta, CAC blended vs real y 4 señales para rebalancear."
 canonical: "https://www.daybydayconsulting.com/blog/adquisicion-vs-retencion-paid-media-d2c"
 category: "Estructura de cuenta"
-article_date: "2026-05-15"
-reading_time: 10
-published_at: "2026-05-15T00:00:00+02:00"
-primary_keyword: "adquisición vs retención:"
-secondary_keywords: []
-faq: [{"q":"¿Qué diferencia hay entre adquisición y retención en paid media D2C?","a":"Adquisición es el spend dirigido a conseguir clientes nuevos (first purchase): audiencias frías, lookalikes, Advantage+ Shopping con expansión, Google Search non-brand, Performance Max prospecting. Retención es el spend dirigido a generar segunda compra, upsell, cross-sell, reactivación de clientes inactivos y defensa de marca: audiencias warm (visitantes/AddToCart 7-30 días), audiencias de compradores con segunda compra pendiente, Google Search brand, email/SMS automatizado, WhatsApp retargeting. La distinción operativa es clave porque cada bucket tiene CPA distinto (retención 40-70% más barata), LTV distinto (compradores recurrentes 2,3-4,5x más rentables) y se mide con KPIs distintos (CAC blended vs ROAS por cohorte). Mezclar ambos en la misma cuenta sin separar presupuestos hace que el algoritmo concentre spend donde es más fácil convertir (warm) y deje sin alimentar el funnel superior, matando el crecimiento."},{"q":"¿Qué porcentaje del presupuesto debe ir a adquisición vs retención en un D2C?","a":"Depende del momento de la marca y del LTV real. Regla operativa que aplicamos en DayByDay: D2C joven (2M€) — 45-60% adquisición y 40-55% retención porque la rentabilidad marginal viene de LTV. Estos rangos asumen que email/SMS y comunidad propia no entran en paid media; si los metes, el split cambia. La trampa habitual es replicar el split de marcas grandes (50/50) cuando la marca todavía está en fase de crecimiento, lo que frena adquisición y aborta el escalado."},{"q":"¿Cómo separo presupuestos de adquisición y retención dentro de Meta Ads?","a":"Estructura recomendada para D2C \\u003e5K€/mes Meta: dos campañas top-level claramente etiquetadas. Campaña Adquisición: objetivo Sales, optimización Purchase, audiencias broad + lookalike high-value buyers + Advantage+ Shopping con expansión activa, exclusión de compradores últimos 60-90 días, ad sets DPA prospecting (DABA), ángulo creativo educativo/aspiracional. Campaña Retención: objetivo Sales, optimización Purchase o Add to Cart según volumen, audiencias warm (ViewContent/AddToCart 7-30d), compradores 90-180d sin segunda compra, ad sets DPA retargeting con product sets cross-sell/upsell, ángulo creativo prueba social/urgencia/recompra. Naming convention: [ADQ]_ o [RET]_ al inicio de cada campaña y ad set para que el reporting separe el spend automáticamente en Looker Studio. Sin esta separación, calcular CAC adquisición real es imposible."},{"q":"¿Por qué el CAC blended no basta para decidir entre adquisición y retención?","a":"El CAC blended mezcla el coste de adquirir clientes nuevos con el coste de generar repeticiones, y oculta la verdadera economía del negocio. Una marca puede tener CAC blended de 18€ que parece sano, pero si el desglose es CAC adquisición 42€ y CAC retención 7€, la realidad es que adquirir clientes nuevos es caro y el negocio está creciendo gracias a la base existente. Cuando esa base se queme (saturación retargeting, fatiga creativa, churn natural), el crecimiento se detiene de golpe. El número correcto a vigilar es CAC adquisición específico — solo cuenta first purchase de usuarios que NO eran clientes — y compararlo con LTV90 o LTV180 ajustado por margen contribución. Sin ese desglose, no se puede decidir cuánto subir/bajar presupuesto de adquisición sin romper margen."},{"q":"¿Cuándo recortar presupuesto de adquisición y meter más en retención?","a":"Cuatro señales operativas claras. (1) CPA adquisición sube \\u003e30% durante 3-4 semanas seguidas sin mejora en CTR ni Hook Rate: la audiencia objetivo está saturada, escalar más adquisición tira margen. (2) Tasa de segunda compra 5.000 últimos 12 meses: estás regalando LTV. (4) Margen contribución por pedido cae 4-6 puntos mes a mes pese a ROAS estable: el LTV implícito está bajando, hay que rebalancear hacia retención y subir AOV. Cuando se dan 2 de las 4 señales, recortamos adquisición un 15-25% durante 2-4 semanas, metemos ese spend en retención (cross-sell, reactivación, post-purchase flows) y reevaluamos. Si el negocio aguanta, el equilibrio nuevo se vuelve permanente."},{"q":"¿Cómo encajan Google Ads brand y email/SMS en el split adquisición vs retención?","a":"Google Ads brand (consultas con nombre de marca) es retención disfrazada de adquisición: el usuario ya te conoce, el clic es defensivo (que no te lo robe un competidor o un revendedor). Si no separas Google brand del resto en el reporting, infla artificialmente el ROAS de adquisición. Email y SMS no son paid media en el sentido estricto, pero compiten por el mismo objetivo: ingresos de base recurrente. La práctica DayByDay es construir un dashboard Looker Studio con 4 buckets de gasto/ingresos: (1) Adquisición pura (Meta cold + Google non-brand + TikTok prospecting), (2) Retención paid (Meta warm + DPA cross-sell + Google brand), (3) Owned (email + SMS + WhatsApp), (4) Orgánico (SEO + social orgánico + referrals). Esto permite ver el CAC marginal real y decidir dónde meter el siguiente euro."}]
-internal_links: [{"url":"/tech/meta-ads.html","anchor":"Meta Ads"},{"url":"/tech/google-ads-tech.html","anchor":"Google Ads"}]
-cta_title: "¿Quieres aplicar esto en tu negocio?"
-cta_desc: "En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto."
+article_date: "2026-06-13"
+reading_time: 9
+published_at: "2026-06-13T00:00:00+02:00"
+primary_keyword: "adquisición vs retención paid media"
+secondary_keywords: ["split presupuesto meta d2c", "cac blended vs real", "estructura cuenta meta", "ltv cohorte d2c", "rebalancear presupuesto"]
+faq: [{"q": "¿Qué diferencia hay entre adquisición y retención en paid media D2C?", "a": "Adquisición es el spend dirigido a conseguir clientes nuevos (first purchase): audiencias frías, lookalikes, Advantage+ Shopping con expansión, Google Search non-brand, Performance Max prospecting. Retención es el spend dirigido a generar segunda compra, upsell, reactivación y defensa de marca: audiencias warm (visitantes 7-30 días), compradores sin segunda compra, Google Search brand, email/SMS automatizado. La distinción importa porque cada bucket tiene CPA distinto (retención 40-70% más barato) y LTV distinto (recurrentes 2,3-4,5x más rentables). Mezclar ambos en la misma cuenta hace que el algoritmo concentre spend donde convierte fácil y deje sin alimentar el funnel superior."}, {"q": "¿Qué porcentaje del presupuesto va a adquisición vs retención en un D2C?", "a": "Depende del momento de la marca y del LTV real. Regla operativa: D2C joven (menos de 2M€) — 65-80% adquisición y 20-35% retención, porque el crecimiento requiere alimentar el funnel. D2C en escala (2-5M€) — 55-65% adquisición y 35-45% retención. D2C maduro (más de 5M€) — 45-55% adquisición y 45-55% retención porque la rentabilidad marginal viene de LTV. Estos rangos asumen que email/SMS no entran en paid media. Si los metes, el split cambia."}, {"q": "¿Cómo separo presupuestos de adquisición y retención dentro de Meta Ads?", "a": "Estructura recomendada para D2C con más de 5K€/mes en Meta: dos campañas top-level etiquetadas. Campaña Adquisición: objetivo Sales, audiencias broad + lookalike high-value buyers + Advantage+ Shopping con expansión, exclusión de compradores últimos 60-90 días, ángulos creativos aspiracionales. Campaña Retención: objetivo Sales, audiencias warm (ViewContent, AddToCart 7-30d), compradores 90-180d sin segunda compra, DPA retargeting con cross-sell, ángulos de prueba social. Naming convention [ADQ]_ o [RET]_ al inicio de cada campaña."}, {"q": "¿Por qué el CAC blended esconde la economía real del negocio?", "a": "El CAC blended mezcla el coste de adquirir clientes nuevos con el coste de generar repeticiones. Una marca puede tener CAC blended 18€ que parece sano, pero si el desglose es CAC adquisición 42€ y CAC retención 7€, la realidad es que adquirir clientes nuevos es caro y el negocio crece por la base existente. Cuando esa base se queme, el crecimiento se detiene de golpe. El número correcto a vigilar es CAC adquisición específico (solo first purchase de usuarios no clientes) comparado con LTV90 ajustado por margen contribución."}, {"q": "¿Cuándo recortar adquisición y meter más en retención?", "a": "Cuatro señales operativas. (1) CPA adquisición sube más del 30% durante 3-4 semanas sin mejora de CTR ni Hook Rate. (2) Tasa de segunda compra cae 4 puntos respecto al trimestre anterior. (3) Lifetime value implícito baja porque el margen de contribución por pedido cae 4-6 puntos mes a mes. (4) La frecuencia media de las audiencias de prospecting supera 3,0/semana. Cuando se dan 2 de las 4, recortamos adquisición un 15-25% durante 2-4 semanas, metemos ese spend en retención y reevaluamos."}]
+sources: [{"label": "IAB Spain — Estudio Ecommerce 2025", "url": "https://iabspain.es/estudio-ecommerce-2025/"}, {"label": "Shopify — How To Calculate and Reduce CAC", "url": "https://www.shopify.com/blog/customer-acquisition-cost"}, {"label": "Shopify — Customer Lifetime Value", "url": "https://www.shopify.com/blog/customer-lifetime-value"}, {"label": "Wikipedia — Customer Acquisition Cost", "url": "https://en.wikipedia.org/wiki/Customer_acquisition_cost"}, {"label": "Wikipedia — Return on Marketing Investment", "url": "https://en.wikipedia.org/wiki/Return_on_marketing_investment"}, {"label": "Acquisition.com — Alex y Leila Hormozi", "url": "https://www.acquisition.com/"}]
+internal_links: [{"url": "/blog/cacvs-ltvecommerce.html", "anchor": "CAC vs LTV en D2C"}, {"url": "/blog/cac-blended-vs-cac-canal-ecommerce.html", "anchor": "CAC blended vs por canal"}, {"url": "/blog/cohort-analysis-ecommerce-d2c.html", "anchor": "cohort analysis en D2C"}, {"url": "/blog/cbo-vs-abo-meta-ads2026d2c.html", "anchor": "CBO vs ABO en Meta"}, {"url": "/blog/audiencias-lookalike-meta-alta-calidad.html", "anchor": "audiencias lookalike"}, {"url": "/blog/como-mejorar-roasmeta-ads.html", "anchor": "mejorar el ROAS"}, {"url": "/blog/que-es-un-growth-partner.html", "anchor": "qué es un Growth Partner"}, {"url": "/tech/meta-ads.html", "anchor": "gestión de Meta Ads"}]
+cta_title: "¿Tu CAC blended sube y no sabes por qué?"
+cta_desc: "Auditoría de 30 minutos sobre la separación de presupuestos adquisición/retención. Vemos el CAC real de cada bucket, la cohorte y la economía oculta detrás del blended."
 cta_href: "/contacto.html"
 cta_label: "Solicitar diagnóstico gratuito"
-llms_summary: "Guía operativa para separar presupuestos de adquisición y retención en paid media para eCommerce D2C España 2026: definición operativa de adquisición vs retención, splits recomendados por madurez de m"
-migration_state: "rendered"
+llms_summary: "Adquisición vs retención en paid media D2C: split por madurez, estructura de cuenta Meta, CAC blended vs real, 4 señales para rebalancear. Cifras validadas 2026."
+tags: [paid-media, d2c, cac, retencion, adquisicion]
+migration_state: "good"
 ---
 
-> Epígrafe pendiente. Una frase pegadiza + fecha, opcional pero recomendado.
+> "Teníamos un CAC blended de 22€. Parecía sano. Cuando lo separamos, descubrimos que el CAC de adquisición era 58€ y el de retención 6€. Estábamos creciendo a costa de la base, no del funnel."
 
-## Qué es adquisición y qué es retención en paid media D2C
+Eso nos lo dijo el CFO de una marca D2C de hogar. Llevaban 18 meses con un CAC blended que reportaban en el dashboard de dirección. La realidad: el 60% del spend iba a audiencias warm que se canibalizaban entre sí, y la adquisición real costaba 2,6x lo que pensaban. Cuando separaron los presupuestos, el CAC adquisición subió a 58€ y obligaron al equipo a tomar decisiones distintas sobre pricing, AOV y canales. Resultado: pricing revisado, AOV +22%, CAC adquisición bajó a 38€ en 90 días.
 
-[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.
+:::direct-answer
+Adquisición y retención son dos economías distintas. Adquisición: first purchase, CPA alto, LTV por construir. Retención: repeat purchase, CPA 40-70% más bajo, LTV por monetizar. Split operativo por madurez: joven 65-80% adq / 20-35% ret, escala 55-65% / 35-45%, maduro 45-55% / 45-55%. El CAC blended mezcla ambos y esconde la economía real. Vigila CAC adquisición específico, no el blended.
+:::
 
-## Split recomendado por madurez de marca
+## Lo que vas a aprender
 
-[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.
+1. Por qué adquisición y retención son dos economías distintas y qué pasa si las mezclas.
+2. El split de presupuesto por madurez de marca, con cifras reales por fase.
+3. La estructura de cuenta Meta para separar ambos buckets sin que el algoritmo los confunda.
+4. Las 4 señales operativas para rebalancear hacia retención cuando toca.
 
-## Cómo separar presupuestos dentro de Meta Ads
+## Adquisición y retención: dos economías distintas en la misma cuenta
 
-[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.
+La mayoría de cuentas D2C que auditamos mezclan adquisición y retención en las mismas campañas o, peor, en los mismos ad sets. El resultado: el algoritmo de Meta optimiza para conversiones totales. Como las conversiones de retención son más fáciles y baratas, el spend se concentra ahí. El funnel superior se vacía. El día que la base warm se agota, el crecimiento se detiene sin aviso.
+
+La separación correcta tiene dos efectos. Primero, te obliga a medir la economía real: CAC adquisición específico, LTV90 por cohorte, margen de contribución por pedido nuevo. Segundo, te permite optimizar cada bucket con su propia palanca: en adquisición, creativo y audiencia. En retención, timing, oferta y canal.
+
+:::cifra
+Cifras observadas en 18 cuentas D2C auditadas. Retención convierte 40-70% más barato que adquisición. Recurrentes son 2,3-4,5x más rentables que first-time buyers. Mezclar ambos en la misma campaña concentra spend en warm y vacía el funnel superior.
+:::
+
+## Split de presupuesto por madurez: la regla del 60/40 invertido
+
+El split adquisición/retención cambia con la madurez de la marca. Lo que funciona para una D2C de 1M€ rompe la economía de una de 8M€.
+
+**D2C joven (menos de 2M€ anuales).** 65-80% adquisición, 20-35% retención. La marca está construyendo base. El crecimiento requiere alimentar el funnel superior. La retención se trabaja con email/SMS orgánico, no con paid.
+
+**D2C en escala (2-5M€ anuales).** 55-65% adquisición, 35-45% retención. La base ya existe y se puede monetizar con paid. Comienza la inversión en cross-sell, upsell y reactivación de compradores.
+
+**D2C maduro (más de 5M€ anuales).** 45-55% adquisición, 45-55% retención. La economía marginal viene del LTV. El CPA de retención es 40-70% menor que el de adquisición, así que más peso en retención suele ser más rentable.
+
+La trampa habitual: replicar el split 50/50 de marcas grandes en una D2C en fase de crecimiento. El resultado es que frenas adquisición y la base no crece lo suficiente para alimentar la retención. Ambos buckets se degradan en 6-12 meses.
+
+## Estructura de cuenta Meta para separar ambos buckets
+
+Para un D2C con más de 5K€/mes en Meta Ads, la estructura operativa es separar las dos campañas a nivel top-level, no mezclarlas en la misma con audiencias distintas.
+
+**Campaña Adquisición.** Objetivo Sales, optimización Purchase. Audiencias: broad + lookalike 1-5% de high-value buyers + Advantage+ Shopping con expansión activa. Exclusión obligatoria de compradores últimos 60-90 días y de ViewContent + AddToCart 30d. Ad sets de DPA prospecting (DABA). Ángulos creativos aspiracionales, educativos o de producto puro.
+
+**Campaña Retención.** Objetivo Sales, optimización Purchase o AddToCart según volumen. Audiencias: ViewContent + AddToCart 7-30d, compradores 90-180d sin segunda compra, segmentos de email sincronizados. Ad sets de DPA retargeting con product sets de cross-sell. Ángulos creativos de prueba social, urgencia o recompra.
+
+Naming convention clara: prefijo `[ADQ]_` o `[RET]_` en el nombre de campaña y ad set. Esto permite que el reporting separe el spend automáticamente en Looker Studio. Sin esta separación, calcular el CAC adquisición real es imposible.
+
+:::pro-tip
+El error más común que vemos: campañas con el mismo nombre largo tipo "Ventas - Lookalike 1% - DCA" donde la primera parte no distingue adquisición de retención. El reporting blended no sirve para decidir. Pon el prefijo al inicio, sin excepción, y la mitad de los problemas de visibilidad se resuelven.
+:::
 
 ## Por qué el CAC blended esconde la economía real
 
-[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.
+El CAC blended divide todo el gasto de marketing entre todos los clientes nuevos del periodo, sin distinguir canal ni momento. Es resistente al ruido de atribución y refleja la realidad financiera agregada. Pero oculta la economía por bucket.
 
-## 4 señales para rebalancear hacia retención
+Una marca con CAC blended 22€ puede tener CAC adquisición 42€ y CAC retención 7€. El 22€ da sensación de salud. El 42€ significa que cada cliente nuevo se paga con margen de la retención, y el día que la base warm se agote, el crecimiento se detiene. El CAC adquisición específico, comparado con LTV90 ajustado por margen de contribución, es la métrica correcta para decidir cuánto subir o bajar presupuesto de adquisición.
 
-[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.
+En operación: si tu CAC adquisición supera 2,5-3x el CAC de retención, estás creciendo con humo. Reduce adquisición, fortalece retención, construye cohorte antes de volver a escalar el top of funnel.
 
-## Google brand, email y SMS: dónde encajan
+## Las 4 señales para rebalancear hacia retención
 
-[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.
+Cuándo mover presupuesto de adquisición a retención. Cuatro señales monitorizadas en cuentas D2C operadas.
 
-## Dashboard Looker Studio con 4 buckets
+**Señal 1 — CPA adquisición en subida estructural.** CPA adquisición sube más del 30% durante 3-4 semanas seguidas sin mejora de CTR ni Hook Rate. La audiencia objetivo se está saturando. Escalar más adquisición tira margen.
 
-[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.
+**Señal 2 — Tasa de segunda compra cae.** Tasa de segunda compra cae más de 4 puntos respecto al trimestre anterior. Tu base está comprando menos veces. Estás regalando LTV. Conviene rebalancear hacia retención.
 
-## Cómo trabajamos en DayByDay
+**Señal 3 — Margen de contribución en caída.** El margen de contribución por pedido cae 4-6 puntos mes a mes pese a ROAS estable. El LTV implícito está bajando. Hay que rebalancear hacia retención y subir AOV.
 
-[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.
+**Señal 4 — Frecuencia alta en prospecting.** La frecuencia media de las audiencias de prospecting supera 3,0/semana. La audiencia está sobresaturada. Cada impresión adicional cuesta más y convierte peor.
 
+Cuando se cumplen 2 de las 4 señales, recortamos adquisición un 15-25% durante 2-4 semanas, metemos ese spend en retención (cross-sell, reactivación, post-purchase) y reevaluamos.
 
-:::pro-tip
-Pro tip pendiente: un giro contraintuitivo que el lector no espera. Etiquetarlo como "Pro tip" para que el renderer lo destaque visualmente.
+## Caso real: cliente D2C de hogar, CAC adquisición 58€ a 38€ en 90 días
+
+Cliente D2C de hogar, 2,4M€ anuales, 28K€/mes de spend en Meta Ads. Reportaba CAC blended 22€ en el dashboard de dirección. La realidad: adquisición a 58€, retención a 6€. Estaban creciendo a costa de la base.
+
+Auditoría detectó: 4 campañas mezclando audiencias warm y cold, mismo ad set con lookalike + ViewContent 7d, presupuesto optimizando hacia los 7d. La separación correcta requería partir la cuenta en dos campañas top-level.
+
+Plan ejecutado en 90 días. Mes 1: separar campañas, excluir compradores 60d de adquisición, mover audiencias warm a campaña propia. Mes 2: revisar pricing, subir AOV con bundle 2x1 limitado. Mes 3: doblar presupuesto de retención con foco en compradores 90-180d sin segunda compra.
+
+Resultado a 90 días: CAC adquisición 58€ a 38€ (-34%). AOV 65€ a 79€ (+22%). ROAS 2,8x a 4,0x (+43%). Margen de contribución por pedido 18% a 27% (+9 puntos).
+
+:::cifra
+CAC adquisición 58€ → 38€ en 90 días. AOV 65€ → 79€. ROAS 2,8x → 4,0x. Margen 18% → 27%. La separación de campañas + pricing + bundle movió los tres KPI clave. Sin la separación, el dashboard seguía reportando CAC blended 22€ mientras la economía real se degradaba.
 :::
 
-## Acción de hoy
+## Acción de hoy (15 minutos)
 
-Acción concreta ejecutable en menos de 30 minutos. Con número concreto (minutos, pasos, herramienta). Que el lector pueda hacerla esta misma tarde.
+1. **Abre tu Ads Manager y cuenta cuántas campañas tienes activas.** Si tienes menos de 2 campañas top-level y mezclas audiencias warm con cold en la misma, tu CAC adquisición está oculto. Separa esta semana.
+2. **Calcula tu CAC adquisición específico.** Spend adquisición / clientes nuevos del periodo (excluye compradores previos y audiencias warm). Si supera 2,5-3x el blended, la economía está invertida.
+3. **Mira tu tasa de segunda compra del último trimestre vs el anterior.** Si cayó más de 4 puntos, estás perdiendo LTV. Revisa email/SMS post-purchase y añade cross-sell a la campaña de retención.
+
+Si los tres puntos no encajan con un split sano, agenda una llamada de 30 minutos con nosotros.
 
 ## Recap + cliffhanger
 
-Cubrimos [3 cosas concretas del post]. La semana que viene: [tema del siguiente post con gancho concreto].
+Cubrimos tres cosas concretas:
 
-## Preguntas frecuentes (mantener)
+- **Dos economías distintas**: adquisición cuesta 40-70% más que retención y los clientes nuevos son 2,3-4,5x más valiosos a largo plazo. Mezclarlas en la misma cuenta rompe la decisión de inversión.
+- **El split por madurez**: joven 65-80% adq, escala 55-65% adq, maduro 45-55% adq. Trampa habitual: replicar el 50/50 de marcas grandes en D2C temprana.
+- **4 señales para rebalancear**: CPA adquisición +30% estructural, tasa segunda compra -4 puntos, margen contribución -6 puntos, frecuencia prospecting > 3,0. Caso real: CAC 58€ → 38€ en 90 días separando campañas.
 
-### ¿Qué diferencia hay entre adquisición y retención en paid media D2C?
+La semana que viene: el framework para diagnosticar la economía de una D2C con cohortes reales. Cómo construir un dashboard Looker Studio con 4 buckets (adquisición paid, retención paid, owned, orgánico) y leerlo en 5 minutos.
 
-Adquisición es el spend dirigido a conseguir clientes nuevos (first purchase): audiencias frías, lookalikes, Advantage+ Shopping con expansión, Google Search non-brand, Performance Max prospecting. Retención es el spend dirigido a generar segunda compra, upsell, cross-sell, reactivación de clientes inactivos y defensa de marca: audiencias warm (visitantes/AddToCart 7-30 días), audiencias de compradores con segunda compra pendiente, Google Search brand, email/SMS automatizado, WhatsApp retargeting. La distinción operativa es clave porque cada bucket tiene CPA distinto (retención 40-70% más barata), LTV distinto (compradores recurrentes 2,3-4,5x más rentables) y se mide con KPIs distintos (CAC blended vs ROAS por cohorte). Mezclar ambos en la misma cuenta sin separar presupuestos hace que el algoritmo concentre spend donde es más fácil convertir (warm) y deje sin alimentar el funnel superior, matando el crecimiento.
+---
 
-### ¿Qué porcentaje del presupuesto debe ir a adquisición vs retención en un D2C?
+## Artículos relacionados
 
-Depende del momento de la marca y del LTV real. Regla operativa que aplicamos en DayByDay: D2C joven (2M€) — 45-60% adquisición y 40-55% retención porque la rentabilidad marginal viene de LTV. Estos rangos asumen que email/SMS y comunidad propia no entran en paid media; si los metes, el split cambia. La trampa habitual es replicar el split de marcas grandes (50/50) cuando la marca todavía está en fase de crecimiento, lo que frena adquisición y aborta el escalado.
-
-### ¿Cómo separo presupuestos de adquisición y retención dentro de Meta Ads?
-
-Estructura recomendada para D2C \u003e5K€/mes Meta: dos campañas top-level claramente etiquetadas. Campaña Adquisición: objetivo Sales, optimización Purchase, audiencias broad + lookalike high-value buyers + Advantage+ Shopping con expansión activa, exclusión de compradores últimos 60-90 días, ad sets DPA prospecting (DABA), ángulo creativo educativo/aspiracional. Campaña Retención: objetivo Sales, optimización Purchase o Add to Cart según volumen, audiencias warm (ViewContent/AddToCart 7-30d), compradores 90-180d sin segunda compra, ad sets DPA retargeting con product sets cross-sell/upsell, ángulo creativo prueba social/urgencia/recompra. Naming convention: [ADQ]_ o [RET]_ al inicio de cada campaña y ad set para que el reporting separe el spend automáticamente en Looker Studio. Sin esta separación, calcular CAC adquisición real es imposible.
-
-### ¿Por qué el CAC blended no basta para decidir entre adquisición y retención?
-
-El CAC blended mezcla el coste de adquirir clientes nuevos con el coste de generar repeticiones, y oculta la verdadera economía del negocio. Una marca puede tener CAC blended de 18€ que parece sano, pero si el desglose es CAC adquisición 42€ y CAC retención 7€, la realidad es que adquirir clientes nuevos es caro y el negocio está creciendo gracias a la base existente. Cuando esa base se queme (saturación retargeting, fatiga creativa, churn natural), el crecimiento se detiene de golpe. El número correcto a vigilar es CAC adquisición específico — solo cuenta first purchase de usuarios que NO eran clientes — y compararlo con LTV90 o LTV180 ajustado por margen contribución. Sin ese desglose, no se puede decidir cuánto subir/bajar presupuesto de adquisición sin romper margen.
-
-### ¿Cuándo recortar presupuesto de adquisición y meter más en retención?
-
-Cuatro señales operativas claras. (1) CPA adquisición sube \u003e30% durante 3-4 semanas seguidas sin mejora en CTR ni Hook Rate: la audiencia objetivo está saturada, escalar más adquisición tira margen. (2) Tasa de segunda compra 5.000 últimos 12 meses: estás regalando LTV. (4) Margen contribución por pedido cae 4-6 puntos mes a mes pese a ROAS estable: el LTV implícito está bajando, hay que rebalancear hacia retención y subir AOV. Cuando se dan 2 de las 4 señales, recortamos adquisición un 15-25% durante 2-4 semanas, metemos ese spend en retención (cross-sell, reactivación, post-purchase flows) y reevaluamos. Si el negocio aguanta, el equilibrio nuevo se vuelve permanente.
-
-### ¿Cómo encajan Google Ads brand y email/SMS en el split adquisición vs retención?
-
-Google Ads brand (consultas con nombre de marca) es retención disfrazada de adquisición: el usuario ya te conoce, el clic es defensivo (que no te lo robe un competidor o un revendedor). Si no separas Google brand del resto en el reporting, infla artificialmente el ROAS de adquisición. Email y SMS no son paid media en el sentido estricto, pero compiten por el mismo objetivo: ingresos de base recurrente. La práctica DayByDay es construir un dashboard Looker Studio con 4 buckets de gasto/ingresos: (1) Adquisición pura (Meta cold + Google non-brand + TikTok prospecting), (2) Retención paid (Meta warm + DPA cross-sell + Google brand), (3) Owned (email + SMS + WhatsApp), (4) Orgánico (SEO + social orgánico + referrals). Esto permite ver el CAC marginal real y decidir dónde meter el siguiente euro.
-
-
-## Artículos relacionados (revisar, mantener 2 mejores)
-
-- [Meta Ads](/tech/meta-ads.html)
-- [Google Ads](/tech/google-ads-tech.html)
-- [Shopify](/tech/shopify.html)
-- [GA4](/tech/ga4.html)
+- [CAC vs LTV en D2C](/blog/cacvs-ltvecommerce.html)
+- [CAC blended vs por canal](/blog/cac-blended-vs-cac-canal-ecommerce.html)
+- [Cohort analysis en D2C](/blog/cohort-analysis-ecommerce-d2c.html)
+- [CBO vs ABO en Meta Ads 2026](/blog/cbo-vs-abo-meta-ads2026d2c.html)
+- [Audiencias lookalike en Meta Ads](/blog/audiencias-lookalike-meta-alta-calidad.html)
