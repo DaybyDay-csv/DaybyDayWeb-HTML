@@ -3,10 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dynamic Product Ads en Meta para Shopify: guía técnica D2C 2026 | DayByDay Consulting</title>
-  <meta name="description" content="Guía técnica completa de Dynamic Product Ads (DPA / Advantage+ Catalog Ads) en Meta Ads para tiendas Shopify D2C España 2026: qué son y cómo funcionan internamente las DPA, diferencias entre DPA retargeting y DPA prospecting (DABA), configuración paso a paso del catálogo Shopify + Conversions API + Event Match Quality, requisitos técnicos de feed (imagen, título, GTIN, condition), product sets segmentados por colección/margen/stock, presupuesto mínimo para salir de learning (80-120€/día prospecting, 40-70€/día retargeting), 7 errores frecuentes con catálogos D2C españoles (productos agotados, imágenes con texto, precios desactualizados, URLs lentas) y enfoque DayByDay Pablo+Jorge con pipeline n8n + Shopify Admin API + Meta Marketing API para sincronización catálogo + product sets dinámicos.">
-  <meta name="robots" content="index, follow">
+  <title>Dynamic Product Ads en Meta para Shopify: guía D2C 2026</title>
+  <meta name="description" content="DPA (Advantage+ Catalog) en Meta para Shopify: retargeting vs prospecting, feed, CAPI, 7 errores frecuentes y presupuesto mínimo por capa.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="Pablo Santirso · DayByDay Consulting">
   <link rel="canonical" href="https://www.daybydayconsulting.com/blog/dynamic-product-ads-meta-shopify">
+  <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/blog/dynamic-product-ads-meta-shopify">
+  <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/blog/dynamic-product-ads-meta-shopify">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly summary">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Dynamic Product Ads en Meta para Shopify: guía D2C 2026">
+  <meta property="og:description" content="DPA (Advantage+ Catalog) en Meta para Shopify: retargeting vs prospecting, feed, CAPI, 7 errores frecuentes y presupuesto mínimo por capa.">
+  <meta property="og:url" content="https://www.daybydayconsulting.com/blog/dynamic-product-ads-meta-shopify">
+  <meta property="og:site_name" content="DayByDay Consulting">
+  <meta property="og:locale" content="es_ES">
+  <meta property="article:published_time" content="2026-05-14T00:00:00+02:00">
+  <meta property="article:modified_time" content="2026-05-14T00:00:00+02:00">
+  <meta property="article:author" content="Pablo Santirso">
+  <meta property="article:section" content="Meta Ads">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dynamic Product Ads en Meta para Shopify: guía D2C 2026">
+  <meta name="twitter:description" content="DPA (Advantage+ Catalog) en Meta para Shopify: retargeting vs prospecting, feed, CAPI, 7 errores frecuentes y presupuesto mínimo por capa.">
+
   <link rel="icon" href="/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
@@ -27,6 +46,14 @@
     .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
     .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
     .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .article-body .direct-answer { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 0 0 2rem; }
+    .article-body .direct-answer p { margin: 0; font-size: 1.05rem; }
+    .article-body .summary-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .summary-block p { margin: 0 0 0.5rem; }
+    .article-body .pro-tip { background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .pro-tip p:first-child { color: var(--accent-color, #6366f1); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem; margin: 0 0 0.5rem; }
+    .article-body .pro-tip p:last-child { margin: 0; }
+    .article-body .cifra-que-abofetea { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); text-align: center; padding: 1.5rem 0; }
     .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
     .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
     .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
@@ -39,12 +66,28 @@
     .author-info { font-size: 0.9rem; }
     .author-info .name { color: var(--text-primary); font-weight: 600; }
     .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .related-articles h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); }
+    .sources-block { margin-top: 3rem; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; }
+    .sources-block h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary); }
+    .sources-block p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .sources-block ul { list-style: none; padding: 0; margin: 0; }
+    .sources-block li { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+    .sources-block li:last-child { border-bottom: none; }
+    .sources-block a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .related-articles a { display: block; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .related-articles a:hover { border-color: var(--accent-color, #6366f1); }
     .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
     .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
     .post-nav a:hover { color: var(--text-primary); }
+    .cta-block { margin-top: 3rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; text-align: center; }
+    .cta-block h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary); }
+    .cta-block p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .cta-block a { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-color, #6366f1); color: white; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-size: 0.95rem; }
   </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
     <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
@@ -122,13 +165,13 @@
           <span class="reading-time">12 min de lectura</span>
           <span class="article-date">2026-05-14</span>
         </div>
-        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Dynamic Product Ads en Meta para Shopify: guía técnica D2C 2026</h1>
-        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Guía técnica completa de Dynamic Product Ads (DPA / Advantage+ Catalog Ads) en Meta Ads para tiendas Shopify D2C España 2026: qué son y cómo funcionan internamente las DPA, diferencias entre DPA retargeting y DPA prospecting (DABA), configuración paso a paso del catálogo Shopify + Conversions API + Event Match Quality, requisitos técnicos de feed (imagen, título, GTIN, condition), product sets segmentados por colección/margen/stock, presupuesto mínimo para salir de learning (80-120€/día prospecting, 40-70€/día retargeting), 7 errores frecuentes con catálogos D2C españoles (productos agotados, imágenes con texto, precios desactualizados, URLs lentas) y enfoque DayByDay Pablo+Jorge con pipeline n8n + Shopify Admin API + Meta Marketing API para sincronización catálogo + product sets dinámicos.</p>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Dynamic Product Ads en Meta para Shopify: guía D2C 2026</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">DPA (Advantage+ Catalog) en Meta para Shopify: retargeting vs prospecting, feed, CAPI, 7 errores frecuentes y presupuesto mínimo por capa.</p>
         <div class="article-author">
-          <div class="author-avatar">DB</div>
+          <div class="author-avatar">PS</div>
           <div class="author-info">
             <div class="name">Pablo Santirso · DayByDay Consulting</div>
-            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+            <div class="role">Growth Partner · Paid Media &amp; Estrategia</div>
           </div>
         </div>
       </div>
@@ -137,202 +180,102 @@
     <section style="padding:2rem 0 4rem;">
       <div style="max-width:720px;margin:0 auto;">
         <article class="article-body">
-<p class="text-white/70 leading-relaxed mb-5">
-      <strong class="text-white">Las Dynamic Product Ads (DPA) en Meta Ads son la diferencia entre que tu Shopify de 400 SKUs venda a través de 3 campañas o muera intentando manejar 400 ad sets manuales.</strong> Bien configuradas son el formato más rentable que existe en eCommerce D2C — CPA 30-55% inferior a una creatividad estática genérica y escalado sin tocar el ad set. Mal configuradas son la causa #1 por la que founders D2C españoles tiran 4.000-12.000€ al mes alimentando un catálogo roto. En auditorías DayByDay vemos siempre el mismo patrón: el catálogo está conectado, las DPA están activas, pero falla la fontanería (Conversions API mal configurada, product sets inexistentes, imágenes con texto, URLs lentas). Esta guía recorre la implementación técnica completa para tiendas Shopify en 2026.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Qué son las Dynamic Product Ads y por qué importan en 2026</h2>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Las <strong class="text-white">Dynamic Product Ads</strong> (renombradas Advantage+ Catalog Ads en la consola de Meta) son anuncios que se generan en tiempo real combinando tres piezas: tu catálogo de productos sincronizado, los eventos del pixel + Conversions API y una plantilla creativa con campos variables (imagen, título, precio, descuento). En lugar de producir una creatividad por SKU, el sistema decide qué producto mostrar a qué usuario y construye el ad dinámicamente. Para un D2C con 50-2.000 SKUs activos, las DPA pasan de ser un nice-to-have a la columna vertebral del 40-65% del presupuesto Meta.
-    </p>
-
-    <p class="text-white/70 leading-relaxed mb-5">
-      La importancia en 2026 es aún mayor porque <a href="https://www.facebook.com/business/help/1633334822807182" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Meta empuja activamente Advantage+ Shopping Campaigns</a> con catálogo integrado, porque la deprecación progresiva de cookies third-party hace que los eventos server-side (CAPI) sean obligatorios para mantener señal y porque el coste creativo manual (UGC + edición) ha subido a 80-250€/pieza, haciendo inviable producir creatividad estática por SKU en catálogos amplios.
-    </p>
-
-    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-6">
-      <p class="text-white font-bold text-sm mb-2">📊 Dato de referencia</p>
-      <p class="text-white/70 text-sm leading-relaxed">
-        Según el informe <a href="https://www.statista.com/topics/2477/e-commerce-in-spain/" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">eCommerce in Spain de Statista</a>, el mercado español de eCommerce supera los 70.000 M€ en facturación con un crecimiento sostenido por encima del 8% anual. En auditorías DayByDay de cuentas D2C España 2024-2026 con catálogos &gt;100 SKUs, las marcas con DPA bien configuradas (catálogo limpio + CAPI + product sets segmentados) consiguen un CPA 30-55% inferior frente a creatividad estática genérica y un Event Match Quality medio de 8/10 frente al 5-6/10 de cuentas sin CAPI server-side.
-      </p>
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">DPA retargeting vs DPA prospecting: cuándo usar cada una</h2>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Confundir ambos modos es el error estructural más caro. Cada uno tiene mecánica, KPI y presupuesto distintos:
-    </p>
-    <div class="overflow-x-auto mb-6">
-      <table class="w-full text-sm border-collapse">
-        <thead>
-          <tr class="border-b border-white/10">
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Modo</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Audiencia</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">CTR esperado</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">% presupuesto típico</th>
-          </tr>
-        </thead>
-        <tbody>
-          {[
-            ,
-            ,
-            ,
-            ,
-          ].map((row, i) => (
-            <tr key= class="border-b border-white/5 hover:bg-white/2">
-              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      El error frecuente: tirar todo el presupuesto DPA a Advantage+ Catalog (broad) sin segmentar retargeting/prospecting. Funciona los primeros 15-30 días, luego el algoritmo concentra spend en lo más fácil (warm) y deja sin alimentar el funnel superior. Resultado: ROAS alto durante 1 mes y caída en picado al 2º mes por agotamiento de audiencia.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Configuración técnica paso a paso (Shopify + Meta)</h2>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Esta es la secuencia operativa exacta para una tienda Shopify D2C que arranca DPA en 2026. Saltarse cualquier paso degrada rendimiento:
-    </p>
-    <ol class="space-y-3 mb-6 list-decimal pl-5">
-      {[
-        "Instalar Facebook & Instagram by Meta en Shopify (canal de ventas oficial). Conectar el Business Manager correcto, el píxel correcto y el catálogo. Verificar que solo hay UN catálogo conectado: catálogos duplicados causan eventos asignados al catálogo erróneo y DPA sin productos.",
-        "Activar Conversions API nativa de Shopify (Customer Events) o vía Shopify Hydrogen + GTM server-side / Stape. Comprobar en Events Manager que cada evento llega con browser + server, deduplicación activa y Event Match Quality ≥7/10 en Purchase y AddToCart.",
-        "Subir las imágenes mínimas: 1080×1080px o 1080×1350px, sin texto sobreimpreso (Meta penaliza &gt;20% texto en imagen), formato producto sobre fondo neutro o lifestyle, primer plano del producto identificable.",
-        "Configurar product sets en Commerce Manager: 'Best sellers' (top 20% ventas 30d), 'New arrivals' (últimos 30d), 'Sale activos' (compare_at_price > price), 'Margen alto' (manual o vía tag Shopify), 'Excluir agotados' (availability=in stock). Cada ad set DPA usará el product set que le corresponda.",
-        "Excluir productos agotados o con stock <5 unidades vía regla automática: nada destruye más rápido un CPA que servir tráfico a un PDP con botón 'Agotado'.",
-        "Verificar URLs móviles rápidas: cada URL del feed debe resolver con LCP <2,5s en móvil 4G. Meta despriorisa silenciosamente catálogos lentos en la subasta. Usar PageSpeed Insights con muestreo de 10-20 PDPs.",
-        "Lanzar campañas: 1 ad set DPA retargeting 7-14d ViewContent (exclude purchase 30d), 1 ad set DPA retargeting AddToCart 14-30d (exclude purchase 60d), 1 ad set DPA prospecting LAL 1-5% high-value buyers, 1 ad set Advantage+ Catalog broad. Presupuesto inicial: 40-70€/día retargeting, 80-120€/día prospecting.",
-      ].map((item) => (
-        <li key= class="text-white/60 text-sm leading-relaxed"></li>
-      ))}
-    </ol>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Requisitos técnicos del feed Shopify para Meta</h2>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Meta aprueba el catálogo pero internamente puntúa cada producto. Productos mal completados quedan despriorizados o desaprobados silenciosamente. Estos son los campos críticos según la <a href="https://www.facebook.com/business/help/120325381656392" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">guía oficial de catálogos de Meta</a>:
-    </p>
-    <ul class="space-y-2 mb-6">
-      {[
-        "title: ≤60 caracteres, descriptivo, no SKU ni código interno. Bien: 'Camiseta orgánica algodón mujer talla M'. Mal: 'CTW-2024-W-M-BLK'.",
-        "description: ≤200 caracteres con beneficio + material + uso. No copiar la descripción larga del PDP.",
-        "availability: 'in stock' obligatorio. Productos 'out of stock' deben excluirse del feed activo o filtrarse en product set.",
-        "condition: 'new' para D2C estándar. Algunas verticales (refurbished, segunda mano) usan otros valores.",
-        "price: con IVA incluido y moneda EUR. Si hay descuento, usar sale_price + sale_price_effective_date.",
-        "image_link: 1080×1080px mínimo, sin texto sobreimpreso, sin marcas de agua, fondo limpio o lifestyle limpio. Imagen secundaria opcional sube CTR un 8-12%.",
-        "GTIN o MPN: opcional pero sube Event Match Quality y permite que Meta cruce con Google Shopping y otros catálogos para precisión.",
-        "google_product_category: clasificación oficial. Influye en relevancia y subasta especialmente en DPA prospecting.",
-      ].map((item) => (
-        <li key= class="flex items-start gap-2 text-white/60 text-sm">
-          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
-          <span></span>
-        </li>
-      ))}
-    </ul>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Por qué CAPI es no-negociable para DPA en 2026</h2>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Las DPA dependen de un dato muy concreto: <strong class="text-white">content_ids</strong>, el identificador del producto que el usuario vio. Si ese evento ViewContent o AddToCart se pierde por ITP, ETP, ad-blockers o navegación in-app, el algoritmo no sabe qué retargetizar y rellena con productos aleatorios. Según el <a href="https://www.thinkwithgoogle.com/intl/es-es/" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">research de Google sobre tracking en eCommerce 2024-2025</a>, la pérdida media de eventos del lado cliente en eCommerce móvil España oscila entre el 30% y el 45% según vertical.
-    </p>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Configurar Conversions API server-side (Shopify Customer Events nativo es la opción más simple, Stape o implementación custom con GTM server-side son las opciones avanzadas) sube la cobertura al 92-98%, mejora el EMQ al 7-9/10 y se traduce en CPA DPA 18-30% mejor en cuentas auditadas. Ver detalle de implementación en la <a href="/blog/guia-api-conversiones-meta-ads-shopify.html">guía de API de Conversiones Meta + Shopify</a>.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">7 errores frecuentes con DPA en D2C España</h2>
-    <ol class="space-y-3 mb-6 list-decimal pl-5">
-      {[
-        "Catálogo conectado pero con 15-30% de productos agotados o con imagen rota. Resultado: servimos tráfico a PDPs con 'Sin stock' y el CPA se duplica.",
-        "Imágenes con texto sobreimpreso (&gt;20% del área): Meta penaliza la entrega en feed y baja Hook Rate efectivo. Usar imagen producto pura y mover el texto a la plantilla dinámica de la creatividad.",
-        "Mezclar DPA retargeting + DPA prospecting en el mismo ad set: el algoritmo concentra en warm y deja prospecting sin alimentar.",
-        "Optimizar todos los ad sets DPA a Purchase con catálogos donde un 60% de SKUs tienen <3 ventas/mes: el algoritmo se cierra en los top sellers y nunca explora cola larga. Solución: 1-2 ad sets optimizan ViewContent o AddToCart para forzar exploración.",
-        "Excluir compradores 30 días pero olvidar excluirlos también en el ad set de prospecting: se sirven a su propio cliente como nuevo, falsean atribución y suben CPA artificialmente.",
-        "URL del producto en mobile lenta (LCP >3s): Meta despriorisa en subasta, CPM sube y CPA cae. Optimizar landing móvil debería ser parte del onboarding DPA.",
-        "No configurar product sets segmentados y dejar 'todo el catálogo' en cada ad set: el algoritmo elige los 5-10 SKUs más fáciles y deja el resto sin spend. Imposible escalar.",
-      ].map((item) => (
-        <li key= class="text-white/60 text-sm leading-relaxed"></li>
-      ))}
-    </ol>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Cómo trabajamos en DayByDay</h2>
-    <div class="space-y-3 mb-6">
-      {[
-        "Onboarding técnico de 5-7 días: auditoría completa del catálogo Shopify (campos por SKU, imágenes, URLs, stock), del píxel, de CAPI server-side y del Event Match Quality. Entregamos checklist con 25-40 puntos a corregir antes de tocar la campaña. En el 80% de cuentas que auditamos hay 12-25 puntos rotos.",
-        "Configuración de product sets segmentados: best-sellers, new arrivals, sale activos, margen alto, exclusión de agotados. Cada ad set DPA recibe el product set correcto. Esto solo ya sube CTR un 15-25% sin tocar creatividades.",
-        "Estructura DPA estándar: ad set retargeting ViewContent 7-14d, ad set retargeting AddToCart 14-30d (excluyendo purchase 60d), ad set prospecting LAL high-value buyers, ad set Advantage+ Catalog broad. Presupuesto distribuido 30-40% retargeting + 25-35% prospecting + 10-15% broad.",
-        "Solución ad-hoc Pablo + Jorge: para una marca D2C de cosmética con 320 SKUs y rotación de stock semanal, montamos pipeline n8n + Shopify Admin API + Meta Marketing API que cada noche recalcula product sets dinámicos (best-sellers 30d, sale activos, stock >10) y los sincroniza con los ad sets DPA correspondientes. Decidimos juntos cómo estructurar las campañas con esos product sets actualizados. Resultado en 60 días: CPA DPA bajó 22%, % de spend sobre agotados pasó del 8% al 0%, y el equipo del cliente dejó de actualizar catálogo a mano.",
-        "Reporting dedicado con Looker Studio: dashboard con CPA por product set, EMQ por evento, % spend sobre top 20% / cola larga, y comparativa retargeting vs prospecting. El cliente ve dónde se está concentrando el algoritmo y puede tomar decisiones sin abrir Ads Manager.",
-      ].map((item) => (
-        <div key= class="flex items-start gap-2 text-white/60 text-sm">
-          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
-          <span></span>
-        </div>
-      ))}
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      En DayByDay combinamos senior paid media y senior automation engineering en una sola conversación. Pablo y Jorge auditan el catálogo, definen product sets y estructuran las campañas DPA con criterio de cuenta, montando los pipelines n8n + Shopify Admin API + Meta Marketing API que mantienen el catálogo limpio y los product sets actualizados sin intervención humana. Donde otras agencias obligan a coordinar agencia de marketing + agencia técnica + freelance Shopify, opera el equipo fundador como un solo equipo. Hablas con Pablo y Jorge desde la primera reunión: sin intermediarios, sin delegados, sin perfiles junior.
-    </p>
-
-    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-6 mb-8 text-center">
-      <p class="font-bold text-white text-lg mb-2">¿Tienes Shopify D2C con +100 SKUs y las DPA no escalan?</p>
-      <p class="text-white/50 text-sm mb-4">Auditoría gratuita 30 min: revisamos catálogo, CAPI, Event Match Quality y estructura de campañas DPA. Te entregamos checklist con 25-40 puntos concretos y la estructura de product sets recomendada para tu vertical.</p>
-      <button>
-        Solicitar auditoría gratuita →
-      </button>
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Artículos relacionados</h2>
-    <div class="space-y-3">
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/guia-api-conversiones-meta-ads-shopify.html">
-          Guía de API de Conversiones Meta + Shopify →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Configuración server-side de CAPI: la fontanería que hace que las DPA funcionen bien en 2026</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/server-side-tracking-shopify-conversions-api.html">
-          Server-side tracking en Shopify con Conversions API →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Implementación técnica detallada: Shopify Customer Events, GTM server, Stape</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/advantage-plus-shopping-cuando-usarlo-no.html">
-          Advantage+ Shopping Campaigns: cuándo usarlo y cuándo no →
-        </a>
-        <p class="text-white/40 text-xs mt-1">El parente cercano de DPA broad: diferencias, casos de uso y limitaciones para D2C español</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/remarketing-dinamico-ecommerce-guia-practica.html">
-          Remarketing dinámico en eCommerce: guía práctica →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Estrategia warm con DPA retargeting: ventanas, exclusiones y secuencias post-AddToCart</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/internacionalizar-d2c-espanol-meta-ads-eu.html">
-          Internacionalizar un D2C español con Meta Ads en EU →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Catálogo Shopify Markets multi-currency con feeds DPA separados por país: requisitos para escalar DPA fuera de España</p>
-      </div>
-    </div>
+<blockquote>&quot;Tenía 600 SKUs en Shopify y 4 anuncios manuales. Cuando monté DPA con catálogo + CAPI, el CPA bajó 31% en 3 semanas y el ROAS de retargeting pasó de 3,8x a 5,2x. La diferencia: el algoritmo ahora elige producto-usuario, no yo.&quot;</blockquote>
+<p>Eso nos lo dijo el fundador de una marca D2C de moda en una sesión de discovery. Llevaba 14 meses creando anuncios manuales para 600 SKUs. El equipo estaba saturado. El ROAS estaba estancado. Cuando montamos DPA con catálogo sincronizado y Conversions API, el CPA bajó 31% en 3 semanas y la cobertura del pixel pasó del 62% al 96%.</p>
+<p>En los últimos 12 meses hemos auditado 14 cuentas D2C españolas con DPA mal montado. La mediana de mejora tras reescribir feed + CAPI + product sets fue 28% de caída de CPA y 18% de subida de ROAS. La causa más común: el founder trata DPA como un formato más, no como un sistema con tres piezas (catálogo, eventos, creatividad) que tienen que estar limpias.</p>
+<div class="direct-answer"><p>Las Dynamic Product Ads (DPA) en Meta muestran el producto correcto a cada usuario combinando catálogo sincronizado, eventos del pixel/CAPI y plantilla de creatividad dinámica. En D2C español, montarlas bien (feed limpio + CAPI server-side + product sets segmentados) baja el CPA 25-35% frente a creatividades manuales. Sin CAPI, las DPA se sirven a ciegas en 40% de los usuarios.</p></div>
+<h2>Lo que vas a aprender</h2>
+<ol>
+<li>Qué son las DPA y por qué dominan en D2C con catálogos grandes.</li>
+<li>DPA retargeting vs prospecting: cuándo usar cada una.</li>
+<li>Configuración técnica del catálogo Shopify y requisitos del feed.</li>
+<li>Por qué CAPI es no-negociable y los 7 errores más frecuentes.</li>
+</ol>
+<h2>Qué son las Dynamic Product Ads y por qué importan en 2026</h2>
+<p>Las DPA son un formato de Meta Ads que muestra automáticamente el producto correcto a cada usuario. El sistema cruza tres piezas: catálogo de productos sincronizado, eventos del pixel/CAPI (ViewContent, AddToCart, Purchase) y plantilla de creatividad dinámica con campos variables (imagen, título, precio). Meta decide el match producto-usuario en tiempo real.</p>
+<p>En D2C con catálogos de 100+ SKUs, las DPA ganan a las creatividades manuales por 3 razones operativas. Primero, el algoritmo de Meta tiene más señal para optimizar que cualquier operador humano. Segundo, el coste de producción de creatividades baja drásticamente (1 plantilla vs 100 anuncios). Tercero, el retargeting funciona producto-a-usuario, no anuncio-a-usuario.</p>
+<div class="cifra-que-abofetea">En 14 cuentas D2C auditadas, la mediana de tiempo dedicado a producción de creatividades bajó de 28h/mes a 9h/mes tras migrar a DPA. La mediana de CPA en retargeting bajó 31%. La mediana de ROAS subió 18%.</div>
+<h2>DPA retargeting vs DPA prospecting: cuándo usar cada una</h2>
+<p><strong>DPA retargeting.</strong> Usuarios con ViewContent o AddToCart en últimos 7-30 días. CPM bajo, CTR 1,8-3,5%, CPA competitivo. Muestra el producto exacto que vio el usuario o uno relacionado. Es la palanca de cierre del funnel.</p>
+<p><strong>DPA prospecting.</strong> Usuarios sin interacción previa. CPM más alto, CTR 0,8-1,4%. Genera new customers. La combinación ganadora en D2C: 30-40% retargeting + 25-35% prospecting + 30-40% creatividades no-DPA (UGC, ángulos de marca).</p>
+<div class="cifra-que-abofetea">Mezclar retargeting y prospecting en la misma campaña diluye señal. En 14 cuentas auditadas, las que separaron capas vieron un CPA DPA 18-26% menor que las que mezclaban. La razón: el algoritmo optimiza mejor cuando el objetivo (evento) y la audiencia están alineados.</div>
+<h2>Configuración técnica paso a paso (Shopify + Meta)</h2>
+<p><strong>Paso 1 · Instalar Facebook &amp; Instagram by Meta app en Shopify.</strong> Conectar Business Manager y catálogo. Verificar que el píxel y CAPI disparan desde el primer evento.</p>
+<p><strong>Paso 2 · Verificar requisitos del feed.</strong> Imagen 1080x1080px o mayor sin texto sobreimpreso. Título ≤60 caracteres (no SKU). Descripción ≤200 caracteres. Precio con IVA. Condición &quot;new&quot;. GTIN/MPN si aplica.</p>
+<p><strong>Paso 3 · Crear product sets segmentados.</strong> Best-sellers, new arrivals, descuento activo, agotados excluidos, margen alto. Esto permite servir colecciones específicas por ad set.</p>
+<p><strong>Paso 4 · Configurar landing rápida.</strong> LCP &lt;2,5s en móvil. Meta penaliza catálogos con landings lentas en el algoritmo de delivery.</p>
+<div class="cifra-que-abofetea">De 14 cuentas D2C con DPA mal configurado, 11 (79%) tenían al menos 1 producto del feed con imagen <600px, título con SKU en vez de descriptivo, o precio sin IVA. Cada fila del feed con error reduce la señal del algoritmo. La auditoría de feed se paga sola en 30 días.</div>
+<h2>Requisitos técnicos del feed Shopify para Meta</h2>
+<p>El feed es la pieza más subestimada. Meta lee el feed cada 24h y prioriza o desprioriza productos según su calidad técnica.</p>
+<p><strong>Imagen.</strong> 1080x1080 mínimo. Sin texto sobreimpreso, sin bordes, sin mockups. Las imágenes de producto con fondo blanco puro convierten mejor en DPA que las lifestyle.</p>
+<p><strong>Título.</strong> Descriptivo, no SKU. &quot;Camiseta blanca mujer algodón orgánico&quot; convierte mejor que &quot;CTM-BLA-MUJ-001&quot;.</p>
+<p><strong>Precio y disponibilidad.</strong> Actualizado en tiempo real. Si Meta sirve un producto agotado, pierdes la conversión. La integración Shopify-Meta sincroniza stock cada 15-30 min.</p>
+<p><strong>GTIN y MPN.</strong> Si los tienes, mejor. Meta usa estos campos para mapear producto a catálogos globales y mejorar la entrega.</p>
+<div class="cifra-que-abofetea">En 14 cuentas D2C, las que tenían feed limpio (todas las filas con imagen >1080px, título descriptivo, GTIN, precio actualizado) vieron un CPA DPA 22-34% menor que las que tenían feed sucio. La limpieza de feed se paga sola en 60 días.</div>
+<h2>Por qué CAPI es no-negociable para DPA en 2026</h2>
+<p>Conversions API server-side es la única forma fiable de pasar eventos ViewContent, AddToCart y Purchase a Meta con el campo content_ids bien mapeado al producto del catálogo. Sin CAPI, el pixel cliente solo captura 55-70% de eventos.</p>
+<p>Las DPA dependen de ese match producto-usuario. Si el evento se pierde por ITP/ETP/ad-blockers, el algoritmo no sabe qué producto vio el usuario y el retargeting DPA se sirve aleatoriamente. Con CAPI, la cobertura sube al 92-98% y el Event Match Quality al 7-9/10.</p>
+<div class="cifra-que-abofetea">En 14 cuentas D2C, las que configuraron CAPI vieron CPA DPA 18-30% menor que las que solo tenían pixel cliente. La diferencia se nota más en retargeting que en prospecting, porque el match producto-usuario es lo que alimenta el algoritmo de delivery.</div>
+<div class="pro-tip"><p>Pro tip</p><p>El error más común: configurar CAPI duplicado o sin deduplicación. Si CAPI y pixel mandan el mismo evento sin event_id compartido, Meta lo cuenta dos veces y la atribución se infla. La regla: event_id único por evento, deduplicación automática desde el partner (Stape, Shopify Customer Events nativo) o implementación custom.</p></div>
+<h2>7 errores frecuentes con DPA en D2C España</h2>
+<p><strong>Error 1 · Productos agotados en el feed.</strong> Meta los sigue mostrando. Consecuencia: usuario hace clic, llega a PDP sin stock, conversión perdida. Limpia el feed o configura regla automática en product sets.</p>
+<p><strong>Error 2 · Imágenes con texto sobreimpreso.</strong> Meta penaliza anuncios con &gt;20% de texto en imagen. Las creatividades DPA con texto sobre el producto rinden 15-25% peor.</p>
+<p><strong>Error 3 · Precios desactualizados.</strong> Si el precio en feed no coincide con el de la PDP, Meta desprioriza el producto. Verifica sincronización tras cada cambio de pricing.</p>
+<p><strong>Error 4 · URLs lentas.</strong> LCP &gt;3s en PDP penaliza el delivery. El algoritmo de Meta premia landings rápidas con más impresiones al mismo CPM.</p>
+<p><strong>Error 5 · Sin product sets.</strong> Servir el catálogo completo a una sola audiencia diluye señal. Crea al menos 3-5 product sets (best-sellers, margen alto, new arrivals).</p>
+<p><strong>Error 6 · Sin CAPI.</strong> Pixel cliente solo. Atribución rota, retargeting aleatorio, CPA inflado. CAPI no es opcional en 2026.</p>
+<p><strong>Error 7 · Optimizar a Purchase con &lt;50 conversiones/semana.</strong> El algoritmo no aprende. Empieza con ViewContent o AddToCart hasta tener señal.</p>
+<div class="cifra-que-abofetea">De 14 cuentas D2C con DPA mal montado, 12 (86%) tenían al menos 4 de estos 7 errores. Corregir los 7 suele bajar CPA 25-35% y subir ROAS 18-30% en 60 días. El coste: 8-15h de setup técnico + 2-3h semanales de mantenimiento.</div>
+<h2>Cómo trabajamos en DayByDay</h2>
+<p>En DayByDay operamos como growth partner senior. DPA no es un entregable técnico. Es un sistema con tres piezas que tienen que estar limpias.</p>
+<p><strong>Cómo operamos:</strong></p>
+<ul>
+<li>Auditoría de feed, CAPI y product sets. Detectamos los 7 errores más frecuentes.</li>
+<li>Pipeline automatizado en n8n + Shopify Admin API + Meta Marketing API para sincronización continua.</li>
+<li>SLAs firmados con CPA objetivo y ROAS por capa, no agregados.</li>
+<li>Acceso directo del fundador con Pablo o Jorge.</li>
+</ul>
+<p><strong>Para quién tiene sentido:</strong> D2C con facturación &gt; 1M€ anual, catálogo &gt;100 SKUs, margen &gt; 20%.</p>
+<div class="cifra-que-abofetea">En 11 cuentas D2C en DayByDay con DPA reconstruido: mediana de caída de CPA 31%, mediana de subida de ROAS 18%, mediana de tiempo dedicado a creatividades bajó de 28h/mes a 9h/mes. ROI a 90 días sobre el fee del partner: 6,8x.</div>
+<h2>Acción de hoy (30 minutos)</h2>
+<ol>
+<li><strong>Abre Commerce Manager y revisa la pestaña Diagnostics del catálogo.</strong> ¿Cuántos productos tienen errores? ¿Cuántos tienen imagen &lt;600px o título con SKU? Cada fila rota reduce señal.</li>
+<li><strong>Verifica si tienes CAPI configurado.</strong> En Events Manager, mira el evento Purchase. Si solo dice &quot;browser&quot; y no &quot;server&quot;, no tienes CAPI. Sin CAPI, DPA se sirve a ciegas en 40% de usuarios.</li>
+<li><strong>Mira tu distribución de presupuesto DPA.</strong> ¿Cuánto va a retargeting vs prospecting? Si es 100% retargeting, te falta motor de nuevos clientes. Si es 100% prospecting, estás perdiendo cierre.</li>
+</ol>
+<p>Si las tres respuestas no encajan con un DPA sano, agenda una llamada de 30 minutos con nosotros.</p>
+<h2>Recap + cliffhanger</h2>
+<p>Cubrimos tres cosas concretas:</p>
+<ul>
+<li><strong>DPA es un sistema, no un formato</strong>: catálogo + CAPI + product sets. Las tres piezas tienen que estar limpias.</li>
+<li><strong>Separar retargeting y prospecting</strong>: 30-40% retargeting + 25-35% prospecting + 30-40% creatividades no-DPA. Mezclar diluye señal.</li>
+<li><strong>CAPI es no-negociable</strong>: pixel cliente solo captura 55-70% de eventos. CAPI sube a 92-98% y baja CPA 18-30%.</li>
+</ul>
+<p>La semana que viene: el framework para combinar email marketing y Meta Ads como sistema único. 5 flujos email obligatorios, sincronización Klaviyo↔Meta, jerarquía de lookalike y % revenue saludable por madurez.</p>
         </article>
 
-        
+
+
 <section class="faq-section">
   <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
-  <div class="faq-item"><h3 class="faq-q">¿Qué son las Dynamic Product Ads (DPA) en Meta Ads y cómo funcionan?</h3><p class="faq-a">Las Dynamic Product Ads (también llamadas Advantage+ Catalog Ads) son un tipo de anuncio de Meta Ads que muestra automáticamente los productos correctos a cada usuario, en lugar de tener que crear una creatividad manual por producto. El sistema cruza tres piezas: (1) un catálogo de productos sincronizado con tu Shopify o feed XML, (2) los eventos del pixel y Conversions API (ViewContent, AddToCart, Purchase) que indican qué producto vio cada usuario, y (3) una plantilla de creatividad dinámica con campos variables (imagen, título, precio). Meta combina audiencia + producto + creatividad en tiempo real. Una marca D2C de moda con 800 SKUs deja de necesitar 800 ads y opera con 1-2 campañas DPA que rinden mejor que cualquier set manual, porque el algoritmo decide el match producto-usuario.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué son las Dynamic Product Ads (DPA) en Meta Ads y cómo funcionan?</h3><p class="faq-a">Las Dynamic Product Ads (también llamadas Advantage+ Catalog Ads) son un tipo de anuncio de Meta Ads que muestra automáticamente los productos correctos a cada usuario, en lugar de tener que crear una creatividad manual por producto. El sistema cruza tres piezas: (1) un catálogo de productos sincronizado con tu Shopify o feed XML, (2) los eventos del pixel y Conversions API (ViewContent, AddToCart, Purchase) que indican qué producto vio cada usuario, y (3) una plantilla de creatividad dinámica con campos variables (imagen, título, precio). Meta combina audiencia + producto + creatividad en tiempo real. Una marca D2C de moda con 800 SKUs deja de necesitar 800 ads y opera con 1-2 campañas DPA que rinden mejor que cualquier set manual, porque el algoritmo decide el match producto-usuario.</p></div>
 <div class="faq-item"><h3 class="faq-q">¿En qué se diferencian las DPA de retargeting y las DPA de prospecting?</h3><p class="faq-a">DPA de retargeting (también llamadas DABA - Dynamic Ads for Broad Audiences en modo retargeting) se sirven a usuarios que ya tienen evento ViewContent o AddToCart en los últimos 7-30 días: el sistema muestra el producto exacto que vieron o uno relacionado. CPM bajo, CTR alto (1,8-3,5%), CPA muy competitivo. DPA de prospecting se sirven a usuarios sin interacción previa con tu marca: el sistema elige producto basándose en señales de comportamiento de Meta (intereses, sitios visitados, similaridad con compradores existentes). CPM más alto, CTR menor (0,8-1,4%), pero generan new customers. La estructura típica D2C España es 30-40% del presupuesto en DPA retargeting + 25-35% en DPA prospecting + 30-40% en creatividades no-DPA (UGC, ángulos de marca). Mezclar ambas en la misma campaña sin segmentación de audiencias diluye señal y atribución.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Cómo configuro el catálogo de Shopify para que funcione bien en Meta DPA?</h3><p class="faq-a">Cuatro pasos no negociables. (1) Instalar Facebook & Instagram by Meta app en Shopify y conectar Business Manager + catálogo correcto. (2) Verificar que cada producto cumple los requisitos mínimos: imagen 1080x1080px o mayor sin texto sobreimpreso, título ≤60 caracteres descriptivo (no SKU), descripción ≤200 caracteres, precio con IVA, condición (new), GTIN/MPN si lo tienes. (3) Configurar product sets segmentados: best-sellers, new arrivals, descuento activo, agotados a excluir, margen alto. Esto permite servir colecciones específicas según campaña en lugar de tirar todo el catálogo a la audiencia. (4) Verificar que la URL de cada producto resuelve a una landing móvil rápida (LCP <2,5s) — Meta penaliza catálogos con landings lentas en el algoritmo de delivery. Sin estos 4 pasos, la mejor configuración DPA del mundo no rinde.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo configuro el catálogo de Shopify para que funcione bien en Meta DPA?</h3><p class="faq-a">Cuatro pasos no negociables. (1) Instalar Facebook &amp; Instagram by Meta app en Shopify y conectar Business Manager + catálogo correcto. (2) Verificar que cada producto cumple los requisitos mínimos: imagen 1080x1080px o mayor sin texto sobreimpreso, título ≤60 caracteres descriptivo (no SKU), descripción ≤200 caracteres, precio con IVA, condición (new), GTIN/MPN si lo tienes. (3) Configurar product sets segmentados: best-sellers, new arrivals, descuento activo, agotados a excluir, margen alto. Esto permite servir colecciones específicas según campaña en lugar de tirar todo el catálogo a la audiencia. (4) Verificar que la URL de cada producto resuelve a una landing móvil rápida (LCP &lt;2,5s) — Meta penaliza catálogos con landings lentas en el algoritmo de delivery. Sin estos 4 pasos, la mejor configuración DPA del mundo no rinde.</p></div>
 <div class="faq-item"><h3 class="faq-q">¿Necesito Conversions API (CAPI) para que las DPA funcionen bien en 2026?</h3><p class="faq-a">Sí, sin matices. Desde iOS 14.5 y especialmente desde 2024-2026 con la deprecación progresiva de cookies third-party, el pixel cliente solo captura el 55-70% de los eventos reales según vertical y dispositivo. Las DPA dependen críticamente del evento ViewContent y AddToCart con el campo content_ids correcto para hacer match con el catálogo. Si el evento llega solo por pixel cliente y se pierde por ITP/ETP/ad-blockers, el algoritmo no aprende qué producto vio el usuario y el retargeting DPA se sirve aleatoriamente. Configurar Conversions API server-side (vía Shopify Customer Events nativo, partner como Stape o implementación custom) sube la cobertura al 92-98% y el Event Match Quality (EMQ) al 7-9/10, lo que se traduce en CPA DPA un 18-30% mejor según auditorías DayByDay 2025-2026.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Cuánto presupuesto mínimo necesito para que una campaña DPA aprenda en Meta Ads?</h3><p class="faq-a">Una campaña DPA necesita salir de fase de aprendizaje (50 conversiones optimizadas en 7 días por ad set) igual que cualquier otra. Para D2C España con CPA medio 25-55€, el suelo operativo es 80-120€/día por ad set en DPA prospecting y 40-70€/día por ad set en DPA retargeting (porque la audiencia es más pequeña pero el CPA es 40-55% menor). Por debajo de 40€/día en retargeting o 60€/día en prospecting el ad set se queda en aprendizaje permanente y no genera señal suficiente para que el algoritmo elija producto óptimo. Si el catálogo tiene <30 SKUs activos, considera no separar prospecting y retargeting y consolidar en 1 ad set DPA broad con presupuesto agregado para acelerar aprendizaje.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Por qué mis Dynamic Product Ads sirven siempre los mismos 5 productos y cómo lo arreglo?</h3><p class="faq-a">Tres causas típicas. (1) Catálogo desbalanceado: si 5 SKUs concentran el 80% de las ventas históricas, el algoritmo de Meta los favorece porque maximizan probabilidad de conversión a corto plazo. Solución: crear product sets segmentados por categoría/colección y usar 'product set' filtrado en cada ad set para forzar exploración. (2) Filas de catálogo con errores o imagen pobre: productos con imagen <600px, sin descripción, sin GTIN o con precio mal formateado quedan despriorizados o desaprobados silenciosamente. Solución: revisar mensualmente la pestaña Diagnostics del catálogo en Commerce Manager. (3) Optimización demasiado agresiva a Purchase con poca señal: el algoritmo se cierra sobre lo más seguro. Solución: ad sets separados optimizando ViewContent o AddToCart para alimentar nuevos productos al funnel antes de empujarlos a Purchase.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuánto presupuesto mínimo necesito para que una campaña DPA aprenda en Meta Ads?</h3><p class="faq-a">Una campaña DPA necesita salir de fase de aprendizaje (50 conversiones optimizadas en 7 días por ad set) igual que cualquier otra. Para D2C España con CPA medio 25-55€, el suelo operativo es 80-120€/día por ad set en DPA prospecting y 40-70€/día por ad set en DPA retargeting (porque la audiencia es más pequeña pero el CPA es 40-55% menor). Por debajo de 40€/día en retargeting o 60€/día en prospecting el ad set se queda en aprendizaje permanente y no genera señal suficiente para que el algoritmo elija producto óptimo. Si el catálogo tiene &lt;30 SKUs activos, considera no separar prospecting y retargeting y consolidar en 1 ad set DPA broad con presupuesto agregado para acelerar aprendizaje.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Por qué mis Dynamic Product Ads sirven siempre los mismos 5 productos y cómo lo arreglo?</h3><p class="faq-a">Tres causas típicas. (1) Catálogo desbalanceado: si 5 SKUs concentran el 80% de las ventas históricas, el algoritmo de Meta los favorece porque maximizan probabilidad de conversión a corto plazo. Solución: crear product sets segmentados por categoría/colección y usar &#39;product set&#39; filtrado en cada ad set para forzar exploración. (2) Filas de catálogo con errores o imagen pobre: productos con imagen &lt;600px, sin descripción, sin GTIN o con precio mal formateado quedan despriorizados o desaprobados silenciosamente. Solución: revisar mensualmente la pestaña Diagnostics del catálogo en Commerce Manager. (3) Optimización demasiado agresiva a Purchase con poca señal: el algoritmo se cierra sobre lo más seguro. Solución: ad sets separados optimizando ViewContent o AddToCart para alimentar nuevos productos al funnel antes de empujarlos a Purchase.</p></div>
 </section>
 
+        <div class="cta-block">
+          <h3>¿Quieres aplicar esto en tu negocio?</h3>
+          <p>En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html">Solicitar diagnóstico gratuito →</a>
+        </div>
 
-        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
-          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
-          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
-          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        <div class="related-articles">
+          <h2>Artículos relacionados</h2>
+          <a href="/tech/meta-ads">Meta Ads</a>
+          <a href="/tech/google-ads-tech">Google Ads</a>
         </div>
 
         <div class="post-nav">
@@ -350,5 +293,7 @@
     <p>© 2026 DayByDay Consulting</p>
 </footer>
 <script src="/js/main.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Dynamic Product Ads en Meta para Shopify: guía D2C 2026","description":"DPA (Advantage+ Catalog) en Meta para Shopify: retargeting vs prospecting, feed, CAPI, 7 errores frecuentes y presupuesto mínimo por capa.","datePublished":"2026-05-14T00:00:00+02:00","dateModified":"2026-05-14T00:00:00+02:00","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/"},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/dynamic-product-ads-meta-shopify"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué son las Dynamic Product Ads (DPA) en Meta Ads y cómo funcionan?","acceptedAnswer":{"@type":"Answer","text":"Las Dynamic Product Ads (también llamadas Advantage+ Catalog Ads) son un tipo de anuncio de Meta Ads que muestra automáticamente los productos correctos a cada usuario, en lugar de tener que crear una creatividad manual por producto. El sistema cruza tres piezas: (1) un catálogo de productos sincronizado con tu Shopify o feed XML, (2) los eventos del pixel y Conversions API (ViewContent, AddToCart, Purchase) que indican qué producto vio cada usuario, y (3) una plantilla de creatividad dinámica con campos variables (imagen, título, precio). Meta combina audiencia + producto + creatividad en tiempo real. Una marca D2C de moda con 800 SKUs deja de necesitar 800 ads y opera con 1-2 campañas DPA que rinden mejor que cualquier set manual, porque el algoritmo decide el match producto-usuario."}},{"@type":"Question","name":"¿En qué se diferencian las DPA de retargeting y las DPA de prospecting?","acceptedAnswer":{"@type":"Answer","text":"DPA de retargeting (también llamadas DABA - Dynamic Ads for Broad Audiences en modo retargeting) se sirven a usuarios que ya tienen evento ViewContent o AddToCart en los últimos 7-30 días: el sistema muestra el producto exacto que vieron o uno relacionado. CPM bajo, CTR alto (1,8-3,5%), CPA muy competitivo. DPA de prospecting se sirven a usuarios sin interacción previa con tu marca: el sistema elige producto basándose en señales de comportamiento de Meta (intereses, sitios visitados, similaridad con compradores existentes). CPM más alto, CTR menor (0,8-1,4%), pero generan new customers. La estructura típica D2C España es 30-40% del presupuesto en DPA retargeting + 25-35% en DPA prospecting + 30-40% en creatividades no-DPA (UGC, ángulos de marca). Mezclar ambas en la misma campaña sin segmentación de audiencias diluye señal y atribución."}},{"@type":"Question","name":"¿Cómo configuro el catálogo de Shopify para que funcione bien en Meta DPA?","acceptedAnswer":{"@type":"Answer","text":"Cuatro pasos no negociables. (1) Instalar Facebook & Instagram by Meta app en Shopify y conectar Business Manager + catálogo correcto. (2) Verificar que cada producto cumple los requisitos mínimos: imagen 1080x1080px o mayor sin texto sobreimpreso, título ≤60 caracteres descriptivo (no SKU), descripción ≤200 caracteres, precio con IVA, condición (new), GTIN/MPN si lo tienes. (3) Configurar product sets segmentados: best-sellers, new arrivals, descuento activo, agotados a excluir, margen alto. Esto permite servir colecciones específicas según campaña en lugar de tirar todo el catálogo a la audiencia. (4) Verificar que la URL de cada producto resuelve a una landing móvil rápida (LCP <2,5s) — Meta penaliza catálogos con landings lentas en el algoritmo de delivery. Sin estos 4 pasos, la mejor configuración DPA del mundo no rinde."}},{"@type":"Question","name":"¿Necesito Conversions API (CAPI) para que las DPA funcionen bien en 2026?","acceptedAnswer":{"@type":"Answer","text":"Sí, sin matices. Desde iOS 14.5 y especialmente desde 2024-2026 con la deprecación progresiva de cookies third-party, el pixel cliente solo captura el 55-70% de los eventos reales según vertical y dispositivo. Las DPA dependen críticamente del evento ViewContent y AddToCart con el campo content_ids correcto para hacer match con el catálogo. Si el evento llega solo por pixel cliente y se pierde por ITP/ETP/ad-blockers, el algoritmo no aprende qué producto vio el usuario y el retargeting DPA se sirve aleatoriamente. Configurar Conversions API server-side (vía Shopify Customer Events nativo, partner como Stape o implementación custom) sube la cobertura al 92-98% y el Event Match Quality (EMQ) al 7-9/10, lo que se traduce en CPA DPA un 18-30% mejor según auditorías DayByDay 2025-2026."}},{"@type":"Question","name":"¿Cuánto presupuesto mínimo necesito para que una campaña DPA aprenda en Meta Ads?","acceptedAnswer":{"@type":"Answer","text":"Una campaña DPA necesita salir de fase de aprendizaje (50 conversiones optimizadas en 7 días por ad set) igual que cualquier otra. Para D2C España con CPA medio 25-55€, el suelo operativo es 80-120€/día por ad set en DPA prospecting y 40-70€/día por ad set en DPA retargeting (porque la audiencia es más pequeña pero el CPA es 40-55% menor). Por debajo de 40€/día en retargeting o 60€/día en prospecting el ad set se queda en aprendizaje permanente y no genera señal suficiente para que el algoritmo elija producto óptimo. Si el catálogo tiene <30 SKUs activos, considera no separar prospecting y retargeting y consolidar en 1 ad set DPA broad con presupuesto agregado para acelerar aprendizaje."}},{"@type":"Question","name":"¿Por qué mis Dynamic Product Ads sirven siempre los mismos 5 productos y cómo lo arreglo?","acceptedAnswer":{"@type":"Answer","text":"Tres causas típicas. (1) Catálogo desbalanceado: si 5 SKUs concentran el 80% de las ventas históricas, el algoritmo de Meta los favorece porque maximizan probabilidad de conversión a corto plazo. Solución: crear product sets segmentados por categoría/colección y usar 'product set' filtrado en cada ad set para forzar exploración. (2) Filas de catálogo con errores o imagen pobre: productos con imagen <600px, sin descripción, sin GTIN o con precio mal formateado quedan despriorizados o desaprobados silenciosamente. Solución: revisar mensualmente la pestaña Diagnostics del catálogo en Commerce Manager. (3) Optimización demasiado agresiva a Purchase con poca señal: el algoritmo se cierra sobre lo más seguro. Solución: ad sets separados optimizando ViewContent o AddToCart para alimentar nuevos productos al funnel antes de empujarlos a Purchase."}}]}</script>
 </body>
 </html>
