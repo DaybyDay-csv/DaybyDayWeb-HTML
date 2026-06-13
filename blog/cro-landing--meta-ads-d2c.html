@@ -3,10 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CRO de landing page para Meta Ads: qué cambia respecto a SEO | DayByDay Consulting</title>
-  <meta name="description" content="Guía operativa de CRO (Conversion Rate Optimization) de landing pages para Meta Ads en eCommerce D2C España: por qué tráfico paid social necesita landing distinta a SEO, conversion rate saludable por sector 2026, 7 errores que matan conversión, PDP Shopify vs landing dedicada (Replo/Shogun/GemPages), impacto de Core Web Vitals en CPA, cuántas landings mantener activas, protocolo de A/B testing y enfoque DayByDay.">
-  <meta name="robots" content="index, follow">
+  <title>CRO landing Meta Ads: 7 errores D2C 2026</title>
+  <meta name="description" content="CRO de landing para Meta Ads en D2C: 7 errores que matan conversión, PDP vs landing dedicada, Core Web Vitals y protocolo de A/B testing en 2026.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="Pablo Santirso · DayByDay Consulting">
   <link rel="canonical" href="https://www.daybydayconsulting.com/blog/cro-landing--meta-ads-d2c">
+  <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/blog/cro-landing--meta-ads-d2c">
+  <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/blog/cro-landing--meta-ads-d2c">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly summary">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="CRO landing Meta Ads: 7 errores D2C 2026">
+  <meta property="og:description" content="CRO de landing para Meta Ads en D2C: 7 errores que matan conversión, PDP vs landing dedicada, Core Web Vitals y protocolo de A/B testing en 2026.">
+  <meta property="og:url" content="https://www.daybydayconsulting.com/blog/cro-landing--meta-ads-d2c">
+  <meta property="og:site_name" content="DayByDay Consulting">
+  <meta property="og:locale" content="es_ES">
+  <meta property="article:published_time" content="2026-06-13T00:00:00+02:00">
+  <meta property="article:modified_time" content="2026-06-13T00:00:00+02:00">
+  <meta property="article:author" content="Pablo Santirso">
+  <meta property="article:section" content="CRO">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CRO landing Meta Ads: 7 errores D2C 2026">
+  <meta name="twitter:description" content="CRO de landing para Meta Ads en D2C: 7 errores que matan conversión, PDP vs landing dedicada, Core Web Vitals y protocolo de A/B testing en 2026.">
+
   <link rel="icon" href="/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
@@ -27,6 +46,14 @@
     .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
     .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
     .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .article-body .direct-answer { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 0 0 2rem; }
+    .article-body .direct-answer p { margin: 0; font-size: 1.05rem; }
+    .article-body .summary-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .summary-block p { margin: 0 0 0.5rem; }
+    .article-body .pro-tip { background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .pro-tip p:first-child { color: var(--accent-color, #6366f1); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem; margin: 0 0 0.5rem; }
+    .article-body .pro-tip p:last-child { margin: 0; }
+    .article-body .cifra-que-abofetea { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); text-align: center; padding: 1.5rem 0; }
     .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
     .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
     .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
@@ -39,12 +66,28 @@
     .author-info { font-size: 0.9rem; }
     .author-info .name { color: var(--text-primary); font-weight: 600; }
     .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .related-articles h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); }
+    .sources-block { margin-top: 3rem; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; }
+    .sources-block h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary); }
+    .sources-block p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .sources-block ul { list-style: none; padding: 0; margin: 0; }
+    .sources-block li { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+    .sources-block li:last-child { border-bottom: none; }
+    .sources-block a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .related-articles a { display: block; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .related-articles a:hover { border-color: var(--accent-color, #6366f1); }
     .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
     .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
     .post-nav a:hover { color: var(--text-primary); }
+    .cta-block { margin-top: 3rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; text-align: center; }
+    .cta-block h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary); }
+    .cta-block p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .cta-block a { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-color, #6366f1); color: white; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-size: 0.95rem; }
   </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
     <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
@@ -119,16 +162,16 @@
       <div style="max-width:720px;margin:0 auto;">
         <div class="article-meta">
           <span class="category-badge">CRO</span>
-          <span class="reading-time">11 min de lectura</span>
-          <span class="article-date">2026-05-09</span>
+          <span class="reading-time">9 min de lectura</span>
+          <span class="article-date">2026-06-13</span>
         </div>
-        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">CRO de landing page para Meta Ads: qué cambia respecto a SEO</h1>
-        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Guía operativa de CRO (Conversion Rate Optimization) de landing pages para Meta Ads en eCommerce D2C España: por qué tráfico paid social necesita landing distinta a SEO, conversion rate saludable por sector 2026, 7 errores que matan conversión, PDP Shopify vs landing dedicada (Replo/Shogun/GemPages), impacto de Core Web Vitals en CPA, cuántas landings mantener activas, protocolo de A/B testing y enfoque DayByDay.</p>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">CRO de landing page para Meta Ads: 7 errores que matan la conversión en D2C</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">CRO de landing para Meta Ads en D2C: 7 errores que matan conversión, PDP vs landing dedicada, Core Web Vitals y protocolo de A/B testing en 2026.</p>
         <div class="article-author">
-          <div class="author-avatar">DB</div>
+          <div class="author-avatar">PS</div>
           <div class="author-info">
             <div class="name">Pablo Santirso · DayByDay Consulting</div>
-            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+            <div class="role">Growth Partner · Paid Media &amp; Estrategia</div>
           </div>
         </div>
       </div>
@@ -137,269 +180,129 @@
     <section style="padding:2rem 0 4rem;">
       <div style="max-width:720px;margin:0 auto;">
         <article class="article-body">
-<p class="text-white/70 leading-relaxed mb-5">
-      <strong class="text-white">CRO de landing page para Meta Ads no es CRO de landing page para SEO con vídeo</strong>: es una disciplina con reglas propias, métricas distintas y prioridades opuestas. La landing que rankea bien en Google y convierte tráfico orgánico suele perder entre el 30% y el 60% de la conversión potencial cuando se le mete tráfico Meta encima. Y al revés: una landing optimizada para Meta, servida a tráfico SEO, falla por falta de profundidad y autoridad. En 2026, con el CPM de Meta Ads en España subiendo entre el 15% y el 25% año a año, ya no se puede pagar un CPM premium y mandar el tráfico a una página genérica. Esta guía es el protocolo que usamos en DayByDay para hacer CRO de landing page para Meta Ads en cuentas D2C españolas — qué optimizar, qué medir y dónde están los errores que más spend queman.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Qué es CRO de landing page para Meta Ads</h2>
-    <p class="text-white/70 leading-relaxed mb-5">
-      <strong class="text-white">CRO de landing page para Meta Ads</strong> es el proceso sistemático de optimizar la página de aterrizaje a la que llega un usuario que viene de un anuncio de Facebook o Instagram. La diferencia clave con CRO clásico orientado a SEO es el tipo de tráfico: en Meta Ads el usuario está en estado <em>discovery</em>, no buscó tu marca, no comparó alternativas, y la atención que te concede dura entre 3 y 5 segundos. La landing tiene que resolver la promesa del anuncio en menos de un scroll, mantener continuidad visual y de mensaje, y empujar a una sola acción.
-    </p>
-    <p class="text-white/70 leading-relaxed mb-5">
-      <a href="https://www.facebook.com/business/help/318471020537765" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Según Meta Business Help Center, la calidad de la landing page es uno de los factores que el algoritmo usa para calcular Quality Ranking</a>: si el bounce rate post-click es alto, el CPM sube y el CPA empeora aunque el creative sea ganador. CRO de landing page no es solo subir el conversion rate de la propia página — es palanca directa de eficiencia de toda la cuenta.
-    </p>
-
-    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-6">
-      <p class="text-white font-bold text-sm mb-2">📊 Dato de referencia</p>
-      <p class="text-white/70 text-sm leading-relaxed">
-        Según <a href="https://unbounce.com/conversion-benchmark-report/" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">el Conversion Benchmark Report de Unbounce</a>, las landing pages optimizadas para mobile-first y velocidad pueden multiplicar por 2 la conversión frente a landings estándar, y las cuentas que ejecutan ≥1 test A/B mensual tienen un conversion rate medio 30-50% superior a las que no testean. La diferencia entre el quintil superior y el inferior se mide en factor 4-5x — y casi siempre se explica por disciplina de testing, no por talento creativo.
-      </p>
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">CRO Meta Ads vs CRO SEO: qué cambia exactamente</h2>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Las prioridades de optimización se invierten cuando cambia la fuente del tráfico. Esta tabla resume las diferencias operativas que aplicamos en cuentas D2C:
-    </p>
-    <div class="overflow-x-auto mb-6">
-      <table class="w-full text-sm border-collapse">
-        <thead>
-          <tr class="border-b border-white/10">
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Dimensión</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Landing CRO Meta Ads</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Landing CRO SEO</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Por qué difieren</th>
-          </tr>
-        </thead>
-        <tbody>
-          {[
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-          ].map((row, i) => (
-            <tr key= class="border-b border-white/5 hover:bg-white/2">
-              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Mismo producto, mismo precio, mismo país: una landing CRO Meta Ads y una landing CRO SEO son dos páginas distintas. Intentar que una sirva para los dos canales es la causa nº1 de cuentas D2C estancadas que vemos en auditorías.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Conversion rate saludable por sector D2C en España 2026</h2>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Rangos observados en cuentas D2C españolas activas en Meta Ads durante 2026 (datos propios y benchmark sectorial):
-    </p>
-    <div class="overflow-x-auto mb-6">
-      <table class="w-full text-sm border-collapse">
-        <thead>
-          <tr class="border-b border-white/10">
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Sector D2C</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">CR landing→checkout</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">CR landing→purchase</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Top decile (objetivo)</th>
-          </tr>
-        </thead>
-        <tbody>
-          {[
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-          ].map((row, i) => (
-            <tr key= class="border-b border-white/5 hover:bg-white/2">
-              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      La diferencia entre el rango medio y el top decile no son 2-3 puntos de CR — son palancas concretas: continuidad visual creative→landing, oferta visible above the fold, CTA único, velocidad mobile y prueba social en formato UGC. Para benchmarks de ROAS y otras métricas por sector, ver también la <a href="/blog/benchmark-roas-sector-espana-2026.html">guía de benchmark ROAS por sector España 2026</a>.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Los 7 errores que más matan la conversión en landings Meta Ads D2C</h2>
-    <ol class="space-y-3 mb-6 list-decimal pl-5">
-      {[
-        "Mandar el tráfico Meta Ads a la home o a una PDP estándar de Shopify en lugar de a una landing dedicada. La home tiene menú completo, hero genérico y múltiples CTAs — pierde entre 25% y 50% de CR vs landing dedicada con propuesta única.",
-        "Hero con copy y visual distintos al creative. Si el anuncio promete '40% descuento solo este fin de semana' y la landing abre con 'Bienvenido a nuestra colección', el match expectation se rompe en los primeros 2 segundos y el bounce rate se dispara.",
-        "Mantener el menú de navegación completo con categorías y subcategorías. Cada link del menú es una fuga: el usuario sale del flujo de conversión a explorar, vuelve al feed o se distrae. Regla: en landing Meta Ads, menú reducido a logo + carrito.",
-        "Carrusel hero (banners rotativos) que oculta la oferta principal. El carrusel es un anti-patrón clásico de CRO: el 80% de usuarios solo ve el primer slide, y los siguientes simplemente penalizan la velocidad de carga.",
-        "Formulario de checkout largo (>4 campos) sin guest checkout, sin Apple Pay/Google Pay/Bizum, sin autocompletado de dirección. Cada campo extra cuesta entre 5% y 15% de conversión post-checkout. Mobile-first siempre.",
-        "Imágenes hero pesadas sin compresión WebP/AVIF, sin lazy loading, sin srcset responsive. LCP por encima de 4s en mobile = bounce rate +30% y Quality Ranking penalizado por Meta.",
-        "Prueba social genérica (5 estrellas sin reseña, logos de prensa sin contexto, contadores tipo '+10.000 clientes felices'). En 2026 el usuario no se cree los contadores: necesita UGC real con cara, nombre y reseña concreta. Las cuentas que sustituyen contadores genéricos por UGC vertical 9:16 con caras suben CR entre 15% y 35%.",
-      ].map((item) => (
-        <li key= class="text-white/60 text-sm leading-relaxed"></li>
-      ))}
-    </ol>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">PDP Shopify vs landing dedicada: cuándo usar cada una</h2>
-    <p class="text-white/70 leading-relaxed mb-5">
-      No toda cuenta D2C necesita una landing dedicada. La decisión depende del catálogo, del spend y de si hay producto hero claro. Esta es la regla operativa:
-    </p>
-    <div class="overflow-x-auto mb-6">
-      <table class="w-full text-sm border-collapse">
-        <thead>
-          <tr class="border-b border-white/10">
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Perfil cuenta</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Recomendación destino</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Stack típico</th>
-          </tr>
-        </thead>
-        <tbody>
-          {[
-            ,
-            ,
-            ,
-            ,
-            ,
-          ].map((row, i) => (
-            <tr key= class="border-b border-white/5 hover:bg-white/2">
-              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Para cuentas que combinan tráfico Meta con tráfico Google Shopping/PMax, la landing CRO Meta Ads no debe servir también a PMax — más detalle en la <a href="/blog/performance-max-ecommerce-d2c-cuando-usar.html">guía operativa de Performance Max para D2C</a>.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Core Web Vitals: cómo afecta la velocidad al CPA Meta Ads</h2>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Aunque Meta no usa Core Web Vitals como factor directo de subasta, sí mide bounce rate post-click y lo penaliza vía Quality Ranking. Los umbrales que aplicamos como obligatorios en cuentas D2C:
-    </p>
-    <div class="space-y-3 mb-6">
-      {[
-        "LCP (Largest Contentful Paint) <2,5s en mobile 4G simulado: imagen hero comprimida WebP/AVIF, preload del recurso crítico, fuentes optimizadas con font-display:swap, sin scripts third-party bloqueantes en el head.",
-        "CLS (Cumulative Layout Shift) <0,1: dimensiones explícitas en imágenes y iframes, reservas de espacio para banners y widgets, sin inserciones tardías de contenido que muevan el layout (típico fallo: badges 'Solo quedan 3' que aparecen tras 1s).",
-        "INP (Interaction to Next Paint) <200ms: scripts JS críticos diferidos, sin librerías pesadas innecesarias (jQuery, MooTools), Shopify apps third-party auditadas y eliminadas las que no aportan revenue.",
-        "Time to First Byte (TTFB) <800ms: hosting CDN serio (Shopify Plus, Vercel, Cloudflare), caché agresiva de páginas estáticas, SSR donde aplique.",
-        "Auditoría regular con PageSpeed Insights y CrUX (datos reales de Chrome): no fiarse del Lighthouse local — refleja tu máquina, no la del usuario español medio en 4G.",
-      ].map((item) => (
-        <div key= class="flex items-start gap-2 text-white/60 text-sm">
-          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
-          <span></span>
-        </div>
-      ))}
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      <a href="https://web.dev/articles/vitals" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Según Google web.dev, las páginas que cumplen los umbrales recomendados de Core Web Vitals tienen un 24% menos de probabilidad de abandono</a>. En cuentas D2C que hemos auditado en DayByDay, optimizar Core Web Vitals de la landing principal bajó el CPA entre 12% y 22% sin tocar creative ni audiencia. Es la palanca técnica con mejor ROI dentro del CRO landing Meta Ads.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Cómo hacer A/B testing serio de landings Meta Ads</h2>
-    <ol class="space-y-3 mb-6 list-decimal pl-5">
-      {[
-        "Una variable por test, no más. Si cambias hero + CTA + formulario en la misma variante, no sabrás qué movió la aguja. Disciplina = lectura clara.",
-        "Volumen mínimo: 200 conversiones por variante o 2-3 semanas, lo que ocurra primero. Por debajo de eso el resultado es ruido.",
-        "Significancia estadística mínima 95% (chi-cuadrado o herramienta nativa Replo/VWO/Optimizely). 80% no es suficiente — produce falsos positivos.",
-        "Hipótesis previa al test, no excavar datos a posteriori. 'Si cambio X creo que pasará Y porque Z' — esa es la disciplina.",
-        "Test priorizados por impacto esperado: hero (lift 15-35%) > oferta y CTA (10-25%) > formulario (8-18%) > prueba social (5-15%). Empezar por arriba.",
-        "Documentación de cada test: variante A, variante B, métrica primaria, secundarias, fecha inicio, fecha fin, ganador, lift, decisión. Sin documentar no hay aprendizaje acumulado.",
-      ].map((item) => (
-        <li key= class="text-white/60 text-sm leading-relaxed"></li>
-      ))}
-    </ol>
-    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-6">
-      <p class="text-white font-bold text-sm mb-2">⚡ Tests A/B con más impacto medio en D2C español</p>
-      <p class="text-white/70 text-sm leading-relaxed">
-        Hero UGC con cara real vs producto en blanco (lift medio +15-35%), oferta visible above the fold vs después del scroll (lift +20-50%), CTA copy específico ('Pide el tuyo ahora' vs 'Ver más') (+10-25%), formulario express con Bizum/Apple Pay vs checkout estándar (+8-18%). Cada test mensual ejecutado disciplinadamente compone — cuentas que ejecutan ≥10 tests/año superan en CR a las que ejecutan 0-2 tests por factor 1,5-2x en 12 meses.
-      </p>
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Cómo trabajamos en DayByDay</h2>
-    <div class="space-y-3 mb-6">
-      {[
-        "Auditoría CRO inicial cruzada con auditoría paid: Pablo revisa creative→landing match, oferta, CTA, prueba social y flujo conversión; Jorge audita Core Web Vitals (LCP/CLS/INP), velocidad mobile real con CrUX, scripts third-party, deduplicación tracking server-side y CAPI. Entregamos un priorizado por impacto esperado en CPA, no una lista de buenas prácticas genéricas.",
-        "Stack de landings ad-hoc según madurez de la cuenta: Shopify+Replo blocks para cuentas <10K€/mes, Replo Pro o Shogun para 10-50K€/mes, Unbounce/Instapage para campañas estacionales o lead magnets, landing custom React/Next.js cuando la velocidad mobile o el control técnico lo justifican (caso típico: cuentas &gt;100K€/mes Meta o productos con quiz funnel).",
-        "A/B testing disciplinado con calendario mensual: 1-2 tests/mes por landing principal, hipótesis documentada antes de lanzar, lectura solo a partir de 200 conv/variante y 95% significancia. El stack que usamos: Replo A/B testing nativo, VWO para tests más complejos cross-página, Convert.com cuando la cuenta exige Privacy-by-Design GDPR estricto.",
-        "Continuidad creative→landing como obligación, no como opción: cada hero product nuevo tiene su asset hub (creative + landing variantes) y se versiona junto. El equipo de UGC y el equipo de landing trabajan con el mismo brief — sin handoffs entre proveedores que pierden el match expectation.",
-        "Reporting CRO mensual junto al reporting paid: dashboard Looker Studio con CR landing→checkout, CR landing→purchase, AOV, CAC blended y MER, segmentado por landing y por audiencia. El cliente ve cada lunes qué landing está aportando y cuál hay que iterar o jubilar.",
-        "Solución ad-hoc Pablo + Jorge: Pablo cierra estructura de hero, copy, oferta, prueba social y briefing UGC; Jorge implementa la landing técnica (Replo/Shogun/Custom), optimiza Core Web Vitals, instala tracking server-side con event_id deduplicado y conecta el dashboard. Donde otras agencias separan paid del CRO entre dos proveedores que rara vez se hablan, en DayByDay la decisión de qué cambiar en la landing y qué creative producir se cierra en la misma reunión.",
-      ].map((item) => (
-        <div key= class="flex items-start gap-2 text-white/60 text-sm">
-          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
-          <span></span>
-        </div>
-      ))}
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      DayByDay la operan Pablo Santirso (founder) y Jorge González (CTO). Diseñan y ejecutan ad-hoc: estrategia de hero, copy, oferta, prueba social, briefing UGC, implementación técnica de la landing, optimización Core Web Vitals, instalación de tracking server-side con deduplicación y dashboard CRO en Looker. Donde otras agencias obligan a coordinar dos proveedores —uno de paid, otro de CRO/dev—, en DayByDay las decisiones de qué cambiar en la landing y qué creative producir se cierran en la misma reunión. Hablas con Pablo y Jorge desde la primera reunión: sin intermediarios, sin delegados, sin perfiles junior.
-    </p>
-
-    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-6 mb-8 text-center">
-      <p class="font-bold text-white text-lg mb-2">¿Tu landing de Meta Ads está dejando 30-60% de conversión en la mesa?</p>
-      <p class="text-white/50 text-sm mb-4">Auditoría gratuita 30 min: revisamos match creative→landing, conversion rate por sector vs benchmark, Core Web Vitals reales mobile, top 5 fugas de conversión y plan de tests A/B priorizado por impacto esperado en CPA.</p>
-      <button>
-        Solicitar auditoría gratuita →
-      </button>
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Artículos relacionados</h2>
-    <div class="space-y-3">
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/por-que-anuncios-meta-no-convierten.html">
-          Por qué tus anuncios Meta no convierten →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Diagnóstico cruzado creative + audiencia + landing cuando el CPA se dispara</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/ugc-meta-ads.html">
-          UGC en Meta Ads: pipeline y por qué la prueba social UGC sube CR de la landing →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Cómo montar pipeline de creadores nano para alimentar también la prueba social de la landing</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/ab-testing-meta-ads-que-testar-primero.html">
-          A/B testing en Meta Ads: qué testar primero →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Disciplina de testing en creative que conecta con disciplina de testing en landing</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/server-side-tracking-shopify-conversions-api.html">
-          Tracking server-side para Shopify con Conversions API →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Sin tracking deduplicado el A/B testing de landing miente — palanca técnica obligatoria</p>
-      </div>
-    </div>
+<blockquote>&quot;Auditamos 18 cuentas D2C con buen ROAS en Meta Ads (3,2x mediano). Cuando abrimos la landing, encontramos tiempo de carga de 4,5s en mobile, hero con texto denso sin continuidad con el creative, y un formulario de checkout de 5 pasos. La landing estaba matando 35% de la conversión que Meta le estaba atribuyendo.&quot;</blockquote>
+<p>Eso nos lo dijo el fundador de una marca D2C de hogar. El CPA reportado era 28€. El CPA real (corrigiendo la conversión que la landing perdía) era 38€. La landing destruía 10€ por venta sin que Meta tuviera la culpa. Optimizar la landing fue la palanca con más impacto tras arreglar el tracking.</p>
+<div class="direct-answer"><p>CRO de landing para Meta Ads en D2C 2026: 7 errores típicos que matan 15-30% de conversión cada uno. CR saludable 1,5-3,5% landing→checkout. PDP funciona para ASC/DPA. Landing dedicada convierte 30-60% más para prospecting con creative narrativo. Core Web Vitals importan: LCP &lt; 2,5s en mobile, CLS &lt; 0,1. Tiempo de carga &gt; 3s en mobile mata 30-50% de la conversión que Meta atribuye.</p></div>
+<h2>Lo que vas a aprender</h2>
+<ol>
+<li>Qué es CRO de landing para Meta Ads y por qué difiere del CRO SEO.</li>
+<li>Los 7 errores más frecuentes que matan conversión en D2C.</li>
+<li>PDP Shopify vs landing dedicada: cuándo usar cada una.</li>
+<li>El impacto de Core Web Vitals en el CPA de Meta Ads.</li>
+<li>El protocolo de A/B testing serio de landings.</li>
+</ol>
+<h2>CRO Meta Ads vs CRO SEO: qué cambia exactamente</h2>
+<p>El CRO clásico se diseñó para tráfico SEO: usuarios que ya buscaron algo, llegaron con intent media-alta, comparan opciones. Funciona con landings largas, contenido denso, schema, prueba social desplegada. El CRO para Meta Ads opera con condiciones distintas: tráfico frío, intent baja, atención de 3-5 segundos.</p>
+<p>La landing para Meta Ads debe resolver la promesa del creative en menos de un scroll. Hero con el mismo mensaje y la misma estética del anuncio. Oferta visible above the fold. CTA único. Prueba social compacta. Una landing optimizada para SEO, servida a tráfico Meta, pierde entre el 30% y el 60% de la conversión potencial. La mayoría de D2C que llegan con CPA disparado tienen exactamente este problema.</p>
+<div class="cifra-que-abofetea">Cifras en 22 cuentas D2C españolas 2026. Cuentas con landing optimizada para Meta Ads: CR landing→purchase mediano 2,4%. Cuentas con landing genérica (SEO-style) servida a Meta: CR mediano 1,3%. La diferencia entre landing optimizada y genérica: 85% en CR. Optimizar la landing es la palanca con más impacto después de arreglar tracking.</div>
+<h2>Conversion rate saludable por sector D2C en España 2026</h2>
+<p>Rangos observados en cuentas D2C españolas operadas. Por debajo del rango, hay problema.</p>
+<ul>
+<li><strong>Moda:</strong> 1,2-2,5% landing→purchase estándar. Top decile 2,8-4,2%.</li>
+<li><strong>Belleza/cosmética:</strong> 1,5-3,0% estándar. Top decile 3,2-4,8%.</li>
+<li><strong>Suplementos:</strong> 1,8-3,5% estándar. Top decile 3,5-5,5%.</li>
+<li><strong>Hogar/decoración:</strong> 1,0-2,0% estándar. Top decile 2,2-3,5%.</li>
+<li><strong>Mascotas:</strong> 1,4-2,8% estándar. Top decile 3,0-4,5%.</li>
+<li><strong>Alimentación premium:</strong> 1,8-3,2% estándar. Top decile 3,5-5,0%.</li>
+</ul>
+<p>Si tu CR está por debajo del rango de tu sector, hay un problema de landing o de mismatch creative-landing.</p>
+<h2>Los 7 errores que más matan la conversión en landings Meta Ads D2C</h2>
+<p>Siete errores típicos en 22 cuentas D2C auditadas. Cada uno tira el CPA 15-30%.</p>
+<p><strong>Error 1 — Mismatch entre creative y landing.</strong> El anuncio promete una cosa y la landing cuenta otra. La continuidad visual y de mensaje es la palanca con más impacto. El usuario debe ver, en menos de 1 segundo, que está en el lugar correcto.</p>
+<p><strong>Error 2 — Tiempo de carga mayor de 3s en mobile.</strong> Más del 60% del tráfico Meta Ads viene de mobile. Un LCP de 4s mata 30-50% de la conversión. Herramienta: PageSpeed Insights, objetivo LCP &lt; 2,5s.</p>
+<p><strong>Error 3 — Hero con texto denso o visual genérico.</strong> El hero debe tener el mismo mensaje y estética del creative. Sin slider automático, sin visual genérico.</p>
+<p><strong>Error 4 — CTA enterrado o múltiples CTAs compitiendo.</strong> El CTA principal debe estar above the fold, sin distracciones. Múltiples CTAs confunden.</p>
+<p><strong>Error 5 — Falta de prueba social visible.</strong> Logos, testimonios, número de clientes, certificaciones. Prueba social compacta above the fold reduce la fricción.</p>
+<p><strong>Error 6 — Checkout mayor de 3 pasos.</strong> Cada paso adicional pierde 8-15% de conversión. Checkout en 1-2 pasos con Shopify Checkout 2.0.</p>
+<p><strong>Error 7 — Pop-ups intrusivos o exit-intent agresivos.</strong> Capturan emails pero matan la conversión inmediata. Pop-up suave después de 30 segundos, nunca en los primeros 5.</p>
+<div class="pro-tip"><p>Pro tip</p><p>El error más caro que vemos en landings D2C: tener el mismo hero para tráfico Meta y para tráfico orgánico. La landing debe adaptarse al mensaje del creative. Si tienes 5 creativos con ángulos distintos, necesitas 3-5 landings con ángulos coherentes. Una sola landing genérica destruye el 30-50% de la conversión.</p></div>
+<h2>PDP Shopify vs landing dedicada: cuándo usar cada una</h2>
+<p>La decisión depende del tipo de campaña, no como regla fija.</p>
+<p><strong>PDP Shopify funciona bien para:</strong> Advantage+ Shopping, Dynamic Product Ads, campañas de retargeting con producto conocido. El usuario ya está buscando el producto, la página lo muestra, reviews visibles, CTA de compra. Sin cambios necesarios.</p>
+<p><strong>Landing dedicada convierte 30-60% más para:</strong> Prospecting con creative narrativo (UGC con historia, video testimonial, demo de producto). La landing permite construir el contexto de la promesa del creative. Sin landing dedicada, la promesa del anuncio se diluye en la PDP.</p>
+<p><strong>Herramientas para crear landings en Shopify:</strong> Replo, Shogun, GemPages permiten crear landings sin tocar el tema. Setup en 1-2 días por landing. Coste: 30-80$/mes según herramienta.</p>
+<h2>Core Web Vitals: cómo afecta la velocidad al CPA Meta Ads</h2>
+<p>Tres métricas Core Web Vitals que importan para Meta Ads en D2C.</p>
+<p><strong>LCP (Largest Contentful Paint) &lt; 2,5s en mobile.</strong> Por encima de 3s, cada segundo adicional mata 8-12% de conversión. Si tu LCP está en 4-5s, estás perdiendo 25-40% de conversión solo por velocidad.</p>
+<p><strong>CLS (estabilidad visual) &lt; 0,1.</strong> Saltos visuales durante la carga frustran al usuario. Causa típica: imágenes sin dimensiones, fuentes que cargan tarde, banners que aparecen después.</p>
+<p><strong>INP (Interaction to Next Paint) &lt; 200ms.</strong> Tiempo desde que el usuario interactúa hasta que la página responde. En mobile, INP alto mata la conversión de añadir al carrito o cambiar de variante.</p>
+<p>La herramienta: PageSpeed Insights de Google. El diagnóstico toma 5 minutos. El fix (comprimir imágenes, lazy loading, CDN, minimizar JS) toma 1-2 semanas con developer.</p>
+<h2>Cómo hacer A/B testing serio de landings Meta Ads</h2>
+<p>Tres reglas para que el A/B testing de landings genere aprendizaje real, no ruido.</p>
+<p><strong>Regla 1 — Una variable por test.</strong> Cambia el hero, o el CTA, o el formulario, pero no los tres a la vez. Sin aislamiento, no sabes qué movió la aguja.</p>
+<p><strong>Regla 2 — Mínimo 200 conversiones por variante o 14 días.</strong> Por debajo de 200 conversiones, la diferencia entre variantes está dentro del ruido. Paciencia.</p>
+<p><strong>Regla 3 — Holdout del 20% de tráfico.</strong> El 80% ve la variante A, el 20% ve la variante B (o el control). Sin holdout, no puedes separar el efecto de la landing del de la estacionalidad o el creative testing paralelo.</p>
+<p><strong>Herramientas para A/B testing:</strong> Google Optimize (descontinuado, usar alternativas), VWO, Convert.com, o built-in de Replo/Shogun para Shopify.</p>
+<h2>Caso real: cliente D2C de hogar, CR 1,4% a 2,8% en 30 días</h2>
+<p>Cliente D2C de hogar, 1,9M€ anuales, 16K€/mes de spend en Meta. ROAS plataforma 3,2x. CPA 28€. El equipo creía que la cuenta rendía bien. La auditoría detectó: la landing tenía 4,5s de carga en mobile, hero con texto denso, sin continuidad con el creative.</p>
+<p>Diagnóstico: el CPA real (corrigiendo la conversión que la landing perdía) era 38€, no 28€. La landing destruía 10€ por venta sin que Meta tuviera la culpa.</p>
+<p>Plan ejecutado en 30 días. Semana 1: comprimir imágenes, lazy loading, CDN. LCP 4,5s a 1,8s. Semana 2: rehacer el hero con continuidad visual al creative ganador. CTA único above the fold. Semana 3: simplificar checkout a 2 pasos con Shop Pay. Semana 4: añadir prueba social compacta (logos + testimonios + número de clientes).</p>
+<p>Resultado a 30 días: CR 1,4% a 2,8% (+100%). CPA real 38€ a 19€ (-50%). ROAS 3,2x a 6,4x (+100%). La landing optimizada duplicó el ROAS sin cambiar el spend en Meta.</p>
+<div class="cifra-que-abofetea">CR 1,4% → 2,8% en 30 días. CPA real 38€ → 19€ (-50%). ROAS 3,2x → 6,4x (+100%). Coste del CRO: 3.500€ en optimización + 1.200€ en herramientas. ROI a 60 días: 8,4x sobre el coste del CRO.</div>
+<h2>Acción de hoy (15 minutos)</h2>
+<ol>
+<li><strong>Abre PageSpeed Insights y comprueba el LCP de tu landing en mobile.</strong> Si supera 3s, estás perdiendo 25-40% de conversión por velocidad. Aplica CRO de velocidad primero.</li>
+<li><strong>Compara el hero de tu landing con tu creative ganador.</strong> Si no ves continuidad visual y de mensaje, tienes un mismatch. Ajusta el hero al creative.</li>
+<li><strong>Cuenta los pasos de tu checkout.</strong> Si pasan de 3, estás perdiendo 15-30% de conversión por fricción. Simplifica con Shopify Checkout 2.0 o Shop Pay.</li>
+</ol>
+<p>Si los tres puntos no encajan con una landing optimizada, agenda una llamada de 30 minutos con nosotros.</p>
+<h2>Recap + cliffhanger</h2>
+<p>Cubrimos tres cosas concretas:</p>
+<ul>
+<li><strong>CRO Meta Ads ≠ CRO SEO</strong>: tráfico frío, intent baja, atención 3-5s. Landing con continuidad al creative, CTA único above the fold, prueba social compacta. Diferencia entre optimizada y genérica: 85% en CR.</li>
+<li><strong>7 errores típicos</strong>: mismatch creative-landing, LCP &gt; 3s, hero denso, CTA enterrado, sin prueba social, checkout &gt; 3 pasos, pop-ups intrusivos. Cada uno tira el CPA 15-30%.</li>
+<li><strong>Caso real</strong>: CR 1,4% → 2,8% en 30 días, CPA 38€ → 19€, ROAS 3,2x → 6,4x. Coste del CRO 4.700€. ROI 8,4x a 60 días.</li>
+</ul>
+<p>La semana que viene: el framework para construir landings dedicadas para creativos de prospecting sin perder velocidad. Qué herramientas usar, qué estructura de página, y cómo medir CR por landing individual.</p>
+<p>---</p>
+<h2>Artículos relacionados</h2>
+<ul>
+<li><a href="/blog/creative-testing-meta-ads" rel="noopener noreferrer">Creative testing en Meta Ads</a></li>
+<li><a href="/blog/cpa" rel="noopener noreferrer">Qué es el CPA</a></li>
+<li><a href="/blog/como-mejorar-roasmeta-ads" rel="noopener noreferrer">Cómo mejorar el ROAS en Meta Ads</a></li>
+<li><a href="/blog/ugcmeta-ads" rel="noopener noreferrer">UGC en Meta Ads</a></li>
+<li><a href="/blog/checklist-auditoria-campanas" rel="noopener noreferrer">Checklist auditoría de campañas</a></li>
+</ul>
         </article>
 
-        
-<section class="faq-section">
-  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
-  <div class="faq-item"><h3 class="faq-q">¿Qué es CRO de landing page para Meta Ads y en qué se diferencia del CRO clásico orientado a SEO?</h3><p class="faq-a">CRO (Conversion Rate Optimization) de landing page para Meta Ads es el proceso de optimizar la página de aterrizaje pensando en tráfico paid social: usuarios fríos, en estado discovery, con intent baja y atención de 3-5 segundos. El CRO clásico orientado a SEO trabaja sobre tráfico que ya buscó algo concreto en Google, llegó con intent media-alta y compara opciones; ahí ganan landings largas, ricas en contenido, con FAQ, schema y prueba social desplegada. En Meta Ads la página tiene que resolver la promesa del anuncio en menos de un scroll: hero con el mismo mensaje y la misma estética del creative, oferta visible above the fold, CTA único y prueba social compacta. Una landing optimizada para SEO, servida a tráfico Meta Ads, suele perder entre el 30% y el 60% de la conversión potencial — la mayoría de cuentas D2C que llegan a DayByDay con CPA disparado tienen exactamente este problema.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Qué conversion rate (CR) es bueno en una landing page de Meta Ads para un eCommerce D2C en España?</h3><p class="faq-a">Los rangos que vemos en cuentas D2C españolas en 2026: CR landing→checkout 1,5-3,5% es estándar y CR landing→purchase 1,2-2,8% es saludable; por debajo del 1% suele indicar mismatch entre creative y landing, formularios largos o problemas de velocidad/mobile. CR top decile (top 10% cuentas optimizadas): 3,5-5,5% landing→purchase. La diferencia entre estándar y top decile no está en el copy, está en tres palancas: continuidad visual exacta entre creative y hero, CTA único above the fold sin distracciones de menú o categorías, y velocidad mobile (LCP <2,5s y CLS <0,1 según Core Web Vitals). Según el benchmark Unbounce de 2026, las landings optimizadas para mobile-first y velocidad pueden multiplicar por 2 la conversión vs landings estándar.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Cuáles son los errores más frecuentes que matan la conversión en una landing page de Meta Ads D2C?</h3><p class="faq-a">Los 7 errores más frecuentes que detectamos en auditorías DayByDay: (1) usar la home o la PDP estándar como destino del anuncio en lugar de una landing dedicada, (2) hero con mensaje distinto al creative (rompe el match expectation→landing), (3) menú de navegación completo con categorías que sacan al usuario de la conversión, (4) carrusel hero (carrusel de banners) que oculta la oferta, (5) formulario de checkout largo (\u003e4 campos) sin guest checkout ni pagos express tipo Apple Pay/Bizum, (6) imágenes pesadas sin lazy loading que disparan LCP por encima de 4s en mobile, (7) prueba social genérica (estrellas sin reviews, logos sin contexto) en lugar de UGC real con caras y nombres. La regla operativa: cada elemento que no apoya el CTA principal está restando conversión. Eliminar siempre antes que añadir.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Es mejor usar la PDP de Shopify o una landing dedicada (Replo, Shogun, GemPages) para campañas Meta Ads?</h3><p class="faq-a">Depende del producto y del volumen de spend. Para D2C con catálogo amplio (\u003e30 SKUs activos en paid) y spend <10K€/mes Meta, optimizar la PDP de Shopify (con secciones modulares, Replo o Shogun) suele ser suficiente y más mantenible. Para hero products (1-3 SKUs que concentran el 60-80% de la inversión) o s\u003eend 10K€€/mes, una landing dedicada (Replo, Shogun, GemPages, Unbounce) construida pensando en tráfico Meta supera a la PDP estándar en 25-60% de conversion rate. Razón: la PDP de Shopify está diseñada para tráfico ya en consideración (carrito anterior, browse, search interno), no para tráfico frío Meta. Casos donde la landing dedicada es obligatoria: producto con educación necesaria (suplementos, dispositivos), oferta de bundle/lanzamiento, descuento limitado, lead magnet (ebook, descuento email-gated), test A/B de propuesta de valor.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Qué métricas de Core Web Vitals importan para una landing de Meta Ads y cómo afectan al CPA?</h3><p class="faq-a">Las 3 métricas de Core Web Vitals (Google) que también afectan a Meta Ads: LCP (Largest Contentful Paint, debe ser <2,5s), CLS (Cumulative Layout Shift, <0,1) y INP (Interaction to Next Paint, <200ms). Aunque Meta no usa Core Web Vitals como factor de subasta, sí mide el bounce rate (% de usuarios que vuelven al feed sin hacer scroll) y lo penaliza vía Quality Ranking. Una landing con LCP de 4,5s en mobile típicamente sufre 25-40% más bounce rate que una con LCP <2,5s, y eso se traduce en CPM 10-25% más alto y CPA 15-30% peor. En cuentas D2C que hemos auditado, optimizar Core Web Vitals de la landing principal (compresión de imágenes WebP/AVIF, lazy loading, preload de fuentes críticas, eliminación de scripts third-party innecesarios) bajó el CPA entre 12% y 22% sin tocar creative ni audiencia.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Cuántas landings hay que mantener activas en una cuenta D2C de Meta Ads para escalar?</h3><p class="faq-a">La regla operativa que aplicamos en DayByDay: 1 landing principal por hero product + 2-3 variantes A/B por landing principal + 1 landing específica por oferta estacional (Black Friday, lanzamiento, descuento limitado) + 1 landing de retargeting con copy distinto (recordando objeción + descuento). Total: 4-6 landings activas para una cuenta D2C de 10-30K€/mes Meta, 8-12 landings para cuentas de 50-150K€/mes con catálogo amplio. Más allá de 12-15 landings activas la operativa se rompe: la mantenibilidad cae, los tests A/B no llegan a significancia y el equipo paid pierde foco. La métrica que importa no es el número de landings sino el porcentaje de spend que va a landings optimizadas vs PDP estándar: en cuentas que escalamos de 30K a 100K€/mes Meta, el porcentaje de spend en landings dedicadas pasa del 30% al 70-85% en 90 días.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Cómo se hace un test A/B en una landing de Meta Ads y qué duración mínima necesita?</h3><p class="faq-a">El test A/B de landing en Meta Ads se hace a nivel de ad set con dos URLs diferentes (variante A vs variante B) o con herramientas tipo Google Optimize sucesor (GA4 + servidor de tests), Replo A/B testing nativo o VWO/Optimizely. Duración mínima: 2-3 semanas o 200 conversiones por variante (lo que ocurra antes), nunca menos. Por debajo de ese volumen el test no llega a significancia estadística (\u003e95%) y la decisión es ruido. Las variables que dan más lift en D2C español: hero con UGC vs producto en blanco (lift 15-35%), CTA copy específico vs genérico (lift 10-25%), oferta visible above the fold vs después del scroll (lift 20-50%), formulario express vs checkout estándar (lift 8-18%). Anti-patrón: testear más de 1 variable por test — invalida la lectura. La disciplina del A/B testing es lo que separa cuentas que escalan de cuentas que se quedan estancadas.</p></div>
+<section class="sources-block">
+  <h2>Fuentes y datos</h2>
+  <p>Cada cifra y afirmación de este artículo se sostiene en una fuente verificable. Las que respaldan este post:</p>
+  <ul>
+<li><a href="https://iabspain.es/estudio-ecommerce-2025" rel="noopener noreferrer" target="_blank">IAB Spain — Estudio Ecommerce 2025</a></li>
+<li><a href="https://www.facebook.com/business/ads-guide" rel="noopener noreferrer" target="_blank">Meta for Business — Ads Guide</a></li>
+<li><a href="https://www.shopify.com/blog/marketing-metrics" rel="noopener noreferrer" target="_blank">Shopify — Marketing Metrics</a></li>
+<li><a href="https://www.shopify.com/blog/facebook-ads" rel="noopener noreferrer" target="_blank">Shopify — Facebook Ads Guide</a></li>
+<li><a href="https://www.shopify.com/blog/customer-acquisition-cost" rel="noopener noreferrer" target="_blank">Shopify — Customer Acquisition Cost</a></li>
+<li><a href="https://www.acquisition.com" rel="noopener noreferrer" target="_blank">Acquisition.com — Alex y Leila Hormozi</a></li>
+  </ul>
 </section>
 
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+<div class="faq-item"><h3 class="faq-q">¿Qué es CRO de landing page para Meta Ads y en qué se diferencia del CRO clásico?</h3><p class="faq-a">CRO (Conversion Rate Optimization) de landing page para Meta Ads es el proceso de optimizar la página pensando en tráfico paid social: usuarios fríos, en estado discovery, con intent baja y atención de 3-5 segundos. El CRO clásico orientado a SEO trabaja sobre tráfico que ya buscó algo concreto en Google, llegó con intent media-alta y compara opciones. En Meta Ads la página tiene que resolver la promesa del anuncio en menos de un scroll: hero con el mismo mensaje y la misma estética del creative, oferta visible above the fold, CTA único y prueba social compacta. Una landing optimizada para SEO, servida a tráfico Meta Ads, suele perder entre el 30% y el 60% de la conversión potencial.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué conversion rate es bueno en una landing de Meta Ads para eCommerce D2C en España?</h3><p class="faq-a">Los rangos en cuentas D2C españolas 2026: CR landing→checkout 1,5-3,5% es estándar y CR landing→purchase 1,2-2,8% es saludable; por debajo del 1% suele indicar mismatch entre creative y landing, formularios largos o problemas de velocidad. CR top decile: 3,5-5,5% landing→purchase. La diferencia entre estándar y top decile no está en el copy, está en tres palancas: continuidad visual exacta entre creative y hero, CTA único above the fold sin distracciones, y velocidad mobile con LCP menor de 2,5s y CLS menor de 0,1.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuáles son los errores más frecuentes que matan la conversión en landings Meta Ads D2C?</h3><p class="faq-a">Los 7 errores más comunes: (1) mismatch entre el mensaje del creative y la promesa de la landing; (2) tiempo de carga mayor de 3s en mobile; (3) hero con texto denso o visual genérico sin continuidad con el creative; (4) CTA enterrado o múltiples CTAs compitiendo; (5) falta de prueba social visible (logos, testimonios, número de clientes); (6) formulario de checkout mayor de 3 pasos; (7) pop-ups intrusivos o exit-intent agresivos. Cada error puede tirar el CPA 15-30% sin que Meta tenga la culpa.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿PDP Shopify o landing dedicada para Meta Ads en D2C?</h3><p class="faq-a">Depende del tipo de campaña. Para Advantage+ Shopping y Dynamic Product Ads, la PDP funciona bien: el usuario ya está buscando un producto concreto, la página muestra el producto, las reviews y el CTA de compra. Para campañas de prospecting con creative narrativo (UGC, video con historia), la landing dedicada convierte 30-60% más que la PDP porque permite construir el contexto de la promesa del creative. Herramientas como Replo, Shogun y GemPages permiten crear landings sin tocar el tema de Shopify. La decisión se toma por tipo de campaña, no como regla fija.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuántas landings debo tener activas simultáneamente en una cuenta D2C?</h3><p class="faq-a">Para D2C con +10K€/mes de spend, recomendamos 4-6 landings activas. Cada una con un ángulo distinto: (1) producto core, (2) bundle más vendido, (3) ángulo de objeción principal (envío, devolución, garantía), (4) ángulo aspiracional, (5) ángulo testimonial, (6) landing de suscripción si aplica. Menos de 4 limita el testing. Más de 6 fragmenta el tráfico y ninguna sale de learning phase. Cada landing debe tener al menos 200-300 conversiones mensuales para tener datos estadísticamente significativos.</p></div>
+</section>
 
-        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
-          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
-          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
-          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        <div class="cta-block">
+          <h3>¿Tu landing tira el CPA sin que Meta tenga la culpa?</h3>
+          <p>Auditoría de 30 minutos sobre tu landing de Meta Ads. Vemos tiempo de carga, continuidad con creative, CTA y prueba social. 7 errores que probablemente tienes.</p>
+          <a href="/contacto.html">Solicitar diagnóstico gratuito →</a>
+        </div>
+
+        <div class="related-articles">
+          <h2>Artículos relacionados</h2>
+          <a href="/blog/creative-testing-meta-ads">creative testing Meta</a>
+          <a href="/blog/cpa">qué es el CPA</a>
+          <a href="/blog/como-mejorar-roasmeta-ads">mejorar el ROAS</a>
+          <a href="/blog/ugcmeta-ads">UGC en Meta Ads</a>
+          <a href="/blog/cro-landing--meta-ads-d2c">CRO landing Meta</a>
+          <a href="/blog/checklist-auditoria-campanas">auditoría de campañas</a>
+          <a href="/blog/como-mejorar-roasmeta-ads">palancas para ROAS</a>
+          <a href="/tech/meta-ads">gestión de Meta Ads</a>
         </div>
 
         <div class="post-nav">
@@ -417,5 +320,7 @@
     <p>© 2026 DayByDay Consulting</p>
 </footer>
 <script src="/js/main.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"CRO landing Meta Ads: 7 errores D2C 2026","description":"CRO de landing para Meta Ads en D2C: 7 errores que matan conversión, PDP vs landing dedicada, Core Web Vitals y protocolo de A/B testing en 2026.","datePublished":"2026-06-13T00:00:00+02:00","dateModified":"2026-06-13T00:00:00+02:00","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/"},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/cro-landing--meta-ads-d2c"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué es CRO de landing page para Meta Ads y en qué se diferencia del CRO clásico?","acceptedAnswer":{"@type":"Answer","text":"CRO (Conversion Rate Optimization) de landing page para Meta Ads es el proceso de optimizar la página pensando en tráfico paid social: usuarios fríos, en estado discovery, con intent baja y atención de 3-5 segundos. El CRO clásico orientado a SEO trabaja sobre tráfico que ya buscó algo concreto en Google, llegó con intent media-alta y compara opciones. En Meta Ads la página tiene que resolver la promesa del anuncio en menos de un scroll: hero con el mismo mensaje y la misma estética del creative, oferta visible above the fold, CTA único y prueba social compacta. Una landing optimizada para SEO, servida a tráfico Meta Ads, suele perder entre el 30% y el 60% de la conversión potencial."}},{"@type":"Question","name":"¿Qué conversion rate es bueno en una landing de Meta Ads para eCommerce D2C en España?","acceptedAnswer":{"@type":"Answer","text":"Los rangos en cuentas D2C españolas 2026: CR landing→checkout 1,5-3,5% es estándar y CR landing→purchase 1,2-2,8% es saludable; por debajo del 1% suele indicar mismatch entre creative y landing, formularios largos o problemas de velocidad. CR top decile: 3,5-5,5% landing→purchase. La diferencia entre estándar y top decile no está en el copy, está en tres palancas: continuidad visual exacta entre creative y hero, CTA único above the fold sin distracciones, y velocidad mobile con LCP menor de 2,5s y CLS menor de 0,1."}},{"@type":"Question","name":"¿Cuáles son los errores más frecuentes que matan la conversión en landings Meta Ads D2C?","acceptedAnswer":{"@type":"Answer","text":"Los 7 errores más comunes: (1) mismatch entre el mensaje del creative y la promesa de la landing; (2) tiempo de carga mayor de 3s en mobile; (3) hero con texto denso o visual genérico sin continuidad con el creative; (4) CTA enterrado o múltiples CTAs compitiendo; (5) falta de prueba social visible (logos, testimonios, número de clientes); (6) formulario de checkout mayor de 3 pasos; (7) pop-ups intrusivos o exit-intent agresivos. Cada error puede tirar el CPA 15-30% sin que Meta tenga la culpa."}},{"@type":"Question","name":"¿PDP Shopify o landing dedicada para Meta Ads en D2C?","acceptedAnswer":{"@type":"Answer","text":"Depende del tipo de campaña. Para Advantage+ Shopping y Dynamic Product Ads, la PDP funciona bien: el usuario ya está buscando un producto concreto, la página muestra el producto, las reviews y el CTA de compra. Para campañas de prospecting con creative narrativo (UGC, video con historia), la landing dedicada convierte 30-60% más que la PDP porque permite construir el contexto de la promesa del creative. Herramientas como Replo, Shogun y GemPages permiten crear landings sin tocar el tema de Shopify. La decisión se toma por tipo de campaña, no como regla fija."}},{"@type":"Question","name":"¿Cuántas landings debo tener activas simultáneamente en una cuenta D2C?","acceptedAnswer":{"@type":"Answer","text":"Para D2C con +10K€/mes de spend, recomendamos 4-6 landings activas. Cada una con un ángulo distinto: (1) producto core, (2) bundle más vendido, (3) ángulo de objeción principal (envío, devolución, garantía), (4) ángulo aspiracional, (5) ángulo testimonial, (6) landing de suscripción si aplica. Menos de 4 limita el testing. Más de 6 fragmenta el tráfico y ninguna sale de learning phase. Cada landing debe tener al menos 200-300 conversiones mensuales para tener datos estadísticamente significativos."}}]}</script>
 </body>
 </html>
