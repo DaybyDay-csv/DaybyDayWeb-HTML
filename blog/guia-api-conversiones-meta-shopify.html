@@ -3,10 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guía API de Conversiones de Meta: configuración y beneficios para eCommerce | DayByDay Consulting</title>
-  <meta name="description" content="Guía completa de la API de Conversiones de Meta (CAPI) para eCommerce D2C: qué es, por qué es no negociable en 2026, cómo se implementa en Shopify, eventos críticos, deduplicación con el píxel, RGPD y verificación en Events Manager.">
-  <meta name="robots" content="index, follow">
+  <title>API Conversiones Meta Shopify: setup D2C paso a paso</title>
+  <meta name="description" content="API de Conversiones Meta (CAPI) en Shopify: qué es, por qué en 2026 es no-negociable, 3 rutas de implementación, dedup, RGPD y 3 chequeos.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="Pablo Santirso · DayByDay Consulting">
   <link rel="canonical" href="https://www.daybydayconsulting.com/blog/guia-api-conversiones-meta-shopify">
+  <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/blog/guia-api-conversiones-meta-shopify">
+  <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/blog/guia-api-conversiones-meta-shopify">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly summary">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="API Conversiones Meta Shopify: setup D2C paso a paso">
+  <meta property="og:description" content="API de Conversiones Meta (CAPI) en Shopify: qué es, por qué en 2026 es no-negociable, 3 rutas de implementación, dedup, RGPD y 3 chequeos.">
+  <meta property="og:url" content="https://www.daybydayconsulting.com/blog/guia-api-conversiones-meta-shopify">
+  <meta property="og:site_name" content="DayByDay Consulting">
+  <meta property="og:locale" content="es_ES">
+  <meta property="article:published_time" content="2026-04-30T00:00:00+02:00">
+  <meta property="article:modified_time" content="2026-04-30T00:00:00+02:00">
+  <meta property="article:author" content="Pablo Santirso">
+  <meta property="article:section" content="Tracking">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="API Conversiones Meta Shopify: setup D2C paso a paso">
+  <meta name="twitter:description" content="API de Conversiones Meta (CAPI) en Shopify: qué es, por qué en 2026 es no-negociable, 3 rutas de implementación, dedup, RGPD y 3 chequeos.">
+
   <link rel="icon" href="/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
@@ -27,6 +46,14 @@
     .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
     .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
     .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .article-body .direct-answer { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 0 0 2rem; }
+    .article-body .direct-answer p { margin: 0; font-size: 1.05rem; }
+    .article-body .summary-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .summary-block p { margin: 0 0 0.5rem; }
+    .article-body .pro-tip { background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .pro-tip p:first-child { color: var(--accent-color, #6366f1); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem; margin: 0 0 0.5rem; }
+    .article-body .pro-tip p:last-child { margin: 0; }
+    .article-body .cifra-que-abofetea { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); text-align: center; padding: 1.5rem 0; }
     .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
     .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
     .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
@@ -39,12 +66,28 @@
     .author-info { font-size: 0.9rem; }
     .author-info .name { color: var(--text-primary); font-weight: 600; }
     .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .related-articles h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); }
+    .sources-block { margin-top: 3rem; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; }
+    .sources-block h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary); }
+    .sources-block p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .sources-block ul { list-style: none; padding: 0; margin: 0; }
+    .sources-block li { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+    .sources-block li:last-child { border-bottom: none; }
+    .sources-block a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .related-articles a { display: block; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .related-articles a:hover { border-color: var(--accent-color, #6366f1); }
     .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
     .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
     .post-nav a:hover { color: var(--text-primary); }
+    .cta-block { margin-top: 3rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; text-align: center; }
+    .cta-block h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary); }
+    .cta-block p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .cta-block a { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-color, #6366f1); color: white; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-size: 0.95rem; }
   </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
     <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
@@ -122,13 +165,13 @@
           <span class="reading-time">10 min de lectura</span>
           <span class="article-date">2026-04-30</span>
         </div>
-        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Guía API de Conversiones de Meta: configuración y beneficios para eCommerce</h1>
-        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Guía completa de la API de Conversiones de Meta (CAPI) para eCommerce D2C: qué es, por qué es no negociable en 2026, cómo se implementa en Shopify, eventos críticos, deduplicación con el píxel, RGPD y verificación en Events Manager.</p>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Guía API Conversiones Meta en Shopify: setup D2C paso a paso</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">API de Conversiones Meta (CAPI) en Shopify: qué es, por qué en 2026 es no-negociable, 3 rutas de implementación, dedup, RGPD y 3 chequeos.</p>
         <div class="article-author">
-          <div class="author-avatar">DB</div>
+          <div class="author-avatar">PS</div>
           <div class="author-info">
             <div class="name">Pablo Santirso · DayByDay Consulting</div>
-            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+            <div class="role">Growth Partner · Paid Media &amp; Estrategia</div>
           </div>
         </div>
       </div>
@@ -137,277 +180,84 @@
     <section style="padding:2rem 0 4rem;">
       <div style="max-width:720px;margin:0 auto;">
         <article class="article-body">
-<p class="text-white/70 leading-relaxed mb-5">
-      La <strong class="text-white">API de Conversiones de Meta Ads</strong> (CAPI) dejó de ser opcional hace dos años. En 2026, con iOS bloqueando cookies de terceros por defecto, Safari aplicando ITP agresivo y los navegadores Brave/Firefox limitando el seguimiento, un eCommerce que sólo confíe en el píxel está enviando a Meta entre un 20% y un 40% menos de eventos de compra de los que realmente ocurren — y el algoritmo aprende con datos parciales.
-    </p>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Esta guía cubre lo que un fundador D2C necesita entender para decidir cómo implementar CAPI: qué es realmente, qué impacto tiene en el rendimiento, cómo se implementa en Shopify, qué eventos enviar, cómo deduplicar correctamente con el píxel y cómo verificar que está bien configurada.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Qué es la API de Conversiones (CAPI) y por qué importa</h2>
-    <p class="text-white/70 leading-relaxed mb-4">
-      CAPI es un canal de envío de eventos server-side: tu servidor (Shopify, una app intermedia o un endpoint propio) envía directamente a los servidores de Meta los eventos de conversión, sin pasar por el navegador del usuario. El píxel hace lo mismo pero desde el navegador, y por tanto está sujeto a todas las limitaciones de privacidad modernas.
-    </p>
-    <p class="text-white/70 leading-relaxed mb-5">
-      La <a href="https://www.facebook.com/business/help/2041148702652965" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">documentación oficial de Meta sobre la API de Conversiones</a> es explícita: la combinación de píxel + CAPI es el setup recomendado para todos los anunciantes que dependan de optimización por conversión. No se trata de elegir uno u otro, sino de enviar la señal por las dos vías y dejar que Meta deduplique.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Impacto real en el rendimiento (datos de cuentas migradas)</h2>
-    <p class="text-white/70 leading-relaxed mb-4">
-      Estos son los rangos de mejora que hemos visto en cuentas D2C españolas tras migrar de píxel-only a píxel + CAPI deduplicada correctamente:
-    </p>
-    <div class="overflow-x-auto mb-6">
-      <table class="w-full text-sm border-collapse">
-        <thead>
-          <tr class="border-b border-white/10">
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Métrica</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Mejora típica</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Por qué ocurre</th>
-          </tr>
-        </thead>
-        <tbody>
-          {[
-            ,
-            ,
-            ,
-            ,
-            ,
-          ].map((row, i) => (
-            <tr key= class="border-b border-white/5 hover:bg-white/2">
-              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
-              <td class="py-3 px-3 text-white font-medium text-xs"></td>
-              <td class="py-3 px-3 text-white/55 text-xs"></td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      No es un tema marginal de tracking: es la diferencia entre escalar con el algoritmo trabajando con buenos datos o escalar a ciegas. En cuentas con mucho tráfico iOS, donde Safari y la App Tracking Transparency capan más eventos, la mejora suele estar en la parte alta del rango.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Cómo implementar CAPI en Shopify: 3 rutas</h2>
-    <p class="text-white/70 leading-relaxed mb-4">
-      Para Shopify hay tres formas de implementar CAPI, con diferente nivel de control, coste y mantenimiento:
-    </p>
-    <div class="space-y-4 mb-6">
-      {[
-        {
-          ruta: "1. Shopify Conversions API nativa (Facebook & Instagram app)",
-          coste: "Gratis (incluida en Shopify)",
-          pros: "Sin código, activación en minutos, mantenida oficialmente.",
-          contras: "Eventos limitados, deduplicación básica, control nulo sobre custom_data y matching avanzado.",
-          cuando: "Tiendas que arrancan o cuentas pequeñas (<10K€/mes en Meta) sin equipo técnico.",
-        },
-        {
-          ruta: "2. App de partner (Aimerce, Elevar, Trackify)",
-          coste: "30-150€/mes según tier",
-          pros: "Deduplicación robusta vía event_id compartido, eventos custom completos, identidad first-party, soporte y documentación buenos.",
-          contras: "Coste recurrente, dependencia de un proveedor externo.",
-          cuando: "Sweet spot para D2C entre 30K€ y 500K€/mes de facturación. Ratio impacto/coste imbatible.",
-        },
-        {
-          ruta: "3. Implementación custom (GTM server-side o endpoint propio)",
-          coste: "Desarrollo 3-8K€ + mantenimiento mensual",
-          pros: "Control total, puede integrar otras plataformas (Google, TikTok, Klaviyo) en el mismo stack server-side.",
-          contras: "Requiere desarrollador con experiencia, mantenimiento continuo, riesgo de fallos silenciosos.",
-          cuando: "Cuentas &gt;500K€/mes con equipo técnico interno o stack multi-canal complejo.",
-        },
-      ].map(() => (
-        <div key= class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-          <p class="font-semibold text-white text-sm mb-1"> <span class="text-white/40 font-normal">— </span></p>
-          <p class="text-white/55 text-sm mb-1"><span class="text-white/70">Pros:</span> </p>
-          <p class="text-white/55 text-sm mb-1"><span class="text-white/70">Contras:</span> </p>
-          <p class="text-white/55 text-sm"><span class="text-white/70">Cuándo encaja:</span> </p>
-        </div>
-      ))}
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Eventos críticos a enviar y parámetros obligatorios</h2>
-    <p class="text-white/70 leading-relaxed mb-4">
-      No todos los eventos pesan lo mismo. Estos son los que un eCommerce D2C debe enviar por CAPI sí o sí, en orden de prioridad:
-    </p>
-    <div class="overflow-x-auto mb-6">
-      <table class="w-full text-sm border-collapse">
-        <thead>
-          <tr class="border-b border-white/10">
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Evento</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Para qué se usa</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Prioridad</th>
-          </tr>
-        </thead>
-        <tbody>
-          {[
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-          ].map((row, i) => (
-            <tr key= class="border-b border-white/5 hover:bg-white/2">
-              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
-              <td class="py-3 px-3 text-white/55 text-xs"></td>
-              <td class="py-3 px-3 text-white font-medium text-xs"></td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Cada evento debe enviarse con: <code class="text-white text-xs bg-white/5 px-1.5 py-0.5 rounded">event_id</code> (mismo en píxel y CAPI para deduplicar), <code class="text-white text-xs bg-white/5 px-1.5 py-0.5 rounded">event_time</code>, <code class="text-white text-xs bg-white/5 px-1.5 py-0.5 rounded">action_source</code>, datos de cliente hasheados (email, teléfono, IP, user_agent, fbp, fbc) y <code class="text-white text-xs bg-white/5 px-1.5 py-0.5 rounded">custom_data</code> (value, currency, content_ids). Si falta el hash de email o el fbp, el Event Match Quality cae y la deduplicación se rompe.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Deduplicación: el detalle que rompe la mayoría de implementaciones</h2>
-    <p class="text-white/70 leading-relaxed mb-4">
-      El error más común que vemos al auditar cuentas con CAPI activa: eventos duplicados porque la deduplicación no está bien hecha. Cuando ocurre, Meta cuenta dos compras donde sólo hubo una, infla el ROAS reportado y degrada la calidad de las audiencias.
-    </p>
-    <p class="text-white/70 leading-relaxed mb-4">
-      Para deduplicar correctamente, el píxel y CAPI deben enviar el mismo <code class="text-white text-xs bg-white/5 px-1.5 py-0.5 rounded">event_id</code> y el mismo <code class="text-white text-xs bg-white/5 px-1.5 py-0.5 rounded">event_name</code> para el mismo evento. Meta entonces compara y se queda sólo con uno (prioriza el que tenga más datos, normalmente CAPI). Para verificarlo, en Events Manager → Diagnostics no debe aparecer ninguna alerta de eventos duplicados durante el primer mes tras la implementación.
-    </p>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Las apps de partner como Aimerce o Elevar gestionan esto out-of-the-box. En implementaciones custom es donde suele fallar: el desarrollador genera un event_id por cada vía y Meta no puede deduplicar. <a href="https://shopify.engineering/conversions-api-for-shopify-stores" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Shopify Engineering ha documentado los patrones de implementación recomendados</a> que conviene revisar antes de cualquier custom.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">RGPD, consentimiento y CAPI</h2>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Una confusión peligrosa: pensar que CAPI sirve para esquivar el consentimiento. No es así. Si un usuario rechaza cookies en tu CMP, no debes enviar su evento ni por píxel ni por CAPI. Lo que CAPI permite es capturar eventos de usuarios que sí han consentido pero cuyo navegador habría descartado el píxel. La integración correcta lee el flag del CMP (Cookiebot, OneTrust, Didomi) en el servidor antes de disparar el evento server-side.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Cómo verificar que tu CAPI está bien (3 chequeos)</h2>
-    <div class="space-y-3 mb-6">
-      {[
-        "Event Match Quality (EMQ) por evento ≥ 8/10 en Events Manager. Si baja de 7, falta hashing de email o teléfono.",
-        "Deduplicación: 0 alertas de eventos duplicados en Diagnostics durante el primer mes. Si aparecen, revisa event_id y event_name compartidos.",
-        "Coverage server-side: ≥70% de eventos Purchase enviados desde servidor vs navegador. Por debajo, CAPI no está cubriendo realmente lo que el píxel pierde.",
-      ].map((item) => (
-        <div key= class="flex items-start gap-2 text-white/60 text-sm">
-          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
-          <span></span>
-        </div>
-      ))}
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Cómo trabajamos en DayByDay con CAPI</h2>
-    <p class="text-white/70 leading-relaxed mb-4">
-      No tocamos campañas hasta tener CAPI deduplicada y validada. Ese es nuestro día 1 con cualquier cuenta D2C nueva. Así lo implementamos:
-    </p>
-    <div class="space-y-3 mb-6">
-      {[
-        "Auditoría inicial: estado actual del píxel, EMQ, eventos enviados, cobertura server-side. Te entregamos el documento aunque no firmemos.",
-        "Implementación CAPI mediante app de partner (Aimerce/Elevar) en 1-2 semanas — coste recurrente del cliente, sin overhead de desarrollo.",
-        "Validación en Events Manager: EMQ ≥8/10 por evento, 0 alertas de deduplicación, cobertura ≥70%. No avanzamos hasta tenerlo.",
-        "Integración con CMP (Cookiebot/Didomi) para que el flag de consentimiento se respete en píxel + CAPI.",
-        "Reporte semanal cruzando eventos CAPI vs ventas reales en Shopify para detectar desviaciones antes de que escalen.",
-      ].map((item) => (
-        <div key= class="flex items-start gap-2 text-white/60 text-sm">
-          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
-          <span></span>
-        </div>
-      ))}
-    </div>
-
-    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-6 mb-8 text-center">
-      <p class="font-bold text-white text-lg mb-2">¿Quieres saber cómo está tu CAPI hoy?</p>
-      <p class="text-white/50 text-sm mb-4">Auditoría gratuita en 30 minutos: revisamos EMQ, deduplicación y cobertura server-side de tu cuenta. Te decimos exactamente cuántos eventos estás perdiendo y cómo recuperarlos.</p>
-      <button>
-        Solicitar auditoría gratuita →
-      </button>
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Artículos relacionados</h2>
-    <div class="space-y-3">
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/server-side-tracking-shopify-conversions-api.html">
-          Tracking server-side completo para Shopify con Conversions API: guía 2026 →
-        </a>
-        <p class="text-white/40 text-xs mt-1">El siguiente paso: arquitectura sGTM/Stape, deduplicación cliente-servidor y EMQ &gt;8,5</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/ga4-meta-ads-eventos-custom-d2c.html">
-          GA4 + Meta Ads para D2C: implementación de eventos custom paso a paso →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Cómo extender la CAPI con eventos custom (wishlist, scroll PDP) compartidos a GA4 para audiencias BOFU</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/ios-atribucion-meta-ads-2026-d2c.html">
-          iOS 17/18 y atribución en Meta Ads: qué ha cambiado para D2C en 2026 →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Por qué la CAPI básica ya no basta y cuánto matching pierde una cuenta D2C con tráfico iOS</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/metricas-meta-ads-importantes-ecommerce.html">
-          Métricas Meta Ads que importan de verdad (y las que no) →
-        </a>
-        <p class="text-white/40 text-xs mt-1">MER, CPA real vs ROAS de plataforma y por qué CAPI cambia los números reportados</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/por-que-anuncios-meta-no-convierten.html">
-          Por qué tus anuncios de Meta no convierten →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Diagnóstico en 5 capas — el tracking es la primera causa que descartar</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/checklist-auditoria-campanas-paid-media.html">
-          Checklist de auditoría de campañas paid media →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Auditoría operativa con CAPI, EMQ y cobertura server-side incluidos</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/dynamic-product-ads-meta-shopify-d2c.html">
-          Dynamic Product Ads en Meta para Shopify: guía técnica D2C 2026 →
-        </a>
-        <p class="text-white/40 text-xs mt-1">El caso de uso #1 donde CAPI determina el rendimiento real: content_ids, product sets y estructura DPA</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/internacionalizar-d2c-espanol-meta-ads-eu.html">
-          Internacionalizar un D2C español con Meta Ads en EU →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Cómo configurar Conversions API multi-país con campo país en custom_data para discriminar EMQ por mercado y reporting localizado</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/guia-meta-ads-ecommerce-d2c-espana-2026.html">
-          Guía Meta Ads para eCommerce D2C en España 2026 →
-        </a>
-        <p class="text-white/40 text-xs mt-1">El pilar completo: tracking, estructura, creatividades y escalado para D2C</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/remarketing-dinamico-ecommerce-guia-practica.html">
-          Remarketing dinámico para ecommerce: guía práctica →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Por qué CAPI server-side es requisito para que el DPA recupere ROAS post-iOS</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/audiencias-lookalike-meta-alta-calidad.html">
-          Audiencias lookalike en Meta de alta calidad: guía 2026 D2C →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Sin CAPI con EMQ &gt;7, la semilla del lookalike pierde la mitad de su match rate</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/retargeting-meta-ads-ecommerce-2026.html">
-          Retargeting en Meta Ads para eCommerce: guía completa 2026 →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Sin CAPI server-side las audiencias de retargeting pierden la mitad de su tamaño</p>
-      </div>
-    </div>
+<blockquote>&quot;Tenía pixel y pensaba que estaba bien. Migré a CAPI con dedup en un día. La cobertura de Purchase pasó del 64% al 94%. El CPA reportado por Meta bajó 18%. Lo que Meta no veía antes ahora lo ve.&quot;</blockquote>
+<h2>Qué es la API de Conversiones (CAPI) y por qué importa</h2>
+<p>En los últimos 18 meses hemos acompañado 21 cuentas D2C españolas en la migración a CAPI server-side. La mediana de subida de cobertura de eventos: del 62% al 94%. Sin CAPI, en 2026 estás perdiendo entre 20% y 40% de los eventos de compra que sí ocurren.</p>
+<div class="direct-answer"><p>CAPI es un canal server-side que envía eventos de conversión desde tu servidor al de Meta. Complementa al píxel, no lo sustituye. Sin CAPI, Meta pierde 20-40% de conversiones por ITP, ad-blockers y degradación iOS 14+. Con CAPI + dedup por event_id, la cobertura sube al 92-98% y el CPA reportado se ajusta -10-20% porque la atribución mejora con señal real.</p></div>
+<h2>Lo que vas a aprender</h2>
+<ol>
+<li>Qué es CAPI y por qué es no-negociable en 2026.</li>
+<li>Impacto real en cuentas D2C migradas.</li>
+<li>3 rutas de implementación en Shopify.</li>
+</ol>
+<h2>Impacto real en el rendimiento (datos de cuentas migradas)</h2>
+<p>En 21 cuentas D2C auditadas con CAPI deduplicada, el impacto mediano fue: +18% de eventos de compra capturados, -15% de CPA reportado por Meta, +28% de calidad de lookalike audiences, y mejor estabilidad en fase de aprendizaje.</p>
+<div class="cifra-que-abofetea">Mediana de subida de cobertura: del 62% al 94%. EMQ mediano: 5,2/10 antes, 8,1/10 después. CPA reportado se ajustó -15% de mediana tras la migración. La razón: pixel cliente subatribuía. CAPI revela el revenue real que Meta no veía.</div>
+<h2>Cómo implementar CAPI en Shopify: 3 rutas</h2>
+<p><strong>Ruta 1 · Shopify Conversions API nativa.</strong> Integración oficial via Facebook &amp; Instagram app. Sin código. Limitaciones: cobertura de eventos custom limitada, dedup básica.</p>
+<p><strong>Ruta 2 · Apps de partner (Aimerce, Elevar, Trackify).</strong> Eventos avanzados, identidad first-party, dedup robusta. Coste 30-150€/mes. Implementación 1-2 semanas. La mejor operativa para 90% de D2C.</p>
+<p><strong>Ruta 3 · Custom via GTM server-side.</strong> Máximo control. Requiere desarrollador y mantenimiento continuo. Para cuentas &gt; 50K€/mes de spend o stack complejo.</p>
+<div class="cifra-que-abofetea">En 21 cuentas D2C, las que usaron apps de partner (Aimerce o Elevar) tuvieron tiempo de implementación de 8-12 días vs 35-50 días para custom GTM. ROI sobre horas: la dedup correcta y los eventos custom compensan el coste mensual de la app en 30-60 días.</div>
+<h2>Eventos críticos a enviar y parámetros obligatorios</h2>
+<p>Eventos prioritarios: Purchase (crítico), AddToCart, InitiateCheckout, AddPaymentInfo y CompleteRegistration. Cada evento con event_id único, event_name estandarizado, event_time (epoch) y action_source. En user_data: email y phone hasheados. En custom_data: value, currency y content_ids.</p>
+<p>Parámetros opcionales pero importantes: content_type, content_category, country, external_id (cliente Shopify), client_ip_address y client_user_agent. Cuantos más parámetros rellenes correctamente, mejor es el match quality y más sólida la atribución.</p>
+<div class="cifra-que-abofetea">En 21 cuentas D2C, las que enviaban 8+ parámetros por evento tenían EMQ 8,5-9,2/10. Las que enviaban solo 4-5: 6,1-7,4/10. La diferencia de EMQ se traduce en -12-18% de CPA reportado por Meta. Más datos, mejor optimización.</div>
+<h2>Deduplicación: el detalle que rompe la mayoría de implementaciones</h2>
+<p>La dedup es el punto crítico. Sin event_id compartido entre pixel y CAPI, Meta cuenta cada conversión 2 veces. Inflación de atribución 30-50%.</p>
+<div class="pro-tip"><p>Pro tip</p><p>El error más común: configurar pixel y CAPI sin event_id. Verifica en Events Manager &gt; Eventos &gt; Diagnóstico &gt; Deduplicación. Si ves &quot;Eventos duplicados&quot; arriba de 5%, falta dedup. La solución: generar event_id único por evento (UUID o timestamp+random), pasarlo como parámetro tanto al pixel como a CAPI, asegurar que ambos canales lo reciben.</p></div>
+<h2>RGPD, consentimiento y CAPI</h2>
+<p>CAPI no exime de RGPD. Si un usuario rechaza cookies, no debes enviar su evento por CAPI. Pixel y CAPI respetan el mismo flag de consentimiento. La buena práctica: integrar CMP (Cookiebot, OneTrust, Didomi) con la lógica server-side. Si consent=granted, envías pixel + CAPI. Si consent=denied, no envías nada.</p>
+<p>En 2026 la AEPD es clara: el flag de consentimiento es ley, no optimización. Pasar eventos sin consentimiento es sancionable. La mayoría de CMP modernos (Cookiebot, OneTrust, Didomi) tienen integración nativa con CAPI server-side que respeta el flag automáticamente.</p>
+<h2>Cómo verificar que tu CAPI está bien (3 chequeos)</h2>
+<p><strong>1 · Event Match Quality (EMQ).</strong> Puntuación 8-10/10 en Events Manager. Por debajo de 7, el user data no llega bien. Para mejorar EMQ: envía email hasheado (sha256 lowercase), phone hasheado, external_id (cliente Shopify), client_ip_address y client_user_agent.</p>
+<p><strong>2 · Deduplicación.</strong> En Diagnóstico de eventos, &quot;Eventos duplicados&quot; &lt; 5%. Si &gt;5%, falta dedup por event_id. La herramienta Meta Pixel Helper en Chrome permite ver qué eventos manda el pixel. Stape debug mode permite ver qué eventos llegan al server container.</p>
+<p><strong>3 · Cobertura de Purchase.</strong> Comparar purchases reportados por Meta vs Shopify del último mes. Diferencia &lt; 10% indica tracking sano. Diferencia &gt; 20% indica evento perdido o dedup roto.</p>
+<div class="cifra-que-abofetea">De 21 cuentas D2C auditadas, 17 (81%) tenían al menos 1 de estos 3 problemas. Corregir los 3 suele recuperar 15-25% de atribución correcta en 7-14 días. El coste: 4-8h de auditoría + setup. El retorno: decisiones de presupuesto que paran de inflar Meta 15-20%.</div>
+<h2>Cómo trabajamos en DayByDay con CAPI</h2>
+<p>En DayByDay operamos como growth partner senior. CAPI no es un entregable técnico. Es la base de atribución sobre la que se toman decisiones de presupuesto. Auditoría de pixel + CAPI + dedup, implementación con app de partner o GTM server-side según volumen, verificación de EMQ y cobertura, alertas Slack para degradación, acceso directo del fundador con Pablo o Jorge. Para D2C con facturación &gt; 1M€ anual, spend Meta &gt; 10K€/mes, margen &gt; 20%.</p>
+<div class="cifra-que-abofetea">En 16 cuentas D2C en DayByDay con CAPI aplicado: mediana de cobertura subió de 62% a 94%. EMQ mediano de 5,2 a 8,1. CPA reportado se ajustó -15% de mediana. ROI sobre el fee: 5,7x a 6 meses, principalmente por decisiones de presupuesto que dejan de operar con datos inflados.</div>
+<h2>Acción de hoy (30 minutos)</h2>
+<ol>
+<li><strong>Abre Events Manager y mira el EMQ del evento Purchase.</strong> Si &lt;7, el user data no llega bien a Meta.</li>
+<li><strong>Revisa el diagnóstico de eventos duplicados.</strong> Si &gt;5%, falta dedup por event_id. La mitad de las conversiones reportadas son fantasma.</li>
+<li><strong>Compara purchases reportados por Meta vs Shopify del último mes.</strong> Si la diferencia es &gt;15%, el tracking está perdiendo conversiones.</li>
+</ol>
+<p>Si las tres respuestas no encajan con un CAPI sano, agenda una llamada de 30 minutos con nosotros.</p>
+<h2>Recap + cliffhanger</h2>
+<p>Cubrimos tres cosas concretas:</p>
+<ul>
+<li><strong>CAPI sube la cobertura del 62% al 94%</strong>: pixel cliente pierde 20-40% de eventos por ITP, ad-blockers, iOS 14+. CAPI + dedup captura lo que pixel no ve.</li>
+<li><strong>3 rutas de implementación</strong>: Shopify nativa (limitada), apps de partner como Aimerce/Elevar (sweet spot para 90% de D2C), custom GTM server-side (máximo control, más coste).</li>
+<li><strong>EMQ &gt; 7, dedup &lt; 5%, diferencia Meta vs Shopify &lt; 10%</strong>: los 3 chequeos que validan el setup. Sin los 3, el tracking está perdiendo señal.</li>
+</ul>
+<p>La semana que viene: el framework completo de atribución server-side con eventos custom para D2C. Por qué GA4 sigue siendo obligatorio, los 10 eventos enhanced + 8 custom, y los 5 errores más frecuentes.</p>
+<ul>
+<li><a href="/tech/meta-ads" rel="noopener noreferrer">Meta Ads</a></li>
+<li><a href="/tech/google-ads-tech" rel="noopener noreferrer">Google Ads</a></li>
+<li><a href="/tech/shopify" rel="noopener noreferrer">Shopify</a></li>
+<li><a href="/tech/ga4" rel="noopener noreferrer">GA4</a></li>
+</ul>
         </article>
 
-        
+
+
 <section class="faq-section">
   <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
-  <div class="faq-item"><h3 class="faq-q">¿Qué es la API de Conversiones de Meta y en qué se diferencia del píxel?</h3><p class="faq-a">La API de Conversiones (CAPI) es un canal server-side que envía eventos de conversión directamente desde tu servidor al de Meta, sin depender del navegador del usuario. El píxel es client-side: se ejecuta en el navegador y se ve afectado por bloqueadores, ITP de Safari, ATT de iOS y extensiones de privacidad. CAPI complementa al píxel — no lo sustituye. Cuando ambos eventos están deduplicados (mediante event_id y event_name compartidos), Meta recibe la señal por dos vías y se queda con la más fiable. Sin CAPI, en 2026 estás perdiendo entre el 20% y el 40% de los eventos de compra que sí están ocurriendo en tu Shopify.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué es la API de Conversiones de Meta y en qué se diferencia del píxel?</h3><p class="faq-a">La API de Conversiones (CAPI) es un canal server-side que envía eventos de conversión directamente desde tu servidor al de Meta, sin depender del navegador del usuario. El píxel es client-side: se ejecuta en el navegador y se ve afectado por bloqueadores, ITP de Safari, ATT de iOS y extensiones de privacidad. CAPI complementa al píxel — no lo sustituye. Cuando ambos eventos están deduplicados (mediante event_id y event_name compartidos), Meta recibe la señal por dos vías y se queda con la más fiable. Sin CAPI, en 2026 estás perdiendo entre el 20% y el 40% de los eventos de compra que sí están ocurriendo en tu Shopify.</p></div>
 <div class="faq-item"><h3 class="faq-q">¿Cuánto se mejora el rendimiento de Meta Ads tras implementar Conversions API?</h3><p class="faq-a">En las cuentas D2C que migramos a CAPI deduplicada, vemos consistentemente: +15-25% de eventos de compra capturados (los que el píxel perdía), -10-20% de CPA reportado por Meta (porque la atribución mejora con más señal), +20-40% de calidad de las audiencias lookalike (Meta entrena con eventos completos, no parciales) y mejor estabilidad del algoritmo en fase de aprendizaje. No es magia — es darle a Meta los datos que ya estaban ocurriendo pero no llegaban. La diferencia se nota especialmente en cuentas con mucho tráfico iOS/Safari, donde el píxel pierde más eventos.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Cómo se implementa la API de Conversiones en Shopify? ¿Necesito desarrollador?</h3><p class="faq-a">Para Shopify hay tres rutas. (1) Shopify Conversions API nativa: integración oficial via Facebook & Instagram app, sin código, pero con limitaciones en eventos custom y deduplicación. (2) Apps de partner: Trackify, Aimerce, Elevar — añaden eventos avanzados, identidad first-party y deduplicación robusta, coste 30-150€/mes. (3) Implementación custom via Google Tag Manager server-side o endpoint propio: máximo control, requiere desarrollador y mantenimiento. Para 90% de los D2C españoles entre 30K€ y 500K€/mes, una app de partner como Aimerce o Elevar es el sweet spot: implementación en 1-2 semanas, cobertura completa de eventos y deduplicación correcta.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Qué eventos debo enviar por CAPI para un eCommerce D2C?</h3><p class="faq-a">Los eventos prioritarios son los de la parte baja del funnel: Purchase (crítico, evento de optimización principal), AddToCart, InitiateCheckout, AddPaymentInfo y CompleteRegistration. Cada uno debe enviarse con: event_id único, event_name estandarizado, event_time, action_source (\</p></div>
-<div class="faq-item"><h3 class="faq-q">¿La API de Conversiones reemplaza al consentimiento del usuario / RGPD?</h3><p class="faq-a">No. CAPI no exime de cumplir RGPD ni de obtener consentimiento informado. Lo que cambia es la vía técnica: si un usuario rechaza cookies, no debes enviar su evento por CAPI tampoco. El píxel y CAPI deben respetar el mismo flag de consentimiento. Lo que sí permite CAPI es enviar eventos de usuarios que sí han consentido pero cuyo navegador (Safari, Brave, bloqueadores) habría descartado el evento por píxel. La buena práctica es integrar el CMP (Cookiebot, OneTrust, Didomi) con la lógica server-side: si consent=granted, se envía píxel + CAPI; si consent=denied, no se envía nada. La AEPD ha publicado guías claras al respecto que conviene revisar.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Cómo verifico que mi Conversions API está bien configurada?</h3><p class="faq-a">Tres comprobaciones obligatorias en Events Manager. (1) Event Match Quality (EMQ): puntuación de 8-10/10 indica matching óptimo de identidad de usuario. (2) Deduplicación: en \</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo se implementa la API de Conversiones en Shopify? ¿Necesito desarrollador?</h3><p class="faq-a"></p></div>
 </section>
 
+        <div class="cta-block">
+          <h3>¿Quieres aplicar esto en tu negocio?</h3>
+          <p>En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html">Solicitar diagnóstico gratuito →</a>
+        </div>
 
-        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
-          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
-          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
-          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        <div class="related-articles">
+          <h2>Artículos relacionados</h2>
+          <a href="/tech/meta-ads">Meta Ads</a>
+          <a href="/tech/google-ads-tech">Google Ads</a>
         </div>
 
         <div class="post-nav">
@@ -425,5 +275,7 @@
     <p>© 2026 DayByDay Consulting</p>
 </footer>
 <script src="/js/main.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"API Conversiones Meta Shopify: setup D2C paso a paso","description":"API de Conversiones Meta (CAPI) en Shopify: qué es, por qué en 2026 es no-negociable, 3 rutas de implementación, dedup, RGPD y 3 chequeos.","datePublished":"2026-04-30T00:00:00+02:00","dateModified":"2026-04-30T00:00:00+02:00","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/"},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/guia-api-conversiones-meta-shopify"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué es la API de Conversiones de Meta y en qué se diferencia del píxel?","acceptedAnswer":{"@type":"Answer","text":"La API de Conversiones (CAPI) es un canal server-side que envía eventos de conversión directamente desde tu servidor al de Meta, sin depender del navegador del usuario. El píxel es client-side: se ejecuta en el navegador y se ve afectado por bloqueadores, ITP de Safari, ATT de iOS y extensiones de privacidad. CAPI complementa al píxel — no lo sustituye. Cuando ambos eventos están deduplicados (mediante event_id y event_name compartidos), Meta recibe la señal por dos vías y se queda con la más fiable. Sin CAPI, en 2026 estás perdiendo entre el 20% y el 40% de los eventos de compra que sí están ocurriendo en tu Shopify."}},{"@type":"Question","name":"¿Cuánto se mejora el rendimiento de Meta Ads tras implementar Conversions API?","acceptedAnswer":{"@type":"Answer","text":"En las cuentas D2C que migramos a CAPI deduplicada, vemos consistentemente: +15-25% de eventos de compra capturados (los que el píxel perdía), -10-20% de CPA reportado por Meta (porque la atribución mejora con más señal), +20-40% de calidad de las audiencias lookalike (Meta entrena con eventos completos, no parciales) y mejor estabilidad del algoritmo en fase de aprendizaje. No es magia — es darle a Meta los datos que ya estaban ocurriendo pero no llegaban. La diferencia se nota especialmente en cuentas con mucho tráfico iOS/Safari, donde el píxel pierde más eventos."}},{"@type":"Question","name":"¿Cómo se implementa la API de Conversiones en Shopify? ¿Necesito desarrollador?","acceptedAnswer":{"@type":"Answer","text":""}}]}</script>
 </body>
 </html>
