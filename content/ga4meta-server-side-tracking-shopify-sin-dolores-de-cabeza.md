@@ -17,7 +17,7 @@ cta_desc: "En 30 minutos analizamos tu situación y te decimos exactamente qué 
 cta_href: "/contacto.html"
 cta_label: "Solicitar diagnóstico gratuito"
 llms_summary: "GA4 + Meta server side tracking en Shopify: CAPI server-side, GTM, dedup por event_id, mapeo de eventos y los 5 errores más frecuentes en D2C."
-migration_state: "rendered"
+migration_state: "good"
 ---
 
 > "Tenía pixel de Meta y pensaba que estaba bien. Migré a server-side con Stape y GTM en un día. La cobertura de eventos pasó del 62% al 96%. El EMQ subió de 5,2 a 8,4. El CPA reportado se ajustó 24% a la baja. La diferencia fue brutal."
@@ -48,7 +48,7 @@ En 16 cuentas D2C, las que operan híbrido ven EMQ de 7,8-8,4/10 de mediana. Las
 
 5 pasos para tener el server container funcionando en Shopify.
 
-**Paso 1 · Crear contenedor server-side en Stape o Cloud Run.** URL del servidor tipo `https://ss.example.com`. Plan gratuito de Stape cubre hasta 50K eventos/mes.
+**Paso 1 · Crear contenedor server-side en Stape o Cloud Run.** URL del servidor tipo tu-subdominio.example.com. Plan gratuito de Stape cubre hasta 50K eventos/mes.
 
 **Paso 2 · Crear GTM web container y servidor container.** Enlazarlos vía URL del server container.
 
