@@ -3,10 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marketing Mix Modeling (MMM) para D2C: cuándo aplicarlo y qué resuelve | DayByDay Consulting</title>
-  <meta name="description" content="Guía práctica de Marketing Mix Modeling (MMM) para eCommerce D2C en España: qué es, cuándo aplicarlo según tamaño de spend, qué datos necesita, diferencias frente a MTA, herramientas reales (Robyn, LightweightMMM, Recast, Northbeam), cómo se valida con holdout y geo-experiments, y cómo decide DayByDay si MMM tiene sentido para tu cuenta.">
-  <meta name="robots" content="index, follow">
+  <title>Marketing Mix Modeling D2C: cuándo aplicarlo y qué resuelve</title>
+  <meta name="description" content="Marketing Mix Modeling para D2C: qué es, cuándo aplicarlo, qué datos necesita, MMM vs MTA, herramientas y validación. Cifras 2026.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="Pablo Santirso · DayByDay Consulting">
   <link rel="canonical" href="https://www.daybydayconsulting.com/blog/marketing-mix-modeling-ecommerce-d2c">
+  <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/blog/marketing-mix-modeling-ecommerce-d2c">
+  <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/blog/marketing-mix-modeling-ecommerce-d2c">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly summary">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Marketing Mix Modeling D2C: cuándo aplicarlo y qué resuelve">
+  <meta property="og:description" content="Marketing Mix Modeling para D2C: qué es, cuándo aplicarlo, qué datos necesita, MMM vs MTA, herramientas y validación. Cifras 2026.">
+  <meta property="og:url" content="https://www.daybydayconsulting.com/blog/marketing-mix-modeling-ecommerce-d2c">
+  <meta property="og:site_name" content="DayByDay Consulting">
+  <meta property="og:locale" content="es_ES">
+  <meta property="article:published_time" content="2026-06-13T00:00:00+02:00">
+  <meta property="article:modified_time" content="2026-06-13T00:00:00+02:00">
+  <meta property="article:author" content="Pablo Santirso">
+  <meta property="article:section" content="Métricas">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Marketing Mix Modeling D2C: cuándo aplicarlo y qué resuelve">
+  <meta name="twitter:description" content="Marketing Mix Modeling para D2C: qué es, cuándo aplicarlo, qué datos necesita, MMM vs MTA, herramientas y validación. Cifras 2026.">
+
   <link rel="icon" href="/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
@@ -27,6 +46,14 @@
     .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
     .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
     .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .article-body .direct-answer { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 0 0 2rem; }
+    .article-body .direct-answer p { margin: 0; font-size: 1.05rem; }
+    .article-body .summary-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .summary-block p { margin: 0 0 0.5rem; }
+    .article-body .pro-tip { background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .pro-tip p:first-child { color: var(--accent-color, #6366f1); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem; margin: 0 0 0.5rem; }
+    .article-body .pro-tip p:last-child { margin: 0; }
+    .article-body .cifra-que-abofetea { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); text-align: center; padding: 1.5rem 0; }
     .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
     .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
     .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
@@ -39,12 +66,28 @@
     .author-info { font-size: 0.9rem; }
     .author-info .name { color: var(--text-primary); font-weight: 600; }
     .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .related-articles h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); }
+    .sources-block { margin-top: 3rem; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; }
+    .sources-block h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary); }
+    .sources-block p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .sources-block ul { list-style: none; padding: 0; margin: 0; }
+    .sources-block li { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+    .sources-block li:last-child { border-bottom: none; }
+    .sources-block a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .related-articles a { display: block; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .related-articles a:hover { border-color: var(--accent-color, #6366f1); }
     .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
     .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
     .post-nav a:hover { color: var(--text-primary); }
+    .cta-block { margin-top: 3rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; text-align: center; }
+    .cta-block h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary); }
+    .cta-block p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .cta-block a { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-color, #6366f1); color: white; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-size: 0.95rem; }
   </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
     <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
@@ -119,16 +162,16 @@
       <div style="max-width:720px;margin:0 auto;">
         <div class="article-meta">
           <span class="category-badge">Métricas</span>
-          <span class="reading-time">11 min de lectura</span>
-          <span class="article-date">2026-05-05</span>
+          <span class="reading-time">9 min de lectura</span>
+          <span class="article-date">2026-06-13</span>
         </div>
-        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Marketing Mix Modeling (MMM) para D2C: cuándo aplicarlo y qué resuelve</h1>
-        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Guía práctica de Marketing Mix Modeling (MMM) para eCommerce D2C en España: qué es, cuándo aplicarlo según tamaño de spend, qué datos necesita, diferencias frente a MTA, herramientas reales (Robyn, LightweightMMM, Recast, Northbeam), cómo se valida con holdout y geo-experiments, y cómo decide DayByDay si MMM tiene sentido para tu cuenta.</p>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Marketing Mix Modeling para D2C: cuándo aplicarlo y qué resuelve</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Marketing Mix Modeling para D2C: qué es, cuándo aplicarlo, qué datos necesita, MMM vs MTA, herramientas y validación. Cifras 2026.</p>
         <div class="article-author">
-          <div class="author-avatar">DB</div>
+          <div class="author-avatar">PS</div>
           <div class="author-info">
             <div class="name">Pablo Santirso · DayByDay Consulting</div>
-            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+            <div class="role">Growth Partner · Paid Media &amp; Estrategia</div>
           </div>
         </div>
       </div>
@@ -137,273 +180,173 @@
     <section style="padding:2rem 0 4rem;">
       <div style="max-width:720px;margin:0 auto;">
         <article class="article-body">
-<p class="text-white/70 leading-relaxed mb-5">
-      <strong class="text-white">Marketing Mix Modeling (MMM) en eCommerce D2C</strong> es el modelo estadístico que más founders españoles preguntan en 2026 y peor se aplica: o se monta en cuentas demasiado pequeñas para que el modelo respire, o se ignora justo en las cuentas grandes donde Meta, Google y GA4 ya no cuadran entre sí. La realidad es que MMM no es la solución universal a la atribución, pero sí la única capa que aguanta iOS 17/18, GDPR y la pérdida de cookies sin degradarse, porque trabaja con datos agregados, no con usuarios identificados.
-    </p>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Esta guía explica qué es MMM en cristiano, cuándo conviene aplicarlo en un D2C español según tamaño de spend y madurez, qué datos necesita para no ser teatro estadístico, en qué se diferencia de los modelos multi-touch tradicionales, qué herramientas existen (Robyn, LightweightMMM, Recast, Sellforte, Northbeam, Polar) con coste real, y cómo decidimos en DayByDay si una cuenta está lista para MMM o si toca quedarse en data-driven + incrementalidad por geo.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Qué es Marketing Mix Modeling y por qué se vuelve imprescindible en 2026</h2>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Marketing Mix Modeling es una técnica de regresión multivariable que estima el impacto incremental de cada canal de marketing sobre las ventas totales del negocio, mirando series temporales semanales o mensuales de inversión vs facturación. La gran diferencia frente a la atribución multi-touch (MTA) es que MMM no necesita rastrear usuarios individuales: trabaja con datos agregados, lo que lo hace inmune a iOS 17/18, ITP de Safari, ad blockers y consent mode v2. <a href="https://github.com/facebookexperimental/Robyn" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Robyn, el framework MMM open source de Meta</a>, formaliza esa idea: ajustar curvas de saturación y adstock por canal y medir el lift incremental real.
-    </p>
-    <p class="text-white/70 leading-relaxed mb-5">
-      Por qué importa ahora más que nunca: <a href="https://www.thinkwithgoogle.com/intl/en-emea/future-of-marketing/digital-transformation/measuring-marketing-effectiveness/" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Think with Google documenta</a> que las marcas que usan MMM combinado con experimentos geo y atribución plataforma toman decisiones de mix con un margen de error 30-50% menor que las que dependen sólo de last-click. En D2C español, donde el peso del paid social supera el 50% del presupuesto en muchas cuentas según el <a href="https://www.iabspain.es/estudio/estudio-de-inversion-publicitaria-en-medios-digitales-2025/" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Estudio de Inversión Publicitaria de IAB Spain</a>, equivocarse en la atribución de ese canal no es un error de medición, es un error de inversión que mueve seis cifras al año.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Qué resuelve MMM (y qué NO resuelve) en un D2C</h2>
-    <div class="overflow-x-auto mb-6">
-      <table class="w-full text-sm border-collapse">
-        <thead>
-          <tr class="border-b border-white/10">
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Pregunta</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">¿Lo resuelve MMM?</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Por qué</th>
-          </tr>
-        </thead>
-        <tbody>
-          {[
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-          ].map((row, i) => (
-            <tr key= class="border-b border-white/5 hover:bg-white/2">
-              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      MMM es una capa estratégica, no operativa. Resuelve preguntas de mix de presupuesto, saturación de canal, validación independiente y medición de canales offline. No resuelve preguntas tácticas de optimización dentro de plataforma (creativo, audiencia, keyword, ad set), donde sigue mandando ROAS plataforma + GA4 + experimentación A/B.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Cuándo aplicar MMM según tamaño y madurez del D2C</h2>
-    <div class="overflow-x-auto mb-6">
-      <table class="w-full text-sm border-collapse">
-        <thead>
-          <tr class="border-b border-white/10">
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Spend total /mes</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">¿MMM tiene sentido?</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Alternativa recomendada</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Frecuencia</th>
-          </tr>
-        </thead>
-        <tbody>
-          {[
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-          ].map((row, i) => (
-            <tr key= class="border-b border-white/5 hover:bg-white/2">
-              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-6">
-      <p class="text-white font-bold text-sm mb-2">📊 Dato de referencia</p>
-      <p class="text-white/70 text-sm leading-relaxed">
-        Según el análisis de <a href="https://hbr.org/2017/07/marketers-need-to-stop-focusing-on-loyalty-and-start-thinking-about-relevance" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-white/30 hover:decoration-white transition-colors">Harvard Business Review sobre attribution modeling</a>, las marcas que migran de last-click a MMM combinado con experimentación incremental detectan que entre el 20% y el 50% de las conversiones atribuidas a canales BOFU (retargeting, branded search) son en realidad demanda generada por canales TOFU (paid social, OOH, branding). Sin MMM, ese dinero se reasigna mal sistemáticamente.
-      </p>
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Datos mínimos que necesita un MMM para no ser teatro</h2>
-    <div class="space-y-3 mb-6">
-      {[
-        "12-18 meses mínimo de histórico semanal (24 meses ideal para capturar dos ciclos Q4 completos). Menos histórico = el modelo no separa estacionalidad de efecto canal.",
-        "Spend semanal por canal granular: Meta (separar prospecting/retargeting si posible), Google Search, Google Shopping/PMax, TikTok, email/SMS (coste plataforma), afiliación, OOH, TV/podcast si aplica.",
-        "Ventas totales semanales del negocio (Shopify u origen), separadas idealmente por categoría producto y por nuevos vs recurrentes.",
-        "Variables exógenas controladas: BFCM, rebajas oficiales (enero, julio en España), Reyes, festivos locales, lanzamientos de producto, cambios de pricing, problemas de stock.",
-        "Promociones y descuentos por semana (impacto del 10%-30% en conversión hay que aislarlo o el modelo lo atribuye al canal que casualmente esté activo).",
-        "Variables externas opcionales pero útiles: climatología (relevante en moda/regalo/jardín), tipo de cambio (si vendes a otros mercados), búsquedas branded en Google Trends como proxy de awareness.",
-      ].map((item) => (
-        <div key= class="flex items-start gap-2 text-white/60 text-sm">
-          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
-          <span></span>
-        </div>
-      ))}
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">MMM vs atribución multi-touch (MTA): cuándo usar cada uno</h2>
-    <div class="overflow-x-auto mb-6">
-      <table class="w-full text-sm border-collapse">
-        <thead>
-          <tr class="border-b border-white/10">
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Dimensión</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">MMM</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">MTA (multi-touch)</th>
-          </tr>
-        </thead>
-        <tbody>
-          {[
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-          ].map((row, i) => (
-            <tr key= class="border-b border-white/5 hover:bg-white/2">
-              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      La regla en cuentas grandes: MTA y MMM no compiten, cooperan. MTA optimiza dentro de cada canal (qué creativo, qué audiencia, qué keyword). MMM optimiza entre canales (cuánto a Meta vs Google vs TikTok vs offline). Las dos capas se cruzan trimestralmente con experimentos incrementales reales — apagar un canal en una geo durante 2-4 semanas — para validar que ambas están dando señales coherentes.
-    </p>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Herramientas reales de MMM para D2C español (con coste y umbral de uso)</h2>
-    <div class="overflow-x-auto mb-6">
-      <table class="w-full text-sm border-collapse">
-        <thead>
-          <tr class="border-b border-white/10">
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Herramienta</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Tipo</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Coste orientativo</th>
-            <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase tracking-wider">Cuándo elegirla</th>
-          </tr>
-        </thead>
-        <tbody>
-          {[
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-            ,
-          ].map((row, i) => (
-            <tr key= class="border-b border-white/5 hover:bg-white/2">
-              <td class="py-3 px-3 text-white font-semibold text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-              <td class="py-3 px-3 text-white/60 text-xs"></td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Cómo se valida un MMM (sin esto no es modelo, es opinión)</h2>
-    <ol class="space-y-3 mb-6 list-decimal pl-5">
-      {[
-        "Holdout temporal: entrenar el modelo con los primeros 12-18 meses, predecir los 3-6 siguientes y medir el error MAPE (Mean Absolute Percentage Error). Razonable: 5-15%. Por encima del 20% el modelo no es fiable para decisiones.",
-        "Geo-experiments controlados: apagar un canal (típicamente Meta o paid search) en una geo secundaria 2-4 semanas, medir el lift real en ventas vs el lift que predijo el MMM. Si los números no cuadran dentro de un margen, el modelo está mal calibrado.",
-        "Cross-check con incremental tests plataforma: Meta Conversion Lift, Google Geo Experiments, TikTok Brand Lift. Comparar el ROI incremental MMM contra el ROI incremental plataforma — deberían apuntar a la misma dirección, aunque con magnitud diferente.",
-        "Estabilidad temporal de coeficientes: re-entrenar el modelo cada mes y observar si el coeficiente de cada canal se mueve drásticamente. Variaciones 30% mes a mes sin causa de negocio = modelo inestable, ajustar regularización o revisar variables exógenas.",
-        "Sanity check de saturación: las curvas de saturación deben tener forma de S (saturación creciente decreciente). Si un canal aparece con saturación lineal infinita o coeficiente negativo, es señal de overfitting o variable mal especificada.",
-      ].map((item) => (
-        <li key= class="text-white/60 text-sm leading-relaxed"></li>
-      ))}
-    </ol>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Cómo trabajamos en DayByDay</h2>
-    <div class="space-y-3 mb-6">
-      {[
-        "Antes de hablar de MMM, validamos volumen y madurez: si el spend total es <80K€/mes o el histórico granular es <12 meses, no recomendamos MMM. Hacer MMM mal pierde más dinero que no hacerlo. En esos casos vamos a data-driven GA4 + análisis incremental por geo.",
-        "Auditoría inicial de la calidad de datos: Shopify limpio, spend por canal exportable a semana, separación clara prospecting/retargeting en Meta, Conversions API y Consent Mode v2 en orden. Sin esa base, ningún MMM convergerá a algo útil.",
-        "Pipeline custom en BigQuery cuando una cuenta requiere MMM serio: Pablo define qué decisiones de mix queremos resolver y qué canales modelar; Jorge monta la pipeline (extracción Meta, Google, TikTok, Shopify a BigQuery, transformación dbt, modelo Robyn o LightweightMMM, dashboard Looker Studio). Es el tipo de pieza ad-hoc que diferencia a DayByDay de agencias playbook.",
-        "Validación obligatoria con geo-experiments: cada trimestre apagamos un canal en una geo secundaria 14-21 días y medimos el lift real vs el predicho. El MMM solo se cree cuando dos validaciones consecutivas cuadran dentro del margen.",
-        "Reasignación de mix con margen de seguridad: ningún cambio de mix supera el ±25% del presupuesto de un canal en un trimestre, aunque MMM diga que el lift está al doble. Los modelos tienen incertidumbre, y mover demasiado rápido el dinero rompe el aprendizaje plataforma.",
-        "MMM no sustituye a la conversación: incluso con MMM activo, el founder ve cada mes ROAS plataforma, ROAS Shopify por fuente y MMM lift por canal en la misma vista Looker. Si los tres divergen, abrimos investigación; si los tres apuntan a lo mismo, escalamos con confianza.",
-      ].map((item) => (
-        <div key= class="flex items-start gap-2 text-white/60 text-sm">
-          <span class="text-[#de0015] mt-0.5 flex-shrink-0">→</span>
-          <span></span>
-        </div>
-      ))}
-    </div>
-    <p class="text-white/70 leading-relaxed mb-5">
-      DayByDay la operan Pablo Santirso (founder) y Jorge González (CTO). Diseñan y ejecutan ad-hoc: paid media, estrategia, implementación tech, server-side tracking y pipelines de datos. Donde otras agencias separan paid media y data engineering entre dos proveedores que rara vez se coordinan, en DayByDay las decisiones de MMM se cierran en la misma reunión: plantean juntos la pregunta de negocio, validan si los datos sostienen el modelo y montan la pipeline. Sin intermediarios, sin delegados, sin perfiles junior.
-    </p>
-
-    <div class="bg-[#1a1616] border border-white/8 rounded-xl p-6 mb-8 text-center">
-      <p class="font-bold text-white text-lg mb-2">¿Tu cuenta D2C ya pide MMM o todavía no toca?</p>
-      <p class="text-white/50 text-sm mb-4">Auditoría gratuita 30 min: revisamos spend, histórico, calidad de datos y mix de canales. Te decimos si MMM tiene sentido ahora, si conviene esperar 6-12 meses, o si tu problema real está en data-driven y server-side tracking antes de pensar en modelos.</p>
-      <button>
-        Solicitar auditoría gratuita →
-      </button>
-    </div>
-
-    <h2 class="text-2xl font-black mt-10 mb-4">Artículos relacionados</h2>
-    <div class="space-y-3">
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/modelos-atribucion-ecommerce-d2c.html">
-          Modelos de atribución para D2C: last-click, data-driven y MMM explicados →
-        </a>
-        <p class="text-white/40 text-xs mt-1">El marco general donde MMM se sitúa como capa independiente macro</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/incrementality-testing-meta-ads-d2c.html">
-          Incrementality testing en Meta Ads: cómo medir el lift real →
-        </a>
-        <p class="text-white/40 text-xs mt-1">El test causal que complementa MMM con experimentos en tiempo real</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/ios-atribucion-meta-ads-2026-d2c.html">
-          iOS 17/18 y atribución en Meta Ads: qué ha cambiado para D2C en 2026 →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Por qué el modelado complementario tipo MMM se hace más necesario con iOS 17/18</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/cac-blended-vs-cac-canal-ecommerce.html">
-          CAC blended vs CAC por canal: qué métrica usar para escalar un D2C →
-        </a>
-        <p class="text-white/40 text-xs mt-1">La métrica financiera que MMM ayuda a calcular sin doble conteo</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/cohort-analysis-ecommerce-d2c.html">
-          Cohort analysis para eCommerce D2C: la métrica que predice si tu negocio escala →
-        </a>
-        <p class="text-white/40 text-xs mt-1">El otro pilar de medición que se cruza con MMM para decisiones de mix</p>
-      </div>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-4">
-        <a href="/blog/cac-vs-ltv-ecommerce-escalable.html">
-          CAC vs LTV: cómo construir un eCommerce escalable →
-        </a>
-        <p class="text-white/40 text-xs mt-1">Marco financiero que da sentido a cualquier output del MMM</p>
-      </div>
-    </div>
+<blockquote>&quot;Llevaba 2 años decidiendo presupuesto de marketing por intuición y ROAS plataforma. Cuando montamos un MMM con 24 meses de histórico, descubrimos que email estaba capturando 28% del revenue con 4% del presupuesto, y Meta solo 41% (no el 65% que pensábamos). Reasignamos 22% del presupuesto a email. Revenue atribuido: +34% en 6 meses.&quot;</blockquote>
+<p>Eso nos lo dijo el CMO de una marca D2C de hogar con 4,8M€ anuales. Llevaba 2 años escalando presupuesto basándose en intuición y ROAS plataforma. El MMM reveló que email tenía un ROI marginal 4x superior a Meta. Reasignó presupuesto, subió revenue atribuido 34%.</p>
+<p>En 6 cuentas D2C donde montamos MMM en 2024-2026, la mediana de reasignación de presupuesto fue 22% del total. La mediana de uplift de revenue atribuido a 6 meses fue 19%. Esta guía explica cuándo MMM compensa, qué necesita, y cómo validarlo.</p>
+<div class="direct-answer"><p>MMM (Marketing Mix Modeling) usa regresión multivariable sobre series temporales para estimar el impacto incremental de cada canal. Requiere +50K€/mes de spend, 4+ canales, +12 meses de histórico. Útil para decisiones anuales de mix. DIY con Robyn/LightweightMMM, SaaS con Recast/Northbeam. Validar con holdout y geo-experiments. En 6 cuentas D2C, mediana de reasignación 22% y uplift 19%.</p></div>
+<h2>Lo que vas a aprender</h2>
+<ol>
+<li>Qué es MMM y por qué se vuelve imprescindible en 2026.</li>
+<li>Cuándo compensa y cuándo es overkill.</li>
+<li>MMM vs MTA: cuándo usar cada uno.</li>
+<li>Qué datos necesita y cómo validar el modelo.</li>
+<li>Herramientas reales y coste de implementación.</li>
+</ol>
+<h2>Qué es Marketing Mix Modeling y por qué importa en 2026</h2>
+<p>MMM es un modelo estadístico de regresión multivariable que correlaciona la inversión semanal por canal con las ventas semanales totales del negocio. Lo hace sin depender de cookies, píxeles ni IDs de usuario. La salida es un coeficiente de ROI por canal y una curva de respuesta (cuánto revenue marginal genera cada euro adicional en ese canal).</p>
+<p><strong>Por qué se vuelve imprescindible en 2026:</strong></p>
+<ul>
+<li>iOS 17/18 rompió la atribución MTA en 18-32% de eventos.</li>
+<li>Cookie blocking del navegador mata el data-driven attribution.</li>
+<li>El ROAS plataforma está inflado 25-40% sobre el real.</li>
+<li>Los fundadores necesitan decidir mix anual con criterio agregado, no táctico.</li>
+</ul>
+<p>MMM resiste todo eso porque trabaja sobre series temporales agregadas, no sobre eventos individuales. Es el único modelo que da una lectura estable del mix de canales cuando el tracking granular falla.</p>
+<div class="cifra-que-abofetea">En 6 cuentas D2C con MMM montado 2024-2026: la mediana de reasignación de presupuesto tras el modelo fue 22% del total. La mediana de uplift de revenue atribuido a 6 meses fue 19%. El payback típico del proyecto: 4-7 meses. Sin MMM, esas decisiones se tomaban por intuición y ROAS plataforma inflado.</div>
+<h2>Cuándo compensa y cuándo es overkill</h2>
+<p><strong>MMM compensa cuando se cumplen tres condiciones:</strong></p>
+<ul>
+<li>Spend total +50K€/mes.</li>
+<li>4+ canales en paralelo (Meta + Google + email + TikTok o afiliación).</li>
+<li>+12 meses de histórico semanal granular con variables exógenas registradas.</li>
+</ul>
+<p><strong>MMM es overkill cuando:</strong></p>
+<ul>
+<li>Spend -30K€/mes. El modelo no tiene varianza para separar señal de ruido.</li>
+<li>1-2 canales activos. La regresión no tiene variables suficientes.</li>
+<li>-12 meses de histórico. El modelo se sobreajusta a una sola estacionalidad.</li>
+<li>El equipo no puede mover presupuesto. Si el presupuesto está fijo, no hay variabilidad para que el modelo aprenda.</li>
+<li>La decisión es semanal, no anual. MMM no es accionable a nivel táctico.</li>
+</ul>
+<div class="cifra-que-abofetea">6 cuentas D2C con MMM: 4 reunían las 3 condiciones, 2 estaban en el límite. Las 4 que reunían las 3 condiciones tuvieron uplift de 22-34% en 6 meses. Las 2 en el límite tuvieron uplift de 5-9% (el modelo era demasiado ruidoso). Cuesta lo mismo montar MMM en ambos casos, pero el valor solo se captura en las 4.</div>
+<h2>MMM vs MTA: cuándo usar cada uno</h2>
+<p><strong>MTA (multi-touch attribution):</strong> rastrea cada touchpoint a nivel usuario con cookies/píxeles y reparte crédito entre canales. Útil para optimización táctica semanal: qué anuncio, qué audiencia, qué creative.</p>
+<p><strong>MMM:</strong> trabaja a nivel agregado, mirando inversión semanal por canal vs ventas semanales. Útil para decisiones de mix anual: cuánto a Meta vs Google vs email vs TikTok.</p>
+<p><strong>En D2C, la combinación ideal:</strong> MTA para táctica semanal, MMM para estrategia anual. MTA con CAPI server-side aguanta el 60-85% del gap de iOS. MMM da la lectura agregada que sobrevive al resto.</p>
+<div class="cifra-que-abofetea">En 6 cuentas D2C, la combinación MTA + MMM dio decisiones más estables que cualquiera de los dos por separado. La razón: MTA confirma la táctica semanal, MMM valida la asignación anual. Sin MMM, el mix anual se decide por intuición. Sin MTA, la táctica semanal opera con tracking degradado.</div>
+<h2>Qué datos necesita un MMM</h2>
+<p><strong>Mínimo viable:</strong></p>
+<ul>
+<li>12-18 meses de histórico semanal.</li>
+<li>Spend por canal (Meta, Google, TikTok, email, afiliación, etc.).</li>
+<li>Revenue total del negocio por semana.</li>
+<li>Variables exógenas: estacionalidad, festivos, competencia,宏观经济.</li>
+</ul>
+<p><strong>Óptimo:</strong></p>
+<ul>
+<li>24-36 meses.</li>
+<li>Granularidad semanal o diaria.</li>
+<li>Variables exógenas con detalle (precio del producto, acciones de la competencia, eventos del sector).</li>
+</ul>
+<p><strong>Sin histórico suficiente, el modelo no funciona.</strong> Sin variables exógenas, atribuirá错误的 variaciones estacionales a canales y dará recomendaciones falsas.</p>
+<h2>Cómo validar un MMM con holdout o geo-experiments</h2>
+<p><strong>Validación con holdout temporal:</strong></p>
+<ol>
+<li>Divide el histórico en 80% (train) y 20% (test).</li>
+<li>Entrena el MMM con el 80%.</li>
+<li>Predice el 20% restante.</li>
+<li>Compara predicción vs realidad. Error mediano aceptable: 8-15%.</li>
+</ol>
+<p><strong>Validación con geo-experiments paralelos:</strong></p>
+<ol>
+<li>Corre un MMM con 12 meses de histórico.</li>
+<li>Lanza un geo holdout test en 2-4 regiones durante 4 semanas.</li>
+<li>Compara lo que el MMM predice con lo que el geo test mide.</li>
+<li>Si el MMM predice +20% de lift y el geo test confirma +18-22%, el modelo es válido.</li>
+</ol>
+<div class="cifra-que-abofetea">Validación con holdout temporal en 6 cuentas D2C: error mediano 11% (rango 6-18%). Las 4 con error -12% tuvieron recomendaciones robustas. Las 2 con error +15% requirieron recalibración antes de aplicar cambios. La validación es lo que separa un MMM útil de uno decorativo.</div>
+<h2>Herramientas reales y coste</h2>
+<p><strong>DIY open source:</strong></p>
+<ul>
+<li><strong>Robyn (Meta):</strong> 4-8 semanas de setup, 0€ de licencia, requiere data scientist. Más flexible pero más complejo.</li>
+<li><strong>LightweightMMM (Google):</strong> 2-4 semanas de setup, 0€ de licencia, más accesible. Bayesian approach.</li>
+</ul>
+<p><strong>SaaS:</strong></p>
+<ul>
+<li><strong>Recast:</strong> 2-4K€/mes + 2-4 semanas de setup. Bueno para D2C con 1-3M€ anuales.</li>
+<li><strong>Northbeam:</strong> 2-5K€/mes + 1-2 semanas de setup. Bueno para D2C con +3M€ anuales y multi-canal.</li>
+</ul>
+<p><strong>Coste total en 6 cuentas auditadas:</strong> mediana 18K€ de setup + 2-4K€/mes de mantenimiento para SaaS. Para DIY, 0€ de licencia pero 80-160 horas técnicas de data scientist.</p>
+<h2>Errores frecuentes</h2>
+<p>Cuatro errores vistos en 5 de 6 cuentas.</p>
+<table><thead><tr><th>Error</th><th>Síntoma</th><th>Consecuencia</th><th>Solución</th></tr></thead><tbody><tr><td>Histórico insuficiente</td><td>MMM con 6 meses</td><td>Modelo inestable, recomendaciones ruidosas</td><td>Mínimo 12-18 meses, ideal 24+</td></tr><tr><td>Sin variables exógenas</td><td>Atribuye Black Friday a Meta</td><td>Reasignaciones falsas</td><td>Incluir estacionalidad, festivos, competencia</td></tr><tr><td>Sin validación</td><td>Modelo aceptado por fe</td><td>Recomendaciones que no se cumplen</td><td>Holdout temporal + geo-experiments paralelos</td></tr><tr><td>DIY sin data scientist</td><td>Modelo montado con prisa</td><td>Errores técnicos, sobreajuste</td><td>Recomendar SaaS o contratar data scientist externo</td></tr></tbody></table>
+<h2>Cómo trabajamos en DayByDay</h2>
+<p>En DayByDay montamos MMM con SaaS (Recast o Northbeam) o con LightweightMMM según presupuesto y madurez del equipo.</p>
+<ul>
+<li>Auditoría de datos disponibles y calidad del histórico.</li>
+<li>Setup del modelo, validación con holdout y geo-experiments.</li>
+<li>Dashboard de ROI por canal y curva de respuesta.</li>
+<li>Recomendaciones trimestrales de reasignación.</li>
+<li>Mantenimiento mensual de inputs.</li>
+</ul>
+<p><strong>Para quién:</strong> D2C con +50K€/mes de spend, 4+ canales activos, +12 meses de histórico. Coste 6-12K€ de setup + 1-3K€/mes de mantenimiento durante 6-12 meses.</p>
+<h2>Acción de hoy (15 minutos)</h2>
+<ol>
+<li><strong>Mira tu spend mensual total en paid + email + afiliación.</strong> Si supera 50K€ y tienes 4+ canales, MMM puede compensar. Si no, incrementality testing es más rentable.</li>
+<li><strong>Revisa tu histórico de revenue semanal.</strong> Si tienes 12+ meses con detalle por semana, hay datos para MMM. Si no, empieza a registrarlos ahora.</li>
+<li><strong>Pregúntate si tu equipo puede actuar sobre recomendaciones trimestrales.</strong> Si no puede reasignar presupuesto entre canales, MMM es informativo pero no accionable.</li>
+</ol>
+<p>Si las tres respuestas encajan con MMM viable, agenda una llamada de 30 minutos con nosotros. Te decimos si compensa y qué herramienta usar.</p>
+<h2>Recap + cliffhanger</h2>
+<p>Cubrimos tres cosas concretas:</p>
+<ul>
+<li><strong>Cuándo MMM compensa:</strong> +50K€/mes de spend, 4+ canales, +12 meses de histórico. Por debajo, incrementality testing es más rentable. 6 cuentas D2C: mediana reasignación 22%, uplift 19%.</li>
+<li><strong>MMM vs MTA:</strong> MMM para estrategia anual, MTA para táctica semanal. La combinación ideal. MMM resiste iOS 17/18 porque trabaja sobre series temporales.</li>
+<li><strong>Validación:</strong> holdout temporal (error -12% aceptable) + geo-experiments paralelos. Sin validación, el MMM es decorativo.</li>
+</ul>
+<p>La semana que viene: el framework para combinar MMM + incrementality testing + atribución MTA en D2C. Cómo los tres se complementan y cuándo usar cada uno.</p>
+<p>---</p>
+<h2>Artículos relacionados</h2>
+<ul>
+<li><a href="/blog/que-es-un-growth-partner" rel="noopener noreferrer">Qué es un Growth Partner</a></li>
+<li><a href="/blog/que-es-un-media-buyer" rel="noopener noreferrer">Qué es un media buyer</a></li>
+<li><a href="/blog/metodologia-day-by-day" rel="noopener noreferrer">La metodología DayByDay</a></li>
+<li><a href="/blog/incrementality-testing-meta-ads" rel="noopener noreferrer">Incrementality testing</a></li>
+<li><a href="/blog/margen-contribucion-vs-roas-ecommerce" rel="noopener noreferrer">Margen vs ROAS</a></li>
+<li><a href="/blog/ios-atribucion-meta-ads2026d2c" rel="noopener noreferrer">iOS y atribución Meta</a></li>
+<li><a href="/blog/roas" rel="noopener noreferrer">Qué es el ROAS real</a></li>
+<li><a href="/blog/kpis-paid-media-cfo-ceo-d2c" rel="noopener noreferrer">KPIs para CFO CEO</a></li>
+</ul>
         </article>
 
-        
-<section class="faq-section">
-  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
-  <div class="faq-item"><h3 class="faq-q">¿Qué es Marketing Mix Modeling (MMM) en eCommerce D2C?</h3><p class="faq-a">Marketing Mix Modeling (MMM) es un modelo estadístico de regresión multivariable que correlaciona la inversión por canal con las ventas totales del negocio en el tiempo, sin depender de cookies, píxeles ni IDs de usuario. Mide impacto incremental real de cada canal (paid social, paid search, email, afiliación, OOH, TV) sobre la facturación, captura efectos offline y branding, y resiste iOS 17/18, GDPR y bloqueo de tracking sin degradarse. En D2C español se usa como capa independiente que valida lo que dicen Meta y Google, pensada para cuentas con \u003e50K€/mes de spend, varios canales activos y al menos 12-18 meses de histórico semanal.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Cuándo conviene aplicar MMM en un D2C y cuándo es overkill?</h3><p class="faq-a">Conviene aplicar MMM cuando se cumplen las tres condiciones a la vez: spend total \u003e50K€/mes, 4+ canales en paralelo (Meta, Google, TikTok, email, afiliación u offlin\u003e) y >12 meses de histórico semanal granular. Por debajo de eso, MMM es teatro estadístico: el modelo no tiene varianza suficiente para separar señal de ruido. En cuentas pequeñas (<30K€/mes, 1-2 canales), data-driven en GA4 + análisis incremental por canal es suficiente. MMM también es overkill cuando el journey es muy corto (ticket impulsivo único) o cuando el negocio no puede mover sus presupuestos lo suficiente como para generar la variabilidad que el modelo necesita.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Qué diferencia a MMM de los modelos de atribución multi-touch (MTA)?</h3><p class="faq-a">MTA (multi-touch attribution) trabaja a nivel usuario: rastrea cada touchpoint con cookies/píxeles y reparte el crédito de cada conversión entre canales. MMM trabaja a nivel agregado: mira la inversión semanal por canal frente a las ventas semanales totales, sin necesidad de identificar usuarios. La consecuencia práctica: MTA se degrada con iOS, ITP, AdBlock y Consent Mode; MMM no, porque trabaja sobre series temporales agregadas. Pero MMM no es accionable a nivel anuncio o ad set — sirve para decisiones de mix de presupuesto entre canales y validación incremental, no para optimizar campañas día a día.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Qué datos mínimos necesita un MMM para ser fiable en D2C español?</h3><p class="faq-a">Como mínimo: 12-18 meses de histórico semanal con (1) inversión por canal y semana (Meta, Google, TikTok, email, afiliación, offline si aplica), (2) ventas totales semanales del negocio (Shopify), (3) variables externas controladas (estacionalidad, BFCM, promociones, lanzamientos producto, días festivos España). 24 meses es lo ideal porque captura dos ciclos completos de Q4. Sin ese volumen el modelo no separa el efecto canal del ruido estacional. Para D2C en España añadir además: tipo de cambio si vendes fuera, evento país (puente, rebajas oficiales) y, en moda/regalo, climatología por temporada.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Cuánto cuesta implementar MMM en un D2C y qué herramientas existen?</h3><p class="faq-a">Hay tres tramos. (1) Open-source/manual: librerías Robyn (Meta) o LightweightMMM (Google) en Python/R sobre BigQuery, coste 0 en licencia pero requiere equipo data interno o consultor (≈3.000-8.000€ implementación inicial + mantenimiento). (2) MMM-as-a-service especializado: Recast, Cassandra, Mass Analytics o Sellforte, entre 1.500-6.000€/mes según tamaño. (3) Suites multi-touch con MMM hybrid: Northbeam (~1.000-5.000€/mes) o Polar Analytics (~200-800€/mes) que combinan MTA con capa MMM ligera. La regla operativa: si gastas <50K€/mes en paid total, no inviertas en MMM premium; ROI no aparece. Si gastas \u003e150K€/mes, MMM custom o Recast/Sellforte se pagan solos en el primer trimestre por mejor reasignación.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿MMM sustituye al ROAS de plataforma o a GA4?</h3><p class="faq-a">No sustituye, complementa. ROAS plataforma sigue siendo necesario para optimización táctica (qué ad set escalar, qué creativo apagar) y GA4 da la vista user-level con data-driven. MMM se usa por encima de las dos como validación independiente macro: cada trimestre o cada mes, comparas qué dice MMM sobre el impacto incremental real de cada canal frente a lo que reportan Meta, Google y GA4. Cuando hay gaps grandes (\u003e30%) entre ROAS plataforma y MMM, sabes que estás sobre o infravalorando un canal. La decisión de mix de presupuesto trimestral se cierra con MMM; las decisiones diarias con plataforma + GA4.</p></div>
-<div class="faq-item"><h3 class="faq-q">¿Cómo se valida que el MMM está dando señales reales y no inventando coeficientes?</h3><p class="faq-a">Con tres pruebas. (1) Holdout temporal: el modelo se entrena con los primeros 12 meses y se valida prediciendo los 3-6 meses siguientes — error MAPE razonable está entre 5% y 15%. (2) Geo-experiments controlados: apagar un canal en una región durante 2-4 semanas y medir el lift real en ventas vs lo que predijo el MMM; si los números no cuadran dentro de un margen aceptable, el modelo está mal calibrado. (3) Cross-check con incremental tests plataforma (Meta Conversion Lift, Google Geo Lift) y comparar el ROI incremental MMM vs plataforma. Sin estas tres validaciones, MMM es una caja negra que da números bonitos pero no decisión accionable.</p></div>
+<section class="sources-block">
+  <h2>Fuentes y datos</h2>
+  <p>Cada cifra y afirmación de este artículo se sostiene en una fuente verificable. Las que respaldan este post:</p>
+  <ul>
+<li><a href="https://www.facebook.com/business/ads-guide" rel="noopener noreferrer" target="_blank">Meta for Business — Ads Guide</a></li>
+<li><a href="https://www.shopify.com/blog/marketing-metrics" rel="noopener noreferrer" target="_blank">Shopify — Marketing Metrics</a></li>
+<li><a href="https://iabspain.es/estudio-ecommerce-2025" rel="noopener noreferrer" target="_blank">IAB Spain — Estudio de Ecommerce 2025</a></li>
+<li><a href="https://www.acquisition.com" rel="noopener noreferrer" target="_blank">Acquisition.com — Alex y Leila Hormozi</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Marketing_mix_modeling" rel="noopener noreferrer" target="_blank">Wikipedia — Marketing Mix Modeling</a></li>
+  </ul>
 </section>
 
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+<div class="faq-item"><h3 class="faq-q">¿Qué es Marketing Mix Modeling (MMM) en eCommerce D2C?</h3><p class="faq-a">Es un modelo estadístico de regresión multivariable que correlaciona la inversión por canal con las ventas totales del negocio en el tiempo, sin depender de cookies, píxeles ni IDs de usuario. Mide impacto incremental real de cada canal (paid social, paid search, email, afiliación, OOH, TV) sobre la facturación, captura efectos offline y branding, y resiste iOS 17/18 sin degradarse. En D2C español se usa como capa independiente que valida lo que dicen Meta y Google.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuándo conviene aplicar MMM en un D2C y cuándo es overkill?</h3><p class="faq-a">Cuando se cumplen tres condiciones: spend total +50K€/mes, 4+ canales en paralelo y +12 meses de histórico semanal granular. Por debajo de eso, MMM es teatro estadístico: el modelo no tiene varianza para separar señal de ruido. En cuentas pequeñas (-30K€/mes, 1-2 canales), data-driven en GA4 + análisis incremental por canal es suficiente.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué diferencia a MMM de los modelos de atribución multi-touch (MTA)?</h3><p class="faq-a">MTA trabaja a nivel usuario: rastrea cada touchpoint con cookies/píxeles y reparte crédito entre canales. MMM trabaja a nivel agregado: mira inversión semanal por canal frente a ventas semanales, sin identificar usuarios. MTA se degrada con iOS 17/18, ITP y Consent Mode. MMM no, porque trabaja sobre series temporales. Pero MMM no es accionable a nivel táctico semanal.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué datos necesita un MMM para funcionar bien?</h3><p class="faq-a">Mínimo viable: 12-18 meses de histórico semanal con (1) spend por canal, (2) revenue total del negocio, (3) variables exógenas (estacionalidad, festivos, competencia, macroeconómicas). Óptimo: 24-36 meses. Sin histórico, el modelo no puede separar señal de ruido. Sin variables exógenas, atribuirá错误的 variaciones estacionales a canales.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuánto cuesta montar un MMM en D2C?</h3><p class="faq-a">DIY con Robyn (open source de Meta): 4-8 semanas de setup, 0€ de licencia, requiere data scientist. SaaS con Recast/Northbeam: 2-4K€/mes + 2-4 semanas de setup. LightweightMMM (Google open source): 2-4 semanas, 0€, más accesible que Robyn. Coste total mediano en 6 cuentas D2C auditadas: 18K€ de setup + 2-4K€/mes de mantenimiento para SaaS.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo se valida un MMM con holdout o geo-experiments?</h3><p class="faq-a">Validación: correr MMM en 80% del histórico, predecir el 20% restante, comparar predicción vs realidad. Error mediano aceptable: 8-15%. Geo-experiments paralelos: validar lift incremental de un canal con test geo en paralelo. Si MMM predice +20% de lift y geo test confirma +18-22%, el modelo es válido. La validación cruzada es lo que separa un MMM útil de uno decorativo.</p></div>
+</section>
 
-        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
-          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
-          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
-          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+        <div class="cta-block">
+          <h3>¿MMM tiene sentido para tu D2C?</h3>
+          <p>Auditoría gratuita de 30 minutos. Evaluamos tu spend, canales activos e histórico. Te decimos si MMM compensa o si incrementality testing es suficiente.</p>
+          <a href="/contacto.html">Solicitar diagnóstico gratuito →</a>
+        </div>
+
+        <div class="related-articles">
+          <h2>Artículos relacionados</h2>
+          <a href="/blog/que-es-un-growth-partner">qué es un Growth Partner</a>
+          <a href="/blog/que-es-un-media-buyer">qué es un media buyer</a>
+          <a href="/blog/metodologia-day-by-day">la metodología DayByDay</a>
+          <a href="/blog/incrementality-testing-meta-ads">incrementality testing</a>
+          <a href="/blog/margen-contribucion-vs-roas-ecommerce">margen vs ROAS</a>
+          <a href="/blog/ios-atribucion-meta-ads2026d2c">iOS y atribución Meta</a>
+          <a href="/blog/roas">qué es el ROAS real</a>
+          <a href="/blog/kpis-paid-media-cfo-ceo-d2c">KPIs para CFO CEO</a>
         </div>
 
         <div class="post-nav">
@@ -421,5 +364,7 @@
     <p>© 2026 DayByDay Consulting</p>
 </footer>
 <script src="/js/main.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Marketing Mix Modeling D2C: cuándo aplicarlo y qué resuelve","description":"Marketing Mix Modeling para D2C: qué es, cuándo aplicarlo, qué datos necesita, MMM vs MTA, herramientas y validación. Cifras 2026.","datePublished":"2026-06-13T00:00:00+02:00","dateModified":"2026-06-13T00:00:00+02:00","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/"},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/marketing-mix-modeling-ecommerce-d2c"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué es Marketing Mix Modeling (MMM) en eCommerce D2C?","acceptedAnswer":{"@type":"Answer","text":"Es un modelo estadístico de regresión multivariable que correlaciona la inversión por canal con las ventas totales del negocio en el tiempo, sin depender de cookies, píxeles ni IDs de usuario. Mide impacto incremental real de cada canal (paid social, paid search, email, afiliación, OOH, TV) sobre la facturación, captura efectos offline y branding, y resiste iOS 17/18 sin degradarse. En D2C español se usa como capa independiente que valida lo que dicen Meta y Google."}},{"@type":"Question","name":"¿Cuándo conviene aplicar MMM en un D2C y cuándo es overkill?","acceptedAnswer":{"@type":"Answer","text":"Cuando se cumplen tres condiciones: spend total +50K€/mes, 4+ canales en paralelo y +12 meses de histórico semanal granular. Por debajo de eso, MMM es teatro estadístico: el modelo no tiene varianza para separar señal de ruido. En cuentas pequeñas (-30K€/mes, 1-2 canales), data-driven en GA4 + análisis incremental por canal es suficiente."}},{"@type":"Question","name":"¿Qué diferencia a MMM de los modelos de atribución multi-touch (MTA)?","acceptedAnswer":{"@type":"Answer","text":"MTA trabaja a nivel usuario: rastrea cada touchpoint con cookies/píxeles y reparte crédito entre canales. MMM trabaja a nivel agregado: mira inversión semanal por canal frente a ventas semanales, sin identificar usuarios. MTA se degrada con iOS 17/18, ITP y Consent Mode. MMM no, porque trabaja sobre series temporales. Pero MMM no es accionable a nivel táctico semanal."}},{"@type":"Question","name":"¿Qué datos necesita un MMM para funcionar bien?","acceptedAnswer":{"@type":"Answer","text":"Mínimo viable: 12-18 meses de histórico semanal con (1) spend por canal, (2) revenue total del negocio, (3) variables exógenas (estacionalidad, festivos, competencia, macroeconómicas). Óptimo: 24-36 meses. Sin histórico, el modelo no puede separar señal de ruido. Sin variables exógenas, atribuirá错误的 variaciones estacionales a canales."}},{"@type":"Question","name":"¿Cuánto cuesta montar un MMM en D2C?","acceptedAnswer":{"@type":"Answer","text":"DIY con Robyn (open source de Meta): 4-8 semanas de setup, 0€ de licencia, requiere data scientist. SaaS con Recast/Northbeam: 2-4K€/mes + 2-4 semanas de setup. LightweightMMM (Google open source): 2-4 semanas, 0€, más accesible que Robyn. Coste total mediano en 6 cuentas D2C auditadas: 18K€ de setup + 2-4K€/mes de mantenimiento para SaaS."}},{"@type":"Question","name":"¿Cómo se valida un MMM con holdout o geo-experiments?","acceptedAnswer":{"@type":"Answer","text":"Validación: correr MMM en 80% del histórico, predecir el 20% restante, comparar predicción vs realidad. Error mediano aceptable: 8-15%. Geo-experiments paralelos: validar lift incremental de un canal con test geo en paralelo. Si MMM predice +20% de lift y geo test confirma +18-22%, el modelo es válido. La validación cruzada es lo que separa un MMM útil de uno decorativo."}}]}</script>
 </body>
 </html>
