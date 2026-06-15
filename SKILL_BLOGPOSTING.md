@@ -77,10 +77,16 @@ If any fails, abort and report. Do not push.
 
 ## STEP 7 — INDEXATION INFRASTRUCTURE
 
+This step is **automated** as part of `scripts/rewrite-batch.mjs` and `scripts/build-static.sh` — no manual run needed. After all 6 gates pass for a slug, the pipeline runs in this order:
+
 - `node scripts/update-llms-txt.mjs <slug>` → appends/replaces the post entry.
-- `node scripts/update-sitemap.mjs` → regenerates sitemap.xml with real `lastmod` and tiered priorities.
-- `node scripts/indexnow.mjs /blog/<slug>.html` → submits to IndexNow (status 202 expected).
-- `node scripts/gsc-push.mjs /blog/<slug>.html` → records intent (full GSC URL Inspection requires service account JWT signing; for now this logs the intent and the URL goes into the human-applied GSC queue).
+- `node scripts/update-sitemap.mjs` → regenerates sitemap.xml with real `lastmod` and tiered priorities. **Runs only on the final slug of a batch** to avoid redundant regenerations.
+- `node scripts/indexnow.mjs /blog/<slug>.html` → submits to IndexNow (status 202 expected; Bing, Yandex, Seznam accept it).
+- `node scripts/gsc-push.mjs /blog/<slug>.html` → POSTs to Google Search Console URL Inspection API. Real JWT signing via `google-auth-library` + service account. **Optional step**: a 403 (no GSC access) reports WARN, not FAIL, so the rest of the pipeline succeeds even before the service account is added to GSC.
+
+**To skip the indexation phase for a run:** pass `--no-index` to `rewrite-batch.mjs`. Useful for dry runs or when the indexation will be run separately.
+
+**To enable GSC push end-to-end (no WARN):** add `hermes-blogpost@daybyday-gsc.iam.gserviceaccount.com` (or current service account) as Owner in Search Console for `https://www.daybydayconsulting.com/`. The script will detect access and report PASS instead of WARN.
 
 ## STEP 8 — REPORT BACK
 
