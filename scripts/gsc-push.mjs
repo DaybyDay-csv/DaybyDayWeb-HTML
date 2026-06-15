@@ -113,6 +113,10 @@ async function main() {
   };
   console.log('\n=== GSC PUSH SUMMARY ===');
   console.log(JSON.stringify(summary, null, 2));
+
+  if (summary.failed > 0) {
+    process.exit(1);
+  }
 }
 
 main().catch(err => {

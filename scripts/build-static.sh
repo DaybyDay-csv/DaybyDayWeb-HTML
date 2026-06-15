@@ -49,7 +49,7 @@ render_one() {
   echo "==> [$slug] indexnow"
   node scripts/indexnow.mjs "/blog/$slug.html"
   echo "==> [$slug] gsc-push"
-  node scripts/gsc-push.mjs "/blog/$slug.html"
+  node scripts/gsc-push.mjs "/blog/$slug.html" || echo "  (gsc-push optional, non-fatal)"
   echo ""
   echo "==> [$slug] DONE"
 }

@@ -7,6 +7,7 @@
 //   node scripts/rewrite-batch.mjs --next 5                 # first 5 legacy with migration_state: rendered
 //   node scripts/rewrite-batch.mjs --all                    # all legacy with migration_state: rendered
 //   node scripts/rewrite-batch.mjs --status                 # print inventory only
+//   node scripts/rewrite-batch.mjs --no-index               # skip llms/sitemap/indexnow/gsc push
 //
 // For each slug, runs the 6 gates in order:
 //   1. qa-checklist.mjs                  (Hormozi voice, estructura, contenido, SEO)
@@ -16,13 +17,19 @@
 //   5. verify-render.mjs <slug> --local  (verifies the rendered HTML)
 //   6. verify-internal-links.mjs         (every internal href resolves)
 //
+// After all 6 gates pass for a slug, runs the indexation phase:
+//   7. update-llms-txt.mjs               (appends entry to llms.txt)
+//   8. update-sitemap.mjs                 (regenerates sitemap.xml, only on final slug of the batch)
+//   9. indexnow.mjs                      (Bing, Yandex, Seznam; status 202 expected)
+//  10. gsc-push.mjs                      (Google Search Console URL Inspection, when service account has access)
+//
 // If all 6 gates pass, the source .md is updated: migration_state "rendered" → "good".
 // The 2 stages that do NOT touch blog/<slug>.html (qa-checklist, verify-external-links,
 // verify-internal-links) run first against the .md. Then the 3 rendering stages run.
 // This matches the order in scripts/build-static.sh.
 //
 // Exit codes:
-//   0 — all slugs in the batch passed all 6 gates
+//   0 — all slugs in the batch passed all 6 gates and were pushed for indexing
 //   1 — usage error
 //   2 — at least one slug failed at least one gate
 //   3 — at least one slug triggered qa-checklist REESCRIBIR / REGENERAR (needs human)
@@ -48,6 +55,15 @@ const GATES = [
   { name: 'seo-pack', script: 'seo-pack.mjs', args: (s) => [s], timeoutMs: 30_000 },
   { name: 'verify-render', script: 'verify-render.mjs', args: (s) => [s, '--local'], timeoutMs: 30_000 },
   { name: 'verify-internal-links', script: 'verify-internal-links.mjs', args: (s) => [s], timeoutMs: 30_000 },
+];
+
+// Post-pipeline indexation phase. Runs after the 6 gates pass for a slug.
+// `once:true` runs only on the final slug of the batch (sitemap regen is heavy).
+const INDEX_STEPS = [
+  { name: 'update-llms-txt', script: 'update-llms-txt.mjs', args: (s) => [s], once: false, optional: false },
+  { name: 'update-sitemap', script: 'update-sitemap.mjs', args: () => [], once: true, optional: false },
+  { name: 'indexnow', script: 'indexnow.mjs', args: (s) => [`/blog/${s}.html`], once: false, optional: false },
+  { name: 'gsc-push', script: 'gsc-push.mjs', args: (s) => [`/blog/${s}.html`], once: false, optional: true },
 ];
 
 // Sanity check: all 6 gate scripts must exist and parse before we start.
@@ -124,6 +140,51 @@ async function runGate(gate, slug) {
   }
 }
 
+async function runIndexStep(step, slug, isFinal) {
+  if (step.once && !isFinal) return { gate: step.name, slug, skipped: 'once' };
+  const start = Date.now();
+  const args = step.args(slug);
+  try {
+    const { stdout, stderr } = await execFileP('node', [path.join(__dirname, step.script), ...args], {
+      timeout: 60_000,
+      maxBuffer: 5 * 1024 * 1024,
+    });
+    return {
+      gate: step.name,
+      slug,
+      exitCode: 0,
+      durationMs: Date.now() - start,
+      stdout,
+      stderr,
+      pass: true,
+    };
+  } catch (err) {
+    const exitCode = typeof err.code === 'number' ? err.code : 1;
+    // Optional steps (like gsc-push without GSC access) report but don't fail the slug.
+    if (step.optional) {
+      return {
+        gate: step.name,
+        slug,
+        exitCode,
+        durationMs: Date.now() - start,
+        stdout: err.stdout || '',
+        stderr: err.stderr || '',
+        pass: false,
+        optional: true,
+      };
+    }
+    return {
+      gate: step.name,
+      slug,
+      exitCode,
+      durationMs: Date.now() - start,
+      stdout: err.stdout || '',
+      stderr: err.stderr || '',
+      pass: false,
+    };
+  }
+}
+
 function summarizeGate(result) {
   if (result.pass) {
     return `  PASS  ${result.gate.padEnd(24)} ${result.durationMs}ms`;
@@ -136,8 +197,8 @@ function summarizeGate(result) {
   return `  FAIL  ${result.gate.padEnd(24)} ${result.durationMs}ms  exit=${result.exitCode}`;
 }
 
-async function processSlug(slug) {
-  const slugReport = { slug, gates: [], markedGood: false, needsHuman: false };
+async function processSlug(slug, isFinal = false) {
+  const slugReport = { slug, gates: [], indexSteps: [], markedGood: false, needsHuman: false };
   for (const gate of GATES) {
     const r = await runGate(gate, slug);
     slugReport.gates.push(r);
@@ -160,6 +221,34 @@ async function processSlug(slug) {
   } catch (err) {
     slugReport.markError = err.message;
   }
+  // Indexation phase: push to llms.txt, sitemap, IndexNow, GSC.
+  for (const step of INDEX_STEPS) {
+    const r = await runIndexStep(step, slug, isFinal);
+    slugReport.indexSteps.push(r);
+  }
+  return slugReport;
+}
+
+async function processSlugNoIndex(slug) {
+  const slugReport = { slug, gates: [], indexSteps: [], markedGood: false, needsHuman: false };
+  for (const gate of GATES) {
+    const r = await runGate(gate, slug);
+    slugReport.gates.push(r);
+    if (!r.pass) {
+      if (gate.name === 'qa-checklist' && (r.exitCode === 2 || r.exitCode === 3)) {
+        slugReport.needsHuman = true;
+        return slugReport;
+      }
+      return slugReport;
+    }
+  }
+  try {
+    const m = await markSlugGood(slug);
+    slugReport.markedGood = m.changed;
+    slugReport.markReason = m.reason;
+  } catch (err) {
+    slugReport.markError = err.message;
+  }
   return slugReport;
 }
 
@@ -168,7 +257,7 @@ function printReport(reports) {
   console.log('='.repeat(70));
   console.log('  REWRITE-BATCH REPORT');
   console.log('='.repeat(70));
-  let pass = 0, fail = 0, human = 0;
+  let pass = 0, fail = 0, human = 0, indexed = 0;
   for (const r of reports) {
     console.log('');
     console.log(`[${r.slug}]`);
@@ -179,6 +268,22 @@ function printReport(reports) {
       } else if (!g.pass) {
         fail++;
       }
+    }
+    if (r.indexSteps && r.indexSteps.length > 0) {
+      console.log('  --- indexation ---');
+      for (const s of r.indexSteps) {
+        if (s.skipped) {
+          console.log(`  SKIP  ${s.gate.padEnd(24)} (${s.skipped})`);
+        } else if (s.pass) {
+          console.log(`  PASS  ${s.gate.padEnd(24)} ${s.durationMs}ms`);
+        } else if (s.optional) {
+          console.log(`  WARN  ${s.gate.padEnd(24)} ${s.durationMs}ms  exit=${s.exitCode}  (optional — no GSC access yet?)`);
+        } else {
+          console.log(`  FAIL  ${s.gate.padEnd(24)} ${s.durationMs}ms  exit=${s.exitCode}`);
+        }
+      }
+      const allIndexPass = r.indexSteps.filter(s => !s.skipped && !s.optional).every(s => s.pass);
+      if (allIndexPass) indexed++;
     }
     if (r.gates.every(g => g.pass)) {
       const markMsg = r.markedGood
@@ -194,15 +299,17 @@ function printReport(reports) {
   }
   console.log('');
   console.log('-'.repeat(70));
-  console.log(`  ${pass} passed · ${fail} failed · ${human} need human rewrite · ${reports.length} total`);
+  console.log(`  ${pass} passed · ${fail} failed · ${human} need human rewrite · ${indexed}/${pass} indexed · ${reports.length} total`);
   console.log('='.repeat(70));
 }
 
 // ---- CLI parsing ----
 
 const args = process.argv.slice(2);
+const noIndex = args.includes('--no-index');
+const filteredArgs = args.filter(a => a !== '--no-index');
 
-if (args.length === 0 || args[0] === '--status') {
+if (filteredArgs.length === 0 || filteredArgs[0] === '--status') {
   const all = await listLegacySlugs();
   console.log(`Legacy inventory: ${all.length} slugs with migration_state: "rendered"`);
   for (const s of all) console.log('  ' + s);
@@ -210,11 +317,11 @@ if (args.length === 0 || args[0] === '--status') {
 }
 
 let slugs = [];
-if (args[0] === '--all') {
+if (filteredArgs[0] === '--all') {
   slugs = await listLegacySlugs();
   console.log(`[rewrite-batch] --all: ${slugs.length} legacy slugs queued`);
-} else if (args[0] === '--next') {
-  const n = parseInt(args[1] || '5', 10);
+} else if (filteredArgs[0] === '--next') {
+  const n = parseInt(filteredArgs[1] || '5', 10);
   if (!Number.isFinite(n) || n < 1) {
     console.error('Usage: --next N (N must be a positive integer)');
     process.exit(1);
@@ -223,7 +330,7 @@ if (args[0] === '--all') {
   slugs = all.slice(0, n);
   console.log(`[rewrite-batch] --next ${n}: ${slugs.length} legacy slugs queued`);
 } else {
-  slugs = args;
+  slugs = filteredArgs;
   console.log(`[rewrite-batch] explicit list: ${slugs.length} slugs`);
 }
 
@@ -233,12 +340,17 @@ if (slugs.length === 0) {
 }
 
 console.log('[rewrite-batch] gate order: ' + GATES.map(g => g.name).join(' → '));
+if (!noIndex) {
+  console.log('[rewrite-batch] post-pipeline indexation: ' + INDEX_STEPS.map(s => s.name).join(' → '));
+}
 console.log('');
 
 const reports = [];
-for (const slug of slugs) {
-  console.log(`[rewrite-batch] processing ${slug} ...`);
-  const r = await processSlug(slug);
+for (let i = 0; i < slugs.length; i++) {
+  const slug = slugs[i];
+  const isFinal = i === slugs.length - 1;
+  console.log(`[rewrite-batch] processing ${slug}${isFinal ? ' (final of batch — sitemap will regen)' : ''} ...`);
+  const r = noIndex ? await processSlugNoIndex(slug) : await processSlug(slug, isFinal);
   reports.push(r);
   for (const g of r.gates) console.log(summarizeGate(g));
   if (r.gates.every(g => g.pass)) {
