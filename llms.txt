@@ -124,3 +124,45 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 <!-- auto:cuando-necesitas-un-growth-partner -->
 - [Cuándo necesitas un Growth Partner — y cuándo no](https://www.daybydayconsulting.com/blog/cuando-necesitas-un-growth-partner.html) — Cuándo tiene sentido contratar un Growth Partner y cuándo no. 4 señales de que sí, 3 contra-señales de que no, y 5 preguntas que criban al 80% de los proveedores del mercado español.
 <!-- /auto -->
+<!-- auto:smart-bidding-google-ads-d2c -->
+- [Smart Bidding Google Ads D2C: cuándo confiar y cuándo](https://www.daybydayconsulting.com/blog/smart-bidding-google-ads-d2c.html) — Smart Bidding en Google Ads para D2C: cuándo usar Target ROAS, Target CPA, Maximize Conversion Value, cómo intervenir y errores frecuentes. Cifras 2026.
+<!-- /auto -->
+<!-- auto:guia-meta-ads-ecommerce-d2cespana2026 -->
+- [Guía Meta Ads ecommerce D2C España: estructura y escala](https://www.daybydayconsulting.com/blog/guia-meta-ads-ecommerce-d2cespana2026.html) — Meta Ads para ecommerce D2C España 2026: estructura, Advantage+ Shopping, creatividades, métricas reales y cómo escalar sin romper el ROAS.
+<!-- /auto -->
+<!-- auto:incrementality-testing-meta-ads -->
+- [Incrementality testing Meta Ads: cómo medir el lift real](https://www.daybydayconsulting.com/blog/incrementality-testing-meta-ads.html) — Incrementality testing en Meta Ads para D2C España: lift realista por tipo de campaña, geo holdout paso a paso y errores frecuentes.
+<!-- /auto -->
+<!-- auto:internacionalizar-d2c-espanol-meta-ads-eu -->
+- [Internacionalizar D2C español con Meta Ads: pasos y errores](https://www.daybydayconsulting.com/blog/internacionalizar-d2c-espanol-meta-ads-eu.html) — Internacionalizar un D2C español a EU con Meta Ads: prerrequisitos, orden de países, presupuesto mínimo y errores frecuentes.
+<!-- /auto -->
+<!-- auto:ios-atribucion-meta-ads2026d2c -->
+- [iOS 17/18 y atribución Meta Ads: qué cambió para D2C 2026](https://www.daybydayconsulting.com/blog/ios-atribucion-meta-ads2026d2c.html) — iOS 17/18 y atribución Meta Ads en D2C: Link Tracking Protection, CAPI server-side, AEM y plan de 6 pasos. Cifras 2026.
+<!-- /auto -->
+<!-- auto:juicio-cross-funcional-founder-d2c -->
+- [Juicio cross-funcional: por qué un founder D2C no delega](https://www.daybydayconsulting.com/blog/juicio-cross-funcional-founder-d2c.html) — Por qué un founder D2C no puede delegar la decisión de inversión, solo la ejecución. Juicio cross-funcional como activo.
+<!-- /auto -->
+<!-- auto:kpis-paid-media-cfo-ceo-d2c -->
+- [KPIs paid media para CFO/CEO: cómo presentar sin tecnicismos](https://www.daybydayconsulting.com/blog/kpis-paid-media-cfo-ceo-d2c.html) — KPIs de paid media para CFO/CEO: 5 métricas clave, traducción a payback, plantilla mensual y errores frecuentes en board reporting.
+<!-- /auto -->
+<!-- auto:margen-contribucion-vs-roas-ecommerce -->
+- [Margen de contribución vs ROAS: la métrica que olvidan](https://www.daybydayconsulting.com/blog/margen-contribucion-vs-roas-ecommerce.html) — Margen de contribución vs ROAS en D2C: por qué el ROAS plataforma es insuficiente, fórmula operativa, rangos saludables 2026 y errores frecuentes.
+<!-- /auto -->
+<!-- auto:marketing-mix-modeling-ecommerce-d2c -->
+- [Marketing Mix Modeling D2C: cuándo aplicarlo y qué resuelve](https://www.daybydayconsulting.com/blog/marketing-mix-modeling-ecommerce-d2c.html) — Marketing Mix Modeling para D2C: cuándo aplicarlo, qué datos necesita, MMM vs MTA, herramientas y validación con holdout. Cifras 2026.
+<!-- /auto -->
+<!-- auto:suscripciones-ecommerce-ltv-cac-d2c -->
+- [Suscripciones en D2C: cómo cambia el cálculo de LTV y CAC](https://www.daybydayconsulting.com/blog/suscripciones-ecommerce-ltv-cac-d2c.html) — Suscripciones en D2C: cómo recalcular LTV-12m con churn, CAC objetivo, ratios permitidos y descuentos óptimos. Cifras 2026.
+<!-- /auto -->
+<!-- auto:tareas-automatizar -->
+- [Las 7 tareas de marketing que deberías automatizar ya](https://www.daybydayconsulting.com/blog/tareas-automatizar.html) — 7 tareas de marketing en D2C automatizables con n8n, Make, Zapier o Python. Coste, ROI y cuándo NO automatizar.
+<!-- /auto -->
+<!-- auto:tik-tok-ads-ecommerce-d2c-espana2026 -->
+- [TikTok Ads D2C España 2026: guía completa de activación](https://www.daybydayconsulting.com/blog/tik-tok-ads-ecommerce-d2c-espana2026.html) — TikTok Ads para D2C España: cuándo activar, presupuesto mínimo, formatos, CPM/CPA 2026 y TikTok Shop. Cifras 2026.
+<!-- /auto -->
+<!-- auto:top-agencias-marketing -->
+- [Top agencias marketing España: qué mirar antes de contratar](https://www.daybydayconsulting.com/blog/top-agencias-marketing.html) — Cómo evaluar agencias de marketing digital en España: criterios reales, modelos de honorarios, señales de alerta y preguntas clave. Cifras 2026.
+<!-- /auto -->
+<!-- auto:whatsapp-meta-ads-funnel-bofu-d2c -->
+- [WhatsApp + Meta Ads: funnel BOFU para D2C que escalan (2026)](https://www.daybydayconsulting.com/blog/whatsapp-meta-ads-funnel-bofu-d2c.html) — Click-to-WhatsApp (CTWA) + Meta Ads para D2C: cuándo activarlo, CR realista, AOV mínimo, costes y plantillas. Cifras 2026.
+<!-- /auto -->
