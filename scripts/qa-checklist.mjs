@@ -57,6 +57,19 @@ const BANNED_PHRASES = [
   /\bleverage\b/i,
   /\bsynergy\b/i,
   /what if i told you/i,
+  // tono-humano additions (2026-06-23)
+  /\bimagin[ae] esto\b/i,
+  /\brev(olucionari|olucion)\w*\b/i,
+  /\bdesbloquea\b/i,
+  /\bsin precedentes\b/i,
+  /\bde última generación\b/i,
+  /\bvibrante\b/i,
+  /\bcautivador\w*\b/i,
+  /\bmeticulosamente\b/i,
+  /lleva al siguiente nivel/i,
+  /cambia las reglas del juego/i,
+  /\bsin fisuras\b/i,
+  /transforma tu negocio/i,
 ];
 
 const ANTI_IA_PATTERNS = [
@@ -144,6 +157,37 @@ function runChecks(slug) {
     }
     D.count = D.hits.length;
 
+    // D2 · FORMATO (tono-humano: no bold/italic/underline in body prose)
+    // Strip code blocks and table rows from the raw body first.
+    const proseBody = body
+      .replace(/```[\s\S]*?```/g, ' ')
+      .replace(/`[^`]*`/g, ' ')
+      .replace(/\|[^\n]*\|/g, ' ');
+    const emphasisHits = [];
+    // Allowlist: bold on numbered framework labels like **1. Analizamos.** (1-2 digit, period, capitalized word, period).
+    // These are stylistic anchors in the Hormozi formula. Everything else is forbidden.
+    const FRAMEWORK_LABEL = /^\s*\*\*\d{1,2}\.\s+[A-ZÁÉÍÓÚÑ][^.*\n]{0,60}\.\*\*\s*$/;
+    // **bold**, __bold__
+    const boldMatches = proseBody.match(/\*\*[^*\n]{1,200}\*\*|__[^_\n]{1,200}__/g);
+    if (boldMatches) {
+      for (const s of boldMatches) {
+        if (FRAMEWORK_LABEL.test(s)) continue;  // allowed: numbered framework label
+        emphasisHits.push({ kind: 'bold', sample: s.slice(0, 60) });
+      }
+    }
+    // *italic* (single asterisk, not part of list bullet or bold)
+    const italicMatches = proseBody.match(/(^|[^*])\*[^*\s][^*]{0,100}?[^*\s]\*(?!\*)/g);
+    if (italicMatches) emphasisHits.push(...italicMatches.map(s => ({ kind: 'italic', sample: s.replace(/^\W/, '').slice(0, 60) })));
+    // _italic_ (underscore, single)
+    const underscoreItalic = proseBody.match(/(^|\W)_[^_\s][^_\n]{0,100}?[^_\s]_(?!\w)/g);
+    if (underscoreItalic) emphasisHits.push(...underscoreItalic.map(s => ({ kind: 'italic', sample: s.replace(/^\W/, '').slice(0, 60) })));
+    // <u>...</u>
+    const uTag = proseBody.match(/<u>[^<]{1,200}<\/u>/gi);
+    if (uTag) emphasisHits.push(...uTag.map(s => ({ kind: 'underline', sample: s.slice(0, 60) })));
+    D.emphasis_hits = emphasisHits;
+    D.emphasis_count = emphasisHits.length;
+    if (emphasisHits.length > 0) D.hits.push({ phrase: `[${emphasisHits.length} bold/italic/underline in body prose — only numbered framework labels allowed]`, context: 'tono-humano §formato' });
+
     // E · ANTI-IA
     const E = { hits: [] };
     for (const p of ANTI_IA_PATTERNS) {
@@ -178,6 +222,7 @@ function runChecks(slug) {
     let verdict = 'publicar';
     const issues = [];
     if (D.count > 0) { verdict = 'regenerar'; issues.push(`${D.count} banned phrase hits`); }
+    if (D.emphasis_count > 0) { if (verdict === 'publicar') verdict = 'reescribir'; issues.push(`${D.emphasis_count} bold/italic/underline in body (tono-humano §formato)`); }
     if (A.score < 4) { if (verdict === 'publicar') verdict = 'reescribir'; issues.push(`voice score ${A.score}/5`); }
     if (B.score < 7) { if (verdict === 'publicar') verdict = 'reescribir'; issues.push(`structure score ${B.score}/9`); }
     if (C.score < 4) { if (verdict === 'publicar') verdict = 'reescribir'; issues.push(`content score ${C.score}/5`); }
