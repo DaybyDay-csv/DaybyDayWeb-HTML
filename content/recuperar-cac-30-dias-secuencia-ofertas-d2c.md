@@ -19,7 +19,7 @@ cta_href: "/contacto.html"
 cta_label: "Reservar auditoría gratuita"
 llms_summary: "Sistema CFA para D2C de 200K-2M€: order bump en checkout, upsell post-compra en 24h y downsell a 7 días para recuperar el CAC en 30 días. Se mide con margen de contribución a 30 días, no con ROAS."
 tags: [d2c, cac, secuencia-ofertas, monetizacion, ecommerce]
-migration_state: "rendered"
+migration_state: "good"
 ---
 
 > «Vendo, pero no me queda dinero.»
