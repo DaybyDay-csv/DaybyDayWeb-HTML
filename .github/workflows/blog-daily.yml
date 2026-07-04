@@ -5,18 +5,16 @@ name: Blog daily publish
 # and pushes to origin/main if everything passes.
 #
 # Triggered by:
-#   - schedule (cron)
 #   - workflow_dispatch (manual run from GitHub UI or via n8n webhook)
+#
+# DISABLED 2026-06-25: schedule removed because n8n Stage 6 is the canonical
+# publishing path. Keeping manual dispatch as a fallback in case the n8n instance
+# is down and Pablo needs to publish a hotfix from the GitHub UI.
 #
 # The workflow has no secrets — it only does git operations on the public repo
 # and runs Node scripts that read from ./scripts/ and ./content/.
 
 on:
-  schedule:
-    # 20:00 UTC = 22:00 CEST (Madrid summer time, UTC+2)
-    # 20:00 UTC = 21:00 CET (Madrid winter time, UTC+1)
-    # Operator runs at 22:00 CEST per decisions.md 2026-06-12.
-    - cron: '0 20 * * 2,4'
   workflow_dispatch:
     inputs:
       slug:
