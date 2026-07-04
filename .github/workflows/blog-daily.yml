@@ -1,33 +1,24 @@
-name: Blog daily publish
+name: Blog publish
 
-# Runs the rewrite-batch orchestrator twice a week (Tue + Thu at 20:00 UTC = 22:00 CEST).
-# Picks the next legacy slug with migration_state: "rendered", runs the 6 gates,
-# and pushes to origin/main if everything passes.
+# Publica un post: corre los 6 gates (rewrite-batch), renderiza, actualiza
+# sitemap/llms, lanza IndexNow y hace push a main. Si un gate falla, el job
+# falla y NO se publica nada.
 #
-# Triggered by:
-#   - workflow_dispatch (manual run from GitHub UI or via n8n webhook)
-#
-# DISABLED 2026-06-25: schedule removed because n8n Stage 6 is the canonical
-# publishing path. Keeping manual dispatch as a fallback in case the n8n instance
-# is down and Pablo needs to publish a hotfix from the GitHub UI.
-#
-# The workflow has no secrets — it only does git operations on the public repo
-# and runs Node scripts that read from ./scripts/ and ./content/.
+# Disparado por n8n Stage 5 via workflow_dispatch con input slug.
+# Tambien ejecutable a mano desde la UI de GitHub como fallback.
 
 on:
   workflow_dispatch:
     inputs:
       slug:
-        description: 'Specific slug to publish (leave empty to pick next legacy)'
-        required: false
-        default: ''
-      count:
-        description: 'Number of slugs to process (default 1)'
-        required: false
-        default: '1'
+        description: 'Slug del post a publicar (content/<slug>.md)'
+        required: true
+
+permissions:
+  contents: write
 
 concurrency:
-  group: blog-daily
+  group: blog-publish
   cancel-in-progress: false
 
 jobs:
@@ -38,9 +29,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          # We need to push back to main, so use a token. The default GITHUB_TOKEN
-          # cannot trigger downstream workflows; for a simple commit-and-push
-          # this is fine.
           fetch-depth: 0
 
       - name: Setup Node.js
@@ -51,75 +39,27 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-audit --no-fund || npm install --no-audit --no-fund
 
-      - name: Decide slugs to publish
-        id: decide
-        run: |
-          if [ -n "${{ inputs.slug }}" ]; then
-            echo "slugs=${{ inputs.slug }}" >> "$GITHUB_OUTPUT"
-          else
-            # Pick the next N legacy slugs via rewrite-batch --status (dry-run listing).
-            # We only take the first N to avoid publishing too many in one run.
-            N=${{ inputs.count || 1 }}
-            SLUGS=$(node scripts/rewrite-batch.mjs --status 2>/dev/null \
-              | python3 -c "import sys, json
-try:
-  data = json.load(sys.stdin)
-  legacy = data.get('legacy', [])
-  print(' '.join(legacy[:$N]))
-except Exception:
-  pass
-" || echo "")
-            if [ -z "$SLUGS" ]; then
-              echo "No legacy slugs remaining — exiting cleanly."
-              echo "slugs=" >> "$GITHUB_OUTPUT"
-              echo "no_work=true" >> "$GITHUB_OUTPUT"
-            else
-              echo "slugs=$SLUGS" >> "$GITHUB_OUTPUT"
-            fi
-          fi
-
-      - name: Run rewrite-batch for selected slugs
-        if: steps.decide.outputs.no_work != 'true'
-        id: batch
+      - name: Run gates + render + index
         run: |
           set -e
-          SLUGS="${{ steps.decide.outputs.slugs }}"
-          echo "Publishing slugs: $SLUGS"
-          node scripts/rewrite-batch.mjs $SLUGS
-        continue-on-error: true
-
-      - name: Check if any work succeeded
-        id: check
-        run: |
-          # rewrite-batch exits 0 only if all slugs passed all 6 gates and indexation ran.
-          # We commit and push only if blog/<slug>.html was created/updated.
-          CHANGED=$(git status --porcelain | grep -E '^( M|A |M )' | wc -l | tr -d ' ')
-          if [ "$CHANGED" -gt 0 ]; then
-            echo "changed=true" >> "$GITHUB_OUTPUT"
-            echo "Files changed: $CHANGED"
-            git status --porcelain
-          else
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-            echo "No files changed — nothing to commit."
-          fi
+          echo "Publishing slug: ${{ inputs.slug }}"
+          node scripts/rewrite-batch.mjs ${{ inputs.slug }}
 
       - name: Commit and push
-        if: steps.check.outputs.changed == 'true'
         run: |
           git config user.name "DayByDay Bot"
           git config user.email "bot@daybyday.local"
           git add -A
-          git commit -m "ci(blog): automated publish via rewrite-batch
-
-Triggered by: ${{ github.event_name }} ${{ github.run_id }}
-Slugs: ${{ steps.decide.outputs.slugs }}"
-          git push origin main
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "ci(blog): publish ${{ inputs.slug }} via rewrite-batch (run ${{ github.run_id }})"
+            git push origin main
+          fi
 
       - name: Summary
         if: always()
         run: |
-          echo "## Blog daily publish summary" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Slugs targeted: ${{ steps.decide.outputs.slugs }}" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Batch exit: ${{ steps.batch.outcome }}" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Files changed: ${{ steps.check.outputs.changed }}" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Workflow run: ${{ github.run_id }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "## Blog publish" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Slug: ${{ inputs.slug }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Run: ${{ github.run_id }}" >> "$GITHUB_STEP_SUMMARY"
