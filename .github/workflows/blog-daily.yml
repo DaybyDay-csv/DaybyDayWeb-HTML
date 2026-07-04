@@ -45,6 +45,9 @@ jobs:
           echo "Publishing slug: ${{ inputs.slug }}"
           node scripts/rewrite-batch.mjs ${{ inputs.slug }}
 
+      - name: Update blog listing pages
+        run: node scripts/update-blog-index.mjs ${{ inputs.slug }}
+
       - name: Commit and push
         run: |
           git config user.name "DayByDay Bot"
