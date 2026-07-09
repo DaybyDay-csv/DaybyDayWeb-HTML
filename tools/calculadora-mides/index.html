@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de retorno · Mides × DaybyDay</title>
+<meta name="description" content="Mueve el presupuesto, el coste por clic y el ticket medio, y mira en vivo los clientes, el coste por cliente y el retorno del año.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de retorno · Mides × DaybyDay">
+<meta property="og:description" content="Mueve el presupuesto, el coste por clic y el ticket, y mira los clientes y el retorno en vivo.">
+<meta property="og:url" content="https://daybydayconsulting.com/tools/calculadora-mides/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0f0f14">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f0f14; --card:#171720; --card2:#1c1c26; --line:rgba(255,255,255,.08);
+    --txt:#f5f5f7; --mut:#a6a6b2; --mut2:#6b6b78; --ac:#3b82f6; --acl:#60a5fa; --acsoft:#16233b;
+    --font:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--font);color:var(--txt);min-height:100vh;
+    background:
+      radial-gradient(1100px 620px at 88% -8%, rgba(59,130,246,.16), transparent 60%),
+      radial-gradient(900px 700px at 10% 108%, rgba(59,130,246,.07), transparent 55%),
+      var(--bg);
+    padding:clamp(20px,4vw,52px);line-height:1.5}
+  .wrap{max-width:1060px;margin:0 auto}
+  .top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+  .eyebrow{font-size:12px;font-weight:600;letter-spacing:.18em;color:var(--acl);text-transform:uppercase;display:flex;align-items:center;gap:9px}
+  .eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--ac)}
+  h1{font-size:clamp(25px,4vw,38px);font-weight:700;letter-spacing:-.02em;margin:13px 0 8px}
+  .sub{color:var(--mut);font-size:clamp(15px,1.6vw,17px);max-width:660px}
+  .brand{font-size:14px;font-weight:700;color:var(--mut2);white-space:nowrap}
+  .brand b{color:#fff}.brand .d{color:var(--ac)}
+  .grid{display:grid;grid-template-columns:1fr 1.15fr;gap:18px;margin-top:28px}
+  @media(max-width:820px){.grid{grid-template-columns:1fr}}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px 26px 28px}
+  .panel h2{font-size:12px;font-weight:600;letter-spacing:.14em;color:var(--mut);text-transform:uppercase;margin-bottom:20px}
+  .ctrl{margin-bottom:22px}.ctrl:last-child{margin-bottom:0}
+  .ctrl .row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:11px}
+  .ctrl label{font-size:14.5px;color:var(--txt)}
+  .ctrl .val{font-size:22px;font-weight:700;color:#fff;font-variant-numeric:tabular-nums}
+  .ctrl .val small{font-size:13px;color:var(--mut);font-weight:500}
+  .ctrl .hint{font-size:12px;color:var(--mut2);margin-top:8px}
+  input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:6px;
+    background:linear-gradient(90deg,var(--ac) var(--f,30%),#2a2a36 var(--f,30%));outline:none;cursor:pointer}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:21px;height:21px;border-radius:50%;
+    background:#fff;border:4px solid var(--ac);box-shadow:0 2px 8px rgba(0,0,0,.4);cursor:pointer}
+  input[type=range]::-moz-range-thumb{width:19px;height:19px;border-radius:50%;background:#fff;border:4px solid var(--ac);cursor:pointer}
+  .metrics{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+  .metric{background:var(--card2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .metric .n{font-size:25px;font-weight:700;color:#fff;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+  .metric .l{font-size:12px;color:var(--mut);margin-top:3px}
+  .hl{grid-column:1/-1;margin-top:5px;background:var(--acsoft);border:1px solid #1d4ed8;border-radius:14px;
+    padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+  .hl .lab{font-size:12px;color:var(--acl);letter-spacing:.1em;text-transform:uppercase;font-weight:600;margin-bottom:3px}
+  .hl .big{font-size:28px;font-weight:700;color:#fff;font-variant-numeric:tabular-nums}
+  .hl .roas{text-align:right}.hl .roas .big{color:var(--acl)}
+  .bars{margin-top:20px}
+  .bar-row{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+  .bar-row .cap{width:118px;font-size:12px;color:var(--mut);text-align:right;flex:none}
+  .bar-track{flex:1;height:28px;background:#14141c;border-radius:8px;overflow:hidden}
+  .bar-fill{height:100%;border-radius:8px;transition:width .35s cubic-bezier(.2,.7,.2,1);display:flex;align-items:center;padding-left:11px}
+  .bar-fill span{font-size:12.5px;font-weight:700;color:#fff;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .foot{margin-top:24px;color:var(--mut2);font-size:12px;font-style:italic;border-top:1px solid var(--line);padding-top:15px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
+  .reset{background:none;border:1px solid var(--line);color:var(--mut);font-family:var(--font);font-size:12px;padding:7px 13px;border-radius:8px;cursor:pointer}
+  .reset:hover{border-color:var(--acl);color:var(--txt)}
+  @media(max-width:560px){
+    body{padding:15px}
+    .panel{padding:18px 18px 22px}
+    h1{font-size:24px}
+    .top{flex-direction:column;gap:6px}
+    .ctrl .val{font-size:20px}
+    .ctrl label{font-size:14px}
+    .metric .n{font-size:22px}
+    .hl{padding:16px 16px}
+    .hl .big{font-size:24px}
+    .bar-row .cap{width:78px}
+    .foot{flex-direction:column;align-items:flex-start}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div>
+      <div class="eyebrow">Calculadora de retorno · Mides</div>
+      <h1>Mueve los números, mira las cuentas</h1>
+      <p class="sub">El mismo motor de la propuesta: presupuesto → clics → contactos → clientes. Cambia el presupuesto, el coste por clic o el ticket y mira cómo se mueve todo. Cifras conservadoras, no una promesa.</p>
+    </div>
+    <div class="brand"><b>DaybyDay</b><span class="d">.</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="panel">
+      <h2>Lo que tú decides</h2>
+      <div class="ctrl">
+        <div class="row"><label>Presupuesto en anuncios</label><div class="val" id="vB">1.600 €<small>/mes</small></div></div>
+        <input type="range" id="b" min="200" max="5000" step="50" value="1600">
+        <div class="hint">Empezamos en 400 € para medir, y subimos solo lo que funciona.</div>
+      </div>
+      <div class="ctrl">
+        <div class="row"><label>Coste por clic (Google)</label><div class="val" id="vC">1,20 €</div></div>
+        <input type="range" id="c" min="0.2" max="5" step="0.1" value="1.2">
+        <div class="hint">Media del rango real: en extintores va de 0,23 € a 2,14 € → 1,20 €. En plagas sube. Dato de Google Keyword Planner.</div>
+      </div>
+      <div class="ctrl">
+        <div class="row"><label>Lo que te deja un cliente al año</label><div class="val" id="vT">300 €</div></div>
+        <input type="range" id="t" min="100" max="600" step="25" value="300">
+        <div class="hint">Tu ticket medio. Y es recurrente: el cliente vuelve a facturar cada año.</div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Cómo se convierte en clientes</h2>
+      <div class="metrics">
+        <div class="metric"><div class="n" id="mClk">1.333</div><div class="l">clics / visitas al mes</div></div>
+        <div class="metric"><div class="n" id="mLead">56</div><div class="l">contactos (leads) / mes</div></div>
+        <div class="metric"><div class="n" id="mCli">17</div><div class="l">clientes nuevos / mes</div></div>
+        <div class="metric"><div class="n" id="mCac">≈ 95 €</div><div class="l">coste por cliente (CAC)</div></div>
+        <div class="hl">
+          <div><div class="lab">Clientes al año</div><div class="big" id="mYr">204</div></div>
+          <div class="roas"><div class="lab">Facturación año 1</div><div class="big" id="mRev">61.200 €</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel bars" style="margin-top:18px">
+    <div class="bar-row">
+      <div class="cap">Inviertes al año</div>
+      <div class="bar-track"><div class="bar-fill" id="bi" style="background:var(--mut2);width:31%"><span id="bit">19.200 €</span></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="cap">Facturas año 1</div>
+      <div class="bar-track"><div class="bar-fill" id="br" style="background:linear-gradient(90deg,#3b82f6,#60a5fa);width:100%"><span id="brt">61.200 €</span></div></div>
+    </div>
+    <div style="font-size:12px;color:var(--mut);margin-top:10px">Inversión = presupuesto de anuncios × 12. Y cada cliente vuelve a facturar el año 2 y el 3 sin volver a pagar por captarlo.</div>
+  </div>
+
+  <div class="foot">
+    <div>Modela la búsqueda en Google (donde hay dato real); Meta suma alcance por encima. Tasas conservadoras (4,2% de visita a contacto, 30% de contacto a cliente); el mes 1 fija tus números reales. Mides × DaybyDay.</div>
+    <button class="reset" id="reset">Volver al ejemplo (1.600 € · 1,20 € · 300 €)</button>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var nf=new Intl.NumberFormat('es-ES');
+    var eur=function(x,d){return x.toLocaleString('es-ES',{minimumFractionDigits:d||0,maximumFractionDigits:d||0});};
+    var B=document.getElementById('b'),C=document.getElementById('c'),T=document.getElementById('t');
+    var LEADR=0.042, CLOSER=0.30;
+    function pct(el){return ((el.value-el.min)/(el.max-el.min)*100).toFixed(1)+'%';}
+    function up(){
+      var b=+B.value, cpc=+C.value, t=+T.value;
+      B.style.setProperty('--f',pct(B)); C.style.setProperty('--f',pct(C)); T.style.setProperty('--f',pct(T));
+      var clicks=b/cpc, leads=clicks*LEADR, cli=leads*CLOSER;
+      var cliR=Math.round(cli), cac=cli>0?b/cli:0, yr=cliR*12, rev=yr*t, invYr=b*12;
+      document.getElementById('vB').innerHTML=eur(b)+' €<small>/mes</small>';
+      document.getElementById('vC').textContent=eur(cpc,2).replace('.',',')+' €';
+      document.getElementById('vT').textContent=eur(t)+' €';
+      document.getElementById('mClk').textContent=eur(Math.round(clicks));
+      document.getElementById('mLead').textContent=eur(Math.round(leads));
+      document.getElementById('mCli').textContent=eur(cliR);
+      document.getElementById('mCac').textContent='≈ '+eur(Math.round(cac))+' €';
+      document.getElementById('mYr').textContent=eur(Math.round(yr));
+      document.getElementById('mRev').textContent=eur(Math.round(rev/100)*100)+' €';
+      var mx=Math.max(invYr,rev,1);
+      document.getElementById('bi').style.width=Math.max(7,invYr/mx*100)+'%';
+      document.getElementById('br').style.width=Math.max(7,rev/mx*100)+'%';
+      document.getElementById('bit').textContent=eur(Math.round(invYr))+' €';
+      document.getElementById('brt').textContent=eur(Math.round(rev/100)*100)+' €';
+    }
+    B.addEventListener('input',up);C.addEventListener('input',up);T.addEventListener('input',up);
+    document.getElementById('reset').addEventListener('click',function(){B.value=1600;C.value=2.5;T.value=300;up();});
+    up();
+  })();
+</script>
+</body>
+</html>
