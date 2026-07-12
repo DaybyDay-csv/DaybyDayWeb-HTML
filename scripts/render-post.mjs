@@ -208,16 +208,34 @@ function buildSchema(fm, faq) {
     headline: fm.title,
     description: fm.meta_desc,
     datePublished: fm.published_at,
-    dateModified: fm.published_at,
+    dateModified: fm.date_modified || fm.published_at,
+    inLanguage: 'es-ES',
+    // E-E-A-T: autor identificable con experiencia demostrable (Google AI optimization guide, 2026-05)
     author: {
       '@type': 'Person',
       name: 'Pablo Santirso',
-      url: 'https://www.daybydayconsulting.com/'
+      url: 'https://www.daybydayconsulting.com/',
+      jobTitle: 'Growth Partner',
+      worksFor: {
+        '@type': 'Organization',
+        name: 'DayByDay Consulting',
+        url: 'https://www.daybydayconsulting.com/'
+      },
+      knowsAbout: [
+        'Meta Ads', 'Google Ads', 'TikTok Ads', 'paid media',
+        'ecommerce D2C', 'CRM y email marketing', 'analítica server-side', 'growth strategy'
+      ],
+      sameAs: ['https://www.linkedin.com/company/daybydayconsulting/']
     },
     publisher: {
       '@type': 'Organization',
       name: 'DayByDay Consulting',
-      url: 'https://www.daybydayconsulting.com/'
+      url: 'https://www.daybydayconsulting.com/',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.daybydayconsulting.com/favicon.png'
+      },
+      sameAs: ['https://www.linkedin.com/company/daybydayconsulting/']
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
@@ -236,7 +254,17 @@ function buildSchema(fm, faq) {
       }
     }))
   } : null;
-  const ld = [article, faqSchema].filter(Boolean).map(o =>
+  // Breadcrumbs: ayudan a Google (y a los agentes de navegador) a entender la jerarquía del sitio
+  const breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://www.daybydayconsulting.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.daybydayconsulting.com/blog' },
+      { '@type': 'ListItem', position: 3, name: fm.title, item: canonicalNoExt }
+    ]
+  };
+  const ld = [article, faqSchema, breadcrumb].filter(Boolean).map(o =>
     `<script type="application/ld+json">${JSON.stringify(o)}</script>`
   ).join('\n');
   return ld;
