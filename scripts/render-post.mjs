@@ -2,7 +2,7 @@
 // render-post.mjs — converts content/<slug>.md to blog/<slug>.html using templates/post.html
 // Pure node, no React, no JSX, no .map().
 
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { access, readFile, writeFile, mkdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -200,7 +200,7 @@ function buildSourcesBlock(sources) {
   return `<section class="sources-block">\n  <h2>Fuentes y datos</h2>\n  <p>Cada cifra y afirmación de este artículo se sostiene en una fuente verificable. Las que respaldan este post:</p>\n  <ul>\n${items}\n  </ul>\n</section>`;
 }
 
-function buildSchema(fm, faq) {
+function buildSchema(fm, faq, heroUrl) {
   const canonicalNoExt = String(fm.canonical || '').replace(/\.html$/, '').replace(/\/+$/, '');
   const article = {
     '@context': 'https://schema.org',
@@ -242,6 +242,9 @@ function buildSchema(fm, faq) {
       '@id': canonicalNoExt
     }
   };
+  if (heroUrl) {
+    article.image = { '@type': 'ImageObject', url: heroUrl, width: 1200, height: 675 };
+  }
   const faqSchema = faq && faq.length ? {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -284,13 +287,22 @@ async function renderPost(slug) {
   const faqBlock = buildFaqBlock(fm.faq);
   const relatedLinks = buildRelatedLinks(fm.internal_links);
   const sourcesBlock = buildSourcesBlock(fm.sources);
-  const schema = buildSchema(fm, fm.faq);
+
+  // Hero image (generada por scripts/generate-hero.mjs). Google: las respuestas con IA incluyen imagenes.
+  const heroPath = path.join(ROOT, 'blog', 'img', `${slug}.png`);
+  let ogImageBlock = '';
+  let heroUrl = null;
+  try { await access(heroPath); heroUrl = `https://www.daybydayconsulting.com/blog/img/${slug}.png`; } catch {}
+  if (heroUrl) {
+    ogImageBlock = `  <meta property="og:image" content="${heroUrl}">\n  <meta property="og:image:width" content="1200">\n  <meta property="og:image:height" content="675">\n  <meta name="twitter:image" content="${heroUrl}">`;
+  }
+
+  const schema = buildSchema(fm, fm.faq, heroUrl);
 
   const wordCount = body.replace(/```[\s\S]*?```/g, ' ').split(/\s+/).filter(Boolean).length;
 
   let canonical = String(fm.canonical || `https://www.daybydayconsulting.com/blog/${slug}.html`);
   canonical = canonical.replace(/\.html$/, '').replace(/\/+$/, '');
-
   const replacements = {
     '{{TITLE}}': String(fm.title || ''),
     '{{META_DESC}}': String(fm.meta_desc || ''),
@@ -305,6 +317,8 @@ async function renderPost(slug) {
     '{{SOURCES_BLOCK}}': sourcesBlock,
     '{{RELATED_LINKS}}': relatedLinks,
     '{{SCHEMA}}': schema,
+    '{{SLUG}}': slug,
+    '{{OG_IMAGE_BLOCK}}': ogImageBlock,
     '{{CTA_TITLE}}': String(fm.cta_title || '¿Quieres aplicar esto en tu negocio?'),
     '{{CTA_DESC}}': String(fm.cta_desc || 'En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.'),
     '{{CTA_HREF}}': String(fm.cta_href || '/contacto.html'),
