@@ -10,38 +10,9 @@ reading_time: 8
 published_at: "2026-07-06T10:00:00+02:00"
 primary_keyword: "atribución post-iOS 14"
 secondary_keywords: ["ROAS real D2C", "Meta CAPI tracking", "atribución multi-touch", "cash flow ROAS", "medición rentabilidad ads"]
-faq: [
- {
- "q": "¿Por qué Meta reporta ROAS 3.2x pero mi cuenta de resultados muestra pérdidas?",
- "a": "Meta atribuye a paid media el 100% de la venta cuando el usuario clickó en un anuncio, aunque otros canales influyeron antes. Si tu margen bruto es 35% y tienes un 20% de devoluciones, tu ROAS real baja de 3.2x a 0.89x. Estás escalando destruyendo caja."
- },
- {
- "q": "¿Cómo recupero visibilidad de mis conversiones tras iOS 14.5?",
- "a": "Implementando Meta Conversion API via server-side (Stape) junto al pixel client-side. Esto restaura entre 60-80% de los eventos perdidos en dispositivos Apple. Sin CAPI, solo ves ~40% de tus conversiones reales."
- },
- {
- "q": "¿Por qué Klaviyo y Meta atribuyen la misma venta a canales diferentes?",
- "a": "No mienten. Cada plataforma usa un modelo de atribución distinto: Meta usa last-click, Klaviyo usa first-touch o linear. La misma venta puede ser email para Klaviyo (porque abrió el email final) y paid para Meta (porque fue el último click). Necesitas un modelo unificado multi-touch."
- },
- {
- "q": "¿Cuándo debería dejar de escalar campañas aunque el ROAS reportado sea bueno?",
- "a": "Cuando tu Cash-Flow ROAS cae por debajo de 1.5x. Esto significa que por cada euro invertido, te quedan menos euros de los que invertiste. Si tu ROAS de plataforma es 3x pero tu margen neto es bajo, estás quemando caja aunque las métricas de Meta digan lo contrario."
- },
- {
- "q": "¿Qué es un holdout experiment y por qué lo necesito?",
- "a": "Es aislar un grupo de audiencia de toda publicidad durante 4-6 semanas. Comparando sus compras con el grupo expuesto, sabes qué ventas fueron incrementales (no habrían ocurrido sin ads) versus las que habrías conseguido igual. Sin esto, inviertes a ciegas."
- }
-]
-sources: [
- {"label": "Meta Business Help — Ads Guide", "url": "https://www.facebook.com/business/ads-guide"},
- {"label": "Meta — Conversions API docs", "url": "https://developers.facebook.com/docs/marketing-api/conversions-api/"},
- {"label": "Shopify Blog — Marketing Metrics", "url": "https://www.shopify.com/blog/marketing-metrics"},
- {"label": "Klaviyo Blog", "url": "https://www.klaviyo.com/blog"},
- {"label": "Acquisition.com — Alex Hormozi", "url": "https://www.acquisition.com/"}
-]
-internal_links: [
- {"url": "/blog/recuperar-cac-30-dias-secuencia-ofertas-d2c.html", "anchor": "recuperar el CAC en 30 días"}
-]
+faq: [ { "q": "¿Por qué Meta reporta ROAS 3.2x pero mi cuenta de resultados muestra pérdidas?", "a": "Meta atribuye a paid media el 100% de la venta cuando el usuario clickó en un anuncio, aunque otros canales influyeron antes. Si tu margen bruto es 35% y tienes un 20% de devoluciones, tu ROAS real baja de 3.2x a 0.89x. Estás escalando destruyendo caja." }, { "q": "¿Cómo recupero visibilidad de mis conversiones tras iOS 14.5?", "a": "Implementando Meta Conversion API via server-side (Stape) junto al pixel client-side. Esto restaura entre 60-80% de los eventos perdidos en dispositivos Apple. Sin CAPI, solo ves ~40% de tus conversiones reales." }, { "q": "¿Por qué Klaviyo y Meta atribuyen la misma venta a canales diferentes?", "a": "No mienten. Cada plataforma usa un modelo de atribución distinto: Meta usa last-click, Klaviyo usa first-touch o linear. La misma venta puede ser email para Klaviyo (porque abrió el email final) y paid para Meta (porque fue el último click). Necesitas un modelo unificado multi-touch." }, { "q": "¿Cuándo debería dejar de escalar campañas aunque el ROAS reportado sea bueno?", "a": "Cuando tu Cash-Flow ROAS cae por debajo de 1.5x. Esto significa que por cada euro invertido, te quedan menos euros de los que invertiste. Si tu ROAS de plataforma es 3x pero tu margen neto es bajo, estás quemando caja aunque las métricas de Meta digan lo contrario." }, { "q": "¿Qué es un holdout experiment y por qué lo necesito?", "a": "Es aislar un grupo de audiencia de toda publicidad durante 4-6 semanas. Comparando sus compras con el grupo expuesto, sabes qué ventas fueron incrementales (no habrían ocurrido sin ads) versus las que habrías conseguido igual. Sin esto, inviertes a ciegas." } ]
+sources: [ {"label": "Meta Business Help — Ads Guide", "url": "https://www.facebook.com/business/ads-guide"}, {"label": "Meta — Conversions API docs", "url": "https://developers.facebook.com/docs/marketing-api/conversions-api/"}, {"label": "Shopify Blog — Marketing Metrics", "url": "https://www.shopify.com/blog/marketing-metrics"}, {"label": "Klaviyo Blog", "url": "https://www.klaviyo.com/blog"}, {"label": "Acquisition.com — Alex Hormozi", "url": "https://www.acquisition.com/"} ]
+internal_links: [ {"url": "/blog/recuperar-cac-30-dias-secuencia-ofertas-d2c.html", "anchor": "recuperar el CAC en 30 días"} ]
 cta_title: "Auditoría de 30 minutos de atribución y rentabilidad real"
 cta_desc: "Vemos tu ROAS reportado vs ROAS real, qué canales destruyen caja y qué cambiar primero."
 cta_href: "/contacto.html"
