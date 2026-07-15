@@ -169,3 +169,6 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 <!-- auto:recuperar-cac-30-dias-secuencia-ofertas-d2c -->
 - [Recuperar el CAC en 30 días: secuencia de ofertas D2C](https://www.daybydayconsulting.com/blog/recuperar-cac-30-dias-secuencia-ofertas-d2c.html) — Sistema CFA para D2C de 200K-2M€: order bump en checkout, upsell post-compra en 24h y downsell a 7 días para recuperar el CAC en 30 días. Se mide con margen de contribución a 30 días, no con ROAS.
 <!-- /auto -->
+<!-- auto:atribucion-post-ios-14-roas-mentira -->
+- [Atribución post-iOS 14: por qué tu ROAS miente](https://www.daybydayconsulting.com/blog/atribucion-post-ios-14-roas-mentira.html) — Guía práctica para founders D2C que descubren que su ROAS reportado no refleja la rentabilidad real. Cubre atribución multi-touch, CAPI implementation, y Cash-Flow ROAS con cifras concretas.
+<!-- /auto -->

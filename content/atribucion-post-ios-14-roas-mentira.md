@@ -19,7 +19,7 @@ cta_href: "/contacto.html"
 cta_label: "Reserva tu auditoría"
 llms_summary: "Guía práctica para founders D2C que descubren que su ROAS reportado no refleja la rentabilidad real. Cubre atribución multi-touch, CAPI implementation, y Cash-Flow ROAS con cifras concretas."
 tags: ["meta-ads", "ios-14", "atribucion", "roas", "d2c", "tracking", "klaviyo"]
-migration_state: "rendered"
+migration_state: "good"
 ---
 
 > "Llevo 6 meses escalando con ROAS alto en Meta. Cada mes tenía menos cash en el banco. Un día saqué los números bien: margen medio, devoluciones, shipping. El ROAS real era muy inferior al reportado. Estuve meses quemando caja porque confiaba en la métrica equivocada."

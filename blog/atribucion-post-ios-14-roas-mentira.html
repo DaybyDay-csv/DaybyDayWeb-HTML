@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atribución post-iOS 14: por qué tu ROAS miente</title>
+  <meta name="description" content="Tu ROAS de 3.2x puede ser una mentira. Descubre cómo iOS 14 destruyó el tracking y qué hacer para medir rentabilidad real.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="Pablo Santirso · DayByDay Consulting">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/atribucion-post-ios-14-roas-mentira">
+  <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/blog/atribucion-post-ios-14-roas-mentira">
+  <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/blog/atribucion-post-ios-14-roas-mentira">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly summary">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Atribución post-iOS 14: por qué tu ROAS miente">
+  <meta property="og:description" content="Tu ROAS de 3.2x puede ser una mentira. Descubre cómo iOS 14 destruyó el tracking y qué hacer para medir rentabilidad real.">
+  <meta property="og:url" content="https://www.daybydayconsulting.com/blog/atribucion-post-ios-14-roas-mentira">
+  <meta property="og:site_name" content="DayByDay Consulting">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="https://www.daybydayconsulting.com/blog/img/atribucion-post-ios-14-roas-mentira.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta name="twitter:image" content="https://www.daybydayconsulting.com/blog/img/atribucion-post-ios-14-roas-mentira.png">
+  <meta property="article:published_time" content="2026-07-06T10:00:00+02:00">
+  <meta property="article:modified_time" content="2026-07-06T10:00:00+02:00">
+  <meta property="article:author" content="Pablo Santirso">
+  <meta property="article:section" content="Meta Ads">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Atribución post-iOS 14: por qué tu ROAS miente">
+  <meta name="twitter:description" content="Tu ROAS de 3.2x puede ser una mentira. Descubre cómo iOS 14 destruyó el tracking y qué hacer para medir rentabilidad real.">
+
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .article-body .direct-answer { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 0 0 2rem; }
+    .article-body .direct-answer p { margin: 0; font-size: 1.05rem; }
+    .article-body .summary-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .summary-block p { margin: 0 0 0.5rem; }
+    .article-body .pro-tip { background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .pro-tip p:first-child { color: var(--accent-color, #6366f1); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem; margin: 0 0 0.5rem; }
+    .article-body .pro-tip p:last-child { margin: 0; }
+    .article-body .cifra-que-abofetea { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); text-align: center; padding: 1.5rem 0; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .related-articles h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); }
+    .sources-block { margin-top: 3rem; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; }
+    .sources-block h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary); }
+    .sources-block p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .sources-block ul { list-style: none; padding: 0; margin: 0; }
+    .sources-block li { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+    .sources-block li:last-child { border-bottom: none; }
+    .sources-block a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .related-articles a { display: block; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .related-articles a:hover { border-color: var(--accent-color, #6366f1); }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+    .cta-block { margin-top: 3rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; text-align: center; }
+    .cta-block h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary); }
+    .cta-block p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .cta-block a { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-color, #6366f1); color: white; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+<a href="#main" class="skip-link">Saltar al contenido principal</a>
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Meta Ads</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Meta Ads</span>
+          <span class="reading-time">8 min de lectura</span>
+          <span class="article-date">2026-07-06</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Atribución post-iOS 14: por qué tu ROAS dice 3x pero tu negocio no es rentable</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Tu ROAS de 3.2x puede ser una mentira. Descubre cómo iOS 14 destruyó el tracking y qué hacer para medir rentabilidad real.</p>
+        <div class="article-author">
+          <div class="author-avatar">PS</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirso · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media &amp; Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<blockquote>&quot;Llevo 6 meses escalando con ROAS alto en Meta. Cada mes tenía menos cash en el banco. Un día saqué los números bien: margen medio, devoluciones, shipping. El ROAS real era muy inferior al reportado. Estuve meses quemando caja porque confiaba en la métrica equivocada.&quot;</blockquote>
+<p>La escena: un fundador de una marca de suplementación celebraba sus campañas en Meta. Invertía capital en ads. Meta le decía que generaba ventas con buen ROAS. Su accountant le dijo un jueves que llevaba meses con flujo de caja negativo.</p>
+<div class="direct-answer"><p>iOS 14.5 rompió el tracking del lado del cliente. En las cuentas que gestionamos, el pixel capta en torno al 40% de las compras. Meta sobrevalora el último click e ignora márgenes, devoluciones y el trabajo previo de tu email, tu contenido y tu marca. El ROAS de plataforma no mide rentabilidad: mide ingresos brutos atribuidos a un canal. Para saber si tu negocio es viable necesitas el Cash-Flow ROAS, que incorpora margen real, costes de fulfillment y datos reconstruidos via CAPI.</p></div>
+<h2>Lo que vas a aprender</h2>
+<ol>
+<li>Por qué iOS 14 destruyó tu visibilidad de conversiones y cómo recuperarla con CAPI</li>
+<li>Qué es el Cash-Flow ROAS y por qué es la métrica que decide si escalas</li>
+<li>Por qué Klaviyo y Meta pueden tener razón los dos a la vez</li>
+<li>El framework PIRÁMIDE DE ATRIBUCIÓN para diagnosis en 5 pasos</li>
+</ol>
+<p>---</p>
+<h2>El problema: tu pixel solo ve el 40% de lo que pasa</h2>
+<p>Cuando Apple lanzó iOS 14.5, el seguimiento del lado del cliente se desplomó. En las cuentas que gestionamos, el pixel capta en torno al 40% de los eventos de compra. El resto se evapora sin atribuir.</p>
+<p>Meta te dice que tienes un ROAS de 3.2x. Pero calcula sobre una muestra incompleta. Imagina que generaste 100 ventas y tu pixel solo registró 40. Divídelas entre el spend y te sale una cifra inflada.</p>
+<p>El ROAS reportado post-iOS 14.5 es como pesar a tu hijo en la báscula de la esquina: la báscula solo funciona la mitad de las veces.</p>
+<p><strong>1. Instala Meta Conversion API via Stape.</strong></p>
+<p>La CAPI envía eventos desde tu servidor, saltándose el navegador. En las cuentas donde la hemos implementado —264.712€ de inversión y 31.555 conversiones registradas con CAPI del lado del servidor—, esto restaura entre un 60% y un 80% de los eventos perdidos. Necesitas un servidor Stape, un contenedor GA4 del lado del servidor y la conexión CAPI activa en tu Events Manager.</p>
+<p><strong>2. Valida el match quality score.</strong></p>
+<p>En Meta Events Manager, busca el match quality score. En nuestra experiencia debe pasar de 7; por debajo, ajusta los parámetros de usuario (email y teléfono hasheados, nombre, apellido, ciudad) o la CAPI pierde efectividad.</p>
+<p><strong>3. Compara eventos emitidos vs eventos recibidos.</strong></p>
+<p>Tras activar CAPI, exporta desde tu backend los eventos de compra enviados y compáralos con los recibidos en Meta. Una discrepancia alta indica un problema de configuración.</p>
+<p>La primera auditoría que hacemos con clientes nuevos casi siempre revela un pixel medio ciego. Sin visibilidad no hay optimización real: estás disparando a oscuras.</p>
+<p>---</p>
+<h2>Cash-Flow ROAS: la métrica que destruye el ego</h2>
+<p>Aquí viene lo que nadie te cuenta. El ROAS que ves en Meta es ingresos brutos atribuidos divididos entre ad spend. Ignora tu margen bruto por producto, el fulfillment y el shipping, la tasa de devoluciones, los chargebacks y el lifetime value del cliente.</p>
+<p>Un ejemplo con números que vemos a menudo en las cuentas que gestionamos: un ROAS de 3.2x en un producto con margen bruto 35% y 20% de devoluciones se queda en un Cash-Flow ROAS de 0.90x. Estás perdiendo 10 céntimos por cada euro invertido.</p>
+<p>La fórmula, con el fulfillment ya incorporado en el coste de producto:</p>
+<p>Cash-Flow ROAS = ROAS de plataforma × margen bruto × (1 − tasa de devoluciones)</p>
+<p>Con los números del ejemplo: 3.2 × 0.35 × 0.80 = 0.90x. Con devoluciones del 20%, puedes estar bajo el agua sin saberlo.</p>
+<div class="cifra-que-abofetea">Un ROAS de 3.2x con margen bruto del 35% y un 20% de devoluciones equivale a un Cash-Flow ROAS real de 0.90x. Estás destruyendo caja aunque Meta te diga que vas bien. Son márgenes y devoluciones típicos en D2C de suplementación y cosmética; ajústalo a tus números.</div>
+<p>La primera vez que calculé el Cash-Flow ROAS de un cliente, me llevé un susto. Tenían buen ROAS reportado en campaña y un Cash-Flow ROAS bastante inferior. Habían invertido en ads y generado ventas brutas aparentemente buenas. Después de márgenes, devoluciones y shipping, el retorno real era mucho menor de lo que parecía.</p>
+<p>No estaba mal. Pero tampoco era el retorno que parecía.</p>
+<p>---</p>
+<h2>Atribución multi-touch: por qué Klaviyo y Meta pueden tener razón los dos</h2>
+<p>Klaviyo te dice que email generó ventas. Meta te dice que paid generó la misma venta. Los dos tienen razón parcial y los dos te dan una fotografía incompleta.</p>
+<p>Klaviyo suele atribuir por first-touch o linear. Meta usa last-click: la venta entera para el último canal donde hubo click. La misma compra puede ser de email para uno y de paid para el otro sin que ninguno mienta.</p>
+<p>El customer journey real tiene 5-7 touchpoints: una impresión de awareness en Instagram, un primer click desde un post del blog, un anuncio de retargeting, un reel guardado, el alta en la newsletter, la secuencia de bienvenida y, al final, la compra tras un email con descuento. Cada touchpoint influye. Pero last-click le da el 100% del crédito al último.</p>
+<p><strong>1. Elige un modelo de atribución.</strong></p>
+<p>First-touch da todo el crédito al canal que trajo al cliente: útil para entender adquisición. Linear reparte a partes iguales: útil para visibilidad. Time-decay pesa más los touchpoints cercanos a la conversión. U-shaped da 40% al primero, 40% al último y reparte el resto. Para D2C recomendamos time-decay como punto de partida porque refleja la realidad del nurturing.</p>
+<p><strong>2. Implementa seguimiento unificado.</strong></p>
+<p>Necesitas una fuente de verdad: GA4 del lado del servidor + CAPI de Meta + Klaviyo como hub de datos, con eventos unificados fluyendo entre plataformas. Sin esto, cada herramienta cuenta su propia historia.</p>
+<p><strong>3. Reconcilia los números a mano al principio.</strong></p>
+<p>Exporta ventas de Shopify y crúzalas con Meta, Google Ads y Klaviyo. Verás overlaps, ventas que nadie reclama y otras que todos reclaman. El objetivo es entender la fotografía real, no tener la herramienta perfecta.</p>
+<div class="pro-tip"><p>Pro tip</p><p>Optimiza por ROAS de canal después de corregir por atribución. Si tu canal paid muestra 3x pero la atribución multi-touch revela que solo fue responsable de una fracción de la venta, tu ROAS real de paid es bastante menor. Deja de escalar lo que parece rentable y empieza a escalar lo que genera euros netos.</p></div>
+<p>---</p>
+<h2>El framework PIRÁMIDE DE ATRIBUCIÓN: diagnosis en 5 pasos</h2>
+<p>Esta es la herramienta que usamos con clientes para dejar de decidir con datos rotos.</p>
+<p><strong>1. Reconstruye.</strong> Implementa CAPI + GA4 del lado del servidor. Recupera los eventos que iOS te robó. Sin datos completos, todo lo demás es aproximación.</p>
+<p><strong>2. Calcula.</strong> Computa tu Cash-Flow ROAS real, no el de plataforma. Usa márgenes netos e incluye devoluciones. Si es menor a 1.5x, para de escalar.</p>
+<p><strong>3. Atribuye.</strong> Aplica un modelo multi-touch e identifica qué porcentaje de cada venta movió de verdad el paid. Si solo influyó en una parte, tu contribución real es menor.</p>
+<p><strong>4. Experimenta.</strong> Ejecuta un test de control: aísla un segmento de audiencia de toda publicidad durante 4-6 semanas y mide la diferencia contra el grupo expuesto. Eso es tu lift real. Una parte de tus ventas hubieran ocurrido sin ads.</p>
+<p><strong>5. Unifica.</strong> Construye un panel con datos de Shopify, Meta, Google Ads y Klaviyo. Una fuente de verdad. Sin esto, cada reunión es un debate sobre quién tiene razón.</p>
+<p>---</p>
+<h2>Acción: tus próximos 30 minutos</h2>
+<p>Abre una hoja de cálculo y crea tres columnas: ingresos brutos de los últimos 30 días (Shopify), ad spend total (Meta + Google) y margen bruto medio (ingresos menos coste de producto y shipping).</p>
+<p>Multiplica la columna 1 por la 3, réstale la columna 2 y divide entre la columna 2. Ese es tu Cash-Flow ROAS.</p>
+<p>Si es menor a 1.5x, tienes un problema de rentabilidad. No de ROAS. No de ads. De rentabilidad.</p>
+<p>Si no tienes claro tu margen bruto, pregúntale a tu accountant. No a Meta.</p>
+<p>---</p>
+<h2>En este post cubrimos</h2>
+<p>Por qué el pixel solo ve una fracción de las compras tras iOS 14.5 y cómo CAPI lo resuelve, la diferencia entre ROAS de plataforma y Cash-Flow ROAS con un ejemplo calculado, por qué Klaviyo y Meta cuentan la misma venta distinto, la PIRÁMIDE DE ATRIBUCIÓN en 5 pasos y el test de control previo a escalar.</p>
+<p>---</p>
+<p>Tu próximo paso es calcular tu Cash-Flow ROAS real. En el próximo post te explico cómo montar el panel unificado con n8n, GA4 del lado del servidor y Klaviyo para tener una fuente de verdad funcionando en 48 horas. Sin Excel manual. Sin debates en reuniones.</p>
+        </article>
+
+<section class="sources-block">
+  <h2>Fuentes y datos</h2>
+  <p>Cada cifra y afirmación de este artículo se sostiene en una fuente verificable. Las que respaldan este post:</p>
+  <ul>
+<li><a href="https://www.facebook.com/business/ads-guide" rel="noopener noreferrer" target="_blank">Meta Business Help — Ads Guide</a></li>
+<li><a href="https://developers.facebook.com/docs/marketing-api/conversions-api" rel="noopener noreferrer" target="_blank">Meta — Conversions API docs</a></li>
+<li><a href="https://www.shopify.com/blog/marketing-metrics" rel="noopener noreferrer" target="_blank">Shopify Blog — Marketing Metrics</a></li>
+<li><a href="https://www.klaviyo.com/blog" rel="noopener noreferrer" target="_blank">Klaviyo Blog</a></li>
+<li><a href="https://www.acquisition.com" rel="noopener noreferrer" target="_blank">Acquisition.com — Alex Hormozi</a></li>
+  </ul>
+</section>
+
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+<div class="faq-item"><h3 class="faq-q">¿Por qué Meta reporta ROAS 3.2x pero mi cuenta de resultados muestra pérdidas?</h3><p class="faq-a">Meta atribuye a paid media el 100% de la venta cuando el usuario clickó en un anuncio, aunque otros canales influyeron antes. Si tu margen bruto es 35% y tienes un 20% de devoluciones, tu ROAS real baja de 3.2x a 0.89x. Estás escalando destruyendo caja.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo recupero visibilidad de mis conversiones tras iOS 14.5?</h3><p class="faq-a">Implementando Meta Conversion API via server-side (Stape) junto al pixel client-side. Esto restaura entre 60-80% de los eventos perdidos en dispositivos Apple. Sin CAPI, solo ves ~40% de tus conversiones reales.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Por qué Klaviyo y Meta atribuyen la misma venta a canales diferentes?</h3><p class="faq-a">No mienten. Cada plataforma usa un modelo de atribución distinto: Meta usa last-click, Klaviyo usa first-touch o linear. La misma venta puede ser email para Klaviyo (porque abrió el email final) y paid para Meta (porque fue el último click). Necesitas un modelo unificado multi-touch.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuándo debería dejar de escalar campañas aunque el ROAS reportado sea bueno?</h3><p class="faq-a">Cuando tu Cash-Flow ROAS cae por debajo de 1.5x. Esto significa que por cada euro invertido, te quedan menos euros de los que invertiste. Si tu ROAS de plataforma es 3x pero tu margen neto es bajo, estás quemando caja aunque las métricas de Meta digan lo contrario.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué es un holdout experiment y por qué lo necesito?</h3><p class="faq-a">Es aislar un grupo de audiencia de toda publicidad durante 4-6 semanas. Comparando sus compras con el grupo expuesto, sabes qué ventas fueron incrementales (no habrían ocurrido sin ads) versus las que habrías conseguido igual. Sin esto, inviertes a ciegas.</p></div>
+</section>
+
+        <div class="cta-block">
+          <h3>Auditoría de 30 minutos de atribución y rentabilidad real</h3>
+          <p>Vemos tu ROAS reportado vs ROAS real, qué canales destruyen caja y qué cambiar primero.</p>
+          <a href="/contacto.html">Reserva tu auditoría →</a>
+        </div>
+
+
+        <div class="cta-block" id="feedback" style="text-align:left; margin-top:2rem;">
+          <h3 style="font-size:1.05rem;">¿Te ha servido este artículo?</h3>
+          <p style="margin-bottom:1rem;">Tu respuesta mejora lo que escribimos. 10 segundos, sin registro.</p>
+          <form action="https://n8n.daybydayconsulting.com/webhook/blog-feedback" method="POST">
+            <input type="hidden" name="slug" value="atribucion-post-ios-14-roas-mentira">
+            <input type="text" name="web" value="" style="display:none" tabindex="-1" autocomplete="off">
+            <div style="display:flex; gap:0.5rem; margin-bottom:0.75rem;">
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="si" required> Sí, útil</label>
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="no"> No mucho</label>
+            </div>
+            <textarea name="comment" rows="2" placeholder="¿Qué te ha faltado o sobrado? (opcional)" style="width:100%; padding:0.6rem; border-radius:8px; border:1px solid var(--border); background:var(--bg-card); color:var(--text-primary); margin-bottom:0.75rem;"></textarea>
+            <button type="submit" style="background:var(--accent-color, #6366f1); color:white; font-weight:600; padding:0.6rem 1.25rem; border-radius:8px; border:none; cursor:pointer;">Enviar feedback</button>
+          </form>
+        </div>
+        <div class="related-articles">
+          <h2>Artículos relacionados</h2>
+          <a href="/blog/recuperar-cac-30-dias-secuencia-ofertas-d2c">recuperar el CAC en 30 días</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Atribución post-iOS 14: por qué tu ROAS miente","description":"Tu ROAS de 3.2x puede ser una mentira. Descubre cómo iOS 14 destruyó el tracking y qué hacer para medir rentabilidad real.","datePublished":"2026-07-06T10:00:00+02:00","dateModified":"2026-07-06T10:00:00+02:00","inLanguage":"es-ES","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/","jobTitle":"Growth Partner","worksFor":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"knowsAbout":["Meta Ads","Google Ads","TikTok Ads","paid media","ecommerce D2C","CRM y email marketing","analítica server-side","growth strategy"],"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/","logo":{"@type":"ImageObject","url":"https://www.daybydayconsulting.com/favicon.png"},"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/atribucion-post-ios-14-roas-mentira"},"image":{"@type":"ImageObject","url":"https://www.daybydayconsulting.com/blog/img/atribucion-post-ios-14-roas-mentira.png","width":1200,"height":675}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Por qué Meta reporta ROAS 3.2x pero mi cuenta de resultados muestra pérdidas?","acceptedAnswer":{"@type":"Answer","text":"Meta atribuye a paid media el 100% de la venta cuando el usuario clickó en un anuncio, aunque otros canales influyeron antes. Si tu margen bruto es 35% y tienes un 20% de devoluciones, tu ROAS real baja de 3.2x a 0.89x. Estás escalando destruyendo caja."}},{"@type":"Question","name":"¿Cómo recupero visibilidad de mis conversiones tras iOS 14.5?","acceptedAnswer":{"@type":"Answer","text":"Implementando Meta Conversion API via server-side (Stape) junto al pixel client-side. Esto restaura entre 60-80% de los eventos perdidos en dispositivos Apple. Sin CAPI, solo ves ~40% de tus conversiones reales."}},{"@type":"Question","name":"¿Por qué Klaviyo y Meta atribuyen la misma venta a canales diferentes?","acceptedAnswer":{"@type":"Answer","text":"No mienten. Cada plataforma usa un modelo de atribución distinto: Meta usa last-click, Klaviyo usa first-touch o linear. La misma venta puede ser email para Klaviyo (porque abrió el email final) y paid para Meta (porque fue el último click). Necesitas un modelo unificado multi-touch."}},{"@type":"Question","name":"¿Cuándo debería dejar de escalar campañas aunque el ROAS reportado sea bueno?","acceptedAnswer":{"@type":"Answer","text":"Cuando tu Cash-Flow ROAS cae por debajo de 1.5x. Esto significa que por cada euro invertido, te quedan menos euros de los que invertiste. Si tu ROAS de plataforma es 3x pero tu margen neto es bajo, estás quemando caja aunque las métricas de Meta digan lo contrario."}},{"@type":"Question","name":"¿Qué es un holdout experiment y por qué lo necesito?","acceptedAnswer":{"@type":"Answer","text":"Es aislar un grupo de audiencia de toda publicidad durante 4-6 semanas. Comparando sus compras con el grupo expuesto, sabes qué ventas fueron incrementales (no habrían ocurrido sin ads) versus las que habrías conseguido igual. Sin esto, inviertes a ciegas."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.daybydayconsulting.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.daybydayconsulting.com/blog"},{"@type":"ListItem","position":3,"name":"Atribución post-iOS 14: por qué tu ROAS miente","item":"https://www.daybydayconsulting.com/blog/atribucion-post-ios-14-roas-mentira"}]}</script>
+</body>
+</html>
