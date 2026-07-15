@@ -56,75 +56,59 @@ migration_state: "rendered"
 La escena: un fundador de una marca de suplementación celebraba sus campañas en Meta. Invertía capital en ads. Meta le decía que generaba ventas con buen ROAS. Su accountant le dijo un jueves que llevaba meses con flujo de caja negativo.
 
 :::direct-answer
-iOS 14.5 rompió el tracking del lado del cliente. En las cuentas que gestionamos, el pixel capta en torno al 40% de las compras. Meta sobrevalora el último click pagadero e ignora márgenes, devoluciones y el trabajo que hicieron antes tu email, tu contenido y tu branding. El ROAS de plataforma no mide rentabilidad: mide ingresos brutos atribuidos a un canal. Si quieres saber si tu negocio es viable, necesitas el Cash-Flow ROAS, que incorpora margen real, costes de fulfillment y datos reconstruidos via CAPI.
+iOS 14.5 rompió el tracking del lado del cliente. En las cuentas que gestionamos, el pixel capta en torno al 40% de las compras. Meta sobrevalora el último click e ignora márgenes, devoluciones y el trabajo previo de tu email, tu contenido y tu marca. El ROAS de plataforma no mide rentabilidad: mide ingresos brutos atribuidos a un canal. Para saber si tu negocio es viable necesitas el Cash-Flow ROAS, que incorpora margen real, costes de fulfillment y datos reconstruidos via CAPI.
 :::
 
 ## Lo que vas a aprender
 
 1. Por qué iOS 14 destruyó tu visibilidad de conversiones y cómo recuperarla con CAPI
-2. Qué es el Cash-Flow ROAS y por qué es la única métrica que deberías seguir antes de escalar
-3. Cómo funciona la atribución multi-touch y por qué Klaviyo y Meta pueden tener razón simultáneamente
-4. El framework **PIRÁMIDE DE ATRIBUCIÓN** para diagnosis en 5 pasos
+2. Qué es el Cash-Flow ROAS y por qué es la métrica que decide si escalas
+3. Por qué Klaviyo y Meta pueden tener razón los dos a la vez
+4. El framework PIRÁMIDE DE ATRIBUCIÓN para diagnosis en 5 pasos
 
 ---
 
 ## El problema: tu pixel solo ve el 40% de lo que pasa
 
-Cuando Apple lanzó iOS 14.5, el seguimiento del lado del cliente se desplomó. En las cuentas que gestionamos, el pixel capta aproximadamente el 40% de los eventos de compra. El resto se evapora sin atribuir.
+Cuando Apple lanzó iOS 14.5, el seguimiento del lado del cliente se desplomó. En las cuentas que gestionamos, el pixel capta en torno al 40% de los eventos de compra. El resto se evapora sin atribuir.
 
-Meta te dice que tienes un ROAS de 3.2x. Pero está calculando sobre una muestra incompleta. Imagina que en realidad generaste 100 ventas. Tu pixel solo registró 40. Divídelas entre el spend y te sale una cifra inflada.
+Meta te dice que tienes un ROAS de 3.2x. Pero calcula sobre una muestra incompleta. Imagina que generaste 100 ventas y tu pixel solo registró 40. Divídelas entre el spend y te sale una cifra inflada.
 
 El ROAS reportado post-iOS 14.5 es como pesar a tu hijo en la báscula de la esquina: la báscula solo funciona la mitad de las veces.
 
 **1. Instala Meta Conversion API via Stape.**
 
-La CAPI envía eventos desde tu servidor, saltándose el navegador. En las cuentas donde la hemos implementado —264.712€ de inversión y 31.555 conversiones registradas con CAPI del lado del servidor—, esto restaura entre un 60% y un 80% de los eventos perdidos. Necesitas un servidor Stape configurado, un contenedor GA4 del lado del servidor y la conexión CAPI activa en tu Events Manager.
+La CAPI envía eventos desde tu servidor, saltándose el navegador. En las cuentas donde la hemos implementado —264.712€ de inversión y 31.555 conversiones registradas con CAPI del lado del servidor—, esto restaura entre un 60% y un 80% de los eventos perdidos. Necesitas un servidor Stape, un contenedor GA4 del lado del servidor y la conexión CAPI activa en tu Events Manager.
 
 **2. Valida el match quality score.**
 
-En Meta Events Manager, busca la puntuación de calidad de coincidencia (match quality score). En nuestra experiencia, debe estar por encima de 7 para que la CAPI funcione correctamente. Si está por debajo, ajusta los parámetros de usuario (email hasheado, phone hasheado, nombre, apellido, ciudad). Sin buenos parámetros de coincidencia, la CAPI pierde efectividad.
+En Meta Events Manager, busca el match quality score. En nuestra experiencia debe pasar de 7; por debajo, ajusta los parámetros de usuario (email y teléfono hasheados, nombre, apellido, ciudad) o la CAPI pierde efectividad.
 
 **3. Compara eventos emitidos vs eventos recibidos.**
 
-Después de activar CAPI, exporta desde tu backend los eventos de compra enviados. Compáralos con los recibidos en Meta. Una discrepancia alta indica un problema de configuración.
+Tras activar CAPI, exporta desde tu backend los eventos de compra enviados y compáralos con los recibidos en Meta. Una discrepancia alta indica un problema de configuración.
 
-La primera auditoría que hacemos con clientes nuevos casi siempre revela que están operando con un pixel medio ciego. Sin visibilidad, no hay optimización real: estás disparando a oscuras.
+La primera auditoría que hacemos con clientes nuevos casi siempre revela un pixel medio ciego. Sin visibilidad no hay optimización real: estás disparando a oscuras.
 
 ---
 
 ## Cash-Flow ROAS: la métrica que destruye el ego
 
-Aquí viene lo que nadie te cuenta. El ROAS que ves en Meta es:
-
-**ROAS de plataforma = Ingresos brutos atribuidos / Ad Spend**
-
-Esto ignora:
-
-- Tu margen bruto real por producto
-- Costes de fulfillment y shipping
-- Tasa de devoluciones
-- Chargebacks
-- Lifetime value del cliente
+Aquí viene lo que nadie te cuenta. El ROAS que ves en Meta es ingresos brutos atribuidos divididos entre ad spend. Ignora tu margen bruto por producto, el fulfillment y el shipping, la tasa de devoluciones, los chargebacks y el lifetime value del cliente.
 
 Un ejemplo con números que vemos a menudo en las cuentas que gestionamos: un ROAS de 3.2x en un producto con margen bruto 35% y 20% de devoluciones se queda en un Cash-Flow ROAS de 0.90x. Estás perdiendo 10 céntimos por cada euro invertido.
 
-La fórmula del Cash-Flow ROAS es:
+La fórmula, con el fulfillment ya incorporado en el coste de producto:
 
-**Cash-Flow ROAS = ROAS de plataforma × Margen Bruto × (1 − Tasa de Devoluciones) × (1 − Fulfillment por Venta)**
+Cash-Flow ROAS = ROAS de plataforma × margen bruto × (1 − tasa de devoluciones)
 
-Con margen bruto del 35% y devoluciones del 20% (fulfillment ya incorporado en el coste del producto):
-
-Margen efectivo = 0.35 × (1 − 0.20) = 0.35 × 0.80 = 0.28
-
-Cash-Flow ROAS = 3.2 × 0.28 = 0.90x
-
-Con devoluciones del 20%, puedes estar bajo el agua sin saberlo.
+Con los números del ejemplo: 3.2 × 0.35 × 0.80 = 0.90x. Con devoluciones del 20%, puedes estar bajo el agua sin saberlo.
 
 :::cifra
-Un ROAS de 3.2x en un producto con margen bruto 35% y un 20% de devoluciones equivale a un Cash-Flow ROAS real de 0.90x. Estás destruyendo caja aunque Meta te diga que vas bien. Ejemplo con márgenes del 35% y devoluciones del 20%, típicos en D2C de suplementación y cosmética; ajústalo a tus números.
+Un ROAS de 3.2x con margen bruto del 35% y un 20% de devoluciones equivale a un Cash-Flow ROAS real de 0.90x. Estás destruyendo caja aunque Meta te diga que vas bien. Son márgenes y devoluciones típicos en D2C de suplementación y cosmética; ajústalo a tus números.
 :::
 
-La primera vez que calculé el Cash-Flow ROAS de un cliente, me llevé un susto. Tenían buen ROAS reportado en campaña. Su Cash-Flow ROAS era significativamente inferior. Habían invertido en ads y generado ventas brutas aparentemente buenas. Pero después de márgenes, devoluciones y shipping, el retorno real sobre la inversión publicitaria era mucho menor de lo que parecía.
+La primera vez que calculé el Cash-Flow ROAS de un cliente, me llevé un susto. Tenían buen ROAS reportado en campaña y un Cash-Flow ROAS bastante inferior. Habían invertido en ads y generado ventas brutas aparentemente buenas. Después de márgenes, devoluciones y shipping, el retorno real era mucho menor de lo que parecía.
 
 No estaba mal. Pero tampoco era el retorno que parecía.
 
@@ -132,74 +116,51 @@ No estaba mal. Pero tampoco era el retorno que parecía.
 
 ## Atribución multi-touch: por qué Klaviyo y Meta pueden tener razón los dos
 
-Klaviyo te dice que email generó ventas. Meta te dice que paid generó la misma venta. Los dos tienen razón parcial. Y los dos te están dando una fotografía incompleta.
+Klaviyo te dice que email generó ventas. Meta te dice que paid generó la misma venta. Los dos tienen razón parcial y los dos te dan una fotografía incompleta.
 
-Klaviyo usa un modelo de atribución. Probablemente first-touch o linear. Si un cliente entró por un anuncio de Facebook, abrió 3 newsletters y compró después de recibir un email con descuento, Klaviyo distribuye el crédito de forma diferente a Meta.
+Klaviyo suele atribuir por first-touch o linear. Meta usa last-click: la venta entera para el último canal donde hubo click. La misma compra puede ser de email para uno y de paid para el otro sin que ninguno mienta.
 
-Meta usa last-click. Atribuye la venta al último canal donde hubo un click. Si el último touchpoint fue un email, Meta lo atribuye a email. Si fue un anuncio, lo atribuye a paid.
-
-El customer journey real tiene 5-7 touchpoints antes de la compra:
-
-1. **Impresión de awareness** — alguien vio tu marca en Instagram sin interactuar
-2. **First click** — llegó a tu web desde un post de blog
-3. **Retargeting** — le mostraste un anuncio de producto
-4. **Engagement** — vio un reel, dio like, guardó el post
-5. **Email** — se inscribió a tu newsletter
-6. **Email automation** — recibió una secuencia de bienvenida
-7. **Conversion** — compró después de un email de descuento
-
-Cada uno de estos touchpoints influye en la decisión. Pero last-click le da el 100% del crédito al último.
+El customer journey real tiene 5-7 touchpoints: una impresión de awareness en Instagram, un primer click desde un post del blog, un anuncio de retargeting, un reel guardado, el alta en la newsletter, la secuencia de bienvenida y, al final, la compra tras un email con descuento. Cada touchpoint influye. Pero last-click le da el 100% del crédito al último.
 
 **1. Elige un modelo de atribución.**
 
-Opciones comunes:
-
-- **First-touch**: 100% al primer canal que trajo al cliente. Bien para entender adquisición.
-- **Linear**: distribuye igual entre todos los touchpoints. Bien para visibilidad.
-- **Time-decay**: da más peso a los touchpoints más cercanos a la conversión. Similar a last-click pero reconoce el journey.
-- **Posición (U-shaped)**: 40% al primer touch, 40% al último, 20% repartido en el medio.
-
-Para D2C, recomendamos time-decay como punto de partida porque refleja la realidad del nurturing.
+First-touch da todo el crédito al canal que trajo al cliente: útil para entender adquisición. Linear reparte a partes iguales: útil para visibilidad. Time-decay pesa más los touchpoints cercanos a la conversión. U-shaped da 40% al primero, 40% al último y reparte el resto. Para D2C recomendamos time-decay como punto de partida porque refleja la realidad del nurturing.
 
 **2. Implementa seguimiento unificado.**
 
-Necesitas una fuente de verdad. GA4 del lado del servidor + CAPI de Meta + Klaviyo como hub de datos. Configura eventos unificados que fluyan entre plataformas. Sin esto, cada herramienta cuenta su propia historia.
+Necesitas una fuente de verdad: GA4 del lado del servidor + CAPI de Meta + Klaviyo como hub de datos, con eventos unificados fluyendo entre plataformas. Sin esto, cada herramienta cuenta su propia historia.
 
-**3. Reconcilia los números manualmente al principio.**
+**3. Reconcilia los números a mano al principio.**
 
-Exporta ventas de Shopify. Cruza con datos de Meta, Google Ads y Klaviyo. Verás overlaps. Verás ventas que nadie reclama. Verás otras que todos reclaman. El objetivo es entender la fotografía real, no tener la herramienta perfecta.
+Exporta ventas de Shopify y crúzalas con Meta, Google Ads y Klaviyo. Verás overlaps, ventas que nadie reclama y otras que todos reclaman. El objetivo es entender la fotografía real, no tener la herramienta perfecta.
 
 :::pro-tip
-Optimiza por ROAS de canal después de corregir por atribución. Si tu canal paid muestra 3x pero la atribución multi-touch revela que solo fue responsable de una fracción de la venta, tu ROAS real de paid es considerablemente inferior. Deja de escalar lo que parece rentable y empieza a escalar lo que realmente genera euros netos.
+Optimiza por ROAS de canal después de corregir por atribución. Si tu canal paid muestra 3x pero la atribución multi-touch revela que solo fue responsable de una fracción de la venta, tu ROAS real de paid es bastante menor. Deja de escalar lo que parece rentable y empieza a escalar lo que genera euros netos.
 :::
 
 ---
 
 ## El framework PIRÁMIDE DE ATRIBUCIÓN: diagnosis en 5 pasos
 
-Esta es la herramienta que usamos con clientes para dejar de tomar decisiones con datos rotos.
+Esta es la herramienta que usamos con clientes para dejar de decidir con datos rotos.
 
 **1. Reconstruye.** Implementa CAPI + GA4 del lado del servidor. Recupera los eventos que iOS te robó. Sin datos completos, todo lo demás es aproximación.
 
-**2. Calcula.** Computa tu Cash-Flow ROAS real. No el de plataforma. Usa márgenes netos, no brutos. Incluye devoluciones. Si es menor a 1.5x, para de escalar.
+**2. Calcula.** Computa tu Cash-Flow ROAS real, no el de plataforma. Usa márgenes netos e incluye devoluciones. Si es menor a 1.5x, para de escalar.
 
-**3. Atribuye.** Aplica un modelo multi-touch. Identifica qué porcentaje de cada venta fue incrementada por paid media. Si Meta te dice que generaste ventas pero paid solo influyó en una parte de esas ventas, tu contribución real de paid fue proporcionalmente menor.
+**3. Atribuye.** Aplica un modelo multi-touch e identifica qué porcentaje de cada venta movió de verdad el paid. Si solo influyó en una parte, tu contribución real es menor.
 
-**4. Experimenta.** Ejecuta un test de control. Aísla un segmento de audiencia de toda publicidad durante 4-6 semanas. Mide la diferencia de ventas entre grupo expuesto y control. Eso es tu lift real. Una parte de tus ventas hubieran ocurrido sin ads.
+**4. Experimenta.** Ejecuta un test de control: aísla un segmento de audiencia de toda publicidad durante 4-6 semanas y mide la diferencia contra el grupo expuesto. Eso es tu lift real. Una parte de tus ventas hubieran ocurrido sin ads.
 
-**5. Unifica.** Construye un panel de control con datos de Shopify, Meta, Google Ads y Klaviyo. Una fuente de verdad. Sin esto, cada reunión es un debate sobre quién tiene razón.
+**5. Unifica.** Construye un panel con datos de Shopify, Meta, Google Ads y Klaviyo. Una fuente de verdad. Sin esto, cada reunión es un debate sobre quién tiene razón.
 
 ---
 
 ## Acción: tus próximos 30 minutos
 
-Abre una hoja de cálculo. Crea tres columnas:
+Abre una hoja de cálculo y crea tres columnas: ingresos brutos de los últimos 30 días (Shopify), ad spend total (Meta + Google) y margen bruto medio (ingresos menos coste de producto y shipping).
 
-1. **Ingresos brutos de los últimos 30 días** (desde Shopify)
-2. **Ad spend total** (desde Meta + Google)
-3. **Margen bruto medio** (calcula: ingresos - coste de producto - shipping)
-
-Resta columna 2 de (columna 1 × columna 3). Divide entre columna 2. Ese es tu Cash-Flow ROAS.
+Multiplica la columna 1 por la 3, réstale la columna 2 y divide entre la columna 2. Ese es tu Cash-Flow ROAS.
 
 Si es menor a 1.5x, tienes un problema de rentabilidad. No de ROAS. No de ads. De rentabilidad.
 
@@ -209,8 +170,8 @@ Si no tienes claro tu margen bruto, pregúntale a tu accountant. No a Meta.
 
 ## En este post cubrimos
 
-Por qué el pixel del lado del cliente solo captura aproximadamente el 40% de ventas en dispositivos Apple y cómo CAPI lo resuelve. La diferencia entre ROAS de plataforma y Cash-Flow ROAS con cifras concretas. Por qué Klaviyo y Meta atribuyen la misma venta a canales distintos. El framework PIRÁMIDE DE ATRIBUCIÓN para diagnosis en 5 pasos. Y por qué necesitas un test de control antes de escalar cualquier campaña.
+Por qué el pixel solo ve una fracción de las compras tras iOS 14.5 y cómo CAPI lo resuelve, la diferencia entre ROAS de plataforma y Cash-Flow ROAS con un ejemplo calculado, por qué Klaviyo y Meta cuentan la misma venta distinto, la PIRÁMIDE DE ATRIBUCIÓN en 5 pasos y el test de control previo a escalar.
 
 ---
 
-Tu próximo paso es calcular tu Cash-Flow ROAS real. En el próximo post, te explico cómo montar el panel de control unificado con n8n, GA4 del lado del servidor y Klaviyo para que tengas una fuente de verdad funcionando en 48 horas. Sin Excel manual. Sin debates en reuniones.
+Tu próximo paso es calcular tu Cash-Flow ROAS real. En el próximo post te explico cómo montar el panel unificado con n8n, GA4 del lado del servidor y Klaviyo para tener una fuente de verdad funcionando en 48 horas. Sin Excel manual. Sin debates en reuniones.
