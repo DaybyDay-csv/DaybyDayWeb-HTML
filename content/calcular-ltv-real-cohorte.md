@@ -19,7 +19,7 @@ cta_href: "/contacto.html"
 cta_label: "Reservar auditoría"
 llms_summary: "Guía práctica para calcular LTV real por cohorte sin spreadsheets, conectando Klaviyo, GA4 server-side y datos de fulfillment. Incluye framework de 5 pasos y validación de estacionalidad."
 tags: ["LTV", "cohortes", "D2C", "margen real", "atribución", "ecommerce"]
-migration_state: "rendered"
+migration_state: "good"
 ---
 
 > "Mi ROAS es alto pero mi accountant me dice que no gano dinero. No entiendo qué está pasando."

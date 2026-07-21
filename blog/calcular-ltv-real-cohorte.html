@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cómo calcular LTV real por cohorte (sin spreadsheet)</title>
+  <meta name="description" content="Calcula tu LTV real por cohorte en 2 horas sin spreadsheets. Descubre qué canales destruyen valor y cuáles escala de verdad.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="Pablo Santirso · DayByDay Consulting">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/calcular-ltv-real-cohorte">
+  <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/blog/calcular-ltv-real-cohorte">
+  <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/blog/calcular-ltv-real-cohorte">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly summary">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Cómo calcular LTV real por cohorte (sin spreadsheet)">
+  <meta property="og:description" content="Calcula tu LTV real por cohorte en 2 horas sin spreadsheets. Descubre qué canales destruyen valor y cuáles escala de verdad.">
+  <meta property="og:url" content="https://www.daybydayconsulting.com/blog/calcular-ltv-real-cohorte">
+  <meta property="og:site_name" content="DayByDay Consulting">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="https://www.daybydayconsulting.com/blog/img/calcular-ltv-real-cohorte.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta name="twitter:image" content="https://www.daybydayconsulting.com/blog/img/calcular-ltv-real-cohorte.png">
+  <meta property="article:published_time" content="2026-07-21T10:00:00+02:00">
+  <meta property="article:modified_time" content="2026-07-21T10:00:00+02:00">
+  <meta property="article:author" content="Pablo Santirso">
+  <meta property="article:section" content="Growth Analytics">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cómo calcular LTV real por cohorte (sin spreadsheet)">
+  <meta name="twitter:description" content="Calcula tu LTV real por cohorte en 2 horas sin spreadsheets. Descubre qué canales destruyen valor y cuáles escala de verdad.">
+
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .article-body .direct-answer { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 0 0 2rem; }
+    .article-body .direct-answer p { margin: 0; font-size: 1.05rem; }
+    .article-body .summary-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .summary-block p { margin: 0 0 0.5rem; }
+    .article-body .pro-tip { background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .pro-tip p:first-child { color: var(--accent-color, #6366f1); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem; margin: 0 0 0.5rem; }
+    .article-body .pro-tip p:last-child { margin: 0; }
+    .article-body .cifra-que-abofetea { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); text-align: center; padding: 1.5rem 0; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .related-articles h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); }
+    .sources-block { margin-top: 3rem; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; }
+    .sources-block h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary); }
+    .sources-block p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .sources-block ul { list-style: none; padding: 0; margin: 0; }
+    .sources-block li { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+    .sources-block li:last-child { border-bottom: none; }
+    .sources-block a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .related-articles a { display: block; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .related-articles a:hover { border-color: var(--accent-color, #6366f1); }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+    .cta-block { margin-top: 3rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; text-align: center; }
+    .cta-block h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary); }
+    .cta-block p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .cta-block a { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-color, #6366f1); color: white; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+<a href="#main" class="skip-link">Saltar al contenido principal</a>
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Growth Analytics</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Growth Analytics</span>
+          <span class="reading-time">8 min de lectura</span>
+          <span class="article-date">2026-07-21</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Cómo calcular LTV real por cohorte: el método que revela qué canales destruyen valor</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Calcula tu LTV real por cohorte en 2 horas sin spreadsheets. Descubre qué canales destruyen valor y cuáles escala de verdad.</p>
+        <div class="article-author">
+          <div class="author-avatar">PS</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirso · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media &amp; Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<blockquote>&quot;Mi ROAS es alto pero mi accountant me dice que no gano dinero. No entiendo qué está pasando.&quot;</blockquote>
+<p>Esto lo dijo el fundador de una marca de supplements D2C en nuestra primera llamada. Tenía un ROAS declarado de 3.5x y estaba escalando el canal. Cuando le pedimos los datos de fulfillment y devoluciones, encontramos que su LTV real por cliente era negativo: cada pedido le costaba más de lo que ingresaba.</p>
+<p>No era un problema de ROAS. Era un problema de qué métrica miraba.</p>
+<div class="direct-answer"><p>Tu ROAS puede ser 3.5x y tu negocio puede estar destruyendo valor. ROAS mide ingresos brutos sobre inversión publicitaria. No resta COGS, fulfillment, devoluciones, chargebacks ni el coste de atención al cliente. LTV real es lo que queda después de todos esos costes. Sin ese número, estás escalando a ciegas.</p></div>
+<h2>La tesis que vas a aprender a usar</h2>
+<p>LTV real por cohorte te dice qué canales destruyen valor. ROAS no.</p>
+<p>En nuestra experiencia auditando marcas D2C, el patrón se repite: las marcas miran ROAS, Meta les dice que van bien, el negocio no mejora. Esto pasa porque ROAS mide ingresos brutos sobre inversión publicitaria. No resta COGS, fulfillment, devoluciones, chargebacks ni atención al cliente. Escalas un canal que parece rentable pero destruye valor en cada nuevo cliente.</p>
+<h2>LTV real vs. LTV de vanidad</h2>
+<p>LTV de vanidad = Ingresos brutos por cliente. Fácil de calcular. Inútil para tomar decisiones.</p>
+<p>LTV real = Ingresos brutos − COGS − Fulfillment − Devoluciones/Chargebacks − CAC atribuido − Atención al cliente.</p>
+<div class="cifra-que-abofetea">En nuestra experiencia auditando marcas D2C, hemos visto casos donde marcas con ROAS declarados altos descubrían que su LTV real por cliente era negativo. Escalaban destruyendo valor en cada nuevo cliente capturado a través de ese canal.</div>
+<h2>El framework COHORTE LIMPIA: 5 pasos</h2>
+<p>Es la herramienta que usamos en auditoría para pasar del ROAS de vanidad a un LTV que decide dónde inviertes.</p>
+<h2>Paso 1: Abre tu panel y anota cuatro cifras</h2>
+<p>Sin estas cuatro cifras, cualquier cálculo de LTV es opinión:</p>
+<ol>
+<li>Ingreso medio por pedido</li>
+<li>Margen bruto sobre producto</li>
+<li>Coste de fulfillment por pedido</li>
+<li>Tasa de devolución</li>
+</ol>
+<p>Con esas cuatro calculas tu LTV bruto por pedido. Falta saber qué canal trajo a cada cliente.</p>
+<h2>Paso 2: No mires cohorte por fecha de pedido. Mira por fecha de adquisición</h2>
+<p>Necesitas separar clientes por fecha de primer touchpoint (cuando te descubrieron) y no por fecha de primera compra.</p>
+<p>Si lanzas una campaña de Navidad con 30% de descuento, los clientes capturados en esa campaña pueden tener su primer pedido en enero (cuando se aplica el descuento deferred). Si mides solo por primer pedido, estás mezclando cohortes que pagaron precios distintos.</p>
+<p>En GA4 server-side con Stape, configuramos cohortes por fuente/medium + fecha de adquisición. Esto te permite responder: ¿los clientes orgánicos tienen mayor LTV que los de Meta con descuento?</p>
+<div class="cifra-que-abofetea">En nuestra experiencia auditando marcas, hemos visto casos donde los clientes de campañas con CPA bajo tenían un ratio de devolución mucho mayor. El canal parecía exitoso por volumen, pero destruía valor en cada pedido.</div>
+<h2>Paso 3: Necesitas 14 meses para validar estacionalidad</h2>
+<p>Una cohorte de 12 meses no es representativa sin comparar con el mismo período del año anterior. Los clientes capturados en noviembre tienen comportamiento diferente a los de enero.</p>
+<p>El proceso que usamos en auditoría:</p>
+<ol>
+<li>Cohorte mensual de los últimos 18-24 meses</li>
+<li>Comparar cohorte enero 2025 vs. enero 2026</li>
+<li>Si la cohorte más reciente es peor, hay un problema estructural (producto, precio, o segmentación)</li>
+<li>Si es mejor, tus optimizaciones están funcionando</li>
+</ol>
+<p>Nos pasó a nosotros: durante meses miré el LTV medio agregado y escalé el canal equivocado. La cohorte de un trimestre bueno tapaba la sangría del resto. Desde entonces, cohortes o nada.</p>
+<div class="pro-tip"><p>Pro tip</p><p>La mayoría de marcas miran LTV medio de todos sus clientes juntos. Eso es inútil si tienes 3 años de datos mezclados con datos de este año. Mira LTV por cohorte de los últimos 14 meses. Si no tienes 14 meses, empieza a recoger datos ahora y no tomes decisiones de escala hasta que los tengas.</p></div>
+<h2>Paso 4: Unifica multi-plataforma (D2C + Amazon + Retail)</h2>
+<p>Si vendes en varias plataformas, el LTV del cliente es la suma de todas sus fuentes. Un cliente puede:</p>
+<ul>
+<li>Descubrirte en un anuncio de Meta</li>
+<li>Comprar en tu D2C</li>
+<li>Recomprar en Amazon</li>
+</ul>
+<p>Si no unificas el perfil, estás calculando LTV fragmentado. Ves tres clientes donde hay uno. Tomas decisiones erróneas.</p>
+<p>La unificación funciona así:</p>
+<ul>
+<li>Klaviyo usa el email como identificador principal</li>
+<li>Cruzas con datos de Amazon Seller Central y fulfillment</li>
+<li>n8n automatiza la consolidación semanal</li>
+</ul>
+<p>Resultado: un cliente, un LTV total, compre donde compre.</p>
+<p>La operación real tiene matices. La unificación completa pide el email del cliente en todas las plataformas. En D2C esto suele funcionar bien porque el checkout pide email. En Amazon la tasa de captura es baja si vendes FBA (Amazon cumple el pedido, no tú), pero puedes subir CSV con datos de compradores a Klaviyo usando el matching por nombre + dirección. No es perfecto, pero cubre buena parte de los recurrentes.</p>
+<p>El timing también importa. Un cliente que compra en D2C en enero y en Amazon en marzo tiene un LTV que no ves si consultas las plataformas por separado. Si cruzas datos cada semana, ves el comportamiento completo del cliente. Si cruzas una vez al mes, pierdes la visibilidad de pedidos con poco intervalo entre plataformas.</p>
+<p>Y los datos de fulfillment tienen que venir de tu 3PL o del panel de Amazon Seller Central. Si usas 3PL, pídeles un CSV semanal con pedido, cliente, plataforma y coste de envío real. Hay 3PL que te dan coste medio por kilo, no coste real por pedido. Exige el coste por pedido: un desvío de 2 euros en el envío cambia el LTV real de una cohorte entera.</p>
+<h2>Paso 5: Calcula cuántos pedidos necesitas para recuperar el CAC</h2>
+<p>La última pregunta antes de escalar o cerrar un canal: ¿cuántos pedidos necesitas para recuperar el coste de adquirir ese cliente?</p>
+<p>Si la cohorte de Meta con descuento tarda 200 días en recuperar el CAC y la cohorte orgánica tarda 45, ya tienes tu respuesta sobre dónde invertir. El canal que parece eficiente por volumen puede ser el que te está financiando el crecimiento con pérdidas.</p>
+<p>La fórmula: CAC dividido entre margen neto por pedido. Y margen neto no es ingreso medio menos COGS: resta también el fulfillment y la tasa de devolución aplicada al ingreso, porque una devolución quita ingreso y además genera coste de retorno.</p>
+<p>Con Klaviyo y datos de repetición de compra, puedes calcular esto por cohorte. El proceso:</p>
+<p>Primero, saca tu cohorte mensual de los últimos 12 meses. Segundo, para cada cohorte, calcula cuántos pedidos ha hecho cada cliente y en qué fechas. Tercero, calcula el margen neto acumulado por cliente por mes. Cuarto, identifica el mes en que el margen acumulado cruza el CAC atribuido. Ese es tu payback period por cohorte.</p>
+<p>Si tardas más de 90 días en recuperar el CAC en un canal, ese canal necesita optimización antes de escala. Si la cohorte de un canal nunca recupera el CAC atribuido a 12 meses, tienes que decidir si el volumen compensa las pérdidas o si cierras el canal.</p>
+<p>Hay una variable que complica todo: la atribución. Si atribuyes el CAC completo al primer canal, puede que ese canal tenga payback largo aunque otros canales empujaran la conversión. Por eso importa la cohorte por fecha de adquisición: si la de primer touchpoint y la de primer pedido dan resultados distintos, ahí está la diferencia entre pagar por captar atención y pagar por cerrar la venta.</p>
+<h2>Acción: tus próximos 30 minutos</h2>
+<p>Abre Klaviyo y exporta tus pedidos de los últimos 12 meses con fuente de adquisición. Anota tus cuatro cifras: ingreso medio, margen bruto, coste de fulfillment y tasa de devolución. Calcula LTV bruto por pedido restando COGS, fulfillment y tasa de devolución del ingreso medio. Divide tu CAC medio por canal entre ese número. El resultado es en cuántos pedidos recuperas el CAC.</p>
+<p>Si no tienes los datos de fulfillment o devoluciones, ese es tu primer gap. Sin esos números, cualquier cálculo de LTV es opinión.</p>
+<h2>En este post cubrimos</h2>
+<p>Por qué ROAS es una métrica de vanidad y LTV real es la que importa, la diferencia entre LTV bruto y LTV real, por qué necesitas 14 meses de datos para validar estacionalidad, cómo unificar LTV multi-plataforma (D2C + Amazon + Retail) y cuántos pedidos necesitas para recuperar el CAC por canal.</p>
+<p>En el próximo post de esta serie hablamos de <a href="/blog/atribucion-post-ios-14-roas-mentira" rel="noopener noreferrer">atribución post-iOS 14</a>: por qué tu ROAS dice 3x pero tu negocio no es rentable, y cómo conectar GA4 server-side para recuperar la visibilidad que perdiste.</p>
+<p>Si después de leer esto quieres calcular tu LTV real con tus datos, <a href="/contacto" rel="noopener noreferrer">reserva una auditoría de 30 minutos</a>. Vemos tu LTV por cohorte, qué canales destruyen valor y qué cambiar primero. Sin compromiso.</p>
+        </article>
+
+<section class="sources-block">
+  <h2>Fuentes y datos</h2>
+  <p>Cada cifra y afirmación de este artículo se sostiene en una fuente verificable. Las que respaldan este post:</p>
+  <ul>
+<li><a href="https://www.thinkwithgoogle.com" rel="noopener noreferrer" target="_blank">Think with Google</a></li>
+<li><a href="https://www.shopify.com/blog/marketing-metrics" rel="noopener noreferrer" target="_blank">Shopify Blog — Marketing Metrics</a></li>
+<li><a href="https://www.klaviyo.com/blog" rel="noopener noreferrer" target="_blank">Klaviyo Blog</a></li>
+<li><a href="https://www.acquisition.com" rel="noopener noreferrer" target="_blank">Acquisition.com — Alex Hormozi</a></li>
+  </ul>
+</section>
+
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+<div class="faq-item"><h3 class="faq-q">¿Cuál es la diferencia entre LTV bruto y LTV real?</h3><p class="faq-a">LTV bruto es la suma de ingresos por cliente sin descontar nada. LTV real resta COGS, fulfillment, devoluciones, chargebacks, CAC atribuido y atención al cliente. Un cliente con LTV bruto puede tener LTV real negativo si sus costes superan los ingresos.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuántos meses necesito para tener datos fiables de una cohorte?</h3><p class="faq-a">Mínimo 12 meses de datos por cohorte mensual, pero necesitas comparar cohortes del mismo período del año anterior para eliminar estacionalidad. Una cohorte de Navidad se comporta diferente a una de enero. Sin esa validación, estás tomando decisiones con ruido.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo calculo LTV si vendo en D2C, Amazon y retail?</h3><p class="faq-a">Unificas el perfil del cliente por email en Klaviyo y cruzas datos de todas las plataformas. Un cliente que te descubre en Meta, compra en D2C y recompra en Amazon tiene un LTV total. Si calculas LTV por canal por separado, fragmentas el dato y tomas decisiones erróneas.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Debo usar cohorte de adquisición o de primer pedido?</h3><p class="faq-a">Usa ambas. La cohorte de adquisición (fecha del primer touchpoint) te muestra el coste real de adquisición. La cohorte de primer pedido te muestra rentabilidad del producto. Si usas descuentos agresivos para capturar primeros pedidos, la diferencia entre ambas cohortes te revela cuánto estás subsidiando tu crecimiento.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué costes debo incluir en el margen real del LTV?</h3><p class="faq-a">Incluye: COGS (coste de producto), fulfillment (preparación + envío), devoluciones y chargebacks, CAC atribuido al cliente, y costes de atención al cliente asignables. No incluyas costes fijos de estructura (oficina, salarios) porque esos existen con o sin ese cliente.</p></div>
+</section>
+
+        <div class="cta-block">
+          <h3>Auditoría de 30 minutos sobre tu LTV real</h3>
+          <p>Vemos tu LTV por cohorte, qué canales destruyen valor y qué cambiar primero.</p>
+          <a href="/contacto.html">Reservar auditoría →</a>
+        </div>
+
+
+        <div class="cta-block" id="feedback" style="text-align:left; margin-top:2rem;">
+          <h3 style="font-size:1.05rem;">¿Te ha servido este artículo?</h3>
+          <p style="margin-bottom:1rem;">Tu respuesta mejora lo que escribimos. 10 segundos, sin registro.</p>
+          <form action="https://n8n.daybydayconsulting.com/webhook/blog-feedback" method="POST">
+            <input type="hidden" name="slug" value="calcular-ltv-real-cohorte">
+            <input type="text" name="web" value="" style="display:none" tabindex="-1" autocomplete="off">
+            <div style="display:flex; gap:0.5rem; margin-bottom:0.75rem;">
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="si" required> Sí, útil</label>
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="no"> No mucho</label>
+            </div>
+            <textarea name="comment" rows="2" placeholder="¿Qué te ha faltado o sobrado? (opcional)" style="width:100%; padding:0.6rem; border-radius:8px; border:1px solid var(--border); background:var(--bg-card); color:var(--text-primary); margin-bottom:0.75rem;"></textarea>
+            <button type="submit" style="background:var(--accent-color, #6366f1); color:white; font-weight:600; padding:0.6rem 1.25rem; border-radius:8px; border:none; cursor:pointer;">Enviar feedback</button>
+          </form>
+        </div>
+        <div class="related-articles">
+          <h2>Artículos relacionados</h2>
+          <a href="/blog/atribucion-post-ios-14-roas-mentira">atribución post-iOS 14</a>
+          <a href="/blog/recuperar-cac-30-dias-secuencia-ofertas-d2c">recuperar el CAC en 30 días</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Cómo calcular LTV real por cohorte (sin spreadsheet)","description":"Calcula tu LTV real por cohorte en 2 horas sin spreadsheets. Descubre qué canales destruyen valor y cuáles escala de verdad.","datePublished":"2026-07-21T10:00:00+02:00","dateModified":"2026-07-21T10:00:00+02:00","inLanguage":"es-ES","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/","jobTitle":"Growth Partner","worksFor":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"knowsAbout":["Meta Ads","Google Ads","TikTok Ads","paid media","ecommerce D2C","CRM y email marketing","analítica server-side","growth strategy"],"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/","logo":{"@type":"ImageObject","url":"https://www.daybydayconsulting.com/favicon.png"},"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/calcular-ltv-real-cohorte"},"image":{"@type":"ImageObject","url":"https://www.daybydayconsulting.com/blog/img/calcular-ltv-real-cohorte.png","width":1200,"height":675}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuál es la diferencia entre LTV bruto y LTV real?","acceptedAnswer":{"@type":"Answer","text":"LTV bruto es la suma de ingresos por cliente sin descontar nada. LTV real resta COGS, fulfillment, devoluciones, chargebacks, CAC atribuido y atención al cliente. Un cliente con LTV bruto puede tener LTV real negativo si sus costes superan los ingresos."}},{"@type":"Question","name":"¿Cuántos meses necesito para tener datos fiables de una cohorte?","acceptedAnswer":{"@type":"Answer","text":"Mínimo 12 meses de datos por cohorte mensual, pero necesitas comparar cohortes del mismo período del año anterior para eliminar estacionalidad. Una cohorte de Navidad se comporta diferente a una de enero. Sin esa validación, estás tomando decisiones con ruido."}},{"@type":"Question","name":"¿Cómo calculo LTV si vendo en D2C, Amazon y retail?","acceptedAnswer":{"@type":"Answer","text":"Unificas el perfil del cliente por email en Klaviyo y cruzas datos de todas las plataformas. Un cliente que te descubre en Meta, compra en D2C y recompra en Amazon tiene un LTV total. Si calculas LTV por canal por separado, fragmentas el dato y tomas decisiones erróneas."}},{"@type":"Question","name":"¿Debo usar cohorte de adquisición o de primer pedido?","acceptedAnswer":{"@type":"Answer","text":"Usa ambas. La cohorte de adquisición (fecha del primer touchpoint) te muestra el coste real de adquisición. La cohorte de primer pedido te muestra rentabilidad del producto. Si usas descuentos agresivos para capturar primeros pedidos, la diferencia entre ambas cohortes te revela cuánto estás subsidiando tu crecimiento."}},{"@type":"Question","name":"¿Qué costes debo incluir en el margen real del LTV?","acceptedAnswer":{"@type":"Answer","text":"Incluye: COGS (coste de producto), fulfillment (preparación + envío), devoluciones y chargebacks, CAC atribuido al cliente, y costes de atención al cliente asignables. No incluyas costes fijos de estructura (oficina, salarios) porque esos existen con o sin ese cliente."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.daybydayconsulting.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.daybydayconsulting.com/blog"},{"@type":"ListItem","position":3,"name":"Cómo calcular LTV real por cohorte (sin spreadsheet)","item":"https://www.daybydayconsulting.com/blog/calcular-ltv-real-cohorte"}]}</script>
+</body>
+</html>
