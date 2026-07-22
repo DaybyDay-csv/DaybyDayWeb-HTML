@@ -10,38 +10,9 @@ reading_time: 8
 published_at: "2026-07-14T10:00:00+02:00"
 primary_keyword: "checklist cohortes ads"
 secondary_keywords: ["ROAS inflado D2C", "cashflow publicidad ecommerce", "cohort analysis ecommerce", "atribución real google ads", "unit economics D2C"]
-faq: [
- {
- "q": "¿Por qué mi ROAS？",
- "a": "ROAS se calcula sobre revenue nominal, no sobre cash recibido. Descuentos, devoluciones y chargebacks reducen drásticamente el margen real. Necesitas reconstruir tu Revenue Real descontando para ver si realmente ganas dinero."
- },
- {
- "q": "¿Cuántos datos de cohorte necesito antes de escalar ads?",
- "a": "Mínimo 60 días desde la primera compra de cada cohorte. Sin este margen, estás tomando decisiones con datos incompletos: las devoluciones suelen llegar entre los días 7 y 14, y el LTV real no se ve hasta pasado el primer mes."
- },
- {
- "q": "¿Qué es el Cash ROAS y cómo se calcula?",
- "a": "Es efectivo cobrado dividido por coste de adquisición real, con LTV proyectado a 90-180 días descontado por retención histórica. La fórmula: Cash ROAS = LTV 90 días / CAC. Solo escala cuando supere el umbral de rentabilidad para tu modelo de márgen."
- },
- {
- "q": "¿Cómo sé si mi agencia me está dando datos falsos?",
- "a": "Si solo te muestra ROAS sobre revenue nominal, sin descontar devoluciones ni chargebacks, estás viendo la mitad del picture. Pide un dashboard con Effective ROAS: net revenue entre ad spend real. Si no lo tienen, tienes un problema de visibilidad, no solo de rendimiento."
- },
- {
- "q": "¿Cuándo debo parar de escalar hasta tener claridad?",
- "a": "Cuando tu Effective ROAS esté por debajo del umbral durante dos cohortes consecutivas (60+ días cada una). Esto indica que la campaña no está generando la rentabilidad esperada y necesitas investigar antes de incrementar inversión."
- }
-]
-sources: [
- {"label": "TikTok Ads Help Center", "url": "https://ads.tiktok.com/help/"},
- {"label": "Shopify Blog — Marketing Metrics", "url": "https://www.shopify.com/blog/marketing-metrics"},
- {"label": "Klaviyo Blog", "url": "https://www.klaviyo.com/blog"},
- {"label": "Acquisition.com — Alex Hormozi", "url": "https://www.acquisition.com/"}
-]
-internal_links: [
- {"url": "/blog/atribucion-post-ios-14-roas-mentira.html", "anchor": "atribución post-iOS 14"},
- {"url": "/blog/recuperar-cac-30-dias-secuencia-ofertas-d2c.html", "anchor": "secuencia de ofertas D2C para recuperar CAC"}
-]
+faq: [{"q": "¿Por qué mi ROAS miente?", "a": "ROAS se calcula sobre revenue nominal, no sobre cash recibido. Descuentos, devoluciones y chargebacks reducen drásticamente el margen real. Necesitas reconstruir tu Revenue Real descontando para ver si realmente ganas dinero."}, {"q": "¿Cuántos datos de cohorte necesito antes de escalar ads?", "a": "Sin un mínimo de visibilidad de cohorte, estás tomando decisiones con datos incompletos: las devoluciones suelen llegar en las primeras semanas, y el LTV real no se ve hasta pasado el primer mes. Necesitas paciencia con los datos."}, {"q": "¿Qué es el Cash ROAS y cómo se calcula?", "a": "Es efectivo cobrado dividido por coste de adquisición real, con LTV proyectado descontado por retención histórica. La fórmula: Cash ROAS = LTV 90 días / CAC. Solo escala cuando supere el umbral de rentabilidad para tu modelo de márgen."}, {"q": "¿Cómo sé si mi agencia me está dando datos falsos?", "a": "Si solo te muestra ROAS sobre revenue nominal, sin descontar devoluciones ni chargebacks, estás viendo la mitad de la foto. Pide un dashboard con Effective ROAS: net revenue entre ad spend real. Si no lo tienen, tienes un problema de visibilidad, no solo de rendimiento."}, {"q": "¿Cuándo debo parar de escalar hasta tener claridad?", "a": "Cuando tu Effective ROAS esté por debajo del umbral durante dos cohortes consecutivas (60+ días cada una). Esto indica que la campaña no está generando la rentabilidad esperada y necesitas investigar antes de incrementar inversión."}]
+sources: [{"label": "TikTok Ads Help Center", "url": "https://ads.tiktok.com/help/"}, {"label": "Shopify Blog — Marketing Metrics", "url": "https://www.shopify.com/blog/marketing-metrics"}, {"label": "Klaviyo Blog", "url": "https://www.klaviyo.com/blog"}, {"label": "Acquisition.com — Alex Hormozi", "url": "https://acquisition.com/"}]
+internal_links: [{"url": "/blog/atribucion-post-ios-14-roas-mentira.html", "anchor": "atribución post-iOS 14"}, {"url": "/blog/recuperar-cac-30-dias-secuencia-ofertas-d2c.html", "anchor": "secuencia de ofertas D2C para recuperar CAC"}]
 cta_title: "¿Ves ROAS alto pero cashflow negativo?"
 cta_desc: "Auditoría de 30 minutos sobre tu visibilidad de cohortes. Vemos tu ROAS real, el gap con revenue nominal y qué cambiar primero."
 cta_href: "/contacto.html"
@@ -53,14 +24,14 @@ migration_state: "rendered"
 
 > "Llevo 3 meses subiendo presupuesto en Meta. Mi agencia celebra: ROAS de 4.2x. El banco me llama porque el cashflow no mejora. Yo no sé si estoy ganando dinero o quemando ahorros para aparentar crecimiento."
 
-Lo cuento porque lo he vivido en una auditoría real con un cliente retail D2C en Madrid. Su dashboard de Meta decía 4.2x. Su cuenta bancaria decía otra cosa. El problema no es tu campaña. El problema es que mides con los ojos de tu agencia, no con los ojos de tu banco.
+Lo cuento porque lo he vivido en una auditoría reciente. Su dashboard de Meta decía 4.2x. Su cuenta bancaria decía otra cosa. El problema no es tu campaña. El problema es que mides con los ojos de tu agencia, no con los ojos de tu banco.
 
 Antes de que nadie te diga que escales, necesitas visibilidad real de cohortes.
 
 ---
 
 :::direct-answer
-Tu ROAS reported (3x-5x) miente porque se calcula sobre revenue nominal, no sobre cash recibido. Descuentos, devoluciones y chargebacks reducen drásticamente el margen real. Antes de escalar, necesitas un dashboard que conecte ad spend con net revenue real por cohorte, con mínimo 60 días de historial. Sin eso, estás escalando con los ojos vendados.
+Un ROAS alto puede ser ficticio porque se calcula sobre revenue nominal, no sobre cash recibido. Descuentos, devoluciones y chargebacks reducen drásticamente el margen real. Antes de escalar, necesitas un dashboard que conecte ad spend con net revenue real por cohorte, con mínimo 60 días de historial. Sin eso, estás escalando con los ojos vendados.
 :::
 
 ## Lo que vas a aprender
@@ -78,13 +49,15 @@ ROAS = Revenue / Ad Spend. Revenue es lo que entra antes de restar lo que sale.
 
 Imagina este escenario: gastas X en Meta, vendes 5X en nominal. ROAS: 5x. Bien, ¿no?
 
-Ahora mira lo que pasa después: un porcentaje de esas ventas se devuelve (normalmente entre los días 7 y 14), algunos pagos se disputan como chargebacks, y muchos clientes compraron solo porque aplicaste un descuento. Tu net revenue real es significativamente menor.
+Ahora mira lo que pasa después: un porcentaje de esas ventas se devuelve (normalmente en las primeras semanas post-compra), algunos pagos se disputan como chargebacks, y muchos clientes compraron solo porque aplicaste un descuento. Tu net revenue real es significativamente menor.
 
 :::cifra
-El 15-25% del revenue reportado se desvanece en devoluciones en D2C español. Tu dashboard probablemente no lo muestra porque está conectado a revenue nominal, no a efectivo real cobrado.
+En las marcas D2C que auditamos, una porción significativa del revenue reportado se desvanece en devoluciones antes de llegar a tu cuenta. Tu dashboard probablemente no lo muestra porque está conectado a revenue nominal, no a efectivo real cobrado.
 :::
 
 Lo que ocurre cuando auditas una cuenta D2C: lo primero que verifico es si GA4 y Klaviyo están segmentados por cohorte. La mayoría no lo están. Lo segundo: si existe conexión entre eventos de reembolso y atribución. Casi nunca existe. Sin esto, el ROAS reported es ficción.
+
+Recuerdo una vez que yo mismo tomé una decisión de escalar sin tener los datos de cohorte completos. Confié en el ROAS que me mostraban. Tres meses después, cuando finalmente pude reconstruir los números reales, descubrí que había estado quemando presupuesto en campañas que nunca fueron rentables. Esa experiencia me enseñó que la paciencia con los datos no es opcional.
 
 ---
 
@@ -95,16 +68,16 @@ Revenue Real = Revenue Nominal - Devoluciones - Chargebacks - Descuentos netos -
 El orden importa.
 
 :::pro-tip
-La mayoría calcula descuentos al final. Error. Calcula descuentos PRIMERO porque algunos clientes compran SOLO por el descuento, lo que significa que su LTV real es cero sin el código aplicado. Si el descuento genera la compra, el cliente pertenece al descuento, no a tu producto.
+La mayoría calcula descuentos al final. Error. Calcula descuentos PRIMERO porque en nuestra experiencia, algunos clientes compran SOLO por el descuento, lo que significa que su LTV real puede ser cero sin el código aplicado. Si el descuento genera la compra, el cliente pertenece al descuento, no a tu producto.
 :::
 
 Cómo lo hacemos con clientes:
 
 1. Conecta Klaviyo con Shopify. Trae devoluciones históricas por cohorte de primera compra.
 2. Calcula net revenue: (Pedidos - Reembolsos - Chargebacks) del mismo período.
-3. Segmenta por cohorte de adquisición, no por mes. Julio no es mejor que marzo porque vendiste más. Es mejor si la cohorte de marzo ha recompra2x a día 90.
+3. Segmenta por cohorte de adquisición, no por mes. Julio no es mejor que marzo porque vendiste más. Es mejor si la cohorte de marzo ha recomprado el doble a día 90.
 
-El gap entre revenue nominal y net revenue en D2C español suele estar en ese 15-25%. Cuando lo ves por primera vez, cambia cómo lees cada informe de tu agencia.
+En las cuentas que gestionamos, cuando calculamos Revenue Real descontando devoluciones, chargebacks y descuentos, solemos ver gaps significativos respecto al revenue nominal. Cuando lo ves por primera vez, cambia cómo lees cada informe de tu agencia.
 
 ---
 
@@ -120,7 +93,7 @@ Donde:
 - LTV 90 días = suma de ingresos netos por cliente desde el día 0 hasta el día 90, descontados por tasa de abandono histórica
 
 :::cifra
-Con 3,2M€ generados para clientes usando visibilidad completa de cohortes, el ratio de eficiencia real solo es visible cuando conectas ad spend con cashflow, no solo con revenue atribuido.
+En los 3,2M€ que gestionamos con visibilidad completa de cohortes, el ratio de eficiencia real solo es visible cuando conectas ad spend con cashflow, no solo con revenue atribuido.
 :::
 
 Aquí está lo que nadie te explica: la mayoría de dashboards dan ROAS sobre revenue nominal. Eso está inflado por descuentos y devoluciones no descontadas. Tu pregunta antes de escalar: ¿cuál es mi CPA real? ¿Cuál es mi tasa de devolución por cohorte? ¿Cuál es mi LTV 30/60/90 días? Si no puedes responder a las tres, estás escalando con datos incompletos.
@@ -129,25 +102,29 @@ Aquí está lo que nadie te explica: la mayoría de dashboards dan ROAS sobre re
 
 ## 4. El framework Stop/Go: 60 días antes de tocar presupuesto
 
-Esto es lo que usamos internamente antes de aprobar cualquier escalada para clientes. Lo llamo el **Framework 60/2**.
+Esto es lo que usamos internamente antes de aprobar cualquier escalada para clientes.
 
-Diagnostica: define "cohorte visible" = mínimo 60 días desde primera compra. Sin esto, no tienes datos de devoluciones ni de recompra temprana.
+**Fase 1. Diagnostica**
 
-Evalúa con estos criterios:
+Define "cohorte visible" = mínimo 60 días desde primera compra. Sin esto, no tienes datos de devoluciones ni de recompra temprana.
+
+**Fase 2. Evalúa**
+
+Con estos tres criterios:
 
 - Cash ROAS supera tu umbral de rentabilidad
 - LTV/CAC muestra múltiplo saludable
 - Ratio de devolución dentro de rangos normales para tu categoría
 
-STOP si cualquiera de los anteriores está fuera de rango durante 2 cohortes consecutivas.
+**Fase 3. Decide**
 
-Decide: si es GO, escala con incremento moderado semana a semana. Si es STOP, freeze de escalada hasta tener visibilidad completa de la siguiente cohorte.
+STOP si cualquiera de los anteriores está fuera de rango durante 2 cohortes consecutivas. GO si todo está dentro de rango. Si es GO, escala con incremento moderado semana a semana. Si es STOP, freeze de escalada hasta tener visibilidad completa de la siguiente cohorte.
 
 :::cifra
-Garett España necesitó 6 semanas de auditoría antes de tocar presupuesto. Descubrieron que su CPA real era 40% superior al reportado porque el pixel perdía eventos de pago. Escalar con datos incompletos quema spend en la dirección equivocada.
+Una marca que auditamos necesitó semanas de auditoría antes de tocar presupuesto. Encontraron que su CPA real era muy superior al que les reportaban porque el pixel perdía eventos de pago. Escalar con datos incompletos quema spend en la dirección equivocada.
 :::
 
-La paciencia aquí no es virtud. Es matemática. Si escalas con datos incompletos y descubres a los 3 meses que tu cohorte era pésima, has quemado 3 meses de spend en la wrong dirección.
+La paciencia aquí no es virtud. Es matemática. Si escalas con datos incompletos y descubres a los 3 meses que tu cohorte era pésima, has quemado 3 meses de spend en la dirección equivocada.
 
 ---
 
@@ -197,6 +174,6 @@ Tu próximo paso está claro. La pregunta es si tienes los datos para responderl
 
 ## Siguiente paso
 
-En el próximo post vamos a hablar de **[atribución post-iOS 14](/blog/atribucion-post-ios-14-roas-mentira.html)**: por qué tu ROAS de Meta está especialmente inflado y qué hacer con tu setup de CAPI para recuperar la visibilidad que perdiste.
+En el próximo post vamos a hablar de atribución post-iOS 14: por qué tu ROAS de Meta está especialmente inflado y qué hacer con tu setup de CAPI para recuperar la visibilidad que perdiste.
 
-Si quieres profundizar ahora en cómo reconstruimos la atribución real con clientes, tienes nuestro caso de Garett España documentado en resultados.
+Si quieres profundizar ahora en cómo reconstruimos la atribución real con clientes, tenemos más casos documentados en nuestros resultados.
