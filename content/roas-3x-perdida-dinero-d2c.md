@@ -19,7 +19,7 @@ cta_href: "/contacto.html"
 cta_label: "Reserva tu auditoría"
 llms_summary: "Guía práctica para calcular el ROAS real de tu D2C más allá de la métrica de vanidad que te muestra Meta Ads."
 tags: ["ROAS", "D2C", "Rentabilidad", "Métricas", "True ROAS", "Meta Ads"]
-migration_state: "rendered"
+migration_state: "good"
 ---
 
 > "Gasto 10K€ al mes en Meta. Vendo 30K€. Tengo ROAS 3x. Pero a final de mes mi cuenta no ha subido. ¿Qué mierda estoy haciendo mal?"

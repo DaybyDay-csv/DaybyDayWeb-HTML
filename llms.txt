@@ -178,3 +178,6 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 <!-- auto:cuanto-gastar-meta-ads-visibilidad-caja -->
 - [Cuánto gastar en Meta Ads según tu visibilidad de caja](https://www.daybydayconsulting.com/blog/cuanto-gastar-meta-ads-visibilidad-caja.html) — Framework para calcular el techo de gasto en Meta Ads basándote en tu cash runway real en lugar de ROAS o intuición. Incluye gates de escalada obligatorios para D2C.
 <!-- /auto -->
+<!-- auto:roas-3x-perdida-dinero-d2c -->
+- [ROAS 3x: por qué puede ser tu mayor gasto oculto en D2C](https://www.daybydayconsulting.com/blog/roas-3x-perdida-dinero-d2c.html) — Guía práctica para calcular el ROAS real de tu D2C más allá de la métrica de vanidad que te muestra Meta Ads.
+<!-- /auto -->
