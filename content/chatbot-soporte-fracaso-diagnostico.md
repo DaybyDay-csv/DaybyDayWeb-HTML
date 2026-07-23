@@ -22,7 +22,7 @@ tags: ["chatbot", "soporte ecommerce", "automatización D2C", "n8n", "nps"]
 migration_state: "rendered"
 ---
 
-> "Me gasté 400 euros al mes en un chatbot que me genera más tickets de 'esto no funciona' que los que supposedly soluciona."
+> "Me gasté 400 euros al mes en un chatbot que me genera más tickets de 'esto no funciona' que los que supuestamente soluciona."
 
 La frase es de un fundador de suplementación deportiva. Factura en el rango de 600K-700K€. Su equipo de soporte: dos personas. Llevaba meses con el chatbot activo. El problema no era el software. Era que alguien configuró el chatbot para el D2C genérico, no para su D2C.
 
@@ -52,36 +52,36 @@ Generamos 3,2M EUR para nuestros clientes. No lo hicimos vendiendo más herramie
 
 Antes de tocar nada, necesitas datos reales. Responde estas cinco preguntas sin pensar la respuesta:
 
-**1. ¿Cuántos tickets resuelve tu chatbot al día?**
+1. ¿Cuántos tickets resuelve tu chatbot al día?
 Si no lo sabes, no mides bien. Apunta a una cifra concreta.
 
-**2. ¿Cuántos tickets generan rescales?**
+2. ¿Cuántos tickets generan rescales?
 Un rescale es cuando el cliente abandona el chat del bot y pasa a un humano. Esto te cuesta dinero directo.
 
-**3. ¿De qué van los rescales?**
+3. ¿De qué van los rescales?
 Si no tienes el historial, no puedes arreglarlo. Los rescales te dicen qué consultas no sabe resolver tu chatbot.
 
-**4. ¿Qué datos usa tu chatbot para responder?**
+4. ¿Qué datos usa tu chatbot para responder?
 Respuestas predefinidas estáticas. ¿Cuándo las actualizaste por última vez? ¿Sabe tu chatbot que ahora tienes la política de devolución de 60 días y no de 30?
 
-**5. ¿Cuánto cuesta cada rescale en tiempo de agente?**
+5. ¿Cuánto cuesta cada rescale en tiempo de agente?
 Calcula: horas de agente por coste por hora. Ahora multiplica por rescales al mes. Este número te dice cuánto necesitas invertir en configuración para recuperar la inversión.
 
 ## Las 4 preguntas que nadie se hace
 
-**Pregunta 1: ¿Has entrenado al chatbot con tus datos o con los datos de ejemplo?**
+Pregunta 1: ¿Has entrenado al chatbot con tus datos o con los datos de ejemplo?
 
 La mayoría de fundadores instalan el chatbot, cargan el FAQ genérico que viene por defecto, y esperan resultados. Tu cliente no pregunta por el proceso de onboarding de una startup SaaS. Pregunta por tallas, plazos de entrega, cómo hacer una devolución en tu tienda.
 
-**Pregunta 2: ¿Tu chatbot tiene acceso a datos reales?**
+Pregunta 2: ¿Tu chatbot tiene acceso a datos reales?
 
 Stock en tiempo real. Estado de pedidos. Políticas actualizadas. Si responde con texto estático que tú actualizaste hace cuatro meses, está dando información incorrecta. Esto genera rescales más graves: los clientes que confían en la respuesta del chatbot y luego descubren que mintió.
 
-**Pregunta 3: ¿Estás midiendo satisfacción post-chatbot o solo tickets resueltos?**
+Pregunta 3: ¿Estás midiendo satisfacción post-chatbot o solo tickets resueltos?
 
 Resolver un ticket automáticamente no significa que el cliente quedó satisfecho. Mides tasa de resolución. No mides experiencia. GA4 server-side te permite trackear qué pasó después: ¿el cliente compró? ¿Abandonó? ¿Te dejó una review negativa?
 
-**Pregunta 4: ¿Cuánto te cuesta cada intervención manual que el chatbot no pudo resolver?**
+Pregunta 4: ¿Cuánto te cuesta cada intervención manual que el chatbot no pudo resolver?
 
 No es solo tiempo de agente. Es el LTV perdido del cliente que no volvió. Es la mala valoración que baja tu NPS. Es el coste de adquirir un cliente nuevo para reemplazar al que perdiste por mal soporte.
 
@@ -93,25 +93,37 @@ Domina tus flujos esenciales antes de añadir complejidad. Empieza con los 3-5 f
 
 Pasos para ejecutarlo esta semana:
 
-**1. Mapea tus 3-5 consultas más frecuentes.**
+1. Mapea tus 3-5 consultas más frecuentes.
 Revisa tus últimos 200 tickets. ¿Qué preguntan? Anota las cinco categorías que más volumen tienen.
 
-**2. Verifica si tienes flujos específicos para cada una.**
+2. Verifica si tienes flujos específicos para cada una.
 Si la respuesta es "no", ya sabes dónde está el problema. Tu chatbot está usando respuestas genéricas por defecto.
 
-**3. Audita si esas respuestas están sincronizadas con tus datos.**
+3. Audita si esas respuestas están sincronizadas con tus datos.
 ¿La respuesta sobre plazos de envío muestra la realidad o un texto antiguo? ¿El chatbot sabe que ahora trabajas con dos transportistas nuevos?
 
-**4. Calcula el coste de tus rescales.**
+4. Calcula el coste de tus rescales.
 Horas por coste por hora por rescales mensuales. Este número te dice cuánto necesitas invertir en configuración para recuperar la inversión.
 
-**5. Decide: chatbot o FAQ dinámico.**
+5. Decide: chatbot o FAQ dinámico.
 Si tienes menos de 50 tickets diarios con consultas repetitivas, un FAQ con búsqueda semántica es más eficiente que un chatbot mal configurado. Si tienes volumen alto y consultas complejas, invierte en la configuración correcta.
+
+### Un ejemplo con números: lo que te cuesta cada rescale
+
+Pon que tu bot recibe 40 consultas al día y falla en el 40%. Son 16 rescales diarios, unos 480 al mes. Cada uno se lleva 6 minutos de un agente que te cuesta 15€ la hora. Eso son 1,50€ de tiempo por rescale, 720€ al mes solo en horas.
+
+Pero el tiempo es la parte barata. De esos 480 clientes, pon que 50 se van con una mala experiencia y uno de cada cinco no vuelve. Si tu LTV medio es de 120€, ahí se te escapan 1.200€ de valor futuro cada mes. Suma el ticket perdido y las reviews que no controlas.
+
+El bot que te costaba 400€ al mes te está costando bastante más de 2.000€ en tiempo y clientes perdidos. Y ninguno de esos números aparece en su panel.
+
+Por eso el primer arreglo nunca es cambiar de herramienta. Es medir. Cuando pones el coste real encima de la mesa, configurar bien el bot deja de parecer un gasto y pasa a ser la opción más barata que tienes.
 
 ## Acción: tus próximos 30 minutos
 
 Abre tu panel de Zendesk, Intercom o el software que uses. Filtra los últimos 30 días. Exporta los tickets que fueron rescales del chatbot a humano. Lee los primeros 20. Anota las tres categorías que más se repiten.
 
-Ese es tu homework para esta semana.
+Esa es tu tarea para esta semana.
+
+En el siguiente post te enseñamos a montar el Setup Gap Analysis en n8n paso a paso, para que tu bot responda con tu stock y tus políticas reales en vez de inventar.
 
 Si quieres que veamos juntos qué está fallando en tu stack de automatización, tienes 30 minutos con un consultor senior. Sin pitch. Sin compromiso. Solo diagnóstico.
