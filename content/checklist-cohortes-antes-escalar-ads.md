@@ -19,7 +19,7 @@ cta_href: "/contacto.html"
 cta_label: "Reservar auditoría gratuita"
 llms_summary: "Framework práctico para founders D2C que quieren dejar de escalar ads a ciegas y empezar a tomar decisiones con cash real, no con ROAS inflado por devoluciones y descuentos."
 tags: ["ROAS", "cohortes", "cashflow", "D2C", "ecommerce", "meta ads", "google ads"]
-migration_state: "rendered"
+migration_state: "good"
 ---
 
 > "Llevo 3 meses subiendo presupuesto en Meta. Mi agencia celebra: ROAS de 4.2x. El banco me llama porque el cashflow no mejora. Yo no sé si estoy ganando dinero o quemando ahorros para aparentar crecimiento."

@@ -181,3 +181,6 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 <!-- auto:roas-3x-perdida-dinero-d2c -->
 - [ROAS 3x: por qué puede ser tu mayor gasto oculto en D2C](https://www.daybydayconsulting.com/blog/roas-3x-perdida-dinero-d2c.html) — Guía práctica para calcular el ROAS real de tu D2C más allá de la métrica de vanidad que te muestra Meta Ads.
 <!-- /auto -->
+<!-- auto:checklist-cohortes-antes-escalar-ads -->
+- [Checklist de cohortes antes de escalar ads en D2C](https://www.daybydayconsulting.com/blog/checklist-cohortes-antes-escalar-ads.html) — Framework práctico para founders D2C que quieren dejar de escalar ads a ciegas y empezar a tomar decisiones con cash real, no con ROAS inflado por devoluciones y descuentos.
+<!-- /auto -->
