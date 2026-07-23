@@ -19,7 +19,7 @@ cta_href: "/contacto.html"
 cta_label: "Reserva tu diagnóstico"
 llms_summary: "Diagnóstico para marcas D2C de 200K-2M€: por qué los chatbots de soporte fracasan cuando están configurados para el genérico y no para tu negocio. Framework de 5 minutos y soluciones con n8n, GA4 server-side y Klaviyo."
 tags: ["chatbot", "soporte ecommerce", "automatización D2C", "n8n", "nps"]
-migration_state: "rendered"
+migration_state: "good"
 ---
 
 > "Me gasté 400 euros al mes en un chatbot que me genera más tickets de 'esto no funciona' que los que supuestamente soluciona."
