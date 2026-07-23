@@ -175,3 +175,6 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 <!-- auto:calcular-ltv-real-cohorte -->
 - [Cómo calcular LTV real por cohorte (sin spreadsheet)](https://www.daybydayconsulting.com/blog/calcular-ltv-real-cohorte.html) — Guía práctica para calcular LTV real por cohorte sin spreadsheets, conectando Klaviyo, GA4 server-side y datos de fulfillment. Incluye framework de 5 pasos y validación de estacionalidad.
 <!-- /auto -->
+<!-- auto:cuanto-gastar-meta-ads-visibilidad-caja -->
+- [Cuánto gastar en Meta Ads según tu visibilidad de caja](https://www.daybydayconsulting.com/blog/cuanto-gastar-meta-ads-visibilidad-caja.html) — Framework para calcular el techo de gasto en Meta Ads basándote en tu cash runway real en lugar de ROAS o intuición. Incluye gates de escalada obligatorios para D2C.
+<!-- /auto -->
