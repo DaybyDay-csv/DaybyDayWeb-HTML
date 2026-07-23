@@ -1,6 +1,6 @@
 ---
-title: "Checklist de cohortes antes de escalar ads: cash real vs ROAS inflado"
-h1: "Checklist de cohortes antes de escalar ads: cash real vs ROAS inflado"
+title: "Checklist de cohortes antes de escalar ads en D2C"
+h1: "Checklist de cohortes antes de escalar ads en D2C"
 slug: "checklist-cohortes-antes-escalar-ads"
 meta_desc: "Antes de escalar ads necesitas ver cash real, no ROAS inflado. Checklist de visibilidad financiera para founders D2C que venden pero no ganan."
 canonical: "https://www.daybydayconsulting.com/blog/checklist-cohortes-antes-escalar-ads"
@@ -49,7 +49,7 @@ ROAS = Revenue / Ad Spend. Revenue es lo que entra antes de restar lo que sale.
 
 Imagina este escenario: gastas X en Meta, vendes 5X en nominal. ROAS: 5x. Bien, ¿no?
 
-Ahora mira lo que pasa después: un porcentaje de esas ventas se devuelve (normalmente en las primeras semanas post-compra), algunos pagos se disputan como chargebacks, y muchos clientes compraron solo porque aplicaste un descuento. Tu net revenue real es significativamente menor.
+Ahora mira lo que pasa después: un porcentaje de esas ventas se devuelve (normalmente en las primeras semanas post-compra), algunos pagos se disputan como chargebacks, y buena parte de esos clientes compró solo porque aplicaste un descuento. Tu net revenue real es significativamente menor.
 
 :::cifra
 En las marcas D2C que auditamos, una porción significativa del revenue reportado se desvanece en devoluciones antes de llegar a tu cuenta. Tu dashboard probablemente no lo muestra porque está conectado a revenue nominal, no a efectivo real cobrado.
@@ -104,11 +104,11 @@ Aquí está lo que nadie te explica: la mayoría de dashboards dan ROAS sobre re
 
 Esto es lo que usamos internamente antes de aprobar cualquier escalada para clientes.
 
-**Fase 1. Diagnostica**
+Fase 1. Diagnostica
 
 Define "cohorte visible" = mínimo 60 días desde primera compra. Sin esto, no tienes datos de devoluciones ni de recompra temprana.
 
-**Fase 2. Evalúa**
+Fase 2. Evalúa
 
 Con estos tres criterios:
 
@@ -116,7 +116,7 @@ Con estos tres criterios:
 - LTV/CAC muestra múltiplo saludable
 - Ratio de devolución dentro de rangos normales para tu categoría
 
-**Fase 3. Decide**
+Fase 3. Decide
 
 STOP si cualquiera de los anteriores está fuera de rango durante 2 cohortes consecutivas. GO si todo está dentro de rango. Si es GO, escala con incremento moderado semana a semana. Si es STOP, freeze de escalada hasta tener visibilidad completa de la siguiente cohorte.
 
@@ -148,7 +148,7 @@ Si no saben responder, tienes tu respuesta.
 
 Hoy, antes de cerrar el portátil:
 
-1. Ve a tu Shopify. Filtra pedidos de los últimos 60 días. Exporta: pedidos, devoluciones, reembolsos.
+1. Ve a tu Shopify y filtra los pedidos de los últimos 60 días. Expórtalos junto con sus devoluciones y reembolsos.
 2. Calcula: (Pedidos netos de devoluciones y chargebacks) / Ad Spend del mismo período.
 3. Compara con el ROAS que tu agencia te reporta.
 
