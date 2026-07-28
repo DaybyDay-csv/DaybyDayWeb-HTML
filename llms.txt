@@ -190,3 +190,6 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 <!-- auto:ltv-cac-banco-financiacion-d2c -->
 - [El LTV/CAC que tu banco exige antes de financiarte](https://www.daybydayconsulting.com/blog/ltv-cac-banco-financiacion-d2c.html) — Qué LTV/CAC pide un banco para financiar un D2C y cómo presentarlo: el framework PIRÁMIDE DE DATOS BANCARIOS en cuatro niveles, métricas complementarias (payback, recompra, AOV, retención) y el histór
 <!-- /auto -->
+<!-- auto:growth-partner-vs-agencia-alineacion-incentivos -->
+- [Growth partner vs agencia: pricing que alinea incentivos](https://www.daybydayconsulting.com/blog/growth-partner-vs-agencia-alineacion-incentivos.html) — Cómo diferenciar un growth partner real de una agencia tradicional usando el framework FAI: estructura de pricing, alcance de clientes y ownership del resultado. Incluye las métricas de los primeros 9
+<!-- /auto -->

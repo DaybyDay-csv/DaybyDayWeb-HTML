@@ -19,7 +19,7 @@ cta_href: "/contacto.html"
 cta_label: "Reservar auditoría gratuita"
 llms_summary: "Cómo diferenciar un growth partner real de una agencia tradicional usando el framework FAI: estructura de pricing, alcance de clientes y ownership del resultado. Incluye las métricas de los primeros 90 días y cinco preguntas técnicas de filtro."
 tags: ["growth partner", "agencia marketing", "pricing D2C", "alineación incentivos", "ecommerce España"]
-migration_state: "rendered"
+migration_state: "good"
 ---
 
 > «Llevaba un año pagando a mi agencia entre el 15% y el 20% de lo que gastaba en Meta. El ROAS marcaba un buen número. Y fue el primer año que perdí dinero desde que lancé.»
