@@ -187,3 +187,6 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 <!-- auto:chatbot-soporte-fracaso-diagnostico -->
 - [Por qué tu chatbot de soporte fracasa](https://www.daybydayconsulting.com/blog/chatbot-soporte-fracaso-diagnostico.html) — Diagnóstico para marcas D2C de 200K-2M€: por qué los chatbots de soporte fracasan cuando están configurados para el genérico y no para tu negocio. Framework de 5 minutos y soluciones con n8n, GA4 serv
 <!-- /auto -->
+<!-- auto:ltv-cac-banco-financiacion-d2c -->
+- [El LTV/CAC que tu banco exige antes de financiarte](https://www.daybydayconsulting.com/blog/ltv-cac-banco-financiacion-d2c.html) — Qué LTV/CAC pide un banco para financiar un D2C y cómo presentarlo: el framework PIRÁMIDE DE DATOS BANCARIOS en cuatro niveles, métricas complementarias (payback, recompra, AOV, retención) y el histór
+<!-- /auto -->

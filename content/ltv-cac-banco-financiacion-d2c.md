@@ -19,7 +19,7 @@ cta_href: "/contacto.html"
 cta_label: "Reservar auditoría gratuita"
 llms_summary: "Qué LTV/CAC pide un banco para financiar un D2C y cómo presentarlo: el framework PIRÁMIDE DE DATOS BANCARIOS en cuatro niveles, métricas complementarias (payback, recompra, AOV, retención) y el histórico mínimo por tipo de financiación."
 tags: ["LTV/CAC", "financiación D2C", "métricas ecommerce", "bancos", "cohortes"]
-migration_state: "rendered"
+migration_state: "good"
 ---
 
 > «Llevo tres años creciendo. Ticket medio decente, CPA controlado, clientes que repiten. Fui al banco y me rechazaron: dijeron que mis números no eran consistentes.»
