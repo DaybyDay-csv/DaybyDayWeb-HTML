@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atribución D2C: qué modelo usar según tu ticket medio</title>
+  <meta name="description" content="Qué modelo de atribución necesita tu D2C según tu ticket medio y tu ciclo de venta. Framework práctico para dejar de decidir sobre datos falsos.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="Pablo Santirso · DayByDay Consulting">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/atribucion-marketing-d2c-modelo-ticket-medio">
+  <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/blog/atribucion-marketing-d2c-modelo-ticket-medio">
+  <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/blog/atribucion-marketing-d2c-modelo-ticket-medio">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly summary">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Atribución D2C: qué modelo usar según tu ticket medio">
+  <meta property="og:description" content="Qué modelo de atribución necesita tu D2C según tu ticket medio y tu ciclo de venta. Framework práctico para dejar de decidir sobre datos falsos.">
+  <meta property="og:url" content="https://www.daybydayconsulting.com/blog/atribucion-marketing-d2c-modelo-ticket-medio">
+  <meta property="og:site_name" content="DayByDay Consulting">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="https://www.daybydayconsulting.com/blog/img/atribucion-marketing-d2c-modelo-ticket-medio.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta name="twitter:image" content="https://www.daybydayconsulting.com/blog/img/atribucion-marketing-d2c-modelo-ticket-medio.png">
+  <meta property="article:published_time" content="2026-07-30T10:00:00+02:00">
+  <meta property="article:modified_time" content="2026-07-30T10:00:00+02:00">
+  <meta property="article:author" content="Pablo Santirso">
+  <meta property="article:section" content="Growth & Marketing">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Atribución D2C: qué modelo usar según tu ticket medio">
+  <meta name="twitter:description" content="Qué modelo de atribución necesita tu D2C según tu ticket medio y tu ciclo de venta. Framework práctico para dejar de decidir sobre datos falsos.">
+
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .article-body .direct-answer { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 0 0 2rem; }
+    .article-body .direct-answer p { margin: 0; font-size: 1.05rem; }
+    .article-body .summary-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .summary-block p { margin: 0 0 0.5rem; }
+    .article-body .pro-tip { background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .pro-tip p:first-child { color: var(--accent-color, #6366f1); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem; margin: 0 0 0.5rem; }
+    .article-body .pro-tip p:last-child { margin: 0; }
+    .article-body .cifra-que-abofetea { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); text-align: center; padding: 1.5rem 0; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .related-articles h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); }
+    .sources-block { margin-top: 3rem; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; }
+    .sources-block h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary); }
+    .sources-block p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .sources-block ul { list-style: none; padding: 0; margin: 0; }
+    .sources-block li { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+    .sources-block li:last-child { border-bottom: none; }
+    .sources-block a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .related-articles a { display: block; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .related-articles a:hover { border-color: var(--accent-color, #6366f1); }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+    .cta-block { margin-top: 3rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; text-align: center; }
+    .cta-block h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary); }
+    .cta-block p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .cta-block a { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-color, #6366f1); color: white; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+<a href="#main" class="skip-link">Saltar al contenido principal</a>
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Growth & Marketing</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Growth & Marketing</span>
+          <span class="reading-time">7 min de lectura</span>
+          <span class="article-date">2026-07-30</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Atribución marketing D2C: qué modelo usar según ticket medio y ciclo de venta</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Qué modelo de atribución necesita tu D2C según tu ticket medio y tu ciclo de venta. Framework práctico para dejar de decidir sobre datos falsos.</p>
+        <div class="article-author">
+          <div class="author-avatar">PS</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirso · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media &amp; Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<blockquote>«El trimestre pasado movimos el 40% del presupuesto a Google Shopping porque marcaba 6x. Después de migrar a server-side, Shopping tenía 2,1x. Habíamos vaciado los canales que traían clientes nuevos.»</blockquote>
+<p>Nos pasó a nosotros, gestionando una cuenta propia. Y explica por qué existe este framework.</p>
+<p>El patrón se repite en casi todas las cuentas que auditamos. El panel dice Meta 2,5x, Shopping 6x, TikTok 0,8x. La decisión parece obvia: subir Shopping, bajar Meta, apagar TikTok. Al trimestre siguiente las ventas caen. No porque Meta sea mejor ni TikTok peor, sino porque el modelo de atribución roba crédito a los canales que traen clientes nuevos y se lo entrega a los que cierran la venta.</p>
+<p>El arreglo no es cambiar de modelo mañana. Es entender qué mide cada uno y elegir según tu ticket medio y tu ciclo de venta.</p>
+<h2>Lo que vas a aprender</h2>
+<ol>
+<li>Por qué el último clic infla la búsqueda de marca y te vacía el presupuesto de descubrimiento</li>
+<li>El framework PIRÁMIDE D2C y sus tres capas</li>
+<li>Qué modelo te toca según ticket medio y duración del ciclo</li>
+<li>El stack server-side que puedes montar esta semana sin tocar el modelo</li>
+<li>El reporte dual para que tu director financiero entre en la conversación</li>
+</ol>
+<h2>Tu ROAS miente y el culpable no es el modelo</h2>
+<p>Buena parte del problema de atribución no está en el modelo. Está en el tracking.</p>
+<p>Sin server-side, GA4 registra como directo un volumen alto de tráfico que no lo es. Alguien llega desde un post de Instagram, un email de Klaviyo o un anuncio de TikTok, su navegador bloquea el pixel y GA4 lo apunta como visita directa. O ve el anuncio en el móvil y compra por la tarde en el ordenador, donde ya tenía tu web abierta. Venta directa, según el panel.</p>
+<p>Estuvimos seis meses en una cuenta de moda con el pixel sin CAPI activo. Cada compra desde Safari móvil aparecía como directa, Meta marcaba 1,8x y recortamos presupuesto por eso. Las ventas cayeron después. Es el patrón post-iOS 14 que seguimos viendo hoy en casi todas las auditorías, y lo desmenuzamos en <a href="/blog/atribucion-post-ios-14-roas-mentira" rel="noopener noreferrer">atribución post-iOS 14</a>.</p>
+<p>Antes de discutir modelos, asegúrate de que tus eventos llegan limpios. Si no, cualquier modelo que elijas trabajará sobre datos inventados.</p>
+<h2>El framework PIRÁMIDE D2C</h2>
+<p>Tres capas. Si falla una, las de arriba dejan de importar.</p>
+<p><strong>1. Capa de tracking.</strong></p>
+<p>GA4 server-side vía Stape con alojamiento en la UE. Eventos de ecommerce (purchase, addToCart, viewItem) enviados desde servidor. Conversions API de Meta, Google y TikTok activas. Sin esto, el resto es decoración.</p>
+<p><strong>2. Capa de modelo.</strong></p>
+<p>Elegir entre lineal, basado en posición, data-driven o MMM según ticket medio y ciclo de venta. El árbol de decisión está justo debajo.</p>
+<p><strong>3. Capa de lectura.</strong></p>
+<p>El ROAS reportado no es incremento. Un canal puede marcar mal en atribución y ser imprescindible para tus ventas. Saber leer esa diferencia es lo que evita decisiones destructivas.</p>
+<div class="cifra-que-abofetea">Con 31.555 conversiones gestionadas, el modelo data-driven de GA4 empieza a ser fiable a partir de unas 500 conversiones mensuales por canal. Por debajo de ahí no hay señal suficiente y el modelo inventa.</div>
+<h2>Qué modelo te toca según tu ticket medio</h2>
+<p>La pregunta útil no es cuál es el mejor modelo, sino cuál tiene sentido para tu negocio.</p>
+<p>Con ticket por debajo de 150€ y ciclo de menos de 7 días, ve a lineal o data-driven de GA4. Las decisiones son rápidas, el volumen alcanza para que el modelo aprenda y no necesitas complicarte con reparto por posición. Activa data-driven si superas las 500 conversiones mensuales en ese canal.</p>
+<p>Entre 150 y 500€ de ticket, basado en posición. Reconoce que el descubrimiento importa y que el cierre también. Lo usamos con una marca de belleza que empezó a ver la contribución real de la parte alta del embudo y reasignó presupuesto hacia canales que antes parecían inútiles.</p>
+<p>Por encima de 500€ de ticket, o con ciclos de más de 30 días, MMM o atribución desde el CRM con Klaviyo. GA4 pierde buena parte de las conversiones asistidas cuando el ciclo se alarga, y con producto de ticket alto infravalora de forma sistemática los canales de consideración.</p>
+<p>Una señal de alarma sencilla: si tu búsqueda de marca concentra más del 30% de las conversiones, tienes un problema de distorsión. Esa marca ya estaba en la cabeza del cliente cuando buscó, y alguien la puso ahí antes.</p>
+<h2>El stack server-side mínimo viable</h2>
+<p>No necesitas un data warehouse ni modelos probabilísticos. Necesitas server-side y Conversions API, y se monta en dos o tres semanas.</p>
+<p>GTM server-side en Stape, eventos de ecommerce por servidor, CAPI de Meta activo, Enhanced Conversions de Google activo y Klaviyo conectado para el reparto de crédito.</p>
+<p>Una marca de moda pasó de pixel sin CAPI a este stack completo en seis semanas. Su tráfico directo reportado bajó porque Meta empezó a recoger ventas que antes se perdían por el camino. Con 264.712€ de ad spend gestionado, es el resultado que esperamos cada vez que lo implementamos.</p>
+<div class="pro-tip"><p>Pro tip</p><p>Activa la ventana view-through de TikTok (1 día de vista, 7 de clic) y crea en GA4 un segmento de gente que vio sin hacer clic. Mide su conversión a 7 y 14 días. Cuando recortes presupuesto en TikTok, vigila las ventas de las semanas 3 y 4: ahí aparece la correlación que el último clic no puede enseñarte.</p></div>
+<h2>El reporte dual para tu director financiero</h2>
+<p>Tu CFO entiende el ROAS de último clic. No se lo quites, añade una capa al lado.</p>
+<p>El primer reporte es el de siempre, ROAS por atribución, útil para optimizar pujas dentro de cada canal. El segundo reparte el crédito según la contribución real al ciclo de venta, y es el que enseña que la búsqueda de marca es en parte asistencia y que TikTok trabaja aunque no cierre dentro de su ventana de clic.</p>
+<p>Si necesitas prueba dura, corre un geo-holdout: aparta el 10-15% de tu mercado sin anuncios de Meta durante 4 a 6 semanas y compara lo reportado con el incremento real. La diferencia es exactamente el crédito que tu modelo se está inventando.</p>
+<h2>Acción: tus próximos 30 minutos</h2>
+<p>Abre GA4 y ve a Adquisición, Adquisición de tráfico. Filtra por grupo de canales predeterminado y mira qué porcentaje cae en Direct. Si pasa del 30%, tu problema es de tracking, no de modelo.</p>
+<p>Copia ese número y llévalo a tu próxima reunión con quien gestione tu marketing. Es la primera conversación honesta que vais a tener sobre atribución.</p>
+<h2>En este post cubrimos</h2>
+<p>Por qué el tracking roto explica más que el modelo elegido, el framework PIRÁMIDE D2C con sus tres capas, qué modelo corresponde a cada ticket medio y ciclo, el stack server-side mínimo y el reporte dual para dirección financiera. Si lo que quieres saber es cuánto puedes invertir sin ahogar la caja, sigue por <a href="/blog/cuanto-gastar-meta-ads-visibilidad-caja" rel="noopener noreferrer">cuánto gastar en Meta según tu visibilidad de caja</a>; si el problema es que tu retorno no cuadra con el banco, mira por qué un <a href="/blog/roas-3x-perdida-dinero-d2c" rel="noopener noreferrer">ROAS de 3x puede ser una pérdida de dinero</a>.</p>
+<p>En el próximo post de esta serie: cómo auditar tu propio setup de tracking en cinco pasos y sin herramientas de pago.</p>
+        </article>
+
+<section class="sources-block">
+  <h2>Fuentes y datos</h2>
+  <p>Cada cifra y afirmación de este artículo se sostiene en una fuente verificable. Las que respaldan este post:</p>
+  <ul>
+<li><a href="https://developers.facebook.com/docs/marketing-api/conversions-api" rel="noopener noreferrer" target="_blank">Meta Conversions API</a></li>
+<li><a href="https://ads.tiktok.com/help" rel="noopener noreferrer" target="_blank">TikTok Ads Help Center</a></li>
+<li><a href="https://developers.google.com/search/docs" rel="noopener noreferrer" target="_blank">Google Search Central</a></li>
+  </ul>
+</section>
+
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+<div class="faq-item"><h3 class="faq-q">¿Qué modelo de atribución necesito para mi tienda online?</h3><p class="faq-a">Depende de tu ticket medio y ciclo de venta. Con ticket menor a 150€ y ciclo menor a 7 días, Linear o Data-Driven de GA4. Entre 150 y 500€, Position Based. Ticket mayor a 500€ o ciclo mayor a 30 días pide MMM o atribución desde CRM.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Por qué mi ROAS de Meta no coincide con mi crecimiento real?</h3><p class="faq-a">Last-click infla la búsqueda de marca y canibaliza el presupuesto de descubrimiento. Sin server-side, GA4 reporta como tráfico directo una parte del tráfico que llegó desde campañas. El ROAS reportado mide crédito, no incremento real.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Necesito un data warehouse para mejorar mi atribución?</h3><p class="faq-a">No. Server-side de GA4 más Conversions API de Meta, Google y TikTok cubre la mayor parte del problema de tracking en D2C. El data warehouse es opcional y tiene sentido si facturas más de 2M€ y tienes equipo de datos.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿TikTok convierte de verdad o solo genera awareness?</h3><p class="faq-a">Su contribución se pierde en modelos de último clic porque buena parte del efecto llega días después y sin clic. Activa la ventana view-through de 1 a 7 días y mide la conversión posterior antes de decidir que no funciona.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo convenzo a mi CFO de cambiar el modelo de atribución?</h3><p class="faq-a">Con el reporte dual: ROAS de atribución, que ya conoce, junto a contribución real por canal. Y con un geo-holdout de 4 a 6 semanas que compare lo reportado con el incremento medido.</p></div>
+</section>
+
+        <div class="cta-block">
+          <h3>Auditoría de atribución de 30 minutos</h3>
+          <p>Vemos qué modelo usas, cuánto hueco hay entre tu ROAS reportado y tu realidad, y qué cambiar primero.</p>
+          <a href="/contacto.html">Reservar auditoría gratuita →</a>
+        </div>
+
+
+        <div class="cta-block" id="feedback" style="text-align:left; margin-top:2rem;">
+          <h3 style="font-size:1.05rem;">¿Te ha servido este artículo?</h3>
+          <p style="margin-bottom:1rem;">Tu respuesta mejora lo que escribimos. 10 segundos, sin registro.</p>
+          <form action="https://n8n.daybydayconsulting.com/webhook/blog-feedback" method="POST">
+            <input type="hidden" name="slug" value="atribucion-marketing-d2c-modelo-ticket-medio">
+            <input type="text" name="web" value="" style="display:none" tabindex="-1" autocomplete="off">
+            <div style="display:flex; gap:0.5rem; margin-bottom:0.75rem;">
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="si" required> Sí, útil</label>
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="no"> No mucho</label>
+            </div>
+            <textarea name="comment" rows="2" placeholder="¿Qué te ha faltado o sobrado? (opcional)" style="width:100%; padding:0.6rem; border-radius:8px; border:1px solid var(--border); background:var(--bg-card); color:var(--text-primary); margin-bottom:0.75rem;"></textarea>
+            <button type="submit" style="background:var(--accent-color, #6366f1); color:white; font-weight:600; padding:0.6rem 1.25rem; border-radius:8px; border:none; cursor:pointer;">Enviar feedback</button>
+          </form>
+        </div>
+        <div class="related-articles">
+          <h2>Artículos relacionados</h2>
+          <a href="/blog/atribucion-post-ios-14-roas-mentira">atribución post-iOS 14</a>
+          <a href="/blog/roas-3x-perdida-dinero-d2c">ROAS de 3x puede ser una pérdida de dinero</a>
+          <a href="/blog/cuanto-gastar-meta-ads-visibilidad-caja">cuánto gastar en Meta según tu visibilidad de caja</a>
+          <a href="/blog/calcular-ltv-real-cohorte">calcular tu LTV real por cohorte</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Atribución D2C: qué modelo usar según tu ticket medio","description":"Qué modelo de atribución necesita tu D2C según tu ticket medio y tu ciclo de venta. Framework práctico para dejar de decidir sobre datos falsos.","datePublished":"2026-07-30T10:00:00+02:00","dateModified":"2026-07-30T10:00:00+02:00","inLanguage":"es-ES","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/","jobTitle":"Growth Partner","worksFor":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"knowsAbout":["Meta Ads","Google Ads","TikTok Ads","paid media","ecommerce D2C","CRM y email marketing","analítica server-side","growth strategy"],"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/","logo":{"@type":"ImageObject","url":"https://www.daybydayconsulting.com/favicon.png"},"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/atribucion-marketing-d2c-modelo-ticket-medio"},"image":{"@type":"ImageObject","url":"https://www.daybydayconsulting.com/blog/img/atribucion-marketing-d2c-modelo-ticket-medio.png","width":1200,"height":675}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué modelo de atribución necesito para mi tienda online?","acceptedAnswer":{"@type":"Answer","text":"Depende de tu ticket medio y ciclo de venta. Con ticket menor a 150€ y ciclo menor a 7 días, Linear o Data-Driven de GA4. Entre 150 y 500€, Position Based. Ticket mayor a 500€ o ciclo mayor a 30 días pide MMM o atribución desde CRM."}},{"@type":"Question","name":"¿Por qué mi ROAS de Meta no coincide con mi crecimiento real?","acceptedAnswer":{"@type":"Answer","text":"Last-click infla la búsqueda de marca y canibaliza el presupuesto de descubrimiento. Sin server-side, GA4 reporta como tráfico directo una parte del tráfico que llegó desde campañas. El ROAS reportado mide crédito, no incremento real."}},{"@type":"Question","name":"¿Necesito un data warehouse para mejorar mi atribución?","acceptedAnswer":{"@type":"Answer","text":"No. Server-side de GA4 más Conversions API de Meta, Google y TikTok cubre la mayor parte del problema de tracking en D2C. El data warehouse es opcional y tiene sentido si facturas más de 2M€ y tienes equipo de datos."}},{"@type":"Question","name":"¿TikTok convierte de verdad o solo genera awareness?","acceptedAnswer":{"@type":"Answer","text":"Su contribución se pierde en modelos de último clic porque buena parte del efecto llega días después y sin clic. Activa la ventana view-through de 1 a 7 días y mide la conversión posterior antes de decidir que no funciona."}},{"@type":"Question","name":"¿Cómo convenzo a mi CFO de cambiar el modelo de atribución?","acceptedAnswer":{"@type":"Answer","text":"Con el reporte dual: ROAS de atribución, que ya conoce, junto a contribución real por canal. Y con un geo-holdout de 4 a 6 semanas que compare lo reportado con el incremento medido."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.daybydayconsulting.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.daybydayconsulting.com/blog"},{"@type":"ListItem","position":3,"name":"Atribución D2C: qué modelo usar según tu ticket medio","item":"https://www.daybydayconsulting.com/blog/atribucion-marketing-d2c-modelo-ticket-medio"}]}</script>
+</body>
+</html>

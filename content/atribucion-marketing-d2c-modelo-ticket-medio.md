@@ -19,7 +19,7 @@ cta_href: "/contacto.html"
 cta_label: "Reservar auditoría gratuita"
 llms_summary: "Framework de atribución para D2C según ticket medio y ciclo de venta. Incluye la pirámide de 3 capas, el árbol de decisión por ticket y el stack server-side mínimo viable."
 tags: ["atribución", "D2C", "GA4", "meta ads", "tiktok ads", "ecommerce"]
-migration_state: "rendered"
+migration_state: "good"
 ---
 
 > «El trimestre pasado movimos el 40% del presupuesto a Google Shopping porque marcaba 6x. Después de migrar a server-side, Shopping tenía 2,1x. Habíamos vaciado los canales que traían clientes nuevos.»

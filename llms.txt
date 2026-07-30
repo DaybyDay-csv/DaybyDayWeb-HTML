@@ -193,3 +193,6 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 <!-- auto:growth-partner-vs-agencia-alineacion-incentivos -->
 - [Growth partner vs agencia: pricing que alinea incentivos](https://www.daybydayconsulting.com/blog/growth-partner-vs-agencia-alineacion-incentivos.html) — Cómo diferenciar un growth partner real de una agencia tradicional usando el framework FAI: estructura de pricing, alcance de clientes y ownership del resultado. Incluye las métricas de los primeros 9
 <!-- /auto -->
+<!-- auto:atribucion-marketing-d2c-modelo-ticket-medio -->
+- [Atribución D2C: qué modelo usar según tu ticket medio](https://www.daybydayconsulting.com/blog/atribucion-marketing-d2c-modelo-ticket-medio.html) — Framework de atribución para D2C según ticket medio y ciclo de venta. Incluye la pirámide de 3 capas, el árbol de decisión por ticket y el stack server-side mínimo viable.
+<!-- /auto -->
