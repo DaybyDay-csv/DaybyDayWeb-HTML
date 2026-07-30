@@ -1,95 +1,126 @@
 ---
 title: "Recuperar el CAC en 30 días: secuencia de ofertas D2C"
-h1: "Recuperar el CAC en 30 días con una secuencia de ofertas"
-slug: recuperar-cac-30-dias-secuencia-ofertas-d2c
-meta_desc: "Recuperar el CAC en 30 días con una secuencia de ofertas: bump en checkout, upsell post-compra y downsell. El sistema CFA paso a paso para marcas D2C."
+h1: "Recuperar el CAC en 30 días: la secuencia de ofertas que financia tu propia adquisición"
+slug: "recuperar-cac-30-dias-secuencia-ofertas-d2c"
+meta_desc: "Secuencia de ofertas para que tu cliente financie su propia adquisición en 30 días. Order bump, upsell y downsell paso a paso."
 canonical: "https://www.daybydayconsulting.com/blog/recuperar-cac-30-dias-secuencia-ofertas-d2c"
-category: "Estrategia"
-article_date: "2026-07-04"
-reading_time: 7
-published_at: "2026-07-04T00:00:00+02:00"
-primary_keyword: "recuperar el cac"
-secondary_keywords: ["secuencia de ofertas d2c", "order bump checkout", "upsell post compra", "cac 30 dias ecommerce", "adquisicion financiada por el cliente"]
-faq: [{"q": "¿Cuánto tarda una marca D2C en recuperar el CAC?", "a": "Sin secuencia de ofertas, entre 60 y 90 días: la primera compra deja 10-15€ de margen y el resto llega con la recompra. Con una secuencia de tres capas (bump en checkout, upsell post-compra a las 24 horas y downsell a los 7 días), el objetivo operativo es recuperar el CAC dentro de los primeros 30 días. El indicador correcto es el margen de contribución por cliente a 30 días, no el ROAS de la campaña."}, {"q": "¿Qué es un order bump y en qué se diferencia de un upsell?", "a": "El order bump es una oferta pequeña (5-15€) que aparece en el checkout, antes de pagar, y complementa lo que ya hay en el carrito. Se acepta con un clic y sin leer nada. El upsell llega después del pago, cuando la barrera de confianza ya cayó, y propone un gasto mayor. El bump captura impulso; el upsell captura confianza. Una secuencia sana usa los dos, en ese orden."}, {"q": "¿Cuándo enviar el upsell post-compra?", "a": "Dentro de las primeras 24 horas, que es la ventana de máxima atención del cliente. Un primer email a las 4-6 horas con la confirmación del pedido y el producto complementario. Un segundo a las 20-22 horas con el beneficio concreto de añadirlo. Pasadas 48 horas la atención cae y el mensaje compite con toda la bandeja de entrada."}, {"q": "¿Cómo mido si la secuencia de ofertas funciona?", "a": "Calcula el margen de contribución por cliente a 30 días: ingresos del pedido más bump, upsell y downsell, menos coste de producto, logística y CAC. Si el resultado es positivo antes del día 30, la secuencia financia tu adquisición y puedes escalar con caja del mercado. Si es negativo, revisa primero el margen de cada oferta y después el timing."}]
-sources: [{"label": "Shopify — Marketing Metrics: How To Gauge Success", "url": "https://www.shopify.com/blog/marketing-metrics"}, {"label": "Acquisition.com — Alex y Leila Hormozi", "url": "https://www.acquisition.com/"}]
-internal_links: [{"url": "/blog/cacvs-ltvecommerce.html", "anchor": "CAC vs LTV"}, {"url": "/blog/margen-contribucion-vs-roas-ecommerce.html", "anchor": "margen de contribución vs ROAS"}, {"url": "/blog/aumentar-aov-ecommerce-d2c-palancas.html", "anchor": "subir el AOV"}, {"url": "/blog/cac-blended-vs-cac-canal-ecommerce.html", "anchor": "CAC blended vs CAC por canal"}, {"url": "/blog/email-marketing-meta-ads-ltv-d2c.html", "anchor": "email marketing para LTV"}]
-cta_title: "¿Tu caja no aguanta el ritmo de tus campañas?"
-cta_desc: "Auditoría de 30 minutos sobre tu secuencia de monetización. Te va a pedir media hora y tus números reales. A cambio: ver dónde se te escapa el margen y qué oferta montar primero."
+category: "Growth D2C"
+article_date: "2026-07-30"
+reading_time: 8
+published_at: "2026-07-30T10:00:00+02:00"
+primary_keyword: "recuperar CAC 30 días"
+secondary_keywords: ["secuencia ofertas D2C","monetización post-compra","order bump upsell","escalabilidad ecommerce D2C"]
+faq: [{"q":"¿Cuánto tarda un D2C en recuperar el CAC con una buena secuencia de ofertas?","a":"Con una secuencia de order bump, upsell a las 48 horas y downsell a las 72 horas, en nuestra experiencia hemos observado una reducción del payback de CAC en cuentas con ticket medio entre 40-80 euros. La clave es que cada euro invertido en la adquisición se multiplica antes de que pasen 30 días."},{"q":"¿Qué es un order bump y cómo se implementa en Shopify?","a":"Un order bump es una oferta complementaria que aparece en la página de checkout. El cliente ya ha decidido comprar y solo necesita marcar una casilla. Se configura desde las opciones de checkout de Shopify sin apps adicionales."},{"q":"¿Cuándo enviar el upsell post-compra?","a":"48 horas después de la compra. Es el momento óptimo porque el cliente aún tiene la dopamina de haber recibido su pedido confirmado, pero ya ha pasado el pico de ansiedad por si se había equivocado. Cualquier oferta adicional se percibe como valor añadido, no como presión."},{"q":"¿Qué pasa si el cliente no acepta el upsell?","a":"Sin un downsell, ese cliente se pierde. El downsell es una oferta alternativa más económica o un formato más pequeño que se envía 72 horas después del upsell fallido. Captura al cliente indeciso antes de que se olvide de ti. En una cuenta de suplementación que gestionamos, añadir downsell tuvo un impacto medible en los ingresos en dos meses."},{"q":"¿Cómo priorizo qué productos entran en la secuencia de monetización?","a":"Priorizamos productos con alto margen bruto, que complementen la compra original y que el cliente recompre con frecuencia. El order bump funciona con formatos de prueba y accesorios. El upsell necesita algo aspiracional. El downsell funciona con formatos de entrada o alternativas más económicas."}]
+sources: [{"label":"Shopify Blog — Marketing Metrics","url":"https://www.shopify.com/blog/marketing-metrics"},{"label":"Acquisition.com — Alex Hormozi","url":"https://www.acquisition.com/"}]
+internal_links: [{"url":"/blog/roas-3x-perdida-dinero-d2c.html","anchor":"ROAS de 3x puede ser una pérdida de dinero"},{"url":"/blog/calcular-ltv-real-cohorte.html","anchor":"calcular tu LTV real por cohorte"},{"url":"/blog/atribucion-post-ios-14-roas-mentira.html","anchor":"atribución post-iOS 14"},{"url":"/blog/cuanto-gastar-meta-ads-visibilidad-caja.html","anchor":"cuánto gastar en Meta Ads según tu visibilidad de caja"}]
+cta_title: "¿Quieres que revisemos tu secuencia?"
+cta_desc: "En 30 minutos vemos tu estructura de monetización actual, qué order bumps tendrías que añadir y por dónde empezar."
 cta_href: "/contacto.html"
-cta_label: "Reservar auditoría gratuita"
-llms_summary: "Sistema CFA para D2C de 200K-2M€: order bump en checkout, upsell post-compra en 24h y downsell a 7 días para recuperar el CAC en 30 días. Se mide con margen de contribución a 30 días, no con ROAS."
-tags: [d2c, cac, secuencia-ofertas, monetizacion, ecommerce]
-migration_state: "good"
+cta_label: "Reserva tu auditoría"
+tags: ["D2C","CAC","monetización","upsell","Klaviyo","Growth"]
+migration_state: "rendered"
 ---
 
-> «Vendo, pero no me queda dinero.»
+> «Vendo 55.000€ al mes en Meta y no sé cuándo recupero lo que gasto. La factura de la plataforma llega cada 30 días y el cliente tarda 90 en volver.»
 
-Esa frase la dice un fundador D2C distinto cada semana. Factura 380K€ al año. Su panel de Meta marca ROAS 3. Su banco marca otra cosa. Gasta 28€ en captar un cliente de 62€ de ticket. El margen bruto del pedido deja 40€. Tras ads, logística y comisiones quedan 10€. Si ese cliente no recompra en 90 días, ahí se acabó la historia. El problema casi nunca está en las campañas. Está en lo que pasa después del primer pago.
+Nos lo contó el fundador de una marca de suplementación con ticket medio de 62€. No tenía un problema de campañas: tenía un problema de calendario. El dinero salía cada mes y volvía cada trimestre.
 
 :::direct-answer
-Para recuperar el CAC en 30 días no necesitas mejores anuncios. Necesitas una secuencia de ofertas de tres capas: order bump en el checkout (5-15€), upsell post-compra dentro de las primeras 24 horas y downsell a los 7 días para quien dijo no. Cada capa añade margen sobre un cliente que ya pagaste. El objetivo: que el margen de contribución a 30 días cubra el CAC completo. Hormozi lo llama adquisición financiada por el cliente.
+El problema no está en cuánto gastas en ads. Está en cuánto monetizas al cliente en los primeros 30 días. Con la secuencia correcta (order bump en checkout, upsell a las 48h, downsell a las 72h) reduces los días de payback del CAC sin tocar una sola campaña. Tu cliente financia su propia adquisición.
 :::
 
 ## Lo que vas a aprender
 
-1. Por qué un ROAS 3 puede dejarte sin caja igual.
-2. El sistema CFA: las 3 capas que hacen que el cliente financie su propio CAC.
-3. La cagada de margen que convierte un upsell "exitoso" en un agujero.
-4. El paso que puedes ejecutar hoy en 30 minutos.
+1. Por qué tu CAC real no es el que crees y cómo calcular el payback de verdad
+2. El framework TRÍADA DE RECUPERACIÓN, sus tres piezas y su orden
+3. Qué productos entran en cada fase y con qué criterio se eligen
+4. El error que nos costó dinero durante tres meses
+5. Cómo montar los tres flows en Klaviyo en menos de una hora
 
-## El agujero que el ROAS no te enseña
+## Por qué tu CAC tarda 90 días
 
-Haz la cuenta con tus números. Ticket medio de 40-80€. Margen de producto del 60-70%. CAC de 25-35€. La primera compra deja entre 5 y 15€ limpios. Con eso no escalas. Con eso sobrevives hasta la recompra.
+El cálculo clásico del CAC es gasto en ads dividido entre conversiones. Ese número miente porque no dice cuándo vuelve el dinero.
 
-Y la recompra tarda. En este rango de facturación, la mayoría de la caja del cliente llega entre el día 60 y el 90. Tu proveedor no espera 90 días. Meta cobra cada semana. Por eso frenas campañas que son rentables sobre el papel. Aunque tengas un ROAS de 3, no tienes caja. Lo explicamos a fondo en [margen de contribución vs ROAS](/blog/margen-contribucion-vs-roas-ecommerce.html): el ROAS mide la campaña y la caja se decide en el pedido.
+En cuentas con ticket medio de 40-80€ y margen bruto del 60-70%, de cada venta quedan entre 24 y 56€ después del coste de producto. Con los CPA que vemos hoy en Meta para D2C en fase de crecimiento, es fácil que la primera transacción no cubra la adquisición. El playbook del sector responde siempre lo mismo: espera 90 días, el cliente recomprará y compensarás.
 
-En las cuentas que gestionamos —264.712€ de inversión y 31.555 conversiones registradas con CAPI server-side— el patrón se repite. Las marcas que frenan por caja no tienen un problema de adquisición. Tienen un pedido que monetiza poco.
+Pero un negocio que factura entre 200K y 2M€ rara vez tiene caja para esperar tres meses. Necesita que el cliente financie su propia adquisición antes de que pase uno. Y esa pregunta (cuánto ingresa el mismo cliente en los primeros 30 días) casi nadie la mide.
 
-:::cifra
-Cuenta tipo del ICP DayByDay: ticket 62€, margen de producto 65%, CAC 28€. Margen limpio de la primera compra: 10-12€. Recuperación del CAC solo con recompra natural: 60-90 días. Ese desfase es el que congela la escalada.
-:::
-
-## El sistema CFA: el cliente financia su adquisición
-
-CFA viene de "customer financed acquisition", la idea central de los money models de Hormozi: ordenar las ofertas para que cada cliente devuelva el CAC antes del día 30. Tres capas, cada una con su momento y su tamaño.
-
-**1. Bump en el checkout.**
-Una oferta de 5-15€ junto al botón de pago. Complementa lo que ya hay en el carrito y se entiende sin leer. Un formato de viaje, un accesorio, una recarga. Si necesita un párrafo de explicación, no es un bump: es fricción. Bien elegido, lo acepta entre el 15% y el 30% de quienes llegan al checkout, y cada aceptación baja tu CAC efectivo en el acto.
-
-**2. Upsell post-compra.**
-Las primeras 24 horas tras el pago son la ventana de máxima atención. El cliente ya cruzó la barrera difícil: darte su dinero. Un email a las 4-6 horas con su confirmación y el producto complementario. Otro a las 20-22 horas con el beneficio concreto. Nada de descuentos agresivos que canibalicen margen. Esta capa conecta directo con [email marketing para LTV](/blog/email-marketing-meta-ads-ltv-d2c.html) y con las palancas para [subir el AOV](/blog/aumentar-aov-ecommerce-d2c-palancas.html).
-
-**3. Downsell a los 7 días.**
-Quien no aceptó el upsell recibe una versión más pequeña o más barata a la semana. No es insistir: es calibrar. Y además te da lectura. Si el downsell convierte bien y el upsell no, el problema del upsell era precio o tamaño, no interés.
-
-La secuencia entera respeta una regla de la casa: coste nombrado y salida libre. El cliente ve qué cuesta, qué gana y puede decir no sin castigo. Sin contadores falsos ni urgencia inventada. Eso protege la marca mientras la caja crece: más margen por pedido → más caja → más presupuesto para captar sin miedo.
+Si aún no tienes claro cuánto vale cada cliente en el tiempo, empieza por [calcular tu LTV real por cohorte](/blog/calcular-ltv-real-cohorte.html): sin ese número, la secuencia que viene ahora se monta a ciegas.
 
 :::cifra
-Estructura objetivo del sistema CFA: bump aceptado por 15-30% del checkout, upsell post-compra en la ventana de 24 horas, downsell al día 7. Meta operativa: margen de contribución positivo por cliente antes del día 30, medido contra CAC real.
+Generamos 3,2M€ para clientes D2C con ticket medio entre 40 y 80€, sobre 264.712€ de ad spend gestionado. La diferencia entre escalar y quedarse quieto no estuvo en el presupuesto. Estuvo en el calendario del retorno.
 :::
 
-## La cagada que convierte un upsell en un agujero
+## El framework TRÍADA DE RECUPERACIÓN
 
-Nos pasó con una cuenta de cosmética. Montamos el flujo post-compra, el bundle convertía y el dashboard cantaba victoria. Tres meses después la caja seguía igual. Nadie había calculado el margen del bundle: el precio apenas cubría producto y envío. Habíamos subido el LTV aparente sin mover un euro de caja real. Tocó rehacer la oferta: menos precio de cara al cliente, más margen dentro, y un segundo escalón para quien no compraba el primero. La lección quedó grabada: monetizar sin calcular margen es decorar el dashboard.
+Tres ofertas, tres momentos, tres niveles de fricción. En este orden.
 
-Desde entonces, cada oferta de la secuencia pasa un filtro de tres preguntas. Cuánto margen deja después de producto y logística. En qué día del ciclo cae. Y qué pasa con el CAC efectivo si la acepta el 10% de los clientes. Si alguna respuesta sale floja, la oferta no entra.
+**1. Order bump en checkout.**
+
+Una oferta complementaria en la página de pago. El cliente ya tiene la tarjeta en la mano y solo marca una casilla. Es la fricción más baja que existe en todo el embudo.
+
+**2. Upsell a las 48 horas.**
+
+Email automático dos días después de la compra. El cliente conserva la satisfacción del pedido confirmado y ya ha superado el pico de duda sobre si acertó. Cualquier oferta suena a valor añadido en ese momento, no a presión.
+
+**3. Downsell a las 72 horas.**
+
+Si no abrió el upsell o no compró, una alternativa más económica o un formato más pequeño. No abandonas al cliente que estuvo a punto de decir que sí.
+
+La tríada funciona porque cubre los tres momentos de máxima receptividad: cuando ya decidió comprar, cuando aún recuerda la compra y cuando estuvo interesado pero no convencido.
+
+## El error que nos costó tres meses de ventas
+
+Montamos el upsell a 48 horas en la cuenta de suplementación y convertía en un porcentaje bajo de pedidos. Bien, pero corto. No habíamos configurado el downsell.
+
+Los clientes que no abrían el upsell se perdían sin más. Tardamos tres meses en abrir los datos del flow y ver el tamaño del agujero: una parte importante de quienes ignoraron el upsell habría respondido a una oferta más barata. No era falta de interés, era precio y momento.
+
+Añadimos el downsell con un formato pequeño de la misma gama. En dos meses los ingresos de esa secuencia se movieron de forma clara, con un solo producto adicional en juego.
+
+La lección: cada vez que alguien dice que no a tu upsell y no tienes downsell, estás dejando dinero encima de la mesa. No rechazaron tu producto, rechazaron esa oferta concreta.
+
+## Qué productos entran en cada fase
+
+Para el order bump, complementos pequeños con margen alto: accesorios, formatos de prueba, packaging premium. Funciona porque el cliente ya decidió comprar y solo tiene que marcar una casilla. El fallo típico es meter dos opciones o un producto sin relación con lo que acaba de comprar. Tiene que ser un complemento directo, no una venta cruzada forzada.
+
+Para el upsell, producto aspiracional o bundle: un kit que junte dos o tres referencias, la versión premium de lo que compró, un formato familiar. Tiene que mejorar la experiencia de forma evidente. El fallo típico aquí es insistir con un segundo upsell a las 72 horas cuando no abrió el primero. Eso es acoso, no seguimiento.
+
+Para el downsell, formatos de entrada o alternativas con descuento moderado. No hace falta regalar el producto para recuperar la venta, y un descuento agresivo te sale más caro que perderla.
+
+Los tres criterios con los que priorizamos: margen bruto suficiente para que la oferta no salga a cero, relación directa con la compra original y frecuencia de recompra. Nada que añada complejidad operativa.
+
+## Cómo montarlo en Klaviyo sin volverte loco
+
+No necesitas una arquitectura de doce flows. Necesitas tres, con el timing correcto.
+
+**1. Flow de order bump.**
+
+Se activa en la thank you page. Un bloque con una oferta única para ese pedido: un producto o un bundle con descuento exclusivo. Sin opciones infinitas.
+
+**2. Flow de upsell.**
+
+Se activa 48 horas después del evento de compra. Un email con el producto aspiracional y un segundo recordatorio a las 72 horas si no abrió el primero. Dos emails como máximo.
+
+**3. Flow de downsell.**
+
+Se activa a las 96 horas y solo si no hay una compra nueva. Ofrece la alternativa económica o el formato pequeño. Un email, una llamada a la acción.
+
+La confusión habitual es entre order bump y upsell, que pueden compartir producto pero difieren en disparador: uno ocurre en el checkout, el otro dos días después por email.
 
 :::pro-tip
-No ofrezcas el mismo upsell a todo el mundo. Segmenta por ticket del primer pedido. Un cliente de 80€ acepta upsells de 30-40€; uno de 40€ se asusta con esa cifra y convierte mejor en 12-18€. La proporción sana está entre el 40% y el 50% del ticket inicial. Es un cambio de una tarde en Klaviyo y casi nadie lo hace.
+No lances el upsell hasta validar que el order bump funciona. Es donde menos fricción hay, así que es donde antes descubres si tu cliente acepta ofertas adicionales. Y aunque el downsell sea lo último que configuras, es lo segundo que deberías priorizar: pesa más en el payback del CAC que el propio upsell.
 :::
-
-## Mide caja, no aplausos
-
-El sistema se evalúa con una sola cifra: margen de contribución por cliente a 30 días. Suma pedido, bump, upsell y downsell. Resta producto, logística y CAC. Positivo antes del día 30: la máquina se financia sola y puedes escalar. Negativo: revisa margen de cada oferta antes que el timing. Para afinar el CAC que usas en esa resta, aquí está la diferencia entre [CAC blended vs CAC por canal](/blog/cac-blended-vs-cac-canal-ecommerce.html), y para el techo de gasto por cliente, [CAC vs LTV](/blog/cacvs-ltvecommerce.html).
 
 ## Acción: tus próximos 30 minutos
 
-1. Abre tu checkout y añade un bump de 5-15€ que complemente tu producto estrella. Si no existe, elige el candidato: formato pequeño, accesorio o recarga.
-2. Monta en Klaviyo un flow post-compra de dos emails: confirmación con upsell a las 4-6 horas y beneficio concreto a las 20-22 horas.
-3. Calcula tu margen de contribución por cliente de los últimos 30 días. Ese número es tu punto de partida y tu métrica de éxito.
+Abre Shopify y elige un solo producto que pueda funcionar como order bump del artículo que más vendes. Uno. Que complemente lo que ya compran.
+
+Abre Klaviyo y crea un flow de upsell con disparador en la compra y espera de 48 horas. Un email. Mañana lo revisas con calma.
+
+La semana que viene montas el downsell. En dos semanas tienes la secuencia completa girando con datos reales.
 
 ## En este post cubrimos
 
-Por qué el ROAS esconde el problema de caja, el sistema CFA con sus tres capas (bump, upsell post-compra y downsell), la cagada de margen que infla el LTV sin mover la caja, el pro tip de segmentar upsells por ticket y el cálculo de margen de contribución a 30 días que decide si escalas.
+Por qué el CAC medido sin calendario esconde el problema de caja, el framework TRÍADA DE RECUPERACIÓN con sus tres piezas y su orden, qué producto entra en cada fase, el error del downsell que nos costó tres meses de ventas y el montaje de los tres flows en Klaviyo. Si tu duda está antes, en cuánto puedes gastar sin ahogarte, lo tienes en [cuánto gastar en Meta Ads según tu visibilidad de caja](/blog/cuanto-gastar-meta-ads-visibilidad-caja.html).
 
-En el próximo post: cómo montar en n8n la atribución que te dice cuánto ingreso real genera cada cliente a 30 días, sin depender del last-click de Meta.
+En el próximo post de esta serie: cómo montar la atribución multi-touch para saber qué parte de la secuencia genera ingresos de verdad y cuánto de tu ROAS es crédito prestado, que es donde empieza la [atribución post-iOS 14](/blog/atribucion-post-ios-14-roas-mentira.html).
