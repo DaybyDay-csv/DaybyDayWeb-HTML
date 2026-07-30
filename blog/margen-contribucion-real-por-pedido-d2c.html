@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Margen de contribución: lo que queda de cada pedido</title>
+  <meta name="description" content="Calcula lo que queda de cada pedido después de COGS, comisiones, envío y devoluciones. Y compáralo con tu CPA real antes de escalar.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="Pablo Santirso · DayByDay Consulting">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/margen-contribucion-real-por-pedido-d2c">
+  <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/blog/margen-contribucion-real-por-pedido-d2c">
+  <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/blog/margen-contribucion-real-por-pedido-d2c">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly summary">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Margen de contribución: lo que queda de cada pedido">
+  <meta property="og:description" content="Calcula lo que queda de cada pedido después de COGS, comisiones, envío y devoluciones. Y compáralo con tu CPA real antes de escalar.">
+  <meta property="og:url" content="https://www.daybydayconsulting.com/blog/margen-contribucion-real-por-pedido-d2c">
+  <meta property="og:site_name" content="DayByDay Consulting">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="https://www.daybydayconsulting.com/blog/img/margen-contribucion-real-por-pedido-d2c.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta name="twitter:image" content="https://www.daybydayconsulting.com/blog/img/margen-contribucion-real-por-pedido-d2c.png">
+  <meta property="article:published_time" content="2026-07-30T16:00:00+02:00">
+  <meta property="article:modified_time" content="2026-07-30T16:00:00+02:00">
+  <meta property="article:author" content="Pablo Santirso">
+  <meta property="article:section" content="Growth Analytics">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Margen de contribución: lo que queda de cada pedido">
+  <meta name="twitter:description" content="Calcula lo que queda de cada pedido después de COGS, comisiones, envío y devoluciones. Y compáralo con tu CPA real antes de escalar.">
+
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .article-body .direct-answer { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 0 0 2rem; }
+    .article-body .direct-answer p { margin: 0; font-size: 1.05rem; }
+    .article-body .summary-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .summary-block p { margin: 0 0 0.5rem; }
+    .article-body .pro-tip { background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .pro-tip p:first-child { color: var(--accent-color, #6366f1); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem; margin: 0 0 0.5rem; }
+    .article-body .pro-tip p:last-child { margin: 0; }
+    .article-body .cifra-que-abofetea { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); text-align: center; padding: 1.5rem 0; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .related-articles h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); }
+    .sources-block { margin-top: 3rem; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; }
+    .sources-block h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary); }
+    .sources-block p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .sources-block ul { list-style: none; padding: 0; margin: 0; }
+    .sources-block li { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+    .sources-block li:last-child { border-bottom: none; }
+    .sources-block a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .related-articles a { display: block; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .related-articles a:hover { border-color: var(--accent-color, #6366f1); }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+    .cta-block { margin-top: 3rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; text-align: center; }
+    .cta-block h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary); }
+    .cta-block p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .cta-block a { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-color, #6366f1); color: white; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+<a href="#main" class="skip-link">Saltar al contenido principal</a>
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Growth Analytics</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Growth Analytics</span>
+          <span class="reading-time">7 min de lectura</span>
+          <span class="article-date">2026-07-30</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Margen de contribución real: lo que de verdad queda de cada pedido en tu D2C</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Calcula lo que queda de cada pedido después de COGS, comisiones, envío y devoluciones. Y compáralo con tu CPA real antes de escalar.</p>
+        <div class="article-author">
+          <div class="author-avatar">PS</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirso · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media &amp; Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<blockquote>«Mi agencia me pasa 3,2 de retorno cada mes. Y cada mes cierro con menos dinero en el banco que el anterior. Uno de los dos números está mal.»</blockquote>
+<p>Los dos estaban bien. El problema era que medían cosas distintas: uno el ingreso que entra por la puerta, el otro lo que queda cuando la venta termina de pagar todo lo que arrastra.</p>
+<div class="direct-answer"><p>El retorno publicitario mide ingreso partido por gasto en ads. No descuenta el coste de producto, las comisiones de plataforma y pasarela, el envío ni las devoluciones. Lo que decide si ganas dinero es otra cifra: el margen de contribución por pedido. Cuando tu coste de adquisición se lo come, cada venta nueva te empobrece por muy bonito que sea el panel.</p></div>
+<h2>Lo que vas a aprender</h2>
+<ol>
+<li>Qué se come tu ticket entre la venta y tu cuenta corriente</li>
+<li>El framework MARGEN para calcular lo que queda, en cuatro pasos</li>
+<li>Los tres costes que casi nunca aparecen en el informe de tu agencia</li>
+<li>El canal bueno que apagamos por mirar el ratio equivocado</li>
+<li>Cómo hacer el cálculo en media hora con lo que ya tienes</li>
+</ol>
+<h2>Lo que se come tu ticket</h2>
+<p>Un pedido de 60€ no son 60€. Entre que el cliente paga y el dinero se queda en tu cuenta hay una cadena de costes que casi nadie suma entera.</p>
+<p>El coste de producto es el más evidente y el único que la mayoría tiene controlado. Después vienen las comisiones: la plataforma de ecommerce se lleva su parte y la pasarela de pago la suya, entre porcentaje y tarifa fija por operación. Luego el envío, que si es gratuito para el cliente no lo es para ti. Y al final las devoluciones, que cuestan la logística de ida, la de vuelta y el reacondicionado del producto, más las incidencias de pago que aparecen unas semanas después.</p>
+<p>Sumadas, estas partidas se llevan una porción del ticket que rara vez baja del 15% y que en categorías con devolución alta puede duplicar esa cifra. Tu agencia no las ve porque no tiene acceso a tu facturación real: solo ve lo que ocurre dentro de la plataforma de anuncios. Y ahí el pedido siempre vale 60€.</p>
+<div class="cifra-que-abofetea">Con 264.712€ de inversión publicitaria gestionada y 31.555 conversiones, nuestro coste medio por conversión sale a 8,39€. Ese es el número contra el que hay que comparar el margen. No el retorno.</div>
+<h2>El framework MARGEN en cuatro pasos</h2>
+<p>Cuando entramos en una cuenta nueva, ordenamos los números que el cliente ya tiene pero nunca ha mirado juntos.</p>
+<p><strong>1. Margen bruto por ticket.</strong></p>
+<p>Ticket medio menos coste directo de producto. Si vendes a 60€ y te cuesta 32€, tienes 28€, un 46%. Por debajo del 50% la precisión del resto del cálculo deja de ser un detalle y pasa a ser la diferencia entre ganar y perder.</p>
+<p><strong>2. Costes de la cadena.</strong></p>
+<p>Comisión de plataforma más comisión de pasarela más envío más devoluciones más incidencias. En un ticket de 60€ esto se suele mover entre 8 y 12€ según tu mix de producto y tu política de envíos.</p>
+<p><strong>3. Margen de contribución.</strong></p>
+<p>Lo primero menos lo segundo. Si te quedan entre 16 y 20€ por pedido, ese es tu presupuesto real para traer al cliente. Ni un euro más.</p>
+<p><strong>4. Comparación con el CPA real.</strong></p>
+<p>Coge tu inversión publicitaria del último mes y divídela entre pedidos de clientes nuevos. Pedidos, no sesiones ni carritos. Si ese CPA supera tu margen de contribución, cada cliente nuevo sale de tu bolsillo.</p>
+<p>El orden importa. Empiezas por el dato fácil y avanzas hasta la cifra con la que decides. Si te saltas un paso, el error se arrastra hasta el final.</p>
+<h2>Los tres costes invisibles</h2>
+<p>Hay tres partidas que se escapan incluso cuando el cálculo se hace bien.</p>
+<p>La primera es el desfase entre venta y cobro. El retorno publicitario es instantáneo; tu resultado real tarda entre 30 y 90 días en cerrarse, cuando las devoluciones y las incidencias terminan de aparecer. Puedes cerrar un mes espectacular y descubrir en el siguiente que una parte se ha evaporado.</p>
+<p>La segunda es la atribución inflada. Sin la API de conversiones activa, la plataforma optimiza sobre el subconjunto de eventos que ve y te devuelve un CPA más bonito que el real. El detalle está en <a href="/blog/roas-3x-perdida-dinero-d2c" rel="noopener noreferrer">por qué tu ROAS de 3x puede ser un gasto oculto</a>.</p>
+<p>La tercera es el cliente que compra una vez y no vuelve. Si tu tasa de recompra es baja, estás financiando adquisición con dinero que no recuperas nunca. Antes de decidir cuánto puedes pagar por un cliente, conviene <a href="/blog/calcular-ltv-real-cohorte" rel="noopener noreferrer">calcular tu LTV real por cohorte</a>.</p>
+<h2>El canal bueno que apagamos</h2>
+<p>Nos pasó con una cuenta propia. Teníamos un canal con un retorno mediocre y decidimos recortarlo para que el número medio subiera. Subió.</p>
+<p>Dos meses después las ventas totales habían bajado más que el ahorro. Al abrir las cohortes vimos lo que no habíamos mirado: los clientes de ese canal compraban tres veces más que la media a lo largo del año. Su valor no estaba en la primera compra, estaba en la cuarta. Habíamos optimizado la métrica de la pantalla y roto el negocio de debajo.</p>
+<p>Reactivamos el canal, pero perdimos dos meses de adquisición que no se recuperan. Desde entonces ningún canal se apaga sin mirar antes el comportamiento de su cohorte a seis meses.</p>
+<h2>Por qué recortar puede empeorar el resultado</h2>
+<p>Aquí está lo que casi nadie te cuenta cuando te recomienda bajar la inversión.</p>
+<p>Tienes costes fijos: nóminas, almacén, software, seguros. Si con 20.000€ de inversión mensual generas margen suficiente para pagarlos y sobra, el negocio funciona. Si bajas a 10.000€ para que el ratio se vea mejor y dejas de cubrir la estructura, el ratio mejora y el resultado del mes empeora.</p>
+<p>El retorno publicitario no es la métrica con la que se decide el tamaño. Se decide con el margen de contribución por canal y con el volumen que necesitas para pagar la estructura.</p>
+<div class="pro-tip"><p>Pro tip</p><p>Haz el cálculo por categoría de producto, no con el ticket medio global. La media esconde que tienes referencias que financian la adquisición y otras que la destruyen. En cuanto lo separas, la decisión deja de ser cuánto invierto y pasa a ser qué producto pongo en el anuncio.</p></div>
+<h2>Acción: tus próximos 30 minutos</h2>
+<p>Abre una hoja de cálculo en blanco. No el informe de tu agencia.</p>
+<p>En los primeros diez minutos, ticket medio del último mes menos coste directo de producto. Si no tienes ese número a mano, ese es tu primer problema y todo lo demás espera.</p>
+<p>En los diez siguientes, suma comisiones, envío, devoluciones e incidencias. Con estimaciones razonables vale. Réstalo y ya tienes tu margen de contribución por pedido.</p>
+<p>En los últimos diez, divide tu inversión publicitaria del mes entre los pedidos de clientes nuevos y compara. Si el CPA es mayor que el margen, tienes dos palancas: bajar el CPA o subir el margen. No hay una tercera.</p>
+<h2>En este post cubrimos</h2>
+<p>Qué se come tu ticket entre la venta y el banco, el framework MARGEN de cuatro pasos para calcular lo que queda, los tres costes invisibles (desfase de cobro, atribución inflada y cliente de una sola compra), el canal que apagamos por mirar el ratio equivocado y por qué recortar inversión puede empeorar el resultado del mes. Si tu margen sale ajustado, la salida no siempre es subir precios: mira cómo <a href="/blog/recuperar-cac-30-dias-secuencia-ofertas-d2c" rel="noopener noreferrer">recuperar el CAC en 30 días</a> monetizando mejor al cliente que ya has pagado.</p>
+<p>En el próximo post de esta serie: cómo montar el cuadro de mando que calcula esto solo cada mañana, para que dejes de hacerlo a mano en una hoja de cálculo.</p>
+        </article>
+
+<section class="sources-block">
+  <h2>Fuentes y datos</h2>
+  <p>Cada cifra y afirmación de este artículo se sostiene en una fuente verificable. Las que respaldan este post:</p>
+  <ul>
+<li><a href="https://www.shopify.com/blog/marketing-metrics" rel="noopener noreferrer" target="_blank">Shopify Blog — Marketing Metrics</a></li>
+<li><a href="https://www.klaviyo.com/blog" rel="noopener noreferrer" target="_blank">Klaviyo Blog</a></li>
+<li><a href="https://www.thinkwithgoogle.com" rel="noopener noreferrer" target="_blank">Think with Google</a></li>
+  </ul>
+</section>
+
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+<div class="faq-item"><h3 class="faq-q">¿Qué es el margen de contribución por pedido?</h3><p class="faq-a">Es lo que queda de cada venta después de restar el coste de producto, las comisiones de plataforma y pasarela, el envío y la parte proporcional de devoluciones. Ese sobrante es el presupuesto real que tienes para adquirir al cliente. Si tu CPA lo supera, cada pedido nuevo te cuesta dinero.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo calculo mi coste real por pedido?</h3><p class="faq-a">Suma coste de producto, comisión de plataforma, comisión de pasarela, envío no repercutido, coste logístico de las devoluciones y las incidencias de pago. Divide el total anual entre el número de pedidos si no puedes hacerlo pedido a pedido.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Por qué mi ROAS es bueno y mi cuenta corriente no mejora?</h3><p class="faq-a">Porque el ROAS mide ingreso sobre gasto publicitario y no descuenta ninguno de los costes de la cadena. Un retorno de 3x sobre producto con margen bruto del 30% deja muy poco después de comisiones, envío y devoluciones.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué margen de contribución es sano en D2C?</h3><p class="faq-a">Depende del ticket y de la recurrencia, pero la referencia útil no es un porcentaje: es la comparación con tu CPA. Con recompra alta puedes tolerar un margen ajustado en la primera compra. Sin recompra, la primera venta tiene que pagarlo todo.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Bajar la inversión en ads mejora la rentabilidad?</h3><p class="faq-a">No siempre. Si con menos inversión dejas de cubrir tus costes fijos, el ratio mejora y el resultado del mes empeora. Antes de recortar, comprueba qué volumen necesitas para pagar la estructura.</p></div>
+</section>
+
+        <div class="cta-block">
+          <h3>Auditoría de 30 minutos sobre tu margen real</h3>
+          <p>Miramos qué queda de cada pedido después de todos los costes y si tu CPA cabe dentro. Sin compromiso.</p>
+          <a href="/contacto.html">Reservar auditoría gratuita →</a>
+        </div>
+
+
+        <div class="cta-block" id="feedback" style="text-align:left; margin-top:2rem;">
+          <h3 style="font-size:1.05rem;">¿Te ha servido este artículo?</h3>
+          <p style="margin-bottom:1rem;">Tu respuesta mejora lo que escribimos. 10 segundos, sin registro.</p>
+          <form action="https://n8n.daybydayconsulting.com/webhook/blog-feedback" method="POST">
+            <input type="hidden" name="slug" value="margen-contribucion-real-por-pedido-d2c">
+            <input type="text" name="web" value="" style="display:none" tabindex="-1" autocomplete="off">
+            <div style="display:flex; gap:0.5rem; margin-bottom:0.75rem;">
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="si" required> Sí, útil</label>
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="no"> No mucho</label>
+            </div>
+            <textarea name="comment" rows="2" placeholder="¿Qué te ha faltado o sobrado? (opcional)" style="width:100%; padding:0.6rem; border-radius:8px; border:1px solid var(--border); background:var(--bg-card); color:var(--text-primary); margin-bottom:0.75rem;"></textarea>
+            <button type="submit" style="background:var(--accent-color, #6366f1); color:white; font-weight:600; padding:0.6rem 1.25rem; border-radius:8px; border:none; cursor:pointer;">Enviar feedback</button>
+          </form>
+        </div>
+        <div class="related-articles">
+          <h2>Artículos relacionados</h2>
+          <a href="/blog/roas-3x-perdida-dinero-d2c">por qué tu ROAS de 3x puede ser un gasto oculto</a>
+          <a href="/blog/calcular-ltv-real-cohorte">calcular tu LTV real por cohorte</a>
+          <a href="/blog/recuperar-cac-30-dias-secuencia-ofertas-d2c">recuperar el CAC en 30 días</a>
+          <a href="/blog/cuanto-gastar-meta-ads-visibilidad-caja">cuánto gastar en Meta según tu visibilidad de caja</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Margen de contribución: lo que queda de cada pedido","description":"Calcula lo que queda de cada pedido después de COGS, comisiones, envío y devoluciones. Y compáralo con tu CPA real antes de escalar.","datePublished":"2026-07-30T16:00:00+02:00","dateModified":"2026-07-30T16:00:00+02:00","inLanguage":"es-ES","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/","jobTitle":"Growth Partner","worksFor":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"knowsAbout":["Meta Ads","Google Ads","TikTok Ads","paid media","ecommerce D2C","CRM y email marketing","analítica server-side","growth strategy"],"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/","logo":{"@type":"ImageObject","url":"https://www.daybydayconsulting.com/favicon.png"},"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/margen-contribucion-real-por-pedido-d2c"},"image":{"@type":"ImageObject","url":"https://www.daybydayconsulting.com/blog/img/margen-contribucion-real-por-pedido-d2c.png","width":1200,"height":675}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué es el margen de contribución por pedido?","acceptedAnswer":{"@type":"Answer","text":"Es lo que queda de cada venta después de restar el coste de producto, las comisiones de plataforma y pasarela, el envío y la parte proporcional de devoluciones. Ese sobrante es el presupuesto real que tienes para adquirir al cliente. Si tu CPA lo supera, cada pedido nuevo te cuesta dinero."}},{"@type":"Question","name":"¿Cómo calculo mi coste real por pedido?","acceptedAnswer":{"@type":"Answer","text":"Suma coste de producto, comisión de plataforma, comisión de pasarela, envío no repercutido, coste logístico de las devoluciones y las incidencias de pago. Divide el total anual entre el número de pedidos si no puedes hacerlo pedido a pedido."}},{"@type":"Question","name":"¿Por qué mi ROAS es bueno y mi cuenta corriente no mejora?","acceptedAnswer":{"@type":"Answer","text":"Porque el ROAS mide ingreso sobre gasto publicitario y no descuenta ninguno de los costes de la cadena. Un retorno de 3x sobre producto con margen bruto del 30% deja muy poco después de comisiones, envío y devoluciones."}},{"@type":"Question","name":"¿Qué margen de contribución es sano en D2C?","acceptedAnswer":{"@type":"Answer","text":"Depende del ticket y de la recurrencia, pero la referencia útil no es un porcentaje: es la comparación con tu CPA. Con recompra alta puedes tolerar un margen ajustado en la primera compra. Sin recompra, la primera venta tiene que pagarlo todo."}},{"@type":"Question","name":"¿Bajar la inversión en ads mejora la rentabilidad?","acceptedAnswer":{"@type":"Answer","text":"No siempre. Si con menos inversión dejas de cubrir tus costes fijos, el ratio mejora y el resultado del mes empeora. Antes de recortar, comprueba qué volumen necesitas para pagar la estructura."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.daybydayconsulting.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.daybydayconsulting.com/blog"},{"@type":"ListItem","position":3,"name":"Margen de contribución: lo que queda de cada pedido","item":"https://www.daybydayconsulting.com/blog/margen-contribucion-real-por-pedido-d2c"}]}</script>
+</body>
+</html>

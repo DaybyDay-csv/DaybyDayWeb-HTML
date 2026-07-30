@@ -19,7 +19,7 @@ cta_href: "/contacto.html"
 cta_label: "Reservar auditoría gratuita"
 llms_summary: "Cómo calcular el margen de contribución real por pedido en D2C restando COGS, comisiones, envío y devoluciones, y compararlo con el CPA antes de escalar. Incluye el framework MARGEN de cuatro pasos."
 tags: ["unit economics", "D2C", "margen", "COGS", "ecommerce", "rentabilidad"]
-migration_state: "rendered"
+migration_state: "good"
 ---
 
 > «Mi agencia me pasa 3,2 de retorno cada mes. Y cada mes cierro con menos dinero en el banco que el anterior. Uno de los dos números está mal.»
