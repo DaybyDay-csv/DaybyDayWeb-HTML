@@ -18,7 +18,7 @@ cta_desc: "En 30 minutos vemos tu estructura de monetización actual, qué order
 cta_href: "/contacto.html"
 cta_label: "Reserva tu auditoría"
 tags: ["D2C","CAC","monetización","upsell","Klaviyo","Growth"]
-migration_state: "rendered"
+migration_state: "good"
 ---
 
 > «Vendo 55.000€ al mes en Meta y no sé cuándo recupero lo que gasto. La factura de la plataforma llega cada 30 días y el cliente tarda 90 en volver.»
