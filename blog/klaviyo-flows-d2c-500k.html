@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klaviyo: los 12 flows que tu D2C de 500K+ necesita</title>
+  <meta name="description" content="Tu Klaviyo tiene siete flows activos y solo uno genera dinero. El framework LIFT para ordenarlos y el error de timing que arruina el post-compra.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="Pablo Santirso · DayByDay Consulting">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/klaviyo-flows-d2c-500k">
+  <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/blog/klaviyo-flows-d2c-500k">
+  <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/blog/klaviyo-flows-d2c-500k">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly summary">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Klaviyo: los 12 flows que tu D2C de 500K+ necesita">
+  <meta property="og:description" content="Tu Klaviyo tiene siete flows activos y solo uno genera dinero. El framework LIFT para ordenarlos y el error de timing que arruina el post-compra.">
+  <meta property="og:url" content="https://www.daybydayconsulting.com/blog/klaviyo-flows-d2c-500k">
+  <meta property="og:site_name" content="DayByDay Consulting">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="https://www.daybydayconsulting.com/blog/img/klaviyo-flows-d2c-500k.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta name="twitter:image" content="https://www.daybydayconsulting.com/blog/img/klaviyo-flows-d2c-500k.png">
+  <meta property="article:published_time" content="2026-08-04T10:00:00+02:00">
+  <meta property="article:modified_time" content="2026-08-04T10:00:00+02:00">
+  <meta property="article:author" content="Pablo Santirso">
+  <meta property="article:section" content="Email Marketing">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Klaviyo: los 12 flows que tu D2C de 500K+ necesita">
+  <meta name="twitter:description" content="Tu Klaviyo tiene siete flows activos y solo uno genera dinero. El framework LIFT para ordenarlos y el error de timing que arruina el post-compra.">
+
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .article-body .direct-answer { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 0 0 2rem; }
+    .article-body .direct-answer p { margin: 0; font-size: 1.05rem; }
+    .article-body .summary-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .summary-block p { margin: 0 0 0.5rem; }
+    .article-body .pro-tip { background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .pro-tip p:first-child { color: var(--accent-color, #6366f1); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem; margin: 0 0 0.5rem; }
+    .article-body .pro-tip p:last-child { margin: 0; }
+    .article-body .cifra-que-abofetea { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); text-align: center; padding: 1.5rem 0; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .related-articles h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); }
+    .sources-block { margin-top: 3rem; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; }
+    .sources-block h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary); }
+    .sources-block p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .sources-block ul { list-style: none; padding: 0; margin: 0; }
+    .sources-block li { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+    .sources-block li:last-child { border-bottom: none; }
+    .sources-block a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .related-articles a { display: block; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .related-articles a:hover { border-color: var(--accent-color, #6366f1); }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+    .cta-block { margin-top: 3rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; text-align: center; }
+    .cta-block h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary); }
+    .cta-block p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .cta-block a { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-color, #6366f1); color: white; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+<a href="#main" class="skip-link">Saltar al contenido principal</a>
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Email Marketing</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Email Marketing</span>
+          <span class="reading-time">7 min de lectura</span>
+          <span class="article-date">2026-08-04</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Klaviyo: los 12 flows que tu D2C de 500K+ necesita</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Tu Klaviyo tiene siete flows activos y solo uno genera dinero. El framework LIFT para ordenarlos y el error de timing que arruina el post-compra.</p>
+        <div class="article-author">
+          <div class="author-avatar">PS</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirso · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media &amp; Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<blockquote>&quot;Mi email marketing no funciona.&quot;</blockquote>
+<p>Nos lo dijo el fundador de una marca de suplementos que facturaba 650.000€. Tenía Klaviyo contratado. Tenía siete flows activos, montados por una agencia 18 meses antes. Desde entonces nadie los había tocado.</p>
+<p>Bajamos el informe de ingresos por flow de los últimos 90 días. Uno funcionaba: el de carrito abandonado. Los otros seis enviaban correo genérico a segmentos sin filtrar. Su reacción al ver los números fue corta: &quot;Esto era dinero y no lo sabía.&quot;</p>
+<h2>Lo que vas a aprender</h2>
+<ol>
+<li>Cómo saber en diez minutos qué flows tuyos venden</li>
+<li>El framework LIFT y sus cuatro etapas</li>
+<li>Por qué el flow de recuperación es el que más pesa</li>
+<li>El error de timing que arruina el post-compra</li>
+</ol>
+<h2>Primero mides, después tocas</h2>
+<p>Cuando entramos en una cuenta nueva no empezamos optimizando. Empezamos midiendo.</p>
+<p>Abrimos Klaviyo. Exportamos ingresos por flow de los últimos 90 días. Cruzamos ese dato con GA4 en servidor. Y casi siempre sale el mismo cuadro: ocho o diez flows marcados como activos, uno o dos con ventas asociadas, el resto a cero.</p>
+<div class="direct-answer"><p>Un flow activo sin ingresos no está roto. Está mal segmentado o mal disparado. Envía correo a gente que no encaja, o lo envía en un momento en el que a esa gente no le sirve.</p></div>
+<p>El problema no es Klaviyo. Klaviyo hace su trabajo. El problema es que alguien copió una plantilla hace año y medio y después nadie volvió a mirar. Mientras tanto el fundador mira la tasa de apertura y se queda tranquilo.</p>
+<div class="cifra-que-abofetea">De los 3,2M€ generados a clientes en los últimos doce meses, una parte relevante vino de flows de retención y recuperación que las marcas no tenían activos. Clientes ya pagados, reactivados con secuencias de tres correos.</div>
+<h2>El framework LIFT: cuatro etapas, doce flows</h2>
+<p>No todos los flows valen lo mismo. Los ordenamos por etapa del ciclo de vida, porque cada etapa tiene un coste distinto detrás.</p>
+<p><strong>1. Captación.</strong></p>
+<p>Bienvenida, carrito abandonado y navegación abandonada. Son los que casi todo el mundo tiene. También los que suelen estar peor puestos: bienvenida sin oferta, carrito con el disparador a destiempo.</p>
+<p><strong>2. Primera compra.</strong></p>
+<p>Post-compra, petición de reseña y seguimiento de primera compra. Su trabajo es llevar al cliente de la compra uno a la compra dos. Sin esta etapa, el LTV se queda plano. Aquí ayuda tener resuelto <a href="/blog/calcular-ltv-real-cohorte" rel="noopener noreferrer">calcular el LTV por cohorte</a>.</p>
+<p><strong>3. Retención.</strong></p>
+<p>Club VIP, venta cruzada y recordatorio de reposición. Trabajan sobre gente que ya compró. El coste de adquisición está pagado, así que el euro invertido rinde más que en captación. Es la etapa que menos marcas de este tramo tienen montada.</p>
+<p><strong>4. Recuperación.</strong></p>
+<p>Reactivación de clientes con más de 60 días sin comprar. Cuando falta, es el hueco más grande de la cuenta.</p>
+<p>Las marcas que auditamos suelen cubrir la etapa uno y poco más. Las etapas tres y cuatro están vacías. Y ahí es donde está el dinero fácil.</p>
+<p>Los doce, con nombre y apellido, para que puedas contrastarlos con tu cuenta:</p>
+<ol>
+<li>Bienvenida con oferta de primera compra</li>
+<li>Carrito abandonado en tres pasos</li>
+<li>Navegación abandonada sobre producto visto</li>
+<li>Post-compra con instrucciones de uso</li>
+<li>Petición de reseña tras la entrega</li>
+<li>Seguimiento de primera compra con producto complementario</li>
+<li>Club VIP por gasto acumulado</li>
+<li>Venta cruzada por categoría comprada</li>
+<li>Recordatorio de reposición según consumo</li>
+<li>Reactivación de inactivos a 60 días</li>
+<li>Rescate de suscriptores que nunca compraron</li>
+<li>Aviso de vuelta a stock</li>
+</ol>
+<p>Si tienes menos de seis en marcha, el trabajo no es optimizar los que hay. Es montar los que faltan.</p>
+<h2>Por qué la recuperación pesa tanto</h2>
+<p>Captar a alguien nuevo cuesta dinero en publicidad. Recuperar a alguien que ya te compró, no. Ya conoce la marca, ya confió una vez, ya pagó su coste de adquisición. Volver a venderle es margen.</p>
+<p>Esta lógica encaja con la idea de <a href="/blog/recuperar-cac-30-dias-secuencia-ofertas-d2c" rel="noopener noreferrer">recuperar el CAC en 30 días</a>: si el cliente ya está pagado, cada compra posterior mejora la cuenta entera.</p>
+<p>Así lo montamos:</p>
+<p><strong>1. Entrada.</strong></p>
+<p>Clientes con última compra hace más de 60 días y sin actividad en web o correo en los últimos 30. Con 55 días no entra. Hace falta distancia para que el correo no moleste.</p>
+<p><strong>2. Secuencia.</strong></p>
+<p>Tres correos. El primero recuerda la marca con contenido, sin oferta. El segundo lleva un descuento del 15% con cupón propio. El tercero pone fecha límite. Si no responden a tres, no van a responder a seis.</p>
+<p><strong>3. Ritmo.</strong></p>
+<p>Día 1, día 5 y día 10. No movemos esas fechas porque llevamos tiempo viendo que funcionan.</p>
+<div class="pro-tip"><p>Pro tip</p><p>Casi todo el mundo mete la oferta en el primer correo. Nosotros la dejamos para el segundo, y solo si el primero no se abrió. Cambiar ese orden nos ha subido la conversión en las cuentas donde lo hemos probado. Regalar descuento a quien iba a volver igual es tirar margen.</p></div>
+<h2>El error de timing que vemos en tres de cada cuatro cuentas</h2>
+<p>Con una marca de alimentación montamos un flow de seguimiento de primera compra para vender producto complementario. Contenido correcto, segmento correcto. Y convertía fatal.</p>
+<p>El fallo era el disparador. El correo salía a las 24 horas del pago. El cliente todavía no tenía el pedido en casa. Nadie compra un segundo producto mientras espera el primero.</p>
+<p>Lo cambiamos a la confirmación de entrega. Mismo texto, mismo segmento, mismo descuento. El interés cambió de forma clara.</p>
+<p>Este error aparece una y otra vez. Post-compra que dispara antes de la entrega. Petición de reseña sobre un producto que el cliente aún no ha abierto. Venta cruzada antes de que haya probado lo que compró.</p>
+<h2>El error que nos enseñó a medir</h2>
+<p>Hubo una auditoría donde montamos ocho flows nuevos para una marca de cosmética. Contenido sólido, segmentación fina. A los tres meses el fundador nos dijo que aquello no funcionaba, y nosotros no teníamos con qué rebatirle.</p>
+<p>Solo mirábamos aperturas y clics. No teníamos atribución de ingresos. Cuando por fin conectamos <a href="/blog/server-side-tracking-shopify-conversions-api" rel="noopener noreferrer">la medición en servidor con Shopify</a>, resultó que cuatro de los ocho vendían bien. Llevábamos un trimestre creyendo que habíamos fallado.</p>
+<p>Nos equivocamos por medir mal, no por escribir mal. Desde entonces, la medición en servidor va antes que cualquier flow nuevo.</p>
+<p>Sin esa capa, cambias un asunto y no sabes si subió o bajó. Pruebas dos llamadas a la acción y no sabes cuál vendió. Y donde no hay dato, gana quien habla más alto en la reunión.</p>
+<h2>Acción: tus próximos 30 minutos</h2>
+<p>Abre Klaviyo y ve a Flows. Exporta ingresos por flow de los últimos 90 días. Marca los que estén a cero.</p>
+<p>Después responde a cuatro preguntas sobre tu cuenta:</p>
+<ol>
+<li>¿Cuántas de las cuatro etapas del ciclo tengo cubiertas?</li>
+<li>¿Tengo algo montado en retención y en recuperación?</li>
+<li>¿Mi post-compra dispara con la entrega o con el pago?</li>
+<li>¿Puedo ver ingresos por flow o solo aperturas?</li>
+</ol>
+<p>Media hora. Te da la foto real y el orden en el que atacar.</p>
+<p>En este post cubrimos cómo auditar tus flows, las cuatro etapas del framework LIFT, por qué la recuperación es la palanca más rentable y el error de timing que hunde el post-compra.</p>
+<p>La semana que viene montamos el flow de recuperación paso a paso, con los segmentos y los textos. Si prefieres que lo miremos sobre tu cuenta, tienes la auditoría de treinta minutos aquí abajo.</p>
+        </article>
+
+<section class="sources-block">
+  <h2>Fuentes y datos</h2>
+  <p>Cada cifra y afirmación de este artículo se sostiene en una fuente verificable. Las que respaldan este post:</p>
+  <ul>
+<li><a href="https://www.klaviyo.com/blog" rel="noopener noreferrer" target="_blank">Klaviyo Blog</a></li>
+<li><a href="https://www.shopify.com/blog/marketing-metrics" rel="noopener noreferrer" target="_blank">Shopify Blog · Marketing Metrics</a></li>
+<li><a href="https://www.thinkwithgoogle.com" rel="noopener noreferrer" target="_blank">Think with Google</a></li>
+  </ul>
+</section>
+
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+<div class="faq-item"><h3 class="faq-q">¿Cuántos flows necesita un D2C de más de 500K?</h3><p class="faq-a">Entre ocho y doce, repartidos en cuatro etapas: captación, primera compra, retención y recuperación. La mayor parte de las marcas de ese tamaño tienen tres o cuatro, y todos en la primera etapa.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué flow deja más dinero sobre la mesa cuando falta?</h3><p class="faq-a">El de recuperación de clientes inactivos. Actúa sobre gente cuyo coste de adquisición ya está pagado, así que cada venta que trae es margen casi limpio.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cómo mido el dinero real que genera cada flow?</h3><p class="faq-a">Conectando Klaviyo con GA4 en servidor. Si solo miras aperturas y clics, no sabes qué flow vende y cuál solo quema reputación de dominio.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuándo debe salir el email de post-compra?</h3><p class="faq-a">Después de la entrega, no después del pago. Un email de venta cruzada que llega mientras el cliente espera el pedido convierte poco. Cambia el disparador a la confirmación de entrega.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cada cuánto reviso los flows?</h3><p class="faq-a">Cada 90 días. El contenido se desgasta, los segmentos se ensucian y los disparadores dejan de encajar con el comportamiento real. Un flow sin tocar en seis meses rinde una fracción de lo que podría.</p></div>
+</section>
+
+        <div class="cta-block">
+          <h3>Auditoría gratuita de tus flows</h3>
+          <p>Miramos qué flows tienes activos, cuáles generan dinero y cuánto se queda por el camino. Treinta minutos.</p>
+          <a href="/contacto.html">Pedir auditoría de flows →</a>
+        </div>
+
+
+        <div class="cta-block" id="feedback" style="text-align:left; margin-top:2rem;">
+          <h3 style="font-size:1.05rem;">¿Te ha servido este artículo?</h3>
+          <p style="margin-bottom:1rem;">Tu respuesta mejora lo que escribimos. 10 segundos, sin registro.</p>
+          <form action="https://n8n.daybydayconsulting.com/webhook/blog-feedback" method="POST">
+            <input type="hidden" name="slug" value="klaviyo-flows-d2c-500k">
+            <input type="text" name="web" value="" style="display:none" tabindex="-1" autocomplete="off">
+            <div style="display:flex; gap:0.5rem; margin-bottom:0.75rem;">
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="si" required> Sí, útil</label>
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="no"> No mucho</label>
+            </div>
+            <textarea name="comment" rows="2" placeholder="¿Qué te ha faltado o sobrado? (opcional)" style="width:100%; padding:0.6rem; border-radius:8px; border:1px solid var(--border); background:var(--bg-card); color:var(--text-primary); margin-bottom:0.75rem;"></textarea>
+            <button type="submit" style="background:var(--accent-color, #6366f1); color:white; font-weight:600; padding:0.6rem 1.25rem; border-radius:8px; border:none; cursor:pointer;">Enviar feedback</button>
+          </form>
+        </div>
+        <div class="related-articles">
+          <h2>Artículos relacionados</h2>
+          <a href="/blog/calcular-ltv-real-cohorte">calcular el LTV por cohorte</a>
+          <a href="/blog/recuperar-cac-30-dias-secuencia-ofertas-d2c">recuperar el CAC en 30 días</a>
+          <a href="/blog/email-marketing-meta-ads-ltv-d2c">email y paid trabajando juntos</a>
+          <a href="/blog/server-side-tracking-shopify-conversions-api">medición en servidor con Shopify</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Klaviyo: los 12 flows que tu D2C de 500K+ necesita","description":"Tu Klaviyo tiene siete flows activos y solo uno genera dinero. El framework LIFT para ordenarlos y el error de timing que arruina el post-compra.","datePublished":"2026-08-04T10:00:00+02:00","dateModified":"2026-08-04T10:00:00+02:00","inLanguage":"es-ES","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/","jobTitle":"Growth Partner","worksFor":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"knowsAbout":["Meta Ads","Google Ads","TikTok Ads","paid media","ecommerce D2C","CRM y email marketing","analítica server-side","growth strategy"],"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/","logo":{"@type":"ImageObject","url":"https://www.daybydayconsulting.com/favicon.png"},"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/klaviyo-flows-d2c-500k"},"image":{"@type":"ImageObject","url":"https://www.daybydayconsulting.com/blog/img/klaviyo-flows-d2c-500k.png","width":1200,"height":675}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuántos flows necesita un D2C de más de 500K?","acceptedAnswer":{"@type":"Answer","text":"Entre ocho y doce, repartidos en cuatro etapas: captación, primera compra, retención y recuperación. La mayor parte de las marcas de ese tamaño tienen tres o cuatro, y todos en la primera etapa."}},{"@type":"Question","name":"¿Qué flow deja más dinero sobre la mesa cuando falta?","acceptedAnswer":{"@type":"Answer","text":"El de recuperación de clientes inactivos. Actúa sobre gente cuyo coste de adquisición ya está pagado, así que cada venta que trae es margen casi limpio."}},{"@type":"Question","name":"¿Cómo mido el dinero real que genera cada flow?","acceptedAnswer":{"@type":"Answer","text":"Conectando Klaviyo con GA4 en servidor. Si solo miras aperturas y clics, no sabes qué flow vende y cuál solo quema reputación de dominio."}},{"@type":"Question","name":"¿Cuándo debe salir el email de post-compra?","acceptedAnswer":{"@type":"Answer","text":"Después de la entrega, no después del pago. Un email de venta cruzada que llega mientras el cliente espera el pedido convierte poco. Cambia el disparador a la confirmación de entrega."}},{"@type":"Question","name":"¿Cada cuánto reviso los flows?","acceptedAnswer":{"@type":"Answer","text":"Cada 90 días. El contenido se desgasta, los segmentos se ensucian y los disparadores dejan de encajar con el comportamiento real. Un flow sin tocar en seis meses rinde una fracción de lo que podría."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.daybydayconsulting.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.daybydayconsulting.com/blog"},{"@type":"ListItem","position":3,"name":"Klaviyo: los 12 flows que tu D2C de 500K+ necesita","item":"https://www.daybydayconsulting.com/blog/klaviyo-flows-d2c-500k"}]}</script>
+</body>
+</html>

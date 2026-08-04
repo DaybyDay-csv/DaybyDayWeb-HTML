@@ -202,3 +202,6 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 <!-- auto:dashboard-unit-economics-tiempo-real-spreadsheet-miente -->
 - [Dashboard de unit economics: por qué tu Excel te miente](https://www.daybydayconsulting.com/blog/dashboard-unit-economics-tiempo-real-spreadsheet-miente.html) — Por qué los paneles de unit economics engañan al fundador D2C, las tres grietas que separan el dato de la plataforma del dinero real y un framework de cuatro cifras con alertas para decidir cuándo esc
 <!-- /auto -->
+<!-- auto:klaviyo-flows-d2c-500k -->
+- [Klaviyo: los 12 flows que tu D2C de 500K+ necesita](https://www.daybydayconsulting.com/blog/klaviyo-flows-d2c-500k.html) — Guía práctica sobre los doce flows de Klaviyo que necesita un D2C de más de 500K, ordenados con el framework LIFT en cuatro etapas, con el error de timing del post-compra y una auditoría ejecutable en
+<!-- /auto -->

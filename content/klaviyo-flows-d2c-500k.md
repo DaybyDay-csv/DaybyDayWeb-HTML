@@ -19,7 +19,7 @@ cta_href: "/contacto.html"
 cta_label: "Pedir auditoría de flows"
 llms_summary: "Guía práctica sobre los doce flows de Klaviyo que necesita un D2C de más de 500K, ordenados con el framework LIFT en cuatro etapas, con el error de timing del post-compra y una auditoría ejecutable en treinta minutos."
 tags: ["email marketing", "klaviyo", "automatización", "D2C", "ecommerce", "retención"]
-migration_state: "rendered"
+migration_state: "good"
 ---
 
 > "Mi email marketing no funciona."
