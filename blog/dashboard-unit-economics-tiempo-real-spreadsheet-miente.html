@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard de unit economics: por qué tu Excel te miente</title>
+  <meta name="description" content="Tu panel dice ROAS 3,5x y tu banco dice otra cosa. Las tres grietas que lo explican y el framework de cuatro cifras para cerrarlas.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="Pablo Santirso · DayByDay Consulting">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/blog/dashboard-unit-economics-tiempo-real-spreadsheet-miente">
+  <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/blog/dashboard-unit-economics-tiempo-real-spreadsheet-miente">
+  <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/blog/dashboard-unit-economics-tiempo-real-spreadsheet-miente">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly summary">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Dashboard de unit economics: por qué tu Excel te miente">
+  <meta property="og:description" content="Tu panel dice ROAS 3,5x y tu banco dice otra cosa. Las tres grietas que lo explican y el framework de cuatro cifras para cerrarlas.">
+  <meta property="og:url" content="https://www.daybydayconsulting.com/blog/dashboard-unit-economics-tiempo-real-spreadsheet-miente">
+  <meta property="og:site_name" content="DayByDay Consulting">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="https://www.daybydayconsulting.com/blog/img/dashboard-unit-economics-tiempo-real-spreadsheet-miente.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta name="twitter:image" content="https://www.daybydayconsulting.com/blog/img/dashboard-unit-economics-tiempo-real-spreadsheet-miente.png">
+  <meta property="article:published_time" content="2026-08-04T10:00:00+02:00">
+  <meta property="article:modified_time" content="2026-08-04T10:00:00+02:00">
+  <meta property="article:author" content="Pablo Santirso">
+  <meta property="article:section" content="Growth">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dashboard de unit economics: por qué tu Excel te miente">
+  <meta name="twitter:description" content="Tu panel dice ROAS 3,5x y tu banco dice otra cosa. Las tres grietas que lo explican y el framework de cuatro cifras para cerrarlas.">
+
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/sparkles.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    :root { --accent-color: #6366f1; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
+    .article-body strong { color: var(--text-primary); font-weight: 600; }
+    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .article-body .direct-answer { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 0 0 2rem; }
+    .article-body .direct-answer p { margin: 0; font-size: 1.05rem; }
+    .article-body .summary-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .summary-block p { margin: 0 0 0.5rem; }
+    .article-body .pro-tip { background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .pro-tip p:first-child { color: var(--accent-color, #6366f1); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem; margin: 0 0 0.5rem; }
+    .article-body .pro-tip p:last-child { margin: 0; }
+    .article-body .cifra-que-abofetea { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); text-align: center; padding: 1.5rem 0; }
+    .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
+    .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-info { font-size: 0.9rem; }
+    .author-info .name { color: var(--text-primary); font-weight: 600; }
+    .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .related-articles h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); }
+    .sources-block { margin-top: 3rem; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; }
+    .sources-block h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary); }
+    .sources-block p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .sources-block ul { list-style: none; padding: 0; margin: 0; }
+    .sources-block li { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+    .sources-block li:last-child { border-bottom: none; }
+    .sources-block a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .related-articles a { display: block; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .related-articles a:hover { border-color: var(--accent-color, #6366f1); }
+    .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+    .post-nav a:hover { color: var(--text-primary); }
+    .cta-block { margin-top: 3rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; text-align: center; }
+    .cta-block h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary); }
+    .cta-block p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .cta-block a { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-color, #6366f1); color: white; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+<a href="#main" class="skip-link">Saltar al contenido principal</a>
+<nav class="main-nav">
+    <a href="/" class="nav-logo">DayByDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+          <li><a href="/problema.html">Problema</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Cómo Trabajamos</button>
+            <div class="nav-dropdown-content small">
+              <div class="mega-section">
+                <div class="mega-section-title">Stack Tecnológico</div>
+                <div class="stack-grid">
+                  <a href="/tech/meta-ads.html">Meta Ads</a>
+                  <a href="/tech/google-ads-tech.html">Google Ads</a>
+                  <a href="/tech/shopify.html">Shopify</a>
+                  <a href="/tech/ga4.html">GA4</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-btn">Servicios</button>
+            <div class="nav-dropdown-content">
+              <div class="mega-grid">
+                <div class="mega-column"><h4>Paid Media</h4>
+                  <a href="/meta-ads.html">Meta Ads</a>
+                  <a href="/google-ads.html">Google Ads</a>
+                  <a href="/tiktok-ads.html">TikTok Ads</a>
+                  <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                </div>
+                <div class="mega-column"><h4>Growth Strategy</h4>
+                  <a href="/growth-strategy.html">Estrategia</a>
+                  <a href="/growth-partner.html">Growth Partner</a>
+                </div>
+                <div class="mega-column"><h4>Automation</h4>
+                  <a href="/automatizacion.html">Automatización</a>
+                  <a href="/tech/n8n.html">n8n</a>
+                  <a href="/tech/capi.html">CAPI</a>
+                </div>
+                <div class="mega-column"><h4>Analytics & AI</h4>
+                  <a href="/analytics.html">Analytics</a>
+                  <a href="/agentic-ai.html">Agentic AI</a>
+                  <a href="/tech/azure.html">Azure AI</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog.html">Blog</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div style="height:64px;"></div>
+
+<div class="page-wrapper">
+  <div class="bg-orbs">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-orb bg-orb-4"></div>
+  </div>
+  <div class="tech-dots"></div>
+  <div class="tech-grid"></div>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Inicio</a><span>/</span><a href="/blog.html">Blog</a><span>/</span><span style="color:var(--text-secondary)">Growth</span>
+    </div>
+
+    <section style="padding:4rem 0 2rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="article-meta">
+          <span class="category-badge">Growth</span>
+          <span class="reading-time">7 min de lectura</span>
+          <span class="article-date">2026-08-04</span>
+        </div>
+        <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Dashboard de unit economics: por qué tu Excel te miente</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Tu panel dice ROAS 3,5x y tu banco dice otra cosa. Las tres grietas que lo explican y el framework de cuatro cifras para cerrarlas.</p>
+        <div class="article-author">
+          <div class="author-avatar">PS</div>
+          <div class="author-info">
+            <div class="name">Pablo Santirso · DayByDay Consulting</div>
+            <div class="role">Growth Partner · Paid Media &amp; Estrategia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:2rem 0 4rem;">
+      <div style="max-width:720px;margin:0 auto;">
+        <article class="article-body">
+<blockquote>&quot;Mi panel dice 3,5x. Mi banco dice otra cosa.&quot;</blockquote>
+<p>Nos lo soltó el fundador de una marca de suplementos. Facturaba 640.000€ al año. Llevaba cinco meses escalando en Meta. Y cada mes cerraba con menos caja que el anterior.</p>
+<p>Su panel no mentía por malicia. Medía otra cosa distinta de la que él creía.</p>
+<h2>Lo que vas a aprender</h2>
+<ol>
+<li>Por qué el CAC que ves no es el CAC que pagas</li>
+<li>Las tres grietas que separan tu panel de tu banco</li>
+<li>El framework CUATRO CIFRAS para decidir si escalas</li>
+<li>Qué montar hoy en media hora</li>
+</ol>
+<h2>Tu plataforma te cuenta la mitad</h2>
+<p>Meta te dice que tu CPA es 12€. Ese número recoge lo que le pagaste a Meta.</p>
+<p>Nada más. No entra el creativo que te llevó tres horas. Ni la licencia de diseño. Ni los 45 minutos semanales que dedicas a tocar audiencias.</p>
+<div class="direct-answer"><p>El CAC real suma cuatro partidas: gasto en ads, creatividad amortizada, herramientas de marketing y horas de equipo. Si falta alguna, tu número sale bajo. Y con un número bajo escalas cosas que no aguantan.</p></div>
+<p>Después de iOS 14 el problema creció. Parte de las ventas dejó de atribuirse. Tú sigues leyendo el mismo panel. El panel ya no ve lo mismo.</p>
+<div class="cifra-que-abofetea">264.712€ de inversión publicitaria gestionada con reconciliación entre plataforma y banco. En las cuentas que llevamos, el hueco entre el CAC reportado y el CAC real ha llegado a superar el 30% en un mes suelto. Eso no es ruido de medición.</div>
+<p>Nos pasó a nosotros. Durante meses optimizamos contra el ROAS que muestra Meta. Un día cruzamos ese dato con los extractos del banco. El CAC real iba un 40% por encima del que usábamos para decidir. Habíamos escalado una cuenta que ya no daba. El error nos costó dos meses de margen.</p>
+<p>Desde entonces no aprobamos una subida de presupuesto sin el CAC ajustado delante.</p>
+<h2>Las tres grietas</h2>
+<p>Cuando montamos un panel unificado, casi siempre aparecen los mismos tres huecos.</p>
+<p><strong>1. Coste.</strong></p>
+<p>La plataforma reporta una cifra de gasto. El extracto bancario trae otra mayor. Dentro van comisiones del método de pago, diferencias de cambio y ajustes de facturación. Nada de eso llega al panel.</p>
+<p><strong>2. Atribución.</strong></p>
+<p>El píxel reconoce una parte de los pedidos. El ERP registra bastantes más cobrados. El resto son ventas reales sin conversión asociada. Aquí es donde pesa <a href="/blog/atribucion-post-ios-14-roas-mentira" rel="noopener noreferrer">la atribución después de iOS 14</a>.</p>
+<p><strong>3. Tiempo.</strong></p>
+<p>La plataforma imputa por fecha de clic. Tu banco imputa por fecha de cobro. Con envíos de cuatro o cinco días, el desfase infla una semana y desinfla la siguiente.</p>
+<p>El caso típico es una campaña que arranca un jueves. Los clics se cuentan ese jueves. El cobro entra el lunes siguiente. Si cierras la semana el domingo, esa campaña aparece con coste y sin ingreso. El lunes aparece con ingreso y sin coste. Ninguna de las dos fotos es cierta.</p>
+<p>Sin cerrar las tres grietas, tu panel llega tarde. Y un panel que llega tarde a una cuenta que gasta a diario vale poco.</p>
+<h2>Por qué el ROAS medio te esconde el problema</h2>
+<p>Hay un número que casi todo el mundo mira y que tapa más de lo que enseña: el ROAS agregado de la cuenta.</p>
+<p>Imagina dos campañas. Una devuelve 6x sobre 2.000€. La otra devuelve 1,4x sobre 8.000€. La media te sale por encima de 2x y parece que la cuenta va bien. La realidad es que el 80% de tu dinero está en la campaña que pierde.</p>
+<p>Nos ha pasado revisando cuentas heredadas de otra agencia. El panel mostraba un solo número verde en grande. Al abrirlo por campaña, dos de siete sostenían el resultado y cinco lo destruían. Nadie había mirado por debajo del agregado en meses.</p>
+<p>La regla que aplicamos: ningún número agregado decide un presupuesto. Antes hay que poder abrirlo por canal, por campaña y por cohorte de entrada. Si tu panel no deja abrirlo, tu panel es un adorno.</p>
+<h2>El framework CUATRO CIFRAS</h2>
+<p>No necesitas cuarenta métricas. Necesitas cuatro números que te digan cuándo pisar y cuándo levantar el pie.</p>
+<p><strong>1. CAC ajustado.</strong></p>
+<p>Gasto en ads del periodo, más licencias repartidas entre clientes nuevos, más horas de equipo valoradas a coste. Divide entre clientes nuevos. Si sube más de un 15% sobre tu media de cuatro semanas, para y mira antes de gastar más.</p>
+<p><strong>2. LTV a 90 días.</strong></p>
+<p>Olvida el LTV de por vida si llevas menos de seis meses operando. Mira el ingreso neto de los primeros 90 días. Descuenta devoluciones y bajas. Si una cohorte cae más de un 10% frente a la anterior, tu base se está deteriorando aunque la facturación suba.</p>
+<p><strong>3. Margen por canal.</strong></p>
+<p>Por cada pedido que entra desde Meta, ¿qué queda tras producto, envío y su parte de devoluciones? Repite el cálculo para Google, TikTok y email. Aquí te ayuda saber tu <a href="/blog/margen-contribucion-real-por-pedido-d2c" rel="noopener noreferrer">margen de contribución real por pedido</a>.</p>
+<p><strong>4. Ratio LTV:CAC.</strong></p>
+<p>Divide el LTV a 90 días entre el CAC ajustado. Por debajo de 3:1 el crecimiento se sostiene sobre la caja, no sobre el margen. Si no tienes este número a mano, no sabes si escalar te acerca o te aleja.</p>
+<p>Para las cifras 2 y 3 conviene tener resuelto antes <a href="/blog/calcular-ltv-real-cohorte" rel="noopener noreferrer">calcular el LTV por cohorte</a>. Sin cohortes, el LTV medio te esconde justo lo que necesitas ver.</p>
+<h2>Cómo hacer que se alimente solo</h2>
+<p>El panel sirve si los datos entran sin que nadie los pegue a mano.</p>
+<p>GA4 en servidor. El evento no depende del navegador ni de los bloqueadores. Si el navegador falla, el servidor ya tiene el registro.</p>
+<p>Conversions API de Meta. Conexión servidor a servidor, sin cookies de terceros. La compra llega con más probabilidad de quedar registrada.</p>
+<p>Un flujo semanal en n8n que cruce tres pares: coste de plataforma contra coste de banco, conversiones contra pedidos cobrados en el ERP, fecha de clic contra fecha de cobro. De ahí sale un factor de corrección. Ese factor se aplica antes de que el número llegue a tu pantalla.</p>
+<div class="pro-tip"><p>Pro tip</p><p>Casi todo el mundo revisa unit economics el día 1 del mes. Es conducir mirando el retrovisor. Pon alertas sobre las cuatro cifras y que salten solas al cruzar el umbral. Pasas de enterarte en treinta días a enterarte en tres.</p></div>
+<h2>Acción: tus próximos 30 minutos</h2>
+<p>Abre una hoja nueva. Cuatro columnas:</p>
+<ol>
+<li>CAC que reporta la plataforma</li>
+<li>Coste adicional (licencias más horas de equipo)</li>
+<li>CAC real (columna 1 más columna 2)</li>
+<li>Diferencia en porcentaje</li>
+</ol>
+<p>Rellénalo solo con la última semana. Si la diferencia pasa del 15%, ya tienes la primera señal de que decides con un número que no existe.</p>
+<p>Después configura una alerta sobre el CAC real. Que te avise cuando suba un 15% sobre la media de las últimas cuatro semanas. Con eso ya tienes la base. El resto es ir añadiendo cifras.</p>
+<p>En este post cubrimos por qué tu panel se separa de tu banco, las tres grietas que lo provocan y las cuatro cifras que necesitas para decidir con criterio.</p>
+<p>La semana que viene bajamos el framework a cada canal por separado. Meta, Google y email tienen ritmos distintos y umbrales distintos. Si prefieres verlo sobre tu cuenta concreta, tienes la auditoría de 30 minutos aquí abajo.</p>
+        </article>
+
+<section class="sources-block">
+  <h2>Fuentes y datos</h2>
+  <p>Cada cifra y afirmación de este artículo se sostiene en una fuente verificable. Las que respaldan este post:</p>
+  <ul>
+<li><a href="https://developers.facebook.com/docs/marketing-api/conversions-api" rel="noopener noreferrer" target="_blank">Meta Conversions API docs</a></li>
+<li><a href="https://www.shopify.com/blog/marketing-metrics" rel="noopener noreferrer" target="_blank">Shopify Blog · Marketing Metrics</a></li>
+<li><a href="https://www.thinkwithgoogle.com" rel="noopener noreferrer" target="_blank">Think with Google</a></li>
+  </ul>
+</section>
+
+<section class="faq-section">
+  <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
+<div class="faq-item"><h3 class="faq-q">¿Cómo calculo mi CAC real si tengo los datos repartidos?</h3><p class="faq-a">Suma el gasto en ads, la creatividad amortizada, las licencias de marketing y las horas del equipo. Divide entre clientes nuevos del periodo. Si solo cuentas lo que pagas a la plataforma, tu CAC sale más bajo de lo que es.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuánto pierdo por decidir con datos viejos?</h3><p class="faq-a">Si revisas unit economics el día 1 de cada mes, puedes pasar cuatro semanas escalando una cuenta que ya no es rentable. El daño no está en el mes malo. Está en las semanas que tardas en verlo.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Qué cifras necesito para decidir si escalo?</h3><p class="faq-a">Cuatro: CAC ajustado, LTV a 90 días, margen de contribución por canal y ratio LTV:CAC. Con una alerta automática cuando cualquiera se salga de su umbral histórico.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Por qué mi panel y mi banco no cuadran?</h3><p class="faq-a">Por tres grietas: el coste que reporta la plataforma no es el que sale de tu cuenta, la atribución se perdió tras iOS 14, y la plataforma imputa por fecha de clic mientras tu banco imputa por fecha de cobro.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cada cuánto debo actualizar estas cifras?</h3><p class="faq-a">Semanal como mínimo. En D2C el algoritmo cambia de semana a semana. Trabajar con una foto de hace treinta días es decidir a ciegas.</p></div>
+</section>
+
+        <div class="cta-block">
+          <h3>Auditoría de 30 minutos sobre tus cifras</h3>
+          <p>Miramos qué mides hoy, cuánto retraso llevas y qué cambiar primero. Sin compromiso.</p>
+          <a href="/contacto.html">Reservar auditoría →</a>
+        </div>
+
+
+        <div class="cta-block" id="feedback" style="text-align:left; margin-top:2rem;">
+          <h3 style="font-size:1.05rem;">¿Te ha servido este artículo?</h3>
+          <p style="margin-bottom:1rem;">Tu respuesta mejora lo que escribimos. 10 segundos, sin registro.</p>
+          <form action="https://n8n.daybydayconsulting.com/webhook/blog-feedback" method="POST">
+            <input type="hidden" name="slug" value="dashboard-unit-economics-tiempo-real-spreadsheet-miente">
+            <input type="text" name="web" value="" style="display:none" tabindex="-1" autocomplete="off">
+            <div style="display:flex; gap:0.5rem; margin-bottom:0.75rem;">
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="si" required> Sí, útil</label>
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="no"> No mucho</label>
+            </div>
+            <textarea name="comment" rows="2" placeholder="¿Qué te ha faltado o sobrado? (opcional)" style="width:100%; padding:0.6rem; border-radius:8px; border:1px solid var(--border); background:var(--bg-card); color:var(--text-primary); margin-bottom:0.75rem;"></textarea>
+            <button type="submit" style="background:var(--accent-color, #6366f1); color:white; font-weight:600; padding:0.6rem 1.25rem; border-radius:8px; border:none; cursor:pointer;">Enviar feedback</button>
+          </form>
+        </div>
+        <div class="related-articles">
+          <h2>Artículos relacionados</h2>
+          <a href="/blog/atribucion-post-ios-14-roas-mentira">la atribución después de iOS 14</a>
+          <a href="/blog/margen-contribucion-real-por-pedido-d2c">margen de contribución real por pedido</a>
+          <a href="/blog/calcular-ltv-real-cohorte">calcular el LTV por cohorte</a>
+          <a href="/blog/dashboard-paid-media-founder-d2c">el panel que mira un fundador</a>
+        </div>
+
+        <div class="post-nav">
+          <a href="/blog.html">← Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="footer">
+    <a href="/">Inicio</a>
+    <a href="/servicios.html">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <p>© 2026 DayByDay Consulting</p>
+</footer>
+<script src="/js/main.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Dashboard de unit economics: por qué tu Excel te miente","description":"Tu panel dice ROAS 3,5x y tu banco dice otra cosa. Las tres grietas que lo explican y el framework de cuatro cifras para cerrarlas.","datePublished":"2026-08-04T10:00:00+02:00","dateModified":"2026-08-04T10:00:00+02:00","inLanguage":"es-ES","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/","jobTitle":"Growth Partner","worksFor":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"knowsAbout":["Meta Ads","Google Ads","TikTok Ads","paid media","ecommerce D2C","CRM y email marketing","analítica server-side","growth strategy"],"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/","logo":{"@type":"ImageObject","url":"https://www.daybydayconsulting.com/favicon.png"},"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/dashboard-unit-economics-tiempo-real-spreadsheet-miente"},"image":{"@type":"ImageObject","url":"https://www.daybydayconsulting.com/blog/img/dashboard-unit-economics-tiempo-real-spreadsheet-miente.png","width":1200,"height":675}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cómo calculo mi CAC real si tengo los datos repartidos?","acceptedAnswer":{"@type":"Answer","text":"Suma el gasto en ads, la creatividad amortizada, las licencias de marketing y las horas del equipo. Divide entre clientes nuevos del periodo. Si solo cuentas lo que pagas a la plataforma, tu CAC sale más bajo de lo que es."}},{"@type":"Question","name":"¿Cuánto pierdo por decidir con datos viejos?","acceptedAnswer":{"@type":"Answer","text":"Si revisas unit economics el día 1 de cada mes, puedes pasar cuatro semanas escalando una cuenta que ya no es rentable. El daño no está en el mes malo. Está en las semanas que tardas en verlo."}},{"@type":"Question","name":"¿Qué cifras necesito para decidir si escalo?","acceptedAnswer":{"@type":"Answer","text":"Cuatro: CAC ajustado, LTV a 90 días, margen de contribución por canal y ratio LTV:CAC. Con una alerta automática cuando cualquiera se salga de su umbral histórico."}},{"@type":"Question","name":"¿Por qué mi panel y mi banco no cuadran?","acceptedAnswer":{"@type":"Answer","text":"Por tres grietas: el coste que reporta la plataforma no es el que sale de tu cuenta, la atribución se perdió tras iOS 14, y la plataforma imputa por fecha de clic mientras tu banco imputa por fecha de cobro."}},{"@type":"Question","name":"¿Cada cuánto debo actualizar estas cifras?","acceptedAnswer":{"@type":"Answer","text":"Semanal como mínimo. En D2C el algoritmo cambia de semana a semana. Trabajar con una foto de hace treinta días es decidir a ciegas."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.daybydayconsulting.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.daybydayconsulting.com/blog"},{"@type":"ListItem","position":3,"name":"Dashboard de unit economics: por qué tu Excel te miente","item":"https://www.daybydayconsulting.com/blog/dashboard-unit-economics-tiempo-real-spreadsheet-miente"}]}</script>
+</body>
+</html>

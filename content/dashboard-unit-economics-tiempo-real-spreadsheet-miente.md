@@ -19,7 +19,7 @@ cta_href: "/contacto.html"
 cta_label: "Reservar auditoría"
 llms_summary: "Por qué los paneles de unit economics engañan al fundador D2C, las tres grietas que separan el dato de la plataforma del dinero real y un framework de cuatro cifras con alertas para decidir cuándo escalar."
 tags: ["unit economics", "dashboard", "D2C", "CAC", "LTV", "analytics"]
-migration_state: "rendered"
+migration_state: "good"
 ---
 
 > "Mi panel dice 3,5x. Mi banco dice otra cosa."
