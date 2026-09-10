@@ -12,3 +12,6 @@ __pycache__/
 !.env.example
 logs/
 node_modules/
+
+# macOS
+.DS_Store

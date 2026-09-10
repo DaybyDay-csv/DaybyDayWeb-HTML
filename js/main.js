@@ -6,16 +6,37 @@
   }
 })();
 
+var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
 document.addEventListener('DOMContentLoaded', function() {
   var toggles = document.querySelectorAll('.theme-toggle-btn');
+  var themeAnimTimer = null;
   toggles.forEach(function(toggle) {
     toggle.addEventListener('click', function() {
-      var current = document.documentElement.getAttribute('data-theme') || 'dark';
+      var root = document.documentElement;
+      var current = root.getAttribute('data-theme') || 'dark';
       var next = current === 'light' ? 'dark' : 'light';
-      document.documentElement.setAttribute('data-theme', next);
+      // Cross-fade del cambio de tema: sin salto de brillo abrupto
+      root.classList.add('theme-anim');
+      root.setAttribute('data-theme', next);
       localStorage.setItem('theme', next);
+      clearTimeout(themeAnimTimer);
+      themeAnimTimer = setTimeout(function() {
+        root.classList.remove('theme-anim');
+      }, 350);
     });
   });
+
+  // Scroll-edge: la línea fina del nav solo aparece cuando hay contenido
+  // pasando por debajo (no un divisor duro permanente)
+  var nav = document.querySelector('.main-nav');
+  if (nav) {
+    var onNavScroll = function() {
+      nav.classList.toggle('is-scrolled', window.scrollY > 4);
+    };
+    onNavScroll();
+    window.addEventListener('scroll', onNavScroll, { passive: true });
+  }
 
   // Megamenu: hover is CSS-driven (.nav-dropdown:hover .nav-dropdown-content),
   // but touch devices need a click handler. We add an .is-open class on tap
@@ -79,19 +100,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }, observerOptions);
 
-  var animatedEls = document.querySelectorAll('.scroll-animate, .story-section, .fade-left, .fade-right, .scale-in');
+  var animatedEls = document.querySelectorAll('.scroll-animate, .story-section, .fade-left, .fade-right, .scale-in, .reveal');
   animatedEls.forEach(function(el) {
     observer.observe(el);
   });
 })();
 
-// Smooth scroll for anchor links
+// Smooth scroll for anchor links (respeta prefers-reduced-motion)
 document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
     var target = document.querySelector(this.getAttribute('href'));
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      target.scrollIntoView({
+        behavior: prefersReducedMotion.matches ? 'auto' : 'smooth',
+        block: 'start'
+      });
     }
   });
 });
