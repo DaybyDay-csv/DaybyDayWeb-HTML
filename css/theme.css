@@ -286,8 +286,10 @@
 
 /* Parallax Smooth Scrolling */
 html {
-  scroll-behavior: smooth;
   scroll-padding-top: 80px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
 }
 
 /* Smooth scroll for anchor links */

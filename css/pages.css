@@ -124,7 +124,7 @@
   font-weight: 600;
   font-size: 0.9375rem;
   text-decoration: none;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s var(--ease-spring);
   border: none;
   cursor: pointer;
   letter-spacing: -0.01em;
@@ -161,7 +161,7 @@
   font-weight: 500;
   font-size: 0.9375rem;
   text-decoration: none;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s var(--ease-spring);
   letter-spacing: -0.01em;
 }
 
@@ -188,7 +188,7 @@
   border: 1px solid var(--border);
   border-radius: 14px;
   min-width: 220px;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.25s var(--ease-spring);
   backdrop-filter: blur(8px);
 }
 
@@ -287,7 +287,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.875rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s var(--ease-spring);
   overflow: hidden;
   backdrop-filter: blur(12px);
 }
@@ -378,7 +378,7 @@
   border-radius: 14px;
   padding: 1.75rem 1.25rem;
   text-align: center;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.25s var(--ease-spring);
   overflow: hidden;
 }
 
@@ -435,7 +435,7 @@
   text-decoration: none;
   font-size: 0.875rem;
   font-weight: 500;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s var(--ease-spring);
 }
 
 .stack-pill:hover {
@@ -465,7 +465,7 @@
   border: 1px solid var(--border);
   border-radius: 14px;
   text-decoration: none;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.25s var(--ease-spring);
 }
 
 .related-card:hover {
@@ -649,7 +649,7 @@
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 1.5rem 1.5rem 1.5rem 1.75rem;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.25s var(--ease-spring);
 }
 
 .pillar-card::before {
@@ -781,7 +781,7 @@
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 14px;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.25s var(--ease-spring);
 }
 
 .process-step:hover {
@@ -834,7 +834,7 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s var(--ease-spring);
   overflow: hidden;
 }
 
@@ -1602,7 +1602,7 @@
   border: 1px solid var(--border);
   border-radius: 12px;
   text-decoration: none;
-  transition: border-color 0.18s ease, transform 0.18s ease;
+  transition: border-color 0.22s var(--ease-out), transform 0.22s var(--ease-out);
 }
 
 .tile-nav-item:hover {
@@ -1698,7 +1698,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  transition: border-color 0.2s var(--ease-out), transform 0.2s var(--ease-out);
 }
 .usecase:hover {
   border-color: var(--border-hover);
@@ -1777,4 +1777,151 @@
   color: var(--text-primary);
   transform: none;
   box-shadow: none;
+}
+
+/* ───────────────────────────────────────────────
+   apple-design · capa de movimiento y craft
+   (Designing Fluid Interfaces, WWDC — aplicado a web estática)
+   ─────────────────────────────────────────────── */
+
+:root {
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);      /* salida rápida, aterrizaje suave */
+  --ease-spring: cubic-bezier(0.32, 0.72, 0, 1);  /* asentamiento tipo spring, sin rebote */
+}
+
+/* 1 · Response: feedback al PULSAR, no al soltar */
+.cta-primary:active,
+.cta-secondary:active,
+.nav-cta:active,
+.stack-pill:active,
+.area-stack a:active,
+.df-form button:active,
+.lang-switch:active {
+  transform: scale(0.97);
+  transition-duration: 0.08s;
+}
+
+.tile-nav-item:active {
+  transform: scale(0.99);
+  transition-duration: 0.08s;
+}
+
+.faq-item summary:active { opacity: 0.7; transition: opacity 0.08s; }
+
+/* Craft: anillo de foco visible y consistente para teclado */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 28%, transparent);
+}
+
+/* 15 · Tipografía: tracking específico por tamaño, sin viudas */
+h1, h2, h3, .plain-h2, .area-title { text-wrap: balance; }
+p, .lead, .case-desc { text-wrap: pretty; }
+
+/* 7 · Consistencia espacial: el dropdown nace de su trigger */
+.nav-dropdown-content { transform-origin: top center; }
+
+/* 12 · Scroll-edge en vez de divisor duro: la línea fina solo
+   aparece cuando el contenido pasa por debajo del nav flotante */
+.main-nav {
+  border-bottom-color: transparent;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.main-nav.is-scrolled { border-bottom-color: var(--border); }
+
+/* 3 · Menú móvil: aparece y desaparece por el mismo camino (desde el nav) */
+.mobile-nav {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-12px);
+  pointer-events: none;
+  transition: opacity 0.25s var(--ease-out), transform 0.25s var(--ease-out),
+              visibility 0s linear 0.25s;
+}
+.mobile-nav.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition: opacity 0.25s var(--ease-out), transform 0.25s var(--ease-out);
+}
+
+/* 14 · Transición de tema: cross-fade, sin salto de brillo abrupto */
+html.theme-anim body { transition: background-color 0.3s ease, color 0.3s ease; }
+html.theme-anim .main-nav,
+html.theme-anim .footer,
+html.theme-anim .cta-box,
+html.theme-anim .testimonial,
+html.theme-anim .partner-card,
+html.theme-anim .case-card,
+html.theme-anim .tile-nav-item,
+html.theme-anim .anchor-stat,
+html.theme-anim .faq-item,
+html.theme-anim .df-form,
+html.theme-anim .usecase,
+html.theme-anim .area-stack a,
+html.theme-anim .stack-pill {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* 14 · Reduced motion: cross-fade o nada, nunca slide/spring */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal, .scroll-animate, .story-section,
+  .fade-left, .fade-right, .scale-in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* 14 · Reduced transparency: superficies opacas, sin blur */
+@media (prefers-reduced-transparency: reduce) {
+  .main-nav,
+  [data-theme="light"] .main-nav,
+  [data-theme="dark"] .main-nav {
+    background: var(--bg-primary);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  .nav-dropdown-content {
+    background: var(--bg-card);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  .mobile-nav {
+    background: var(--bg-primary);
+    backdrop-filter: none;
+  }
+}
+
+/* 14 · Más contraste: fondos casi sólidos y bordes definidos */
+@media (prefers-contrast: more) {
+  [data-theme="dark"] {
+    --border: rgba(255, 255, 255, 0.38);
+    --border-hover: rgba(255, 255, 255, 0.65);
+    --text-secondary: #d4d4dc;
+    --text-muted: #9d9daa;
+  }
+  [data-theme="light"] {
+    --border: rgba(10, 10, 10, 0.42);
+    --border-hover: rgba(10, 10, 10, 0.7);
+    --text-muted: #6d6d6d;
+  }
+  .main-nav,
+  [data-theme="light"] .main-nav,
+  [data-theme="dark"] .main-nav {
+    background: var(--bg-primary);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
 }
