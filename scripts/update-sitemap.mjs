@@ -105,6 +105,25 @@ async function buildSitemap() {
     lines.push(urlEntry(`/blog/${slug}`, priority, 'monthly', lm));
   }
 
+  // Tools (lead magnets): landings indexables. Las paginas /gracias.html van noindex y se excluyen.
+  const toolsDir = path.join(ROOT, 'tools');
+  if (existsSync(toolsDir)) {
+    const toolDirs = (await readdir(toolsDir, { withFileTypes: true }))
+      .filter(d => d.isDirectory())
+      .map(d => d.name)
+      .sort();
+    for (const t of toolDirs) {
+      const fp = path.join(toolsDir, t, 'index.html');
+      if (!existsSync(fp)) continue;
+      const lm = await lastmodFor(fp);
+      lines.push(urlEntry(`/tools/${t}/`, 0.75, 'monthly', lm));
+    }
+    if (existsSync(path.join(toolsDir, 'index.html'))) {
+      const lm = await lastmodFor(path.join(toolsDir, 'index.html'));
+      lines.push(urlEntry('/tools/', 0.8, 'weekly', lm));
+    }
+  }
+
   lines.push('</urlset>');
   return lines.join('\n');
 }

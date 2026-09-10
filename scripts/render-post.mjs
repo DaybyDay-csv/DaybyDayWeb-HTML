@@ -2,7 +2,7 @@
 // render-post.mjs — converts content/<slug>.md to blog/<slug>.html using templates/post.html
 // Pure node, no React, no JSX, no .map().
 
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { access, readFile, writeFile, mkdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -200,7 +200,7 @@ function buildSourcesBlock(sources) {
   return `<section class="sources-block">\n  <h2>Fuentes y datos</h2>\n  <p>Cada cifra y afirmación de este artículo se sostiene en una fuente verificable. Las que respaldan este post:</p>\n  <ul>\n${items}\n  </ul>\n</section>`;
 }
 
-function buildSchema(fm, faq) {
+function buildSchema(fm, faq, heroUrl) {
   const canonicalNoExt = String(fm.canonical || '').replace(/\.html$/, '').replace(/\/+$/, '');
   const article = {
     '@context': 'https://schema.org',
@@ -208,22 +208,43 @@ function buildSchema(fm, faq) {
     headline: fm.title,
     description: fm.meta_desc,
     datePublished: fm.published_at,
-    dateModified: fm.published_at,
+    dateModified: fm.date_modified || fm.published_at,
+    inLanguage: 'es-ES',
+    // E-E-A-T: autor identificable con experiencia demostrable (Google AI optimization guide, 2026-05)
     author: {
       '@type': 'Person',
       name: 'Pablo Santirso',
-      url: 'https://www.daybydayconsulting.com/'
+      url: 'https://www.daybydayconsulting.com/',
+      jobTitle: 'Growth Partner',
+      worksFor: {
+        '@type': 'Organization',
+        name: 'DayByDay Consulting',
+        url: 'https://www.daybydayconsulting.com/'
+      },
+      knowsAbout: [
+        'Meta Ads', 'Google Ads', 'TikTok Ads', 'paid media',
+        'ecommerce D2C', 'CRM y email marketing', 'analítica server-side', 'growth strategy'
+      ],
+      sameAs: ['https://www.linkedin.com/company/daybydayconsulting/']
     },
     publisher: {
       '@type': 'Organization',
       name: 'DayByDay Consulting',
-      url: 'https://www.daybydayconsulting.com/'
+      url: 'https://www.daybydayconsulting.com/',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.daybydayconsulting.com/favicon.png'
+      },
+      sameAs: ['https://www.linkedin.com/company/daybydayconsulting/']
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': canonicalNoExt
     }
   };
+  if (heroUrl) {
+    article.image = { '@type': 'ImageObject', url: heroUrl, width: 1200, height: 675 };
+  }
   const faqSchema = faq && faq.length ? {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -236,7 +257,17 @@ function buildSchema(fm, faq) {
       }
     }))
   } : null;
-  const ld = [article, faqSchema].filter(Boolean).map(o =>
+  // Breadcrumbs: ayudan a Google (y a los agentes de navegador) a entender la jerarquía del sitio
+  const breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://www.daybydayconsulting.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.daybydayconsulting.com/blog' },
+      { '@type': 'ListItem', position: 3, name: fm.title, item: canonicalNoExt }
+    ]
+  };
+  const ld = [article, faqSchema, breadcrumb].filter(Boolean).map(o =>
     `<script type="application/ld+json">${JSON.stringify(o)}</script>`
   ).join('\n');
   return ld;
@@ -256,13 +287,22 @@ async function renderPost(slug) {
   const faqBlock = buildFaqBlock(fm.faq);
   const relatedLinks = buildRelatedLinks(fm.internal_links);
   const sourcesBlock = buildSourcesBlock(fm.sources);
-  const schema = buildSchema(fm, fm.faq);
+
+  // Hero image (generada por scripts/generate-hero.mjs). Google: las respuestas con IA incluyen imagenes.
+  const heroPath = path.join(ROOT, 'blog', 'img', `${slug}.png`);
+  let ogImageBlock = '';
+  let heroUrl = null;
+  try { await access(heroPath); heroUrl = `https://www.daybydayconsulting.com/blog/img/${slug}.png`; } catch {}
+  if (heroUrl) {
+    ogImageBlock = `  <meta property="og:image" content="${heroUrl}">\n  <meta property="og:image:width" content="1200">\n  <meta property="og:image:height" content="675">\n  <meta name="twitter:image" content="${heroUrl}">`;
+  }
+
+  const schema = buildSchema(fm, fm.faq, heroUrl);
 
   const wordCount = body.replace(/```[\s\S]*?```/g, ' ').split(/\s+/).filter(Boolean).length;
 
   let canonical = String(fm.canonical || `https://www.daybydayconsulting.com/blog/${slug}.html`);
   canonical = canonical.replace(/\.html$/, '').replace(/\/+$/, '');
-
   const replacements = {
     '{{TITLE}}': String(fm.title || ''),
     '{{META_DESC}}': String(fm.meta_desc || ''),
@@ -277,6 +317,8 @@ async function renderPost(slug) {
     '{{SOURCES_BLOCK}}': sourcesBlock,
     '{{RELATED_LINKS}}': relatedLinks,
     '{{SCHEMA}}': schema,
+    '{{SLUG}}': slug,
+    '{{OG_IMAGE_BLOCK}}': ogImageBlock,
     '{{CTA_TITLE}}': String(fm.cta_title || '¿Quieres aplicar esto en tu negocio?'),
     '{{CTA_DESC}}': String(fm.cta_desc || 'En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.'),
     '{{CTA_HREF}}': String(fm.cta_href || '/contacto.html'),
