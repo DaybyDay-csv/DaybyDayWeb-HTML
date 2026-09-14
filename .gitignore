@@ -15,3 +15,10 @@ node_modules/
 
 # macOS
 .DS_Store
+
+# skills CLI (agent tooling, no deploy)
+.agents/
+.claude/
+.hermes/
+agent/
+skills-lock.json
