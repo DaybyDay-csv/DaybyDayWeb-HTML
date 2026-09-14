@@ -1,0 +1,52 @@
+# DaybyDay Consulting — /en retirado (auditoría UX-2 / SE-4, §7.13)
+# La traducción fantasma (cuerpo ES bajo lang="en", enlaces a posts EN inexistentes)
+# se retira: todo /en redirige 301 a su equivalente ES.
+# Formato Cloudflare: [origen] [destino] [código] — el orden importa (estáticas antes que dinámicas).
+# Nota html_handling (auto-trailing-slash, default): .html→extensionless ya hace 307 solo
+# en páginas ES vivas; los destinos aquí son canónicos (extensionless, /blog/ para el
+# directorio) para evitar cadenas 301→307.
+
+# Idioma raíz
+/en / 301
+/en/ / 301
+/en/index.html / 301
+
+# 15 páginas con equivalente ES — dos formas cada una (.html y extensionless)
+/en/agentic-ai.html /agentic-ai 301
+/en/agentic-ai /agentic-ai 301
+/en/analytics.html /analytics 301
+/en/analytics /analytics 301
+/en/automatizacion.html /automatizacion 301
+/en/automatizacion /automatizacion 301
+/en/blog.html /blog/ 301
+/en/blog /blog/ 301
+/en/como-trabajamos.html /como-trabajamos 301
+/en/como-trabajamos /como-trabajamos 301
+/en/contacto.html /contacto 301
+/en/contacto /contacto 301
+/en/google-ads.html /google-ads 301
+/en/google-ads /google-ads 301
+/en/growth-partner.html /growth-partner 301
+/en/growth-partner /growth-partner 301
+/en/growth-strategy.html /growth-strategy 301
+/en/growth-strategy /growth-strategy 301
+/en/linkedin-ads.html /linkedin-ads 301
+/en/linkedin-ads /linkedin-ads 301
+/en/lo-que-cubre.html /lo-que-cubre 301
+/en/lo-que-cubre /lo-que-cubre 301
+/en/meta-ads.html /meta-ads 301
+/en/meta-ads /meta-ads 301
+/en/problema.html /problema 301
+/en/problema /problema 301
+/en/resultados.html /resultados 301
+/en/resultados /resultados 301
+/en/tiktok-ads.html /tiktok-ads 301
+/en/tiktok-ads /tiktok-ads 301
+
+# Rutas muertas frecuentes (posts EN y /en/tech/* nunca existieron)
+/en/blog/* /blog/ 301
+/en/tech /lo-que-cubre 301
+/en/tech/* /lo-que-cubre 301
+
+# Red de seguridad: cualquier otro /en/* restante cae en home
+/en/* / 301

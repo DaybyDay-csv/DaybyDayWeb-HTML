@@ -6,7 +6,7 @@
   <title>LinkedIn Ads | DayByDay Consulting</title>
   <meta name="description" content="LinkedIn Ads. Captación B2B premium cuando el ticket y el ciclo de venta lo justifican. Lead Gen Forms, ABM y demand gen sobre CRM.">
   <meta name="robots" content="index, follow">
-  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="/css/theme.css">
   <link rel="stylesheet" href="/css/modern.css">
 </head>
@@ -56,17 +56,41 @@
         <li><a href="/como-trabajamos.html">Cómo trabajamos</a></li>
         <li><a href="/resultados.html">Casos</a></li>
         <li><a href="/blog.html">Blog</a></li><li><a href="/tools/">Tools</a></li>
-        <li><a href="/contacto.html" class="cta-secondary" style="padding:0.5rem 1rem;font-size:0.85rem;">Pedir auditoría</a></li>
+        <li><a href="/contacto.html" class="nav-cta">Pedir auditoría</a></li>
       </ul>
       <button class="theme-toggle-btn" aria-label="Cambiar tema" title="Cambiar tema">
         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
       </button>
-      <button class="mobile-menu-btn" onclick="document.getElementById('mobile-nav').classList.toggle('active')">
+      <button class="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
       </button>
     </div>
   </nav>
+  <div id="mobile-nav" class="mobile-nav">
+    <div class="mobile-nav-section">
+      <div class="mobile-nav-title">Navegación</div>
+      <a href="/" class="mobile-nav-link">Inicio</a>
+      <a href="/lo-que-cubre.html" class="mobile-nav-link">Lo que cubre</a>
+      <a href="/como-trabajamos.html" class="mobile-nav-link">Cómo trabajamos</a>
+      <a href="/resultados.html" class="mobile-nav-link">Casos</a>
+      <a href="/blog.html" class="mobile-nav-link">Blog</a><a href="/tools/" class="mobile-nav-link">Tools</a>
+      <a href="/contacto.html" class="mobile-nav-link">Pedir auditoría</a>
+    </div>
+    <div class="mobile-nav-section">
+      <div class="mobile-nav-title">Stack</div>
+      <a href="/tech/meta-ads.html" class="mobile-nav-link mobile-nav-sub">Meta Ads</a>
+      <a href="/tech/google-ads-tech.html" class="mobile-nav-link mobile-nav-sub">Google Ads</a>
+      <a href="/tech/tiktok-ads.html" class="mobile-nav-link mobile-nav-sub">TikTok Ads</a>
+      <a href="/tech/linkedin-ads.html" class="mobile-nav-link mobile-nav-sub">LinkedIn Ads</a>
+      <a href="/tech/ga4.html" class="mobile-nav-link mobile-nav-sub">GA4</a>
+      <a href="/tech/gtm.html" class="mobile-nav-link mobile-nav-sub">GTM</a>
+      <a href="/tech/capi.html" class="mobile-nav-link mobile-nav-sub">CAPI</a>
+      <a href="/tech/n8n.html" class="mobile-nav-link mobile-nav-sub">n8n</a>
+      <a href="/tech/azure.html" class="mobile-nav-link mobile-nav-sub">Azure</a>
+      <a href="/tech/shopify.html" class="mobile-nav-link mobile-nav-sub">Shopify</a>
+    </div>
+  </div>
   <div style="height:64px;"></div>
 
   <section class="hero" style="padding: 8rem 0 4rem;">
@@ -140,7 +164,6 @@
       <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
         <a href="/tech/ga4.html" style="padding:0.5rem 1rem;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.875rem;">GA4</a>
 <a href="/tech/gtm.html" style="padding:0.5rem 1rem;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.875rem;">GTM</a>
-<a href="/tech/crm.html" style="padding:0.5rem 1rem;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.875rem;">CRM</a>
       </div>
     </div>
   </section>
@@ -163,7 +186,7 @@
 
   <div class="cta-box" style="max-width: 500px; margin: 0 auto; padding: 2.5rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; text-align: center;">
     <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem;">¿Encaja LinkedIn con tu negocio?</h2>
-    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Auditoría gratuita de 30 minutos con Pablo y Jorge.</p>
+    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Auditoría gratuita de 30 minutos, conmigo.</p>
     <a href="/contacto.html" class="cta-button" style="display: inline-block; padding: 0.85rem 1.75rem; background: var(--text-primary); color: var(--bg-primary); font-weight: 600; border-radius: 8px; text-decoration: none;">Pedir auditoría</a>
   </div>
 
@@ -175,5 +198,6 @@
     </div>
     <p style="color: var(--text-secondary); font-size: 0.85rem;">© 2026 DayByDay Consulting</p>
   </footer>
+  <script src="/js/main.js"></script>
 </body>
 </html>

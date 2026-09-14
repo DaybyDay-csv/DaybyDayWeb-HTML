@@ -4,14 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Pedir auditoría · 30 minutos · gratuita | DayByDay Consulting</title>
-  <meta name="description" content="Auditoría de cuenta de publicidad + funnel D2C. 30 minutos, gratuita. Pablo y Jorge en la llamada. Te llevas tres palancas accionables.">
+  <meta name="description" content="Auditoría de tu cuenta de publicidad y tu funnel: el piloto cero. 30 minutos, gratuita. Yo en la sala. Te llevas tres palancas accionables.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.daybydayconsulting.com/contacto.html">
   <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/contacto.html">
-  <link rel="alternate" hreflang="en" href="https://www.daybydayconsulting.com/en/contacto.html">
   <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/contacto.html">
 
-  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
   <link rel="stylesheet" href="/css/modern.css">
@@ -78,7 +77,6 @@
         <li><a href="/resultados.html">Casos</a></li>
         <li><a href="/blog.html">Blog</a></li><li><a href="/tools/">Tools</a></li>
       </ul>
-      <a class="lang-switch" href="/en/contacto.html" aria-label="Switch to English">EN</a>
       <button class="theme-toggle-btn" aria-label="Cambiar tema" title="Cambiar tema">
         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
@@ -113,7 +111,7 @@
         </div>
         <h1>Auditoría de tu cuenta de publicidad y tu funnel</h1>
         <p class="subtitle">
-          Pablo y Jorge en la llamada. Te llevas tres palancas accionables sobre tu cuenta. Si encajamos seguimos. Si no, las palancas te las llevas igual.
+          Yo en la sala. Sin comerciales, sin filtros. Te llevas tres palancas accionables sobre tu cuenta. Si encajamos seguimos. Si no, las palancas te las llevas igual.
         </p>
       </div>
     </section>
@@ -129,15 +127,15 @@
             </div>
             <div class="audit-list-item">
               <div class="audit-list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
-              <div class="audit-list-text"><strong>Lectura cruzada</strong> de tu cuenta, tu Shopify y tu tracking. Detectamos qué fuga de margen es la más urgente.</div>
+              <div class="audit-list-text"><strong>Lectura cruzada</strong> de tu cuenta, tu Shopify y tu tracking. Detecto qué fuga de margen es la más urgente.</div>
             </div>
             <div class="audit-list-item">
               <div class="audit-list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
-              <div class="audit-list-text"><strong>Diagnóstico honesto</strong> de encaje. Si tu fase, tu spend o tu estructura no encajan con cómo operamos, te lo decimos en la llamada.</div>
+              <div class="audit-list-text"><strong>Diagnóstico honesto</strong> de encaje. Si tu fase, tu spend o tu estructura no encajan con cómo opero, te lo digo en la llamada.</div>
             </div>
             <div class="audit-list-item">
               <div class="audit-list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
-              <div class="audit-list-text"><strong>Pablo y Jorge en la sala.</strong> Sin SDR, sin filtros, sin reuniones de seguimiento.</div>
+              <div class="audit-list-text"><strong>Yo en la sala.</strong> Sin comerciales, sin filtros, sin reuniones de seguimiento.</div>
             </div>
           </div>
         </div>
@@ -162,7 +160,7 @@
             <div style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border);">
               <div class="plain-eyebrow">Prefieres explicarte primero</div>
               <p style="color:var(--text-secondary);font-size:0.97rem;line-height:1.6;margin-bottom:1rem;">
-                Cuéntanos brevemente tu situación. Pablo o Jorge responde personalmente en menos de 24 horas laborables.
+                Cuéntame brevemente tu situación. Te contesto yo personalmente, en menos de 24 horas.
               </p>
               <p style="color:var(--text-secondary);font-size:0.92rem;">
                 <a href="mailto:contact@daybydayconsulting.com" style="color:var(--accent-color);">contact@daybydayconsulting.com</a>
@@ -171,8 +169,10 @@
           </div>
 
           <div>
-            <form class="df-form" action="mailto:contact@daybydayconsulting.com" method="post" enctype="text/plain">
-              <div class="plain-eyebrow" style="margin-bottom:0.75rem;">Formulario · 3 campos</div>
+            <form class="df-form" id="lead-form" action="https://n8n.daybydayconsulting.com/webhook/lead-capture" method="post">
+              <div class="plain-eyebrow" style="margin-bottom:0.75rem;">Formulario · Cuatro campos, dos minutos.</div>
+              <input type="text" name="web" value="" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <input type="hidden" name="slug" value="contacto">
               <div class="form-group">
                 <label for="name">Nombre y empresa</label>
                 <input id="name" name="name" type="text" placeholder="Tu nombre · mimarca.com" required>
@@ -195,8 +195,8 @@
                 <label for="problem">Qué problema vienes a mirar</label>
                 <textarea id="problem" name="problem" rows="4" placeholder="Una o dos líneas. Lo que te preocupa esta semana."></textarea>
               </div>
-              <button type="submit">Pedir auditoría</button>
-              <p style="text-align:center;margin-top:1rem;font-size:0.82rem;color:var(--text-muted);">Respondemos en menos de 24 horas laborables.</p>
+              <button type="submit" id="lead-submit">Pedir auditoría</button>
+              <p id="lead-status" style="text-align:center;margin-top:1rem;font-size:0.82rem;color:var(--text-muted);" role="status">Te contesto en menos de 24 horas.</p>
             </form>
           </div>
 
@@ -209,7 +209,7 @@
         <div class="plain-eyebrow">El contrato implícito</div>
         <h2 style="font-size:1.4rem;font-weight:700;margin:0.5rem 0 1rem;letter-spacing:-0.02em;">Si encajamos seguimos. Si no, las palancas te las llevas igual.</h2>
         <p style="color:var(--text-secondary);font-size:0.97rem;line-height:1.65;">
-          La auditoría no es un funnel comercial disfrazado. Si tu fase, tu spend o tu estructura no encajan con cómo operamos, te lo decimos en la llamada y te orientamos hacia el perfil de proveedor que sí encaja.
+          La auditoría no es un funnel comercial disfrazado. Si tu fase, tu spend o tu estructura no encajan con cómo opero, te lo digo en la llamada y te oriento hacia el perfil de proveedor que sí encaja.
         </p>
       </div>
     </section>
@@ -221,7 +221,7 @@
       <div class="footer-inner">
         <div>
           <div class="footer-logo">DayByDay Consulting</div>
-          <div style="color:var(--text-muted);font-size:0.8rem;margin-top:0.5rem;">Madrid · Partner de crecimiento</div>
+          <div style="color:var(--text-muted);font-size:0.8rem;margin-top:0.5rem;">DaybyDay · Growth partner en Madrid</div>
         </div>
         <div class="footer-links">
           <a href="/lo-que-cubre.html">Lo que cubre</a>
@@ -232,11 +232,41 @@
         </div>
       </div>
       <div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;">
-        <p class="footer-copy">© 2026 DayByDay Consulting · analizamos · ejecutamos · acompañamos</p>
+        <p class="footer-copy">© 2026 DaybyDay Consulting · Madrid</p>
       </div>
     </div>
   </footer>
 
   <script src="/js/main.js"></script>
+
+  <script>
+  (function () {
+    var form = document.getElementById('lead-form');
+    if (!form) return;
+    var btn = document.getElementById('lead-submit');
+    var status = document.getElementById('lead-status');
+    var defaultMsg = status.textContent;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (form.web && form.web.value) return; // honeypot: bots fuera
+      var data = new URLSearchParams(new FormData(form));
+      btn.disabled = true;
+      btn.textContent = 'Enviando…';
+      status.textContent = defaultMsg;
+      fetch(form.action, { method: 'POST', body: data })
+        .then(function (res) {
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          form.reset();
+          btn.textContent = 'Enviado';
+          status.textContent = 'Enviado. Te escribo yo — no un autoreply — en menos de 24 horas.';
+        })
+        .catch(function () {
+          btn.disabled = false;
+          btn.textContent = 'Pedir auditoría';
+          status.textContent = 'No se pudo enviar: escríbeme a contacto@daybydayconsulting.com';
+        });
+    });
+  })();
+  </script>
 </body>
 </html>

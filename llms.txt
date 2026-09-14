@@ -1,6 +1,6 @@
 # DayByDay Consulting
 
-> Partner de crecimiento para marcas D2C. Operados por el equipo fundador — Pablo Santirso (paid media, estrategia, operaciones) y Jorge González (CTO, automation, agentic AI). Vendemos un solo servicio — Growth Partner — que se manifiesta en paid media, tracking, automation, agentic AI y estrategia. No vendemos servicios técnicos por separado.
+> Consultora de crecimiento dirigida por Pablo Santirso (director). Vende un solo servicio — Growth Partner — que se manifiesta en paid media, tracking, automation, agentic AI y estrategia. No vende servicios técnicos por separado.
 
 ## Posicionamiento
 
@@ -19,16 +19,20 @@
 
 ## Cinco mensajes pilar (ADN narrativo)
 
-1. "Hablas con Pablo y Jorge desde la primera llamada."
+1. "Hablas con Pablo desde la primera llamada — el mismo que opera tu cuenta."
 2. "Sin handoffs. Sin perfiles junior."
 3. "Del análisis al resultado, contigo."
 4. "Reportamos margen de contribución, payback de CAC y LTV por cohorte. No ROAS plataforma."
 5. "Si capitalizas un éxito antes de entender qué lo produjo, lo matas." (Lección Douf)
 
-## Socios fundadores
+## Identidad
 
-- **Pablo Santirso** — Founder. Lleva paid media (Meta, Google, TikTok, LinkedIn), estrategia y operaciones. LinkedIn: https://es.linkedin.com/in/pablo-santirso-perez
-- **Jorge González** — Partner, CTO. Lleva automation (n8n), agentic AI (Azure OpenAI / GPT). Profesor universitario de tecnología. Track record enterprise (Total Energies, Puig, Robot Factory de Orange). LinkedIn: https://www.linkedin.com/in/jorge-gonz%C3%A1lez-p%C3%A9rez-4091541b6/
+- **Fundador y director: Pablo Santirso** — growth partner results-first. Escala con paid media (Meta, Google, LinkedIn, TikTok) con medición en el CRM del cliente, no en el dashboard. LinkedIn: https://es.linkedin.com/in/pablo-santirso-perez
+- **El modelo operativo es un bucle:** piloto low-risk → métrica pactada → escalado — y al escalar saltan los red flags del negocio (tracking roto, emails que no salen, procesos manuales) → se construye lo que falta → se sigue escalando y optimizando.
+- **La escalada completa, en cinco piezas:** orgánico → paid → estrategia de comunicación → capitalización de la audiencia (email/CRM) → retención. Entra por donde duele — casi siempre paid — y monta las piezas que falten hasta que el sistema completo corre.
+- **Estructura:** operativa en remoto. Equipo humano (productora audiovisual asociada para rodar, diseño propio, edición de vídeo para el volumen) + máquina de agentes LLM sobre infraestructura propia (n8n + agent-api + Grist), dirigidos por Pablo. Para problemas técnicos de gran escala, refuerzo senior.
+- **Results-first:** pilotos low-risk antes de cobrar — tests de 150 € con criterios Go/No-Go escritos, 0 € de fee si no hay resultado, variable solo sobre incremento atribuible. Garantía escrita del Motor de Ventas 90D: si en 90 días no se genera la métrica pactada, se sigue trabajando gratis hasta generarla.
+- **Cifra ancla:** 3,2 M € generados a clientes en 12 meses · 264.712 € gestionados · 31.555 conversiones — medidos en el CRM de cada cliente, no en lo que dice la plataforma de ads.
 
 ## ICP — a quién hablamos
 
@@ -57,8 +61,8 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 ### Aras Life Plus
 - Sector: eCommerce D2C con automation.
 - Proceso de venta automatizado Shopify + WhatsApp + campañas automáticas.
-- Caso conjunto de Pablo + Jorge. Primer mandato del mismo partner ejecutivo, que después confió Cartri y Garett a DayByDay (tres negocios consecutivos).
-- Uso recomendado: caso del "equipo fundador trabajando junto".
+- Primer mandato del mismo decisor, que después confió Cartri y Garett a DayByDay (tres negocios consecutivos).
+- Uso recomendado: caso del decisor que repite en tres negocios.
 
 ## Servicios
 
@@ -114,7 +118,7 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 - [Growth Partner](https://www.daybydayconsulting.com/growth-partner.html) — modelo y diferencial.
 - [Casos](https://www.daybydayconsulting.com/resultados.html) — tres mandatos públicos en detalle.
 - [Servicios](https://www.daybydayconsulting.com/servicios.html) — stack completo.
-- [Blog](https://www.daybydayconsulting.com/blog.html) — 121 artículos de growth marketing.
+- [Blog](https://www.daybydayconsulting.com/blog.html) — 134 artículos de growth marketing.
 - [Hablamos](https://www.daybydayconsulting.com/contacto.html) — discovery call gratuita.
 
 ## Posts recientes
