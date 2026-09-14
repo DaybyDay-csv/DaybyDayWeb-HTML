@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }, observerOptions);
 
-  var animatedEls = document.querySelectorAll('.scroll-animate, .story-section, .fade-left, .fade-right, .scale-in, .reveal');
+  var animatedEls = document.querySelectorAll('.scroll-animate, .story-section, .fade-left, .fade-right, .scale-in, .reveal, .loop-station');
   animatedEls.forEach(function(el) {
     observer.observe(el);
   });
@@ -177,4 +177,55 @@ document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
 
     observer.observe(container);
   });
+})();
+
+// Hero mini-explainer: "la plataforma dice" vs "tu caja dice" (home)
+// One-shot al entrar en viewport, ≤1,6s en total. Reduced-motion o
+// sin JS: el DOM ya contiene el estado final estático.
+(function() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var wrap = document.querySelector('.hero-split');
+  if (!wrap) return;
+
+  var platformNum = wrap.querySelector('[data-split="platform"]');
+  var crmNum = wrap.querySelector('[data-split="crm"]');
+  if (!platformNum || !crmNum) return;
+
+  var BASE = 214;   // el número real: ambos lados arrancan aquí
+  var DRIFT = 298;  // ~+40%: la plataforma sigue inflando
+
+  function tick(el, from, to, duration, done) {
+    var start = performance.now();
+    function step(now) {
+      var progress = Math.min((now - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 4); // easeOutQuart, como el count-up
+      el.textContent = Math.round(from + (to - from) * eased);
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else if (done) {
+        done();
+      }
+    }
+    requestAnimationFrame(step);
+  }
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (!entry.isIntersecting) return;
+      observer.disconnect();
+      wrap.classList.add('play'); // t=0: barras (CSS) + números (JS)
+      platformNum.textContent = '0';
+      crmNum.textContent = '0';
+      tick(platformNum, 0, BASE, 800);
+      tick(crmNum, 0, BASE, 800, function() {
+        setTimeout(function() { // t≈1,3s: la separación
+          wrap.classList.add('is-split');
+          tick(platformNum, BASE, DRIFT, 300);
+        }, 500);
+      });
+    });
+  }, { threshold: 0.35 });
+
+  observer.observe(wrap);
 })();

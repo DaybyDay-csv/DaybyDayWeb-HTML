@@ -1925,3 +1925,430 @@ html.theme-anim .stack-pill {
     -webkit-backdrop-filter: none;
   }
 }
+
+/* ───────────────────────────────────────────────
+   motion · capa de motion graphics de la home
+   (bucle scroll-driven del proceso, mini-explainer
+   del hero, reveals escalonados y press feedback)
+   Cero JS para el camino; reduced-motion o sin
+   soporte = estado final estático y legible.
+   ─────────────────────────────────────────────── */
+
+/* Requisito de las view-timelines: el scroll del documento debe vivir en el
+   viewport. overflow-x:hidden en body/.page-wrapper crea scroll containers
+   que desacoplan las animaciones scroll-driven del scroll real (Chrome).
+   overflow-x:clip recorta igual sin crear scroll container. */
+body,
+.page-wrapper {
+  overflow-x: clip;
+}
+
+/* ═══ FICHA 4 · Press feedback en botones de icono ═══ */
+
+.mobile-menu-btn {
+  transition: transform 150ms var(--ease-out);
+}
+.mobile-menu-btn:active {
+  transform: scale(0.94);
+  transition-duration: 0.1s;
+}
+
+.nav-dropdown-btn:active {
+  opacity: 0.7;
+  transition-duration: 0.08s;
+}
+
+/* Crossfade sol/luna: ambos SVG apilados en la misma celda,
+   opacity + rotate en vez del display none/block de theme.css */
+.theme-toggle-btn {
+  display: inline-grid;
+  place-items: center;
+  transition: border-color 0.15s, color 0.15s, transform 150ms var(--ease-out);
+}
+.theme-toggle-btn:active { transform: scale(0.94); }
+.theme-toggle-btn .icon-sun,
+.theme-toggle-btn .icon-moon {
+  display: block;
+  grid-area: 1 / 1;
+  transition: opacity 200ms var(--ease-out), transform 200ms var(--ease-out);
+}
+.theme-toggle-btn .icon-sun  { opacity: 0; transform: rotate(-90deg); }
+.theme-toggle-btn .icon-moon { opacity: 1; transform: rotate(0deg); }
+[data-theme="light"] .theme-toggle-btn .icon-sun  { opacity: 1; transform: rotate(0deg); }
+[data-theme="light"] .theme-toggle-btn .icon-moon { opacity: 0; transform: rotate(90deg); }
+
+/* ═══ FICHA 3 · Entradas escalonadas (infra IO existente) ═══ */
+
+/* Extiende la escala de delays existente (100ms por paso) para la 5ª tarjeta */
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+/* Las tarjetas definen su propia transition sin opacity; al asentarse
+   el reveal, opacity entra en la lista sin romper el hover (transform
+   se queda rápido). */
+.tile-nav-item.reveal.visible,
+.case-card.reveal.visible,
+.pillar-card.reveal.visible {
+  transition: opacity 0.5s var(--ease-out),
+              transform 0.25s var(--ease-out),
+              border-color 0.25s var(--ease-out),
+              box-shadow 0.3s var(--ease-out);
+}
+
+/* ═══ FICHA 2 · Mini-explainer del hero: plataforma vs caja ═══ */
+
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  max-width: 520px;
+  margin: 0 0 2rem;
+}
+.split-col { min-width: 0; }
+.split-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+.split-value {
+  position: relative;
+  display: inline-block;
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+  transition: color 300ms ease;
+}
+.split-num { display: inline-block; }
+.split-unit {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0;
+}
+.split-bar {
+  margin-top: 0.625rem;
+  height: 5px;
+  border-radius: 3px;
+  background: var(--border);
+  overflow: hidden;
+}
+.split-bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent);
+  transform-origin: left center;
+}
+
+/* t=0 (una sola vez, al entrar en viewport): barras 0→1 */
+.hero-split.play .split-bar-fill {
+  animation: split-bar 600ms var(--ease-out) both;
+}
+@keyframes split-bar {
+  from { transform: scaleX(0); }
+}
+
+/* t≈1,3s · la separación */
+.hero-split.is-split .split-col-platform .split-value { color: var(--text-muted); }
+.hero-split.is-split .split-value-crm .split-num {
+  animation: split-pop 120ms var(--ease-out) both;
+}
+.hero-split.is-split .split-value-crm::after {
+  animation: split-underline 250ms var(--ease-out) both;
+}
+@keyframes split-pop { to { transform: scale(1.02); } }
+@keyframes split-underline { from { transform: scaleX(0); } }
+
+.split-value-crm::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--accent);
+  transform-origin: left center;
+}
+
+@media (max-width: 720px) {
+  .hero-split { gap: 1rem; }
+  .split-value { font-size: 1.25rem; }
+}
+
+/* ═══ FICHA 1 · El bucle dibujado ═══ */
+
+/* Único color nuevo de la capa: semántica de "red flag",
+   legible en ambos temas (el accent-red del tema oscuro es azul) */
+.loop-section { --loop-flag: #EF4444; }
+
+.loop-diagram { margin-top: 2.5rem; }
+.loop-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.loop-spine { display: none; }
+
+.loop-track,
+.loop-progress {
+  fill: none;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.loop-track    { stroke: var(--border); }
+.loop-progress { stroke: var(--accent); }
+.loop-node {
+  fill: var(--bg-primary);
+  stroke: var(--border-hover);
+  stroke-width: 1.5;
+}
+.loop-dot { fill: var(--accent); }
+
+/* Estaciones: patrón IO existente, 8px/300ms, stagger 80ms.
+   Asentadas, no se mueven. */
+.loop-stations {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+.loop-station {
+  grid-column: span 2;
+  text-align: center;
+  padding: 0 0.625rem;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 300ms var(--ease-out), transform 300ms var(--ease-out);
+}
+.loop-station.visible { opacity: 1; transform: none; }
+.loop-stations .loop-station:nth-child(2) { transition-delay: 80ms; }
+.loop-stations .loop-station:nth-child(3) { transition-delay: 160ms; }
+.loop-stations .loop-station:nth-child(4) { transition-delay: 240ms; }
+.loop-stations .loop-station:nth-child(5) { transition-delay: 320ms; }
+
+.loop-station-icon { color: var(--accent); }
+.loop-station-icon svg { width: 20px; height: 20px; display: block; margin: 0 auto; }
+.loop-station-label {
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+.loop-station-text {
+  margin: 0.25rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--text-secondary);
+}
+
+/* La prueba real, una línea compacta */
+.loop-proof {
+  margin: 2.75rem 0 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 680px;
+}
+.loop-proof strong { color: var(--text-primary); font-weight: 600; }
+.loop-proof a {
+  color: var(--accent);
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent);
+}
+.loop-proof a:hover { text-decoration-color: var(--accent); }
+
+/* Micro-visuales: estado por defecto = final; la animación
+   (from-only, both) solo existe al añadirse .visible */
+.loop-micro {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 14px;
+  margin: 0.75rem auto 0;
+}
+.loop-micro-track {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 6px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--border-hover);
+}
+.loop-micro-dot {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.loop-micro-bar {
+  display: block;
+  width: 48px;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--accent);
+  transform-origin: left center;
+}
+.loop-micro-flag {
+  width: 18px;
+  height: 18px;
+  color: var(--loop-flag);
+}
+.loop-micro-bricks { width: 40px; height: 17px; }
+.loop-micro-bricks span {
+  position: absolute;
+  width: 26px;
+  height: 4px;
+  border-radius: 1px;
+  background: var(--border-hover);
+}
+.loop-micro-bricks span:nth-child(1) { top: 0; left: 7px; }
+.loop-micro-bricks span:nth-child(2) { top: 6px; left: 0; }
+.loop-micro-bricks span:nth-child(3) { top: 12px; left: 7px; background: var(--accent); }
+.loop-micro-return { width: 44px; height: 14px; }
+.lmr-line {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+}
+.lmr-head {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.loop-station.visible .loop-micro-dot {
+  animation: loop-micro-place 450ms var(--ease-out) 150ms both;
+}
+.loop-station.visible .loop-micro-bar {
+  animation: loop-micro-grow 500ms var(--ease-out) 200ms both;
+}
+.loop-station.visible .loop-micro-flag {
+  animation: loop-micro-flag-in 250ms var(--ease-out) 300ms both;
+}
+.loop-station.visible .loop-micro-bricks span {
+  animation: loop-micro-brick 220ms var(--ease-out) 200ms both;
+}
+.loop-station.visible .loop-micro-bricks span:nth-child(2) { animation-delay: 380ms; }
+.loop-station.visible .loop-micro-bricks span:nth-child(3) { animation-delay: 560ms; }
+.loop-station.visible .lmr-line {
+  animation: loop-micro-draw 350ms var(--ease-out) 250ms both;
+}
+.loop-station.visible .lmr-head {
+  animation: loop-micro-fade 200ms var(--ease-out) 480ms both;
+}
+
+@keyframes loop-micro-place { from { transform: translateX(30px); opacity: 0; } }
+@keyframes loop-micro-grow { from { transform: scaleX(0); } }
+@keyframes loop-micro-flag-in { from { opacity: 0; transform: translateY(2px) scale(0.94); } }
+@keyframes loop-micro-brick { from { opacity: 0; transform: translateY(-4px); } }
+@keyframes loop-micro-draw { from { stroke-dashoffset: 1; } }
+@keyframes loop-micro-fade { from { opacity: 0; } }
+
+/* Scroll-driven nativo: el bucle se dibuja con el scroll.
+   Sin soporte o reduced-motion → camino estático completo. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .loop-svg,
+    .loop-spine { view-timeline: --loop; }
+    .loop-progress {
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      animation: loop-draw linear both;
+      animation-timeline: --loop;
+      animation-range: entry 20% cover 50%;
+    }
+    .loop-dot {
+      offset-path: path("M84 228H916C948 228 960 216 960 184V104C960 72 948 60 916 60H84C52 60 40 72 40 104V184C40 216 52 228 84 228Z");
+      offset-distance: 0%;
+      animation: loop-travel linear both;
+      animation-timeline: --loop;
+      animation-range: entry 20% cover 50%;
+    }
+  }
+}
+@keyframes loop-draw   { to { stroke-dashoffset: 0; } }
+@keyframes loop-travel { to { offset-distance: 97%; } }
+
+/* Móvil: espina vertical, stations apiladas. Misma técnica
+   (view-timeline + dashoffset), otra d. */
+@media (max-width: 719px) {
+  .loop-diagram { position: relative; margin-top: 2rem; }
+  .loop-svg { display: none; }
+  .loop-spine {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 44px;
+    height: 100%;
+    overflow: visible;
+  }
+  .loop-spine .loop-track,
+  .loop-spine .loop-progress { vector-effect: non-scaling-stroke; }
+  .loop-dot { display: none; }
+  .loop-stations { display: block; }
+  .loop-station {
+    position: relative;
+    text-align: left;
+    padding-left: 3.25rem;
+    margin-bottom: 1.75rem;
+  }
+  .loop-stations .loop-station:last-child { margin-bottom: 0; }
+  .loop-station::before {
+    content: '';
+    position: absolute;
+    left: 17.5px; /* centro de la espina (22px) menos el radio */
+    top: 5.5px;
+    width: 9px;
+    height: 9px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: var(--bg-primary);
+    border: 1.5px solid var(--border-hover);
+  }
+  .loop-station-icon svg { margin: 0; }
+  .loop-micro { margin: 0.75rem 0 0; justify-content: flex-start; }
+}
+
+/* ═══ Fallbacks ═══ */
+
+/* Reduced-motion: estaciones visibles, todo en estado final
+   (el guard global de 0.01ms deja los keyframes en su estado final) */
+@media (prefers-reduced-motion: reduce) {
+  .loop-station {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Sin JS: nada depende de clases que nunca llegarán */
+@media (scripting: none) {
+  .reveal,
+  .loop-station {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
