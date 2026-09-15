@@ -2680,3 +2680,19 @@ h4.voice-human, h5.voice-human, h6.voice-human { font-weight: 600; }
   .craft-flag .craft-flag-b { animation: none; opacity: 0; }
   .craft-ticket { transform: rotate(-3deg); }
 }
+
+/* --- Marquee: logos reales monocromos (tinta en light, blanco en dark) --- */
+.cl-img {
+  height: 26px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0);
+  opacity: .58;
+  transition: opacity 200ms var(--ease-out);
+}
+.cl-img:hover { opacity: 1; }
+[data-theme="dark"] .cl-img { filter: brightness(0) invert(1); }
+.cli-arasnet { height: 34px; }
+.cli-cartri { height: 32px; }
+.cli-douf { height: 28px; }
+.cli-lvp { height: 30px; }
