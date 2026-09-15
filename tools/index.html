@@ -1,29 +1,225 @@
 <!DOCTYPE html>
 <html lang="es" data-theme="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tools gratuitas para D2C | DayByDay Consulting</title>
-<meta name="description" content="Herramientas, checklists y calculadoras gratuitas para fundadores D2C: CAC, margen de contribución, secuencias de ofertas y más. Sin humo, con método.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.daybydayconsulting.com/tools/">
-<script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tools gratuitas para D2C | DayByDay Consulting</title>
+  <meta name="description" content="Herramientas, checklists y calculadoras gratuitas para fundadores D2C: CAC, margen de contribución, secuencias de ofertas y más. Sin humo, con método.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/tools/">
+  <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/tools/">
+  <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/tools/">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+
+  <style>
+    /* Logo de marca: swap light/dark según data-theme (toggles main.js) */
+    .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; }
+    .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
+    [data-theme="dark"] .logo-ink { display: none; }
+    [data-theme="light"] .logo-blue { display: none; }
+    /* Sección activa del nav: Tools */
+    .main-nav .nav-links .nav-current { color: var(--text-primary); }
+
+    /* H1 serif de la intro (Tools.) */
+    .hero h1.h2-serif {
+      font-family: var(--font-human);
+      font-weight: 600;
+      font-size: clamp(2.6rem, 5vw, 3.6rem);
+      line-height: 1.08;
+      margin: 0.75rem 0 0.5rem;
+    }
+
+    /* Línea mono bajo el H1 */
+    .tools-intro-line {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-muted);
+      margin: 0 0 1rem;
+    }
+
+    /* Grid de tools — tarjetas del sistema */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+    .tool-card {
+      display: block;
+      padding: 1.9rem 1.75rem;
+      background: var(--bg-card);
+      border: 1px dashed color-mix(in srgb, var(--ink) 25%, transparent);
+      border-radius: 4px;
+      transition: transform 220ms var(--ease-out, ease), border-color 220ms ease, box-shadow 220ms ease;
+    }
+    .tool-card:hover {
+      transform: translateY(-4px);
+      border-color: color-mix(in srgb, var(--ink) 55%, transparent);
+      box-shadow: 0 14px 30px -12px var(--shadow);
+    }
+    .tool-card-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      color: var(--ink-blue);
+      border-bottom: 1px solid color-mix(in srgb, var(--ink) 30%, transparent);
+      padding-bottom: 4px;
+      margin-bottom: 1rem;
+    }
+    .tool-card h2 {
+      font-family: var(--font-human);
+      font-weight: 600;
+      font-size: 1.3rem;
+      line-height: 1.25;
+      color: var(--text-primary);
+      margin: 0 0 0.6rem;
+    }
+    .tool-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+    .tool-card .tool-card-go {
+      display: block;
+      margin-top: 1.1rem;
+      font-size: 0.8rem;
+      color: var(--ink-blue);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .tool-card, .tool-card:hover { transform: none; transition: none; }
+    }
+  </style>
 </head>
-<body class="bg-gray-950 text-gray-100">
-<nav class="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center">
-<a href="/" class="text-xl font-bold text-white">DayByDay</a>
-<div class="space-x-6 text-sm"><a href="/blog" class="hover:text-blue-400">Blog</a><a href="/tools/" class="text-blue-400">Tools</a><a href="/contacto.html" class="hover:text-blue-400">Contacto</a></div>
-</nav>
-<main class="max-w-6xl mx-auto py-16 px-6">
-<h1 class="text-4xl font-bold text-white mb-4">Tools para founders D2C</h1>
-<p class="text-xl text-gray-400 mb-12">Checklists, calculadoras y plantillas que usamos con nuestros clientes. Gratis, a cambio de tu email. Sin spam: solo te avisamos cuando publicamos algo útil.</p>
-<div id="tools-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-<a class="block p-6 bg-gray-900 rounded-lg hover:bg-gray-800 transition" href="/tools/sistema-cfa-secuencia-ofertas-d2c/"><p class="text-xs text-blue-400 mb-2">Tool gratuita</p><h2 class="text-lg font-semibold text-white mb-2">La secuencia de ofertas que recupera tu CAC en 30 días</h2><p class="text-sm text-gray-400">Tu ROAS marca 3 pero tu banco marca otra cosa. Con el sistema CFA tienes la estructura para que cada cliente financie su propia captación.</p></a>
-<a class="block p-6 bg-gray-900 rounded-lg hover:bg-gray-800 transition" href="/tools/pinterest-saver/"><p class="text-xs text-blue-400 mb-2">Tool gratuita</p><h2 class="text-lg font-semibold text-white mb-2">Descarga tus tableros de Pinterest</h2><p class="text-sm text-gray-400">Guarda un tablero entero con las imágenes a máxima resolución y los vídeos, sueltos o en un ZIP. Sin instalar nada.</p></a>
-<a class="block p-6 bg-gray-900 rounded-lg hover:bg-gray-800 transition" href="/tools/matriz/"><p class="text-xs text-blue-400 mb-2">App gratuita para Mac</p><h2 class="text-lg font-semibold text-white mb-2">Matriz, pizarra de tareas sin cuenta ni servidor</h2><p class="text-sm text-gray-400">Ordena el día por proyectos y prioridad en una pizarra libre. App nativa para macOS que se instala arrastrando y guarda todo en tu Mac.</p></a>
-<!-- TOOLS_INSERT_POINT -->
-</div>
-</main>
-<footer class="max-w-6xl mx-auto px-6 py-12 text-sm text-gray-500">© DayByDay Consulting · <a href="/blog" class="hover:text-blue-400">Blog</a></footer>
+<body>
+
+  <a href="#main" class="skip-link">Saltar al contenido principal</a>
+<nav class="main-nav">
+    <a href="/" class="nav-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="34" height="34" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="34" height="34" alt="">DaybyDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-btn">Lo que cubre</button>
+          <div class="nav-dropdown-content mega">
+            <div class="mega-grid" style="grid-template-columns:repeat(3,1fr);">
+              <div class="mega-section">
+                <div class="mega-section-title">Áreas</div>
+                <a href="/lo-que-cubre.html#paid-media">Paid media</a>
+                <a href="/lo-que-cubre.html#tracking">Tracking &amp; Analytics</a>
+                <a href="/lo-que-cubre.html#automation">Automation</a>
+                <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
+                <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+              </div>
+              <div class="mega-section">
+                <div class="mega-section-title">Servicios</div>
+                <a href="/meta-ads.html">Meta Ads</a>
+                <a href="/google-ads.html">Google Ads</a>
+                <a href="/tiktok-ads.html">TikTok Ads</a>
+                <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                <a href="/automatizacion.html">Automatización</a>
+                <a href="/analytics.html">Analytics</a>
+                <a href="/agentic-ai.html">Agentic AI</a>
+                <a href="/growth-strategy.html">Growth Strategy</a>
+              </div>
+              <div class="mega-section">
+                <div class="mega-section-title">Stack</div>
+                <a href="/tech/ga4.html">GA4</a>
+                <a href="/tech/gtm.html">GTM</a>
+                <a href="/tech/gsc.html">Search Console</a>
+                <a href="/tech/capi.html">CAPI</a>
+                <a href="/tech/n8n.html">n8n</a>
+                <a href="/tech/azure.html">Azure</a>
+                <a href="/tech/shopify.html">Shopify</a>
+                <a href="/tech/dsp.html">DSP</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="/como-trabajamos.html">Cómo trabajamos</a></li>
+        <li><a href="/casos/">Casos</a></li>
+        <li><a href="/blog.html">Blog</a></li><li><a href="/tools/" class="nav-current">Tools</a></li>
+        <li><a href="/contacto.html" class="nav-cta">Pedir auditoría</a></li>
+      </ul>
+      <button class="theme-toggle-btn" aria-label="Cambiar tema" title="Cambiar tema">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      </button>
+      <button class="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobile-nav" class="mobile-nav">
+    <a href="/" class="mobile-nav-link">Inicio</a>
+    <a href="/lo-que-cubre.html" class="mobile-nav-link">Lo que cubre</a>
+    <a href="/como-trabajamos.html" class="mobile-nav-link">Cómo trabajamos</a>
+    <a href="/casos/" class="mobile-nav-link">Casos</a>
+    <a href="/blog.html" class="mobile-nav-link">Blog</a><a href="/tools/" class="mobile-nav-link">Tools</a>
+    <a href="/contacto.html" class="mobile-nav-link">Pedir auditoría</a>
+  </div>
+
+  <main id="main" class="page-wrapper">
+
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Inicio</a><span>/</span><span style="color:var(--text-secondary)">Tools</span>
+      </div>
+    </div>
+
+    <section class="hero hero-centered">
+      <div class="container">
+        <h1 class="h2-serif">Tools.</h1>
+        <p class="tools-intro-line voice-machine">Checklists, calculadoras y plantillas — gratis, a cambio de tu email</p>
+        <p class="subtitle" style="margin:0 auto;max-width:640px;">Sin spam: solo te avisamos cuando publicamos algo útil.</p>
+      </div>
+    </section>
+
+    <section class="section-sm" style="padding-top:1rem;">
+      <div class="container">
+        <div id="tools-grid" class="tools-grid">
+          <a class="tool-card" href="/tools/sistema-cfa-secuencia-ofertas-d2c/"><span class="tool-card-tag voice-machine">Tool gratuita</span><h2>La secuencia de ofertas que recupera tu CAC en 30 días</h2><p>Tu ROAS marca 3 pero tu banco marca otra cosa. Con el sistema CFA tienes la estructura para que cada cliente financie su propia captación.</p><span class="tool-card-go voice-machine">→ abrir</span></a>
+          <a class="tool-card" href="/tools/pinterest-saver/"><span class="tool-card-tag voice-machine">Tool gratuita</span><h2>Descarga tus tableros de Pinterest</h2><p>Guarda un tablero entero con las imágenes a máxima resolución y los vídeos, sueltos o en un ZIP. Sin instalar nada.</p><span class="tool-card-go voice-machine">→ abrir</span></a>
+          <a class="tool-card" href="/tools/matriz/"><span class="tool-card-tag voice-machine">App gratuita para Mac</span><h2>Matriz, pizarra de tareas sin cuenta ni servidor</h2><p>Ordena el día por proyectos y prioridad en una pizarra libre. App nativa para macOS que se instala arrastrando y guarda todo en tu Mac.</p><span class="tool-card-go voice-machine">→ abrir</span></a>
+          <a class="tool-card" href="/tools/calculadora-mides/"><span class="tool-card-tag voice-machine">Calculadora interactiva</span><h2>Calculadora de retorno · Mides × DaybyDay</h2><p>Mueve el presupuesto, el coste por clic y el ticket medio, y mira en vivo los clientes, el coste por cliente y el retorno del año.</p><span class="tool-card-go voice-machine">→ abrir</span></a>
+          <!-- TOOLS_INSERT_POINT -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="24" height="24" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="24" height="24" alt="">DaybyDay Consulting · Madrid</div>
+          <p class="voice-human" style="font-style:italic;color:var(--text-muted);font-size:0.95rem;margin:0.5rem 0 0;">El crecimiento, día a día.</p>
+        </div>
+        <div class="footer-links">
+          <a href="/lo-que-cubre.html">Lo que cubre</a>
+          <a href="/como-trabajamos.html">Cómo trabajamos</a>
+          <a href="/casos/">Casos</a>
+          <a href="/growth-partner.html">Growth Partner</a>
+          <a href="/blog.html">Blog</a>
+          <a href="/contacto.html">Pedir auditoría</a>
+        </div>
+      </div>
+      <div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;">
+        <p class="footer-copy">© 2026 DaybyDay Consulting · Madrid</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
 </body>
 </html>

@@ -20,14 +20,34 @@
     .lead-by strong { color:var(--text-secondary);font-weight:600; }
     .not-block { max-width:720px;margin:1.5rem auto 0;padding:1rem 1.25rem;background:var(--bg-card);border:1px solid var(--border);border-left:2px solid var(--text-muted);border-radius:8px;font-size:0.92rem;color:var(--text-muted); }
     .not-block strong { color:var(--text-secondary); }
+    /* Marca «libreta de campo»: swap de logo + caja del momento de entrada */
+    .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; }
+    .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
+    [data-theme="dark"] .logo-ink { display: none; }
+    [data-theme="light"] .logo-blue { display: none; }
+    .momento-caja {
+      border: 1.5px dashed color-mix(in srgb, var(--ink) 35%, transparent);
+      padding: 2rem 2.25rem;
+    }
   </style>
 </head>
 <body>
-  
-  
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="pencil-rough" x="-5%" y="-15%" width="110%" height="130%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="3" seed="3" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6"/>
+      </filter>
+      <filter id="pencil-rough-2" x="-5%" y="-15%" width="110%" height="130%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" seed="17" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="3"/>
+      </filter>
+    </defs>
+  </svg>
+
   <a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
-    <a href="/" class="nav-logo"><img src="/img/brand/loop-symbol.svg" width="34" height="34" alt="">DaybyDay</a>
+    <a href="/" class="nav-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="34" height="34" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="34" height="34" alt="">DaybyDay</a>
     <div class="nav-menu">
       <ul class="nav-links">
         <li class="nav-dropdown">
@@ -135,11 +155,17 @@
       <div class="container">
         <div class="section-header"><div class="section-tag">02 — Cómo lo operamos</div><h2 class="h2-serif">Del mapeo de procesos al handoff opcional</h2></div>
         <div class="process-list">
-          <div class="process-step"><div class="process-step-num">01</div><div><h3>Mapeo de procesos (SDD)</h3><p>Mapeo cada flujo crítico: pedido, devolución, abandono, post-venta, soporte. Documento técnico SDD entregado al cliente antes de tocar nada.</p></div></div>
-          <div class="process-step"><div class="process-step-num">02</div><div><h3>Stack de integraciones</h3><p>Conexiones entre Shopify, WhatsApp Business, CRM, email (Klaviyo / Customer.io), pasarela de pago y logística sobre tu infraestructura real.</p></div></div>
-          <div class="process-step"><div class="process-step-num">03</div><div><h3>Flujos críticos en n8n</h3><p>Abandoned cart, post-purchase, win-back, sync de pedidos, notificaciones internas y alertas. Versionados en n8n self-hosted.</p></div></div>
-          <div class="process-step"><div class="process-step-num">04</div><div><h3>CAPI y attribution flows</h3><p>Server-side tracking conectado a Meta CAPI, Google Enhanced Conversions y TikTok Events API. La calidad de match es la mitad del rendimiento paid.</p></div></div>
-          <div class="process-step"><div class="process-step-num">05</div><div><h3>Mantenimiento o handoff opcional</h3><p>Si tras <span class="voice-machine">6 meses</span> quieres internalizar, te dejamos documentación PDD y formación al equipo. Sin lock-in.</p></div></div>
+          <div class="process-step"><div class="process-step-num voice-machine">01</div><div><h3>Mapeo de procesos (SDD)</h3><p>Mapeo cada flujo crítico: pedido, devolución, abandono, post-venta, soporte. Documento técnico SDD entregado al cliente antes de tocar nada.</p></div></div>
+          <div class="process-step"><div class="process-step-num voice-machine">02</div><div><h3>Stack de integraciones</h3><p>Conexiones entre Shopify, WhatsApp Business, CRM, email (Klaviyo / Customer.io), pasarela de pago y logística sobre tu infraestructura real.</p></div></div>
+          <div class="process-step"><div class="process-step-num voice-machine">03</div><div><h3>Flujos críticos en n8n</h3><p>Abandoned cart, post-purchase, win-back, sync de pedidos, notificaciones internas y alertas. Versionados en n8n self-hosted.</p></div></div>
+          <div class="process-step"><div class="process-step-num voice-machine">04</div><div><h3>CAPI y attribution flows</h3><p>Server-side tracking conectado a Meta CAPI, Google Enhanced Conversions y TikTok Events API. La calidad de match es la mitad del rendimiento paid.</p></div></div>
+          <div class="process-step"><div class="process-step-num voice-machine">05</div><div><h3>Mantenimiento o handoff opcional</h3><p>Si tras <span class="voice-machine">6 meses</span> quieres internalizar, te dejamos documentación PDD y formación al equipo. Sin lock-in.</p></div></div>
+        </div>
+        <div class="parte-caja" style="max-width:560px;margin:3rem auto 0;">
+          <div class="parte-caja-head">PARTE DE CAJA — AUTOMATIZACIÓN</div>
+          <div class="parte-caja-row"><span>ENTREGABLE 01</span><span class="voice-machine">SDD · ANTES DE TOCAR NADA</span></div>
+          <div class="parte-caja-row"><span>FLUJOS</span><span class="voice-machine">VERSIONADOS · N8N SELF-HOSTED</span></div>
+          <div class="parte-caja-row"><span>HANDOFF OPCIONAL</span><span class="voice-machine">TRAS 6 MESES</span></div>
         </div>
       </div>
     </section>
@@ -147,7 +173,7 @@
     <section class="section">
       <div class="container">
         <div class="section-header"><div class="section-tag">03 — Momento de entrada</div><h2 class="h2-serif">Contextos donde encaja este trabajo</h2></div>
-        <div class="prose">
+        <div class="prose momento-caja paper-grid">
           <p>Operativas donde el equipo dedica horas a tareas repetitivas que cruzan varios sistemas. Migraciones recientes que dejaron flujos sin conectar. Negocios con WhatsApp o CRM mal integrados con la web. Cuentas paid donde la pérdida de señal por iOS o ITP ya está afectando al rendimiento.</p>
         </div>
       </div>
@@ -171,13 +197,21 @@
         <div class="cta-box">
           <h2 class="h2-serif">Pedir auditoría</h2>
           <p>Auditoría de tu cuenta y tu funnel: el piloto cero. <span class="voice-machine">30 minutos</span>, gratis, conmigo. Traes acceso a tu cuenta de ads y a tu CRM — nada más. Sales con tres palancas accionables y una forma de medir si tienen efecto. Si encajamos, seguimos. Si no, las palancas te las llevas igual.</p>
-          <div class="hero-cta" style="justify-content:center;"><a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+          <div class="hero-cta" style="justify-content:center;">
+            <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="/como-trabajamos.html" class="btn-sketch sketch-hover" style="margin-left:.75rem;">Cómo trabajamos<svg class="sketch-circle" viewBox="0 0 200 64" preserveAspectRatio="none" aria-hidden="true"><path pathLength="100" d="M100,6 C156,3 193,14 192,31 C191,49 152,59 97,58 C43,57 8,50 8,31 C8,15 34,8 88,7 C142,6 178,14 186,26"/></svg></a>
+            <div class="note-strip" aria-label="Notas de cómo trabajo">
+              <div class="post-it" style="--tilt:-2.5deg;">Sin preparación previa: traes accesos y ya está.</div>
+              <div class="post-it" style="--tilt:1.5deg;">Sales con tres palancas — <span class="pin-mark">te las llevas igual.</span></div>
+              <div class="post-it" style="--tilt:-1deg;">Si no encajamos, no pasa nada. De verdad.</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer"><div class="container"><div class="footer-inner"><div><div class="footer-logo">DaybyDay Consulting · Madrid</div><p class="voice-human" style="font-style:italic;margin-top:0.5rem;">El crecimiento, día a día.</p></div><div class="footer-links"><a href="/problema.html">Problema</a><a href="/como-trabajamos.html">Cómo trabajamos</a><a href="/growth-partner.html">Growth Partner</a><a href="/casos/">Casos</a><a href="/blog.html">Blog</a><a href="/contacto.html">Pedir auditoría</a></div></div><div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;"><p class="footer-copy">© 2026 DayByDay Consulting · analizamos · ejecutamos · acompañamos</p></div></div></footer>
+  <footer class="footer"><div class="container"><div class="footer-inner"><div><div class="footer-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="22" height="22" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="22" height="22" alt="">DaybyDay Consulting · Madrid</div><p class="voice-human" style="font-style:italic;margin-top:0.5rem;">El crecimiento, día a día.</p></div><div class="footer-links"><a href="/problema.html">Problema</a><a href="/como-trabajamos.html">Cómo trabajamos</a><a href="/growth-partner.html">Growth Partner</a><a href="/casos/">Casos</a><a href="/blog.html">Blog</a><a href="/contacto.html">Pedir auditoría</a></div></div><div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;"><p class="footer-copy">© 2026 DayByDay Consulting · analizamos · ejecutamos · acompañamos</p></div></div></footer>
   <script src="/js/main.js"></script>
 </body>
 </html>

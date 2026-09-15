@@ -24,8 +24,19 @@
   </style>
 </head>
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="pencil-rough" x="-5%" y="-15%" width="110%" height="130%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="3" seed="3" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6"/>
+      </filter>
+      <filter id="pencil-rough-2" x="-5%" y="-15%" width="110%" height="130%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" seed="17" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="3"/>
+      </filter>
+    </defs>
+  </svg>
 
-  
   <a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
     <a href="/" class="nav-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="34" height="34" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="34" height="34" alt="">DaybyDay</a>
@@ -123,6 +134,7 @@
         <p class="lead" style="margin-top:1rem;">
           Cada negocio necesita algo distinto. Estas son las cinco cosas que sé hacer bien. Cuando entro a trabajar contigo, elijo solo lo que va a mover el negocio. No te vendo todo el menú.
         </p>
+        <span class="hand-note" aria-hidden="true" style="margin-top:1.5rem;">cinco cosas, ni una más ↓</span>
       </div>
     </section>
 
@@ -140,15 +152,19 @@
               <p>Llevo tus anuncios en Facebook, Instagram, Google, TikTok y LinkedIn. Los que encajen con tu negocio, no todos a la vez.</p>
               <p>Antes de tocar nada, miro qué euro está trabajando y cuál se está perdiendo. Después decido: arreglar, escalar o mantener.</p>
             </div>
-            <div class="area-stack-label">Herramientas</div>
-            <div class="area-stack">
-              <a href="/tech/meta-ads.html">Meta Ads</a>
-              <a href="/tech/google-ads-tech.html">Google Ads</a>
-              <a href="/tech/tiktok-ads.html">TikTok Ads</a>
-              <a href="/tech/linkedin-ads.html">LinkedIn Ads</a>
-              <a href="/tech/capi.html">CAPI</a>
-              <a href="/tech/shopify.html">Shopify</a>
-              <a href="/meta-ads.html" class="area-stack-deep">Ver detalle Meta →</a>
+            <div class="paper-grid" style="padding:1.25rem 1.5rem 1.5rem;margin-top:0.25rem;">
+              <div class="area-stack-label" style="margin-top:0;">Herramientas</div>
+              <div class="area-stack">
+                <a href="/tech/meta-ads.html">Meta Ads</a>
+                <a href="/tech/google-ads-tech.html">Google Ads</a>
+                <a href="/tech/tiktok-ads.html">TikTok Ads</a>
+                <a href="/tech/linkedin-ads.html">LinkedIn Ads</a>
+                <a href="/tech/capi.html">CAPI</a>
+                <a href="/tech/shopify.html">Shopify</a>
+              </div>
+              <div style="margin-top:1.4rem;">
+                <a href="/meta-ads.html" class="btn-sketch sketch-hover">Ver detalle Meta<svg class="sketch-circle" viewBox="0 0 200 64" preserveAspectRatio="none" aria-hidden="true"><path pathLength="100" d="M100,6 C156,3 193,14 192,31 C191,49 152,59 97,58 C43,57 8,50 8,31 C8,15 34,8 88,7 C142,6 178,14 186,26"/></svg></a>
+              </div>
             </div>
           </div>
         </div>
@@ -166,15 +182,19 @@
               <p>Monto la medición desde tu servidor, no solo desde el navegador. Así no pierdes ventas por culpa del iPhone ni de los bloqueadores de anuncios.</p>
               <p>Entrego dos informes: uno para quien lleva los anuncios y otro para quien lleva el negocio. Los dos miran lo mismo, sin que nadie tenga que traducirles los números.</p>
             </div>
-            <div class="area-stack-label">Herramientas</div>
-            <div class="area-stack">
-              <a href="/tech/ga4.html">GA4</a>
-              <a href="/tech/gtm.html">GTM server-side</a>
-              <a href="/tech/gsc.html">Search Console</a>
-              <a href="/tech/capi.html">CAPI</a>
-              <span>Looker Studio</span>
-              <span>BigQuery</span>
-              <a href="/analytics.html" class="area-stack-deep">Ver detalle Analytics →</a>
+            <div class="paper-grid" style="padding:1.25rem 1.5rem 1.5rem;margin-top:0.25rem;">
+              <div class="area-stack-label" style="margin-top:0;">Herramientas</div>
+              <div class="area-stack">
+                <a href="/tech/ga4.html">GA4</a>
+                <a href="/tech/gtm.html">GTM server-side</a>
+                <a href="/tech/gsc.html">Search Console</a>
+                <a href="/tech/capi.html">CAPI</a>
+                <span>Looker Studio</span>
+                <span>BigQuery</span>
+              </div>
+              <div style="margin-top:1.4rem;">
+                <a href="/analytics.html" class="btn-sketch sketch-hover">Ver detalle Analytics<svg class="sketch-circle" viewBox="0 0 200 64" preserveAspectRatio="none" aria-hidden="true"><path pathLength="100" d="M100,6 C156,3 193,14 192,31 C191,49 152,59 97,58 C43,57 8,50 8,31 C8,15 34,8 88,7 C142,6 178,14 186,26"/></svg></a>
+              </div>
             </div>
           </div>
         </div>
@@ -192,15 +212,19 @@
               <p>Tu tienda, tu lista de clientes, tu WhatsApp, tu email, tu logística. Hablándose entre sí, sin que tu equipo tenga que copiar datos a mano.</p>
               <p>Diseño cada flujo a medida: pedidos, carritos abandonados, post-venta, soporte, inventario. Sin plantillas. Si en seis meses quieres llevarlo tú mismo, te dejo todo documentado y a tu equipo formado.</p>
             </div>
-            <div class="area-stack-label">Herramientas</div>
-            <div class="area-stack">
-              <a href="/tech/n8n.html">n8n</a>
-              <a href="/tech/shopify.html">Shopify</a>
-              <a href="/tech/capi.html">CAPI</a>
-              <span>WhatsApp Business</span>
-              <span>HubSpot</span>
-              <span>Klaviyo</span>
-              <a href="/automatizacion.html" class="area-stack-deep">Ver detalle Automation →</a>
+            <div class="paper-grid" style="padding:1.25rem 1.5rem 1.5rem;margin-top:0.25rem;">
+              <div class="area-stack-label" style="margin-top:0;">Herramientas</div>
+              <div class="area-stack">
+                <a href="/tech/n8n.html">n8n</a>
+                <a href="/tech/shopify.html">Shopify</a>
+                <a href="/tech/capi.html">CAPI</a>
+                <span>WhatsApp Business</span>
+                <span>HubSpot</span>
+                <span>Klaviyo</span>
+              </div>
+              <div style="margin-top:1.4rem;">
+                <a href="/automatizacion.html" class="btn-sketch sketch-hover">Ver detalle Automation<svg class="sketch-circle" viewBox="0 0 200 64" preserveAspectRatio="none" aria-hidden="true"><path pathLength="100" d="M100,6 C156,3 193,14 192,31 C191,49 152,59 97,58 C43,57 8,50 8,31 C8,15 34,8 88,7 C142,6 178,14 186,26"/></svg></a>
+              </div>
             </div>
           </div>
         </div>
@@ -218,13 +242,17 @@
               <p>Diseño asistentes con IA que viven dentro de tu día a día. Leen tu información, contestan con tu tono y pasan la conversación a una persona cuando hace falta.</p>
               <p>No vendo chatbots de manual. Antes de construir nada miro si el ahorro compensa el coste. Si no compensa, te lo digo.</p>
             </div>
-            <div class="area-stack-label">Herramientas</div>
-            <div class="area-stack">
-              <a href="/tech/azure.html">Azure OpenAI</a>
-              <span>GPT-4 / Claude</span>
-              <a href="/tech/n8n.html">n8n</a>
-              <span>RAG · Vector DB</span>
-              <a href="/agentic-ai.html" class="area-stack-deep">Ver detalle Agentic AI →</a>
+            <div class="paper-grid" style="padding:1.25rem 1.5rem 1.5rem;margin-top:0.25rem;">
+              <div class="area-stack-label" style="margin-top:0;">Herramientas</div>
+              <div class="area-stack">
+                <a href="/tech/azure.html">Azure OpenAI</a>
+                <span>GPT-4 / Claude</span>
+                <a href="/tech/n8n.html">n8n</a>
+                <span>RAG · Vector DB</span>
+              </div>
+              <div style="margin-top:1.4rem;">
+                <a href="/agentic-ai.html" class="btn-sketch sketch-hover">Ver detalle Agentic AI<svg class="sketch-circle" viewBox="0 0 200 64" preserveAspectRatio="none" aria-hidden="true"><path pathLength="100" d="M100,6 C156,3 193,14 192,31 C191,49 152,59 97,58 C43,57 8,50 8,31 C8,15 34,8 88,7 C142,6 178,14 186,26"/></svg></a>
+              </div>
             </div>
           </div>
         </div>
@@ -242,14 +270,18 @@
               <p>Miro tus números reales contigo: cuenta de resultados, ventas, clientes. Y decidimos qué canales tocar, qué precio poner, qué promoción hacer, dónde expandirte.</p>
               <p>De cada reunión sale una decisión, no un PDF para guardar. Analizo tu caso y te digo qué partes merecen la pena y cuáles todavía no.</p>
             </div>
-            <div class="area-stack-label">Herramientas</div>
-            <div class="area-stack">
-              <a href="/tech/shopify.html">Shopify</a>
-              <a href="/tech/ga4.html">GA4</a>
-              <span>CRM (tu HubSpot/Pipedrive)</span>
-              <span>Looker Studio</span>
-              <span>Spreadsheets compartidos</span>
-              <a href="/growth-strategy.html" class="area-stack-deep">Ver detalle Estrategia →</a>
+            <div class="paper-grid" style="padding:1.25rem 1.5rem 1.5rem;margin-top:0.25rem;">
+              <div class="area-stack-label" style="margin-top:0;">Herramientas</div>
+              <div class="area-stack">
+                <a href="/tech/shopify.html">Shopify</a>
+                <a href="/tech/ga4.html">GA4</a>
+                <span>CRM (tu HubSpot/Pipedrive)</span>
+                <span>Looker Studio</span>
+                <span>Spreadsheets compartidos</span>
+              </div>
+              <div style="margin-top:1.4rem;">
+                <a href="/growth-strategy.html" class="btn-sketch sketch-hover">Ver detalle Estrategia<svg class="sketch-circle" viewBox="0 0 200 64" preserveAspectRatio="none" aria-hidden="true"><path pathLength="100" d="M100,6 C156,3 193,14 192,31 C191,49 152,59 97,58 C43,57 8,50 8,31 C8,15 34,8 88,7 C142,6 178,14 186,26"/></svg></a>
+              </div>
             </div>
           </div>
         </div>
@@ -257,15 +289,35 @@
 
     </div>
 
+    <!-- RESUMEN · parte de caja con las cinco áreas -->
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="parte-caja" style="max-width:640px;margin:0 auto;">
+          <div class="parte-caja-head">PARTE DE CAJA — LO QUE CUBRE</div>
+          <div class="parte-caja-row"><span>PAID MEDIA</span><span class="voice-machine">01</span></div>
+          <div class="parte-caja-row"><span>TRACKING &amp; ANALYTICS</span><span class="voice-machine">02</span></div>
+          <div class="parte-caja-row"><span>AUTOMATION</span><span class="voice-machine">03</span></div>
+          <div class="parte-caja-row"><span>AGENTIC AI</span><span class="voice-machine">04</span></div>
+          <div class="parte-caja-row"><span>ESTRATEGIA</span><span class="voice-machine">05</span></div>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA -->
     <section class="section">
       <div class="container">
         <div class="cta-box">
+          <div class="section-tag">06 — Empieza por una prueba</div>
           <h2 class="h2-serif">Pedir auditoría</h2>
-          <p>Auditoría de tu cuenta y tu funnel: el piloto cero. 30 minutos, gratis, conmigo. Traes acceso a tu cuenta de ads y a tu CRM — nada más. Sales con tres palancas accionables y una forma de medir si tienen efecto. Si encajamos, seguimos. Si no, las palancas te las llevas igual.</p>
+          <p>Auditoría de tu cuenta y tu funnel: el piloto cero. <span class="voice-machine">30 minutos</span>, gratis, conmigo. Traes acceso a tu cuenta de ads y a tu CRM — nada más. Sales con tres palancas accionables y una forma de medir si tienen efecto. Si encajamos, seguimos. Si no, las palancas te las llevas igual.</p>
           <div class="hero-cta" style="justify-content:center;">
             <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-            <a href="/como-trabajamos.html" class="cta-secondary">Cómo trabajamos</a>
+            <a href="/como-trabajamos.html" class="btn-sketch sketch-hover" style="margin-left:.75rem;">Cómo trabajamos<svg class="sketch-circle" viewBox="0 0 200 64" preserveAspectRatio="none" aria-hidden="true"><path pathLength="100" d="M100,6 C156,3 193,14 192,31 C191,49 152,59 97,58 C43,57 8,50 8,31 C8,15 34,8 88,7 C142,6 178,14 186,26"/></svg></a>
+            <div class="note-strip" aria-label="Notas de cómo trabajo">
+              <div class="post-it" style="--tilt:-2.5deg;">Sin preparación previa: traes accesos y ya está.</div>
+              <div class="post-it" style="--tilt:1.5deg;">Sales con tres palancas — <span class="pin-mark">te las llevas igual.</span></div>
+              <div class="post-it" style="--tilt:-1deg;">Si no encajamos, no pasa nada. De verdad.</div>
+            </div>
           </div>
         </div>
       </div>

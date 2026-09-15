@@ -35,14 +35,34 @@
       font-size: 0.92rem; color: var(--text-muted);
     }
     .not-block strong { color: var(--text-secondary); }
+    /* Marca «libreta de campo»: swap de logo + caja del momento de entrada */
+    .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; }
+    .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
+    [data-theme="dark"] .logo-ink { display: none; }
+    [data-theme="light"] .logo-blue { display: none; }
+    .momento-caja {
+      border: 1.5px dashed color-mix(in srgb, var(--ink) 35%, transparent);
+      padding: 2rem 2.25rem;
+    }
   </style>
 </head>
 <body>
-  
-  
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="pencil-rough" x="-5%" y="-15%" width="110%" height="130%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="3" seed="3" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6"/>
+      </filter>
+      <filter id="pencil-rough-2" x="-5%" y="-15%" width="110%" height="130%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" seed="17" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="3"/>
+      </filter>
+    </defs>
+  </svg>
+
   <a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
-    <a href="/" class="nav-logo"><img src="/img/brand/loop-symbol.svg" width="34" height="34" alt="">DaybyDay</a>
+    <a href="/" class="nav-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="34" height="34" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="34" height="34" alt="">DaybyDay</a>
     <div class="nav-menu">
       <ul class="nav-links">
         <li class="nav-dropdown">
@@ -159,11 +179,17 @@
           <h2 class="h2-serif">Del diagnóstico al reporting de margen</h2>
         </div>
         <div class="process-list">
-          <div class="process-step"><div class="process-step-num">01</div><div><h3>Revisión a fondo de la cuenta y la medición</h3><p>Revisamos cuántas veces se ve cada anuncio, si las audiencias se solapan, si el presupuesto está bien repartido y si la medición está bien montada. Detectamos qué euro está pagando ruido.</p></div></div>
-          <div class="process-step"><div class="process-step-num">02</div><div><h3>CAPI server-side</h3><p>Conversions API con event match quality <span class="voice-machine">&gt; 8/10</span>. Sin CAPI bien implementado, Advantage+ no entrena bien y todo lo demás opera con datos cojos.</p></div></div>
-          <div class="process-step"><div class="process-step-num">03</div><div><h3>Reestructura del árbol de campañas</h3><p>Consolidación en pocas campañas Advantage+ Shopping con capa de retargeting dinámico y catalog sales. Audiencias amplias, presupuesto agregado.</p></div></div>
-          <div class="process-step"><div class="process-step-num">04</div><div><h3>Sistema creativo modular</h3><p>Producción ordenada de hooks y formatos. Testing por arquetipo de audiencia. Definimos qué pasa de creative library a always-on basado en datos.</p></div></div>
-          <div class="process-step"><div class="process-step-num">05</div><div><h3>Reporting mensual de negocio</h3><p>Margen de contribución por canal, payback de CAC y LTV por cohorte cruzados con tu Shopify y tu CRM.</p></div></div>
+          <div class="process-step"><div class="process-step-num voice-machine">01</div><div><h3>Revisión a fondo de la cuenta y la medición</h3><p>Revisamos cuántas veces se ve cada anuncio, si las audiencias se solapan, si el presupuesto está bien repartido y si la medición está bien montada. Detectamos qué euro está pagando ruido.</p></div></div>
+          <div class="process-step"><div class="process-step-num voice-machine">02</div><div><h3>CAPI server-side</h3><p>Conversions API con event match quality <span class="voice-machine">&gt; 8/10</span>. Sin CAPI bien implementado, Advantage+ no entrena bien y todo lo demás opera con datos cojos.</p></div></div>
+          <div class="process-step"><div class="process-step-num voice-machine">03</div><div><h3>Reestructura del árbol de campañas</h3><p>Consolidación en pocas campañas Advantage+ Shopping con capa de retargeting dinámico y catalog sales. Audiencias amplias, presupuesto agregado.</p></div></div>
+          <div class="process-step"><div class="process-step-num voice-machine">04</div><div><h3>Sistema creativo modular</h3><p>Producción ordenada de hooks y formatos. Testing por arquetipo de audiencia. Definimos qué pasa de creative library a always-on basado en datos.</p></div></div>
+          <div class="process-step"><div class="process-step-num voice-machine">05</div><div><h3>Reporting mensual de negocio</h3><p>Margen de contribución por canal, payback de CAC y LTV por cohorte cruzados con tu Shopify y tu CRM.</p></div></div>
+        </div>
+        <div class="parte-caja" style="max-width:560px;margin:3rem auto 0;">
+          <div class="parte-caja-head">PARTE DE CAJA — META ADS</div>
+          <div class="parte-caja-row"><span>EMQ CAPI</span><span class="voice-machine">&gt; 8/10</span></div>
+          <div class="parte-caja-row"><span>REPORTING DE NEGOCIO</span><span class="voice-machine">MENSUAL</span></div>
+          <div class="parte-caja-row"><span>AUDITORÍA</span><span class="voice-machine">30 MIN · GRATIS</span></div>
         </div>
       </div>
     </section>
@@ -175,7 +201,7 @@
           <div class="section-tag">03 — Momento de entrada</div>
           <h2 class="h2-serif">Contextos donde encaja este trabajo</h2>
         </div>
-        <div class="prose">
+        <div class="prose momento-caja paper-grid">
           <p>Cuentas Meta maduras con spend mensual entre <span class="voice-machine">5K y 30K€</span> que requieren diagnóstico, reconstrucción o escala. Migraciones donde pixel y CAPI quedaron mal configurados tras un cambio de plataforma. Marcas con histórico paid que necesitan una lectura clara de qué está moviendo realmente el negocio.</p>
         </div>
       </div>
@@ -204,6 +230,12 @@
           <p>Auditoría de tu cuenta y tu funnel: el piloto cero. <span class="voice-machine">30 minutos</span>, gratis, conmigo. Traes acceso a tu cuenta de ads y a tu CRM — nada más. Sales con tres palancas accionables y una forma de medir si tienen efecto. Si encajamos, seguimos. Si no, las palancas te las llevas igual.</p>
           <div class="hero-cta" style="justify-content:center;">
             <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="/como-trabajamos.html" class="btn-sketch sketch-hover" style="margin-left:.75rem;">Cómo trabajamos<svg class="sketch-circle" viewBox="0 0 200 64" preserveAspectRatio="none" aria-hidden="true"><path pathLength="100" d="M100,6 C156,3 193,14 192,31 C191,49 152,59 97,58 C43,57 8,50 8,31 C8,15 34,8 88,7 C142,6 178,14 186,26"/></svg></a>
+            <div class="note-strip" aria-label="Notas de cómo trabajo">
+              <div class="post-it" style="--tilt:-2.5deg;">Sin preparación previa: traes accesos y ya está.</div>
+              <div class="post-it" style="--tilt:1.5deg;">Sales con tres palancas — <span class="pin-mark">te las llevas igual.</span></div>
+              <div class="post-it" style="--tilt:-1deg;">Si no encajamos, no pasa nada. De verdad.</div>
+            </div>
             <a href="/resultados.html" class="cta-secondary">Ver caso Garett</a>
           </div>
         </div>
@@ -211,7 +243,7 @@
     </section>
   </main>
 
-  <footer class="footer"><div class="container"><div class="footer-inner"><div><div class="footer-logo">DaybyDay Consulting · Madrid</div><p class="voice-human" style="font-style:italic;margin-top:0.5rem;">El crecimiento, día a día.</p></div><div class="footer-links"><a href="/problema.html">Problema</a><a href="/como-trabajamos.html">Cómo trabajamos</a><a href="/growth-partner.html">Growth Partner</a><a href="/casos/">Casos</a><a href="/blog.html">Blog</a><a href="/contacto.html">Pedir auditoría</a></div></div><div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;"><p class="footer-copy">© 2026 DayByDay Consulting · analizamos · ejecutamos · acompañamos</p></div></div></footer>
+  <footer class="footer"><div class="container"><div class="footer-inner"><div><div class="footer-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="22" height="22" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="22" height="22" alt="">DaybyDay Consulting · Madrid</div><p class="voice-human" style="font-style:italic;margin-top:0.5rem;">El crecimiento, día a día.</p></div><div class="footer-links"><a href="/problema.html">Problema</a><a href="/como-trabajamos.html">Cómo trabajamos</a><a href="/growth-partner.html">Growth Partner</a><a href="/casos/">Casos</a><a href="/blog.html">Blog</a><a href="/contacto.html">Pedir auditoría</a></div></div><div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;"><p class="footer-copy">© 2026 DayByDay Consulting · analizamos · ejecutamos · acompañamos</p></div></div></footer>
   <script src="/js/main.js"></script>
 </body>
 </html>

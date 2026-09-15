@@ -20,14 +20,21 @@
     .lead-by strong { color:var(--text-secondary);font-weight:600; }
     .not-block { max-width:720px;margin:1.5rem auto 0;padding:1rem 1.25rem;background:var(--bg-card);border:1px solid var(--border);border-left:2px solid var(--text-muted);border-radius:8px;font-size:0.92rem;color:var(--text-muted); }
     .not-block strong { color:var(--text-secondary); }
+    /* Marca «libreta de campo»: swap de logo + caja del momento de entrada */
+    .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; }
+    .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
+    [data-theme="dark"] .logo-ink { display: none; }
+    [data-theme="light"] .logo-blue { display: none; }
+    .momento-caja {
+      border: 1.5px dashed color-mix(in srgb, var(--ink) 35%, transparent);
+      padding: 2rem 2.25rem;
+    }
   </style>
 </head>
 <body>
-  
-  
   <a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
-    <a href="/" class="nav-logo"><img src="/img/brand/loop-symbol.svg" width="34" height="34" alt="">DaybyDay</a>
+    <a href="/" class="nav-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="34" height="34" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="34" height="34" alt="">DaybyDay</a>
     <div class="nav-menu">
       <ul class="nav-links">
         <li class="nav-dropdown">
@@ -135,11 +142,11 @@
       <div class="container">
         <div class="section-header"><div class="section-tag">02 — Cómo lo operamos</div><h2 class="h2-serif">De la validación al pipeline reportado</h2></div>
         <div class="process-list">
-          <div class="process-step"><div class="process-step-num">01</div><div><h3>Validación de encaje (gratis)</h3><p>Si LTV y ciclo no soportan el canal, te lo decimos. No avanzamos hasta confirmar que LinkedIn rentabiliza tu negocio.</p></div></div>
-          <div class="process-step"><div class="process-step-num">02</div><div><h3>El tipo de cliente, según los datos de LinkedIn</h3><p>Audiencias por industry, seniority, function, company size. Matched audiences cruzadas con tu CRM.</p></div></div>
-          <div class="process-step"><div class="process-step-num">03</div><div><h3>Lead Gen Forms + thought leadership</h3><p>Combinación de formularios nativos para captación y posts patrocinados desde perfiles personales para demand gen.</p></div></div>
-          <div class="process-step"><div class="process-step-num">04</div><div><h3>Atribución sobre CRM</h3><p>HubSpot / Pipedrive / Salesforce + LinkedIn Insight Tag + UTMs persistentes. Sabemos qué lead cierra y cuál no.</p></div></div>
-          <div class="process-step"><div class="process-step-num">05</div><div><h3>Cuántos contactos cierran de verdad</h3><p>El coste por contacto no dice nada. Lo que importa: cuántos contactos se convierten en oportunidad de venta y cuántos cierran. Reportamos las dos cosas.</p></div></div>
+          <div class="process-step"><div class="process-step-num voice-machine">01</div><div><h3>Validación de encaje (gratis)</h3><p>Si LTV y ciclo no soportan el canal, te lo decimos. No avanzamos hasta confirmar que LinkedIn rentabiliza tu negocio.</p></div></div>
+          <div class="process-step"><div class="process-step-num voice-machine">02</div><div><h3>El tipo de cliente, según los datos de LinkedIn</h3><p>Audiencias por industry, seniority, function, company size. Matched audiences cruzadas con tu CRM.</p></div></div>
+          <div class="process-step"><div class="process-step-num voice-machine">03</div><div><h3>Lead Gen Forms + thought leadership</h3><p>Combinación de formularios nativos para captación y posts patrocinados desde perfiles personales para demand gen.</p></div></div>
+          <div class="process-step"><div class="process-step-num voice-machine">04</div><div><h3>Atribución sobre CRM</h3><p>HubSpot / Pipedrive / Salesforce + LinkedIn Insight Tag + UTMs persistentes. Sabemos qué lead cierra y cuál no.</p></div></div>
+          <div class="process-step"><div class="process-step-num voice-machine">05</div><div><h3>Cuántos contactos cierran de verdad</h3><p>El coste por contacto no dice nada. Lo que importa: cuántos contactos se convierten en oportunidad de venta y cuántos cierran. Reportamos las dos cosas.</p></div></div>
         </div>
       </div>
     </section>
@@ -147,7 +154,7 @@
     <section class="section">
       <div class="container">
         <div class="section-header"><div class="section-tag">03 — Momento de entrada</div><h2 class="h2-serif">Contextos donde encaja este trabajo</h2></div>
-        <div class="prose">
+        <div class="prose momento-caja paper-grid">
           <p>Negocios B2B con ticket alto y ciclo de venta largo: SaaS, consultoría premium, formación ejecutiva, servicios de alto valor. Proceso comercial estructurado con CRM activo. Capacidad de sostener test de canal durante al menos <span class="voice-machine">90 días</span> sin esperar conversión inmediata.</p>
         </div>
       </div>
@@ -170,13 +177,19 @@
         <div class="cta-box">
           <h2 class="h2-serif">Validar encaje en 30 minutos</h2>
           <p>Auditoría gratuita. Si LinkedIn no encaja con tu negocio, te lo digo en la llamada — y te oriento al canal que sí.</p>
-          <div class="hero-cta" style="justify-content:center;"><a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+          <div class="hero-cta" style="justify-content:center;">
+            <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <div class="note-strip" aria-label="Notas de cómo trabajo">
+              <div class="post-it" style="--tilt:-2.5deg;">Sin preparación previa: traes accesos y ya está.</div>
+              <div class="post-it" style="--tilt:-1deg;">Si no encajamos, no pasa nada. De verdad.</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer"><div class="container"><div class="footer-inner"><div><div class="footer-logo">DaybyDay Consulting · Madrid</div><p class="voice-human" style="font-style:italic;margin-top:0.5rem;">El crecimiento, día a día.</p></div><div class="footer-links"><a href="/problema.html">Problema</a><a href="/como-trabajamos.html">Cómo trabajamos</a><a href="/growth-partner.html">Growth Partner</a><a href="/casos/">Casos</a><a href="/blog.html">Blog</a><a href="/contacto.html">Pedir auditoría</a></div></div><div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;"><p class="footer-copy">© 2026 DayByDay Consulting · analizamos · ejecutamos · acompañamos</p></div></div></footer>
+  <footer class="footer"><div class="container"><div class="footer-inner"><div><div class="footer-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="22" height="22" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="22" height="22" alt="">DaybyDay Consulting · Madrid</div><p class="voice-human" style="font-style:italic;margin-top:0.5rem;">El crecimiento, día a día.</p></div><div class="footer-links"><a href="/problema.html">Problema</a><a href="/como-trabajamos.html">Cómo trabajamos</a><a href="/growth-partner.html">Growth Partner</a><a href="/casos/">Casos</a><a href="/blog.html">Blog</a><a href="/contacto.html">Pedir auditoría</a></div></div><div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;"><p class="footer-copy">© 2026 DayByDay Consulting · analizamos · ejecutamos · acompañamos</p></div></div></footer>
   <script src="/js/main.js"></script>
 </body>
 </html>
