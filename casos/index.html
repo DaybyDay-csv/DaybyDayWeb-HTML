@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" data-mood="default">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Los casos · DaybyDay Consulting</title>
+  <meta name="description" content="Los casos de DaybyDay Consulting: Garett, una universidad privada (NDA), la cadena Aras Life Plus → Cartri → Garett, Cartri, Globalthy y Ferra. Cifras del CRM de cada cliente o de sus plataformas.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/casos/">
+  <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/casos/">
+  <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/casos/">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    /* Logo de marca: swap light/dark según data-theme (toggles main.js) */
+    .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; }
+    .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
+    [data-theme="dark"] .logo-ink { display: none; }
+    [data-theme="light"] .logo-blue { display: none; }
+    /* Índice de casos — filas gigantes estilo McCann */
+    .casos-hero { padding: 5rem 0 0; }
+    .casos-h1 { font-family: var(--font-human); font-weight: 600; font-size: clamp(3rem, 8vw, 5.5rem); line-height: 1.02; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+    .casos-sub { font-family: var(--font-machine); font-variant-numeric: tabular-nums; font-size: 0.85rem; line-height: 1.7; color: var(--text-muted); max-width: 560px; margin: 0; }
+    .casos-lista { margin-top: 3.25rem; border-top: 1px solid color-mix(in srgb, var(--ink) 18%, transparent); }
+    .caso-fila { display: grid; grid-template-columns: 110px minmax(0, 1fr) auto; align-items: center; gap: 2rem; padding: 2.4rem 0; border-bottom: 1px solid color-mix(in srgb, var(--ink) 18%, transparent); text-decoration: none; transition: opacity 0.2s ease; }
+    .caso-fila:hover, .caso-fila:focus-visible { opacity: 0.55; }
+    .caso-logo { display: flex; align-items: center; justify-content: center; }
+    .caso-logo img { width: 72px; height: 72px; object-fit: contain; }
+    .caso-logo-mono { font-family: var(--font-machine); font-weight: 500; font-size: 0.95rem; letter-spacing: 0.14em; border: 1px dashed color-mix(in srgb, var(--ink) 40%, transparent); padding: 0.8rem 1rem; color: var(--text-muted); }
+    .caso-logo-word { font-family: var(--font-human); font-weight: 600; font-size: 1.7rem; letter-spacing: -0.01em; color: var(--text-primary); }
+    .caso-fila-main { display: flex; flex-direction: column; gap: 0.55rem; min-width: 0; }
+    .caso-idea { font-size: clamp(1.6rem, 3.6vw, 2.4rem); line-height: 1.12; margin: 0; color: var(--text-primary); }
+    .caso-fila-meta { font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); }
+    .caso-estado { font-size: 0.62rem; padding-bottom: 3px; margin-bottom: 0; white-space: nowrap; }
+    @media (max-width: 720px) {
+      .casos-hero { padding-top: 3.5rem; }
+      .caso-fila { grid-template-columns: 64px minmax(0, 1fr); gap: 1.25rem; padding: 1.75rem 0; }
+      .caso-logo img { width: 56px; height: 56px; }
+      .caso-estado { grid-column: 2; justify-self: start; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .caso-fila { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Saltar al contenido principal</a>
+<nav class="main-nav">
+    <a href="/" class="nav-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="34" height="34" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="34" height="34" alt="">DaybyDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-btn">Lo que cubre</button>
+          <div class="nav-dropdown-content mega">
+            <div class="mega-grid" style="grid-template-columns:repeat(3,1fr);">
+              <div class="mega-section">
+                <div class="mega-section-title">Áreas</div>
+                <a href="/lo-que-cubre.html#paid-media">Paid media</a>
+                <a href="/lo-que-cubre.html#tracking">Tracking &amp; Analytics</a>
+                <a href="/lo-que-cubre.html#automation">Automation</a>
+                <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
+                <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+              </div>
+              <div class="mega-section">
+                <div class="mega-section-title">Servicios</div>
+                <a href="/meta-ads.html">Meta Ads</a>
+                <a href="/google-ads.html">Google Ads</a>
+                <a href="/tiktok-ads.html">TikTok Ads</a>
+                <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                <a href="/automatizacion.html">Automatización</a>
+                <a href="/analytics.html">Analytics</a>
+                <a href="/agentic-ai.html">Agentic AI</a>
+                <a href="/growth-strategy.html">Growth Strategy</a>
+              </div>
+              <div class="mega-section">
+                <div class="mega-section-title">Stack</div>
+                <a href="/tech/ga4.html">GA4</a>
+                <a href="/tech/gtm.html">GTM</a>
+                <a href="/tech/gsc.html">Search Console</a>
+                <a href="/tech/capi.html">CAPI</a>
+                <a href="/tech/n8n.html">n8n</a>
+                <a href="/tech/azure.html">Azure</a>
+                <a href="/tech/shopify.html">Shopify</a>
+                <a href="/tech/dsp.html">DSP</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="/como-trabajamos.html">Cómo trabajamos</a></li>
+        <li><a href="/casos/">Casos</a></li>
+        <li><a href="/blog.html">Blog</a></li><li><a href="/tools/">Tools</a></li>
+        <li><a href="/contacto.html" class="nav-cta">Pedir auditoría</a></li>
+      </ul>
+      <button class="theme-toggle-btn" aria-label="Cambiar tema" title="Cambiar tema">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42-1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      </button>
+      <button class="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobile-nav" class="mobile-nav">
+    <a href="/" class="mobile-nav-link">Inicio</a>
+    <a href="/lo-que-cubre.html" class="mobile-nav-link">Lo que cubre</a>
+    <a href="/como-trabajamos.html" class="mobile-nav-link">Cómo trabajamos</a>
+    <a href="/casos/" class="mobile-nav-link">Casos</a>
+    <a href="/blog.html" class="mobile-nav-link">Blog</a><a href="/tools/" class="mobile-nav-link">Tools</a>
+    <a href="/contacto.html" class="mobile-nav-link">Pedir auditoría</a>
+  </div>
+
+  <main id="main" class="page-wrapper">
+
+    <header class="casos-hero">
+      <div class="container" style="max-width:920px;">
+        <h1 class="casos-h1">Los casos.</h1>
+        <p class="casos-sub">Seis historias con nombre propio. Las cifras salen del CRM de cada cliente o de sus plataformas — lo en curso se marca como en curso.</p>
+      </div>
+    </header>
+
+    <section class="section" style="padding-top:1.5rem;" aria-label="Lista de casos">
+      <div class="container" style="max-width:920px;">
+        <div class="casos-lista">
+
+          <a class="caso-fila" href="/casos/garett">
+            <span class="caso-logo"><img src="/img/clients/garett.png" width="72" height="72" alt="" loading="lazy"></span>
+            <span class="caso-fila-main">
+              <span class="h2-serif caso-idea">Seis semanas.</span>
+              <span class="caso-fila-meta voice-machine">Garett España · Ecommerce D2C beauty-tech</span>
+            </span>
+            <span class="section-tag caso-estado">Activo</span>
+          </a>
+
+          <a class="caso-fila" href="/casos/universidad">
+            <span class="caso-logo"><span class="caso-logo-mono" aria-hidden="true">NDA</span></span>
+            <span class="caso-fila-main">
+              <span class="h2-serif caso-idea">El caso que no puedo contar.</span>
+              <span class="caso-fila-meta voice-machine">Universidad privada · Educación superior high-ticket</span>
+            </span>
+            <span class="section-tag caso-estado">Cliente mensual 2023–2026</span>
+          </a>
+
+          <a class="caso-fila" href="/casos/tres-negocios">
+            <span class="caso-logo"><img src="/img/clients/arasnet.png" width="72" height="72" alt="" loading="lazy"></span>
+            <span class="caso-fila-main">
+              <span class="h2-serif caso-idea">Tres negocios, un decisor.</span>
+              <span class="caso-fila-meta voice-machine">Aras Life Plus → Cartri → Garett · Ecommerce + automation</span>
+            </span>
+            <span class="section-tag caso-estado">Histórico → Activo</span>
+          </a>
+
+          <a class="caso-fila" href="/casos/cartri">
+            <span class="caso-logo"><img src="/img/clients/cartri.png" width="72" height="72" alt="" loading="lazy"></span>
+            <span class="caso-fila-main">
+              <span class="h2-serif caso-idea">233 captaciones y 5 pedidos.</span>
+              <span class="caso-fila-meta voice-machine">Cartri · Fabricante de pádel, D2C</span>
+            </span>
+            <span class="section-tag caso-estado">En curso</span>
+          </a>
+
+          <a class="caso-fila" href="/casos/globalthy">
+            <span class="caso-logo"><img src="/img/clients/globalthy.png" width="72" height="72" alt="" loading="lazy"></span>
+            <span class="caso-fila-main">
+              <span class="h2-serif caso-idea">0 € si no hay cita.</span>
+              <span class="caso-fila-meta voice-machine">Globalthy · Salud privada, marketplace</span>
+            </span>
+            <span class="section-tag caso-estado">En curso</span>
+          </a>
+
+          <a class="caso-fila" href="/casos/ferra">
+            <span class="caso-logo"><span class="caso-logo-word" aria-hidden="true">Ferra</span></span>
+            <span class="caso-fila-main">
+              <span class="h2-serif caso-idea">11 cuentas antes de vender nada.</span>
+              <span class="caso-fila-meta voice-machine">Ferra · Joyería D2C</span>
+            </span>
+            <span class="section-tag caso-estado">En curso</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="24" height="24" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="24" height="24" alt="">DaybyDay Consulting · Madrid</div>
+          <p class="voice-human" style="font-style:italic;color:var(--text-muted);font-size:0.95rem;margin:0.5rem 0 0;">El crecimiento, día a día.</p>
+        </div>
+        <div class="footer-links">
+          <a href="/lo-que-cubre.html">Lo que cubre</a>
+          <a href="/como-trabajamos.html">Cómo trabajamos</a>
+          <a href="/casos/">Casos</a>
+          <a href="/growth-partner.html">Growth Partner</a>
+          <a href="/blog.html">Blog</a>
+          <a href="/contacto.html">Pedir auditoría</a>
+        </div>
+      </div>
+      <div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;">
+        <p class="footer-copy">© 2026 DaybyDay Consulting · Madrid</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

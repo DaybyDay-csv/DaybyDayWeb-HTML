@@ -2696,3 +2696,56 @@ h4.voice-human, h5.voice-human, h6.voice-human { font-weight: 600; }
 .cli-cartri { height: 32px; }
 .cli-douf { height: 28px; }
 .cli-lvp { height: 30px; }
+
+/* ============================================================
+   CAPA BRAND INTRO — portada McCann (nombre gigante full-viewport)
+   Colores fijos (no var): la portada es independiente del tema.
+   ============================================================ */
+.brand-intro {
+  min-height: 100svh;
+  background: #14131A;
+  color: #FAF8F3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+.brand-intro-name {
+  font-weight: 800;
+  font-size: clamp(4rem, 15vw, 16rem);
+  line-height: .9;
+  letter-spacing: -0.045em;
+  margin: 0;
+  color: #FAF8F3;
+}
+.brand-intro-craft {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(1.7rem, 3.6vw, 3.4rem);
+  margin: 2.2rem 0 0;
+  color: #FAF8F3;
+}
+.brand-intro-es {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: .85rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  opacity: .55;
+  margin: 1.4rem 0 0;
+}
+.brand-intro-scroll {
+  margin-top: 3.5rem;
+  font-size: 1.4rem;
+  opacity: .5;
+  animation: intro-scroll 2.2s var(--ease-out, ease) infinite;
+}
+@keyframes intro-scroll {
+  0%,100% { transform: translateY(0); opacity: .5; }
+  50% { transform: translateY(8px); opacity: .9; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-intro-scroll { animation: none; }
+}
