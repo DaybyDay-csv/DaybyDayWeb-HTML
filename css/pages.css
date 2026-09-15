@@ -2556,3 +2556,6 @@ h4.voice-human, h5.voice-human, h6.voice-human { font-weight: 600; }
 
 /* --- Logo del nav sobre fondo oscuro: chip crema (regla global) --- */
 [data-theme="dark"] .nav-logo img { background: #FAF8F3; border-radius: 9px; padding: 3px; }
+
+/* Regla de marca: los números de tiles son tinta azul, no rojo (red flag solo señala) */
+.tile-label, .tile-nav-item .tile-label { color: var(--ink-blue); }
