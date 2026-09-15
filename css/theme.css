@@ -124,7 +124,7 @@
   z-index: 9999;
   padding: 0.75rem 1.25rem;
   background: var(--accent);
-  color: #fff;
+  color: #FAF8F3;
   font-size: 0.9rem;
   font-weight: 600;
   text-decoration: none;
@@ -228,7 +228,7 @@
 }
 .nav-dropdown-content a.highlight:hover {
   background: var(--accent);
-  color: #fff;
+  color: #FAF8F3;
 }
 
 /* Arrow positioned above dropdown */
@@ -337,9 +337,9 @@ a[href^="#"] {
   --accent: #3B82F6;
   --accent-hover: #60A5FA;
   --accent-soft: rgba(59, 130, 246, 0.15);
-  --bg-primary: #0f0f14;
+  --bg-primary: #14131A;
   --bg-secondary: #14141b;
-  --bg-card: #17171f;
+  --bg-card: #1C1B24;
   --bg-elevated: #1c1c25;
   --text-primary: #f5f5f7;
   --text-secondary: #a3a3ad;
@@ -381,8 +381,8 @@ a[href^="#"] {
 [data-theme="light"] {
   --bg-primary: #faf8f3;
   --bg-secondary: #f1ede4;
-  --bg-card: #ffffff;
-  --bg-elevated: #ffffff;
+  --bg-card: #FAF8F3;
+  --bg-elevated: #FAF8F3;
   --text-primary: #0a0a0a;
   --text-secondary: #444444;
   --text-muted: #8a8a8a;
@@ -399,9 +399,9 @@ a[href^="#"] {
 
 /* ===== THEME: DARK (default — editorial blue) ===== */
 [data-theme="dark"] {
-  --bg-primary: #0f0f14;
+  --bg-primary: #14131A;
   --bg-secondary: #14141b;
-  --bg-card: #17171f;
+  --bg-card: #1C1B24;
   --bg-elevated: #1c1c25;
   --text-primary: #f5f5f7;
   --text-secondary: #a3a3ad;
@@ -415,7 +415,7 @@ a[href^="#"] {
   /* Marca en dark: ink→texto claro, paper→fondo oscuro existente.
      post-its y papel físico siguen claros (--paper-postit/--tape intactos).
      --ink-blue/--flag-red/--go-green no cambian: legibles en ambos temas. */
-  --paper: #0f0f14;
+  --paper: #14131A;
   --ink: #f5f5f7;
 }
 
@@ -515,7 +515,7 @@ a.highlight { color: var(--accent-red); }
   box-shadow: 0 8px 24px var(--accent-soft);
 }
 [data-theme="light"] .cta-secondary {
-  background: #ffffff;
+  background: #FAF8F3;
   border-color: var(--text-primary);
   color: var(--text-primary);
 }
@@ -551,7 +551,7 @@ a.highlight { color: var(--accent-red); }
 }
 [data-theme="light"] .anchor-stat .anchor-value { color: var(--text-primary) !important; }
 [data-theme="light"] .compare-col.highlight {
-  background: #ffffff;
+  background: #FAF8F3;
   border-color: var(--accent-red);
 }
 [data-theme="light"] .compare-col.highlight .compare-type,
