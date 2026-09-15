@@ -229,3 +229,54 @@ document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
 
   observer.observe(wrap);
 })();
+/* ==== HERO CRAFT: punto que recorre el bucle siguiendo al cursor + tilt del ticket ==== */
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = window.matchMedia('(pointer: fine)').matches;
+  if (reduce) return;
+  var art = document.querySelector('.hero-art');
+  if (!art) return;
+
+  // Estaciones + punto sobre el path del bucle
+  var path = document.querySelector('.craft-path');
+  var dot = document.querySelector('.craft-dot');
+  var stations = document.querySelector('.craft-stations');
+  if (path && dot && stations) {
+    var L = path.getTotalLength();
+    [0, 0.25, 0.5, 0.75, 0.97].forEach(function (r) {
+      var p = path.getPointAtLength(L * r);
+      var c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      c.setAttribute('cx', p.x); c.setAttribute('cy', p.y); c.setAttribute('r', 8);
+      stations.appendChild(c);
+    });
+    if (fine) {
+      art.addEventListener('mousemove', function (e) {
+        var b = art.getBoundingClientRect();
+        var ratio = Math.min(1, Math.max(0, (e.clientX - b.left) / b.width));
+        var p = path.getPointAtLength(L * ratio);
+        dot.setAttribute('cx', p.x); dot.setAttribute('cy', p.y);
+      });
+      art.addEventListener('mouseleave', function () {
+        var p = path.getPointAtLength(0);
+        dot.setAttribute('cx', p.x); dot.setAttribute('cy', p.y);
+      });
+    }
+    var p0 = path.getPointAtLength(0);
+    dot.setAttribute('cx', p0.x); dot.setAttribute('cy', p0.y);
+  }
+
+  // Tilt 3D sutil del parte de caja
+  var ticket = document.querySelector('[data-tilt]');
+  if (ticket && fine) {
+    ticket.style.transform = 'rotate(-3deg)';
+    ticket.addEventListener('mousemove', function (e) {
+      var b = ticket.getBoundingClientRect();
+      var rx = ((e.clientY - b.top) / b.height - 0.5) * -6;
+      var ry = ((e.clientX - b.left) / b.width - 0.5) * 7;
+      ticket.style.transform = 'perspective(700px) rotateX(' + rx.toFixed(2) + 'deg) rotateY(' + ry.toFixed(2) + 'deg) rotate(-3deg)';
+    });
+    ticket.addEventListener('mouseleave', function () {
+      ticket.style.transform = 'rotate(-3deg)';
+    });
+  }
+})();
