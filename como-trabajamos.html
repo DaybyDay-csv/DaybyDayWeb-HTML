@@ -11,7 +11,7 @@
   <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/como-trabajamos.html">
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
   <link rel="stylesheet" href="/css/sparkles.css">
   <link rel="stylesheet" href="/css/modern.css">
@@ -19,6 +19,11 @@
   <style>
     :root { --accent-color: #6366f1; }
     .hero-badge { background: #6366f11a; border: 1px solid #6366f140; color: #818cf8; }
+    /* Logo de marca: swap light/dark según data-theme (toggles main.js) */
+    .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; }
+    .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
+    [data-theme="dark"] .logo-ink { display: none; }
+    [data-theme="light"] .logo-blue { display: none; }
   </style>
 </head>
 <body>
@@ -28,7 +33,7 @@
   
   <a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
-    <a href="/" class="nav-logo">DayByDay</a>
+    <a href="/" class="nav-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="34" height="34" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="34" height="34" alt="">DaybyDay</a>
     <div class="nav-menu">
       <ul class="nav-links">
         <li class="nav-dropdown">
@@ -135,8 +140,8 @@
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">El equipo que ejecuta</div>
-          <h2>Una persona que decide la estrategia y también construye el sistema</h2>
+          <div class="section-tag">01 — El equipo que ejecuta</div>
+          <h2 class="h2-serif">Una persona que decide la estrategia y también construye el sistema</h2>
           <p>Diseño, ejecuto y reporto yo. Si llamas, descuelgo yo. Nada se pierde en el traspaso.</p>
         </div>
         <div class="prose" style="max-width:760px;margin:0 auto;">
@@ -150,8 +155,8 @@
     <section class="section section-dark">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">Diferenciadores operativos</div>
-          <h2>Lo que cambia cuando hablas con quien dirige</h2>
+          <div class="section-tag">02 — Diferenciadores operativos</div>
+          <h2 class="h2-serif">Lo que cambia cuando hablas con quien dirige</h2>
         </div>
         <div class="pillars-grid">
           <div class="pillar-card">
@@ -178,41 +183,41 @@
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">Framework DayByDay</div>
-          <h2>Cinco fases entre la primera llamada y la operación estable</h2>
+          <div class="section-tag">03 — Framework DayByDay</div>
+          <h2 class="h2-serif">Cinco fases entre la primera llamada y la operación estable</h2>
           <p>El mismo proceso para cualquier cliente, adaptado en profundidad técnica a tu negocio.</p>
         </div>
         <div class="process-list">
           <div class="process-step">
-            <div class="process-step-num">01</div>
+            <div class="process-step-num voice-machine">01</div>
             <div>
-              <h3>Diagnóstico: medir antes de tocar (semana 0)</h3>
-              <p>Llamada de 30 minutos conmigo. Lectura inicial de cuenta paid, Shopify y tracking. El tracking se instala el día uno — del tracking cuelga el porcentaje y el caso de éxito. Te devuelvo la palanca que mueve más caja a 90 días. Sin coste, sin compromiso.</p>
+              <h3>Diagnóstico: medir antes de tocar <span class="voice-machine">(semana 0)</span></h3>
+              <p>Llamada de <span class="voice-machine">30 minutos</span> conmigo. Lectura inicial de cuenta paid, Shopify y tracking. El tracking se instala el día uno — del tracking cuelga el porcentaje y el caso de éxito. Te devuelvo la palanca que mueve más caja a <span class="voice-machine">90 días</span>. Sin coste, sin compromiso.</p>
             </div>
           </div>
           <div class="process-step">
-            <div class="process-step-num">02</div>
+            <div class="process-step-num voice-machine">02</div>
             <div>
-              <h3>Audit técnico (semanas 1–2)</h3>
+              <h3>Audit técnico <span class="voice-machine">(semanas 1–2)</span></h3>
               <p>Accedo a tus cuentas de publicidad, tu tienda, tu lista de clientes y la medición. Reviso cómo está montado todo. Te entrego un documento con el plan a medida de tu negocio.</p>
             </div>
           </div>
           <div class="process-step">
-            <div class="process-step-num">03</div>
+            <div class="process-step-num voice-machine">03</div>
             <div>
-              <h3>Implementación inicial (días 15–30)</h3>
+              <h3>Implementación inicial <span class="voice-machine">(días 15–30)</span></h3>
               <p>Ejecuto las primeras palancas: reconstrucción de cuentas, CAPI y server-side tracking, automation de flujos críticos (carrito, WhatsApp, CRM). Dashboards de margen, payback y LTV en vivo.</p>
             </div>
           </div>
           <div class="process-step">
-            <div class="process-step-num">04</div>
+            <div class="process-step-num voice-machine">04</div>
             <div>
-              <h3>Operación + escalado (mes 2 en adelante)</h3>
+              <h3>Operación + escalado <span class="voice-machine">(mes 2 en adelante)</span></h3>
               <p>Reuniones semanales conmigo. Decisiones sobre creatividades, presupuesto, expansión de canal y automation. No escalo nada antes de entender por qué funciona.</p>
             </div>
           </div>
           <div class="process-step">
-            <div class="process-step-num">05</div>
+            <div class="process-step-num voice-machine">05</div>
             <div>
               <h3>Reporting de negocio (mensual)</h3>
               <p>Lo que de verdad queda después de costes, cuánto tardas en recuperar un cliente nuevo y cuánto te deja con el tiempo. No los números de la plataforma. Lo que tu dirección necesita para decidir sobre la caja.</p>
@@ -226,8 +231,8 @@
     <section class="section section-dark">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">Sin playbooks</div>
-          <h2>Soluciones ad-hoc, no checklists reciclados</h2>
+          <div class="section-tag">04 — Sin playbooks</div>
+          <h2 class="h2-serif">Soluciones ad-hoc, no checklists reciclados</h2>
           <p>Cada cliente recibe un SDD (System Design Document) y un PDD (Process Design Document) ajustado a su stack, su equipo y su fase.</p>
         </div>
         <div class="prose">
@@ -242,8 +247,8 @@
     <section class="section">
       <div class="container">
         <div class="cta-box" style="background:var(--bg-card);">
-          <div class="eyebrow" style="position:relative;">Lección Douf</div>
-          <h2 style="font-size:1.5rem;">"Si capitalizas un éxito antes de entender qué lo produjo, lo matas."</h2>
+          <div class="section-tag" style="position:relative;">05 — Lección Douf</div>
+          <h2 class="h2-serif" style="font-size:1.5rem;">"Si capitalizas un éxito antes de entender qué lo produjo, lo matas."</h2>
           <p style="font-size:1rem;">Cuando una creatividad o un canal empieza a funcionar, el reflejo es escalarlo. Pero escalar sin entender por qué funciona destruye el resultado. Por eso analizo antes de ejecutar, ejecuto antes de escalar y acompaño antes de soltar.</p>
         </div>
       </div>
@@ -253,7 +258,7 @@
     <section class="section">
       <div class="container">
         <div class="cta-box">
-          <h2>Empezar por el diagnóstico</h2>
+          <h2 class="h2-serif">Empezar por el diagnóstico</h2>
           <p>Auditoría gratuita de 30 minutos conmigo. Si no encajamos, te lo digo.</p>
           <div class="hero-cta" style="justify-content:center;">
             <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
@@ -271,8 +276,8 @@
     <div class="container">
       <div class="footer-inner">
         <div>
-          <div class="footer-logo">DayByDay Consulting</div>
-          <div style="color:var(--text-muted);font-size:0.8rem;margin-top:0.5rem;">DaybyDay · Growth partner en Madrid</div>
+          <div class="footer-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="24" height="24" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="24" height="24" alt="">DaybyDay Consulting · Madrid</div>
+          <p class="voice-human" style="font-style:italic;color:var(--text-muted);font-size:0.95rem;margin:0.5rem 0 0;">El crecimiento, día a día.</p>
         </div>
         <div class="footer-links">
           <a href="/problema.html">Problema</a>

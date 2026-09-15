@@ -11,17 +11,24 @@
   <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/lo-que-cubre.html">
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
   <link rel="stylesheet" href="/css/modern.css">
   <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    /* Logo de marca: swap light/dark según data-theme (toggles main.js) */
+    .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; }
+    .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
+    [data-theme="dark"] .logo-ink { display: none; }
+    [data-theme="light"] .logo-blue { display: none; }
+  </style>
 </head>
 <body>
 
   
   <a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
-    <a href="/" class="nav-logo">DayByDay</a>
+    <a href="/" class="nav-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="34" height="34" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="34" height="34" alt="">DaybyDay</a>
     <div class="nav-menu">
       <ul class="nav-links">
         <li class="nav-dropdown">
@@ -125,8 +132,8 @@
       <section id="paid-media" class="area-block">
         <div class="area-grid">
           <div>
-            <div class="area-num">01 · Paid media</div>
-            <h2 class="area-title">Llevo tu publicidad</h2>
+            <div class="area-num section-tag">01 — Paid media</div>
+            <h2 class="area-title h2-serif">Llevo tu publicidad</h2>
           </div>
           <div>
             <div class="area-desc">
@@ -151,8 +158,8 @@
       <section id="tracking" class="area-block">
         <div class="area-grid">
           <div>
-            <div class="area-num">02 · Tracking &amp; Analytics</div>
-            <h2 class="area-title">Mido lo que de verdad pasa</h2>
+            <div class="area-num section-tag">02 — Tracking &amp; Analytics</div>
+            <h2 class="area-title h2-serif">Mido lo que de verdad pasa</h2>
           </div>
           <div>
             <div class="area-desc">
@@ -177,8 +184,8 @@
       <section id="automation" class="area-block">
         <div class="area-grid">
           <div>
-            <div class="area-num">03 · Automation</div>
-            <h2 class="area-title">Conecto lo que ya tienes</h2>
+            <div class="area-num section-tag">03 — Automation</div>
+            <h2 class="area-title h2-serif">Conecto lo que ya tienes</h2>
           </div>
           <div>
             <div class="area-desc">
@@ -203,8 +210,8 @@
       <section id="agentic-ai" class="area-block">
         <div class="area-grid">
           <div>
-            <div class="area-num">04 · Agentic AI</div>
-            <h2 class="area-title">Agentes dentro de tu operativa</h2>
+            <div class="area-num section-tag">04 — Agentic AI</div>
+            <h2 class="area-title h2-serif">Agentes dentro de tu operativa</h2>
           </div>
           <div>
             <div class="area-desc">
@@ -227,8 +234,8 @@
       <section id="estrategia" class="area-block">
         <div class="area-grid">
           <div>
-            <div class="area-num">05 · Estrategia</div>
-            <h2 class="area-title">Conversación de negocio, no taller</h2>
+            <div class="area-num section-tag">05 — Estrategia</div>
+            <h2 class="area-title h2-serif">Conversación de negocio, no taller</h2>
           </div>
           <div>
             <div class="area-desc">
@@ -254,7 +261,7 @@
     <section class="section">
       <div class="container">
         <div class="cta-box">
-          <h2>Pedir auditoría</h2>
+          <h2 class="h2-serif">Pedir auditoría</h2>
           <p>Auditoría de tu cuenta y tu funnel: el piloto cero. 30 minutos, gratis, conmigo. Traes acceso a tu cuenta de ads y a tu CRM — nada más. Sales con tres palancas accionables y una forma de medir si tienen efecto. Si encajamos, seguimos. Si no, las palancas te las llevas igual.</p>
           <div class="hero-cta" style="justify-content:center;">
             <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
@@ -270,8 +277,8 @@
     <div class="container">
       <div class="footer-inner">
         <div>
-          <div class="footer-logo">DayByDay Consulting</div>
-          <div style="color:var(--text-muted);font-size:0.8rem;margin-top:0.5rem;">DaybyDay · Growth partner en Madrid</div>
+          <div class="footer-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="24" height="24" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="24" height="24" alt="">DaybyDay Consulting · Madrid</div>
+          <p class="voice-human" style="font-style:italic;color:var(--text-muted);font-size:0.95rem;margin:0.5rem 0 0;">El crecimiento, día a día.</p>
         </div>
         <div class="footer-links">
           <a href="/lo-que-cubre.html">Lo que cubre</a>

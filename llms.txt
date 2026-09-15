@@ -1,4 +1,4 @@
-# DayByDay Consulting
+# DaybyDay Consulting
 
 > Consultora de crecimiento dirigida por Pablo Santirso (director). Vende un solo servicio — Growth Partner — que se manifiesta en paid media, tracking, automation, agentic AI y estrategia. No vende servicios técnicos por separado.
 
@@ -25,8 +25,11 @@
 4. "Reportamos margen de contribución, payback de CAC y LTV por cohorte. No ROAS plataforma."
 5. "Si capitalizas un éxito antes de entender qué lo produjo, lo matas." (Lección Douf)
 
-## Identidad
+## Identidad y marca
 
+- **Slogan (hero de la home, en inglés):** "Growth is a daily craft."
+- **Tagline:** "El crecimiento, día a día." — el resto de la comunicación es en español y de tú.
+- **Marca:** DaybyDay Consulting · Madrid. Wordmark: "DaybyDay" (mayúscula solo la primera D).
 - **Fundador y director: Pablo Santirso** — growth partner results-first. Escala con paid media (Meta, Google, LinkedIn, TikTok) con medición en el CRM del cliente, no en el dashboard. LinkedIn: https://es.linkedin.com/in/pablo-santirso-perez
 - **El modelo operativo es un bucle:** piloto low-risk → métrica pactada → escalado — y al escalar saltan los red flags del negocio (tracking roto, emails que no salen, procesos manuales) → se construye lo que falta → se sigue escalando y optimizando.
 - **La escalada completa, en cinco piezas:** orgánico → paid → estrategia de comunicación → capitalización de la audiencia (email/CRM) → retención. Entra por donde duele — casi siempre paid — y monta las piezas que falten hasta que el sistema completo corre.

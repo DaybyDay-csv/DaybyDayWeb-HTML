@@ -11,7 +11,7 @@
   <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/growth-partner.html">
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
   <link rel="stylesheet" href="/css/sparkles.css">
   <link rel="stylesheet" href="/css/modern.css">
@@ -54,6 +54,11 @@
       max-width: 700px;
       margin: 0 auto;
     }
+    /* Logo de marca: swap light/dark según data-theme (toggles main.js) */
+    .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; }
+    .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
+    [data-theme="dark"] .logo-ink { display: none; }
+    [data-theme="light"] .logo-blue { display: none; }
   </style>
 </head>
 <body>
@@ -63,7 +68,7 @@
   
   <a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
-    <a href="/" class="nav-logo">DayByDay</a>
+    <a href="/" class="nav-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="34" height="34" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="34" height="34" alt="">DaybyDay</a>
     <div class="nav-menu">
       <ul class="nav-links">
         <li class="nav-dropdown">
@@ -170,19 +175,19 @@
       <div class="container">
         <div class="anchor-stats">
           <div class="anchor-stat">
-            <div class="anchor-value" data-counter="3.2" data-decimals="1" data-suffix="M€">3,2M€</div>
+            <div class="anchor-value voice-machine" data-counter="3.2" data-decimals="1" data-suffix="M€">3,2M€</div>
             <div class="anchor-label">Generados a clientes en 12 meses (medición desde tu CRM)</div>
           </div>
           <div class="anchor-stat">
-            <div class="anchor-value" data-counter="264712" data-decimals="0" data-suffix="€">264.712€</div>
+            <div class="anchor-value voice-machine" data-counter="264712" data-decimals="0" data-suffix="€">264.712€</div>
             <div class="anchor-label">Gestionados en paid media (Meta + Google)</div>
           </div>
           <div class="anchor-stat">
-            <div class="anchor-value" data-counter="31555" data-decimals="0">31.555</div>
+            <div class="anchor-value voice-machine" data-counter="31555" data-decimals="0">31.555</div>
             <div class="anchor-label">Acciones de conversión registradas</div>
           </div>
           <div class="anchor-stat">
-            <div class="anchor-value" data-counter="88.95" data-decimals="2" data-suffix="M">88,95M</div>
+            <div class="anchor-value voice-machine" data-counter="88.95" data-decimals="2" data-suffix="M">88,95M</div>
             <div class="anchor-label">Impresiones generadas</div>
           </div>
         </div>
@@ -192,8 +197,8 @@
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">El diferencial</div>
-          <h2>Tres tipos de proveedor. Tres comportamientos.</h2>
+          <div class="section-tag">01 — El diferencial</div>
+          <h2 class="h2-serif">Tres tipos de proveedor. Tres comportamientos.</h2>
         </div>
         <div class="compare-grid">
           <div class="compare-col">
@@ -221,8 +226,8 @@
     <section class="section section-dark">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">Cómo pensamos</div>
-          <h2>El ADN de cómo opero cada cuenta</h2>
+          <div class="section-tag">02 — Cómo pensamos</div>
+          <h2 class="h2-serif">El ADN de cómo opero cada cuenta</h2>
         </div>
         <div class="pillars-grid">
           <div class="pillar-card">
@@ -253,37 +258,37 @@
     <section class="section">
       <div class="container" style="max-width:860px;">
         <div class="section-header">
-          <div class="eyebrow">Results first</div>
-          <h2>El piloto antes del contrato</h2>
+          <div class="section-tag">03 — Results first</div>
+          <h2 class="h2-serif">El piloto antes del contrato</h2>
           <p>Así arranco con cada negocio.</p>
         </div>
         <div class="process-list">
           <div class="process-step">
-            <div class="process-step-num">01</div>
+            <div class="process-step-num voice-machine">01</div>
             <div>
               <h3>Medir primero</h3>
               <p>El tracking se instala el día uno, antes que cualquier campaña — del tracking cuelga el porcentaje y el caso de éxito.</p>
             </div>
           </div>
           <div class="process-step">
-            <div class="process-step-num">02</div>
+            <div class="process-step-num voice-machine">02</div>
             <div>
               <h3>Una prueba pequeña y barata</h3>
               <p>Con una métrica pactada y criterios de decisión escritos: cuántas citas, a qué coste, para cuándo.</p>
             </div>
           </div>
           <div class="process-step">
-            <div class="process-step-num">03</div>
+            <div class="process-step-num voice-machine">03</div>
             <div>
               <h3>Escalar o parar</h3>
               <p>Si la métrica sale, escalamos. Si no, te lo digo y paramos.</p>
             </div>
           </div>
           <div class="process-step">
-            <div class="process-step-num">04</div>
+            <div class="process-step-num voice-machine">04</div>
             <div>
-              <h3>La garantía por escrito</h3>
-              <p>Si en 90 días el sistema no ha generado la métrica pactada, sigo trabajando gratis hasta que la genere.</p>
+              <h3>La garantía por escrito <span class="stamp stamp-go" style="font-size:0.72rem;vertical-align:middle;margin-left:0.5rem;">DAY 90</span></h3>
+              <p>Si en <span class="voice-machine">90 días</span> el sistema no ha generado la métrica pactada, sigo trabajando gratis hasta que la genere.</p>
             </div>
           </div>
         </div>
@@ -293,9 +298,9 @@
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">Modelo de fees</div>
-          <h2>Cuatro formas de trabajar juntos</h2>
-          <p>La construcción arranca en 1.500 € y el retainer en 400 €/mes; el variable es un porcentaje solo de lo que el sistema te genere, medido en tu CRM. El número exacto depende de tu punto de partida y lo cerramos en la auditoría.</p>
+          <div class="section-tag">04 — Modelo de fees</div>
+          <h2 class="h2-serif">Cuatro formas de trabajar juntos</h2>
+          <p>La construcción arranca en <span class="voice-machine">1.500 €</span> y el retainer en <span class="voice-machine">400 €/mes</span>; el variable es un porcentaje solo de lo que el sistema te genere, medido en tu CRM. El número exacto depende de tu punto de partida y lo cerramos en la auditoría.</p>
         </div>
         <div class="features-grid">
           <div class="feature-card">
@@ -325,18 +330,18 @@
     <section class="section section-dark">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">A quién hablamos</div>
-          <h2>El cliente que encaja con DayByDay</h2>
+          <div class="section-tag">05 — A quién hablamos</div>
+          <h2 class="h2-serif">El cliente que encaja con DayByDay</h2>
           <p>Founder de eCommerce D2C o marca física con línea B2C.</p>
         </div>
         <div class="icp-grid" style="max-width:880px;margin:0 auto;">
           <div class="icp-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            <div><div class="icp-label">Facturación anual</div><div class="icp-value">200K – 3M€</div></div>
+            <div><div class="icp-label">Facturación anual</div><div class="icp-value voice-machine">200K – 3M€</div></div>
           </div>
           <div class="icp-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            <div><div class="icp-label">Spend paid mensual</div><div class="icp-value">5K – 30K€ actual o potencial</div></div>
+            <div><div class="icp-label">Spend paid mensual</div><div class="icp-value"><span class="voice-machine">5K – 30K€</span> actual o potencial</div></div>
           </div>
           <div class="icp-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
@@ -364,8 +369,8 @@
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">Clientes</div>
-          <h2>Tres clientes, tres usos del modelo</h2>
+          <div class="section-tag">06 — Clientes</div>
+          <h2 class="h2-serif">Tres clientes, tres usos del modelo</h2>
           <p>Detalle ampliado en la página de <a href="/resultados.html" style="color:var(--accent-color);">clientes</a>.</p>
         </div>
         <div class="cases-grid">
@@ -374,9 +379,9 @@
             <h3>Lead gen para 30+ postgrados</h3>
             <p class="case-desc">Universidad privada grande (NDA). Multicanal Meta + Google con medición en su CRM.</p>
             <div class="case-metrics">
-              <div class="case-metric"><div class="case-metric-value">30+</div><div class="case-metric-label">Programas</div></div>
-              <div class="case-metric"><div class="case-metric-value">Meta+Google</div><div class="case-metric-label">Canales</div></div>
-              <div class="case-metric"><div class="case-metric-value">CRM</div><div class="case-metric-label">Atribución</div></div>
+              <div class="case-metric"><div class="case-metric-value voice-machine">30+</div><div class="case-metric-label">Programas</div></div>
+              <div class="case-metric"><div class="case-metric-value voice-machine">Meta+Google</div><div class="case-metric-label">Canales</div></div>
+              <div class="case-metric"><div class="case-metric-value voice-machine">CRM</div><div class="case-metric-label">Atribución</div></div>
             </div>
             <div class="case-use">Lead gen high-ticket</div>
           </article>
@@ -385,9 +390,9 @@
             <h3>eCommerce D2C en 6 semanas</h3>
             <p class="case-desc">Auditoría inicial: frecuencias altas, presupuesto fragmentado, pixel sin CAPI. Reconstrucción completa de la cuenta.</p>
             <div class="case-metrics">
-              <div class="case-metric"><div class="case-metric-value">4,8€</div><div class="case-metric-label">CPA</div></div>
-              <div class="case-metric"><div class="case-metric-value">14.936</div><div class="case-metric-label">Clicks</div></div>
-              <div class="case-metric"><div class="case-metric-value">661</div><div class="case-metric-label">Inicios pago</div></div>
+              <div class="case-metric"><div class="case-metric-value voice-machine">4,8€</div><div class="case-metric-label">CPA</div></div>
+              <div class="case-metric"><div class="case-metric-value voice-machine">14.936</div><div class="case-metric-label">Clicks</div></div>
+              <div class="case-metric"><div class="case-metric-value voice-machine">661</div><div class="case-metric-label">Inicios pago</div></div>
             </div>
             <div class="case-use">Operación quirúrgica D2C</div>
           </article>
@@ -396,9 +401,9 @@
             <h3>Shopify + WhatsApp + ads auto</h3>
             <p class="case-desc">Primer encargo de un decisor que después me confió Cartri y Garett. Tres negocios consecutivos.</p>
             <div class="case-metrics">
-              <div class="case-metric"><div class="case-metric-value">3</div><div class="case-metric-label">Negocios</div></div>
-              <div class="case-metric"><div class="case-metric-value">Shopify</div><div class="case-metric-label">Plataforma</div></div>
-              <div class="case-metric"><div class="case-metric-value">WhatsApp</div><div class="case-metric-label">Venta</div></div>
+              <div class="case-metric"><div class="case-metric-value voice-machine">3</div><div class="case-metric-label">Negocios</div></div>
+              <div class="case-metric"><div class="case-metric-value voice-machine">Shopify</div><div class="case-metric-label">Plataforma</div></div>
+              <div class="case-metric"><div class="case-metric-value voice-machine">WhatsApp</div><div class="case-metric-label">Venta</div></div>
             </div>
             <div class="case-use">Automation Shopify + WhatsApp</div>
           </article>
@@ -408,8 +413,8 @@
 
     <section class="section">
       <div class="container" style="max-width:760px;">
-        <div class="eyebrow" style="text-align:center;">Acompañamiento</div>
-        <h2 style="text-align:center;font-size:1.75rem;font-weight:700;margin:0.5rem 0 1.5rem;letter-spacing:-0.02em;">Lo que significa acompañar</h2>
+        <div class="section-tag" style="text-align:center;">07 — Acompañamiento</div>
+        <h2 class="h2-serif" style="text-align:center;font-size:1.75rem;font-weight:700;margin:0.5rem 0 1.5rem;letter-spacing:-0.02em;">Lo que significa acompañar</h2>
         <div class="prose">
           <p>Acompañar no es estar disponible en Slack.</p>
           <p>Acompañar es leer tu margen contigo cada mes y decirte cuándo escalar y cuándo parar. Es entrar en la reunión de banco si hace falta. Es revisar el pricing antes de meter una promoción. Es decirte "esto está funcionando pero todavía no sabemos por qué — no lo escalamos hasta saberlo".</p>
@@ -432,7 +437,7 @@
     <section class="section">
       <div class="container">
         <div class="cta-box">
-          <h2>Pedir auditoría</h2>
+          <h2 class="h2-serif">Pedir auditoría</h2>
           <p>30 minutos, gratuita. Conmigo. Te llevas tres palancas accionables. Si encajamos seguimos. Si no, las palancas te las llevas igual.</p>
           <div class="hero-cta" style="justify-content:center;">
             <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
@@ -450,8 +455,8 @@
     <div class="container">
       <div class="footer-inner">
         <div>
-          <div class="footer-logo">DayByDay Consulting</div>
-          <div style="color:var(--text-muted);font-size:0.8rem;margin-top:0.5rem;">DaybyDay · Growth partner en Madrid</div>
+          <div class="footer-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="24" height="24" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="24" height="24" alt="">DaybyDay Consulting · Madrid</div>
+          <p class="voice-human" style="font-style:italic;color:var(--text-muted);font-size:0.95rem;margin:0.5rem 0 0;">El crecimiento, día a día.</p>
         </div>
         <div class="footer-links">
           <a href="/problema.html">Problema</a>

@@ -1,11 +1,17 @@
-/* DayByDay Consulting · humans.txt */
+/* DaybyDay Consulting · humans.txt */
 
 # TEAM
 
-Director — estrategia, paid media y dirección de cuentas
-  Pablo Santirso
-  LinkedIn: https://es.linkedin.com/in/pablo-santirso-perez
-  Location: Madrid, España
+Name: Pablo Santirso
+Role: Director — estrategia, paid media y dirección de cuentas
+LinkedIn: https://es.linkedin.com/in/pablo-santirso-perez
+Location: Madrid, España
+
+# BRAND
+
+Name: DaybyDay Consulting · Madrid
+Slogan: Growth is a daily craft.
+Tagline: El crecimiento, día a día.
 
 # CONTACT
 
@@ -14,7 +20,7 @@ Calendly: https://calendly.com/daybydayconsulting/discovery
 
 # SITE
 
-Last update: 2026/05/27
+Last update: 2026/09/15
 Standards: HTML5, CSS3
 Tone: tuteo directo · cifras concretas · 4–12 palabras por frase
 Stack: Plain HTML, Cloudflare Pages

@@ -11,13 +11,21 @@
   <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/resultados.html">
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
   <link rel="stylesheet" href="/css/modern.css">
   <link rel="stylesheet" href="/css/pages.css">
   <style>
     :root { --accent-color: #10b981; }
     .hero-badge { background: #10b9811a; border: 1px solid #10b98140; color: #34d399; }
+    /* Logo de marca: swap light/dark según data-theme (toggles main.js) */
+    .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; }
+    .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
+    [data-theme="dark"] .logo-ink { display: none; }
+    [data-theme="light"] .logo-blue { display: none; }
+    /* Filas del parte de caja (ticket) */
+    .parte-caja .fila { display: flex; align-items: baseline; gap: 0.75rem; padding: 0.3rem 0; font-size: 0.9rem; }
+    .parte-caja .fila-leader { flex: 1; border-bottom: 1px dotted color-mix(in srgb, var(--ink) 30%, transparent); }
   </style>
 </head>
 <body>
@@ -25,7 +33,7 @@
   
   <a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
-    <a href="/" class="nav-logo">DayByDay</a>
+    <a href="/" class="nav-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="34" height="34" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="34" height="34" alt="">DaybyDay</a>
     <div class="nav-menu">
       <ul class="nav-links">
         <li class="nav-dropdown">
@@ -115,19 +123,19 @@
       <div class="container">
         <div class="anchor-stats">
           <div class="anchor-stat">
-            <div class="anchor-value" data-counter="3.2" data-decimals="1" data-suffix="M€">3,2M€</div>
+            <div class="anchor-value voice-machine" data-counter="3.2" data-decimals="1" data-suffix="M€">3,2M€</div>
             <div class="anchor-label">Generados a clientes en 12 meses</div>
           </div>
           <div class="anchor-stat">
-            <div class="anchor-value" data-counter="264712" data-decimals="0" data-suffix="€">264.712€</div>
+            <div class="anchor-value voice-machine" data-counter="264712" data-decimals="0" data-suffix="€">264.712€</div>
             <div class="anchor-label">Gestionados en publicidad</div>
           </div>
           <div class="anchor-stat">
-            <div class="anchor-value" data-counter="31555" data-decimals="0">31.555</div>
+            <div class="anchor-value voice-machine" data-counter="31555" data-decimals="0">31.555</div>
             <div class="anchor-label">Acciones de conversión</div>
           </div>
           <div class="anchor-stat">
-            <div class="anchor-value" data-counter="88.95" data-decimals="2" data-suffix="M">88,95M</div>
+            <div class="anchor-value voice-machine" data-counter="88.95" data-decimals="2" data-suffix="M">88,95M</div>
             <div class="anchor-label">Impresiones generadas</div>
           </div>
         </div>
@@ -140,16 +148,21 @@
       <div class="container" style="max-width:920px;">
         <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:2.5rem;">
           <span class="case-sector" style="margin-bottom:1rem;">Caso 01 · Lead gen high-ticket</span>
-          <h2 style="font-size:1.75rem;font-weight:700;margin:0.75rem 0 1rem;letter-spacing:-0.025em;">Universidad privada grande (NDA — no puedo decirte cuál)</h2>
+          <h2 class="h2-serif" style="font-size:1.75rem;font-weight:700;margin:0.75rem 0 1rem;letter-spacing:-0.025em;">Universidad privada grande (NDA — no puedo decirte cuál)</h2>
           <div class="prose" style="margin-left:0;">
             <p>Lead gen high-ticket multicanal, Meta y Google, para más de 30 programas de postgrado. Atribución en el CRM de la universidad: las matriculaciones reales, no los clics.</p>
             <p><strong>Qué hizo DayByDay:</strong> estructura por programa, segmentaciones por intención, attribution model con el CRM como fuente de verdad.</p>
-            <p><strong>Números:</strong> 193.829 € gestionados, 711 creatividades. Solo en el último año completo reportado: 1.980 leads con 77.386 € de inversión — CPL de ~39 €.</p>
+            <p><strong>Números:</strong> <span class="voice-machine">193.829 €</span> gestionados, <span class="voice-machine">711</span> creatividades. Solo en el último año completo reportado: <span class="voice-machine">1.980</span> leads con <span class="voice-machine">77.386 €</span> de inversión — CPL de <span class="voice-machine">~39 €</span>.</p>
           </div>
-          <div class="case-metrics" style="border-top:1px solid var(--border);padding-top:1.5rem;margin-top:1.5rem;">
-            <div class="case-metric"><div class="case-metric-value">193.829€</div><div class="case-metric-label">Gestionados</div></div>
-            <div class="case-metric"><div class="case-metric-value">711</div><div class="case-metric-label">Creatividades</div></div>
-            <div class="case-metric"><div class="case-metric-value">1.980</div><div class="case-metric-label">Leads (último año)</div></div>
+          <div class="paper-grid" style="padding:1.5rem;margin-top:1.5rem;border-radius:8px;">
+            <div class="parte-caja">
+              <div class="voice-machine" style="text-transform:uppercase;letter-spacing:0.12em;font-size:0.78rem;font-weight:500;margin-bottom:1rem;">PARTE DE CAJA — UNIVERSIDAD (NDA)</div>
+              <div class="voice-machine fila"><span>Gestionados</span><span class="fila-leader"></span><span>193.829 €</span></div>
+              <div class="voice-machine fila"><span>Creatividades</span><span class="fila-leader"></span><span>711</span></div>
+              <div class="voice-machine fila"><span>Leads (último año)</span><span class="fila-leader"></span><span>1.980</span></div>
+              <div class="voice-machine fila"><span>Inversión (último año)</span><span class="fila-leader"></span><span>77.386 €</span></div>
+              <div class="voice-machine fila"><span>CPL</span><span class="fila-leader"></span><span>~39 €</span></div>
+            </div>
           </div>
         </div>
       </div>
@@ -160,16 +173,24 @@
       <div class="container" style="max-width:920px;">
         <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:2.5rem;">
           <span class="case-sector" style="margin-bottom:1rem;">Caso 02 · Reconstrucción de cuenta · Activo</span>
-          <h2 style="font-size:1.75rem;font-weight:700;margin:0.75rem 0 1rem;letter-spacing:-0.025em;">Garett España · accesorios tecnológicos de belleza</h2>
+          <h2 class="h2-serif" style="font-size:1.75rem;font-weight:700;margin:0.75rem 0 1rem;letter-spacing:-0.025em;">Garett España · accesorios tecnológicos de belleza</h2>
           <div class="prose" style="margin-left:0;">
             <p>La auditoría inicial encontró la cuenta partida: presupuesto fragmentado, creatividades quemadas, pixel sin servidor.</p>
             <p><strong>Qué hizo DayByDay:</strong> reconstrucción completa — árbol de campañas, CAPI server-side y nuevo set creativo testado por hooks.</p>
-            <p><strong>Seis semanas después:</strong> CPA de 4,8 €, 14.936 clicks, 661 inicios de pago. <strong>Hoy:</strong> web propia con Stripe en vivo y 78 relojes contados uno a uno.</p>
+            <p><strong>Seis semanas después:</strong> CPA de <span class="voice-machine">4,8 €</span>, <span class="voice-machine">14.936</span> clicks, <span class="voice-machine">661</span> inicios de pago. <strong>Hoy:</strong> web propia con Stripe en vivo y <span class="voice-machine">78</span> relojes contados uno a uno.</p>
           </div>
-          <div class="case-metrics" style="border-top:1px solid var(--border);padding-top:1.5rem;margin-top:1.5rem;">
-            <div class="case-metric"><div class="case-metric-value">4,8€</div><div class="case-metric-label">CPA</div></div>
-            <div class="case-metric"><div class="case-metric-value">14.936</div><div class="case-metric-label">Clicks</div></div>
-            <div class="case-metric"><div class="case-metric-value">661</div><div class="case-metric-label">Inicios de pago</div></div>
+          <div class="paper-grid" style="padding:1.5rem;margin-top:1.5rem;border-radius:8px;">
+            <div class="parte-caja">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:1rem;">
+                <div class="voice-machine" style="text-transform:uppercase;letter-spacing:0.12em;font-size:0.78rem;font-weight:500;">PARTE DE CAJA — GARETT ESPAÑA</div>
+                <span class="stamp stamp-go">GO</span>
+              </div>
+              <div class="voice-machine fila"><span>Trabajo</span><span class="fila-leader"></span><span>Reconstrucción de cuenta</span></div>
+              <div class="voice-machine fila"><span>Plazo</span><span class="fila-leader"></span><span>6 semanas</span></div>
+              <div class="voice-machine fila"><span>CPA</span><span class="fila-leader"></span><span>4,8 €</span></div>
+              <div class="voice-machine fila"><span>Clicks</span><span class="fila-leader"></span><span>14.936</span></div>
+              <div class="voice-machine fila"><span>Inicios de pago</span><span class="fila-leader"></span><span>661</span></div>
+            </div>
           </div>
         </div>
       </div>
@@ -180,16 +201,16 @@
       <div class="container" style="max-width:920px;">
         <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:2.5rem;">
           <span class="case-sector" style="margin-bottom:1rem;">Caso 03 · El mismo decisor, tres negocios consecutivos</span>
-          <h2 style="font-size:1.75rem;font-weight:700;margin:0.75rem 0 1rem;letter-spacing:-0.025em;">Aras Life Plus · D2C con automation Shopify + WhatsApp</h2>
+          <h2 class="h2-serif" style="font-size:1.75rem;font-weight:700;margin:0.75rem 0 1rem;letter-spacing:-0.025em;">Aras Life Plus · D2C con automation Shopify + WhatsApp</h2>
           <div class="prose" style="margin-left:0;">
             <p>eCommerce D2C con proceso de venta automatizado: Shopify + WhatsApp + campañas automáticas.</p>
             <p><strong>Qué hizo DayByDay:</strong> estructura paid y automation completa — Shopify, WhatsApp Business y CRM — montada de principio a fin.</p>
             <p><strong>Lo relevante:</strong> el primer mandato de un decisor que después me confió Cartri y Garett. Tres negocios consecutivos.</p>
           </div>
           <div class="case-metrics" style="border-top:1px solid var(--border);padding-top:1.5rem;margin-top:1.5rem;">
-            <div class="case-metric"><div class="case-metric-value">3</div><div class="case-metric-label">Negocios seguidos</div></div>
-            <div class="case-metric"><div class="case-metric-value">Shopify</div><div class="case-metric-label">Plataforma</div></div>
-            <div class="case-metric"><div class="case-metric-value">WhatsApp</div><div class="case-metric-label">Canal de venta</div></div>
+            <div class="case-metric"><div class="case-metric-value voice-machine">3</div><div class="case-metric-label">Negocios seguidos</div></div>
+            <div class="case-metric"><div class="case-metric-value voice-machine">Shopify</div><div class="case-metric-label">Plataforma</div></div>
+            <div class="case-metric"><div class="case-metric-value voice-machine">WhatsApp</div><div class="case-metric-label">Canal de venta</div></div>
           </div>
         </div>
       </div>
@@ -212,13 +233,13 @@
     <section class="section section-dark">
       <div class="container" style="max-width:920px;">
         <div class="section-header">
-          <div class="eyebrow">En curso</div>
-          <h2>Con quién estoy ahora mismo</h2>
+          <div class="section-tag">En curso</div>
+          <h2 class="h2-serif">Con quién estoy ahora mismo</h2>
         </div>
         <div class="prose">
           <p><strong>Globalthy</strong> — salud. Test de captación con regla escrita: si no hay citas, no hay fee.</p>
-          <p><strong>Cartri</strong> — pádel. Sistema de email completo (23 piezas) y campaña de reactivación en marcha desde el 15-09. Diagnóstico de partida: 233 captaciones al mes y 5 pedidos.</p>
-          <p><strong>Ferra</strong> — joyería que lanza en noviembre. La máquina de contenido que la alimenta ya publica sola en 11 cuentas.</p>
+          <p><strong>Cartri</strong> — pádel. Sistema de email completo (<span class="voice-machine">23 piezas</span>) y campaña de reactivación en marcha desde el <span class="voice-machine">15-09</span>. Diagnóstico de partida: <span class="voice-machine">233</span> captaciones al mes y <span class="voice-machine">5</span> pedidos.</p>
+          <p><strong>Ferra</strong> — joyería que lanza en noviembre. La máquina de contenido que la alimenta ya publica sola en <span class="voice-machine">11</span> cuentas.</p>
         </div>
       </div>
     </section>
@@ -235,8 +256,8 @@
     <!-- Cómo reportamos -->
     <section class="section section-dark">
       <div class="container" style="max-width:760px;">
-        <div class="eyebrow" style="text-align:center;">Cómo reportamos</div>
-        <h2 style="text-align:center;font-size:1.75rem;font-weight:700;margin:0.5rem auto 1.5rem;max-width:640px;letter-spacing:-0.02em;">Lo que queda, lo que cuesta y lo que deja un cliente</h2>
+        <div class="section-tag" style="text-align:center;">Cómo reportamos</div>
+        <h2 class="h2-serif" style="text-align:center;font-size:1.75rem;font-weight:700;margin:0.5rem auto 1.5rem;max-width:640px;letter-spacing:-0.02em;">Lo que queda, lo que cuesta y lo que deja un cliente</h2>
         <div class="prose">
           <p>No reporto lo que dice la cuenta de publicidad como métrica de negocio. Es útil para optimizar la campaña, pero <strong>no te dice si la cuenta paid mueve caja</strong>.</p>
           <p>El informe mensual tiene cuatro bloques: lo que queda por canal, cuánto tardas en recuperar un cliente, cuánto te deja con el tiempo y cuánto convierte en caja del mes.</p>
@@ -247,7 +268,7 @@
     <section class="section">
       <div class="container">
         <div class="cta-box">
-          <h2>Pedir auditoría</h2>
+          <h2 class="h2-serif">Pedir auditoría</h2>
           <p>30 minutos, gratis, conmigo. Sales con tres palancas accionables. Si encajamos seguimos. Si no, las palancas te las llevas igual.</p>
           <div class="hero-cta" style="justify-content:center;">
             <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
@@ -263,8 +284,8 @@
     <div class="container">
       <div class="footer-inner">
         <div>
-          <div class="footer-logo">DayByDay Consulting</div>
-          <div style="color:var(--text-muted);font-size:0.8rem;margin-top:0.5rem;">DaybyDay · Growth partner en Madrid</div>
+          <div class="footer-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="24" height="24" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="24" height="24" alt="">DaybyDay Consulting · Madrid</div>
+          <p class="voice-human" style="font-style:italic;color:var(--text-muted);font-size:0.95rem;margin:0.5rem 0 0;">El crecimiento, día a día.</p>
         </div>
         <div class="footer-links">
           <a href="/lo-que-cubre.html">Lo que cubre</a>

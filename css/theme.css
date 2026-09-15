@@ -351,6 +351,17 @@ a[href^="#"] {
   --accent-red: #3B82F6;
   --accent-red-soft: #60A5FA;
   --accent-red-bg: rgba(59, 130, 246, 0.15);
+
+  /* ── Marca (SPEC rebranding 2026-09-15) — valores canónicos (light = papel primario).
+     Los equivalentes dark se mapean en [data-theme="dark"] más abajo. ── */
+  --paper: #FAF8F3;
+  --ink: #14131A;
+  --ink-blue: #3B82F6;
+  --flag-red: #EF4444;
+  --go-green: #10B981;
+  --font-human: "Source Serif 4", Georgia, serif;
+  --font-machine: "IBM Plex Mono", ui-monospace, monospace;
+  --font-hand: "Caveat", cursive;
 }
 
 /* v5 · kill all "AI gradient" decorative layers */
@@ -381,6 +392,9 @@ a[href^="#"] {
   --accent-red: #C8102E;
   --accent-red-soft: #E63946;
   --accent-red-bg: rgba(200, 16, 46, 0.06);
+  /* Marca: light = valores canónicos (papel + tinta) */
+  --paper: #FAF8F3;
+  --ink: #14131A;
 }
 
 /* ===== THEME: DARK (default — editorial blue) ===== */
@@ -398,6 +412,11 @@ a[href^="#"] {
   --accent-red: #3B82F6;
   --accent-red-soft: #60A5FA;
   --accent-red-bg: rgba(59, 130, 246, 0.15);
+  /* Marca en dark: ink→texto claro, paper→fondo oscuro existente.
+     post-its y papel físico siguen claros (--paper-postit/--tape intactos).
+     --ink-blue/--flag-red/--go-green no cambian: legibles en ambos temas. */
+  --paper: #0f0f14;
+  --ink: #f5f5f7;
 }
 
 /* ===== MOOD ACCENTS (theme-independent: same in dark & light) ===== */

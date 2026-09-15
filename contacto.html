@@ -11,7 +11,7 @@
   <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/contacto.html">
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
   <link rel="stylesheet" href="/css/modern.css">
   <link rel="stylesheet" href="/css/pages.css">
@@ -25,6 +25,11 @@
     .audit-list-icon svg { width: 14px; height: 14px; }
     .audit-list-text { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.55; }
     .audit-list-text strong { color: var(--text-primary); font-weight: 600; }
+    /* Logo de marca: swap light/dark según data-theme (toggles main.js) */
+    .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; }
+    .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
+    [data-theme="dark"] .logo-ink { display: none; }
+    [data-theme="light"] .logo-blue { display: none; }
   </style>
 </head>
 <body>
@@ -32,7 +37,7 @@
   
   <a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
-    <a href="/" class="nav-logo">DayByDay</a>
+    <a href="/" class="nav-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="34" height="34" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="34" height="34" alt="">DaybyDay</a>
     <div class="nav-menu">
       <ul class="nav-links">
         <li class="nav-dropdown">
@@ -119,7 +124,7 @@
     <section class="section" style="padding-top:1rem;">
       <div class="container">
         <div class="audit-promise">
-          <div class="plain-eyebrow" style="margin-bottom:1.25rem;">Qué te llevas de la llamada</div>
+          <div class="section-tag" style="margin-bottom:1.25rem;">Qué te llevas de la llamada</div>
           <div class="audit-list">
             <div class="audit-list-item">
               <div class="audit-list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
@@ -147,8 +152,8 @@
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start;">
 
           <div>
-            <div class="plain-eyebrow">Reserva directa</div>
-            <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1rem;letter-spacing:-0.02em;">Elige hueco en Calendly</h2>
+            <div class="section-tag">Reserva directa</div>
+            <h2 class="h2-serif" style="font-size:1.5rem;font-weight:700;margin-bottom:1rem;letter-spacing:-0.02em;">Elige hueco en Calendly</h2>
             <p style="color:var(--text-secondary);font-size:0.97rem;line-height:1.6;margin-bottom:1.25rem;">
               Si tienes claro que quieres hablar y solo necesitas el hueco, el camino más corto es la agenda directa.
             </p>
@@ -158,9 +163,9 @@
             <!-- Calendly inline widget end -->
 
             <div style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border);">
-              <div class="plain-eyebrow">Prefieres explicarte primero</div>
+              <div class="section-tag">Prefieres explicarte primero</div>
               <p style="color:var(--text-secondary);font-size:0.97rem;line-height:1.6;margin-bottom:1rem;">
-                Cuéntame brevemente tu situación. Te contesto yo personalmente, en menos de 24 horas.
+                Cuéntame brevemente tu situación. Te contesto yo personalmente, en menos de <span class="voice-machine">24 horas</span>.
               </p>
               <p style="color:var(--text-secondary);font-size:0.92rem;">
                 <a href="mailto:contact@daybydayconsulting.com" style="color:var(--accent-color);">contact@daybydayconsulting.com</a>
@@ -170,7 +175,7 @@
 
           <div>
             <form class="df-form" id="lead-form" action="https://n8n.daybydayconsulting.com/webhook/lead-capture" method="post">
-              <div class="plain-eyebrow" style="margin-bottom:0.75rem;">Formulario · Cuatro campos, dos minutos.</div>
+              <div class="section-tag" style="margin-bottom:0.75rem;">Formulario · Cuatro campos, <span class="voice-machine">dos minutos</span>.</div>
               <input type="text" name="web" value="" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
               <input type="hidden" name="slug" value="contacto">
               <div class="form-group">
@@ -196,7 +201,7 @@
                 <textarea id="problem" name="problem" rows="4" placeholder="Una o dos líneas. Lo que te preocupa esta semana."></textarea>
               </div>
               <button type="submit" id="lead-submit">Pedir auditoría</button>
-              <p id="lead-status" style="text-align:center;margin-top:1rem;font-size:0.82rem;color:var(--text-muted);" role="status">Te contesto en menos de 24 horas.</p>
+              <p id="lead-status" style="text-align:center;margin-top:1rem;font-size:0.82rem;color:var(--text-muted);" role="status">Te contesto en menos de <span class="voice-machine">24 horas</span>.</p>
             </form>
           </div>
 
@@ -206,8 +211,8 @@
 
     <section class="section section-dark">
       <div class="container" style="max-width:780px;text-align:center;">
-        <div class="plain-eyebrow">El contrato implícito</div>
-        <h2 style="font-size:1.4rem;font-weight:700;margin:0.5rem 0 1rem;letter-spacing:-0.02em;">Si encajamos seguimos. Si no, las palancas te las llevas igual.</h2>
+        <div class="section-tag">El contrato implícito</div>
+        <h2 class="h2-serif" style="font-size:1.4rem;font-weight:700;margin:0.5rem 0 1rem;letter-spacing:-0.02em;">Si encajamos seguimos. Si no, las palancas te las llevas igual.</h2>
         <p style="color:var(--text-secondary);font-size:0.97rem;line-height:1.65;">
           La auditoría no es un funnel comercial disfrazado. Si tu fase, tu spend o tu estructura no encajan con cómo opero, te lo digo en la llamada y te oriento hacia el perfil de proveedor que sí encaja.
         </p>
@@ -220,8 +225,8 @@
     <div class="container">
       <div class="footer-inner">
         <div>
-          <div class="footer-logo">DayByDay Consulting</div>
-          <div style="color:var(--text-muted);font-size:0.8rem;margin-top:0.5rem;">DaybyDay · Growth partner en Madrid</div>
+          <div class="footer-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="24" height="24" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="24" height="24" alt="">DaybyDay Consulting · Madrid</div>
+          <p class="voice-human" style="font-style:italic;color:var(--text-muted);font-size:0.95rem;margin:0.5rem 0 0;">El crecimiento, día a día.</p>
         </div>
         <div class="footer-links">
           <a href="/lo-que-cubre.html">Lo que cubre</a>
