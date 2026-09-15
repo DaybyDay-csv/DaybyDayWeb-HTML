@@ -2703,16 +2703,16 @@ img.cl:hover { opacity: 1; }
   min-height: 100svh;
   background: #14131A;
   color: #FAF8F3;
-}
-[data-theme="light"] .brand-intro {
-  background: #FAF8F3;
-  color: #14131A;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 4rem 1rem;
+}
+[data-theme="light"] .brand-intro {
+  background: #FAF8F3;
+  color: #14131A;
 }
 .brand-intro-name {
   font-weight: 800;
