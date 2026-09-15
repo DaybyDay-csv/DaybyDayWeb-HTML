@@ -2772,3 +2772,11 @@ button[type="submit"]:hover {
 @media (prefers-reduced-motion: reduce) {
   .cta-primary:hover, .cta-secondary:hover, button[type="submit"]:hover { transform: none; }
 }
+
+/* ============================================================
+   CAPA NUEVA — marquee: wordmarks Evolut Fitkid y Kueba Kitchen
+   (secciones Desarrollos; misma escala que lg-globalthy/lg-lvp)
+   ============================================================ */
+.lg-evolut { font-family: var(--font-human); font-style: italic; font-weight: 600; font-size: 1.25rem; }
+.lg-kueba { font-family: var(--font-human); font-weight: 600; font-size: 1.25rem; }
+
