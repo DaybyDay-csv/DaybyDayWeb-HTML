@@ -1,8 +1,8 @@
 ---
-title: "Estrategia Meta Ads 2026: Guía Completa paraOptimizar tus Campañas"
+title: "Estrategia Meta Ads 2026: qué cambiar en tus campañas"
 h1: "Estrategia Meta Ads 2026: Guía Completa paraOptimizar tus Campañas"
 slug: estrategia-meta-ads2026
-meta_desc: ""
+meta_desc: "Ajusta tus campañas de Meta Ads para 2026: estructura, presupuestos y Advantage+. Aprende qué configurar antes de escalar y evita gastar de más."
 canonical: "https://www.daybydayconsulting.com/blog/estrategia-meta-ads2026"
 category: "Marketing Digital"
 article_date: ""
@@ -10,7 +10,7 @@ reading_time: 5
 published_at: "T00:00:00+02:00"
 primary_keyword: "estrategia meta ads"
 secondary_keywords: []
-faq: []
+faq: [{"q": "¿Conviene empezar con Advantage+ en 2026?", "a": "Sí, pero con control. Empieza con Advantage+ Shopping cuando tengas al menos 50 conversiones por semana en el pixel. Por debajo de ese volumen, el algoritmo no tiene datos suficientes y dispersa el presupuesto. Si lo activas, limita el público con exclusiones de clientes actuales y fija un presupuesto diario mínimo de 100 euros. Revisa el desglose por ubicación cada semana: si Reels concentra más del 60% del gasto sin conversiones, corta esa ubicación a mano."}, {"q": "¿Cuántos conjuntos de anuncios mantener por cuenta?", "a": "Menos de los que tenías en 2023. Con la consolidación de Advantage+, la recomendación operativa es 2 a 4 conjuntos activos por cuenta. Uno con Advantage+ Shopping, otro con público amplio y creatividades propias, y si procede, uno de retargeting. Más conjuntos fragmentan el aprendizaje y cada uno necesita unas 50 conversiones semanales para salir de la fase de aprendizaje. Consolidar suele bajar el CPA entre un 10 y un 15%."}]
 internal_links: [{"url":"/tech/meta-ads.html","anchor":"Meta Ads"},{"url":"/tech/google-ads-tech.html","anchor":"Google Ads"}]
 cta_title: "¿Quieres aplicar esto en tu negocio?"
 cta_desc: "En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto."
