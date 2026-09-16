@@ -2780,3 +2780,19 @@ button[type="submit"]:hover {
 .lg-evolut { font-family: var(--font-human); font-style: italic; font-weight: 600; font-size: 1.25rem; }
 .lg-kueba { font-family: var(--font-human); font-weight: 600; font-size: 1.25rem; }
 
+
+/* Marquee móvil: en reduced-motion no apilar — una línea con scroll horizontal */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    flex-wrap: nowrap;
+    width: max-content;
+    overflow-x: auto;
+    animation: none;
+    padding-bottom: .4rem;
+  }
+}
+/* Logos en móvil un poco menores */
+@media (max-width: 640px) {
+  img.cl { height: 34px; width: 104px; flex-basis: 104px; }
+  .client-marquee { padding: 1rem 0; }
+}
