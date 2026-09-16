@@ -2796,3 +2796,76 @@ button[type="submit"]:hover {
   img.cl { height: 34px; width: 104px; flex-basis: 104px; }
   .client-marquee { padding: 1rem 0; }
 }
+
+/* ============================================================
+   CAPA MÓVIL — responsive real 375 / 414 / 768 (2026-09-16)
+   Overrides mínimos: solo estructura (wrap, grid, padding),
+   cero colores nuevos. Especificidad alta (.padre .hijo /
+   main .x) para ganar a los <style> inline de las fichas
+   sin usar !important. Reduced-motion y dark intactos.
+   ============================================================ */
+
+/* ── Marquee: en reduced-motion, UNA línea con scroll REAL.
+   El track ya no apila (bloque anterior: nowrap), pero su
+   overflow-x:auto no hacía nada: con width:max-content nunca
+   desborda; quien recorta es .client-marquee (overflow:hidden).
+   El scroll vive en el contenedor. ── */
+@media (prefers-reduced-motion: reduce) {
+  .client-marquee {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .client-marquee::-webkit-scrollbar { display: none; }
+}
+
+/* ── anchor-stats (index, resultados, growth-partner):
+   2×2 en 481-900px (ya existía a ≤900); en ≤480 una columna
+   para que las labels respiren a 375. Gap ya consistente. ── */
+@media (max-width: 480px) {
+  .anchor-stats { grid-template-columns: 1fr; }
+}
+
+/* ── Filas gigantes de casos/ y desarrollos/: a 375 el
+   wordmark serif (~90px) y el chip mono NDA (~83px) desbordan
+   la columna del logo (64px) y sangran sobre la idea.
+   Además, logo alineado arriba cuando la idea parte en 2-3
+   líneas. Especificidad 0,2,0 para pisar los estilos inline
+   de cada index sin !important. ── */
+@media (max-width: 480px) {
+  .casos-lista .caso-fila { align-items: start; }
+  .caso-fila .caso-logo-mono { padding: .45rem .55rem; font-size: .68rem; letter-spacing: .1em; }
+  .caso-fila .caso-logo-word { font-size: 1.05rem; }
+  .desarrollos-lista .desarrollo-link { align-items: flex-start; }
+  .desarrollo-link .desarrollo-logo-word { font-size: 1.05rem; }
+  .desarrollo-link .desarrollo-logo-word-italic { font-size: 1rem; }
+}
+
+/* ── Barra de caso («← Todos los casos» + título): el track
+   central era `auto`, así que un título largo (hasta 64 chars
+   con nowrap) empujaba y desbordaba entre 641-810px.
+   minmax(0,·) permite encoger el central → ellipsis funciona.
+   En desktop queda idéntico (max-content ≡ auto con hueco).
+   main .x (0,1,1) gana al inline (0,1,0) de las 11 fichas. ── */
+main .caso-barra {
+  grid-template-columns: minmax(0, 1fr) minmax(0, max-content) minmax(0, 1fr);
+}
+
+/* ── parte-caja: filas space-between con labels largas
+   («RECONSTRUCCIÓN DE CUENTA» + valor ≈ 332px > 287px útiles
+   a 375) → envuelven; el valor cae alineado a la derecha.
+   En el head, el título puede partirse y el stamp no se
+   solapa ni sale del ticket. Sin efecto en heads block. ── */
+@media (max-width: 480px) {
+  .parte-caja-row { flex-wrap: wrap; row-gap: .15rem; }
+  .parte-caja-row > span:last-child { margin-left: auto; text-align: right; }
+  .parte-caja-head { flex-wrap: wrap; row-gap: .4rem; }
+  .parte-caja-head > span:first-child { min-width: 0; }
+}
+
+/* ── note-strip / post-its ya envuelven a 1 col; el cuello real
+   era el padding 3.5rem del cta-box (231px útiles a 375).
+   Mobile-only: desktop intacto. ── */
+@media (max-width: 640px) {
+  .cta-box { padding: 2.25rem 1.5rem; }
+}
