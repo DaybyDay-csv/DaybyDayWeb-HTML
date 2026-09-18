@@ -88,3 +88,27 @@ Sí, para la mayoría de casos. CBO permite al algoritmo redistribuir automátic
 - [Google Ads](/tech/google-ads-tech.html)
 - [Shopify](/tech/shopify.html)
 - [GA4](/tech/ga4.html)
+
+## Ejemplo real: tienda de suplementos con 2.000 euros al mes
+
+Una marca D2C de proteínas arranca con 2.000 euros mensuales en Meta Ads. Reparte así: 1.400 euros a prospección y 600 a retargeting. La prospección corre con Advantage+ Shopping y dos creativos de vídeo UGC.
+
+Con un CPM de 11 euros en España, esos 1.400 euros compran unos 127.000 impresiones. Con un CTR del 1,2%, son 1.500 clics. Si el CPC ronda los 0,90 euros y la web convierte al 1,8%, salen 27 pedidos. Con un ticket medio de 45 euros, eso son 1.215 euros de ingresos directos.
+
+A primera vista pierde dinero. Pero el 30% de esos compradores repite a los 90 días. El valor de vida real por cliente ronda los 95 euros. Con esos números, el gasto sí queda cubierto y deja margen para escalar. Este cálculo es el que tienes que hacer con tus propios datos antes de subir presupuesto.
+
+## Cómo repartir el presupuesto entre campañas: un caso práctico
+
+Otra marca, esta de moda femenina, gasta 3.000 euros al mes. Tiene tres campañas activas: prospección con Advantage+, retargeting de carrito abandonado y una campaña de contenido a listas de clientes existentes.
+
+La prospección se lleva el 60%: 1.800 euros. El retargeting, el 25%: 750 euros. La campaña de fidelización, el 15% restante: 450 euros. El error frecuente aquí es invertir en retargeting a gente que ya compró. Por eso esta marca excluye a compradores de los últimos 60 días en las dos primeras campañas.
+
+Resultado tras 60 días: el retargeting convierte al 4,1% con un ROAS de 6,2. La prospección queda en 1,9. Ninguna de las dos cifras significa nada por separado. El retargeting solo funciona porque la prospección llena la lista. Si cortas prospección para "arreglar" el ROAS global, en tres semanas el retargeting se queda sin audiencia y todo se desploma.
+
+## Qué hacer cuando el presupuesto no llega ni para probar
+
+Si solo tienes 300 euros al mes, no persigas ventas desde el día uno. Con ese dinero, tu trabajo es generar datos, no ingresos. Lanza una sola campaña de tráfico o interacción con dos o tres creativos distintos.
+
+Deja correr 150 euros durante dos semanas sin tocar nada. Mira qué creativo tiene mejor CTR y qué público responde. Con esos datos, los siguientes 150 euros van a una campaña de ventas con el ganador. Empiezas con desventaja, sí. Pero es mejor que quemar 300 euros en una campaña de ventas a ciegas con cero historial de píxel.
+
+Otra opción cuando el dinero escasea: concentra todo el gasto en cuatro o cinco días al mes en lugar de repartirlo. El algoritmo aprende más rápido con 75 euros diarios durante cuatro días que con 10 euros diarios durante 30.
