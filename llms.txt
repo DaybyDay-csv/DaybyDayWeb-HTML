@@ -212,3 +212,6 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 <!-- auto:klaviyo-flows-d2c-500k -->
 - [Klaviyo: los 12 flows que tu D2C de 500K+ necesita](https://www.daybydayconsulting.com/blog/klaviyo-flows-d2c-500k.html) — Guía práctica sobre los doce flows de Klaviyo que necesita un D2C de más de 500K, ordenados con el framework LIFT en cuatro etapas, con el error de timing del post-compra y una auditoría ejecutable en
 <!-- /auto -->
+<!-- auto:agencia-meta-ads-b2b-d2c-elegir -->
+- [Agencia Meta Ads B2B y D2C: cómo elegir la partner adecuada](https://www.daybydayconsulting.com/blog/agencia-meta-ads-b2b-d2c-elegir.html) — Guía para elegir una agencia Meta Ads B2B o D2C: los 5 filtros de selección, qué métricas debe firmar el contrato, rangos de precio reales en España, señales de alarma y un plan de acción de 30 minuto
+<!-- /auto -->
