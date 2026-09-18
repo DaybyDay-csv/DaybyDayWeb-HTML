@@ -70,26 +70,30 @@ const result = { slug, updated: [], skipped: [] };
   }
 }
 
-// ---- 2. blog/index.html (tailwind build) ----
+// ---- 2. blog/index.html (misma estructura blog-card que blog.html desde el rebrand) ----
 {
   const file = path.join(ROOT, 'blog', 'index.html');
   let html = await readFile(file, 'utf8');
-  if (html.includes(`/blog/${slug}/`) || html.includes(`/blog/${slug}"`)) {
+  if (html.includes(`/blog/${slug}.html`)) {
     result.skipped.push('blog/index.html (already listed)');
   } else {
-    const card =
-      `<a class="block p-6 bg-gray-900 rounded-lg hover:bg-gray-800 transition" href="/blog/${slug}/">` +
-      `<p class="text-xs text-blue-400 mb-2">${esc(category)}</p>` +
-      `<h2 class="text-lg font-semibold text-white mb-2">${esc(title)}</h2>` +
-      `<p class="text-sm text-gray-400 line-clamp-2">${esc(desc)}</p>` +
-      `<p class="text-xs text-gray-500 mt-4">${date}<!-- --> • <!-- -->${mins} min</p></a>`;
-    const anchor = '<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">';
-    const i = html.indexOf(anchor);
-    if (i === -1) {
-      console.error('blog/index.html: grid anchor not found — aborting for this file');
+    const card = [
+      `        <a href="/blog/${slug}.html" class="blog-card">`,
+      `          <div class="blog-card-meta">`,
+      `            <span class="blog-card-category">${esc(category)}</span>`,
+      `            <span class="blog-card-time">${mins} min</span>`,
+      `            <span class="blog-card-date">${date}</span>`,
+      `          </div>`,
+      `          <h3 class="blog-card-title">${esc(title)}</h3>`,
+      `          <p class="blog-card-desc">${esc(desc)}</p>`,
+      `        </a>`,
+    ].join('\n');
+    const anchorRe = /([ \t]*<a href="\/blog\/[^"]+\.html" class="blog-card">)/;
+    if (!anchorRe.test(html)) {
+      console.error('blog/index.html: no blog-card anchor found — aborting for this file');
       result.skipped.push('blog/index.html (anchor not found)');
     } else {
-      html = html.slice(0, i + anchor.length) + card + html.slice(i + anchor.length);
+      html = html.replace(anchorRe, card + '$1');
       await writeFile(file, html, 'utf8');
       result.updated.push('blog/index.html');
     }
