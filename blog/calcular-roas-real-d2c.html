@@ -3,12 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>calcular-roas-real-d2c | DayByDay Consulting</title>
+  <title>calcular-roas-real-d2c</title>
   <meta name="description" content="">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="Pablo Santirso · DayByDay Consulting">
   <link rel="canonical" href="https://www.daybydayconsulting.com/blog/calcular-roas-real-d2c">
+  <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/blog/calcular-roas-real-d2c">
+  <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/blog/calcular-roas-real-d2c">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly summary">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="calcular-roas-real-d2c">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="https://www.daybydayconsulting.com/blog/calcular-roas-real-d2c">
+  <meta property="og:site_name" content="DayByDay Consulting">
+  <meta property="og:locale" content="es_ES">
+
+  <meta property="article:published_time" content="T00:00:00+02:00">
+  <meta property="article:modified_time" content="T00:00:00+02:00">
+  <meta property="article:author" content="Pablo Santirso">
+  <meta property="article:section" content="Marketing Digital">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="calcular-roas-real-d2c">
+  <meta name="twitter:description" content="">
+
   <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
   <link rel="stylesheet" href="/css/sparkles.css">
   <link rel="stylesheet" href="/css/modern.css">
@@ -27,6 +47,14 @@
     .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
     .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
     .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .article-body .direct-answer { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 0 0 2rem; }
+    .article-body .direct-answer p { margin: 0; font-size: 1.05rem; }
+    .article-body .summary-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .summary-block p { margin: 0 0 0.5rem; }
+    .article-body .pro-tip { background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .pro-tip p:first-child { color: var(--accent-color, #6366f1); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem; margin: 0 0 0.5rem; }
+    .article-body .pro-tip p:last-child { margin: 0; }
+    .article-body .cifra-que-abofetea { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); text-align: center; padding: 1.5rem 0; }
     .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
     .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
     .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
@@ -39,14 +67,30 @@
     .author-info { font-size: 0.9rem; }
     .author-info .name { color: var(--text-primary); font-weight: 600; }
     .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .related-articles h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); }
+    .sources-block { margin-top: 3rem; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; }
+    .sources-block h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary); }
+    .sources-block p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .sources-block ul { list-style: none; padding: 0; margin: 0; }
+    .sources-block li { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+    .sources-block li:last-child { border-bottom: none; }
+    .sources-block a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .related-articles a { display: block; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .related-articles a:hover { border-color: var(--accent-color, #6366f1); }
     .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
     .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
     .post-nav a:hover { color: var(--text-primary); }
+    .cta-block { margin-top: 3rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; text-align: center; }
+    .cta-block h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary); }
+    .cta-block p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .cta-block a { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-color, #6366f1); color: white; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-size: 0.95rem; }
   </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
-    <a href="/" class="nav-logo"><img src="/img/brand/loop-symbol.svg" width="30" height="30" alt="" style="vertical-align:-7px;margin-right:8px;">DaybyDay</a>
+    <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
       <ul class="nav-links">
           <li><a href="/problema.html">Problema</a></li>
@@ -93,7 +137,7 @@
               </div>
             </div>
           </li>
-          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/blog.html">Blog</a></li><li><a href="/tools/">Tools</a></li>
       </ul>
     </div>
 </nav>
@@ -120,15 +164,15 @@
         <div class="article-meta">
           <span class="category-badge">Marketing Digital</span>
           <span class="reading-time">5 min de lectura</span>
-          <span class="article-date"></span>
+          <span class="article-date">T00:00:00+</span>
         </div>
         <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">calcular-roas-real-d2c</h1>
         <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;"></p>
         <div class="article-author">
-          <div class="author-avatar">DB</div>
+          <div class="author-avatar">PS</div>
           <div class="author-info">
             <div class="name">Pablo Santirso · DayByDay Consulting</div>
-            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+            <div class="role">Growth Partner · Paid Media &amp; Estrategia</div>
           </div>
         </div>
       </div>
@@ -137,81 +181,66 @@
     <section style="padding:2rem 0 4rem;">
       <div style="max-width:720px;margin:0 auto;">
         <article class="article-body">
-<section class="mb-10">
-        <h1 class="text-4xl md:text-5xl font-black mb-6 leading-tight">
-          7 Tácticas para Calcular el ROAS Real de tu eCommerce D2C
-        </h1>
-        <p class="text-xl text-white/70 leading-relaxed">
-          El ROAS que ves en Meta es una mentira piadosa. Te dice 4x cuando estás perdiendo dinero.
-        </p>
-      </section>
-
-      <section class="mb-10">
-        <h2 class="text-2xl font-black mb-4">Por qué el ROAS de Meta no es real</h2>
-        <p class="text-white/70 leading-relaxed mb-5">
-          Meta calcula: ingresos / coste. Pero NO descuenta IVA, NO resta COGS, NO asigna crédito correctamente.
-        </p>
-        <p class="text-white/70 leading-relaxed">
-          Resultado: ROAS inflado. Muchos D2Cs con ROAS "3-4x" tienen márgenes reales negativos.
-        </p>
-      </section>
-
-      <section class="mb-10">
-        <h2 class="text-2xl font-black mb-4">Las 7 tácticas</h2>
-        <div class="space-y-8">
-          <article>
-            <h3 class="text-xl font-bold mb-2">1. Separar ROAS nominal del real</h3>
-            <p class="text-white/70 leading-relaxed">Crea dos columnas en dashboard y compara cada semana.</p>
-          </article>
-          <article>
-            <h3 class="text-xl font-bold mb-2">2. Incluir COGS real</h3>
-            <p class="text-white/70 leading-relaxed">Un D2C con 30% margen necesita ROAS mayor a 3x.</p>
-          </article>
-          <article>
-            <h3 class="text-xl font-bold mb-2">3. Sumar costes operativos</h3>
-            <p class="text-white/70 leading-relaxed">cs, tools, atención cliente suman 15-25% adicional.</p>
-          </article>
-          <article>
-            <h3 class="text-xl font-bold mb-2">4. Calcular LTV verdadero</h3>
-            <p class="text-white/70 leading-relaxed">Cohort analysis a 90 días, no a 7 días.</p>
-          </article>
-          <article>
-            <h3 class="text-xl font-bold mb-2">5. Attribution window correcto</h3>
-            <p class="text-white/70 leading-relaxed">Cambia a 28 días. ROAS caerá 20-30% pero será más real.</p>
-          </article>
-          <article>
-            <h3 class="text-xl font-bold mb-2">6. Métricas por cohort</h3>
-            <p class="text-white/70 leading-relaxed">No promedies. Chaque mois имеет diferente comportamiento.</p>
-          </article>
-          <article>
-            <h3 class="text-xl font-bold mb-2">7. Dashboard unificado</h3>
-            <p class="text-white/70 leading-relaxed">Meta + GA4 + Shopify + CRM en una vista.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="mb-10 bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-xl p-8 border border-blue-500/20">
-        <h3 class="text-2xl font-bold mb-4">¿Tienes claro tu ROAS real?</h3>
-        <p class="text-white/70 mb-6">分析的Tu caso sin compromiso.</p>
-        <a href="/contacto" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg">
-          Agendar Discovery Call
-        </a>
-      </section>
+<blockquote>Epígrafe pendiente. Una frase pegadiza + fecha, opcional pero recomendado.</blockquote>
+<h2>Por qué el ROAS de Meta no es real</h2>
+<p>[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.</p>
+<h2>Las 7 tácticas</h2>
+<p>[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.</p>
+<div class="pro-tip"><p>Pro tip</p><p>Pro tip pendiente: un giro contraintuitivo que el lector no espera. Etiquetarlo como &quot;Pro tip&quot; para que el renderer lo destaque visualmente.</p></div>
+<h2>Acción de hoy</h2>
+<p>Acción concreta ejecutable en menos de 30 minutos. Con número concreto (minutos, pasos, herramienta). Que el lector pueda hacerla esta misma tarde.</p>
+<h2>Recap + cliffhanger</h2>
+<p>Cubrimos [3 cosas concretas del post]. La semana que viene: [tema del siguiente post con gancho concreto].</p>
+<h2>Preguntas frecuentes (mantener)</h2>
+<h3>¿Cuál ROAS es &#39;bueno&#39; para D2C España?</h3>
+<p>Depende del sector. Suplementos: 3 a 4x. Moda: 2.5-3x. Lo importante es el ROAS real, no el nominal.</p>
+<h3>¿Cuál es la diferencia entre ROAS y ROI?</h3>
+<p>ROAS = ingresos / coste. ROI = (ingresos - costes) / costes. Un ROAS 4x = ROI 300%.</p>
+<h3>¿Cómo afecta el attribution window?</h3>
+<p>Cambiando de 7 a 28 días, ROAS cae 20-30%. Pero es info más real.</p>
+<h2>Artículos relacionados (revisar, mantener 2 mejores)</h2>
+<ul>
+<li><a href="/tech/meta-ads" rel="noopener noreferrer">Meta Ads</a></li>
+<li><a href="/tech/google-ads-tech" rel="noopener noreferrer">Google Ads</a></li>
+<li><a href="/tech/shopify" rel="noopener noreferrer">Shopify</a></li>
+<li><a href="/tech/ga4" rel="noopener noreferrer">GA4</a></li>
+</ul>
         </article>
 
-        
+
+
 <section class="faq-section">
   <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
-  <div class="faq-item"><h3 class="faq-q">¿Cuál ROAS es 'bueno' para D2C España?</h3><p class="faq-a">Depende del sector. Suplementos: 3 a 4x. Moda: 2.5-3x. Lo importante es el ROAS real, no el nominal.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuál ROAS es &#39;bueno&#39; para D2C España?</h3><p class="faq-a">Depende del sector. Suplementos: 3 a 4x. Moda: 2.5-3x. Lo importante es el ROAS real, no el nominal.</p></div>
 <div class="faq-item"><h3 class="faq-q">¿Cuál es la diferencia entre ROAS y ROI?</h3><p class="faq-a">ROAS = ingresos / coste. ROI = (ingresos - costes) / costes. Un ROAS 4x = ROI 300%.</p></div>
 <div class="faq-item"><h3 class="faq-q">¿Cómo afecta el attribution window?</h3><p class="faq-a">Cambiando de 7 a 28 días, ROAS cae 20-30%. Pero es info más real.</p></div>
 </section>
 
+        <div class="cta-block">
+          <h3>¿Quieres aplicar esto en tu negocio?</h3>
+          <p>En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html">Solicitar diagnóstico gratuito →</a>
+        </div>
 
-        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
-          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
-          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
-          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+
+        <div class="cta-block" id="feedback" style="text-align:left; margin-top:2rem;">
+          <h3 style="font-size:1.05rem;">¿Te ha servido este artículo?</h3>
+          <p style="margin-bottom:1rem;">Tu respuesta mejora lo que escribimos. 10 segundos, sin registro.</p>
+          <form action="https://n8n.daybydayconsulting.com/webhook/blog-feedback" method="POST">
+            <input type="hidden" name="slug" value="calcular-roas-real-d2c">
+            <input type="text" name="web" value="" style="display:none" tabindex="-1" autocomplete="off">
+            <div style="display:flex; gap:0.5rem; margin-bottom:0.75rem;">
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="si" required> Sí, útil</label>
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="no"> No mucho</label>
+            </div>
+            <textarea name="comment" rows="2" placeholder="¿Qué te ha faltado o sobrado? (opcional)" style="width:100%; padding:0.6rem; border-radius:8px; border:1px solid var(--border); background:var(--bg-card); color:var(--text-primary); margin-bottom:0.75rem;"></textarea>
+            <button type="submit" style="background:var(--accent-color, #6366f1); color:white; font-weight:600; padding:0.6rem 1.25rem; border-radius:8px; border:none; cursor:pointer;">Enviar feedback</button>
+          </form>
+        </div>
+        <div class="related-articles">
+          <h2>Artículos relacionados</h2>
+          <a href="/tech/meta-ads">Meta Ads</a>
+          <a href="/tech/google-ads-tech">Google Ads</a>
         </div>
 
         <div class="post-nav">
@@ -229,5 +258,8 @@
     <p>© 2026 DayByDay Consulting</p>
 </footer>
 <script src="/js/main.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"calcular-roas-real-d2c","description":"","datePublished":"T00:00:00+02:00","dateModified":"T00:00:00+02:00","inLanguage":"es-ES","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/","jobTitle":"Growth Partner","worksFor":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"knowsAbout":["Meta Ads","Google Ads","TikTok Ads","paid media","ecommerce D2C","CRM y email marketing","analítica server-side","growth strategy"],"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/","logo":{"@type":"ImageObject","url":"https://www.daybydayconsulting.com/favicon.png"},"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/calcular-roas-real-d2c"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuál ROAS es 'bueno' para D2C España?","acceptedAnswer":{"@type":"Answer","text":"Depende del sector. Suplementos: 3 a 4x. Moda: 2.5-3x. Lo importante es el ROAS real, no el nominal."}},{"@type":"Question","name":"¿Cuál es la diferencia entre ROAS y ROI?","acceptedAnswer":{"@type":"Answer","text":"ROAS = ingresos / coste. ROI = (ingresos - costes) / costes. Un ROAS 4x = ROI 300%."}},{"@type":"Question","name":"¿Cómo afecta el attribution window?","acceptedAnswer":{"@type":"Answer","text":"Cambiando de 7 a 28 días, ROAS cae 20-30%. Pero es info más real."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.daybydayconsulting.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.daybydayconsulting.com/blog"},{"@type":"ListItem","position":3,"name":"calcular-roas-real-d2c","item":"https://www.daybydayconsulting.com/blog/calcular-roas-real-d2c"}]}</script>
 </body>
 </html>

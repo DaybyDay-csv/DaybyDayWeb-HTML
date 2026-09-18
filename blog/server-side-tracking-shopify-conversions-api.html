@@ -18,6 +18,7 @@
   <meta property="og:url" content="https://www.daybydayconsulting.com/blog/server-side-tracking-shopify-conversions-api">
   <meta property="og:site_name" content="DayByDay Consulting">
   <meta property="og:locale" content="es_ES">
+
   <meta property="article:published_time" content="2026-06-13T00:00:00+02:00">
   <meta property="article:modified_time" content="2026-06-13T00:00:00+02:00">
   <meta property="article:author" content="Pablo Santirso">
@@ -27,7 +28,7 @@
   <meta name="twitter:description" content="Server-side tracking Shopify con CAPI: arquitectura, eventos, deduplicación, errores frecuentes y impacto en EMQ/CPA. Cifras reales 2026.">
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
   <link rel="stylesheet" href="/css/sparkles.css">
   <link rel="stylesheet" href="/css/modern.css">
@@ -89,7 +90,7 @@
 <body>
 <a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
-    <a href="/" class="nav-logo"><img src="/img/brand/loop-symbol.svg" width="30" height="30" alt="" style="vertical-align:-7px;margin-right:8px;">DaybyDay</a>
+    <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
       <ul class="nav-links">
           <li><a href="/problema.html">Problema</a></li>
@@ -136,7 +137,7 @@
               </div>
             </div>
           </li>
-          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/blog.html">Blog</a></li><li><a href="/tools/">Tools</a></li>
       </ul>
     </div>
 </nav>
@@ -293,6 +294,21 @@
           <a href="/contacto.html">Solicitar diagnóstico gratuito →</a>
         </div>
 
+
+        <div class="cta-block" id="feedback" style="text-align:left; margin-top:2rem;">
+          <h3 style="font-size:1.05rem;">¿Te ha servido este artículo?</h3>
+          <p style="margin-bottom:1rem;">Tu respuesta mejora lo que escribimos. 10 segundos, sin registro.</p>
+          <form action="https://n8n.daybydayconsulting.com/webhook/blog-feedback" method="POST">
+            <input type="hidden" name="slug" value="server-side-tracking-shopify-conversions-api">
+            <input type="text" name="web" value="" style="display:none" tabindex="-1" autocomplete="off">
+            <div style="display:flex; gap:0.5rem; margin-bottom:0.75rem;">
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="si" required> Sí, útil</label>
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="no"> No mucho</label>
+            </div>
+            <textarea name="comment" rows="2" placeholder="¿Qué te ha faltado o sobrado? (opcional)" style="width:100%; padding:0.6rem; border-radius:8px; border:1px solid var(--border); background:var(--bg-card); color:var(--text-primary); margin-bottom:0.75rem;"></textarea>
+            <button type="submit" style="background:var(--accent-color, #6366f1); color:white; font-weight:600; padding:0.6rem 1.25rem; border-radius:8px; border:none; cursor:pointer;">Enviar feedback</button>
+          </form>
+        </div>
         <div class="related-articles">
           <h2>Artículos relacionados</h2>
           <a href="/blog/que-es-un-growth-partner">qué es un Growth Partner</a>
@@ -323,7 +339,8 @@
     <p>© 2026 DayByDay Consulting</p>
 </footer>
 <script src="/js/main.js"></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Server-side tracking Shopify con CAPI: guía 2026","description":"Server-side tracking Shopify con CAPI: arquitectura, eventos, deduplicación, errores frecuentes y impacto en EMQ/CPA. Cifras reales 2026.","datePublished":"2026-06-13T00:00:00+02:00","dateModified":"2026-06-13T00:00:00+02:00","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/"},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/server-side-tracking-shopify-conversions-api"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Server-side tracking Shopify con CAPI: guía 2026","description":"Server-side tracking Shopify con CAPI: arquitectura, eventos, deduplicación, errores frecuentes y impacto en EMQ/CPA. Cifras reales 2026.","datePublished":"2026-06-13T00:00:00+02:00","dateModified":"2026-06-13T00:00:00+02:00","inLanguage":"es-ES","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/","jobTitle":"Growth Partner","worksFor":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"knowsAbout":["Meta Ads","Google Ads","TikTok Ads","paid media","ecommerce D2C","CRM y email marketing","analítica server-side","growth strategy"],"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/","logo":{"@type":"ImageObject","url":"https://www.daybydayconsulting.com/favicon.png"},"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/server-side-tracking-shopify-conversions-api"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué es el tracking server-side en Shopify?","acceptedAnswer":{"@type":"Answer","text":"Tracking server-side es la arquitectura donde los eventos de marketing se enrutan a través de un contenedor server-side (sGTM) alojado en un dominio propio, en lugar de enviarse desde el navegador a cada plataforma por separado. Aquí no dependes del proxy de Shopify ni de apps de partner, controlas el flujo completo, enriqueces los eventos con datos hasheados (email, teléfono, IP, user agent) y unificas la deduplicación entre plataformas. En D2C España 2026 es el estándar técnico desde 50K-100K€/mes de spend."}},{"@type":"Question","name":"¿Cuándo conviene migrar a server-side completo vs CAPI nativa?","acceptedAnswer":{"@type":"Answer","text":"Conviene migrar cuando se cumplen dos o más de estas condiciones: (1) spend total mayor a 50K€/mes en paid, (2) tráfico iOS/Safari mayor al 35%, (3) EMQ actual menor a 7, (4) más de 2 plataformas de paid activas que necesitan deduplicación cruzada, (5) ya hay equipo data interno o consultor técnico. Por debajo de ese umbral, la CAPI nativa de Shopify cubre el 80% del trabajo."}},{"@type":"Question","name":"¿Qué arquitectura se usa: sGTM, Stape, contenedor self-hosted o app Shopify?","acceptedAnswer":{"@type":"Answer","text":"Cuatro rutas. (1) sGTM en Google Cloud: máximo control, 40-120€/mes de hosting, requiere conocimiento de GCP. (2) Stape: hosting gestionado de sGTM con dominio propio, 20-100€/mes. (3) App partner Shopify: setup en 15-30 minutos, menos control. (4) Custom backend: máximo control, 1-2 semanas de desarrollo. Para D2C con 5-50K€/mes de spend, Stape es el sweet spot."}},{"@type":"Question","name":"¿Qué eventos críticos hay que enviar vía server-side?","acceptedAnswer":{"@type":"Answer","text":"Cinco eventos: ViewContent (PDP visitada), AddToCart, InitiateCheckout, Purchase (con order_id, value, currency, content_ids), y Search. Cada uno con email, phone, external_id hasheados SHA-256, y event_id único. Sin estos cinco, la atribución server-side está incompleta. Purchase es el más crítico: sin él, Meta no puede optimizar correctamente."}},{"@type":"Question","name":"¿Cómo impacta el server-side en CPA y ROAS real?","acceptedAnswer":{"@type":"Answer","text":"En D2C con CAPI bien implementado: la cobertura de eventos purchase sube 50-80% vs pixel client-side solo. El CPA real baja 15-25% vs el reportado por pixel solo. El ROAS real baja 0,5-1,5x vs el reportado, porque ahora ves la atribución real sin inflar. Si tu ROAS reportado era 4x con pixel solo, el real con server-side bien hecho probablemente es 2,8-3,2x. La diferencia: la primera cifra infla, la segunda es la verdad."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.daybydayconsulting.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.daybydayconsulting.com/blog"},{"@type":"ListItem","position":3,"name":"Server-side tracking Shopify con CAPI: guía 2026","item":"https://www.daybydayconsulting.com/blog/server-side-tracking-shopify-conversions-api"}]}</script>
 </body>
 </html>

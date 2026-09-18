@@ -3,12 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PIXEL ZERO: El Framework Definitivo para Implementar el Pixel de Meta con Precisión Quirúrgica | DayByDay Consulting</title>
+  <title>PIXEL ZERO: El Framework Definitivo para Implementar el Pixel de Meta con Precisión Quirúrgica</title>
   <meta name="description" content="Implementación técnica del pixel de Meta para tracking D2C. Framework de 4 pasos para configurar el pixel correctamente y trackear todas tus conversiones sin perder datos.">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="Pablo Santirso · DayByDay Consulting">
   <link rel="canonical" href="https://www.daybydayconsulting.com/blog/kpis-ecommerce-d2c">
+  <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/blog/kpis-ecommerce-d2c">
+  <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/blog/kpis-ecommerce-d2c">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly summary">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="PIXEL ZERO: El Framework Definitivo para Implementar el Pixel de Meta con Precisión Quirúrgica">
+  <meta property="og:description" content="Implementación técnica del pixel de Meta para tracking D2C. Framework de 4 pasos para configurar el pixel correctamente y trackear todas tus conversiones sin perder datos.">
+  <meta property="og:url" content="https://www.daybydayconsulting.com/blog/kpis-ecommerce-d2c">
+  <meta property="og:site_name" content="DayByDay Consulting">
+  <meta property="og:locale" content="es_ES">
+
+  <meta property="article:published_time" content="2025-01-15T00:00:00+02:00">
+  <meta property="article:modified_time" content="2025-01-15T00:00:00+02:00">
+  <meta property="article:author" content="Pablo Santirso">
+  <meta property="article:section" content="Technical Setup">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PIXEL ZERO: El Framework Definitivo para Implementar el Pixel de Meta con Precisión Quirúrgica">
+  <meta name="twitter:description" content="Implementación técnica del pixel de Meta para tracking D2C. Framework de 4 pasos para configurar el pixel correctamente y trackear todas tus conversiones sin perder datos.">
+
   <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
   <link rel="stylesheet" href="/css/sparkles.css">
   <link rel="stylesheet" href="/css/modern.css">
@@ -27,6 +47,14 @@
     .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
     .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
     .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .article-body .direct-answer { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 0 0 2rem; }
+    .article-body .direct-answer p { margin: 0; font-size: 1.05rem; }
+    .article-body .summary-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .summary-block p { margin: 0 0 0.5rem; }
+    .article-body .pro-tip { background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .pro-tip p:first-child { color: var(--accent-color, #6366f1); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem; margin: 0 0 0.5rem; }
+    .article-body .pro-tip p:last-child { margin: 0; }
+    .article-body .cifra-que-abofetea { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); text-align: center; padding: 1.5rem 0; }
     .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
     .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
     .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
@@ -39,14 +67,30 @@
     .author-info { font-size: 0.9rem; }
     .author-info .name { color: var(--text-primary); font-weight: 600; }
     .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .related-articles h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); }
+    .sources-block { margin-top: 3rem; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; }
+    .sources-block h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary); }
+    .sources-block p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .sources-block ul { list-style: none; padding: 0; margin: 0; }
+    .sources-block li { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+    .sources-block li:last-child { border-bottom: none; }
+    .sources-block a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .related-articles a { display: block; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .related-articles a:hover { border-color: var(--accent-color, #6366f1); }
     .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
     .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
     .post-nav a:hover { color: var(--text-primary); }
+    .cta-block { margin-top: 3rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; text-align: center; }
+    .cta-block h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary); }
+    .cta-block p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .cta-block a { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-color, #6366f1); color: white; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-size: 0.95rem; }
   </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
-    <a href="/" class="nav-logo"><img src="/img/brand/loop-symbol.svg" width="30" height="30" alt="" style="vertical-align:-7px;margin-right:8px;">DaybyDay</a>
+    <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
       <ul class="nav-links">
           <li><a href="/problema.html">Problema</a></li>
@@ -93,7 +137,7 @@
               </div>
             </div>
           </li>
-          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/blog.html">Blog</a></li><li><a href="/tools/">Tools</a></li>
       </ul>
     </div>
 </nav>
@@ -125,10 +169,10 @@
         <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">PIXEL ZERO: El Framework Definitivo para Implementar el Pixel de Meta con Precisión Quirúrgica</h1>
         <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Implementación técnica del pixel de Meta para tracking D2C. Framework de 4 pasos para configurar el pixel correctamente y trackear todas tus conversiones sin perder datos.</p>
         <div class="article-author">
-          <div class="author-avatar">DB</div>
+          <div class="author-avatar">PS</div>
           <div class="author-info">
             <div class="name">Pablo Santirso · DayByDay Consulting</div>
-            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+            <div class="role">Growth Partner · Paid Media &amp; Estrategia</div>
           </div>
         </div>
       </div>
@@ -137,290 +181,68 @@
     <section style="padding:2rem 0 4rem;">
       <div style="max-width:720px;margin:0 auto;">
         <article class="article-body">
-<section class="mb-8">
-  <blockquote class="border-l-4 border-blue-600 pl-6 italic text-gray-700 text-lg">
-    "El mejor pixel es aquel que no te enteras que existe, pero que te da todos los datos que necesitas."
-    <footer class="not-italic text-gray-500 mt-2">— Pablo Santirso, después de perder 6 meses de datos en 2019</footer>
-  </blockquote>
-</section>
-
-<section class="mb-10">
-  <h2 class="text-2xl font-bold text-gray-900 mb-4">ESCENA: La llamada que me levantó a las 2 de la mañana</h2>
-  <p class="text-gray-700 mb-4">
-    Era octubre de 2019. Tenía un cliente de supplements nutricionales en Barcelona. spend de 8.000€/mes en Meta Ads. ROAS de 3.2. aparente. Todo bien, ¿no?
-  </p>
-  <p class="text-gray-700 mb-4">
-    Hasta que el cliente me llamó a las 2 de la madrugada.</p>
-  <p class="text-gray-700 mb-4">
-    —Pablo, he revisado los pedidos en Shopify. Tengo 340 ventas este mes. Pero tu panel dice 187.
-  </p>
-  <p class="text-gray-700 mb-4">
-    Esa noche.no dormí. Me puse a revisar.el pixel. Y encontré el problema: el código estaba instalado DOS VECES en la página. Una vez en el Shopify Theme > theme.liquid Y otra vez a través del canal oficial de Shopify. double firing. double counting. O no. dependiendo del día.
-  </p>
-  <p class="text-gray-700 mb-4">
-    El pixel había estado reportando entre 45% y 60% de las ventas reales. depending del dispositivo. Del navegador. De si el usuario tenía bloqueadores activos.
-  </p>
-  <p class="text-gray-700 mb-4 font-semibold text-red-600">
-    Habíamos optimizado campañas durante 6 meses basándonos en datos incompletos. 8.000€ al mes x 6 meses = 48.000€ invertidos con un pixel defectuoso.
-  </p>
-  <p class="text-gray-700">
-    De esa noche nació PIXEL ZERO. Porque cuando el pixel falla, todo lo demás falla. No hay dato pequeño.
-  </p>
-</section>
-
-<section class="mb-10 bg-gray-50 p-6 rounded-lg">
-  <h2 class="text-2xl font-bold text-gray-900 mb-4">PROMESA: Lo que vas a aprender hoy</h2>
-  <ul class="list-disc list-inside space-y-2 text-gray-700">
-    <li>El método <strong>PIXEL ZERO</strong>: 4 pasos para instalar el pixel correctamente desde cero, sin errores comunes</li>
-    <li><strong>Cuándo funciona y cuándo no</strong>:Las 3 señales de que tu pixel está fallando (y cómo detectarlas antes de que te cueste dinero)</li>
-    <li><strong>Cómo aplicarlo hoy</strong>: En menos de 45 minutos tendrás tu pixel funcionando al 100%,-verificadoMeta</li>
-  </ul>
-</section>
-
-<section class="mb-10">
-  <h2 class="text-2xl font-bold text-gray-900 mb-4">DROP AUTORIDAD: Las cifras que abofetean</h2>
-  <p class="text-gray-700 mb-4">
-    En +50 marcas D2C que hemos auditado en DayByDay, el <strong>73% tenía el pixel mal implementado</strong>. No fallaba parcialmente. Fallaba completamente en al menos un evento crítico: Purchase, AddToCart o Lead.
-  </p>
-  <p class="text-gray-700 mb-4">
-    De ese 73%: <strong>38%</strong> no tenía ninguna ventatrackeada en Meta Ads Manager. Nada. Cero. El anunciante creía que tenía ROAS porque ponía los pedidos a mano en una spreadsheet.
-  </p>
-  <p class="text-gray-700 mb-4">
-    La media de datos perdidos por pixel defectuoso: <strong>34%</strong> de las conversiones reales no se registraban. En campañas de 10.000€/mes, eso son 3.400€ sin trackear. Mes tras mes.
-  </p>
-  <p class="text-gray-700 font-bold text-xl">
-    Meta usa los datos del pixel para OPTIMIZAR. Si el pixel falla, Meta optimiza hacia conversión que no existen. Gastas presupuesto atrapando compras que nunca ocurrieron.
-  </p>
-</section>
-
-<section class="mb-10">
-  <h2 class="text-2xl font-bold text-gray-900 mb-4">FRAMEWORK: PIXEL ZERO</h2>
-  <p class="text-gray-700 mb-6">
-    Un framework de 4 pasos. 4 letras. Funciona en cualquier plataforma: Shopify, WooCommerce, Prestashop, Magento, Custom.
-  </p>
-
-  <div class="space-y-8">
-    
-    <div class="border border-gray-200 rounded-lg p-6">
-      <h3 class="text-xl font-bold text-blue-600 mb-3">[P] CÓDIGO BASE INSTALADO</h3>
-      <p class="text-gray-700 mb-3">
-        <strong>Por qué importa:</strong> Sin código base, no hay pixel. Es el contenedor que carga todos los eventos. Si no está, nada funciona.
-      </p>
-      <p class="text-gray-700 mb-3">
-        <strong>Cómo se hace:</strong> Ve al Meta Events Manager > Data Sources > tu Pixel > Settings > Código Base. Copia el script completo (las 3 líneas, no solo el ID).
-      </p>
-      <p class="text-gray-700 mb-3">
-        Pégalo EN UN SOLO LUGAR. Recomendado: header.php (WordPress), theme.liquid (Shopify pre-2022) o app.js (React/Next.js). SIEMPRE dentro de las etiquetas &lt;head&gt;&lt;/head&gt;, antes del &lt;/body&gt;.
-      </p>
-      <p class="text-gray-700 font-semibold">
-        Error típico: Instalar el código dos veces (theme.liquid + app de Shopify). Pasa en el 40% de tiendas Shopify.
-      </p>
-    </div>
-
-    <div class="border border-gray-200 rounded-lg p-6">
-      <h3 class="text-xl font-bold text-blue-600 mb-3">[I] INSTALAR EVENTOS ESTÁNDAR</h3>
-      <p class="text-gray-700 mb-3">
-        <strong>Por qué importa:</strong> Los eventos estándar (PageView, AddToCart, InitiateCheckout, Purchase) son los que Meta reconoce automáticamente para optimización. Son los únicos que aceptan la máxima granularidad.
-      </p>
-      <p class="text-gray-700 mb-3">
-        <strong>Cómo se hace (con Partner Integration):</strong> Shopify tiene integración nativa. Ve a Settings > Channel > Facebook > Connect. WooCommerce: plugin oficial "Facebook for WooCommerce". Facebook detectará automáticamente las páginas de producto, cart y checkout.
-      </p>
-      <p class="text-gray-700 mb-3">
-        <strong>Cómo se hace (manual):</strong> Añade el código del evento manualmente en cada página:<br/>
-        fbq('track', 'PageView'); // En todas las páginas<br/>
-        fbq('track', 'AddToCart', ); // Página de producto<br/>
-        fbq('track', 'Purchase', {value: 89.70, currency: 'EUR', contents: []}); // Página de thank you
-      </p>
-      <p class="text-gray-700 font-semibold">
-        Error típico: Poner valor incorrecto o sin decimales. Valor debe ser string "29.90", no integer 29.
-      </p>
-    </div>
-
-    <div class="border border-gray-200 rounded-lg p-6">
-      <h3 class="text-xl font-bold text-blue-600 mb-3">[X] X - CONVERSIONS API CONECTADA</h3>
-      <p class="text-gray-700 mb-3">
-        <strong>Por qué importa:</strong> El pixel basado en cookies falla en Safari (iOS 14+) y Firefox con ITP. La Conversions API (CAPI) envía eventos directamente desde tu servidor a Meta. Sin depender del navegador del usuario. Es la diferencia entre trackear 66% o 100% de las conversiones.
-      </p>
-      <p class="text-gray-700 mb-3">
-        <strong>Cómo se hace:</strong> En Meta Events Manager > Data Sources > tu Pixel > Settings > Conversions API > Generate Token. Pega el token en tu backend (Shopify app, WooCommerce settings o server-side endpoint).
-      </p>
-      <p class="text-gray-700 mb-3">
-        Shopify: Instala la app oficial "Facebook channel" y activa "Conversions API" en Settings.<br/>
-        WooCommerce: Ve a Facebook for WooCommerce > Configuration > Enable Server-Side API.
-      </p>
-      <p class="text-gray-700 font-semibold">
-        Error típico: Activar CAPI sin tener el Código Base instalado primero. No funciona. CAPI complementa, no reemplaza el pixel.
-      </p>
-    </div>
-
-    <div class="border border-gray-200 rounded-lg p-6">
-      <h3 class="text-xl font-bold text-blue-600 mb-3">[L] TESTEAR CON DEBUGGER</h3>
-      <p class="text-gray-700 mb-3">
-        <strong>Por qué importa:</strong>INSTALAR no significa FUNCIONAR. Facebook tiene una herramienta nativa que muestra exactamente qué ve tu pixel. Si no aparece aquí, no existe para Meta.
-      </p>
-      <p class="text-gray-700 mb-3">
-        <strong>Cómo se hace:</strong> Ve a <a href="https://www.facebook.com/events_manager" target="_blank" rel="noopener" class="text-blue-600 underline">Meta Events Manager</a> > tu Pixel > Overview > Open Test Events. Pon tu URL. Haz una compra de prueba. Verás los eventos en tiempo real.
-      </p>
-      <p class="text-gray-700 mb-3">
-        Segundo test: Extensión "Facebook Pixel Helper" para Chrome. Muestra exactamente qué evento se disparó en cada página.
-      </p>
-      <p class="text-gray-700 font-semibold">
-        Error típico: Confiar en que "si el código está puesto, funciona". Nousa el Debugger. El 60% de los problemas se detectan solo ahí.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section class="mb-10">
-  <h2 class="text-2xl font-bold text-gray-900 mb-4">EJEMPLO REAL: La auditoría de VitalBoost</h2>
-  <p class="text-gray-700 mb-4">
-    Cliente: Complementos alimenticios. Shopify. 12.000€/mes en Meta Ads. Problema reportado: "El ROAS baja pero no sé por qué".
-  </p>
-
-  <div class="space-y-4 mb-6">
-    <div class="bg-red-50 p-4 rounded-lg">
-      <h4 class="font-bold text-red-700 mb-2">ANTES (Diagnóstico)</h4>
-      <ul class="list-disc list-inside text-gray-700 space-y-1">
-        <li>El pixel estava instalado 3 veces (theme.liquid + app Facebook + app Onboard)</li>
-        <li>El evento Purchase tenía precio sin decimals (8990 en lugar de 89.90)</li>
-        <li>CAPI no estaba conectada</li>
-        <li>PageView tenía 47% de discrepancia vs Analytics</li>
-        <li>Purchase trackeaba 61% de las ventas reales</li>
-      </ul>
-    </div>
-
-    <div class="bg-green-50 p-4 rounded-lg">
-      <h4 class="font-bold text-green-700 mb-2">DESPUÉS (PIXEL ZERO aplicado)</h4>
-      <ul class="list-disc list-inside text-gray-700 space-y-1">
-        <li>Eliminé las 2 instalaciones duplicadas.Solo quedó una (app nativa Shopify)</li>
-        <li>Corregí el evento Purchase: value con 2 decimales, currency EUR</li>
-        <li>Conecté CAPI vía Shopify Facebook Channel</li>
-        <li>Verifiqué con Test Events: todos los eventos aparecían en verde</li>
-      </ul>
-    </div>
-  </div>
-
-  <p class="text-gray-700 mb-4">
-    <strong>Tiempo total:</strong> 35 minutos. Coste: 0€. La única inversión fue comprar café adicional para mí.
-  </p>
-
-  <div class="bg-blue-600 text-white p-6 rounded-lg">
-    <h4 class="font-bold text-xl mb-2">RESULTADO:</h4>
-    <ul class="list-disc list-inside space-y-2">
-      <li>Discrepancia Purchase cayó de 39% a 7%</li>
-      <li>ROAS reportado subió de 2.1 a 3.4</li>
-      <li>Pero no cambió nada en la campaña</li>
-    </ul>
-    <p class="mt-4 font-bold text-lg">
-      Los datos eran correctos todo el tiempo. Solo que el pixel no los veía.
-    </p>
-  </div>
-</section>
-
-<section class="mb-10 bg-yellow-50 p-6 rounded-lg">
-  <h2 class="text-2xl font-bold text-gray-900 mb-4">PRO TIP: El error que nadie menciona</h2>
-  <p class="text-gray-700 mb-4">
-    Todo el mundo habla del pixel de la página de agradecimiento (Thank You). Pero casi nadie habla del evento AWAY de la página de inicio.
-  </p>
-  <p class="text-gray-700 mb-4">
-    <strong>El problema:</strong> Si un usuario entra a tu web,ve productos, añade al cart, y cierra la pestaña sin comprar... y tú solo trackeas Purchase, Meta no sabe que EXISTS esa persona. No puede hacer custom audience de personas que casi compraron.
-  </p>
-  <p class="text-gray-700 mb-4">
-    <strong>La solución:</strong> Añade ALWAYS-ON TRACKING: META también necesita los no-compradores,porque ahí están tus audiencias de remarketing.
-  </p>
-  <p class="text-gray-700 mb-4 font-bold text-lg">
-    Instala estos 4 eventos SIEMPRE, incluso si no te sirven ahora:
-  </p>
-  <ol class="list-decimal list-inside text-gray-700 space-y-2">
-    <li><code>PageView</code> - Todas las páginas</li>
-    <li><code>ViewContent</code> - Página de producto (añade content_id y content_category)</li>
-    <li><code>AddToCart</code> - Botón de añadir al cart (value + contents)</li>
-    <li><code>InitiateCheckout</code> - Primera página del checkout</li>
-  </ol>
-  <p class="text-gray-700 mt-4">
-    Estos eventos no cuestan dinero. No reducen velocidad. Pero crean audiencias que generarás dentro de 6 meses cuando tu comunidad crezca. Costo: 0. Valor futuro: incalculable.
-  </p>
-</section>
-
-<section class="mb-10">
-  <h2 class="text-2xl font-bold text-gray-900 mb-4">ACTION STEP: Tu primer paso hoy</h2>
-  <p class="text-gray-700 mb-4">
-    Tienes 30 minutos. Esto es lo que vas a hacer ahora mismo:
-  </p>
-
-  <div class="space-y-4 border-l-4 border-blue-600 pl-6">
-    <p class="text-gray-700">
-      <strong>1.</strong> Ve a <a href="https://business.facebook.com/events_manager" target="_blank" rel="noopener" class="text-blue-600 underline">Meta Events Manager</a> > tu Pixel > Overview
-    </p>
-    <p class="text-gray-700">
-      <strong>2.</strong> Click en "Open Test Events"</p>
-    </p>
-    <p class="text-gray-700">
-      <strong>3.</strong> Pon tu website URL</p>
-    </p>
-    <p class="text-gray-700">
-      <strong>4.</strong> En otra pestaña, visita tu web. Ve a producto. Añádelo al cart. Ve al checkout. No compres (no completes la compra).
-    </p>
-    <p class="text-gray-700">
-      <strong>5.</strong> Vuelve a Test Events. Verás los eventos que se dispararon.
-    </p>
-  </div>
-
-  <div class="mt-6 bg-red-50 p-4 rounded-lg">
-    <p class="text-gray-700 font-bold">
-      Si ves menos de 4 eventos (PageView, ViewContent, AddToCart, InitiateCheckout): Tu pixel está fallando. Vuelve a este post y aplica PIXEL ZERO.
-    </p>
-  </div>
-</section>
-
-<section class="mb-10 bg-gray-900 text-white p-8 rounded-lg">
-  <h2 class="text-2xl font-bold mb-6">RECAP</h2>
-  <ul class="list-disc list-inside space-y-2 mb-8">
-    <li>El pixel defectuoso te hace perder 34% de datos (y dinero)</li>
-    <li>PIXELZERO = 4 pasos: Código Base + Eventos Estándar + CAPI + Test</li>
-    <li>La CAPI es esencial en iOS 14+</li>
-    <li>Nunca confíes, siempre testa con Debugger</li>
-  </ul>
-
-  <hr class="border-gray-700 my-6" />
-
-  <h2 class="text-2xl font-bold mb-4">PRÓXIMO TEMA:</h2>
-  <p class="text-gray-300 text-lg">
-    Ya tienes el pixel funcionando. Perfecto. ¿Pero qué pasa cuando los datos del pixel no coinciden con los de Shopify? Llegaste al tema de "Discrepancia de conversiones" y por qué ocurre (y cómo solucionarla sin volverte loco).
-  </p>
-  <p class="text-blue-400 mt-4 font-semibold">
-    Si quieres que te avise cuando salga: <a href="/newsletter.html">apúntate al newsletter de DayByDay</a>.
-  </p>
-</section>
-
-<section class="mb-8 pt-6 border-t border-gray-200">
-  <h3 class="text-lg font-bold text-gray-900 mb-4">Posts relacionados:</h3>
-  <ul class="space-y-2">
-    <li>
-      <a href="/blog/meta-ads-campanas-ecommerce-d2c.html">
-        Cómo estructurar campañas Meta Ads para ecommerce D2C: el framework ROAS
-      </a>
-    </li>
-    <li>
-      <a href="/blog/creatividades-ecommerc-d2c-convertir.html">
-        Creatividades que convierten: el método de los 5 segundos
-      </a>
-    </li>
-    <li>
-      <a href="/blog/atribucion-roas-d2c.html">
-        Atribución multi-touch: por qué tu ROAS miente (y qué hacer al respecto)
-      </a>
-    </li>
-  </ul>
-</section>
+<blockquote>Epígrafe pendiente. Una frase pegadiza + fecha, opcional pero recomendado.</blockquote>
+<h2>ESCENA: La llamada que me levantó a las 2 de la mañana</h2>
+<p>[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.</p>
+<h2>PROMESA: Lo que vas a aprender hoy</h2>
+<p>[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.</p>
+<h2>DROP AUTORIDAD: Las cifras que abofetean</h2>
+<p>[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.</p>
+<h2>FRAMEWORK: PIXEL ZERO</h2>
+<p>[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.</p>
+<h2>EJEMPLO REAL: La auditoría de VitalBoost</h2>
+<p>[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.</p>
+<h2>PRO TIP: El error que nadie menciona</h2>
+<p>[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.</p>
+<h2>ACTION STEP: Tu primer paso hoy</h2>
+<p>[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.</p>
+<h2>RECAP</h2>
+<p>[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.</p>
+<h2>PRÓXIMO TEMA:</h2>
+<p>[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.</p>
+<div class="pro-tip"><p>Pro tip</p><p>Pro tip pendiente: un giro contraintuitivo que el lector no espera. Etiquetarlo como &quot;Pro tip&quot; para que el renderer lo destaque visualmente.</p></div>
+<h2>Acción de hoy</h2>
+<p>Acción concreta ejecutable en menos de 30 minutos. Con número concreto (minutos, pasos, herramienta). Que el lector pueda hacerla esta misma tarde.</p>
+<h2>Recap + cliffhanger</h2>
+<p>Cubrimos [3 cosas concretas del post]. La semana que viene: [tema del siguiente post con gancho concreto].</p>
+<h2>Artículos relacionados (revisar, mantener 2 mejores)</h2>
+<ul>
+<li><a href="/tech/meta-ads" rel="noopener noreferrer">Meta Ads</a></li>
+<li><a href="/tech/google-ads-tech" rel="noopener noreferrer">Google Ads</a></li>
+<li><a href="/tech/shopify" rel="noopener noreferrer">Shopify</a></li>
+<li><a href="/tech/ga4" rel="noopener noreferrer">GA4</a></li>
+</ul>
         </article>
 
-        
 
-        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
-          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
-          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
-          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+
+
+
+        <div class="cta-block">
+          <h3>¿Quieres aplicar esto en tu negocio?</h3>
+          <p>En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html">Solicitar diagnóstico gratuito →</a>
+        </div>
+
+
+        <div class="cta-block" id="feedback" style="text-align:left; margin-top:2rem;">
+          <h3 style="font-size:1.05rem;">¿Te ha servido este artículo?</h3>
+          <p style="margin-bottom:1rem;">Tu respuesta mejora lo que escribimos. 10 segundos, sin registro.</p>
+          <form action="https://n8n.daybydayconsulting.com/webhook/blog-feedback" method="POST">
+            <input type="hidden" name="slug" value="kpis-ecommerce-d2c">
+            <input type="text" name="web" value="" style="display:none" tabindex="-1" autocomplete="off">
+            <div style="display:flex; gap:0.5rem; margin-bottom:0.75rem;">
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="si" required> Sí, útil</label>
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="no"> No mucho</label>
+            </div>
+            <textarea name="comment" rows="2" placeholder="¿Qué te ha faltado o sobrado? (opcional)" style="width:100%; padding:0.6rem; border-radius:8px; border:1px solid var(--border); background:var(--bg-card); color:var(--text-primary); margin-bottom:0.75rem;"></textarea>
+            <button type="submit" style="background:var(--accent-color, #6366f1); color:white; font-weight:600; padding:0.6rem 1.25rem; border-radius:8px; border:none; cursor:pointer;">Enviar feedback</button>
+          </form>
+        </div>
+        <div class="related-articles">
+          <h2>Artículos relacionados</h2>
+          <a href="/tech/meta-ads">Meta Ads</a>
+          <a href="/tech/google-ads-tech">Google Ads</a>
         </div>
 
         <div class="post-nav">
@@ -438,5 +260,7 @@
     <p>© 2026 DayByDay Consulting</p>
 </footer>
 <script src="/js/main.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"PIXEL ZERO: El Framework Definitivo para Implementar el Pixel de Meta con Precisión Quirúrgica","description":"Implementación técnica del pixel de Meta para tracking D2C. Framework de 4 pasos para configurar el pixel correctamente y trackear todas tus conversiones sin perder datos.","datePublished":"2025-01-15T00:00:00+02:00","dateModified":"2025-01-15T00:00:00+02:00","inLanguage":"es-ES","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/","jobTitle":"Growth Partner","worksFor":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"knowsAbout":["Meta Ads","Google Ads","TikTok Ads","paid media","ecommerce D2C","CRM y email marketing","analítica server-side","growth strategy"],"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/","logo":{"@type":"ImageObject","url":"https://www.daybydayconsulting.com/favicon.png"},"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/kpis-ecommerce-d2c"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.daybydayconsulting.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.daybydayconsulting.com/blog"},{"@type":"ListItem","position":3,"name":"PIXEL ZERO: El Framework Definitivo para Implementar el Pixel de Meta con Precisión Quirúrgica","item":"https://www.daybydayconsulting.com/blog/kpis-ecommerce-d2c"}]}</script>
 </body>
 </html>

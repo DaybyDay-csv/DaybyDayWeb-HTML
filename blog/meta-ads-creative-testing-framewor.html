@@ -3,12 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Framework de Testing de Creatives para Meta Ads: Guía Completa para Ecommerce | DayByDay Consulting</title>
+  <title>Framework de Testing de Creatives para Meta Ads: Guía Completa para Ecommerce</title>
   <meta name="description" content="Framework práctico para testear creatividades en Meta Ads. Aprende cuándo merece la pena probar, cuántos variants y cómo evitar errores que destruyen ROAS.">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="Pablo Santirso · DayByDay Consulting">
   <link rel="canonical" href="https://www.daybydayconsulting.com/blog/meta-ads-creative-testing-framewor">
+  <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/blog/meta-ads-creative-testing-framewor">
+  <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/blog/meta-ads-creative-testing-framewor">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly summary">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Framework de Testing de Creatives para Meta Ads: Guía Completa para Ecommerce">
+  <meta property="og:description" content="Framework práctico para testear creatividades en Meta Ads. Aprende cuándo merece la pena probar, cuántos variants y cómo evitar errores que destruyen ROAS.">
+  <meta property="og:url" content="https://www.daybydayconsulting.com/blog/meta-ads-creative-testing-framewor">
+  <meta property="og:site_name" content="DayByDay Consulting">
+  <meta property="og:locale" content="es_ES">
+
+  <meta property="article:published_time" content="2026-05-24T00:00:00+02:00">
+  <meta property="article:modified_time" content="2026-05-24T00:00:00+02:00">
+  <meta property="article:author" content="Pablo Santirso">
+  <meta property="article:section" content="Meta Ads">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Framework de Testing de Creatives para Meta Ads: Guía Completa para Ecommerce">
+  <meta name="twitter:description" content="Framework práctico para testear creatividades en Meta Ads. Aprende cuándo merece la pena probar, cuántos variants y cómo evitar errores que destruyen ROAS.">
+
   <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
   <link rel="stylesheet" href="/css/sparkles.css">
   <link rel="stylesheet" href="/css/modern.css">
@@ -27,6 +47,14 @@
     .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
     .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
     .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .article-body .direct-answer { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 0 0 2rem; }
+    .article-body .direct-answer p { margin: 0; font-size: 1.05rem; }
+    .article-body .summary-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .summary-block p { margin: 0 0 0.5rem; }
+    .article-body .pro-tip { background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .pro-tip p:first-child { color: var(--accent-color, #6366f1); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem; margin: 0 0 0.5rem; }
+    .article-body .pro-tip p:last-child { margin: 0; }
+    .article-body .cifra-que-abofetea { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); text-align: center; padding: 1.5rem 0; }
     .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
     .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
     .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
@@ -39,14 +67,30 @@
     .author-info { font-size: 0.9rem; }
     .author-info .name { color: var(--text-primary); font-weight: 600; }
     .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .related-articles h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); }
+    .sources-block { margin-top: 3rem; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; }
+    .sources-block h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary); }
+    .sources-block p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .sources-block ul { list-style: none; padding: 0; margin: 0; }
+    .sources-block li { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+    .sources-block li:last-child { border-bottom: none; }
+    .sources-block a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .related-articles a { display: block; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .related-articles a:hover { border-color: var(--accent-color, #6366f1); }
     .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
     .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
     .post-nav a:hover { color: var(--text-primary); }
+    .cta-block { margin-top: 3rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; text-align: center; }
+    .cta-block h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary); }
+    .cta-block p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .cta-block a { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-color, #6366f1); color: white; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-size: 0.95rem; }
   </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
-    <a href="/" class="nav-logo"><img src="/img/brand/loop-symbol.svg" width="30" height="30" alt="" style="vertical-align:-7px;margin-right:8px;">DaybyDay</a>
+    <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
       <ul class="nav-links">
           <li><a href="/problema.html">Problema</a></li>
@@ -93,7 +137,7 @@
               </div>
             </div>
           </li>
-          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/blog.html">Blog</a></li><li><a href="/tools/">Tools</a></li>
       </ul>
     </div>
 </nav>
@@ -125,10 +169,10 @@
         <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Framework de Testing de Creatives para Meta Ads: Guía Completa para Ecommerce</h1>
         <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Framework práctico para testear creatividades en Meta Ads. Aprende cuándo merece la pena probar, cuántos variants y cómo evitar errores que destruyen ROAS.</p>
         <div class="article-author">
-          <div class="author-avatar">DB</div>
+          <div class="author-avatar">PS</div>
           <div class="author-info">
             <div class="name">Pablo Santirso · DayByDay Consulting</div>
-            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+            <div class="role">Growth Partner · Paid Media &amp; Estrategia</div>
           </div>
         </div>
       </div>
@@ -137,194 +181,64 @@
     <section style="padding:2rem 0 4rem;">
       <div style="max-width:720px;margin:0 auto;">
         <article class="article-body">
-95% es el objetivo."
-      },
-      {
-        q: "¿Cuál es el error más común en creative testing?",
-        a: "Testear demasiado pronto y con demasiado pocas conversiones. Muchos mata campaigns antes de que tengan data estadísticamente significativo, declarando perdedores a winners potenciales."
-      },
-      {
-        q: "¿Cuándo parar de testear y escalar?",
-        a: "Para cuando tienes 1-2 creatives con ROAS >3x durante 14+ días y frequency >3. En ese punto, escala en lugar de seguir probando nuevos creativos."
-      }
-    ]}
-    openCalendly=
-  >
-    <section>
-      <h2>Por qué la mayoría del testing de creatividades es una mentira</h2>
-      <p class="text-white/70 leading-relaxed mb-5">
-        El 80% de los tests de kreatividad que veo en cuentas D2C españolasno son tests reales. Son excusas para no trabajar. Se lanzan 3 variantessin hipótesis clara, se espera 3 días, y se declara winner arbitrariamente. Esto no es testing Es ruleta.
-      </p>
-      <p class="text-white/70 leading-relaxed mb-5">
-        El testing de kreatividad efectivo requiere: hipótesis clara antes de empezar, sample size suficiente para significancia estadística, y disciplina para no matar campaignsprematuramente.
-      </p>
-    </section>
-
-    <section>
-      <h2>El Framework DayByDay para Testing de Kreatividad</h2>
-      
-      <h3 class="text-lg font-bold mt-6 mb-3">Fase 1: Hipótesis</h3>
-      <p class="text-white/70 leading-relaxed mb-5">
-        Antes de crear una sola variation, documenta tu hipótesis. Ejemplos: "Creemos que un video con cliente real aumentando 2x CTR vs static image", "Creemos que copy corto con problema/solución funciona mejor que features longo".
-      </p>
-      
-      <h3 class="text-lg font-bold mt-6 mb-3">Fase 2: Estructura de Test</h3>
-      <p class="text-white/70 leading-relaxed mb-5">
-        Estructura recomendada: 1 control (tu mejor creativa actual) + 2-3 treatmentsvariando UNA sola variable. Nunca multi-variable en un mismo ad set.
-      </p>
-      
-      <h3 class="text-lg font-bold mt-6 mb-3">Fase 3: Duración y Sample Size</h3>
-      <p class="text-white/70 leading-relaxed mb-5">
-        Mínimo 7 días, 50+ conversiones por cell. En productos &lt;50€/ticket, puedes reducir a 30+. Productos premium o B2B necesitan 14 días mínimo.
-      </p>
-      
-      <h3 class="text-lg font-bold mt-6 mb-3">Fase 4: Análisis</h3>
-      <p class="text-white/70 leading-relaxed mb-5">
-        Usa statistical significance calculators. Si p&lt;0.05, el resultado es estadístico. Si no, sigue corriendo o declara inconclusivo.
-      </p>
-    </section>
-
-    <section>
-      <h2>Variables a Testear (en orden de impacto)</h2>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-6">
-        <div class="space-y-4">
-          <div class="flex items-start gap-3">
-            <span class="text-green-400 font-bold">1.</span>
-            <div>
-              <p class="text-white font-medium">Hook visual (imagen/video)</p>
-              <p class="text-white/60 text-sm">Impacto más alto. Nuevo hook puede cambiar CTR en 50%+. Testea: lifestyle vs producto, UGC vs stock, color vs BN.</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3">
-            <span class="text-green-400 font-bold">2.</span>
-            <div>
-              <p class="text-white font-medium">Copy headline</p>
-              <p class="text-white/60 text-sm">Segundo mayor impacto. Testea: pregunta vs statement, miedo vs beneficio, específico vs vago.</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3">
-            <span class="text-green-400 font-bold">3.</span>
-            <div>
-              <p class="text-white font-medium">CTA</p>
-              <p class="text-white/60 text-sm">Testea: "Comprar ahora" vs "Ver más", vs pregunta, vs sin CTA explícito.</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3">
-            <span class="text-green-400 font-bold">4.</span>
-            <div>
-              <p class="text-white font-medium">Formato</p>
-              <p class="text-white/60 text-sm">Video vs image vs carousel vs collection. Menor impacto pero testeo rápido.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Cuándo NO testear (y Ir Directo a Producción)</h2>
-      <p class="text-white/70 leading-relaxed mb-5">
-        Hay momentos donde el testing es una pérdida de tiempo y dinero:
-      </p>
-      <ul class="space-y-3 mb-6 text-white/70">
-        <li>• Budget &lt;500€/mes: No tienes volume para testing statistically significativo</li>
-        <li>• Menos de 30 días de data: Espera a tener baseline estable</li>
-        <li>• Campañas nuevas: Primero deja correr 14 días para que el algoritmo aprenda</li>
-        <li>• Producto nuevo sin conversiones: Consigue 50+ ventas primero, luego testea</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Métricas de Referencia para Testing</h2>
-      <p class="text-white/70 leading-relaxed mb-5">
-        En cuentas D2C España que gestionamos, los benchmarks de testing exitoso:
-      </p>
-      <div class="overflow-x-auto mb-6">
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="border-b border-white/10">
-              <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase">Métrica</th>
-              <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase">Poor</th>
-              <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase">Average</th>
-              <th class="text-left py-3 px-3 text-white/40 font-medium text-xs uppercase">Good</th>
-            </tr>
-          </thead>
-          <tbody class="text-white/70">
-            <tr class="border-b border-white/5">
-              <td class="py-3 px-3">CTR (feed)</td>
-              <td class="py-3 px-3">&lt;1%</td>
-              <td class="py-3 px-3">1-2%</td>
-              <td class="py-3 px-3 text-green-400">&gt;2%</td>
-            </tr>
-            <tr class="border-b border-white/5">
-              <td class="py-3 px-3">CPC</td>
-              <td class="py-3 px-3">&gt;2€</td>
-              <td class="py-3 px-3">1-2€</td>
-              <td class="py-3 px-3 text-green-400">&lt;1€</td>
-            </tr>
-            <tr class="border-b border-white/5">
-              <td class="py-3 px-3">CTR Video (primeros 3s)</td>
-              <td class="py-3 px-3">&lt;15%</td>
-              <td class="py-3 px-3">15-25%</td>
-              <td class="py-3 px-3 text-green-400">&gt;25%</td>
-            </tr>
-            <tr class="border-b border-white/5">
-              <td class="py-3 px-3">Relevance Score</td>
-              <td class="py-3 px-3">&lt;5</td>
-              <td class="py-3 px-3">5-7</td>
-              <td class="py-3 px-3 text-green-400">&gt;7</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section>
-      <h2>Errores que Destruyen tu Testing (y Tu ROAS)</h2>
-      <div class="bg-[#1a1616] border border-red-500/20 rounded-xl p-5 mb-6">
-        <div class="space-y-4">
-          <div>
-            <p class="text-red-400 font-medium mb-2">❌ Matar campaigns a los 3 días</p>
-            <p class="text-white/60 text-sm">El algoritmo necesita 7+ días para aprender. Matar temprano = perder winners potenciales.</p>
-          </div>
-          <div>
-            <p class="text-red-400 font-medium mb-2">❌ Testear múltiples variables a la vez</p>
-            <p class="text-white/60 text-sm">No sabes cuál Variable cambió el resultado. Testea UNA cosa cada vez.</p>
-          </div>
-          <div>
-            <p class="text-red-400 font-medium mb-2">❌ No documentar hipótesis</p>
-            <p class="text-white/60 text-sm">Sin hipótesis clara, no hay learning. Solo random noise.</p>
-          </div>
-          <div>
-            <p class="text-red-400 font-medium mb-2">❌ Usar el mismo budget para todas las variations</p>
-            <p class="text-white/60 text-sm">分配 más budget a las que van mejor, no iguales. Winner gets più budget.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Próximos Pasos</h2>
-      <p class="text-white/70 leading-relaxed mb-5">
-        Implementa este framework en tu siguiente test de kreatividad. Y recuerda: Testing sin hipótesis es guessing, no science.
-      </p>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5">
-        <p class="text-white mb-3">¿Te有帮助 este framework?</p>
-        <p class="text-white/60 text-sm mb-4">Si quieres que profundicemos en tu cuenta específica, tenemos una free consultoría de discovery.</p>
-        <button> openCalendly?.()}
-          class="bg-green-500 hover:bg-green-600 text-black font-bold py-3 px-6 rounded-lg transition-colors"
-        >
-          Agendar Discovery Call
-        </button>
-      </div>
-    </section>
+<blockquote>Epígrafe pendiente. Una frase pegadiza + fecha, opcional pero recomendado.</blockquote>
+<h2>Por qué la mayoría del testing de creatividades es una mentira</h2>
+<p>[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.</p>
+<h2>El Framework DayByDay para Testing de Kreatividad</h2>
+<p>[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.</p>
+<h2>Variables a Testear (en orden de impacto)</h2>
+<p>[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.</p>
+<h2>Cuándo NO testear (y Ir Directo a Producción)</h2>
+<p>[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.</p>
+<h2>Métricas de Referencia para Testing</h2>
+<p>[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.</p>
+<h2>Errores que Destruyen tu Testing (y Tu ROAS)</h2>
+<p>[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.</p>
+<h2>Próximos Pasos</h2>
+<p>[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.</p>
+<div class="pro-tip"><p>Pro tip</p><p>Pro tip pendiente: un giro contraintuitivo que el lector no espera. Etiquetarlo como &quot;Pro tip&quot; para que el renderer lo destaque visualmente.</p></div>
+<h2>Acción de hoy</h2>
+<p>Acción concreta ejecutable en menos de 30 minutos. Con número concreto (minutos, pasos, herramienta). Que el lector pueda hacerla esta misma tarde.</p>
+<h2>Recap + cliffhanger</h2>
+<p>Cubrimos [3 cosas concretas del post]. La semana que viene: [tema del siguiente post con gancho concreto].</p>
+<h2>Artículos relacionados (revisar, mantener 2 mejores)</h2>
+<ul>
+<li><a href="/tech/meta-ads" rel="noopener noreferrer">Meta Ads</a></li>
+<li><a href="/tech/google-ads-tech" rel="noopener noreferrer">Google Ads</a></li>
+<li><a href="/tech/shopify" rel="noopener noreferrer">Shopify</a></li>
+<li><a href="/tech/ga4" rel="noopener noreferrer">GA4</a></li>
+</ul>
         </article>
 
-        
 
-        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
-          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
-          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
-          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+
+
+
+        <div class="cta-block">
+          <h3>¿Quieres aplicar esto en tu negocio?</h3>
+          <p>En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html">Solicitar diagnóstico gratuito →</a>
+        </div>
+
+
+        <div class="cta-block" id="feedback" style="text-align:left; margin-top:2rem;">
+          <h3 style="font-size:1.05rem;">¿Te ha servido este artículo?</h3>
+          <p style="margin-bottom:1rem;">Tu respuesta mejora lo que escribimos. 10 segundos, sin registro.</p>
+          <form action="https://n8n.daybydayconsulting.com/webhook/blog-feedback" method="POST">
+            <input type="hidden" name="slug" value="meta-ads-creative-testing-framewor">
+            <input type="text" name="web" value="" style="display:none" tabindex="-1" autocomplete="off">
+            <div style="display:flex; gap:0.5rem; margin-bottom:0.75rem;">
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="si" required> Sí, útil</label>
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="no"> No mucho</label>
+            </div>
+            <textarea name="comment" rows="2" placeholder="¿Qué te ha faltado o sobrado? (opcional)" style="width:100%; padding:0.6rem; border-radius:8px; border:1px solid var(--border); background:var(--bg-card); color:var(--text-primary); margin-bottom:0.75rem;"></textarea>
+            <button type="submit" style="background:var(--accent-color, #6366f1); color:white; font-weight:600; padding:0.6rem 1.25rem; border-radius:8px; border:none; cursor:pointer;">Enviar feedback</button>
+          </form>
+        </div>
+        <div class="related-articles">
+          <h2>Artículos relacionados</h2>
+          <a href="/tech/meta-ads">Meta Ads</a>
+          <a href="/tech/google-ads-tech">Google Ads</a>
         </div>
 
         <div class="post-nav">
@@ -342,5 +256,7 @@
     <p>© 2026 DayByDay Consulting</p>
 </footer>
 <script src="/js/main.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Framework de Testing de Creatives para Meta Ads: Guía Completa para Ecommerce","description":"Framework práctico para testear creatividades en Meta Ads. Aprende cuándo merece la pena probar, cuántos variants y cómo evitar errores que destruyen ROAS.","datePublished":"2026-05-24T00:00:00+02:00","dateModified":"2026-05-24T00:00:00+02:00","inLanguage":"es-ES","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/","jobTitle":"Growth Partner","worksFor":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"knowsAbout":["Meta Ads","Google Ads","TikTok Ads","paid media","ecommerce D2C","CRM y email marketing","analítica server-side","growth strategy"],"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/","logo":{"@type":"ImageObject","url":"https://www.daybydayconsulting.com/favicon.png"},"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/meta-ads-creative-testing-framewor"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.daybydayconsulting.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.daybydayconsulting.com/blog"},{"@type":"ListItem","position":3,"name":"Framework de Testing de Creatives para Meta Ads: Guía Completa para Ecommerce","item":"https://www.daybydayconsulting.com/blog/meta-ads-creative-testing-framewor"}]}</script>
 </body>
 </html>

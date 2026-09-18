@@ -18,6 +18,7 @@
   <meta property="og:url" content="https://www.daybydayconsulting.com/blog/framework-hipotesis-creatividades-meta-ads">
   <meta property="og:site_name" content="DayByDay Consulting">
   <meta property="og:locale" content="es_ES">
+
   <meta property="article:published_time" content="2026-04-22T00:00:00+02:00">
   <meta property="article:modified_time" content="2026-04-22T00:00:00+02:00">
   <meta property="article:author" content="Pablo Santirso">
@@ -27,7 +28,7 @@
   <meta name="twitter:description" content="Framework hipótesis creativas Meta Ads: 5 dimensiones del brief, 7 ángulos canónicos D2C, plantilla 1 página, priorización de backlog y errores frecuentes.">
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
   <link rel="stylesheet" href="/css/sparkles.css">
   <link rel="stylesheet" href="/css/modern.css">
@@ -89,7 +90,7 @@
 <body>
 <a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
-    <a href="/" class="nav-logo"><img src="/img/brand/loop-symbol.svg" width="30" height="30" alt="" style="vertical-align:-7px;margin-right:8px;">DaybyDay</a>
+    <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
       <ul class="nav-links">
           <li><a href="/problema.html">Problema</a></li>
@@ -136,7 +137,7 @@
               </div>
             </div>
           </li>
-          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/blog.html">Blog</a></li><li><a href="/tools/">Tools</a></li>
       </ul>
     </div>
 </nav>
@@ -241,7 +242,7 @@
 <p><strong>7 · No medir ni iterar.</strong> Producir, testear, dejar correr. Sin medición de CTR, hook rate, hold rate, la creatividad no se itera. El error más caro: tratar la creatividad como entregable, no como experimento.</p>
 <div class="cifra-que-abofetea">De 17 cuentas D2C auditadas, 14 (82%) cometían al menos 4 de estos 7 errores. Corregir los 7 suele multiplicar por 2-3 la tasa de creatividades ganadoras en 90 días. El coste: 4-6h de setup del framework + cadencia de producción sostenida.</div>
 <h2>Cómo trabajamos en DayByDay</h2>
-<p>En DayByDay operamos como growth partner senior. El framework de hipótesis es sistema, no plantilla. Auditoría de las 5 dimensiones del brief y los 7 ángulos canónicos. Pipeline de producción con cadencia: 6-12 conceptos nuevos al mes para cuentas con 10-50K€/mes de spend. Brief de 1 página con criterios de éxito definidos antes de producir. SLAs firmados con número de creatividades ganadoras y CTR medio por capa, no con ROAS plataforma. Acceso directo del fundador conmigo. Para D2C con facturación &gt; 1M€ anual, spend Meta &gt; 10K€/mes, equipo interno mínimo.</p>
+<p>En DayByDay operamos como growth partner senior. El framework de hipótesis es sistema, no plantilla. Auditoría de las 5 dimensiones del brief y los 7 ángulos canónicos. Pipeline de producción con cadencia: 6-12 conceptos nuevos al mes para cuentas con 10-50K€/mes de spend. Brief de 1 página con criterios de éxito definidos antes de producir. SLAs firmados con número de creatividades ganadoras y CTR medio por capa, no con ROAS plataforma. Acceso directo del fundador con Pablo o Jorge. Para D2C con facturación &gt; 1M€ anual, spend Meta &gt; 10K€/mes, equipo interno mínimo.</p>
 <div class="cifra-que-abofetea">En 12 cuentas D2C en DayByDay con framework aplicado: mediana de creatividades ganadoras (CTR >1,5%, hook rate >30%) en 90 días fue 6. Antes del framework: 1-2. CTR medio del top 5: 2,1%. ROI sobre el fee: 5,8x a 6 meses.</div>
 <h2>Acción de hoy (30 minutos)</h2>
 <ol>
@@ -277,6 +278,21 @@
           <a href="/contacto.html">Solicitar diagnóstico gratuito →</a>
         </div>
 
+
+        <div class="cta-block" id="feedback" style="text-align:left; margin-top:2rem;">
+          <h3 style="font-size:1.05rem;">¿Te ha servido este artículo?</h3>
+          <p style="margin-bottom:1rem;">Tu respuesta mejora lo que escribimos. 10 segundos, sin registro.</p>
+          <form action="https://n8n.daybydayconsulting.com/webhook/blog-feedback" method="POST">
+            <input type="hidden" name="slug" value="framework-hipotesis-creatividades-meta-ads">
+            <input type="text" name="web" value="" style="display:none" tabindex="-1" autocomplete="off">
+            <div style="display:flex; gap:0.5rem; margin-bottom:0.75rem;">
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="si" required> Sí, útil</label>
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="no"> No mucho</label>
+            </div>
+            <textarea name="comment" rows="2" placeholder="¿Qué te ha faltado o sobrado? (opcional)" style="width:100%; padding:0.6rem; border-radius:8px; border:1px solid var(--border); background:var(--bg-card); color:var(--text-primary); margin-bottom:0.75rem;"></textarea>
+            <button type="submit" style="background:var(--accent-color, #6366f1); color:white; font-weight:600; padding:0.6rem 1.25rem; border-radius:8px; border:none; cursor:pointer;">Enviar feedback</button>
+          </form>
+        </div>
         <div class="related-articles">
           <h2>Artículos relacionados</h2>
           <a href="/tech/meta-ads">Meta Ads</a>
@@ -298,7 +314,8 @@
     <p>© 2026 DayByDay Consulting</p>
 </footer>
 <script src="/js/main.js"></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Framework hipótesis creativas Meta Ads: 7 ángulos D2C","description":"Framework hipótesis creativas Meta Ads: 5 dimensiones del brief, 7 ángulos canónicos D2C, plantilla 1 página, priorización de backlog y errores frecuentes.","datePublished":"2026-04-22T00:00:00+02:00","dateModified":"2026-04-22T00:00:00+02:00","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/"},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/framework-hipotesis-creatividades-meta-ads"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Framework hipótesis creativas Meta Ads: 7 ángulos D2C","description":"Framework hipótesis creativas Meta Ads: 5 dimensiones del brief, 7 ángulos canónicos D2C, plantilla 1 página, priorización de backlog y errores frecuentes.","datePublished":"2026-04-22T00:00:00+02:00","dateModified":"2026-04-22T00:00:00+02:00","inLanguage":"es-ES","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/","jobTitle":"Growth Partner","worksFor":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"knowsAbout":["Meta Ads","Google Ads","TikTok Ads","paid media","ecommerce D2C","CRM y email marketing","analítica server-side","growth strategy"],"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/","logo":{"@type":"ImageObject","url":"https://www.daybydayconsulting.com/favicon.png"},"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/framework-hipotesis-creatividades-meta-ads"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué es un framework de hipótesis creativas y por qué es clave en D2C?","acceptedAnswer":{"@type":"Answer","text":"Un framework de hipótesis creativas es un sistema estructurado para generar, priorizar y testear creatividades en Meta Ads. Define 5 dimensiones que todo brief debe cerrar (audiencia, dolor/deseo, promesa, formato, gancho) y un proceso de producción que convierte ideas en creatividades testeables. En D2C España 2026, las cuentas que escalan son las que tratan las creatividades como un motor de validación continua, no como piezas sueltas producidas cuando la agencia tiene tiempo."}},{"@type":"Question","name":"¿Cuántas hipótesis creativas debería testear un D2C al mes?","acceptedAnswer":{"@type":"Answer","text":"Como referencia operativa: 6-10 conceptos nuevos al mes para cuentas con 5-15K€/mes de spend, y 12-20 conceptos al mes para cuentas con 15-50K€/mes. No son 6-10 ediciones del mismo anuncio con diferente copy — son 6-10 ángulos, hooks o formatos distintos. La fatiga creativa es la causa #1 de techo de escala en D2C, y la única forma de combatirla es iterar más rápido que la competencia."}},{"@type":"Question","name":"¿Qué diferencia hay entre un brief de creatividad para una agencia externa y un brief para producción interna con IA?","acceptedAnswer":{"@type":"Answer","text":"El brief externo se centra en lo que el creativo debe saber: marca, mensaje, deliverables. El brief interno con IA añade capas: prompt estructurado, parámetros de generación, criterios de aceptación, sistema de iteración. La diferencia operativa: con IA, puedes producir 3-5x más conceptos al mismo coste, pero necesitas un framework más estricto para evitar que el modelo genere piezas fuera de marca. El framework de hipótesis cierra esa brecha."}},{"@type":"Question","name":"¿Cómo decidir qué hipótesis creativa testear primero en un D2C con presupuesto limitado?","acceptedAnswer":{"@type":"Answer","text":"Prioriza por dos variables: (1) probabilidad de vencer al control actual (basado en datos históricos de hooks, formatos, ángulos que han funcionado en tu cuenta), y (2) coste de producción (un UGC de 30 segundos cuesta menos que una producción de 3 minutos con actor y localización). Empieza siempre por las hipótesis de alta probabilidad y bajo coste. Si tu presupuesto de producción es 1.500€/mes, testa 6-8 hipótesis a 200-250€ cada una."}},{"@type":"Question","name":"¿Qué errores hay que evitar al briefar creatividades para Meta Ads en D2C?","acceptedAnswer":{"@type":"Answer","text":"Los siete errores más frecuentes: (1) brief genérico sin gancho específico; (2) pedir 'variaciones' en vez de hipótesis testables; (3) mezclar audiencia y mensaje en la misma hipótesis; (4) no definir el formato final antes de producir; (5) olvidar el patrón de los primeros 3 segundos; (6) no incluir el call to action en el brief; (7) no medir el resultado de la hipótesis y no iterar. Cada error destruye entre 20% y 60% del ROI del proceso creativo."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.daybydayconsulting.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.daybydayconsulting.com/blog"},{"@type":"ListItem","position":3,"name":"Framework hipótesis creativas Meta Ads: 7 ángulos D2C","item":"https://www.daybydayconsulting.com/blog/framework-hipotesis-creatividades-meta-ads"}]}</script>
 </body>
 </html>

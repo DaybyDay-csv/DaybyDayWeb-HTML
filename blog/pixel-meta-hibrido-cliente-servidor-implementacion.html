@@ -18,6 +18,7 @@
   <meta property="og:url" content="https://www.daybydayconsulting.com/blog/pixel-meta-hibrido-cliente-servidor-implementacion">
   <meta property="og:site_name" content="DayByDay Consulting">
   <meta property="og:locale" content="es_ES">
+
   <meta property="article:published_time" content="2026-06-13T00:00:00+02:00">
   <meta property="article:modified_time" content="2026-06-13T00:00:00+02:00">
   <meta property="article:author" content="Pablo Santirso">
@@ -27,7 +28,7 @@
   <meta name="twitter:description" content="Pixel híbrido Meta Ads: client-side + CAPI server-side, deduplicación, EMQ y checklist de verificación. Cifras reales D2C España 2026.">
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
   <link rel="stylesheet" href="/css/sparkles.css">
   <link rel="stylesheet" href="/css/modern.css">
@@ -89,7 +90,7 @@
 <body>
 <a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
-    <a href="/" class="nav-logo"><img src="/img/brand/loop-symbol.svg" width="30" height="30" alt="" style="vertical-align:-7px;margin-right:8px;">DaybyDay</a>
+    <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
       <ul class="nav-links">
           <li><a href="/problema.html">Problema</a></li>
@@ -136,7 +137,7 @@
               </div>
             </div>
           </li>
-          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/blog.html">Blog</a></li><li><a href="/tools/">Tools</a></li>
       </ul>
     </div>
 </nav>
@@ -283,6 +284,21 @@
           <a href="/contacto.html">Solicitar diagnóstico gratuito →</a>
         </div>
 
+
+        <div class="cta-block" id="feedback" style="text-align:left; margin-top:2rem;">
+          <h3 style="font-size:1.05rem;">¿Te ha servido este artículo?</h3>
+          <p style="margin-bottom:1rem;">Tu respuesta mejora lo que escribimos. 10 segundos, sin registro.</p>
+          <form action="https://n8n.daybydayconsulting.com/webhook/blog-feedback" method="POST">
+            <input type="hidden" name="slug" value="pixel-meta-hibrido-cliente-servidor-implementacion">
+            <input type="text" name="web" value="" style="display:none" tabindex="-1" autocomplete="off">
+            <div style="display:flex; gap:0.5rem; margin-bottom:0.75rem;">
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="si" required> Sí, útil</label>
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="no"> No mucho</label>
+            </div>
+            <textarea name="comment" rows="2" placeholder="¿Qué te ha faltado o sobrado? (opcional)" style="width:100%; padding:0.6rem; border-radius:8px; border:1px solid var(--border); background:var(--bg-card); color:var(--text-primary); margin-bottom:0.75rem;"></textarea>
+            <button type="submit" style="background:var(--accent-color, #6366f1); color:white; font-weight:600; padding:0.6rem 1.25rem; border-radius:8px; border:none; cursor:pointer;">Enviar feedback</button>
+          </form>
+        </div>
         <div class="related-articles">
           <h2>Artículos relacionados</h2>
           <a href="/blog/que-es-un-growth-partner">qué es un Growth Partner</a>
@@ -311,7 +327,8 @@
     <p>© 2026 DayByDay Consulting</p>
 </footer>
 <script src="/js/main.js"></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Pixel híbrido Meta: implementación práctica 2026","description":"Pixel híbrido Meta Ads: client-side + CAPI server-side, deduplicación, EMQ y checklist de verificación. Cifras reales D2C España 2026.","datePublished":"2026-06-13T00:00:00+02:00","dateModified":"2026-06-13T00:00:00+02:00","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/"},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/pixel-meta-hibrido-cliente-servidor-implementacion"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Pixel híbrido Meta: implementación práctica 2026","description":"Pixel híbrido Meta Ads: client-side + CAPI server-side, deduplicación, EMQ y checklist de verificación. Cifras reales D2C España 2026.","datePublished":"2026-06-13T00:00:00+02:00","dateModified":"2026-06-13T00:00:00+02:00","inLanguage":"es-ES","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/","jobTitle":"Growth Partner","worksFor":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"knowsAbout":["Meta Ads","Google Ads","TikTok Ads","paid media","ecommerce D2C","CRM y email marketing","analítica server-side","growth strategy"],"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/","logo":{"@type":"ImageObject","url":"https://www.daybydayconsulting.com/favicon.png"},"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/pixel-meta-hibrido-cliente-servidor-implementacion"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué diferencia hay entre el pixel Meta client-side y server-side?","acceptedAnswer":{"@type":"Answer","text":"El pixel client-side (Meta Pixel) es un fragmento JavaScript que se ejecuta en el navegador. Recoge eventos desde el dispositivo y depende de cookies de terceros. iOS 14+, bloqueadores y navegadores como Firefox reducen su capacidad de seguimiento. El pixel server-side (Conversions API) envía eventos desde tu servidor a Meta, sin pasar por el navegador. No depende de cookies ni JavaScript. La cobertura es mayor en entornos restringidos. El híbrido usa ambos."}},{"@type":"Question","name":"¿Cuánto mejora la cobertura de eventos con CAPI server-side?","acceptedAnswer":{"@type":"Answer","text":"En D2C España con más de 10K€/mes de spend, CAPI server-side incrementa la cobertura un 60-85% en iOS 14+ y un 15-30% en desktop. Más purchases reportados a Meta, mejor optimización del algoritmo, audiencias lookalike de mayor calidad. En una cuenta DayByDay de cosmética con 22K€/mes, la migración a CAPI subió los eventos purchase un 73% y bajó el CPA real un 18%."}},{"@type":"Question","name":"¿Qué es la deduplicación de eventos entre pixel y CAPI?","acceptedAnswer":{"@type":"Answer","text":"La deduplicación es el proceso por el cual Meta reconoce que un evento enviado desde el pixel client-side y desde CAPI server-side corresponden a la misma acción, no a dos. La forma estándar: enviar un event_id único en ambos. Meta compara event_id, source (pixel o CAPI) y timestamp, y descuenta el duplicado. Sin deduplicación, Meta cuenta la misma compra dos veces y tu ROAS reportado se infla."}},{"@type":"Question","name":"¿Qué es el EMQ (Event Match Quality) y qué valor es bueno?","acceptedAnswer":{"@type":"Answer","text":"El EMQ mide la calidad de los parámetros de cliente que envías en cada evento. Va de 0 a 10. Por debajo de 6, Meta no puede atribuir el evento a un usuario. Entre 6-7,5, la atribución es parcial. Por encima de 7,5, la atribución es sólida. Para llegar a 8+: enviar email (hasheado SHA-256), teléfono, nombre, ciudad, código postal y external_id. Sin hashing, Meta rechaza el evento por RGPD."}},{"@type":"Question","name":"¿Cómo verifico que mi CAPI funciona correctamente?","acceptedAnswer":{"@type":"Answer","text":"Siete verificaciones operativas: (1) EMQ mayor a 7,5, (2) Cobertura server-side mayor a 80% en pixel híbrido, (3) Event Match Quality alto en eventos de purchase, (4) Deduplicación funcionando, (5) Event IDs únicos por compra, (6) Parámetros de cliente hasheados SHA-256, (7) Sin eventos duplicados. La auditoría de 30-60 minutos detecta el 90% de los problemas."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.daybydayconsulting.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.daybydayconsulting.com/blog"},{"@type":"ListItem","position":3,"name":"Pixel híbrido Meta: implementación práctica 2026","item":"https://www.daybydayconsulting.com/blog/pixel-meta-hibrido-cliente-servidor-implementacion"}]}</script>
 </body>
 </html>

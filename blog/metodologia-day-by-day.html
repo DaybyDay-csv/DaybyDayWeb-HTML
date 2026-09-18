@@ -18,6 +18,7 @@
   <meta property="og:url" content="https://www.daybydayconsulting.com/blog/metodologia-day-by-day">
   <meta property="og:site_name" content="DayByDay Consulting">
   <meta property="og:locale" content="es_ES">
+
   <meta property="article:published_time" content="2026-06-12T00:00:00+02:00">
   <meta property="article:modified_time" content="2026-06-12T00:00:00+02:00">
   <meta property="article:author" content="Pablo Santirso">
@@ -27,7 +28,7 @@
   <meta name="twitter:description" content="La metodología DayByDay: 4 fases para combinar IA, automatización y paid media full-funnel. Caso real de cliente D2C con +38% de volumen y ROAS 6,5x.">
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
   <link rel="stylesheet" href="/css/sparkles.css">
   <link rel="stylesheet" href="/css/modern.css">
@@ -89,7 +90,7 @@
 <body>
 <a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
-    <a href="/" class="nav-logo"><img src="/img/brand/loop-symbol.svg" width="30" height="30" alt="" style="vertical-align:-7px;margin-right:8px;">DaybyDay</a>
+    <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
       <ul class="nav-links">
           <li><a href="/problema.html">Problema</a></li>
@@ -136,7 +137,7 @@
               </div>
             </div>
           </li>
-          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/blog.html">Blog</a></li><li><a href="/tools/">Tools</a></li>
       </ul>
     </div>
 </nav>
@@ -242,7 +243,7 @@
 <li><strong>Mira cuántas fases de las 4 ya tienes resueltas.</strong> Si tienes tracking OK, cuenta reestructurada, full-funnel y reporting de margen, estás en fase 4. Si te falta alguna, la metodología tiene sentido.</li>
 <li><strong>Pregúntate si tienes paciencia para 90 días.</strong> La metodología no es sprint. Si necesitas resultados esta semana, la metodología no es para ti.</li>
 </ol>
-<p>Si las tres respuestas apuntan a que tiene sentido, agenda una llamada de 30 minutos conmigo. Te digo en 20 qué fase atacar primero y qué ROI esperar.</p>
+<p>Si las tres respuestas apuntan a que tiene sentido, agenda una llamada de 30 minutos con Pablo o Jorge. Te decimos en 20 qué fase atacar primero y qué ROI esperar.</p>
 <h2>Recap + cliffhanger</h2>
 <p>Cubrimos tres cosas concretas:</p>
 <ul>
@@ -286,10 +287,25 @@
 
         <div class="cta-block">
           <h3>¿Tu equipo de marketing no escala con el mismo ritmo que tu negocio?</h3>
-          <p>Auditoría gratuita de 30 minutos conmigo. Reviso tu funnel, tu mix de paid y tu stack de IA. Te digo qué fase atacar primero y qué ROI esperar en 90 días.</p>
+          <p>Auditoría gratuita de 30 minutos con Pablo y Jorge. Revisamos tu funnel, tu mix de paid y tu stack de IA. Te decimos qué fase atacar primero y qué ROI esperar en 90 días.</p>
           <a href="/contacto.html">Solicitar diagnóstico gratuita →</a>
         </div>
 
+
+        <div class="cta-block" id="feedback" style="text-align:left; margin-top:2rem;">
+          <h3 style="font-size:1.05rem;">¿Te ha servido este artículo?</h3>
+          <p style="margin-bottom:1rem;">Tu respuesta mejora lo que escribimos. 10 segundos, sin registro.</p>
+          <form action="https://n8n.daybydayconsulting.com/webhook/blog-feedback" method="POST">
+            <input type="hidden" name="slug" value="metodologia-day-by-day">
+            <input type="text" name="web" value="" style="display:none" tabindex="-1" autocomplete="off">
+            <div style="display:flex; gap:0.5rem; margin-bottom:0.75rem;">
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="si" required> Sí, útil</label>
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="no"> No mucho</label>
+            </div>
+            <textarea name="comment" rows="2" placeholder="¿Qué te ha faltado o sobrado? (opcional)" style="width:100%; padding:0.6rem; border-radius:8px; border:1px solid var(--border); background:var(--bg-card); color:var(--text-primary); margin-bottom:0.75rem;"></textarea>
+            <button type="submit" style="background:var(--accent-color, #6366f1); color:white; font-weight:600; padding:0.6rem 1.25rem; border-radius:8px; border:none; cursor:pointer;">Enviar feedback</button>
+          </form>
+        </div>
         <div class="related-articles">
           <h2>Artículos relacionados</h2>
           <a href="/blog/que-es-un-growth-partner">qué es un Growth Partner</a>
@@ -317,7 +333,8 @@
     <p>© 2026 DayByDay Consulting</p>
 </footer>
 <script src="/js/main.js"></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"La metodología DayByDay: IA + paid full-funnel en 4 fases","description":"La metodología DayByDay: 4 fases para combinar IA, automatización y paid media full-funnel. Caso real de cliente D2C con +38% de volumen y ROAS 6,5x.","datePublished":"2026-06-12T00:00:00+02:00","dateModified":"2026-06-12T00:00:00+02:00","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/"},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/metodologia-day-by-day"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"La metodología DayByDay: IA + paid full-funnel en 4 fases","description":"La metodología DayByDay: 4 fases para combinar IA, automatización y paid media full-funnel. Caso real de cliente D2C con +38% de volumen y ROAS 6,5x.","datePublished":"2026-06-12T00:00:00+02:00","dateModified":"2026-06-12T00:00:00+02:00","inLanguage":"es-ES","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/","jobTitle":"Growth Partner","worksFor":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"knowsAbout":["Meta Ads","Google Ads","TikTok Ads","paid media","ecommerce D2C","CRM y email marketing","analítica server-side","growth strategy"],"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/","logo":{"@type":"ImageObject","url":"https://www.daybydayconsulting.com/favicon.png"},"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/metodologia-day-by-day"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué diferencia a DayByDay de otras agencias de marketing digital?","acceptedAnswer":{"@type":"Answer","text":"La combinación de tres pilares que pocas agencias aplican juntos: IA para análisis y optimización en tiempo real, automatización de procesos para escalar sin aumentar equipo, y estrategia de paid media full-funnel con foco en margen, no en métricas de plataforma. No gestionamos campañas aisladas: construimos ecosistemas de crecimiento integrados."}},{"@type":"Question","name":"¿Cómo usa DayByDay la IA en sus campañas?","acceptedAnswer":{"@type":"Answer","text":"En tres áreas: (1) análisis predictivo de audiencias para identificar los segmentos con mayor probabilidad de conversión, (2) optimización dinámica de pujas y presupuestos basada en señales en tiempo real, y (3) generación y prueba de variaciones creativas a escala, con 30+ variantes testadas en horas."}},{"@type":"Question","name":"¿Qué tipo de empresas trabajan con DayByDay?","acceptedAnswer":{"@type":"Answer","text":"Principalmente con empresas B2C y D2C en España con inversiones en paid media de entre 5.000€ y 100.000€ al mes. Sectores: moda, complementos, hogar, salud, belleza, fitness. Lo que tienen en común: quieren crecer de forma escalable sin aumentar el coste fijo del equipo interno."}},{"@type":"Question","name":"¿Qué es una estrategia full-funnel y por qué es importante?","acceptedAnswer":{"@type":"Answer","text":"Una estrategia full-funnel gestiona las tres fases del customer journey: TOFU (awareness, audiencias frías), MOFU (consideración, usuarios que ya conocen la marca) y BOFU (conversión, retargeting de alta intención). La mayoría invierte solo en BOFU y se pregunta por qué el ROAS cae: no están alimentando el funnel con audiencias nuevas."}},{"@type":"Question","name":"¿Cuánto tarda en verse resultado con la metodología DayByDay?","acceptedAnswer":{"@type":"Answer","text":"Los primeros datos válidos aparecen a las 4-6 semanas (fase de auditoría y tracking). Las primeras optimizaciones significativas a las 8-12 semanas. El caso mediano entre nuestros clientes D2C: ROAS sube 60-110% a los 90 días. El resultado completo se estabiliza entre los 6 y 9 meses."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.daybydayconsulting.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.daybydayconsulting.com/blog"},{"@type":"ListItem","position":3,"name":"La metodología DayByDay: IA + paid full-funnel en 4 fases","item":"https://www.daybydayconsulting.com/blog/metodologia-day-by-day"}]}</script>
 </body>
 </html>

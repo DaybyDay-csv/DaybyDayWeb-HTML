@@ -3,12 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cómo Testar Nuevas Campañas en Meta Ads: Sistema de Experimentación 2026 | DayByDay Consulting</title>
+  <title>Cómo Testar Nuevas Campañas en Meta Ads: Sistema de Experimentación 2026</title>
   <meta name="description" content="Guía completa para testar campañas de Meta Ads de forma científica. Aprende a diseñar tests, interpretar resultados y escalar lo que funciona.">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="Pablo Santirso · DayByDay Consulting">
   <link rel="canonical" href="https://www.daybydayconsulting.com/blog/test-campaigns-meta-ads">
+  <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/blog/test-campaigns-meta-ads">
+  <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/blog/test-campaigns-meta-ads">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly summary">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Cómo Testar Nuevas Campañas en Meta Ads: Sistema de Experimentación 2026">
+  <meta property="og:description" content="Guía completa para testar campañas de Meta Ads de forma científica. Aprende a diseñar tests, interpretar resultados y escalar lo que funciona.">
+  <meta property="og:url" content="https://www.daybydayconsulting.com/blog/test-campaigns-meta-ads">
+  <meta property="og:site_name" content="DayByDay Consulting">
+  <meta property="og:locale" content="es_ES">
+
+  <meta property="article:published_time" content="2026-05-24T00:00:00+02:00">
+  <meta property="article:modified_time" content="2026-05-24T00:00:00+02:00">
+  <meta property="article:author" content="Pablo Santirso">
+  <meta property="article:section" content="Meta Ads">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cómo Testar Nuevas Campañas en Meta Ads: Sistema de Experimentación 2026">
+  <meta name="twitter:description" content="Guía completa para testar campañas de Meta Ads de forma científica. Aprende a diseñar tests, interpretar resultados y escalar lo que funciona.">
+
   <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
   <link rel="stylesheet" href="/css/sparkles.css">
   <link rel="stylesheet" href="/css/modern.css">
@@ -27,6 +47,14 @@
     .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
     .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
     .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+    .article-body .direct-answer { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 0 0 2rem; }
+    .article-body .direct-answer p { margin: 0; font-size: 1.05rem; }
+    .article-body .summary-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .summary-block p { margin: 0 0 0.5rem; }
+    .article-body .pro-tip { background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .pro-tip p:first-child { color: var(--accent-color, #6366f1); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem; margin: 0 0 0.5rem; }
+    .article-body .pro-tip p:last-child { margin: 0; }
+    .article-body .cifra-que-abofetea { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); text-align: center; padding: 1.5rem 0; }
     .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
     .faq-item { margin-bottom: 1.5rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
     .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
@@ -39,14 +67,30 @@
     .author-info { font-size: 0.9rem; }
     .author-info .name { color: var(--text-primary); font-weight: 600; }
     .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
+    .related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .related-articles h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); }
+    .sources-block { margin-top: 3rem; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; }
+    .sources-block h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary); }
+    .sources-block p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .sources-block ul { list-style: none; padding: 0; margin: 0; }
+    .sources-block li { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+    .sources-block li:last-child { border-bottom: none; }
+    .sources-block a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .related-articles a { display: block; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .related-articles a:hover { border-color: var(--accent-color, #6366f1); }
     .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
     .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
     .post-nav a:hover { color: var(--text-primary); }
+    .cta-block { margin-top: 3rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; text-align: center; }
+    .cta-block h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary); }
+    .cta-block p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .cta-block a { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-color, #6366f1); color: white; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-size: 0.95rem; }
   </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
-    <a href="/" class="nav-logo"><img src="/img/brand/loop-symbol.svg" width="30" height="30" alt="" style="vertical-align:-7px;margin-right:8px;">DaybyDay</a>
+    <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
       <ul class="nav-links">
           <li><a href="/problema.html">Problema</a></li>
@@ -93,7 +137,7 @@
               </div>
             </div>
           </li>
-          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/blog.html">Blog</a></li><li><a href="/tools/">Tools</a></li>
       </ul>
     </div>
 </nav>
@@ -125,10 +169,10 @@
         <h1 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin-bottom:1rem;">Cómo Testar Nuevas Campañas en Meta Ads: Sistema de Experimentación 2026</h1>
         <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Guía completa para testar campañas de Meta Ads de forma científica. Aprende a diseñar tests, interpretar resultados y escalar lo que funciona.</p>
         <div class="article-author">
-          <div class="author-avatar">DB</div>
+          <div class="author-avatar">PS</div>
           <div class="author-info">
             <div class="name">Pablo Santirso · DayByDay Consulting</div>
-            <div class="role">Growth Partner · Paid Media & Estrategia</div>
+            <div class="role">Growth Partner · Paid Media &amp; Estrategia</div>
           </div>
         </div>
       </div>
@@ -137,173 +181,79 @@
     <section style="padding:2rem 0 4rem;">
       <div style="max-width:720px;margin:0 auto;">
         <article class="article-body">
-<section>
-      <h2>Por qué la mayoría de tests fallan</h2>
-      <p class="text-white/70 leading-relaxed mb-5">
-        El 90% de los marketers de eCommerce commeten el mismo error: lanzan un test sin hipótesis clara, sin control de variables y sin suficiente duración. El resultado: datos inutilizables y dinero desperdiciado.
-      </p>
-      <p class="text-white/70 leading-relaxed mb-5">
-        En <a href="/servicios/meta-ads.html">DayByDay</a> aplicamos un sistema de experimentación riguroso que reduce el coste de aprendizaje en un 60%. Esta guía te explica exactamente cómo lo hacemos.
-      </p>
-    </section>
-
-    <section>
-      <h2>El sistema de experimentación de 3 fases</h2>
-      <p class="text-white/70 leading-relaxed mb-4">
-        Cada test de campaña pasa por 3 fases distintas. Saltarse fases es la causa #1 de fracaso.
-      </p>
-
-      <h3 class="text-lg font-bold mt-6 mb-3">Fase 1: Validación (Días 1-14)</h3>
-      <p class="text-white/70 leading-relaxed mb-4">
-        Presupuesto: 300-500€/mes por test. Objetivo: validar que la campaña puede alcanzar métricas aceptables. No escalamos hasta tener al menos 50 conversiones y CPA dentro del 30% del target. Aprende más sobre <a href="/blog/budget-meta-ads-2026.html">cómo estructurar el presupuesto de test</a> en nuestra guía específica.
-      </p>
-
-      <h3 class="text-lg font-bold mt-6 mb-3">Fase 2: Optimización (Días 15-30)</h3>
-      <p class="text-white/70 leading-relaxed mb-4">
-        Una vez validada, ajustamos creatividades, audiencias y bidding. Aquí es donde el ROAS mejora de forma consistente. Si necesitas entender mejor qué métricas optimizar, mira nuestro <a href="/blog/que-es-roas-meta-ads.html">artículo sobre ROAS</a>.
-      </p>
-
-      <h3 class="text-lg font-bold mt-6 mb-3">Fase 3: Escala (Día 31+)</h3>
-      <p class="text-white/70 leading-relaxed mb-5">
-        Solo escalamos si el CPA en fase 2 es igual o mejor que en fase 1. Subimos un 20% cada 3 días监控ando ROAS. Si cae más de un 15%, rollback inmediato.
-      </p>
-    </section>
-
-    <section>
-      <h2>Variables críticas a testar</h2>
-      <p class="text-white/70 leading-relaxed mb-4">
-        No testes más de 2 variables a la vez o no podrás atribuir el resultado. Nuestra prioridad actual en 2026:
-      </p>
-
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-6">
-        <div class="space-y-4">
-          <div class="flex justify-between items-start border-b border-white/10 pb-3">
-            <div>
-              <span class="text-white font-bold">1. Audiencias</span>
-              <p class="text-white/50 text-xs mt-1">Lookalike 1% vs 3%, interests vs behavior</p>
-            </div>
-            <span class="text-green-400 font-mono text-sm">Alto impacto</span>
-          </div>
-          <div class="flex justify-between items-start border-b border-white/10 pb-3">
-            <div>
-              <span class="text-white font-bold">2. Creatividades</span>
-              <p class="text-white/50 text-xs mt-1">Video vs imagen, hooks en primeros 3 segundos</p>
-            </div>
-            <span class="text-green-400 font-mono text-sm">Alto impacto</span>
-          </div>
-          <div class="flex justify-between items-start border-b border-white/10 pb-3">
-            <div>
-              <span class="text-white font-bold">3. Objetivos de campaña</span>
-              <p class="text-white/50 text-xs mt-1">Conversiones vs ventas catálogo vs valor</p>
-            </div>
-            <span class="text-yellow-400 font-mono text-sm">Medio impacto</span>
-          </div>
-          <div class="flex justify-between items-start">
-            <div>
-              <span class="text-white font-bold">4. Bidding strategy</span>
-              <p class="text-white/50 text-xs mt-1">Lowest cost vs target CPA vs manual</p>
-            </div>
-            <span class="text-yellow-400 font-mono text-sm">Medio impacto</span>
-          </div>
-        </div>
-      </div>
-      <p class="text-white/70 leading-relaxed mb-5">
-        Prueba siempre primero audiencias y creatividades antes de tocar bidding o presupuesto. Son las variables con mayor palanca sobre el rendimiento.
-      </p>
-    </section>
-
-    <section>
-      <h2>Cómo diseñar un test válido</h2>
-
-      <h3 class="text-lg font-bold mt-6 mb-3">1. Define tu hipótesis</h3>
-      <p class="text-white/70 leading-relaxed mb-4">
-        "Las audiencias lookalike 3% tendrán mejor CPA que las de 1% porque..." → Completa la parte "porque" con datos de tu cuenta histórica o investigación.
-      </p>
-
-      <h3 class="text-lg font-bold mt-6 mb-3">2. Calcula el tamaño de muestra</h3>
-      <p class="text-white/70 leading-relaxed mb-4">
-        Para detectar un cambio del 15% en CPA con 80% de confianza estadística necesitas:
-      </p>
-      <div class="bg-[#1a1616] border border-white/8 rounded-xl p-5 mb-5">
-        <p class="font-mono text-white text-sm mb-2">Mínimo 200 conversiones por variante</p>
-        <p class="text-white/50 text-xs">Con CPA medio de 15€, eso son 3.000€/variante</p>
-        <p class="text-white/50 text-xs mt-2">Si tu CPA es 30€, necesitas 6.000€/variante</p>
-      </div>
-
-      <h3 class="text-lg font-bold mt-6 mb-3">3. Controla las variables</h3>
-      <p class="text-white/70 leading-relaxed mb-5">
-        Cuando testes audiencias, usa la MISMA creatividad en ambas variantes. Cuando testes creatividades, usa la MISMA audiencia. Mezclar variables invalida el test.
-      </p>
-    </section>
-
-    <section>
-      <h2>Errores que destruyen tus tests</h2>
-
-      <h3 class="text-lg font-bold mt-6 mb-3">1. Tomar decisiones antes de tiempo</h3>
-      <p class="text-white/70 leading-relaxed mb-4">
-        Si a los 3 días una variante tiene mejor CPA, no pares el test. Puede ser fluctuación estadística. Lee más sobre cómo <a href="/blog/estructura-campaigns-meta-ads.html">estructurar campañas correctamente</a> para evitar este error.
-      </p>
-
-      <h3 class="text-lg font-bold mt-6 mb-3">2. No documentar resultados</h3>
-      <p class="text-white/70 leading-relaxed mb-4">
-        Sin registro, repites los mismos errores. Creamos una spreadsheet con: hipótesis, duración, resultados, aprendizaje y siguiente acción. Actualiza después de cada test.
-      </p>
-
-      <h3 class="text-lg font-bold mt-6 mb-3">3. Testar en periodo de baja temporada</h3>
-      <p class="text-white/70 leading-relaxed mb-5">
-        Los datos de julio no aplican a noviembre. Si testeas en temporada baja, los resultados serán peores que en alta. Planifica tests para enero-febrero o septiembre.
-      </p>
-    </section>
-
-    <section>
-      <h2>Matriz de decisión post-test</h2>
-      <p class="text-white/70 leading-relaxed mb-4">
-        Después de cada test, usamos esta matriz para decidir siguiente paso:
-      </p>
-      <div class="space-y-3 mb-5">
-        <div class="flex items-start gap-3">
-          <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded text-xs font-bold">WIN</span>
-          <p class="text-white/70">CPA mejor +15% → Escalar inmediatamente con mismo setup</p>
-        </div>
-        <div class="flex items-start gap-3">
-          <span class="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded text-xs font-bold">CONTINUE</span>
-          <p class="text-white/70">CPA mejor +5-15% → Continuar optimización 2 semanas más</p>
-        </div>
-        <div class="flex items-start gap-3">
-          <span class="bg-red-500/20 text-red-400 px-2 py-1 rounded text-xs font-bold">KILL</span>
-          <p class="text-white/70">CPA peor → Pausar en 48h, Documentar por qué falló</p>
-        </div>
-      </div>
-      <p class="text-white/70 leading-relaxed mb-5">
-        El KILL es tan importante como el WIN. Cada test fallido enseña algo si lo documentas bien. Los founders que más rápido escalan son los que no tienen ego en pausar campañas.
-      </p>
-    </section>
-
-    <section>
-      <h2>Conclusión</h2>
-      <p class="text-white/70 leading-relaxed mb-4">
-        Testar campañas sin sistema es gambling con tu presupuesto. El sistema que usamos en DayByDay tiene 3 fases, 4 variables prioritarias y una matriz de decisión clara. Con esto reducimos el coste de aprendizaje drásticamente.
-      </p>
-      <p class="text-white/70 leading-relaxed mb-5">
-        Empieza mañana con un solo test: hypothesis clara, mismo creative, dos audiencias. Mide 14 días. Documenta. Repite. Si quieres que te ayudemos a diseñar tu primer test o revisar los resultados, <a href="/contacto">reserva una llamada de discovery</a>.
-      </p>
-    </section>
+<blockquote>Epígrafe pendiente. Una frase pegadiza + fecha, opcional pero recomendado.</blockquote>
+<h2>Por qué la mayoría de tests fallan</h2>
+<p>[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.</p>
+<h2>El sistema de experimentación de 3 fases</h2>
+<p>[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.</p>
+<h2>Variables críticas a testar</h2>
+<p>[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.</p>
+<h2>Cómo diseñar un test válido</h2>
+<p>[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.</p>
+<h2>Errores que destruyen tus tests</h2>
+<p>[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.</p>
+<h2>Matriz de decisión post-test</h2>
+<p>[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.</p>
+<h2>Conclusión</h2>
+<p>[BODY-TO-REWRITE] Escribir 150-250 palabras bajo este H2 con la voz Hormozi-DayByDay: 4-12 palabras por frase, al menos 1 cifra concreta, al menos 1 retórico del repertorio (cadena lógica / negación encadenada / cifra que abofetea / regla de tres). Mencionar DayByDay / Pablo / Jorge si encaja sin forzar. Verificar que la cifra de referencia se sostiene en growth-partner.html o en el caso real documentado.</p>
+<div class="pro-tip"><p>Pro tip</p><p>Pro tip pendiente: un giro contraintuitivo que el lector no espera. Etiquetarlo como &quot;Pro tip&quot; para que el renderer lo destaque visualmente.</p></div>
+<h2>Acción de hoy</h2>
+<p>Acción concreta ejecutable en menos de 30 minutos. Con número concreto (minutos, pasos, herramienta). Que el lector pueda hacerla esta misma tarde.</p>
+<h2>Recap + cliffhanger</h2>
+<p>Cubrimos [3 cosas concretas del post]. La semana que viene: [tema del siguiente post con gancho concreto].</p>
+<h2>Preguntas frecuentes (mantener)</h2>
+<h3>¿Cuántos días necesito para testar una nueva campaña de Meta Ads?</h3>
+<p>Mínimo 7 días para datos significativos, pero el algoritmo necesita al menos 50 eventos de conversión para estabilizarse. Esto suele tomar 14-21 días dependiendo del presupuesto diario.</p>
+<h3>¿Cuándo debo pausar una campaña que no convierte?</h3>
+<p>Si después de 14 días y 50+ eventos de conversión el CPA es 2x tu target, pausar. Pero si hay volumen y el CPA está dentro del 20% del target, seguir testando.</p>
+<h3>¿Cómo afecta la estacionalidad a los tests de campañas?</h3>
+<p>Evita lanzar tests en fechas de alta demanda (Black Friday, Navidad) porque los datos quedan contaminados. Mejor lanzar en enero, marzo-abril o septiembre.</p>
+<h3>¿Cuántas variaciones de anuncio debo crear por campaña?</h3>
+<p>Mínimo 3-5 creatividades diferentes. El algoritmo de Meta optimiza mejor con más opciones. En sectores competitivos, hasta 7-10 variaciones.</p>
+<h2>Artículos relacionados (revisar, mantener 2 mejores)</h2>
+<ul>
+<li><a href="/tech/meta-ads" rel="noopener noreferrer">Meta Ads</a></li>
+<li><a href="/tech/google-ads-tech" rel="noopener noreferrer">Google Ads</a></li>
+<li><a href="/tech/shopify" rel="noopener noreferrer">Shopify</a></li>
+<li><a href="/tech/ga4" rel="noopener noreferrer">GA4</a></li>
+</ul>
         </article>
 
-        
+
+
 <section class="faq-section">
   <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Preguntas frecuentes</h2>
-  <div class="faq-item"><h3 class="faq-q">¿Cuántos días necesito para testar una nueva campaña de Meta Ads?</h3><p class="faq-a">Mínimo 7 días para datos significativos, pero el algoritmo necesita al menos 50 eventos de conversión para estabilizarse. Esto suele tomar 14-21 días dependiendo del presupuesto diario.</p></div>
+<div class="faq-item"><h3 class="faq-q">¿Cuántos días necesito para testar una nueva campaña de Meta Ads?</h3><p class="faq-a">Mínimo 7 días para datos significativos, pero el algoritmo necesita al menos 50 eventos de conversión para estabilizarse. Esto suele tomar 14-21 días dependiendo del presupuesto diario.</p></div>
 <div class="faq-item"><h3 class="faq-q">¿Cuándo debo pausar una campaña que no convierte?</h3><p class="faq-a">Si después de 14 días y 50+ eventos de conversión el CPA es 2x tu target, pausar. Pero si hay volumen y el CPA está dentro del 20% del target, seguir testando.</p></div>
 <div class="faq-item"><h3 class="faq-q">¿Cómo afecta la estacionalidad a los tests de campañas?</h3><p class="faq-a">Evita lanzar tests en fechas de alta demanda (Black Friday, Navidad) porque los datos quedan contaminados. Mejor lanzar en enero, marzo-abril o septiembre.</p></div>
 <div class="faq-item"><h3 class="faq-q">¿Cuántas variaciones de anuncio debo crear por campaña?</h3><p class="faq-a">Mínimo 3-5 creatividades diferentes. El algoritmo de Meta optimiza mejor con más opciones. En sectores competitivos, hasta 7-10 variaciones.</p></div>
 </section>
 
+        <div class="cta-block">
+          <h3>¿Quieres aplicar esto en tu negocio?</h3>
+          <p>En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
+          <a href="/contacto.html">Solicitar diagnóstico gratuito →</a>
+        </div>
 
-        <div style="margin-top:3rem;padding:2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;text-align:center;">
-          <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.75rem;">Quieres aplicar esto en tu negocio?</h3>
-          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.25rem;">En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.</p>
-          <a href="/contacto.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-color,#6366f1);color:white;font-weight:600;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.95rem;">Reservar llamada gratuita</a>
+
+        <div class="cta-block" id="feedback" style="text-align:left; margin-top:2rem;">
+          <h3 style="font-size:1.05rem;">¿Te ha servido este artículo?</h3>
+          <p style="margin-bottom:1rem;">Tu respuesta mejora lo que escribimos. 10 segundos, sin registro.</p>
+          <form action="https://n8n.daybydayconsulting.com/webhook/blog-feedback" method="POST">
+            <input type="hidden" name="slug" value="test-campaigns-meta-ads">
+            <input type="text" name="web" value="" style="display:none" tabindex="-1" autocomplete="off">
+            <div style="display:flex; gap:0.5rem; margin-bottom:0.75rem;">
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="si" required> Sí, útil</label>
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="no"> No mucho</label>
+            </div>
+            <textarea name="comment" rows="2" placeholder="¿Qué te ha faltado o sobrado? (opcional)" style="width:100%; padding:0.6rem; border-radius:8px; border:1px solid var(--border); background:var(--bg-card); color:var(--text-primary); margin-bottom:0.75rem;"></textarea>
+            <button type="submit" style="background:var(--accent-color, #6366f1); color:white; font-weight:600; padding:0.6rem 1.25rem; border-radius:8px; border:none; cursor:pointer;">Enviar feedback</button>
+          </form>
+        </div>
+        <div class="related-articles">
+          <h2>Artículos relacionados</h2>
+          <a href="/tech/meta-ads">Meta Ads</a>
+          <a href="/tech/google-ads-tech">Google Ads</a>
         </div>
 
         <div class="post-nav">
@@ -321,5 +271,8 @@
     <p>© 2026 DayByDay Consulting</p>
 </footer>
 <script src="/js/main.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Cómo Testar Nuevas Campañas en Meta Ads: Sistema de Experimentación 2026","description":"Guía completa para testar campañas de Meta Ads de forma científica. Aprende a diseñar tests, interpretar resultados y escalar lo que funciona.","datePublished":"2026-05-24T00:00:00+02:00","dateModified":"2026-05-24T00:00:00+02:00","inLanguage":"es-ES","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/","jobTitle":"Growth Partner","worksFor":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"knowsAbout":["Meta Ads","Google Ads","TikTok Ads","paid media","ecommerce D2C","CRM y email marketing","analítica server-side","growth strategy"],"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/","logo":{"@type":"ImageObject","url":"https://www.daybydayconsulting.com/favicon.png"},"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/test-campaigns-meta-ads"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuántos días necesito para testar una nueva campaña de Meta Ads?","acceptedAnswer":{"@type":"Answer","text":"Mínimo 7 días para datos significativos, pero el algoritmo necesita al menos 50 eventos de conversión para estabilizarse. Esto suele tomar 14-21 días dependiendo del presupuesto diario."}},{"@type":"Question","name":"¿Cuándo debo pausar una campaña que no convierte?","acceptedAnswer":{"@type":"Answer","text":"Si después de 14 días y 50+ eventos de conversión el CPA es 2x tu target, pausar. Pero si hay volumen y el CPA está dentro del 20% del target, seguir testando."}},{"@type":"Question","name":"¿Cómo afecta la estacionalidad a los tests de campañas?","acceptedAnswer":{"@type":"Answer","text":"Evita lanzar tests en fechas de alta demanda (Black Friday, Navidad) porque los datos quedan contaminados. Mejor lanzar en enero, marzo-abril o septiembre."}},{"@type":"Question","name":"¿Cuántas variaciones de anuncio debo crear por campaña?","acceptedAnswer":{"@type":"Answer","text":"Mínimo 3-5 creatividades diferentes. El algoritmo de Meta optimiza mejor con más opciones. En sectores competitivos, hasta 7-10 variaciones."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.daybydayconsulting.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.daybydayconsulting.com/blog"},{"@type":"ListItem","position":3,"name":"Cómo Testar Nuevas Campañas en Meta Ads: Sistema de Experimentación 2026","item":"https://www.daybydayconsulting.com/blog/test-campaigns-meta-ads"}]}</script>
 </body>
 </html>

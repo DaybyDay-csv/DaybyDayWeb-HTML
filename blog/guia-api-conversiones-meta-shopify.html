@@ -18,6 +18,7 @@
   <meta property="og:url" content="https://www.daybydayconsulting.com/blog/guia-api-conversiones-meta-shopify">
   <meta property="og:site_name" content="DayByDay Consulting">
   <meta property="og:locale" content="es_ES">
+
   <meta property="article:published_time" content="2026-04-30T00:00:00+02:00">
   <meta property="article:modified_time" content="2026-04-30T00:00:00+02:00">
   <meta property="article:author" content="Pablo Santirso">
@@ -27,7 +28,7 @@
   <meta name="twitter:description" content="API de Conversiones Meta (CAPI) en Shopify: qué es, por qué en 2026 es no-negociable, 3 rutas de implementación, dedup, RGPD y 3 chequeos.">
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css">
   <link rel="stylesheet" href="/css/sparkles.css">
   <link rel="stylesheet" href="/css/modern.css">
@@ -89,7 +90,7 @@
 <body>
 <a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
-    <a href="/" class="nav-logo"><img src="/img/brand/loop-symbol.svg" width="30" height="30" alt="" style="vertical-align:-7px;margin-right:8px;">DaybyDay</a>
+    <a href="/" class="nav-logo">DayByDay</a>
     <div class="nav-menu">
       <ul class="nav-links">
           <li><a href="/problema.html">Problema</a></li>
@@ -136,7 +137,7 @@
               </div>
             </div>
           </li>
-          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/blog.html">Blog</a></li><li><a href="/tools/">Tools</a></li>
       </ul>
     </div>
 </nav>
@@ -214,7 +215,7 @@
 <p><strong>3 · Cobertura de Purchase.</strong> Comparar purchases reportados por Meta vs Shopify del último mes. Diferencia &lt; 10% indica tracking sano. Diferencia &gt; 20% indica evento perdido o dedup roto.</p>
 <div class="cifra-que-abofetea">De 21 cuentas D2C auditadas, 17 (81%) tenían al menos 1 de estos 3 problemas. Corregir los 3 suele recuperar 15-25% de atribución correcta en 7-14 días. El coste: 4-8h de auditoría + setup. El retorno: decisiones de presupuesto que paran de inflar Meta 15-20%.</div>
 <h2>Cómo trabajamos en DayByDay con CAPI</h2>
-<p>En DayByDay operamos como growth partner senior. CAPI no es un entregable técnico. Es la base de atribución sobre la que se toman decisiones de presupuesto. Auditoría de pixel + CAPI + dedup, implementación con app de partner o GTM server-side según volumen, verificación de EMQ y cobertura, alertas Slack para degradación, acceso directo del fundador conmigo. Para D2C con facturación &gt; 1M€ anual, spend Meta &gt; 10K€/mes, margen &gt; 20%.</p>
+<p>En DayByDay operamos como growth partner senior. CAPI no es un entregable técnico. Es la base de atribución sobre la que se toman decisiones de presupuesto. Auditoría de pixel + CAPI + dedup, implementación con app de partner o GTM server-side según volumen, verificación de EMQ y cobertura, alertas Slack para degradación, acceso directo del fundador con Pablo o Jorge. Para D2C con facturación &gt; 1M€ anual, spend Meta &gt; 10K€/mes, margen &gt; 20%.</p>
 <div class="cifra-que-abofetea">En 16 cuentas D2C en DayByDay con CAPI aplicado: mediana de cobertura subió de 62% a 94%. EMQ mediano de 5,2 a 8,1. CPA reportado se ajustó -15% de mediana. ROI sobre el fee: 5,7x a 6 meses, principalmente por decisiones de presupuesto que dejan de operar con datos inflados.</div>
 <h2>Acción de hoy (30 minutos)</h2>
 <ol>
@@ -254,6 +255,21 @@
           <a href="/contacto.html">Solicitar diagnóstico gratuito →</a>
         </div>
 
+
+        <div class="cta-block" id="feedback" style="text-align:left; margin-top:2rem;">
+          <h3 style="font-size:1.05rem;">¿Te ha servido este artículo?</h3>
+          <p style="margin-bottom:1rem;">Tu respuesta mejora lo que escribimos. 10 segundos, sin registro.</p>
+          <form action="https://n8n.daybydayconsulting.com/webhook/blog-feedback" method="POST">
+            <input type="hidden" name="slug" value="guia-api-conversiones-meta-shopify">
+            <input type="text" name="web" value="" style="display:none" tabindex="-1" autocomplete="off">
+            <div style="display:flex; gap:0.5rem; margin-bottom:0.75rem;">
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="si" required> Sí, útil</label>
+              <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="no"> No mucho</label>
+            </div>
+            <textarea name="comment" rows="2" placeholder="¿Qué te ha faltado o sobrado? (opcional)" style="width:100%; padding:0.6rem; border-radius:8px; border:1px solid var(--border); background:var(--bg-card); color:var(--text-primary); margin-bottom:0.75rem;"></textarea>
+            <button type="submit" style="background:var(--accent-color, #6366f1); color:white; font-weight:600; padding:0.6rem 1.25rem; border-radius:8px; border:none; cursor:pointer;">Enviar feedback</button>
+          </form>
+        </div>
         <div class="related-articles">
           <h2>Artículos relacionados</h2>
           <a href="/tech/meta-ads">Meta Ads</a>
@@ -275,7 +291,8 @@
     <p>© 2026 DayByDay Consulting</p>
 </footer>
 <script src="/js/main.js"></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"API Conversiones Meta Shopify: setup D2C paso a paso","description":"API de Conversiones Meta (CAPI) en Shopify: qué es, por qué en 2026 es no-negociable, 3 rutas de implementación, dedup, RGPD y 3 chequeos.","datePublished":"2026-04-30T00:00:00+02:00","dateModified":"2026-04-30T00:00:00+02:00","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/"},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/guia-api-conversiones-meta-shopify"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"API Conversiones Meta Shopify: setup D2C paso a paso","description":"API de Conversiones Meta (CAPI) en Shopify: qué es, por qué en 2026 es no-negociable, 3 rutas de implementación, dedup, RGPD y 3 chequeos.","datePublished":"2026-04-30T00:00:00+02:00","dateModified":"2026-04-30T00:00:00+02:00","inLanguage":"es-ES","author":{"@type":"Person","name":"Pablo Santirso","url":"https://www.daybydayconsulting.com/","jobTitle":"Growth Partner","worksFor":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/"},"knowsAbout":["Meta Ads","Google Ads","TikTok Ads","paid media","ecommerce D2C","CRM y email marketing","analítica server-side","growth strategy"],"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"publisher":{"@type":"Organization","name":"DayByDay Consulting","url":"https://www.daybydayconsulting.com/","logo":{"@type":"ImageObject","url":"https://www.daybydayconsulting.com/favicon.png"},"sameAs":["https://www.linkedin.com/company/daybydayconsulting/"]},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.daybydayconsulting.com/blog/guia-api-conversiones-meta-shopify"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué es la API de Conversiones de Meta y en qué se diferencia del píxel?","acceptedAnswer":{"@type":"Answer","text":"La API de Conversiones (CAPI) es un canal server-side que envía eventos de conversión directamente desde tu servidor al de Meta, sin depender del navegador del usuario. El píxel es client-side: se ejecuta en el navegador y se ve afectado por bloqueadores, ITP de Safari, ATT de iOS y extensiones de privacidad. CAPI complementa al píxel — no lo sustituye. Cuando ambos eventos están deduplicados (mediante event_id y event_name compartidos), Meta recibe la señal por dos vías y se queda con la más fiable. Sin CAPI, en 2026 estás perdiendo entre el 20% y el 40% de los eventos de compra que sí están ocurriendo en tu Shopify."}},{"@type":"Question","name":"¿Cuánto se mejora el rendimiento de Meta Ads tras implementar Conversions API?","acceptedAnswer":{"@type":"Answer","text":"En las cuentas D2C que migramos a CAPI deduplicada, vemos consistentemente: +15-25% de eventos de compra capturados (los que el píxel perdía), -10-20% de CPA reportado por Meta (porque la atribución mejora con más señal), +20-40% de calidad de las audiencias lookalike (Meta entrena con eventos completos, no parciales) y mejor estabilidad del algoritmo en fase de aprendizaje. No es magia — es darle a Meta los datos que ya estaban ocurriendo pero no llegaban. La diferencia se nota especialmente en cuentas con mucho tráfico iOS/Safari, donde el píxel pierde más eventos."}},{"@type":"Question","name":"¿Cómo se implementa la API de Conversiones en Shopify? ¿Necesito desarrollador?","acceptedAnswer":{"@type":"Answer","text":""}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.daybydayconsulting.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.daybydayconsulting.com/blog"},{"@type":"ListItem","position":3,"name":"API Conversiones Meta Shopify: setup D2C paso a paso","item":"https://www.daybydayconsulting.com/blog/guia-api-conversiones-meta-shopify"}]}</script>
 </body>
 </html>
