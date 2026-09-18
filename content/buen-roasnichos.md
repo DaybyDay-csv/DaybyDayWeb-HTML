@@ -84,3 +84,27 @@ Las discrepancias entre plataformas son normales. Meta atribuye conversiones a v
 - [Google Ads](/tech/google-ads-tech.html)
 - [Shopify](/tech/shopify.html)
 - [GA4](/tech/ga4.html)
+
+## Ejemplo con números: tienda de suplementos D2C
+
+Vamos con un caso típico. Tienda de suplementos deportivos en Meta Ads. Facturación media por pedido: 58 euros. Coste del producto y logística: 26 euros. Esto deja un margen bruto de 32 euros por venta.
+
+Si su ROAS objetivo fuera 2, gastaría 29 euros en ads por cada venta. Resultado: 3 euros de beneficio por pedido. Insuficiente para crecer.
+
+El cálculo real es otro. Necesita al menos 12 euros por pedido después de ads para cubrir estructura y reinvertir. Eso significa un margen publicitario de 20 euros por venta. El ROAS mínimo de equilibrio queda en 2,9. Cualquier campaña por debajo de 3 está comiendo su caja.
+
+## Cómo saber si tu ROAS está bien de verdad
+
+Compara tres cifras, no una. Primera: tu ROAS por campaña. Segunda: tu ROAS blended, que incluye ventas orgánicas, email y directo. Tercera: tu ROAS de equilibrio, el que calculaste antes.
+
+Un ROAS de 2 en Meta puede ser buenísimo si tu blended está en 4,5. Significa que las ads están ayudando a todo el conjunto. Al revés también aplica. Un 4 en Meta con un blended de 3,5 delata atribución inflada.
+
+Mira también los 30 días posteriores. Los suplementos tienen recompra a los 45 días. Un cliente que entra con ROAS 1,8 puede acabar en 3,4 con su segundo pedido. Si tienes recompra, tu ROAS de primera compra puede ser más bajo de lo que crees.
+
+## Qué hacer cuando tu ROAS no llega al benchmark
+
+Primero, revisa el ticket medio. Pasar de 58 a 72 euros por pedido baja tu ROAS de equilibrio casi un punto. Packs, suscripciones o envío gratis a partir de cierta cantidad suelen mover esa aguja más rápido que cualquier optimización de pujas.
+
+Segundo, revisa la campaña con peor ROAS, no la media. En cuentas multicanal es habitual que una sola campaña se coma el margen de las demás. Pausarla y redistribuir ese 20 por ciento del presupuesto a la mejor suele subir el ROAS global sin tocar nada más.
+
+Tercero, da margen temporal. Ninguna decisión con menos de 7 días de datos. Con ticket medio y conversión a carrito, 14 días es más honesto. Cambiar cosas antes solo añade ruido.
