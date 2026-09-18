@@ -100,3 +100,27 @@ A partir del día 15, mira dos métricas en el Administrador: la columna de cost
 Ojo con una trampa del panel: Meta muestra a veces el coste previsto junto al real. El previsto es una estimación optimista basada en las primeras entregas. Decide siempre con el dato real de los últimos 7 días, nunca con la previsión del día de lanzamiento.
 
 Si usas Bid Cap, añade una tercera comprobación: la tasa de subastas ganadas. Si está por debajo del 30 %, tu puja máxima es tan baja que casi no participas. Sube el Bid Cap en pasos pequeños, del 10 al 15 %, y espera 5 días entre ajustes.
+
+## Ejemplo con números: Bid Cap frente a Cost Cap en la misma cuenta
+
+Vamos con datos reales de una tienda de complementos. CPA objetivo: 20 €. Gasto diario: 100 €.
+
+Con Bid Cap de 18 €, Meta puja bajo en las subastas caras. Resultado: 4 ventas diarias y un CPA real de 17 €. Eficiente, pero sin volumen. Con Cost Cap de 20 €, Meta gasta más cuando lo necesita. Resultado: 5 ventas y un CPA medio de 20,50 €. Un poco más caro, más ventas.
+
+La diferencia mensual: 30 ventas extra con el Cost Cap. A 60 € de ticket medio, eso son 1.800 € más de facturación por pagar 15 céntimos de CPA por encima del objetivo. Cuando el margen lo aguanta, la cuenta sale ganando.
+
+## Caso de uso: lanzamiento de producto nuevo sin histórico
+
+Sacaste una nueva línea de velas aromáticas. No tienes datos de conversión para ese producto, así que el píxel aún no sabe quién compra. Aquí el Cost Cap falla: Meta necesita entre 50 y 100 conversiones para estabilizar el coste real.
+
+Lo que funciona: arrancar con Cost Cap en tu CPA de referencia de la categoría. Si tus velas actuales convierten a 12 €, pon 14 €. Dejas ese margen de 2 € para que Meta explore. Al día 10, con el píxel aprendiendo, bajas a 13 €. Al día 20, a 12 € si el volumen aguanta.
+
+Si a los 15 días no hay conversiones suficientes, sube el Cap 2 € más y espera una semana. Sin histórico, el error habitual es ajustar cada dos días. Cada ajuste reinicia el aprendizaje.
+
+## Qué mirar en los 3 primeros días para no arruinar el test
+
+El Cost Cap no entrega el presupuesto de golpe. Los días 1 y 2 el gasto suele ir por debajo del objetivo diario. Es normal. Meta está tanteando subastas.
+
+Lo que sí revisas: coste por compra del conjunto y frecuencia. Si la frecuencia pasa de 3 en 72 horas con audiencias pequeñas, tu Cap está por debajo de lo que el mercado permite. Si el gasto ni arranca al día 3, sube el Cap un 15 % y no toques nada más.
+
+Anota los números en una hoja. Coste por compra, gasto y ventas, cada día, mismo formato. Sin ese registro, cualquier decisión sobre el Cap es una opinión.
