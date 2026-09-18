@@ -70,3 +70,37 @@ Cubrimos [3 cosas concretas del post]. La semana que viene: [tema del siguiente 
 - [Google Ads](/tech/google-ads-tech.html)
 - [Shopify](/tech/shopify.html)
 - [GA4](/tech/ga4.html)
+
+## Ejemplo práctico: presupuesto y números reales
+
+Vamos con un caso con cifras. Marca D2C de cosmética, facturación de 45.000 euros al mes. Meta Ads concentra el 70% de la inversión en medios. Presupuesto mensual: 6.000 euros.
+
+En 2025 repartían así: 4.500 a adquisición y 1.500 a retargeting. El retargeting llevaba tres meses con ROAS de 1,2. Puro dinero quemado. La audiencia era pequeña y sobreexplotada.
+
+El cambio para 2026: 5.400 a Advantage+ Shopping y 600 a retención por email y SMS sync con Meta. El retargeting desaparece como campaña propia. Advantage+ ya hace esa labor internamente con la señal del píxel y la API de conversiones.
+
+Resultados en 60 días: CPA de adquisición baja de 19 a 15 euros. El ROAS blended sube de 1,9 a 2,4. La frecuencia media global cae de 4,1 a 2,7. El gasto en creativos sube de 300 a 800 euros mensuales, tercerizando la producción con dos editores freelance.
+
+## Caso de uso: creatividades con UGC y datos propios
+
+Otra marca, esta de suplementos. Su problema: dependencia total de un único vídeo ganador que llevaba 5 meses en rotación. El CPA había subido un 35% desde enero.
+
+El proceso que aplicaron. Primero, contrataron a cuatro creadores de contenido para grabar UGC bruto. Sin guion cerrado, solo tres puntos clave por vídeo. Coste: 120 euros por creador.
+
+Segundo, montaron 16 variaciones desde esas grabaciones. Mismo hook, distinto orden. Distintos primeros 3 segundos. Subtítulos en dos estilos. Todo entró en Advantage+ como creative diversification.
+
+Tercero, dejaron que el algoritmo decidiera. A las dos semanas, tres variaciones concentraban el 60% del gasto. Las otras 13 quedaron con distribución marginal. No las apagaron: sirven de banco para tests futuros.
+
+El CPA bajó de 23 a 17 euros en un mes. La lección: volumen de variaciones baratas gana a una pieza pulida y cara.
+
+## Checklist operativo para el primer trimestre
+
+Nada de teoría abstracta. Esta es la lista de tareas con fechas.
+
+Enero: instala la API de conversiones y verifica el Event Match Quality. Si está por debajo de 6, arréglalo antes de tocar nada más. Revisa también tu configuración de Consolidated Events en Events Manager.
+
+Febrero: migra el 80% del presupuesto a Advantage+ Shopping. Mantén una campaña manual pequeña para comparar datos. Sube la producción de creativos a un mínimo de 8 variaciones nuevas al mes.
+
+Marzo: primer test serio de ofertas. Compara Cost per Purchase contra ROAS goal en Advantage+. Revisa frecuencia semanal por ad set. Si supera 3,5 en audiencias menores de 500.000 personas, renueva creativos esa misma semana.
+
+Apunta todo en una hoja de cálculo simple. Fecha, cambio, presupuesto, CPA, ROAS blended. Sin registro no hay aprendizaje. Y el aprendizaje es lo único que Meta no te va a dar gratis en 2026.
