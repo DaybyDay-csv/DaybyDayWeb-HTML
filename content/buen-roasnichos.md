@@ -1,8 +1,8 @@
 ---
-title: "¿Qué ROAS es bueno? Benchmarks reales por nicho 2026"
+title: "¿Qué ROAS es bueno? Benchmarks por nicho 2026"
 h1: "¿Qué es un buen ROAS? Benchmarks por nicho para Meta Ads y Google Ads en 2026"
 slug: buen-roasnichos
-meta_desc: "Calcula tu ROAS y compruébalo con benchmarks por nicho en Meta y Google Ads. Verás si tu ROAS es saludable o estás perdiendo margen."
+meta_desc: "Calcula tu ROAS y compáralo con datos reales de Meta y Google Ads por sector. Comprueba en 2 minutos si el tuyo es saludable o quem margen."
 canonical: "https://www.daybydayconsulting.com/blog/buen-roasnichos"
 category: "Paid Media"
 article_date: "2026-03-10"
