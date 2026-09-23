@@ -1,10 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
   <rect width="200" height="200" rx="28" fill="#FAF8F3"/>
-  <path d="M100,40 C136,37 158,58 157,90 C156,124 134,149 100,151 C68,153 45,131 44,97 C43,64 66,43 100,40 Z" stroke="#14131A" stroke-width="10" stroke-linecap="round"/>
-  <circle cx="108" cy="42" r="10" fill="#14131A"/>
-  <circle cx="55" cy="64" r="10" fill="#14131A"/>
-  <circle cx="155" cy="100" r="10" fill="#14131A"/>
-  <circle cx="55" cy="137" r="10" fill="#14131A"/>
-  <circle cx="128" cy="146" r="10" fill="#14131A"/>
-  <circle cx="100" cy="96" r="11" fill="#3B82F6"/>
+  <circle cx="100" cy="100" r="41.5" stroke="#14131A" stroke-width="2.4"/>
+  <circle cx="100" cy="58.5" r="6.8" fill="#14131A"/>
+  <circle cx="133.6" cy="75.6" r="6.8" fill="#14131A"/>
+  <circle cx="140.9" cy="107.2" r="6.8" fill="#14131A"/>
+  <circle cx="121.4" cy="135.6" r="6.8" fill="#14131A"/>
+  <circle cx="79.3" cy="135.9" r="6.8" fill="#14131A"/>
+  <circle cx="59.1" cy="107.2" r="6.8" fill="#14131A"/>
+  <circle cx="66.4" cy="75.6" r="6.8" fill="#14131A"/>
+  <circle cx="100" cy="100" r="7" fill="#14131A"/>
 </svg>
