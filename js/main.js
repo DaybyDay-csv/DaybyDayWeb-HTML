@@ -280,3 +280,64 @@ document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
     });
   }
 })();
+
+/* ==== Consentimiento de cookies: banner mínimo + bloqueo previo de terceros ==== */
+// art. 22.2 LSSI + Guía AEPD/CNMC sobre el uso de cookies (2ª ed.): sin
+// terceros cargados antes del consentimiento, rechazo tan visible como la
+// aceptación y caducidad a los 12 meses. Las técnicas no piden permiso.
+(function () {
+  var KEY = 'ddb-consent';
+  var TTL = 365 * 24 * 60 * 60 * 1000; // 12 meses
+
+  function read() {
+    try { return JSON.parse(localStorage.getItem(KEY)); } catch (e) { return null; }
+  }
+
+  window.ddbGetConsent = read;
+
+  window.ddbSetConsent = function (thirdParty) {
+    var value = { thirdParty: !!thirdParty, ts: Date.now() };
+    try { localStorage.setItem(KEY, JSON.stringify(value)); } catch (e) {}
+    document.dispatchEvent(new CustomEvent('ddb-consent', { detail: value }));
+    hideBanner();
+  };
+
+  function hideBanner() {
+    var el = document.getElementById('consent-banner');
+    if (el) el.remove();
+  }
+
+  // Reabrir el banner desde /cookies.html ("Revisar mi elección")
+  window.ddbOpenConsent = function () { showBanner(); };
+
+  function showBanner() {
+    if (document.getElementById('consent-banner')) return;
+    var el = document.createElement('div');
+    el.id = 'consent-banner';
+    el.className = 'consent-banner';
+    el.setAttribute('role', 'region');
+    el.setAttribute('aria-label', 'Consentimiento de cookies');
+    el.innerHTML =
+      '<p class="consent-text">Esta web usa por su cuenta solo cookies técnicas y guarda tu tema en tu navegador. ' +
+      'Nada de analítica ni publicidad. La única pieza de terceros es Calendly, la agenda de reservas, y no la cargo sin tu permiso.</p>' +
+      '<div class="consent-actions">' +
+      '<button type="button" class="consent-btn consent-accept">De acuerdo</button>' +
+      '<button type="button" class="consent-btn consent-reject">Solo lo necesario</button>' +
+      '<a class="consent-more" href="/cookies.html">Qué uso exactamente</a>' +
+      '</div>';
+    document.body.appendChild(el);
+    el.querySelector('.consent-accept').addEventListener('click', function () { window.ddbSetConsent(true); });
+    el.querySelector('.consent-reject').addEventListener('click', function () { window.ddbSetConsent(false); });
+  }
+
+  function init() {
+    var c = read();
+    if (!c || Date.now() - c.ts > TTL) showBanner();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();

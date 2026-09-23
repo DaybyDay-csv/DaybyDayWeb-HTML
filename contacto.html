@@ -157,9 +157,51 @@
             <p style="color:var(--text-secondary);font-size:0.97rem;line-height:1.6;margin-bottom:1.25rem;">
               Si tienes claro que quieres hablar y solo necesitas el hueco, el camino más corto es la agenda directa.
             </p>
-            <!-- Calendly inline widget begin -->
-            <div class="calendly-inline-widget" data-url="https://calendly.com/d/d2dg-r7p-qrd?hide_gdpr_banner=1&amp;background_color=0f0f14&amp;text_color=f5f5f7&amp;primary_color=3b82f6" style="min-width:320px;height:700px;border-radius:12px;overflow:hidden;"></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- Calendly inline widget begin — cargado solo con consentimiento (art. 22.2 LSSI) -->
+            <div id="calendly-slot">
+              <div class="calendly-inline-widget" data-url="https://calendly.com/d/d2dg-r7p-qrd?hide_gdpr_banner=1&amp;background_color=0f0f14&amp;text_color=f5f5f7&amp;primary_color=3b82f6" style="min-width:320px;height:700px;border-radius:12px;overflow:hidden;"></div>
+            </div>
+            <div id="calendly-blocked" class="calendly-blocked" hidden>
+              <p>La agenda es de Calendly, un servicio de terceros que pone sus propias cookies. No la cargo hasta que me lo autorices.</p>
+              <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;">
+                <button type="button" id="calendly-unlock" class="consent-btn consent-accept">Cargar la agenda de Calendly</button>
+                <a class="consent-btn consent-reject" href="https://calendly.com/d/d2dg-r7p-qrd" target="_blank" rel="noopener">Abrir en otra pestaña</a>
+              </div>
+            </div>
+            <script>
+            (function () {
+              var slot = document.getElementById('calendly-slot');
+              var blocked = document.getElementById('calendly-blocked');
+              var loaded = false;
+              function load() {
+                if (loaded) return;
+                loaded = true;
+                slot.hidden = false;
+                blocked.hidden = true;
+                var s = document.createElement('script');
+                s.src = 'https://assets.calendly.com/assets/external/widget.js';
+                s.async = true;
+                document.body.appendChild(s);
+              }
+              function gate() {
+                var c = window.ddbGetConsent && window.ddbGetConsent();
+                if (c && c.thirdParty) { load(); return; }
+                slot.hidden = true;
+                blocked.hidden = false;
+              }
+              document.addEventListener('ddb-consent', function (e) {
+                if (e.detail.thirdParty) load();
+              });
+              var btn = document.getElementById('calendly-unlock');
+              if (btn) btn.addEventListener('click', function () {
+                window.ddbSetConsent(true);
+                load();
+              });
+              if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', gate);
+              } else { gate(); }
+            })();
+            </script>
             <!-- Calendly inline widget end -->
 
             <div style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border);">
@@ -201,6 +243,7 @@
                 <textarea id="problem" name="problem" rows="4" placeholder="Una o dos líneas. Lo que te preocupa esta semana."></textarea>
               </div>
               <button type="submit" id="lead-submit">Pedir auditoría</button>
+              <p class="form-privacy-note">Al enviar me das tu nombre y email para contestar a tu solicitud. Nada más. Quién trata estos datos, cuánto tiempo los guardo y cómo borrarlos: <a href="/privacidad.html">política de privacidad</a>.</p>
               <p id="lead-status" style="text-align:center;margin-top:1rem;font-size:0.82rem;color:var(--text-muted);" role="status">Te contesto en menos de <span class="voice-machine">24 horas</span>.</p>
             </form>
           </div>
@@ -237,6 +280,7 @@
         </div>
       </div>
       <div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;">
+        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Política de privacidad</a> · <a href="/cookies.html">Política de cookies</a></p>
         <p class="footer-copy">© 2026 DaybyDay Consulting · Madrid</p>
       </div>
     </div>
