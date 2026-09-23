@@ -88,3 +88,41 @@ Mínimo 3-5 creatividades diferentes. El algoritmo de Meta optimiza mejor con m�
 - [Google Ads](/tech/google-ads-tech.html)
 - [Shopify](/tech/shopify.html)
 - [GA4](/tech/ga4.html)
+
+## Ejemplo completo con números
+
+Vamos a ver un test real de principio a fin. Una marca de suplementos gasta 30.000 euros al mes en Meta. Quiere testar un nuevo ángulo creativo: dolor frente a aspiración.
+
+Presupuesto del test: 3.000 euros, un 10% de la inversión mensual. Duración: 14 días. Dos ad sets idénticos, misma audiencia, mismo presupuesto de 150 euros diarios cada uno. La única diferencia es el copy y el hook del vídeo.
+
+Resultado a los 14 días. El ángulo de dolor consigue un CPA de 19 euros. El de aspiración, 26 euros. Con esa diferencia, el ganador pasa a recibir el 80% del presupuesto de prospecting. El perdedor se archiva con su documentación.
+
+Cálculo rápido del impacto. Con 30.000 euros al mes y esa diferencia de CPA, mantener el perdedor costaba unos 4.100 euros extra al mes por el mismo volumen de ventas. El test de 3.000 euros se paga solo en tres semanas.
+
+Ojo con un detalle: el ángulo de dolor tenía un CTR un 0,4 puntos más bajo. Ganó porque su tasa de conversión en la landing era un 22% superior. El tráfico era menor pero de mejor calidad. Por eso testamos CPA, no CTR.
+
+## Playbook de test semanal para founders D2C
+
+Si gestionas la cuenta tú mismo, este es el ritmo mínimo sostenible. Una sola variable en test cada semana. Nada más.
+
+Lunes: define la hipótesis por escrito. Una frase con formato si-entonces. Si cambio el hook de los tres primeros segundos, entonces el CPA baja un 10%. Si no puedes escribirlo así, no está listo.
+
+Martes: monta los ad sets. Duplica el control, cambia solo la variable. Nombra las campañas con fecha y variable. Test 2026-03-17 hook beneficio. Sin nomenclatura, a las tres semanas no sabrás qué viste cada ad set.
+
+Miércoles a sábado: no toques nada. Cero ediciones. Cada ajuste reinicia la fase de aprendizaje y arruina la muestra.
+
+Domingo: revisa datos en Ads Manager con desglose por ad set. Apunta CPA, ROAS, CPM y frecuencia en una hoja. Una fila por día de test. En 14 días tendrás dos semanas de comparación limpia.
+
+Lunes siguiente: decide con la matriz post-test. Sube presupuesto al ganador, archiva el perdedor, elige la siguiente variable. Un test por semana son 52 al año. Con que ganen cuatro, ya tienes un trimestre de crecimiento financiado.
+
+## Qué hacer cuando el test no gana nadie
+
+Pasa más de lo que se cuenta. A veces el control sigue ganando. Otra veces ambos ad sets quedan por encima de tu CPA objetivo y el test no sirve para nada.
+
+Primera respuesta válida: nada. Si el control mantiene su CPA dentro de rango, has confirmado que tu creativo actual funciona. Eso también es información. Documenta la hipótesis como rechazada y pasa a la siguiente.
+
+Segunda situación: ambos pierden dinero. Revisa si el problema está antes del anuncio. Mira la frecuencia. Si supera 2,5 en catorce días, tu audiencia era demasiado pequeña para ese presupuesto. El test medía fatiga, no la variable.
+
+Tercera situación: resultados planos, diferencia inferior al 15%. Con ese margen y menos de 100 conversiones por variante, no puedes declarar ganador. Puedes extender el test una semana más si el presupuesto lo permite. Si no, declara empate y repite con un cambio más agresivo en la variable. A veces el nuevo hook es tan parecido al control que Meta apenas nota la diferencia.
+
+Lo que nunca debes hacer es alargar el test tres semanas esperando que el perdedor remonte. Ese presupuesto muerto rinde más en el siguiente experimento.
