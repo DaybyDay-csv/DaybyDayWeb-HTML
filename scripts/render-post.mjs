@@ -21,6 +21,16 @@ function escapeHtml(s) {
     .replace(/'/g, '&#39;');
 }
 
+// El frontmatter y el body los escribe el pipeline LLM (contenido semiconfiable):
+// nada entra al HTML sin escapar, ni siquiera como "dato". El slug además se
+// valida para acotar el path de lectura/escritura.
+const SLUG_RE = /^[a-z0-9][a-z0-9-]*$/;
+
+function jsonLdString(o) {
+  // JSON.stringify no escapa '</script>' → JSON-LD válido puede cerrar el tag.
+  return JSON.stringify(o).replace(/</g, '\\u003c');
+}
+
 function inlineMd(text) {
   let out = escapeHtml(text);
   out = out.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
@@ -157,7 +167,9 @@ function mdToHtml(md) {
         } else if (marker === ':::summary') {
           out.push('<div class="summary-block">' + inner.map(l => `<p>${inlineMd(l.replace(/^>\s*/, ''))}</p>`).join('') + '</div>');
         } else if (marker === ':::cifra') {
-          out.push(`<div class="cifra-que-abofetea">${inner.join(' ').trim()}</div>`);
+          // El texto de la cifra es contenido LLM: se escapa (los < y > de
+          // comparaciones numéricas se ven igual escapados).
+          out.push(`<div class="cifra-que-abofetea">${inner.map(l => escapeHtml(l.trim())).join(' ')}</div>`);
         }
         continue;
       }
@@ -268,7 +280,7 @@ function buildSchema(fm, faq, heroUrl) {
     ]
   };
   const ld = [article, faqSchema, breadcrumb].filter(Boolean).map(o =>
-    `<script type="application/ld+json">${JSON.stringify(o)}</script>`
+    `<script type="application/ld+json">${jsonLdString(o)}</script>`
   ).join('\n');
   return ld;
 }
@@ -304,25 +316,25 @@ async function renderPost(slug) {
   let canonical = String(fm.canonical || `https://www.daybydayconsulting.com/blog/${slug}.html`);
   canonical = canonical.replace(/\.html$/, '').replace(/\/+$/, '');
   const replacements = {
-    '{{TITLE}}': String(fm.title || ''),
-    '{{META_DESC}}': String(fm.meta_desc || ''),
-    '{{CANONICAL}}': canonical,
-    '{{PUBLISHED_AT}}': String(fm.published_at || new Date().toISOString()),
-    '{{CATEGORY}}': String(fm.category || 'Estrategia'),
-    '{{H1}}': String(fm.h1 || fm.title || ''),
-    '{{READING_TIME}}': String(fm.reading_time || Math.max(4, Math.round(wordCount / 220))),
-    '{{ARTICLE_DATE}}': String(fm.article_date || (fm.published_at || '').slice(0, 10)),
+    '{{TITLE}}': escapeHtml(fm.title || ''),
+    '{{META_DESC}}': escapeHtml(fm.meta_desc || ''),
+    '{{CANONICAL}}': escapeHtml(canonical),
+    '{{PUBLISHED_AT}}': escapeHtml(fm.published_at || new Date().toISOString()),
+    '{{CATEGORY}}': escapeHtml(fm.category || 'Estrategia'),
+    '{{H1}}': escapeHtml(fm.h1 || fm.title || ''),
+    '{{READING_TIME}}': escapeHtml(fm.reading_time || Math.max(4, Math.round(wordCount / 220))),
+    '{{ARTICLE_DATE}}': escapeHtml(fm.article_date || (fm.published_at || '').slice(0, 10)),
     '{{BODY}}': bodyHtml,
     '{{FAQ_BLOCK}}': faqBlock,
     '{{SOURCES_BLOCK}}': sourcesBlock,
     '{{RELATED_LINKS}}': relatedLinks,
     '{{SCHEMA}}': schema,
-    '{{SLUG}}': slug,
+    '{{SLUG}}': escapeHtml(slug),
     '{{OG_IMAGE_BLOCK}}': ogImageBlock,
-    '{{CTA_TITLE}}': String(fm.cta_title || '¿Quieres aplicar esto en tu negocio?'),
-    '{{CTA_DESC}}': String(fm.cta_desc || 'En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.'),
-    '{{CTA_HREF}}': String(fm.cta_href || '/contacto.html'),
-    '{{CTA_LABEL}}': String(fm.cta_label || 'Solicitar diagnóstico gratuito'),
+    '{{CTA_TITLE}}': escapeHtml(fm.cta_title || '¿Quieres aplicar esto en tu negocio?'),
+    '{{CTA_DESC}}': escapeHtml(fm.cta_desc || 'En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto.'),
+    '{{CTA_HREF}}': escapeHtml(fm.cta_href || '/contacto.html'),
+    '{{CTA_LABEL}}': escapeHtml(fm.cta_label || 'Solicitar diagnóstico gratuito'),
   };
 
   let out = tpl;
@@ -347,6 +359,10 @@ async function renderPost(slug) {
 const slug = process.argv[2];
 if (!slug) {
   console.error('Usage: node render-post.mjs <slug>');
+  process.exit(1);
+}
+if (!SLUG_RE.test(slug)) {
+  console.error(`Invalid slug: ${slug}`);
   process.exit(1);
 }
 try {

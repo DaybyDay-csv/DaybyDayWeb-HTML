@@ -15,6 +15,7 @@ const ROOT = path.resolve(__dirname, '..');
 const slug = process.argv[2];
 const force = process.argv.includes('--force');
 if (!slug) { console.error('Usage: node generate-hero.mjs <slug>'); process.exit(1); }
+if (!/^[a-z0-9][a-z0-9-]*$/.test(slug)) { console.error(`Invalid slug: ${slug}`); process.exit(1); }
 
 const outDir = path.join(ROOT, 'blog', 'img');
 const outPath = path.join(outDir, `${slug}.png`);

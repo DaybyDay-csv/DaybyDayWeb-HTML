@@ -39,17 +39,26 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-audit --no-fund || npm install --no-audit --no-fund
 
+      # El slug (input de workflow_dispatch) viaja siempre por env, nunca
+      # interpolado en run:, para que no pueda inyectar comandos en el runner.
       - name: Generate hero image
-        run: node scripts/generate-hero.mjs ${{ inputs.slug }} || echo "hero fallo (no bloquea)"
+        run: node scripts/generate-hero.mjs "$SLUG" || echo "hero fallo (no bloquea)"
+        env:
+          SLUG: ${{ inputs.slug }}
 
       - name: Run gates + render + index
         run: |
           set -e
-          echo "Publishing slug: ${{ inputs.slug }}"
-          node scripts/rewrite-batch.mjs ${{ inputs.slug }}
+          echo "Publishing slug: $SLUG"
+          node scripts/rewrite-batch.mjs "$SLUG"
+        env:
+          SLUG: ${{ inputs.slug }}
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
 
       - name: Update blog listing pages
-        run: node scripts/update-blog-index.mjs ${{ inputs.slug }}
+        run: node scripts/update-blog-index.mjs "$SLUG"
+        env:
+          SLUG: ${{ inputs.slug }}
 
       - name: Commit and push
         run: |
@@ -59,13 +68,17 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "ci(blog): publish ${{ inputs.slug }} via rewrite-batch (run ${{ github.run_id }})"
+            git commit -m "ci(blog): publish $SLUG via rewrite-batch (run $GITHUB_RUN_ID)"
             git push origin main
           fi
+        env:
+          SLUG: ${{ inputs.slug }}
 
       - name: Summary
         if: always()
         run: |
           echo "## Blog publish" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Slug: ${{ inputs.slug }}" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Run: ${{ github.run_id }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Slug: $SLUG" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Run: $GITHUB_RUN_ID" >> "$GITHUB_STEP_SUMMARY"
+        env:
+          SLUG: ${{ inputs.slug }}

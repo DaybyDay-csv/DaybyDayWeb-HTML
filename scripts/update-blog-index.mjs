@@ -24,8 +24,8 @@ function esc(s) {
 }
 
 const slug = process.argv[2];
-if (!slug) {
-  console.error('Usage: node update-blog-index.mjs <slug>');
+if (!slug || !/^[a-z0-9][a-z0-9-]*$/.test(slug)) {
+  console.error(`Invalid slug: ${slug || '(empty)'}`);
   process.exit(1);
 }
 

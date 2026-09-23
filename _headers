@@ -1,0 +1,10 @@
+# Cabeceras de seguridad (security audit 2026-09-24).
+# Básicas y sin riesgo para el site (todo el JS es inline y propio; Calendly
+# es iframe saliente, no entrante). CSP estricta queda pendiente: exige
+# hashes de los inline scripts de 170+ páginas.
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
