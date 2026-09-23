@@ -76,3 +76,37 @@ La respuesta depende de tu etapa de crecimiento. Para ecommerce nuevos, la adqui
 - [Google Ads](/tech/google-ads-tech.html)
 - [Shopify](/tech/shopify.html)
 - [GA4](/tech/ga4.html)
+
+## Ejemplo práctico: una tienda de ropa con 50.000 visitas al mes
+
+Vamos con números reales. Supongamos que tu tienda recibe 50.000 visitas al mes, con un ticket medio de 45 euros y una conversión del 1,2%. Eso son 600 pedidos y 27.000 euros de facturación mensual.
+
+Ahora apliquemos tres cambios básicos. Primero, simplificas el checkout de cinco pasos a tres. Segundo, añades fotos del producto en uso por personas reales. Tercero, muestras los gastos de envío en la página de producto. Ninguna de las tres cosas requiere presupuesto extra.
+
+Resultado típico en este escenario: la conversión sube del 1,2% al 1,55% en ocho semanas. Eso son 775 pedidos, unos 34.875 euros al mes. Más 7.875 euros de facturación sin gastar un euro más en ads.
+
+El coste real ha sido tu tiempo: unas 20 horas de trabajo entre desarrollo, copy y testeo. Si lo comparas con lo que te costaría conseguir esas 14.875 euros extra con publicidad, la diferencia es enorme.
+
+## Caso de uso: cómo una marca de cosmética recuperó carritos abandonados
+
+Una marca D2C de cosmética que asesoramos tenía un 78% de abandono de carrito. Por encima del 70% habitual en el sector. Analizamos el embudo y encontramos dos frenos claros.
+
+El primero: el coste de envío aparecía solo al final del checkout. El segundo: no había ninguna opción de compra como invitado. Todo obligaba a crear cuenta.
+
+Los cambios fueron dos. Un aviso en la página de producto con el mensaje "envío gratis a partir de 39 euros". Y compra como invitado activada por defecto. Además, montamos una secuencia de tres emails de recuperación a las 1, 24 y 48 horas.
+
+En dos meses el abandono bajó al 69%. La recuperación de carritos pasó del 4% al 9,5%. En euros, eso fueron unos 3.200 euros recuperados al mes con una tienda que facturaba 40.000. La secuencia de emails se montó con Klaviyo en una tarde.
+
+## Tu plan de acción para los primeros 30 días
+
+Si empiezas desde cero, no intentes todo a la vez. Este es el orden que funciona en la mayoría de tiendas D2C.
+
+Semana 1: instala Microsoft Clarity y Hotjar. Mira 20 grabaciones reales de usuarios. Anota los tres puntos donde más gente se atasca o abandona.
+
+Semana 2: revisa tu checkout. Cuenta los pasos, elimina campos innecesarios y activa la compra como invitado. Comprueba también cómo se ve todo desde el móvil, porque ahí ocurre el 75% de tus visitas.
+
+Semana 3: trabaja tus fichas de producto. Añade fotos en uso, medidas reales y una sección de preguntas frecuentes. Si vendes ropa o calzado, una guía de tallas clara puede subir la conversión un 10% por sí sola.
+
+Semana 4: lanza tu primer test A/B. Un solo cambio, una sola hipótesis. Por ejemplo, mover el botón de comprar encima del pliegue. Dale dos semanas y decide con datos, no con intuición.
+
+Con esto tendrás una base de medición y dos o tres mejoras ya validadas. A partir del segundo mes, repites el ciclo con lo siguiente en la lista de fricciones.
