@@ -218,3 +218,6 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 <!-- auto:agencia-meta-ads-b2b -->
 - [Agencia de Meta Ads B2B y D2C: coste y comparativa](https://www.daybydayconsulting.com/blog/agencia-meta-ads-b2b.html) — Comparativa de costes y criterios de elección entre agencia de Meta Ads, freelance y equipo interno para marcas D2C de 200K a 3M€. Incluye rangos de precios reales, framework de 4 filtros de contratac
 <!-- /auto -->
+<!-- auto:elegir-agencia-meta-ads-b2b -->
+- [Agencia de Meta Ads B2B: 5 filtros para elegir partner](https://www.daybydayconsulting.com/blog/elegir-agencia-meta-ads-b2b.html) — Cómo elegir una agencia de Meta Ads B2B que aporte growth real: los 5 filtros del contrato (métricas firmadas, quién ejecuta, qué testea, cómo reporta, qué pasa si falla), las preguntas de la primera 
+<!-- /auto -->
