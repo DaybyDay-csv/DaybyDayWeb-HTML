@@ -88,10 +88,22 @@ document.addEventListener('DOMContentLoaded', function() {
   var menuBtn = document.querySelector('.mobile-menu-btn');
   var mobileNav = document.getElementById('mobile-nav');
   if (menuBtn && mobileNav) {
-    menuBtn.addEventListener('click', function() {
-      var isOpen = mobileNav.classList.toggle('active');
-      menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      menuBtn.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+    var setMobileMenu = function (open) {
+      mobileNav.classList.toggle('active', open);
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menuBtn.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+      // El panel es fixed a pantalla completa: bloquea el scroll de atrás
+      document.body.style.overflow = open ? 'hidden' : '';
+    };
+    menuBtn.addEventListener('click', function () {
+      setMobileMenu(!mobileNav.classList.contains('active'));
+    });
+    // Cerrar al navegar (links ancla) y con Escape
+    mobileNav.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { setMobileMenu(false); });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') setMobileMenu(false);
     });
   }
 });

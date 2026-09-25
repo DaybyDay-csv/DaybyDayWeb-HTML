@@ -16,7 +16,30 @@
   <link rel="stylesheet" href="/css/modern.css">
   <link rel="stylesheet" href="/css/pages.css">
   <style>
-    :root { --accent-color: #6366f1; }
+    /* Buscador client-side del índice: filtra tarjetas y categorías sin backend */
+    .blog-search { margin: 1.75rem 0 0.5rem; max-width: 540px; }
+    #blog-q {
+      width: 100%;
+      padding: 0.85rem 1.1rem;
+      font-size: 1rem;
+      font-family: inherit;
+      color: var(--text-primary);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+    #blog-q:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 15%, transparent);
+    }
+    .blog-card[hidden] { display: none; }
+    .blog-search-state {
+      font-family: var(--font-machine);
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin: 1rem 0 0;
+    }
     .blog-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -33,7 +56,7 @@
       transition: all 0.2s ease;
     }
     .blog-card:hover {
-      border-color: var(--accent-color, #6366f1);
+      border-color: var(--accent);
       transform: translateY(-2px);
       box-shadow: 0 8px 24px rgba(0,0,0,0.3);
     }
@@ -45,9 +68,9 @@
       flex-wrap: wrap;
     }
     .blog-card-category {
-      background: #6366f11a;
-      border: 1px solid #6366f140;
-      color: #6366f1;
+      background: color-mix(in srgb, var(--accent) 10%, transparent);
+      border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+      color: var(--accent);
       font-size: 0.65rem;
       font-weight: 600;
       padding: 0.2rem 0.5rem;
@@ -173,6 +196,12 @@
           <h1 class="h2-serif">Todos los artículos</h1>
           <p class="voice-machine" style="color:var(--text-secondary);font-size:0.95rem;margin-top:0.25rem;">134 artículos en 27 categorías</p>
         </div>
+
+        <div class="blog-search">
+          <label for="blog-q" style="position:absolute;left:-9999px;">Buscar artículos</label>
+          <input id="blog-q" type="search" placeholder="Buscar en el blog…" autocomplete="off">
+        </div>
+        <p id="blog-search-state" class="blog-search-state" hidden></p>
 
     <section class="blog-category-section">
       <h2 class="blog-category-title">Estrategia <span class="blog-category-count">39</span></h2>
@@ -1611,5 +1640,46 @@
 </footer>
 
 <script src="/js/main.js"></script>
+
+<script>
+// Buscador del índice: filtra tarjetas por texto (insensible a acentos) y
+// oculta las categorías que se quedan vacías. Sin backend.
+(function () {
+  var input = document.getElementById('blog-q');
+  var state = document.getElementById('blog-search-state');
+  if (!input || !state) return;
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.blog-card'));
+  var sections = Array.prototype.slice.call(document.querySelectorAll('.blog-category-section'));
+  var norm = function (s) {
+    return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  };
+  var text = new Map();
+  cards.forEach(function (c) { text.set(c, norm(c.textContent || '')); });
+  // El titular "N artículos en M categorías" se cura solo: el generador
+  // puede ir por detrás de las tarjetas reales del HTML
+  var headerCount = document.querySelector('.section-header .voice-machine');
+  if (headerCount && sections.length) {
+    headerCount.textContent = cards.length + ' artículos en ' + sections.length + ' categorías';
+  }
+  input.addEventListener('input', function () {
+    var raw = input.value.trim();
+    var q = norm(raw);
+    var total = 0;
+    cards.forEach(function (c) {
+      var hit = !q || text.get(c).indexOf(q) !== -1;
+      c.hidden = !hit;
+      if (hit) total++;
+    });
+    sections.forEach(function (s) {
+      s.hidden = s.querySelectorAll('.blog-card:not([hidden])').length === 0;
+    });
+    if (!q) { state.hidden = true; return; }
+    state.hidden = false;
+    state.textContent = total === 0
+      ? 'Sin resultados para «' + raw + '». Prueba con otra palabra.'
+      : total + (total === 1 ? ' artículo' : ' artículos') + ' para «' + raw + '»';
+  });
+})();
+</script>
 </body>
 </html>
