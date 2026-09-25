@@ -41,10 +41,18 @@ document.addEventListener('DOMContentLoaded', function() {
   // Megamenu: hover is CSS-driven (.nav-dropdown:hover .nav-dropdown-content),
   // but touch devices need a click handler. We add an .is-open class on tap
   // and a document-level click to close when tapping outside.
+  var syncDropdownAria = function() {
+    document.querySelectorAll('.nav-dropdown').forEach(function(dd) {
+      var btn = dd.querySelector('.nav-dropdown-btn');
+      if (btn) btn.setAttribute('aria-expanded', dd.classList.contains('is-open') ? 'true' : 'false');
+    });
+  };
   var dropdowns = document.querySelectorAll('.nav-dropdown');
   dropdowns.forEach(function(dd) {
     var btn = dd.querySelector('.nav-dropdown-btn');
     if (!btn) return;
+    btn.setAttribute('aria-haspopup', 'true');
+    btn.setAttribute('aria-expanded', 'false');
     btn.addEventListener('click', function(e) {
       e.preventDefault();
       e.stopPropagation();
@@ -54,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
         o.classList.remove('is-open');
       });
       if (!wasOpen) dd.classList.add('is-open');
+      syncDropdownAria();
     });
   });
   // Close on click outside
@@ -62,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
       document.querySelectorAll('.nav-dropdown.is-open').forEach(function(o) {
         o.classList.remove('is-open');
       });
+      syncDropdownAria();
     }
   });
   // Close on Escape
@@ -70,6 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
       document.querySelectorAll('.nav-dropdown.is-open').forEach(function(o) {
         o.classList.remove('is-open');
       });
+      syncDropdownAria();
     }
   });
 
@@ -80,6 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
     menuBtn.addEventListener('click', function() {
       var isOpen = mobileNav.classList.toggle('active');
       menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      menuBtn.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
     });
   }
 });

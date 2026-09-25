@@ -16,8 +16,11 @@
   <link rel="stylesheet" href="/css/modern.css">
   <link rel="stylesheet" href="/css/pages.css">
   <style>
-    :root { --accent-color: #6366f1; }
-    .hero-badge { background: #6366f11a; border: 1px solid #6366f140; color: #818cf8; }
+    /* Acento en la familia azul de marca (mood trust): el indigo #6366f1 era resto del look antiguo */
+    :root { --accent-color: #60A5FA; }
+    [data-theme="light"] { --accent-color: #2563EB; }
+    .hero-badge { background: #3b82f61a; border: 1px solid #3b82f640; color: #60A5FA; }
+    [data-theme="light"] .hero-badge { color: #2563EB; }
     .audit-promise { max-width: 720px; margin: 0 auto; padding: 1.75rem 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; }
     .audit-list { display: flex; flex-direction: column; gap: 0.9rem; }
     .audit-list-item { display: flex; gap: 0.875rem; align-items: flex-start; }

@@ -1340,7 +1340,8 @@
   border: 1px solid var(--border);
   border-radius: 10px;
   color: var(--text-primary);
-  font-size: 0.95rem;
+  /* 16px mínimo: por debajo, iOS Safari hace zoom al enfocar el campo */
+  font-size: 1rem;
   font-family: inherit;
   transition: border-color 0.15s, box-shadow 0.15s;
 }
@@ -1813,6 +1814,9 @@
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
+
+/* Craft: tap inmediato en táctil — fuera retardo y doble-tap-zoom en controles */
+a, button, select, summary { touch-action: manipulation; }
 
 ::selection {
   background: color-mix(in srgb, var(--accent) 28%, transparent);
@@ -2952,7 +2956,7 @@ main .caso-barra {
   font: inherit;
   font-size: 0.85rem;
   font-weight: 600;
-  padding: 0.55rem 1.1rem;
+  padding: 0.7rem 1.2rem;
   border-radius: 10px;
   cursor: pointer;
   border: 1px solid var(--border);
