@@ -221,3 +221,6 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 <!-- auto:elegir-agencia-meta-ads-b2b -->
 - [Agencia de Meta Ads B2B: 5 filtros para elegir partner](https://www.daybydayconsulting.com/blog/elegir-agencia-meta-ads-b2b.html) — Cómo elegir una agencia de Meta Ads B2B que aporte growth real: los 5 filtros del contrato (métricas firmadas, quién ejecuta, qué testea, cómo reporta, qué pasa si falla), las preguntas de la primera 
 <!-- /auto -->
+<!-- auto:agencia-meta-ads-b2b-guia -->
+- [Agencia de Meta Ads para B2B: guía para elegir partner](https://www.daybydayconsulting.com/blog/agencia-meta-ads-b2b-guia.html) — Guía operativa para elegir una agencia de Meta Ads para B2B: los 5 filtros (especialización, tracking con CRM, modelo de fees, creatividades, reporting), qué preguntas hacer en la primera llamada, cos
+<!-- /auto -->
