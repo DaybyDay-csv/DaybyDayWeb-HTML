@@ -80,3 +80,27 @@ Los costes varían enormemente. Una pila básica de automatización (CRM + email
 - [Google Ads](/tech/google-ads-tech.html)
 - [Shopify](/tech/shopify.html)
 - [GA4](/tech/ga4.html)
+
+## Ejemplo con números: flujo de carrito abandonado en una tienda D2C
+
+Una tienda de cosmética con 40.000 euros de facturación mensual tenía un abandono de carrito del 72%. Es un dato normal en ecommerce. El problema es que no hacían nada con esos carritos.
+
+Montaron un flujo de tres correos con Klaviyo. Primer correo a la hora del abandono, con el producto y el enlace al carrito. Segundo correo a las 24 horas, con una duda frecuente sobre el producto abandonado. Tercer correo a las 72 horas, con envío gratis si completaba la compra.
+
+Los números del primer mes: el primer correo recuperó un 4,1% de los carritos. El segundo, un 1,8%. El tercero, un 2,3%. En total, un 8,2% de recuperación sobre 1.100 carritos abandonados mensuales. Con un ticket medio de 38 euros, eso son unos 3.400 euros extra al mes. El montaje del flujo les llevó una tarde.
+
+## Cómo medir si tu automatización funciona
+
+Antes de automatizar, anota tu cifra base. Tasa de respuesta a correos, tiempo medio de respuesta a leads, o ingresos por correo enviado. Sin base no sabes si la automatización mejora algo.
+
+Revisa los flujos cada mes. Mira tres métricas: tasa de apertura, tasa de conversión y bajas de suscripción. Si las bajas suben por encima del 0,5% por envío, el mensaje no encaja con tu lista.
+
+Un detalle que casi nadie mira: los correos que se envían con retraso. Si tu herramienta acumula envíos porque el envío supera tu plan de contactos, estás perdiendo ventas sin saberlo. Revisa el panel de entregas de tu herramienta una vez al mes.
+
+## Tres errores típicos al empezar
+
+El primero es automatizar un proceso roto. Si tu correo de bienvenida no convierte a mano, no va a convertir automatizado. Arregla el mensaje antes de ponerlo en piloto automático.
+
+El segundo es crear demasiados flujos a la vez. Con tres flujos bien revisados rindes más que con doce abandonados. Empieza por bienvenida, carrito abandonado y reactivación de clientes inactivos.
+
+El tercero es olvidar el dato de origen. Una automatización con etiquetas mal puestas envía el mensaje equivocado a la persona equivocada. Dedica una hora a revisar cómo se etiquetan los contactos al entrar en tu base de datos.
