@@ -230,3 +230,6 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 <!-- auto:elegir-agencia-meta-ads-b2b-precios -->
 - [Cómo elegir una agencia de Meta Ads B2B 2025](https://www.daybydayconsulting.com/blog/elegir-agencia-meta-ads-b2b-precios.html) — Guía 2025 para elegir una agencia de Meta Ads B2B: rangos de precios reales del mercado español, los 5 filtros de decisión (casos B2B verificables, método de reporting, senior dedicado, transparencia 
 <!-- /auto -->
+<!-- auto:cuanto-cuesta-agencia-meta-ads-ecommerce -->
+- [Cuánto cuesta una agencia de Meta Ads para ecommerce D2C](https://www.daybydayconsulting.com/blog/cuanto-cuesta-agencia-meta-ads-ecommerce.html) — Cuánto cuesta una agencia de Meta Ads para ecommerce D2C en España: rangos de fee fijo, porcentaje de spend, modelos de contrato y 4 filtros para elegir agencia. Incluye comparativa generalista vs esp
+<!-- /auto -->
