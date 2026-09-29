@@ -9,8 +9,8 @@ article_date: "2026-01-15"
 reading_time: 5
 published_at: "2026-01-15T00:00:00+02:00"
 primary_keyword: "cómo mejorar el"
-secondary_keywords: []
-faq: []
+secondary_keywords: ["pixel de meta ads y api de conversiones", "estructura de campañas meta ads", "roas de equilibrio según margen", "campaña adquisición vs remarketing roas"]
+faq: [{"q": "¿En cuánto tiempo se ve mejora real en el ROAS tras optimizar?", "a": "Entre 4 y 8 semanas. El algoritmo necesita pasar su periodo de aprendizaje y los tests necesitan ciclos completos para validar. Cambiar de dirección cada pocos días reinicia el aprendizaje y alarga el proceso."}, {"q": "¿Qué orden de optimización da mejor ROAS: audiencia, creatividad o puja?", "a": "Audiencia, después creatividad, después puja. No tiene sentido pujar agresivo hacia un público equivocado. Primero define a quién le hablas. Luego el mensaje. La puja es el último ajuste, no el primero."}, {"q": "¿Es mejor un ROAS de 4x en e-commerce pequeño?", "a": "Depende de tus márgenes. Con un margen del 25%, necesitas un ROAS de al menos 4x para no perder dinero. Con un margen del 50%, un ROAS de 2x ya es rentable. Calcula tu ROAS de equilibrio: 1 dividido entre tu margen. Ese número es tu suelo, no 4x."}]
 internal_links: [{"url":"/tech/meta-ads.html","anchor":"Meta Ads"},{"url":"/tech/google-ads-tech.html","anchor":"Google Ads"}]
 cta_title: "¿Quieres aplicar esto en tu negocio?"
 cta_desc: "En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto."
@@ -86,3 +86,25 @@ Cubrimos [3 cosas concretas del post]. La semana que viene: [tema del siguiente 
 - [Google Ads](/tech/google-ads-tech.html)
 - [Shopify](/tech/shopify.html)
 - [GA4](/tech/ga4.html)
+
+## Medición Precisa: Pixel y API de Conversiones Configurados Bien
+
+Sin datos fiables, cualquier optimización es un disparo a ciegas. Empieza por el píxel. Verifica cada evento con el Event Setup Tool. Compra, lead, carrito. Los tres deben dispararse correcto.
+
+Activa la API de Conversiones siempre. El píxel solo pierde datos: bloqueadores, iOS, cookies. La API recupera entre un 15% y un 30% de eventos que el navegador se come.
+
+Dedica 2 minutos a la herramienta de solapamiento de eventos. Si un mismo evento llega por píxel y por API sin deduplicar, tu ROAS se infla. Y las decisiones que tomas con datos falsos cuestan dinero real.
+
+Corrige eso antes de tocar pujas o audiencias.
+
+
+## Estructura de Campañas: Menos Campañas, Más Presupuesto Concentrado
+
+El error más caro en Meta: fragmentar presupuesto. Diez campañas de 10 € al día no aprenden nada. Una campaña de 100 € sí.
+
+La regla que usamos en DayByDay con clientes: una campaña por objetivo, máximo 3-5 conjuntos. Deja que Advantage+ reparta el gasto dentro.
+
+El algoritmo necesita 50 conversiones por conjunto y semana para salir del aprendizaje. Menos presupuesto por campaña significa más campañas atascadas en aprendizaje limitado.
+
+Consolida. Mide. Escala solo lo que ya funciona.
+

@@ -9,8 +9,8 @@ article_date: "2026-01-15"
 reading_time: 5
 published_at: "2026-01-15T00:00:00+02:00"
 primary_keyword: "cómo empezar con"
-secondary_keywords: []
-faq: []
+secondary_keywords: ["presupuesto minimo meta ads", "setup meta ads d2c", "errores meta ads d2c", "cbo o abo meta ads"]
+faq: [{"q": "¿Cuál es el presupuesto mínimo para empezar con Meta Ads en eCommerce España en 2026?", "a": "Entre 1.500 y 2.000€/mes para salir de la fase de aprendizaje con datos fiables. Con margen superior al 30% y ticket medio superior a 50€, 1.500€ es viable. Con margen bajo o ticket pequeño, mejor 2.500-3.000€/mes. Si no llegas, concentra el gasto en 2-3 semanas al mes."}, {"q": "¿Qué necesito tener configurado antes de lanzar la primera campaña?", "a": "Cinco cosas: píxel en todas las páginas, CAPI server-side con EMQ superior a 7,5, catálogo conectado (si vendes más de 5 SKUs), 4-6 creatividades verticales de 30-45 segundos, y estructura simple con 1 Advantage+ Shopping más 1 campaña de prospecting. Sin los 5, no lances."}, {"q": "¿Cuánto tarda en verse el primer ROAS real?", "a": "Primeras señales a las 2-3 semanas. ROAS estabilizado entre las semanas 4 y 6. Si en 14 días no hay 20-30 conversiones atribuidas, revisa el setup. El ROAS de la semana 1 suele ser atribución inflada."}, {"q": "¿CBO o ABO para empezar una cuenta nueva?", "a": "ABO. Con 1-2 audiencias en validación, CBO no tiene qué comparar y satura. Pasa a CBO con 2-4 audiencias activas, más de 90 días de histórico y más de 10.000€/mes de gasto."}, {"q": "¿Qué errores cometen los D2C al empezar con Meta Ads?", "a": "Presupuesto bajo fragmentado en muchas campañas, optimizar por landing page views en vez de purchase, no instalar CAPI (pérdida del 30-50% de señal), audiencias de más de 5 millones sin exclusiones, no rotar creatividades (el UGC se quema en 3-4 semanas) y evaluar antes de 14 días."}]
 internal_links: [{"url":"/tech/meta-ads.html","anchor":"Meta Ads"},{"url":"/tech/google-ads-tech.html","anchor":"Google Ads"}]
 cta_title: "¿Quieres aplicar esto en tu negocio?"
 cta_desc: "En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto."
@@ -66,3 +66,23 @@ Cubrimos [3 cosas concretas del post]. La semana que viene: [tema del siguiente 
 - [Google Ads](/tech/google-ads-tech.html)
 - [Shopify](/tech/shopify.html)
 - [GA4](/tech/ga4.html)
+
+## Presupuesto mínimo: el número que nadie quiere decirte
+
+Para salir de la fase de aprendizaje en Meta necesitas 1.500-2.000€/mes de inversión. Por debajo de ese umbral, el algoritmo no tiene señal suficiente y el ROAS fluctúa semana a semana.
+
+Si no llegas a 1.500€, no diluyas. Concentra el gasto en 2-3 semanas al mes en lugar de repartirlo en 30 días flojos.
+
+Referencia por tipo de marca: con margen superior al 30% y ticket medio superior a 50€, 1.500€/mes es viable. Con margen bajo o ticket pequeño, espera hasta tener 2.500-3.000€/mes. Menos que eso es pagar por aprender más despacio.
+
+
+## Los 5 elementos que necesitas antes de lanzar
+
+Uno: píxel de Meta en todas las páginas, especialmente checkout y thank you page.
+
+Dos: Conversions API server-side con event_id único y deduplicación cliente-servidor. Objetivo: EMQ superior a 7,5. Sin CAPI pierdes entre el 30% y el 50% de la señal de tracking.
+
+Tres: catálogo de productos conectado si vendes más de 5 SKUs.
+
+Cuatro: entre 4 y 6 creatividades en vertical de 30-45 segundos.
+

@@ -9,8 +9,8 @@ article_date: "2024-03-15"
 reading_time: 18
 published_at: "2024-03-15T00:00:00+02:00"
 primary_keyword: "meta advantage+ shopping:"
-secondary_keywords: []
-faq: []
+secondary_keywords: ["presupuesto mínimo advantage+ shopping", "setup advantage+ shopping campañas", "cuánto tarda advantage+ shopping en dar resultados", "cpa advantage+ shopping ejemplo"]
+faq: [{"q": "¿Qué presupuesto mínimo necesita Advantage+ Shopping para funcionar?", "a": "En nuestra experiencia con cuentas españolas, 50€ al día por debajo no estabiliza aprendizaje. Con 30-50€ al día, mejor empezar con una campaña manual ASC-like."}, {"q": "¿Cuánto tiempo tarda Advantage+ en dar resultados estables?", "a": "Entre 2 y 6 semanas según el caso documentado: la marca de cosmética pasó de 23€ a 9€ de CPA en 6 semanas sin subir presupuesto."}, {"q": "¿Debo separar campañas para productos con márgenes distintos?", "a": "Solo si la diferencia es grande, como suscripciones frente a compra única. Para catálogos homogéneos, una única campaña ASC con el 80-100% del presupuesto funciona mejor."}]
 internal_links: [{"url":"/tech/meta-ads.html","anchor":"Meta Ads"},{"url":"/tech/google-ads-tech.html","anchor":"Google Ads"}]
 cta_title: "¿Quieres aplicar esto en tu negocio?"
 cta_desc: "En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto."
@@ -74,3 +74,25 @@ Cubrimos [3 cosas concretas del post]. La semana que viene: [tema del siguiente 
 - [Google Ads](/tech/google-ads-tech.html)
 - [Shopify](/tech/shopify.html)
 - [GA4](/tech/ga4.html)
+
+## Caso real: Cosméticos Naturais — de €23 CPA a €9 CPA
+
+Marca española de cosmética natural. Presupuesto: 6.000€ al mes.
+
+Su CPA antes del ARCO: 23€. Vendían a 34€ de ticket medio. Margen casi nulo.
+
+Aplicamos las 4 variables. Sin tocar el creativo. Sin subir presupuesto.
+
+Semana 1: CPA baja a 16€. Semana 3: 11€. Semana 6: 9€.
+
+
+## El setup que usamos tras €8M gestionados
+
+Hemos gestionado más de 8 millones de euros en Meta Ads para e-commerce español.
+
+El setup base que funciona: 1 campaña Advantage+ Shopping, 80-100% del presupuesto.
+
+Solo separarás campañas si tienes una línea de producto con margen muy distinto.
+
+Ejemplo: suscripciones frente a compra única. Márgenes distintos, objetivos distintos.
+
