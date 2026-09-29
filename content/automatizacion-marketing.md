@@ -104,3 +104,34 @@ El primero es automatizar un proceso roto. Si tu correo de bienvenida no convier
 El segundo es crear demasiados flujos a la vez. Con tres flujos bien revisados rindes más que con doce abandonados. Empieza por bienvenida, carrito abandonado y reactivación de clientes inactivos.
 
 El tercero es olvidar el dato de origen. Una automatización con etiquetas mal puestas envía el mensaje equivocado a la persona equivocada. Dedica una hora a revisar cómo se etiquetan los contactos al entrar en tu base de datos.
+
+## Errores típicos al empezar (y cómo evitarlos)
+
+El primero: automatizar antes de tener el proceso manual claro. Si tu equipo tarda tres días en responder a un lead, automatizarlo solo acelera el desastre. Hazlo manual durante dos semanas, documenta cada paso y después conviértelo en flujo.
+
+El segundo: comprar la herramienta más cara del mercado. Un founder con 500 contactos no necesita la misma plataforma que una empresa con 50.000. Empieza con el plan gratuito o básico. Cambia cuando los límites te den problemas reales, no antes.
+
+El tercero: medir solo aperturas de email. Una tasa del 40% no paga facturas. Mira respuestas, clics y conversiones. Un flujo con 15% de apertura y 5 ventas supera a uno con 45% de apertura y ninguna.
+
+El cuarto: no poner condiciones de salida. Si alguien compra, deja de recibir la secuencia de captación. Suena obvio, pero sigue pasando. Revisa cada flujo con esta pregunta: ¿qué pasa si el contacto ya es cliente?
+
+## Checklist de lanzamiento: antes de activar cualquier flujo
+
+Revisa estos seis puntos. Si alguno falla, no actives el flujo todavía.
+
+- Datos limpios: emails verificados, sin duplicados ni contactos inactivos de 2019.
+- Permiso explícito: consentimiento RGPD registrado y opción de baja visible en cada mensaje.
+- Copys revisados por una persona ajena al proyecto. Lo que tú entiendes, puede que otro no.
+- Prueba con tu propio email como contacto ficticio. Recibe la secuencia completa.
+- Condiciones de salida configuradas para compra, baja o inactividad.
+- Al menos una métrica de negocio asignada al flujo, no solo métricas de email.
+
+Este checklist te lleva treinta minutos. Detectar estos fallos después de enviar 2.000 emails, bastante más.
+
+## Qué hacer el segundo mes
+
+La mayoría de guías terminan cuando activas el primer flujo. Ahí empieza lo útil.
+
+Semana 5: revisa datos de los 30 primeros días. Anota el punto exacto donde la gente abandona cada flujo. Semana 6: reescribe ese email concreto. Cambia el asunto y el call to action. Nada más. Semana 7: compara resultados contra la versión anterior. Semana 8: activa el segundo flujo prioritario, normalmente la recuperación de carritos o el onboarding.
+
+Con este ritmo tienes dos flujos optimizados en dos meses. Los negocios que automatizan bien no lanzan diez flujos a la vez. Lanzan uno, lo ajustan y pasan al siguiente. La herramienta es lo de menos. El hábito de revisar cada semana es lo que marca la diferencia a los seis meses.
