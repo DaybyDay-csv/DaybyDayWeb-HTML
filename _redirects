@@ -86,3 +86,23 @@
 # fusion canibalizacion 2026-09-29: mejorar-roas-meta-2026 -> mejorar-roas-meta-ads-2026
 /blog/mejorar-roas-meta-2026 /blog/mejorar-roas-meta-ads-2026 301
 /blog/mejorar-roas-meta-2026.html /blog/mejorar-roas-meta-ads-2026 301
+
+# fusion canibalizacion 2026-09-29: remarketing-dinamico-ecommerce-guia-practica -> retargeting-meta-ads-ecommerce2026
+/blog/remarketing-dinamico-ecommerce-guia-practica /blog/retargeting-meta-ads-ecommerce2026 301
+/blog/remarketing-dinamico-ecommerce-guia-practica.html /blog/retargeting-meta-ads-ecommerce2026 301
+
+# fusion canibalizacion 2026-09-29: cpa-meta-ads-demasiado-alto -> cpa
+/blog/cpa-meta-ads-demasiado-alto /blog/cpa 301
+/blog/cpa-meta-ads-demasiado-alto.html /blog/cpa 301
+
+# fusion canibalizacion 2026-09-29: escalar-meta-ads -> escalar-campanas-meta-ads-sin-romper-roas
+/blog/escalar-meta-ads /blog/escalar-campanas-meta-ads-sin-romper-roas 301
+/blog/escalar-meta-ads.html /blog/escalar-campanas-meta-ads-sin-romper-roas 301
+
+# fusion canibalizacion 2026-09-29: porque-meta-ads-no-genera-ventas-ecommerce-d2c-espana -> por-que-anuncios-meta-no-convierten
+/blog/porque-meta-ads-no-genera-ventas-ecommerce-d2c-espana /blog/por-que-anuncios-meta-no-convierten 301
+/blog/porque-meta-ads-no-genera-ventas-ecommerce-d2c-espana.html /blog/por-que-anuncios-meta-no-convierten 301
+
+# fusion canibalizacion 2026-09-29: pixel-meta-hibrido-cliente-servidor -> pixel-meta-hibrido-cliente-servidor-implementacion
+/blog/pixel-meta-hibrido-cliente-servidor /blog/pixel-meta-hibrido-cliente-servidor-implementacion 301
+/blog/pixel-meta-hibrido-cliente-servidor.html /blog/pixel-meta-hibrido-cliente-servidor-implementacion 301
