@@ -50,3 +50,19 @@
 
 # Red de seguridad: cualquier otro /en/* restante cae en home
 /en/* / 301
+
+# fusion canibalizacion 2026-09-29: advantage-plus-shopping -> advantage-plus-shopping-meta-ads
+/blog/advantage-plus-shopping /blog/advantage-plus-shopping-meta-ads 301
+/blog/advantage-plus-shopping.html /blog/advantage-plus-shopping-meta-ads 301
+
+# fusion canibalizacion 2026-09-29: estrategia-meta-ads -> estrategia-meta-ads-2026
+/blog/estrategia-meta-ads /blog/estrategia-meta-ads-2026 301
+/blog/estrategia-meta-ads.html /blog/estrategia-meta-ads-2026 301
+
+# fusion canibalizacion 2026-09-29: advantage-plus-shopping-cuando-usarlo-no -> advantage-plus-shopping-meta-ads
+/blog/advantage-plus-shopping-cuando-usarlo-no /blog/advantage-plus-shopping-meta-ads 301
+/blog/advantage-plus-shopping-cuando-usarlo-no.html /blog/advantage-plus-shopping-meta-ads 301
+
+# fusion canibalizacion 2026-09-29: meta-ads-creative-testing2026d2c -> meta-ads-creative-testing-framewor
+/blog/meta-ads-creative-testing2026d2c /blog/meta-ads-creative-testing-framewor 301
+/blog/meta-ads-creative-testing2026d2c.html /blog/meta-ads-creative-testing-framewor 301

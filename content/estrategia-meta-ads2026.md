@@ -9,8 +9,8 @@ article_date: ""
 reading_time: 5
 published_at: "T00:00:00+02:00"
 primary_keyword: "estrategia meta ads"
-secondary_keywords: []
-faq: [{"q": "¿Conviene empezar con Advantage+ en 2026?", "a": "Sí, pero con control. Empieza con Advantage+ Shopping cuando tengas al menos 50 conversiones por semana en el pixel. Por debajo de ese volumen, el algoritmo no tiene datos suficientes y dispersa el presupuesto. Si lo activas, limita el público con exclusiones de clientes actuales y fija un presupuesto diario mínimo de 100 euros. Revisa el desglose por ubicación cada semana: si Reels concentra más del 60% del gasto sin conversiones, corta esa ubicación a mano."}, {"q": "¿Cuántos conjuntos de anuncios mantener por cuenta?", "a": "Menos de los que tenías en 2023. Con la consolidación de Advantage+, la recomendación operativa es 2 a 4 conjuntos activos por cuenta. Uno con Advantage+ Shopping, otro con público amplio y creatividades propias, y si procede, uno de retargeting. Más conjuntos fragmentan el aprendizaje y cada uno necesita unas 50 conversiones semanales para salir de la fase de aprendizaje. Consolidar suele bajar el CPA entre un 10 y un 15%."}, {"q": "¿Cuánto presupuesto mínimo necesito para Advantage+ Shopping en 2026?", "a": "Recomendamos mínimo 100 euros diarios por cuenta para que el algoritmo tenga datos suficientes. Por debajo de esa cifra, Advantage+ reparte mal y te cuesta semanas darte cuenta. Si mueves menos de 3.000 euros al mes, mejor una campaña ASC simple y un retargeting ligero. Con más volumen, separa creative testing del presupuesto de escalado."}, {"q": "¿Cómo elijo una consultora de Meta Ads sin equivocarme?", "a": "Pide dos cosas antes de firmar: acceso de lectura a la cuenta actual y casos con números reales de ROAS por sector. Desconfía si prometen resultados en la primera llamada o si no preguntan por tu margen bruto. Un buen partner empieza auditando estructura y tracking, no lanzando campañas nuevas la primera semana."}]
+secondary_keywords: ["presupuesto meta ads", "pujas meta ads", "presupuesto mínimo facebook ads", "retargeting meta ads"]
+faq: [{"q": "¿Conviene empezar con Advantage+ en 2026?", "a": "Sí, pero con control. Empieza con Advantage+ Shopping cuando tengas al menos 50 conversiones por semana en el pixel. Por debajo de ese volumen, el algoritmo no tiene datos suficientes y dispersa el presupuesto. Si lo activas, limita el público con exclusiones de clientes actuales y fija un presupuesto diario mínimo de 100 euros. Revisa el desglose por ubicación cada semana: si Reels concentra más del 60% del gasto sin conversiones, corta esa ubicación a mano."}, {"q": "¿Cuántos conjuntos de anuncios mantener por cuenta?", "a": "Menos de los que tenías en 2023. Con la consolidación de Advantage+, la recomendación operativa es 2 a 4 conjuntos activos por cuenta. Uno con Advantage+ Shopping, otro con público amplio y creatividades propias, y si procede, uno de retargeting. Más conjuntos fragmentan el aprendizaje y cada uno necesita unas 50 conversiones semanales para salir de la fase de aprendizaje. Consolidar suele bajar el CPA entre un 10 y un 15%."}, {"q": "¿Cuánto presupuesto mínimo necesito para Advantage+ Shopping en 2026?", "a": "Recomendamos mínimo 100 euros diarios por cuenta para que el algoritmo tenga datos suficientes. Por debajo de esa cifra, Advantage+ reparte mal y te cuesta semanas darte cuenta. Si mueves menos de 3.000 euros al mes, mejor una campaña ASC simple y un retargeting ligero. Con más volumen, separa creative testing del presupuesto de escalado."}, {"q": "¿Cómo elijo una consultora de Meta Ads sin equivocarme?", "a": "Pide dos cosas antes de firmar: acceso de lectura a la cuenta actual y casos con números reales de ROAS por sector. Desconfía si prometen resultados en la primera llamada o si no preguntan por tu margen bruto. Un buen partner empieza auditando estructura y tracking, no lanzando campañas nuevas la primera semana."}, {"q": "¿Una campaña con varios conjuntos o varias campañas separadas?", "a": "Si todos los conjuntos persiguen el mismo objetivo, una campaña con presupuesto compartido gestiona el gasto mejor. Sepáralas cuando los objetivos difieren (awareness vs conversión) o cuando necesitas garantizar presupuesto fijo a un segmento, como retargeting."}, {"q": "¿Qué porcentaje del presupuesto dedico a retargeting?", "a": "Entre el 20 y el 30 por ciento si tu ticket medio supera los 60 euros. Con tickets pequeños, prioriza captación y usa retargeting solo con audiencias de 30 días. Y excluye siempre compradores recientes de las campañas de captación."}]
 internal_links: [{"url":"/tech/meta-ads.html","anchor":"Meta Ads"},{"url":"/tech/google-ads-tech.html","anchor":"Google Ads"}]
 cta_title: "¿Quieres aplicar esto en tu negocio?"
 cta_desc: "En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto."
@@ -122,3 +122,23 @@ Una marca D2C de cosmética con la que trabajamos pasó de static en estudio a v
 El cambio clave fue el gancho. Los tres primeros segundos ahora muestran el problema de piel, no el producto. Y cada vídeo lleva un dato propio: "el 78% de nuestras clientas nota diferencia en 21 días". Esas cifras salen de su encuesta post-compra, no de inventos.
 
 Para replicarlo: pide a 10 clientas que graben con el móvil a cambio de producto. Edita 15 versiones cortas. Súbelas todas al mismo Advantage+ y deja que Meta decida. Revisa a los 14 días y mata lo que no ronde el CPA objetivo.
+
+## Gestión del Presupuesto y Pujas en Meta Ads
+
+Empieza con 5-10 dólares diarios por conjunto. Menos de eso, el algoritmo no aprende. Más, sin datos previos, es dinero quemado.
+
+Deja correr cada campaña 7-14 días sin tocarla. El 80 por ciento de las cuentas que revisamos fallaron antes del día 14. Cambian presupuestos cada 48 horas y reinician el aprendizaje en bucle.
+
+Usa presupuesto compartido (CBO) cuando los conjuntos comparten objetivo. Reserva presupuesto por conjunto solo si necesitas garantizar volumen: por ejemplo, 20 por ciento del gasto forzado a retargeting.
+
+Sobre pujas: deja puja automática hasta 50 conversiones mensuales. Con ese volumen, prueba coste por resultado objetivo. Ponlo un 10-20 por ciento por encima de tu CPA real de los últimos 30 días. Si no sale en una semana, sube o vuelve a automático.
+
+
+## Reparto de inversión: adquisición vs retención
+
+Error típico del negocio D2C: 90 por ciento del gasto en captación y cero en quien ya compró.
+
+Regla de partida que usamos en DayByDay: 70-80 por ciento a adquisición y el resto a retención. Con ticket medio por encima de 60 euros, el retargeting merece entre el 20 y el 30 por ciento.
+
+Con tickets pequeños, prioriza captación. Usa retargeting solo con audiencias de 30 días y excluye siempre compradores recientes de las campañas de captación.
+
