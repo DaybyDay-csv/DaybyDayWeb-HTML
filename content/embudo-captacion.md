@@ -80,3 +80,37 @@ Las tasas varían mucho según el sector y el precio del servicio. En negocios B
 - [Google Ads](/tech/google-ads-tech.html)
 - [Shopify](/tech/shopify.html)
 - [GA4](/tech/ga4.html)
+
+## Ejemplo con números: una tienda de suplementos D2C
+
+Vamos con un caso real aplicado a una tienda online de suplementos deportivos. El objetivo es captar leads para vender un pack mensual de 49 euros.
+
+El anuncio en Meta dirige a una landing con un lead magnet: guía gratuita de rutinas de fuerza con suplementación. Coste por lead: 2,80 euros. Con 500 euros de presupuesto mensual salen unos 178 leads.
+
+El 15% abre el email de bienvenida, unos 27 leads. De esos, un 8% descarga la guía. La secuencia tiene cuatro emails en diez días. El email 3 incluye una oferta con 10% de descuento en el primer pedido.
+
+Resultado del primer mes: 6 clientes. CAC efectivo: unos 83 euros. Parece mal, pero el pack tiene suscripción. El cliente medio permanece cinco meses. LTV de 245 euros. Ratio LTV/CAC de casi 3, que ya es rentable.
+
+La clave: sin embudo, ese mismo tráfico en la web convertía al 0,8%. Con el embudo, la conversión sobre lead captado sube al 3,4%.
+
+## Caso de uso: qué pasa cuando el lead scoring dispara la alerta
+
+Sigue al mismo caso. Un lead llamado Marc descarga la guía, abre los cuatro emails y en el email 3 hace clic dos veces en el enlace de la oferta. Su puntuación pasa de 25 a 70 puntos.
+
+El sistema crea una tarea en el CRM: llamar o enviar email personalizado en 24 horas. El equipo envía un email directo de la fundadora con una pregunta simple: ¿qué objetivo buscas con la suplementación?
+
+Marc responde en tres horas. La fundadora recomienda dos productos concretos y el enlace con el descuento. Marc compra el pack al día siguiente.
+
+Sin scoring, Marc habría quedado en la lista con el resto. Hubiera recibido el email masivo del día 15 y quizá ya habría comprado en otra tienda. El scoring sirve para detectar a los que ya están decididos y no saturarles con más secuencia.
+
+## Qué medir cada semana para saber si funciona
+
+Tres métricas te bastan al principio. Nada de paneles con veinte gráficos.
+
+Primera: coste por lead. Baja de 4 euros en suplementos y revisa el anuncio. En otras categorías D2C el umbral ronda los 2-3 euros.
+
+Segunda: tasa de apertura del email de bienvenida. Por debajo del 20% el problema suele estar en el asunto o en la hora de envío. Prueba asuntos de menos de 40 caracteres.
+
+Tercera: conversión de lead a cliente en 30 días. Con una secuencia de cuatro emails deberías estar entre el 2% y el 5%. Si no llegas, revisa la oferta antes que la redacción. Muchas veces el descuento es insuficiente o el producto no resuelve el problema que anunciaste.
+
+Apunta las tres cifras cada viernes en una hoja de cálculo. En seis semanas verás qué parte del embudo se rompe: captación, nurturing o cierre.
