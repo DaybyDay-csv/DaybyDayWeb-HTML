@@ -2997,3 +2997,87 @@ main .caso-barra {
   .legal-table { font-size: 0.85rem; }
   .legal-table th, .legal-table td { padding: 0.55rem 0.6rem; }
 }
+
+/* ─── MOTION: capa de movimiento (doctrina motion-first, código propio) ───
+   Reglas: solo transform/opacity; progressive enhancement (sin JS nada se
+   oculta); reduced-motion lo anula todo; cada tipo de contenido llega de
+   forma distinta — prohibido el fade-up uniforme. ── */
+:root {
+  --m-fast: 180ms;      /* hover, feedback de cursor */
+  --m-std: 300ms;       /* cards, entradas de lista */
+  --m-med: 480ms;       /* secciones, líneas que se dibujan */
+  --m-slow: 650ms;      /* hero, rotación del bucle */
+  --m-ease-out: cubic-bezier(0.16, 1, 0.3, 1);    /* entrada rápida, aterrizaje suave */
+  --m-ease-quart: cubic-bezier(0.76, 0, 0.24, 1); /* giros y bucles */
+  /* muelle muestreado (stiffness 350 / damping 28): el botón "pesa" al confirmar */
+  --m-spring: linear(0, 0.55 10%, 0.95 25%, 1.04 40%, 1.01 55%, 1);
+}
+
+/* El bucle gira: el símbolo del nav da media vuelta al pasar el cursor.
+   Es la metáfora de la casa — el bucle sigue vivo. */
+.nav-logo img {
+  transition: transform var(--m-slow) var(--m-ease-quart);
+}
+.nav-logo:hover img { transform: rotate(180deg); }
+
+/* El CTA del nav se deja llevar un poco por el cursor (JS pone --mx/--my) */
+.nav-cta {
+  transition: transform var(--m-fast) var(--m-ease-out),
+              background var(--m-fast) var(--m-ease-out);
+  transform: translate(var(--mx, 0px), var(--my, 0px));
+}
+
+/* ── Reveals: cada familia llega a su manera ──
+   Sin JS (html sin .m-ready) todo permanece visible: mejora progresiva. */
+html.m-ready .m-rise {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity var(--m-med) var(--m-ease-out),
+              transform var(--m-med) var(--m-ease-out);
+  transition-delay: calc(min(var(--i, 0), 8) * 45ms);
+}
+html.m-ready .m-rise.m-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* cita de pilar: sin desplazamiento, solo aparece — otra llegada */
+html.m-ready .m-fade {
+  opacity: 0;
+  transition: opacity var(--m-slow) var(--m-ease-out);
+}
+html.m-ready .m-fade.m-in { opacity: 1; }
+
+/* Confirmación del formulario: el botón se asienta con muelle */
+.m-settle { transform: scale(1) !important; animation: m-settle 520ms var(--m-spring); }
+@keyframes m-settle {
+  0% { transform: scale(0.97); }
+  100% { transform: scale(1); }
+}
+
+/* ── Hover específico, nada de lift uniforme ──
+   Índice de casos: la idea da un paso al frente, el metadato se aclara. */
+.caso-fila .caso-idea {
+  transition: transform var(--m-std) var(--m-ease-out), color var(--m-std) var(--m-ease-out);
+}
+.caso-fila:hover .caso-idea { transform: translateX(8px); color: var(--accent); }
+
+/* Blog: el título se subraya al dibujarse — el gesto es del texto, no de la caja */
+.blog-card .blog-card-title {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size var(--m-std) var(--m-ease-out);
+}
+.blog-card:hover .blog-card-title { background-size: 100% 1px; }
+.blog-card { transition: opacity var(--m-std) var(--m-ease-out), transform var(--m-std) var(--m-ease-out); }
+
+/* Reduced motion: la página quieta es LA página; nada queda oculto ni gira */
+@media (prefers-reduced-motion: reduce) {
+  html.m-ready .m-rise,
+  html.m-ready .m-fade { opacity: 1; transform: none; transition: none; }
+  .nav-logo img, .nav-logo:hover img { transform: none; transition: none; }
+  .nav-cta { transform: none !important; }
+  .m-settle { animation: none; }
+  .caso-fila:hover .caso-idea { transform: none; }
+}

@@ -365,3 +365,77 @@ document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
     init();
   }
 })();
+
+/* ==== Motion layer: reveals variados + CTA magnético + settle de formularios ====
+   Doctrina: solo transform/opacity, mejora progresiva (sin JS nada se oculta),
+   cada familia de contenido llega de forma distinta. reduced-motion lo apaga. */
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = window.matchMedia('(pointer: fine)').matches;
+  if (reduce) return;
+
+  document.documentElement.classList.add('m-ready');
+
+  // ── Reveals: cada familia con su llegada y su stagger propio ──
+  var FAMILIES = [
+    { sel: '.caso-fila', cls: 'm-rise', group: 'parent' },
+    { sel: '.blog-card', cls: 'm-rise', group: 'grid' },
+    { sel: '.area-block', cls: 'm-rise', group: 'none' },
+    { sel: '.pillar-quote', cls: 'm-fade', group: 'none' }
+  ];
+  var toObserve = [];
+  FAMILIES.forEach(function (fam) {
+    var seen = new Map();
+    document.querySelectorAll(fam.sel).forEach(function (el) {
+      if (seen.has(el)) return;
+      seen.set(el, true);
+      el.classList.add(fam.cls);
+      if (fam.group !== 'none') {
+        var siblings = el.parentElement.querySelectorAll(':scope > ' + fam.sel);
+        var i = Array.prototype.indexOf.call(siblings, el);
+        el.style.setProperty('--i', Math.max(0, i));
+      }
+      toObserve.push(el);
+    });
+  });
+
+  if ('IntersectionObserver' in window && toObserve.length) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('m-in');
+        io.unobserve(entry.target);
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -8% 0px' });
+    toObserve.forEach(function (el) { io.observe(el); });
+  } else {
+    toObserve.forEach(function (el) { el.classList.add('m-in'); });
+  }
+
+  // ── CTA magnético: se deja llevar ±5px hacia el cursor y vuelve solo ──
+  if (fine) {
+    document.querySelectorAll('.nav-cta').forEach(function (cta) {
+      cta.addEventListener('pointermove', function (e) {
+        var r = cta.getBoundingClientRect();
+        var dx = (e.clientX - (r.left + r.width / 2)) / (r.width / 2);
+        var dy = (e.clientY - (r.top + r.height / 2)) / (r.height / 2);
+        cta.style.setProperty('--mx', (dx * 5).toFixed(1) + 'px');
+        cta.style.setProperty('--my', (dy * 4).toFixed(1) + 'px');
+      });
+      cta.addEventListener('pointerleave', function () {
+        cta.style.setProperty('--mx', '0px');
+        cta.style.setProperty('--my', '0px');
+      });
+    });
+  }
+
+  // ── Settle: el botón de cualquier formulario pesa al confirmar ──
+  document.addEventListener('submit', function (e) {
+    var btn = e.target.querySelector && e.target.querySelector('button[type="submit"]');
+    if (!btn) return;
+    btn.classList.remove('m-settle');
+    void btn.offsetWidth; // reinicia la animación si ya se había enviado
+    btn.classList.add('m-settle');
+    setTimeout(function () { btn.classList.remove('m-settle'); }, 620);
+  }, true);
+})();
