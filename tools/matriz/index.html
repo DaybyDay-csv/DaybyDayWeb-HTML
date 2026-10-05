@@ -198,7 +198,8 @@
           <div class="parte-caja download-caja">
             <div class="parte-caja-head">PARTE DE CAJA — DESCARGA MATRIZ</div>
             <div class="parte-caja-row"><span>Versión</span><span>2.1</span></div>
-            <div class="parte-caja-row"><span>Tamaño</span><span>1,5 MB</span></div>
+            <div class="parte-caja-row"><span>Actualizada</span><span>5 oct 2026</span></div>
+            <div class="parte-caja-row"><span>Tamaño</span><span>1,6 MB</span></div>
             <div class="parte-caja-row"><span>macOS</span><span>13 o superior</span></div>
             <div class="parte-caja-row"><span>Mac</span><span>Apple Silicon e Intel</span></div>
             <a href="Matriz.dmg" download class="btn-sketch">Descargar Matriz</a>
@@ -216,8 +217,10 @@
           <ol>
             <li>Abre el archivo Matriz.dmg que se descarga.</li>
             <li>Arrastra Matriz a la carpeta Aplicaciones, como cualquier app de Mac.</li>
+            <li>Crea la carpeta Documents/Matriz y copia dentro el archivo matriz.html que también viene en el disco: es la pizarra.</li>
             <li>Expulsa el disco de Matriz y ábrela desde Aplicaciones.</li>
           </ol>
+          <p class="code-line">mkdir -p ~/Documents/Matriz &amp;&amp; cp /Volumes/Matriz/matriz.html ~/Documents/Matriz/</p>
         </div>
 
         <div class="step-card">
@@ -233,9 +236,19 @@
         <div class="step-card">
           <div class="step-tag voice-machine">CÓMO FUNCIONA</div>
           <ul>
-            <li>Mueve tarjetas libremente por la pizarra, agrupa por proyecto y marca lo importante con colores.</li>
+            <li>Arrastra las tarjetas entre las zonas: <strong>3 prioridades hoy</strong> (lo que tiene que caer hoy, se numera solo), <strong>En ejecución</strong> (lo que estás haciendo ahora), la <strong>Matriz</strong> (Ejecutar / Programar / Delegar / Ignorar), <strong>Programado</strong> (con fecha) y <strong>Hecho</strong>.</li>
+            <li>Un clic abre el detalle de una tarjeta: proyecto, fecha, notas y subtareas.</li>
             <li>El guardado es automático y local: nada sale de tu Mac, no hay cuenta que crear.</li>
             <li>Cierra la ventana y la app sigue viva en el Dock; haz clic en su icono para volver. Con Cmd+Q sales del todo.</li>
+          </ul>
+        </div>
+
+        <div class="step-card">
+          <div class="step-tag voice-machine">NOVEDADES · 5 OCT 2026</div>
+          <ul>
+            <li><strong>3 prioridades hoy</strong> — banda nueva arriba del todo: arrastra ahí lo que tiene que quedar hecho hoy sí o sí. Se numera por su orden y avisa en rojo si metes más de tres.</li>
+            <li><strong>En ejecución</strong> — la franja verde para lo que estás haciendo justo ahora, separado de lo que solo está planificado.</li>
+            <li>Si ya tenías tu pizarra, se coloca sola al abrir: no se pierde nada.</li>
           </ul>
         </div>
 
@@ -251,7 +264,7 @@
         </div>
 
         <div class="closing-note">
-          <p style="color:var(--text-secondary);font-size:0.95rem;margin:0 0 0.5rem;">Matriz es gratuita y se ofrece tal cual, sin garantías.</p>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin:0 0 0.5rem;">Matriz es gratuita y se ofrece tal cual, sin garantías. El código está abierto en <a href="https://github.com/DaybyDay-csv/matriz" target="_blank" rel="noopener">GitHub</a>: es un único archivo, puedes trastearlo y adaptarlo.</p>
           <span class="hand-note">Si te sirve y quieres una herramienta parecida para tu equipo, escríbenos.</span>
         </div>
 
