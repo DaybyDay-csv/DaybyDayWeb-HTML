@@ -3081,3 +3081,180 @@ html.m-ready .m-fade.m-in { opacity: 1; }
   .m-settle { animation: none; }
   .caso-fila:hover .caso-idea { transform: none; }
 }
+
+/* ─── LIQUID GLASS (iOS 26) — capa de chrome flotante ───
+   Receta extraida del shader lightweight_glass.frag de liquid_glass_widgets
+   (MIT, sdegenaar): cuerpo = blur + saturate del fondo (blur 4-5 / sat 1.2 /
+   light 0.7-0.85 en sus defaults); rim hairline 0.5px; doble specular
+   (power 14 + kick 20, luz desde arriba); absorcion de borde (menisco, el
+   perimetro se oscurece un pelo); y profundidad exterior.
+   REGLA del paquete: el vidrio es chrome de navegacion y control (nav,
+   paneles flotantes, botones, inputs) — NUNCA fondo a pantalla completa ni
+   cuerpos de contenido, y jamas vidrio dentro de vidrio. Los elementos de
+   "libreta de campo" (parte de caja, sellos, post-its) conservan su papel. ── */
+:root {
+  --lg-blur: 22px;
+  --lg-sat: 168%;
+  --lg-rim: rgba(255, 255, 255, 0.10);
+  --lg-spec-top: rgba(255, 255, 255, 0.30);
+  --lg-spec-kick: rgba(255, 255, 255, 0.05);
+  --lg-absorb: rgba(0, 0, 0, 0.16);
+  --lg-body: rgba(19, 18, 25, 0.52);
+  --lg-body-strong: rgba(19, 18, 25, 0.72);
+  --lg-sheen: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0) 55%);
+}
+[data-theme="light"] {
+  --lg-rim: rgba(20, 19, 26, 0.07);
+  --lg-spec-top: rgba(255, 255, 255, 0.85);
+  --lg-spec-kick: rgba(20, 19, 26, 0.04);
+  --lg-absorb: rgba(20, 19, 26, 0.05);
+  --lg-body: rgba(250, 248, 243, 0.55);
+  --lg-body-strong: rgba(250, 248, 243, 0.80);
+  --lg-sheen: linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0) 60%);
+}
+
+/* Nav: el plato de vidrio principal. Mas translucido que el frosted anterior
+   (0.85-0.92) para que el vidrio se lea; al scrollear gana cuerpo. */
+.main-nav,
+[data-theme="light"] .main-nav,
+[data-theme="dark"] .main-nav {
+  background-color: var(--lg-body);
+  background-image: var(--lg-sheen);
+  backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-sat));
+  -webkit-backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-sat));
+  box-shadow:
+    inset 0 0 0 0.5px var(--lg-rim),
+    inset 0 1px 0 var(--lg-spec-top),
+    inset 0 -1px 0 var(--lg-spec-kick),
+    inset 0 0 30px var(--lg-absorb),
+    0 10px 40px rgba(0, 0, 0, 0.18);
+}
+.main-nav.is-scrolled,
+[data-theme="light"] .main-nav.is-scrolled,
+[data-theme="dark"] .main-nav.is-scrolled {
+  background-color: var(--lg-body-strong);
+}
+
+/* Mega menu: vidrio denso (mucho texto) — cuerpo mas alto, misma receta */
+.nav-dropdown-content,
+[data-theme="light"] .nav-dropdown-content {
+  background-color: var(--lg-body-strong);
+  background-image: var(--lg-sheen);
+  backdrop-filter: blur(24px) saturate(var(--lg-sat));
+  -webkit-backdrop-filter: blur(24px) saturate(var(--lg-sat));
+  box-shadow:
+    inset 0 0 0 0.5px var(--lg-rim),
+    inset 0 1px 0 var(--lg-spec-top),
+    inset 0 0 26px var(--lg-absorb),
+    0 24px 60px -12px rgba(0, 0, 0, 0.45);
+}
+
+/* Menu movil: panel de vidrio */
+.mobile-nav {
+  background-color: var(--lg-body-strong);
+  background-image: var(--lg-sheen);
+  backdrop-filter: blur(24px) saturate(var(--lg-sat));
+  -webkit-backdrop-filter: blur(24px) saturate(var(--lg-sat));
+}
+
+/* Aviso de cookies: HUD flotante de vidrio */
+.consent-banner {
+  background-color: var(--lg-body-strong);
+  background-image: var(--lg-sheen);
+  backdrop-filter: blur(26px) saturate(var(--lg-sat));
+  -webkit-backdrop-filter: blur(26px) saturate(var(--lg-sat));
+  box-shadow:
+    inset 0 0 0 0.5px var(--lg-rim),
+    inset 0 1px 0 var(--lg-spec-top),
+    inset 0 0 30px var(--lg-absorb),
+    0 -10px 44px rgba(0, 0, 0, 0.30);
+}
+[data-theme="light"] .consent-banner,
+[data-theme="dark"] .consent-banner {
+  background-color: var(--lg-body-strong);
+}
+
+/* Toggle de tema: boton-icono de vidrio (GlassIconButton) */
+.theme-toggle-btn,
+[data-theme="light"] .theme-toggle-btn,
+[data-theme="dark"] .theme-toggle-btn {
+  background-color: var(--lg-body-strong);
+  border-color: transparent;
+  backdrop-filter: blur(14px) saturate(150%);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  box-shadow:
+    inset 0 0 0 0.5px var(--lg-rim),
+    inset 0 1px 0 var(--lg-spec-top),
+    inset 0 -1px 0 var(--lg-spec-kick),
+    0 4px 14px rgba(0, 0, 0, 0.14);
+}
+
+/* CTA del nav: accion prominente = capsula de vidrio TINTADA (iOS 26) */
+.nav-cta,
+[data-theme="light"] .nav-cta,
+[data-theme="dark"] .nav-cta {
+  background: color-mix(in srgb, var(--accent) 86%, transparent);
+  backdrop-filter: blur(10px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.16),
+    0 4px 18px color-mix(in srgb, var(--accent) 38%, transparent);
+}
+.nav-cta:hover,
+[data-theme="light"] .nav-cta:hover,
+[data-theme="dark"] .nav-cta:hover {
+  background: color-mix(in srgb, var(--accent-hover) 94%, transparent);
+}
+
+/* Inputs del formulario: GlassTextField — cuerpo de vidrio + foco que enciende */
+.df-form input,
+.df-form textarea,
+.df-form select {
+  background: var(--lg-body);
+  backdrop-filter: blur(14px) saturate(150%);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  border-color: transparent;
+  box-shadow:
+    inset 0 0 0 0.5px var(--lg-rim),
+    inset 0 1px 0 var(--lg-spec-kick),
+    inset 0 0 18px var(--lg-absorb);
+}
+.df-form input:focus,
+.df-form textarea:focus,
+.df-form select:focus {
+  border-color: transparent;
+  box-shadow:
+    inset 0 0 0 1px var(--accent),
+    inset 0 1px 0 var(--lg-spec-kick),
+    0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent),
+    0 0 22px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+/* Transparencia reducida: vidrio fuera, superficies solidas (accesibilidad) */
+@media (prefers-reduced-transparency: reduce) {
+  .main-nav, .nav-dropdown-content, .mobile-nav, .consent-banner,
+  .theme-toggle-btn, .nav-cta,
+  .df-form input, .df-form textarea, .df-form select {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background-image: none;
+  }
+  .main-nav, [data-theme="light"] .main-nav, [data-theme="dark"] .main-nav,
+  [data-theme="light"] .nav-dropdown-content, [data-theme="light"] .mobile-nav {
+    background-color: var(--bg-primary);
+  }
+  .nav-dropdown-content, .mobile-nav, .consent-banner, .theme-toggle-btn { background-color: var(--bg-card); }
+  .df-form input, .df-form textarea, .df-form select { background-color: var(--bg-primary); }
+  .nav-cta, [data-theme="light"] .nav-cta, [data-theme="dark"] .nav-cta { background: var(--accent); }
+}
+
+/* Sin soporte de backdrop-filter: fondos casi opacos (igual que el frosted previo) */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .main-nav, [data-theme="light"] .main-nav, [data-theme="dark"] .main-nav,
+  .nav-dropdown-content, [data-theme="light"] .nav-dropdown-content,
+  .mobile-nav, .consent-banner, .theme-toggle-btn {
+    background-color: var(--bg-primary) !important;
+  }
+  .df-form input, .df-form textarea, .df-form select { background: var(--bg-primary); }
+}
