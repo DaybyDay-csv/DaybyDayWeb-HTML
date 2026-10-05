@@ -156,56 +156,196 @@
 
           <div>
             <div class="section-tag">Reserva directa</div>
-            <h2 class="h2-serif" style="font-size:1.5rem;font-weight:700;margin-bottom:1rem;letter-spacing:-0.02em;">Elige hueco en Calendly</h2>
+            <h2 class="h2-serif" style="font-size:1.5rem;font-weight:700;margin-bottom:1rem;letter-spacing:-0.02em;">Elige hueco en la agenda</h2>
             <p style="color:var(--text-secondary);font-size:0.97rem;line-height:1.6;margin-bottom:1.25rem;">
-              Si tienes claro que quieres hablar y solo necesitas el hueco, el camino más corto es la agenda directa.
+              Si tienes claro que quieres hablar y solo necesitas el hueco, el camino más corto es la agenda directa. Se lee en vivo de mi calendario: solo verás huecos libres de verdad.
             </p>
-            <!-- Calendly inline widget begin — cargado solo con consentimiento (art. 22.2 LSSI) -->
-            <div id="calendly-slot">
-              <div class="calendly-inline-widget" data-url="https://calendly.com/d/d2dg-r7p-qrd?hide_gdpr_banner=1&amp;background_color=0f0f14&amp;text_color=f5f5f7&amp;primary_color=3b82f6" style="min-width:320px;height:700px;border-radius:12px;overflow:hidden;"></div>
-            </div>
-            <div id="calendly-blocked" class="calendly-blocked" hidden>
-              <p>La agenda es de Calendly, un servicio de terceros que pone sus propias cookies. No la cargo hasta que me lo autorices.</p>
-              <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;">
-                <button type="button" id="calendly-unlock" class="consent-btn consent-accept">Cargar la agenda de Calendly</button>
-                <a class="consent-btn consent-reject" href="https://calendly.com/d/d2dg-r7p-qrd" target="_blank" rel="noopener">Abrir en otra pestaña</a>
+            <!-- Agenda propia: sin terceros, sin cookies ajenas -->
+            <div id="agenda-widget" class="agenda-widget">
+              <div id="agenda-estado" class="agenda-estado" role="status">Cargando huecos…</div>
+              <div id="agenda-dias" class="agenda-dias" hidden></div>
+              <div id="agenda-slots" class="agenda-slots" hidden></div>
+              <form id="agenda-form" class="df-form agenda-form" hidden>
+                <input type="hidden" id="agenda-start" name="start">
+                <p id="agenda-elegido" class="agenda-elegido voice-machine"></p>
+                <div class="form-group">
+                  <label for="agenda-nombre">Nombre</label>
+                  <input id="agenda-nombre" name="name" type="text" placeholder="Tu nombre" required>
+                </div>
+                <div class="form-group">
+                  <label for="agenda-email">Email</label>
+                  <input id="agenda-email" name="email" type="email" placeholder="tu@email.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="agenda-notas">¿Qué quieres mirar? (opcional)</label>
+                  <textarea id="agenda-notas" name="notes" rows="3" placeholder="Una o dos líneas. Lo que te preocupa esta semana."></textarea>
+                </div>
+                <button type="submit" id="agenda-submit">Reservar este hueco</button>
+                <p id="agenda-error" class="agenda-error" role="alert" hidden></p>
+                <p class="form-privacy-note">Al reservar me das tu nombre y email para confirmar la cita. La gestión va sobre mi calendario (Google) y te llega la invitación por email. Detalles: <a href="/privacidad.html">política de privacidad</a>.</p>
+              </form>
+              <div id="agenda-ok" class="agenda-ok" hidden>
+                <div class="stamp">Reservado</div>
+                <p id="agenda-ok-texto"></p>
               </div>
             </div>
             <script>
             (function () {
-              var slot = document.getElementById('calendly-slot');
-              var blocked = document.getElementById('calendly-blocked');
-              var loaded = false;
-              function load() {
-                if (loaded) return;
-                loaded = true;
-                slot.hidden = false;
-                blocked.hidden = true;
-                var s = document.createElement('script');
-                s.src = 'https://assets.calendly.com/assets/external/widget.js';
-                s.async = true;
-                document.body.appendChild(s);
+              var API = 'https://n8n.daybydayconsulting.com/webhook/citas-';
+              var estado = document.getElementById('agenda-estado');
+              var dias = document.getElementById('agenda-dias');
+              var slotsBox = document.getElementById('agenda-slots');
+              var form = document.getElementById('agenda-form');
+              var okBox = document.getElementById('agenda-ok');
+              var errBox = document.getElementById('agenda-error');
+              var elegido = document.getElementById('agenda-elegido');
+              var slotActual = null;
+              var tz = 'Europe/Madrid';
+              var tzVisitante = '';
+              try { tzVisitante = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
+
+              function fallback() {
+                estado.hidden = false;
+                estado.innerHTML = 'No he podido cargar la agenda ahora mismo. Prueba en un minuto o escríbeme a <a href="mailto:contact@daybydayconsulting.com" style="color:var(--accent-color);">contact@daybydayconsulting.com</a>.';
               }
-              function gate() {
-                var c = window.ddbGetConsent && window.ddbGetConsent();
-                if (c && c.thirdParty) { load(); return; }
-                slot.hidden = true;
-                blocked.hidden = false;
+
+              function horaLocal(iso) {
+                var d = new Date(iso);
+                try {
+                  return new Intl.DateTimeFormat('es-ES', { hour: '2-digit', minute: '2-digit' }).format(d);
+                } catch (e) { return ''; }
               }
-              document.addEventListener('ddb-consent', function (e) {
-                if (e.detail.thirdParty) load();
+
+              function pintar(payload) {
+                var slots = payload.slots || [];
+                estado.hidden = true;
+                if (!slots.length) {
+                  estado.hidden = false;
+                  estado.textContent = 'No quedan huecos en las próximas semanas. Escríbeme a contact@daybydayconsulting.com y lo vemos.';
+                  return;
+                }
+                // agrupar por día
+                var porDia = {};
+                var orden = [];
+                slots.forEach(function (s) {
+                  if (!porDia[s.date]) { porDia[s.date] = []; orden.push(s.date); }
+                  porDia[s.date].push(s);
+                });
+                dias.innerHTML = '';
+                orden.forEach(function (fecha, i) {
+                  var b = document.createElement('button');
+                  b.type = 'button';
+                  b.className = 'agenda-dia';
+                  b.setAttribute('data-fecha', fecha);
+                  b.innerHTML = porDia[fecha][0].day + ' <span class="agenda-cuenta voice-machine">' + porDia[fecha].length + '</span>';
+                  b.addEventListener('click', function () { elegirDia(fecha, b); });
+                  dias.appendChild(b);
+                  if (i === 0) { setTimeout(function () { elegirDia(fecha, b); }, 0); }
+                });
+                dias.hidden = false;
+                window.__agendaPorDia = porDia;
+              }
+
+              function elegirDia(fecha, btn) {
+                Array.prototype.forEach.call(dias.children, function (c) { c.classList.remove('activo'); });
+                if (btn) btn.classList.add('activo');
+                slotsBox.innerHTML = '';
+                (window.__agendaPorDia[fecha] || []).forEach(function (s) {
+                  var b = document.createElement('button');
+                  b.type = 'button';
+                  b.className = 'agenda-slot voice-machine';
+                  b.textContent = s.time;
+                  if (tzVisitante && tzVisitante !== tz) {
+                    b.textContent += ' · ' + horaLocal(s.start) + ' tu hora';
+                  }
+                  b.addEventListener('click', function () { elegirSlot(s, b); });
+                  slotsBox.appendChild(b);
+                });
+                slotsBox.hidden = false;
+              }
+
+              function elegirSlot(slot, btn) {
+                Array.prototype.forEach.call(slotsBox.children, function (c) { c.classList.remove('activo'); });
+                if (btn) btn.classList.add('activo');
+                slotActual = slot;
+                document.getElementById('agenda-start').value = slot.start;
+                elegido.textContent = slot.day + ' · ' + slot.time + ' (hora peninsular)';
+                // prefill desde el formulario principal si ya ha escrito
+                var n = document.getElementById('name'), e = document.getElementById('email');
+                if (n && n.value && !document.getElementById('agenda-nombre').value) document.getElementById('agenda-nombre').value = n.value;
+                if (e && e.value && !document.getElementById('agenda-email').value) document.getElementById('agenda-email').value = e.value;
+                form.hidden = false;
+                errBox.hidden = true;
+                form.scrollIntoView({ block: 'nearest' });
+              }
+
+              function cargar() {
+                estado.hidden = false;
+                estado.textContent = 'Cargando huecos…';
+                fetch(API + 'disponibilidad', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: '{}'
+                }).then(function (r) {
+                  if (!r.ok) throw new Error('HTTP ' + r.status);
+                  return r.json();
+                }).then(function (j) {
+                  if (!j.ok) { fallback(); return; }
+                  pintar(j);
+                }).catch(fallback);
+              }
+              window.ddbAgendaCargar = cargar;
+
+              form.addEventListener('submit', function (ev) {
+                ev.preventDefault();
+                if (!slotActual) return;
+                var btn = document.getElementById('agenda-submit');
+                btn.disabled = true;
+                btn.textContent = 'Reservando…';
+                errBox.hidden = true;
+                fetch(API + 'reservar', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({
+                    start: slotActual.start,
+                    name: document.getElementById('agenda-nombre').value,
+                    email: document.getElementById('agenda-email').value,
+                    notes: document.getElementById('agenda-notas').value
+                  })
+                }).then(function (r) {
+                  if (!r.ok) throw new Error('HTTP ' + r.status);
+                  return r.json();
+                }).then(function (j) {
+                  if (!j.ok) {
+                    btn.disabled = false;
+                    btn.textContent = 'Reservar este hueco';
+                    errBox.textContent = j.mensaje || 'No se pudo reservar. Prueba con otro hueco.';
+                    errBox.hidden = false;
+                    if (j.reason === 'ocupado' || j.reason === 'slot') cargar();
+                    return;
+                  }
+                  form.hidden = true;
+                  dias.hidden = true;
+                  slotsBox.hidden = true;
+                  var t = document.getElementById('agenda-ok-texto');
+                  t.textContent = 'Te espero el ' + slotActual.day + ' a las ' + slotActual.time + ' (hora peninsular). ' +
+                    (j.meet === false
+                      ? 'Te llega la confirmación por email; el enlace de videollamada te lo paso yo.'
+                      : 'Te llega la invitación con el enlace de la videollamada a ' + j.email + '.');
+                  okBox.hidden = false;
+                }).catch(function () {
+                  btn.disabled = false;
+                  btn.textContent = 'Reservar este hueco';
+                  errBox.textContent = 'No se pudo completar la reserva. Prueba otra vez o escríbeme a contact@daybydayconsulting.com.';
+                  errBox.hidden = false;
+                });
               });
-              var btn = document.getElementById('calendly-unlock');
-              if (btn) btn.addEventListener('click', function () {
-                window.ddbSetConsent(true);
-                load();
-              });
+
               if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', gate);
-              } else { gate(); }
+                document.addEventListener('DOMContentLoaded', cargar);
+              } else { cargar(); }
             })();
             </script>
-            <!-- Calendly inline widget end -->
 
             <div style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border);">
               <div class="section-tag">Prefieres explicarte primero</div>

@@ -2980,17 +2980,6 @@ main .caso-barra {
 }
 .consent-more:hover { color: var(--text-secondary); }
 
-/* Placeholder del widget Calendly antes del consentimiento (contacto) */
-.calendly-blocked {
-  border: 1px dashed var(--border);
-  border-radius: 12px;
-  padding: 1.5rem;
-  text-align: center;
-  color: var(--text-secondary);
-  font-size: 0.92rem;
-  line-height: 1.6;
-}
-.calendly-blocked p { margin: 0 0 1rem; }
 
 @media (max-width: 640px) {
   .consent-banner { padding: 0.9rem 1rem; }
@@ -3258,3 +3247,95 @@ html.m-ready .m-fade.m-in { opacity: 1; }
   }
   .df-form input, .df-form textarea, .df-form select { background: var(--bg-primary); }
 }
+
+/* ─── AGENDA PROPIA (contacto): selección de hueco sobre el calendario ───
+   Sin terceros: los datos salen del webhook propio (n8n). Chips y slots
+   usan los tokens del vidrio (--lg-*) para ir con la capa liquid glass. */
+.agenda-widget { margin-top: 0.5rem; }
+.agenda-estado {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding: 1rem 1.2rem;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+}
+.agenda-dias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.agenda-dia {
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: 0.5rem 0.8rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--lg-body-strong);
+  box-shadow:
+    inset 0 0 0 0.5px var(--lg-rim),
+    inset 0 1px 0 var(--lg-spec-top),
+    0 2px 10px rgba(0, 0, 0, 0.12);
+  transition: transform var(--m-fast) var(--m-ease-out), color var(--m-fast) var(--m-ease-out);
+}
+.agenda-dia:hover { transform: translateY(-1px); color: var(--text-primary); }
+.agenda-dia.activo {
+  color: var(--paper, #fff);
+  background-color: var(--accent);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 4px 16px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+.agenda-cuenta {
+  display: inline-block;
+  margin-left: 0.3rem;
+  font-size: 0.72rem;
+  opacity: 0.75;
+}
+.agenda-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1.25rem;
+}
+.agenda-slot {
+  font-size: 0.82rem;
+  color: var(--text-primary);
+  padding: 0.45rem 0.75rem;
+  border-radius: 9px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--lg-body);
+  box-shadow:
+    inset 0 0 0 0.5px var(--lg-rim),
+    inset 0 1px 0 var(--lg-spec-kick);
+  transition: transform var(--m-fast) var(--m-ease-out), background-color var(--m-fast) var(--m-ease-out);
+}
+.agenda-slot:hover { transform: translateY(-1px); }
+.agenda-slot.activo {
+  color: var(--paper, #fff);
+  background-color: var(--accent);
+}
+.agenda-form { margin-top: 0.5rem; }
+.agenda-elegido {
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+.agenda-error {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--flag-red, #EF4444);
+}
+.agenda-ok {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.4rem 1.5rem;
+  background: var(--bg-card);
+}
+.agenda-ok .stamp { margin-bottom: 0.75rem; }
+.agenda-ok p { color: var(--text-secondary); line-height: 1.65; margin: 0; }

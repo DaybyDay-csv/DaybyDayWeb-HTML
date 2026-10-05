@@ -16,7 +16,7 @@ Tagline: El crecimiento, día a día.
 # CONTACT
 
 Email: contact@daybydayconsulting.com
-Calendly: https://calendly.com/daybydayconsulting/discovery
+Reserva: https://www.daybydayconsulting.com/contacto
 
 # SITE
 

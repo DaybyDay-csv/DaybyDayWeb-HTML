@@ -145,8 +145,7 @@
             <thead><tr><th>Qué</th><th>Quién la pone</th><th>Para qué</th><th>Tipo</th></tr></thead>
             <tbody>
               <tr><td>Cookies técnicas de seguridad (p. ej. __cf_bm)</td><td>Cloudflare, al servir la web</td><td>Filtrar bots y tráfico malicioso para que la web cargue y no caiga</td><td>Técnica: no requiere consentimiento</td></tr>
-              <tr><td>Cookies del widget de agenda (dominio calendly.com)</td><td>Calendly, solo si cargas la agenda</td><td>Funcionar la reserva de citas</td><td>De tercero: requiere tu consentimiento, y no se carga sin él</td></tr>
-              <tr><td>Almacenamiento local: tema claro u oscuro</td><td>Esta web</td><td>Recordar tu preferencia de tema</td><td>No es cedida a nadie: vive en tu navegador</td></tr>
+                            <tr><td>Almacenamiento local: tema claro u oscuro</td><td>Esta web</td><td>Recordar tu preferencia de tema</td><td>No es cedida a nadie: vive en tu navegador</td></tr>
               <tr><td>Almacenamiento local: tu elección de cookies</td><td>Esta web</td><td>No preguntarte lo mismo en cada visita</td><td>Exenta: guarda justo tu consentimiento</td></tr>
             </tbody>
           </table>
@@ -160,11 +159,9 @@
           </ul>
           <p>Si mañana se incorpora alguna de esas piezas, se actualizará esta página y esa cookie no se instalará sin tu consentimiento previo a través del aviso.</p>
 
-          <h2>Tu elección y cómo cambiarla</h2>
-          <p>La primera vez que navegas aparece un aviso abajo con dos botones: aceptar la agenda de Calendly o quedarte solo con lo necesario. Cualquiera de las dos opciones deja navegar toda la web igual; la diferencia está solo en si el widget de reserva carga incrustado o te lleva a Calendly en su propia página.</p>
-          <p>Cambias de opinión cuando quieras: pulsa este botón y el aviso reaparece.</p>
-          <p><button type="button" id="reopen-consent" class="consent-btn consent-reject">Revisar mi elección de cookies</button></p>
-          <p>También puedes bloquear o borrar cookies desde tu navegador. Las técnicas de seguridad, al ser imprescindibles, pueden impedir que la web funcione bien si las bloqueas. Según navegador:</p>
+          <h2>Tu elección y por qué no hay banner</h2>
+          <p>Esta web no te pide consentimiento de cookies porque no hay nada que consentir: solo usa cookies técnicas propias y almacenamiento local, que la ley exime. No hay banner por coherencia, no por descuido. Hasta octubre de 2026 la agenda de reservas era de Calendly (un tercero que ponía sus cookies); ahora es un desarrollo propio conectado a mi calendario, así que la web se quedó con cero terceros.</p>
+          <p>Si aun así quieres bloquear o borrar cookies desde tu navegador, puedes. Las técnicas de seguridad, al ser imprescindibles, pueden impedir que la web funcione bien si las bloqueas. Según navegador:</p>
           <ul>
             <li><a href="https://support.google.com/chrome/answer/95647?hl=es" rel="noopener">Chrome</a></li>
             <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" rel="noopener">Safari</a></li>
@@ -172,21 +169,12 @@
             <li><a href="https://support.microsoft.com/es-es/microsoft-edge" rel="noopener">Edge</a></li>
           </ul>
 
-          <h2>Cuánto vale tu consentimiento</h2>
-          <p>Doce meses, máximo recomendado por la AEPD y la CNMC. Pasado ese plazo, o si borro tus preferencias del almacenamiento local, el aviso vuelve a preguntar.</p>
-
           <h2>Dudas</h2>
           <p>Todo lo que afecta a quién trata tus datos está en la <a href="/privacidad.html">política de privacidad</a>. Si algo de esto no te cuadra, escríbeme a contact@daybydayconsulting.com y lo hablamos.</p>
 
         </div>
       </div>
     </section>
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var b = document.getElementById("reopen-consent");
-    if (b && window.ddbOpenConsent) b.addEventListener("click", function () { window.ddbOpenConsent(); });
-  });
-  </script>
   </main>
 
   <footer class="footer">
