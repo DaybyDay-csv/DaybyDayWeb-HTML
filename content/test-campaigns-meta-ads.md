@@ -1,8 +1,8 @@
 ---
-title: "Cómo Testar Nuevas Campañas en Meta Ads: Sistema de Experimentación 2026"
+title: "Test de Campañas en Meta Ads: Cómo Hacerlo Paso a Paso"
 h1: "Cómo Testar Nuevas Campañas en Meta Ads: Sistema de Experimentación 2026"
 slug: test-campaigns-meta-ads
-meta_desc: "Guía completa para testar campañas de Meta Ads de forma científica. Aprende a diseñar tests, interpretar resultados y escalar lo que funciona."
+meta_desc: "Aprende a testar campañas en Meta Ads con presupuesto controlado. Te explicamos cuánto invertir por test y cómo leer resultados sin equivocarte."
 canonical: "https://www.daybydayconsulting.com/blog/test-campaigns-meta-ads"
 category: "Meta Ads"
 article_date: "2026-05-24"
@@ -10,7 +10,7 @@ reading_time: 11
 published_at: "2026-05-24T00:00:00+02:00"
 primary_keyword: "cómo testar nuevas"
 secondary_keywords: []
-faq: [{"q":"¿Cuántos días necesito para testar una nueva campaña de Meta Ads?","a":"Mínimo 7 días para datos significativos, pero el algoritmo necesita al menos 50 eventos de conversión para estabilizarse. Esto suele tomar 14-21 días dependiendo del presupuesto diario."},{"q":"¿Cuándo debo pausar una campaña que no convierte?","a":"Si después de 14 días y 50+ eventos de conversión el CPA es 2x tu target, pausar. Pero si hay volumen y el CPA está dentro del 20% del target, seguir testando."},{"q":"¿Cómo afecta la estacionalidad a los tests de campañas?","a":"Evita lanzar tests en fechas de alta demanda (Black Friday, Navidad) porque los datos quedan contaminados. Mejor lanzar en enero, marzo-abril o septiembre."},{"q":"¿Cuántas variaciones de anuncio debo crear por campaña?","a":"Mínimo 3-5 creatividades diferentes. El algoritmo de Meta optimiza mejor con más opciones. En sectores competitivos, hasta 7-10 variaciones."}]
+faq: [{"q": "¿Cuántos días necesito para testar una nueva campaña de Meta Ads?", "a": "Mínimo 7 días para datos significativos, pero el algoritmo necesita al menos 50 eventos de conversión para estabilizarse. Esto suele tomar 14-21 días dependiendo del presupuesto diario."}, {"q": "¿Cuándo debo pausar una campaña que no convierte?", "a": "Si después de 14 días y 50+ eventos de conversión el CPA es 2x tu target, pausar. Pero si hay volumen y el CPA está dentro del 20% del target, seguir testando."}, {"q": "¿Cómo afecta la estacionalidad a los tests de campañas?", "a": "Evita lanzar tests en fechas de alta demanda (Black Friday, Navidad) porque los datos quedan contaminados. Mejor lanzar en enero, marzo-abril o septiembre."}, {"q": "¿Cuántas variaciones de anuncio debo crear por campaña?", "a": "Mínimo 3-5 creatividades diferentes. El algoritmo de Meta optimiza mejor con más opciones. En sectores competitivos, hasta 7-10 variaciones."}, {"q": "¿Cuánto presupuesto necesito para un test fiable en Meta Ads?", "a": "Con 50-100€ por variante y día tienes señal suficiente para la mayoría de cuentas en España. El objetivo es generar al menos 50 conversiones por variante antes de decidir. Si tu ticket medio es alto y las conversiones escasean, alarga el test a 10-14 días en lugar de subir presupuesto bruscamente. Cerrar antes de esas 50 conversiones es apostar, no testar."}, {"q": "¿Testo creatividades o estructuras de campaña primero?", "a": "Empieza por creatividades. Es la palanca con más impacto en CPA y la que Meta optimiza directamente. Estructura, públicos y placements son secundarios: cambian resultados entre un 10 y un 20%, mientras una creatividad mejor puede bajar tu coste por compra a la mitad. Deja Advantage+ trabajando y concentra el esfuerzo en el creativo."}]
 internal_links: [{"url":"/tech/meta-ads.html","anchor":"Meta Ads"},{"url":"/tech/google-ads-tech.html","anchor":"Google Ads"}]
 cta_title: "¿Quieres aplicar esto en tu negocio?"
 cta_desc: "En 30 minutos analizamos tu situación y te decimos exactamente qué acciones tendrían más impacto."
