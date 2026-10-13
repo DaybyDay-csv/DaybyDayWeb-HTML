@@ -233,3 +233,6 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 <!-- auto:cuanto-cuesta-agencia-meta-ads-ecommerce -->
 - [Cuánto cuesta una agencia de Meta Ads para ecommerce D2C](https://www.daybydayconsulting.com/blog/cuanto-cuesta-agencia-meta-ads-ecommerce.html) — Cuánto cuesta una agencia de Meta Ads para ecommerce D2C en España: rangos de fee fijo, porcentaje de spend, modelos de contrato y 4 filtros para elegir agencia. Incluye comparativa generalista vs esp
 <!-- /auto -->
+<!-- auto:elegir-agencia-meta-ads-d2c-2024 -->
+- [Cómo elegir agencia de Meta Ads para tu D2C (2024)](https://www.daybydayconsulting.com/blog/elegir-agencia-meta-ads-d2c-2024.html) — Guía para elegir agencia de Meta Ads si tienes una marca D2C: los 4 filtros de decisión, precios reales del mercado español en 2024, cuándo conviene freelance o in-house y qué debe firmar el contrato.
+<!-- /auto -->
