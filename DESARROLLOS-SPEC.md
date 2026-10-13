@@ -1,11 +1,11 @@
-# DESARROLLOS-SPEC — página de desarrollos web + 5 casos de proyecto
+# DESARROLLOS-SPEC — página de desarrollos web + 7 casos de proyecto
 
-Patrón visual: igual que /casos/ (filas gigante McCann en el índice, narrativa 01-04 en cada proyecto, parte de caja con lo verificable). Diferencia clave: cada proyecto ENLAZA a la web viva del cliente (botón/badge "Ver la web →" con URL externa + target=_blank rel=noopener). Honestidad ante todo: donde el build no fue de DaybyDay, se dice.
+Patrón visual: igual que /casos/ (filas gigante McCann en el índice, narrativa 01-04 en cada proyecto, parte de caja con lo verificable). Diferencia clave: cada proyecto ENLAZA a la web viva del cliente (botón/badge "Ver la web →" con URL externa + target=_blank rel=noopener). Honestidad ante todo: donde el build no fue de DayByDay, se dice.
 
 ## Índice /desarrollos/index.html
-- H1: "Desarrollos web." (serif) + sub mono: "Cinco webs en producción, construidas o puestas en marcha por DaybyDay. Cada proyecto enlaza a la web viva."
+- H1: "Desarrollos web." (serif) + sub mono: "Siete webs en producción, construidas o puestas en marcha por DaybyDay. Cada proyecto enlaza a la web viva."
 - Filas gigante (estilo casos/index): logo/wordmark + NOMBRE DE PROYECTO en serif + cliente/sector en mono + badge externo "douf.es →" en mono azul.
-- Orden: Douf, Cartri, Garett, Evolut Fitkid, Kueba.
+- Orden: Douf, Cartri, Garett, Evolut Fitkid, Kueba, content.fuel, Intermex Group.
 - Al final: línea cruzada: "¿Buscas los casos de growth? → /casos/"
 
 ## Los 5 proyectos (copy listo)
@@ -48,9 +48,26 @@ Patrón visual: igual que /casos/ (filas gigante McCann en el índice, narrativa
 - 04 (honesto): "kuebakitchen.com en producción. La estrategia y la estructura son de este discovery; el build final lo llevó el chef con su herramienta. Y así está bien: el caso demuestra que una sesión de discovery bien hecha ordena hasta lo que no construyes tú."
 - Botón externo: "Ver la web → https://www.kuebakitchen.com"
 
+### 6. desarrollos/contentfuel.html · "De la ficha a la mesa." — CONTENT.FUEL (content-fuel.com) [AÑADIDO 13-OCT-2026]
+- Eyebrow: PRODUCTO PROPIO · CONTENIDO PARA MARCAS PERSONALES · EN PRODUCCIÓN
+- 01: "content.fuel es el servicio de dirección de contenido para marcas personales: análisis, guiones palabra por palabra, edición, calendario y posteo. El cliente pone la cara y graba; el resto lo hace el sistema. Con varios clientes dentro, eso no cabe en carpetas: necesita producto."
+- 02: "Que cada cliente vea su producción y apruebe desde su panel, y que la operación avance etapa a etapa — con gates humanos donde de verdad importan: la mesa de guiones, los análisis, las propuestas."
+- 03: "Portal Cloudflare Worker + D1 + R2 (panel de cliente + panel interno) + pipeline de 12 etapas (ficha → referentes → recolección → informe → forense del cliente → perfil → playbook → estrategia → redacción → plan → forense post-publicación). Runner en servidor propio: cada 5 min, una etapa (cola → LLM → hooks con clave). Publicación IG automática (n8n, 15 min), insights cada 6 h. Identidad propia: Bodoni Moda + Inter sobre esmeralda y oro viejo."
+- 04 (parte de caja + GO): "Portal Worker+D1+R2 · paneles cliente+interno · 12 etapas con gates · runner 1 etapa/5 min · IG automática · en producción con clientes dentro"
+- Botón externo: "Ver la web → https://content-fuel.com"
+
+### 7. desarrollos/intermex.html · "Cifras con fuente." — INTERMEX GROUP (intermexgroup.es) [AÑADIDO 13-OCT-2026]
+- Eyebrow: CLIENTE · HOLDING DE DISTRIBUCIÓN · EN PRODUCCIÓN
+- 01: "Intermex Group mete marcas internacionales en España — importación, stock, tienda y logística, con ERP propio — y su web tenía que hacer lo mismo hacia fuera: convencer a marcas de fuera de que aquí hay mercado. En inglés, con datos, y sin parecer una plantilla más."
+- 02: "Convertir la web en el pitch: qué hace el grupo, por qué España — con cifras reales y su fuente a la vista — y prueba que se puede clicar: las webs vivas de sus marcas."
+- 03: "Identidad desde su logo oficial (azul profundo + oro, grotesca auto-hospedada). Sección 'Why Spain' con 4 gráficos SVG hechos a mano sobre series oficiales (CNMC, INE, Stanpa), cada dato con enlace a su fuente. Casos con 'ventanas' de navegador y las webs vivas dentro (Cartri, Garett, Cyramiko). 4 páginas legales en inglés, 0 dependencias, 0 trackers. Publicada en Cloudflare Pages y servida en su dominio — el registro raíz seguía aparcado y se resolvió con un Worker reverse-proxy, sin tocar el DNS."
+- 04 (parte de caja + GO): "4 gráficos con fuente · CNMC/INE/Stanpa · 3 casos con web viva · 4 legales EN · 0 dependencias · en producción"
+- Botón externo: "Ver la web → https://intermexgroup.es"
+
 ## HOME (index.html)
-1. En la sección "01 — 12 meses de operación": añadir un CUARTO anchor-stat igual que los existentes: valor "5" (con data-counter="5"), label "Desarrollos web en producción", envuelto en .voice-machine, link (envolver el anchor-stat en <a href="/desarrollos/">, mismo estilo).
-2. Marquee: añadir 2 wordmarks nuevas antes de "y más…": <span class="cl lg-evolut">Evolut Fitkid</span> (serif itálica como lvp) y <span class="cl lg-kueba">Kueba Kitchen</span> (serif 600). En las DOS copias del track. Actualizar el aria-label del contenedor para incluirlas.
+1. Anchor-stat "Desarrollos web en producción": valor ligado al número de proyectos — hoy **"7"** (data-counter="7"), envuelto en .voice-machine y en <a href="/desarrollos/">. Si se añade un proyecto nuevo, subir el número aquí Y el "Siete webs" de desarrollos/index.html y casos/index.html.
+2. Marquee de clientes: imágenes monocromas (filtro brightness(0) / invert en dark) + el span "y más…". Últimas adiciones (13-oct-2026): `contentfuel.svg` (wordmark dibujado de content.fuel, asset de su branding) e `intermex.svg` (lockup autorado en serif Georgia: "Intermex / GROUP"). En las DOS copias del track + aria-label actualizado.
+3. Notas de logos por contexto: en el ÍNDICE /desarrollos/ cada fila lleva su logo en la caja de 110px — content.fuel usa su marca `contentfuel-mark.svg` (monograma, color #9AA3B2 para verse en ambos temas) e Intermex la placa `intermex.png` (PNG transparente). Los SVG sueltos SIEMPRE con `xmlns` (los inline del header de content-fuel.com no lo llevan: al copiarlos hay que añadirlo o no cargan como <img>).
 
 ## Nav/cruces
 - casos/index.html: al final, línea cruzada → /desarrollos/ ("¿Buscas los desarrollos web? Cinco webs en producción →").
