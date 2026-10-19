@@ -1,8 +1,8 @@
 ---
-title: "Bid Cap vs Cost Cap: cuándo usar cada puja en Meta Ads"
+title: "Bid Cap vs Cost Cap en Meta Ads: cuándo usar cada uno"
 h1: "Estrategias de puja en Meta Ads 2026: cuál elegir según tu objetivo"
 slug: estrategias-puja-meta-ads
-meta_desc: "Aprende a elegir entre Bid Cap, Cost Cap y ROAS mínimo en Meta Ads, con ejemplos de cuentas reales y cuándo conviene cada estrategia de puja."
+meta_desc: "Bid Cap o Cost Cap: te enseñamos a elegir con ejemplos de cuentas D2C reales, cuándo usar ROAS mínimo y qué esperar de cada puja."
 canonical: "https://www.daybydayconsulting.com/blog/estrategias-puja-meta-ads"
 category: "Meta Ads"
 article_date: "2026-03-10"

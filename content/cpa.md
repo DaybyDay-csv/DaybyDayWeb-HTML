@@ -2,7 +2,7 @@
 title: "CPA en Meta Ads y Google Ads: 6 causas y plan de 90 días"
 h1: "Cómo reducir el CPA en Meta Ads para eCommerce — Guía paso a paso"
 slug: cpa
-meta_desc: "Aprende por qué sube tu CPA en Meta Ads y Google Ads, las 6 causas más comunes y el plan de 90 días que bajó el CPA de un cliente a 4,8€."
+meta_desc: "Baja tu CPA en Meta Ads y Google Ads. Te contamos las 6 causas más comunes y el plan de 90 días que llevó el CPA de un cliente a 4,8€."
 canonical: "https://www.daybydayconsulting.com/blog/cpa"
 category: "Meta Ads"
 article_date: "2026-06-12"
