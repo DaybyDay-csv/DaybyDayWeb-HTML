@@ -80,3 +80,37 @@ Revisa estas 4 métricas mensualmente: evolución del ROAS (¿sube, baja o se ma
 - [Google Ads](/tech/google-ads-tech.html)
 - [Shopify](/tech/shopify.html)
 - [GA4](/tech/ga4.html)
+
+## Un ejemplo con números: cómo detectar el problema en 10 minutos
+
+Cojo una cuenta real de un cliente D2C de moda, con 40.000 euros de facturación mensual. La agencia llevaba 14 meses con ellos. El gasto en Meta Ads era de 12.000 euros al mes y el ROAS aparente era de 3,2. Suena razonable.
+
+El problema aparece cuando miras el MER, no el ROAS. Facturación total dividida entre gasto total en marketing: 40.000 entre 16.500 (ads más fee de agencia más herramientas). Eso da un MER de 2,4. Y si le restas coste de producto y envío, el margen de contribución era del 8%. Con devoluciones incluidas, negativo.
+
+Diez minutos con dos números destaparon lo que 14 meses de informes mensuales no habían contado. La agencia enseñaba ROAS de plataforma porque quedaba bien. Nadie había pedido el MER.
+
+Si quieres repetir este ejercicio, necesitas tres datos: facturación total del último mes completo, gasto total en marketing (incluye fees y herramientas) y margen de contribución antes de marketing. Tres celdas de una hoja de cálculo. Si el margen después de marketing baja del 10%, tienes una conversación pendiente con tu agencia.
+
+## Caso real: lo que cambió al preguntar una sola cosa
+
+Un fundador de una marca de cosmética natural nos escribió porque su agencia llevaba seis meses con el CAC subiendo. De 22 a 31 euros, sin explicación clara en los informes. La marca facturaba 80.000 euros al mes, así que el problema todavía no dolía en cuenta de resultados. Pero la tendencia era insostenible.
+
+Le propusimos una acción sencilla: enviar un email a la agencia con una sola pregunta. ¿Qué hipótesis tenéis sobre la subida del CAC y qué vais a probar en los próximos 30 días para revertirla? Sin llamada, sin reunión, por escrito.
+
+La respuesta tardó 9 días. Llegó con cuatro líneas genéricas: el mercado estaba más competitivo, el verano afectaba, seguían optimizando. Cero hipótesis concreta, cero test planteado, cero fecha de revisión. Ahí el fundador ya tenía su respuesta.
+
+Cambió de agencia al mes siguiente. La nueva entregó en la primera semana un plan con tres tests: una creatividad de UGC con ángulo de rutina nocturna, una estructura de cuentas nueva separando prospección de remarketing, y una revisión del público Similar a compradores de alta recencia. A los 45 días el CAC bajó a 26 euros. No magia, solo alguien trabajando con hipótesis y plazos.
+
+La lección práctica: la calidad de la respuesta a esa pregunta te dice más que cualquier informe trimestral. Una agencia que rinde responde en 48 horas con algo que puedas validar. Una que no rinde responde con contexto y sin compromiso.
+
+## Qué pedirle a tu agencia esta semana
+
+Tres entregables concretos, por email, con fecha límite de cinco días laborables.
+
+Primero, el MER de los últimos tres meses y el margen de contribución después de marketing. Si no lo calculan, te dicen algo importante: no miran tu negocio, miran sus campañas.
+
+Segundo, los tests activos ahora mismo. Qué están probando, desde cuándo y con qué criterio lo darán por válido. Una agencia que rinde siempre tiene algo en pruebas. Si llevan meses "optimizando" sin test documentado, están manteniendo, no mejorando.
+
+Tercero, el desglose de tu fee. Qué horas o tareas cubre exactamente. No para regatear, sino para saber si pagan a alguien que gestione estrategia o solo a alguien que suba creatividades.
+
+Con esas tres respuestas sobre la mesa, la decisión de seguir o cambiar deja de ser una corazonada y pasa a ser un cálculo. Y si alguna respuesta tarda más de una semana o llega llena de generalidades, ya tienes la cuarta señal de alerta gratis.
