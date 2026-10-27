@@ -245,3 +245,6 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 <!-- auto:elegir-agencia-meta-ads-d2c-espana -->
 - [Cómo elegir una agencia de Meta Ads D2C en España](https://www.daybydayconsulting.com/blog/elegir-agencia-meta-ads-d2c-espana.html) — Guía operativa para elegir una agencia de Meta Ads siendo una marca D2C en España: los 5 filtros (especialización D2C, casos con cifras, modelo de contrato, tracking y reporting, chemistry de working 
 <!-- /auto -->
+<!-- auto:elegir-agencia-meta-ads-precios-guia -->
+- [Cómo elegir agencia de Meta Ads: precios y filtros](https://www.daybydayconsulting.com/blog/elegir-agencia-meta-ads-precios-guia.html) — Guía de decisión para elegir agencia de Meta Ads si tienes una marca D2C: precios reales por modelo (freelance, boutique, gran agencia), qué esperar el primer trimestre, qué vale el badge de Meta Busi
+<!-- /auto -->
