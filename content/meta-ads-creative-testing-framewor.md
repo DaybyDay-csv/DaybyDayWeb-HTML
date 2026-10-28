@@ -92,3 +92,30 @@ Resultado típico: de 6 creativos, 1 supera a las actuales, 2 quedan en empate t
 
 El ahorro viene de matar rápido. Un creativo perdedor con 25€ de gasto y cero compras se apaga. Dejarlo 3 días más son 75€ tirados por variante. Con 15 variantes al mes, son más de 1.000€ de diferencia.
 
+## Plantilla de lectura de resultados a los 3 días
+
+El día 3 de cada test sacas un dato: CTR por impresión. Si la creatividad lleva menos de 1,2% de CTR, corta. Si supera el 1,8%, la pasas a la fase de presupuesto. Entre medias, dale 48 horas más.
+
+Anota también el coste por click. En ecommerce de moda, un CPC por encima de 0,80€ en cold traffic suele indicar un hook flojo. En suplementos ese umbral sube a 1,10€. Cada categoría tiene su número, y lo construyes con tus propios datos tras 3-4 tests.
+
+Guarda cada resultado en una hoja simple: fecha, formato, hook, ángulo, CTR, CPC y decisión. Sin esta hoja, al mes siguiente repites tests que ya perdiste.
+
+## Cómo iterar una creatividad ganadora sin matarla
+
+El error típico es dejar de trabajar la ganadora. La ganadora del test es la base, no el final. Cada 10-14 días lanza una variante que cambie solo el elemento de mayor impacto: el hook de los primeros 3 segundos.
+
+En el caso del ecommerce de moda de 15.000€/mes, la ganadora original era un UGC con probador. Las iteraciones que funcionaron: mismo vídeo con hook de "me lo puse 3 días seguidos" en vez de "unboxing". CTR de 1,4% a 2,1%. Mismo ángulo, mismo producto, solo cambio de entrada.
+
+Regla práctica: una iteración por semana. Si la iteración gana, se convierte en la nueva base. Si pierde dos veces seguidas, el ángulo está saturado y toca buscar otro.
+
+## Checklist antes de lanzar cualquier test
+
+Revisa estos cinco puntos antes de subir la campaña:
+
+- Un solo cambio por creatividad. Si alteras hook y oferta, no sabes qué movió la aguja.
+- Nombre de ad con convención: fecha, formato, hook. Ejemplo: 20250116-ugc-hook3seg.
+- Presupuesto mínimo de 15€ por ad y día durante 3 días antes de leer nada.
+- Píxel y eventos verificados con el Test Events de Meta. Un Purchase Event roto invalida el test entero.
+- Los 4-6 anuncios dentro del mismo ad set. Si los repartes en audiencias distintas, comparas churros con merluza.
+
+Este checklist te ahorra los dos fallos más caros: leer datos prematuros y comparar resultados incomparables. Léelo cada vez, aunque lleves 50 tests. Los founders con más volumen son los que más errores de baba cometen por saltarse pasos.
