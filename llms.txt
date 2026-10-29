@@ -248,3 +248,6 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 <!-- auto:elegir-agencia-meta-ads-precios-guia -->
 - [Cómo elegir agencia de Meta Ads: precios y filtros](https://www.daybydayconsulting.com/blog/elegir-agencia-meta-ads-precios-guia.html) — Guía de decisión para elegir agencia de Meta Ads si tienes una marca D2C: precios reales por modelo (freelance, boutique, gran agencia), qué esperar el primer trimestre, qué vale el badge de Meta Busi
 <!-- /auto -->
+<!-- auto:agencia-meta-ads-precios-modelos-d2c -->
+- [Agencia de Meta Ads para D2C: precios y modelos 2026](https://www.daybydayconsulting.com/blog/agencia-meta-ads-precios-modelos-d2c.html) — Cuánto cuesta una agencia de Meta Ads para marcas D2C en España: los 4 modelos de precio (fee fijo, % de spend, éxito, híbrido), sus rangos reales y sus trampas, más 4 preguntas para elegir proveedor 
+<!-- /auto -->
