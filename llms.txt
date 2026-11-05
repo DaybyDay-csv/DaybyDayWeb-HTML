@@ -81,6 +81,8 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 - [Agentic AI](https://www.daybydayconsulting.com/agentic-ai.html) — Agentes Azure OpenAI / GPT con SDD ad-hoc, RAG sobre documentación, integración en workflow real.
 - [Growth Strategy](https://www.daybydayconsulting.com/growth-strategy.html) — Unit economics, mix de canales, pricing y roadmap de escala.
 
+- [Logistics](https://www.daybydayconsulting.com/logistics) — Fulfillment para marketplaces: Mirakl + OneTime + ERPNext, nave en Ventorro del Cano, respaldo a Garett en El Corte Inglés.
+
 ## Voz y tono
 
 - Tuteo directo (tú).
@@ -119,6 +121,7 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 - [Problema](https://www.daybydayconsulting.com/problema.html) — tres bloqueos típicos del founder D2C.
 - [Cómo trabajamos](https://www.daybydayconsulting.com/como-trabajamos.html) — método, framework de 5 fases.
 - [Growth Partner](https://www.daybydayconsulting.com/growth-partner.html) — modelo y diferencial.
+- [Logistics](https://www.daybydayconsulting.com/logistics) — fulfillment para marketplaces con Mirakl, OneTime y ERPNext.
 - [Casos](https://www.daybydayconsulting.com/resultados.html) — tres mandatos públicos en detalle.
 - [Servicios](https://www.daybydayconsulting.com/servicios.html) — stack completo.
 - [Blog](https://www.daybydayconsulting.com/blog.html) — 134 artículos de growth marketing.

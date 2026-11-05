@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" data-mood="default">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Logistics — Fulfillment para marketplaces · DaybyDay Consulting</title>
+  <meta name="description" content="DaybyDay Logistics: recepción de pedidos de Mirakl, etiquetado automático, picking, packaging y shipping con OneTime. Especialistas en El Corte Inglés, con ERPNext personalizado por cliente.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.daybydayconsulting.com/logistics">
+  <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/logistics">
+  <link rel="alternate" hreflang="x-default" href="https://www.daybydayconsulting.com/logistics">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/modern.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <style>
+    /* Logo de marca: swap light/dark según data-theme (toggles main.js) */
+    .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; }
+    .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
+    [data-theme="dark"] .logo-ink { display: none; }
+    [data-theme="light"] .logo-blue { display: none; }
+    /* Fila de marcas (chips sin enlace) */
+    .brand-row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.75rem; }
+    .brand-row .stack-pill { cursor: default; }
+    .brand-row .stack-pill:hover { color: inherit; }
+    /* Enlace al caso dentro de prosa */
+    .prose a { color: var(--text-primary); text-decoration: underline; text-underline-offset: 3px; }
+    .prose a:hover { color: var(--accent, var(--ink-blue, #3B82F6)); }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="pencil-rough" x="-5%" y="-15%" width="110%" height="130%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="3" seed="3" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6"/>
+      </filter>
+      <filter id="pencil-rough-2" x="-5%" y="-15%" width="110%" height="130%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" seed="17" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="3"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <a href="#main" class="skip-link">Saltar al contenido principal</a>
+<nav class="main-nav">
+    <a href="/" class="nav-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="34" height="34" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="34" height="34" alt="">DaybyDay</a>
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-btn">Lo que cubre</button>
+          <div class="nav-dropdown-content mega">
+            <div class="mega-grid" style="grid-template-columns:repeat(3,1fr);">
+              <div class="mega-section">
+                <div class="mega-section-title">Áreas</div>
+                <a href="/lo-que-cubre.html#paid-media">Paid media</a>
+                <a href="/lo-que-cubre.html#tracking">Tracking &amp; Analytics</a>
+                <a href="/lo-que-cubre.html#automation">Automation</a>
+                <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
+                <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+              </div>
+              <div class="mega-section">
+                <div class="mega-section-title">Servicios</div>
+                <a href="/meta-ads.html">Meta Ads</a>
+                <a href="/google-ads.html">Google Ads</a>
+                <a href="/tiktok-ads.html">TikTok Ads</a>
+                <a href="/linkedin-ads.html">LinkedIn Ads</a>
+                <a href="/automatizacion.html">Automatización</a>
+                <a href="/analytics.html">Analytics</a>
+                <a href="/agentic-ai.html">Agentic AI</a>
+                <a href="/growth-strategy.html">Growth Strategy</a>
+                <a href="/logistics">Logistics</a>
+              </div>
+              <div class="mega-section">
+                <div class="mega-section-title">Stack</div>
+                <a href="/tech/ga4.html">GA4</a>
+                <a href="/tech/gtm.html">GTM</a>
+                <a href="/tech/gsc.html">Search Console</a>
+                <a href="/tech/capi.html">CAPI</a>
+                <a href="/tech/n8n.html">n8n</a>
+                <a href="/tech/azure.html">Azure</a>
+                <a href="/tech/shopify.html">Shopify</a>
+                <a href="/tech/dsp.html">DSP</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="/como-trabajamos.html">Cómo trabajamos</a></li>
+        <li><a href="/casos/">Casos</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/tools/">Tools</a></li>
+        <li><a href="/contacto.html" class="nav-cta">Pedir auditoría</a></li>
+      </ul>
+      <button class="theme-toggle-btn" aria-label="Cambiar tema" title="Cambiar tema">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      </button>
+      <button class="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main" class="page-wrapper">
+
+    <section class="hero hero-centered" style="padding-bottom:2rem;">
+      <div class="container">
+        <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83"/></svg>Logística · Fulfillment</div>
+        <h1 class="h2-serif">Tu operación de marketplace, de la orden a la entrega.</h1>
+        <p class="subtitle">DaybyDay Logistics — recepción de pedidos, etiquetado, picking, packaging y shipping con OneTime. Especialistas en Mirakl y en el estándar de El Corte Inglés.</p>
+        <span class="lead-by"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg> Lo opero yo. La nave de Ventorro del Cano es la base física; encima, la capa tecnológica que automatiza envíos, tracking, devoluciones y gestión — la misma con la que respaldamos a Garett en El Corte Inglés.</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header"><div class="section-tag">01 — Qué hacemos</div><h2 class="h2-serif">De qué nos encargamos</h2></div>
+        <div class="prose">
+          <p>Recibimos los pedidos online, preparamos cada paquete en la nave y lo entregamos a nuestro partner de transporte. Todo el papeleo — estados, seguimiento, devoluciones, inventario — se actualiza solo.</p>
+          <ul>
+            <li>Recepción automática de los pedidos de Mirakl.</li>
+            <li>Impresión automática de etiquetas al preparar cada pedido.</li>
+            <li>Picking y packaging en la nave, con embalaje exterior neutro.</li>
+            <li>Envío diario con OneTime.</li>
+            <li>Estados automáticos: enviado, recibido y devoluciones, sin tocar nada.</li>
+            <li>Control de inventario y registro de incidencias.</li>
+          </ul>
+        </div>
+        <div class="not-block">
+          <strong>No es:</strong> un transportista. No es un plugin de marketplace. Es la operación física más la tecnología que la automatiza — un sistema que se construye una vez y se reutiliza con cada marca.
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-header"><div class="section-tag">02 — Cómo lo operamos</div><h2 class="h2-serif">Del pedido al entregado, sin fricción</h2></div>
+        <div class="process-list">
+          <div class="process-step"><div class="process-step-num voice-machine">01</div><div><h3>Pedido en Mirakl</h3><p>El pedido entra solo en nuestro sistema. Mirakl es la plataforma de marketplace que usan El Corte Inglés y otros grandes retailers europeos.</p></div></div>
+          <div class="process-step"><div class="process-step-num voice-machine">02</div><div><h3>Etiqueta impresa</h3><p>Al preparar el pedido, la etiqueta se imprime automáticamente. Sin copiar direcciones a mano.</p></div></div>
+          <div class="process-step"><div class="process-step-num voice-machine">03</div><div><h3>Picking y packaging</h3><p>Se recoge el producto, se embala con embalaje neutro y se deja listo para salir.</p></div></div>
+          <div class="process-step"><div class="process-step-num voice-machine">04</div><div><h3>OneTime</h3><p>Entrega diaria a nuestro partner de transporte. El envío se crea por API y su seguimiento vuelve solo.</p></div></div>
+          <div class="process-step"><div class="process-step-num voice-machine">05</div><div><h3>Estados y devoluciones</h3><p>Enviado, recibido, devolución: cada cambio se actualiza automáticamente en el marketplace. Nosotros vemos todo en una sola pantalla.</p></div></div>
+        </div>
+        <div class="parte-caja" style="max-width:560px;margin:3rem auto 0;">
+          <div class="parte-caja-head">PARTE DE CAJA — FULFILLMENT</div>
+          <div class="parte-caja-row"><span>MARKETPLACE</span><span class="voice-machine">MIRAKL</span></div>
+          <div class="parte-caja-row"><span>TRANSPORTE</span><span class="voice-machine">ONETIME</span></div>
+          <div class="parte-caja-row"><span>SISTEMA</span><span class="voice-machine">ERPNEXT</span></div>
+          <div class="parte-caja-row"><span>NAVE</span><span class="voice-machine">VENTORRO DEL CANO</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header"><div class="section-tag">03 — La tecnología</div><h2 class="h2-serif">Las piezas que juntamos</h2></div>
+        <div class="prose">
+          <p>Especialistas en la API de Mirakl: pedidos, stock, etiquetas, reembolsos y mensajes. OneTime como partner de envíos: creamos la expedición y recibimos cada estado por API, sin tocar un papel. Y todo vive en ERPNext, el ERP que personalizamos para cada cliente — pedidos, inventario y expediciones en una sola plataforma.</p>
+          <p>El sistema se construye una vez y se reutiliza: cada marca nueva se incorpora sin multiplicar el trabajo manual.</p>
+        </div>
+        <div class="brand-row">
+          <span class="stack-pill voice-machine">Mirakl</span>
+          <span class="stack-pill voice-machine">El Corte Inglés</span>
+          <span class="stack-pill voice-machine">OneTime</span>
+          <span class="stack-pill voice-machine">ERPNext</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header"><div class="section-tag">04 — Con quién lo hemos hecho</div><h2 class="h2-serif">Confianza probada</h2></div>
+        <div class="prose">
+          <p>Garett vende hoy en El Corte Inglés. Nosotros respaldamos la integración con el marketplace y el fulfillment de su operación.</p>
+          <p>La parte de publicidad es otro capítulo — el caso completo, con números, está <a href="/casos/garett">aquí</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-box">
+          <h2 class="h2-serif">Hablemos de tu operación</h2>
+          <p>Cuéntanos dónde vendes y cuántos pedidos mueves. Te decimos cómo encaja el sistema — y qué queda por construir.</p>
+          <div class="hero-cta" style="justify-content:center;">
+            <a href="/contacto.html" class="cta-primary">Hablar con DaybyDay<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <div class="note-strip" aria-label="Notas de cómo trabajamos">
+              <div class="post-it" style="--tilt:-2.5deg;">Un sistema, varias marcas: se construye una vez.</div>
+              <div class="post-it" style="--tilt:1.5deg;">Primero se mide, luego se escala.</div>
+              <div class="post-it" style="--tilt:-1deg;">Operativa diaria en Ventorro del Cano.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container"><div class="footer-inner"><div><div class="footer-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="22" height="22" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="22" height="22" alt="">DaybyDay Consulting · Madrid</div><p class="voice-human" style="font-style:italic;margin-top:0.5rem;">El crecimiento, día a día.</p></div><div class="footer-links"><a href="/problema.html">Problema</a><a href="/como-trabajamos.html">Cómo trabajamos</a><a href="/growth-partner.html">Growth Partner</a><a href="/logistics">Logistics</a><a href="/casos/">Casos</a><a href="/blog.html">Blog</a><a href="/contacto.html">Pedir auditoría</a></div></div><div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;"><p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Política de privacidad</a> · <a href="/cookies.html">Política de cookies</a> · <a href="/terminos.html">Términos</a></p>
+        <p class="footer-copy">© 2026 DayByDay Consulting · analizamos · ejecutamos · acompañamos</p></div></div></footer>
+  <script src="/js/main.js"></script>
+</body>
+</html>
