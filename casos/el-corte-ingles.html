@@ -53,6 +53,13 @@
     .caso-prosa strong { color: var(--text-primary); }
     /* Parte de caja */
     .caso-ticket { padding: 1.5rem; border-radius: 8px; margin-top: 2rem; }
+    /* Chip del logo de cliente: mismo tratamiento que el logo wall de /logistics */
+    :root { --logo-chip-bg: #FAF8F3; }
+    .caso-logo-chip {
+      display: flex; width: max-content; align-items: center; margin-bottom: 1.75rem;
+      background: var(--logo-chip-bg, var(--paper)); padding: 0.7rem 1rem; border-radius: 10px;
+    }
+    .caso-logo-chip img { height: 64px; width: auto; display: block; }
     .caso-honesto { max-width: 660px; margin: 1.5rem 0 0; font-size: 0.95rem; line-height: 1.7; color: var(--text-muted); }
     @media (max-width: 640px) {
       .caso-barra { grid-template-columns: 1fr; }
@@ -155,7 +162,7 @@
 
     <header class="caso-hero">
       <div class="container">
-        <div style="margin-bottom:1.75rem;"><span style="display:inline-flex;align-items:center;background:#fff;padding:0.7rem 1rem;border-radius:10px;"><img src="/img/logistics/eci-logo.png" alt="El Corte Inglés" style="height:64px;width:auto;display:block;"></span></div>
+        <div class="caso-logo-chip"><img src="/img/logistics/eci-logo.png" alt="El Corte Inglés"></div>
         <span class="section-tag">Histórico · Marketplace fulfillment</span>
         <h1 class="caso-h1">El Corte Inglés.</h1>
         <p class="caso-sub voice-machine">Garett, Marketplace, Fulfillment end to end</p>
