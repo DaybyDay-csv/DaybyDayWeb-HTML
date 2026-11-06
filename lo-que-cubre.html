@@ -16,6 +16,15 @@
   <link rel="stylesheet" href="/css/modern.css">
   <link rel="stylesheet" href="/css/pages.css">
   <style>
+/* Hallmark · v2.0.0 · redesign full · lo-que-cubre.html · theme: DaybyDay brand (locked BRAND-SPEC: Inter display, Source Serif humano, papel/tinta, acento #3B82F6) · genre editorial · shape: areas (hero + 5 area-blocks + parte de caja + CTA) · signature: cinco áreas numeradas que cierran en una parte de caja · imagery: sin fotos · entry: hero izquierdo + breadcrumb · nav: mega heredado · footer: heredado · waived: 54+19 section-tag con raya (el eyebrow numerado "01 — X" es sistema Brand-SPEC bloqueado), 58 densidad de copy por WARN */
+/* answered: 26a focus ring accent en enlaces y botones; 33 svg de flecha CTA con aria-hidden; 34 overflow-x clip */
+    /* ===== Overrides de Floor para esta página ===== */
+    html, body { overflow-x: clip; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px;
+    }
+    .cta-primary:active, .btn-sketch:active { transform: scale(0.97); }
+    .cta-primary:disabled, .btn-sketch:disabled { opacity: 0.5; cursor: not-allowed; }
     /* Logo de marca: swap light/dark según data-theme (toggles main.js) */
     .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; }
     .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
@@ -53,7 +62,7 @@
                 <a href="/lo-que-cubre.html#automation">Automation</a>
                 <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
                 <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
-                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo</a>
               </div>
               <div class="mega-section">
                 <div class="mega-section-title">Servicios</div>
@@ -133,7 +142,7 @@
       <div class="container">
         <h1 class="wordmark" style="font-size:clamp(2.5rem,5.5vw,3.75rem);">Lo que cubre</h1>
         <p class="lead" style="margin-top:1rem;">
-          Cada negocio necesita algo distinto. Estas son las cinco cosas que sé hacer bien. Cuando entro a trabajar contigo, elijo solo lo que va a mover el negocio. No te vendo todo el menú.
+          Cada negocio es distinto. Elijo solo lo que mueve caja.
         </p>
         <span class="hand-note" aria-hidden="true" style="margin-top:1.5rem;">cinco cosas, ni una más ↓</span>
       </div>
@@ -211,7 +220,7 @@
           <div>
             <div class="area-desc">
               <p>Tu tienda, tu lista de clientes, tu WhatsApp, tu email, tu logística. Hablándose entre sí, sin que tu equipo tenga que copiar datos a mano.</p>
-              <p>Diseño cada flujo a medida: pedidos, carritos abandonados, post-venta, soporte, inventario. Sin plantillas. Y cuando lo que falta no es un flujo sino un sistema entero — un portal de producción de contenido, una línea editorial que opera sola — lo construyo de arriba abajo. Si en seis meses quieres llevarlo tú mismo, te dejo todo documentado y a tu equipo formado.</p>
+              <p>Diseño cada flujo a medida: pedidos, carritos abandonados, post-venta, soporte, inventario. Sin plantillas. Y cuando lo que falta no es un flujo sino un sistema entero (un portal de producción de contenido, una línea editorial que opera sola), lo construyo de arriba abajo. Si en seis meses quieres llevarlo tú mismo, te dejo todo documentado y a tu equipo formado.</p>
             </div>
             <div class="paper-grid" style="padding:1.25rem 1.5rem 1.5rem;margin-top:0.25rem;">
               <div class="area-stack-label" style="margin-top:0;">Herramientas</div>
@@ -294,7 +303,7 @@
     <section class="section" style="padding-top:0;">
       <div class="container">
         <div class="parte-caja" style="max-width:640px;margin:0 auto;">
-          <div class="parte-caja-head">PARTE DE CAJA — LO QUE CUBRE</div>
+          <div class="parte-caja-head">PARTE DE CAJA: LO QUE CUBRE</div>
           <div class="parte-caja-row"><span>PAID MEDIA</span><span class="voice-machine">01</span></div>
           <div class="parte-caja-row"><span>TRACKING &amp; ANALYTICS</span><span class="voice-machine">02</span></div>
           <div class="parte-caja-row"><span>AUTOMATION</span><span class="voice-machine">03</span></div>
@@ -310,13 +319,13 @@
         <div class="cta-box">
           <div class="section-tag">06 — Empieza por una prueba</div>
           <h2 class="h2-serif">Pedir auditoría</h2>
-          <p>Auditoría de tu cuenta y tu funnel: el piloto cero. <span class="voice-machine">30 minutos</span>, gratis, conmigo. Traes acceso a tu cuenta de ads y a tu CRM — nada más. Sales con tres palancas accionables y una forma de medir si tienen efecto. Si encajamos, seguimos. Si no, las palancas te las llevas igual.</p>
+          <p>Auditoría de tu cuenta y tu funnel: el piloto cero. <span class="voice-machine">30 minutos</span>, gratis, conmigo. Traes acceso a tu cuenta de ads y a tu CRM, nada más. Sales con tres palancas accionables y una forma de medir si tienen efecto. Si encajamos, seguimos. Si no, las palancas te las llevas igual.</p>
           <div class="hero-cta" style="justify-content:center;">
-            <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             <a href="/como-trabajamos.html" class="btn-sketch sketch-hover" style="margin-left:.75rem;">Cómo trabajamos<svg class="sketch-circle" viewBox="0 0 200 64" preserveAspectRatio="none" aria-hidden="true"><path pathLength="100" d="M100,6 C156,3 193,14 192,31 C191,49 152,59 97,58 C43,57 8,50 8,31 C8,15 34,8 88,7 C142,6 178,14 186,26"/></svg></a>
             <div class="note-strip" aria-label="Notas de cómo trabajo">
               <div class="post-it" style="--tilt:-2.5deg;">Sin preparación previa: traes accesos y ya está.</div>
-              <div class="post-it" style="--tilt:1.5deg;">Sales con tres palancas — <span class="pin-mark">te las llevas igual.</span></div>
+              <div class="post-it" style="--tilt:1.5deg;">Sales con tres palancas: <span class="pin-mark">te las llevas igual.</span></div>
               <div class="post-it" style="--tilt:-1deg;">Si no encajamos, no pasa nada. De verdad.</div>
             </div>
           </div>
@@ -343,7 +352,7 @@
         </div>
       </div>
       <div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;">
-        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Política de privacidad</a> · <a href="/cookies.html">Política de cookies</a> · <a href="/terminos.html">Términos</a></p>
+        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> <a href="/privacidad.html">Política de privacidad</a> <a href="/cookies.html">Política de cookies</a> <a href="/terminos.html">Términos</a></p>
         <p class="footer-copy">© 2026 DaybyDay Consulting · Madrid</p>
       </div>
     </div>

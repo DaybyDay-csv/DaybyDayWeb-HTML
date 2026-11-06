@@ -18,6 +18,17 @@
   <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 
   <style>
+/* Hallmark · v2.0.0 · redesign full · tools/index.html · theme: DaybyDay brand (locked BRAND-SPEC: Inter display, Source Serif humano, IBM Plex Mono en cifras, acento azul) · genre editorial · shape: directorio de tools (hero corto + grid de 4 tarjetas + punto de inserción) · signature: tarjetas de borde punteado que se levantan al hover · imagery: ninguna, solo tipografía · entry: hero stage centrado · nav: mega heredado con Tools activo · footer: heredado · waived: R1 (Inter es la display de marca, BRAND-SPEC bloqueado) */
+/* crítica: el índice de tools ya era limpio; bajo las etiquetas de tipo a cuerpo de frase y completo los estados interactivos */
+/* answered: 26b active en tarjetas y botones, disabled en botones; svg decorativos del toggle con aria-hidden */
+    /* ===== Overrides de Floor ===== */
+    html, body { overflow-x: clip; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent, #3B82F6); outline-offset: 2px; border-radius: 4px;
+    }
+    button:active { opacity: 0.7; }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+
     /* Logo de marca: swap light/dark según data-theme (toggles main.js) */
     .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; }
     .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
@@ -33,18 +44,17 @@
       font-size: clamp(2.6rem, 5vw, 3.6rem);
       line-height: 1.08;
       margin: 0.75rem 0 0.5rem;
+      text-wrap: balance;
     }
 
-    /* Línea mono bajo el H1 */
+    /* Línea de entrada bajo el H1 */
     .tools-intro-line {
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
+      font-size: 0.85rem;
       color: var(--text-muted);
       margin: 0 0 1rem;
     }
 
-    /* Grid de tools — tarjetas del sistema */
+    /* Grid de tools: tarjetas del sistema */
     .tools-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -63,12 +73,11 @@
       border-color: color-mix(in srgb, var(--ink) 55%, transparent);
       box-shadow: 0 14px 30px -12px var(--shadow);
     }
-    .tool-card-tag {
+    .tool-card:active { transform: translateY(-1px); }
+    .tool-card-type {
       display: inline-block;
-      font-size: 0.72rem;
+      font-size: 0.8rem;
       font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.13em;
       color: var(--ink-blue);
       border-bottom: 1px solid color-mix(in srgb, var(--ink) 30%, transparent);
       padding-bottom: 4px;
@@ -81,6 +90,7 @@
       line-height: 1.25;
       color: var(--text-primary);
       margin: 0 0 0.6rem;
+      text-wrap: balance;
     }
     .tool-card p {
       font-size: 0.95rem;
@@ -95,7 +105,7 @@
       color: var(--ink-blue);
     }
     @media (prefers-reduced-motion: reduce) {
-      .tool-card, .tool-card:hover { transform: none; transition: none; }
+      .tool-card, .tool-card:hover, .tool-card:active { transform: none; transition: none; }
     }
   </style>
 </head>

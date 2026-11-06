@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>El caso que no puedo contar. — Universidad privada (NDA) · Casos · DaybyDay Consulting</title>
+  <title>El caso que no puedo contar (Universidad privada, NDA) · Casos · DaybyDay Consulting</title>
   <meta name="description" content="Lead gen high-ticket para una universidad privada (NDA): 193.829 € gestionados, 711 creatividades y 1.980 leads en el último año completo reportado, con atribución real en el CRM del cliente.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.daybydayconsulting.com/casos/universidad">
@@ -16,13 +16,20 @@
   <link rel="stylesheet" href="/css/modern.css">
   <link rel="stylesheet" href="/css/pages.css">
   <style>
+/* Hallmark · v2.0.0 · redesign full · casos/universidad.html · theme: DaybyDay brand (locked BRAND-SPEC: Inter display, Source Serif humano, papel/tinta, acento #3B82F6) · genre: caso anónimo (NDA) · shape: dossier (barra + hero + 4 bloques narrativos + parte de caja + CTA) · signature: el caso que no se puede contar, contado en bloques con parte de caja en mono · imagery: papel y tinta, cero fotos por NDA · entry: barra de caso + hero · nav: mega heredado · footer: heredado · waived: 54 section-tag (sistema Brand-SPEC) */
+/* crítica: P4 H5 E4 S4 R4 V5 · lo más flojo: S, el NDA impide prueba visual; lo compensan las cifras exactas del informe de cierre */
+/* answered: 26b estados :active/:disabled en los controles de la página; 33 svg decorativos con aria-hidden */
+    /* ===== Overrides de Floor ===== */
+    html, body { overflow-x: clip; }
+    .cta-primary:active, .btn-sketch:active, .theme-toggle-btn:active, .mobile-menu-btn:active, .nav-dropdown-btn:active { transform: scale(0.97); }
+    .cta-primary:disabled, .btn-sketch:disabled, .theme-toggle-btn:disabled, .mobile-menu-btn:disabled, .nav-dropdown-btn:disabled { opacity: 0.5; cursor: not-allowed; }
     /* Logo de marca: swap light/dark según data-theme (toggles main.js) */
     .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; }
     .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
     [data-theme="dark"] .logo-ink { display: none; }
     [data-theme="light"] .logo-blue { display: none; }
     /* Barra de caso */
-    .caso-barra { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 1rem; padding: 1.1rem 0; border-bottom: 1px solid var(--border); font-family: var(--font-machine); font-variant-numeric: tabular-nums; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; }
+    .caso-barra { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 1rem; padding: 1.1rem 0; border-bottom: 1px solid var(--border); font-family: var(--font-machine); font-variant-numeric: tabular-nums; font-size: 0.7rem; }
     .caso-barra a { color: var(--text-secondary); text-decoration: none; }
     .caso-barra a:hover, .caso-barra a:focus-visible { color: var(--text-primary); }
     .caso-barra-titulo { text-align: center; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -30,12 +37,12 @@
     .caso-hero { padding: 4.5rem 0 3.75rem; }
     .caso-hero .container { max-width: 820px; }
     .caso-hero .section-tag { margin-bottom: 1.75rem; }
-    .caso-h1 { font-family: var(--font-human); font-weight: 600; font-size: clamp(2.6rem, 6.5vw, 4.4rem); line-height: 1.05; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
-    .caso-sub { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-muted); margin: 0; }
+    .caso-h1 { font-family: var(--font-human); font-weight: 600; font-size: clamp(2.6rem, 6.5vw, 4.4rem); line-height: 1.05; letter-spacing: -0.02em; margin: 0 0 1.25rem; text-wrap: balance; }
+    .caso-sub { font-size: 0.75rem; color: var(--text-muted); margin: 0; }
     /* Bloques narrativos */
     .caso-bloque { border-top: 1px solid color-mix(in srgb, var(--ink) 18%, transparent); padding: 3.25rem 0 3.5rem; }
     .caso-bloque .container { max-width: 820px; }
-    .caso-bloque h2 { margin: 0 0 1.15rem; }
+    .caso-bloque h2 { margin: 0 0 1.15rem; text-wrap: balance; }
     .caso-prosa { max-width: 660px; font-size: 1.0625rem; line-height: 1.75; color: var(--text-secondary); margin: 0 0 1rem; }
     .caso-prosa:last-child { margin-bottom: 0; }
     .caso-prosa strong { color: var(--text-primary); }
@@ -79,7 +86,7 @@
                 <a href="/lo-que-cubre.html#automation">Automation</a>
                 <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
                 <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
-                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo</a>
               </div>
               <div class="mega-section">
                 <div class="mega-section-title">Servicios</div>
@@ -136,7 +143,7 @@
     <div class="container">
       <div class="caso-barra">
         <a href="/casos/">← Todos los casos</a>
-        <span class="caso-barra-titulo">El caso que no puedo contar. — Universidad privada (NDA)</span>
+        <span class="caso-barra-titulo">El caso que no puedo contar (Universidad privada, NDA)</span>
         <span aria-hidden="true"></span>
       </div>
     </div>
@@ -153,7 +160,7 @@
       <div class="container">
         <span class="section-tag">01</span>
         <h2 class="h2-serif">La situación</h2>
-        <p class="caso-prosa">Una universidad privada grande — el NDA no me deja decir cuál ni quién operaba. Más de <span class="voice-machine">30</span> programas de postgrado compitiendo por los mismos alumnos. El lead valía mucho; el gasto también.</p>
+        <p class="caso-prosa">Una universidad privada grande: el NDA no me deja decir cuál ni quién operaba. Más de <span class="voice-machine">30</span> programas de postgrado compitiendo por los mismos alumnos. El lead valía mucho; el gasto también.</p>
       </div>
     </section>
 
@@ -161,7 +168,7 @@
       <div class="container">
         <span class="section-tag">02</span>
         <h2 class="h2-serif">El objetivo</h2>
-        <p class="caso-prosa">Captación multicanal con atribución real en su CRM — no en el dashboard de la plataforma.</p>
+        <p class="caso-prosa">Captación multicanal con atribución real en su CRM, no en el dashboard de la plataforma.</p>
       </div>
     </section>
 
@@ -169,7 +176,7 @@
       <div class="container">
         <span class="section-tag">03</span>
         <h2 class="h2-serif">Qué hicimos</h2>
-        <p class="caso-prosa">Meta + Google operados contra el CRM del cliente. <span class="voice-machine">711</span> creatividades. Landings por programa. Reporting de cierre anual con presupuestos y leads por facultad — la cultura del dato antes de cualquier optimización.</p>
+        <p class="caso-prosa">Meta + Google operados contra el CRM del cliente. <span class="voice-machine">711</span> creatividades. Landings por programa. Reporting de cierre anual con presupuestos y leads por facultad: la cultura del dato antes de cualquier optimización.</p>
       </div>
     </section>
 
@@ -180,7 +187,7 @@
         <div class="paper-grid caso-ticket">
           <div class="parte-caja">
             <div class="parte-caja-head" style="display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;">
-              <span>Parte de caja — Universidad (NDA)</span>
+              <span>Parte de caja: Universidad (NDA)</span>
               <span class="stamp stamp-go">GO</span>
             </div>
             <div class="parte-caja-row"><span>Gestionados</span><span>193.829 €</span></div>
@@ -200,14 +207,14 @@
         <div class="cta-box">
           <div class="section-tag">05 — Empieza por una prueba</div>
           <h2 class="h2-serif">Pedir auditoría</h2>
-          <p>30 minutos conmigo. Gratis. Sales con tres palancas concretas — te las llevas igual aunque no trabajemos juntos. Es el piloto cero: si los números te convencen, hablamos de montarlo.</p>
+          <p>30 minutos conmigo. Gratis. Sales con tres palancas concretas: te las llevas igual aunque no trabajemos juntos. Es el piloto cero: si los números te convencen, hablamos de montarlo.</p>
           <div class="hero-cta" style="justify-content:center;">
-            <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             <a href="/como-trabajamos.html" class="btn-sketch sketch-hover" style="margin-left:.75rem;">Cómo trabajamos<svg class="sketch-circle" viewBox="0 0 200 64" preserveAspectRatio="none" aria-hidden="true"><path pathLength="100" d="M100,6 C156,3 193,14 192,31 C191,49 152,59 97,58 C43,57 8,50 8,31 C8,15 34,8 88,7 C142,6 178,14 186,26"/></svg></a>
           </div>
           <div class="note-strip" aria-label="Notas de cómo trabajo">
             <div class="post-it" style="--tilt:-2.5deg;">Sin preparación previa: traes accesos y ya está.</div>
-            <div class="post-it" style="--tilt:1.5deg;">Sales con tres palancas — <span class="pin-mark">te las llevas igual.</span></div>
+            <div class="post-it" style="--tilt:1.5deg;">Sales con tres palancas, <span class="pin-mark">te las llevas igual.</span></div>
             <div class="post-it" style="--tilt:-1deg;">Si no encajamos, no pasa nada. De verdad.</div>
           </div>
         </div>
@@ -233,8 +240,8 @@
         </div>
       </div>
       <div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;">
-        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Política de privacidad</a> · <a href="/cookies.html">Política de cookies</a> · <a href="/terminos.html">Términos</a></p>
-        <p class="footer-copy">© 2026 DaybyDay Consulting · Madrid</p>
+        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> <a href="/privacidad.html">Política de privacidad</a> <a href="/cookies.html">Política de cookies</a> <a href="/terminos.html">Términos</a></p>
+        <p class="footer-copy">© 2026 DayByDay Consulting. Analizamos, ejecutamos, acompañamos.</p>
       </div>
     </div>
   </footer>

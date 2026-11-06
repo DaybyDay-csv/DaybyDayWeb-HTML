@@ -16,6 +16,16 @@
   <link rel="stylesheet" href="/css/modern.css">
   <link rel="stylesheet" href="/css/pages.css">
   <style>
+/* Hallmark · v2.0.0 · redesign full · privacidad.html · theme: DaybyDay brand (locked BRAND-SPEC: Inter display, Source Serif humano, papel/tinta, acento #3B82F6) · genre legal document · shape: hero + prose legal (responsable, datos, bases legales, encargados, transferencias, plazos, derechos, seguridad) · signature: sin letra pequeña · imagery: sin fotos · entry: hero izquierdo + breadcrumb · nav: mega heredado · footer: heredado · waived: 58 densidad por WARN (documento legal, el texto RGPD no se recorta) */
+/* answered: 26a focus ring; 26b estados de interacción sin form controls en la página; 34 overflow-x clip */
+    /* ===== Overrides de Floor para esta página ===== */
+    html, body { overflow-x: clip; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px;
+    }
+    a:active { opacity: 0.85; }
+    button:active { transform: scale(0.97); }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
     /* Logo de marca: swap light/dark según data-theme (toggles main.js) */
     .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; }
     .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
@@ -53,7 +63,7 @@
                 <a href="/lo-que-cubre.html#automation">Automation</a>
                 <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
                 <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
-                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo</a>
               </div>
               <div class="mega-section">
                 <div class="mega-section-title">Servicios</div>
@@ -128,7 +138,7 @@
     <section class="hero-v5" style="padding-top:4.5rem;padding-bottom:2.5rem;">
       <div class="container">
         <h1 class="wordmark" style="font-size:clamp(2rem,4.5vw,3.25rem);">Política de privacidad</h1>
-        <p class="lead" style="margin-top:1rem;max-width:640px;">Sin letra pequeña: qué datos me das cuando me escribes, para qué los uso, quién más los ve y cómo los borras si quieres.</p>
+        <p class="lead" style="margin-top:1rem;max-width:640px;">Sin letra pequeña: tus datos, su uso y cómo borrarlos.</p>
         <span class="voice-machine" style="display:inline-block;margin-top:1.25rem;font-size:0.78rem;color:var(--text-muted);">Última actualización: 23/09/2026</span>
       </div>
     </section>
@@ -241,7 +251,7 @@
         </div>
       </div>
       <div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;">
-        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Política de privacidad</a> · <a href="/cookies.html">Política de cookies</a> · <a href="/terminos.html">Términos</a></p>
+        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> <a href="/privacidad.html">Política de privacidad</a> <a href="/cookies.html">Política de cookies</a> <a href="/terminos.html">Términos</a></p>
         <p class="footer-copy">© 2026 DaybyDay Consulting · Madrid</p>
       </div>
     </div>

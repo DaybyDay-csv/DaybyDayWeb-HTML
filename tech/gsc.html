@@ -10,7 +10,23 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css"><link rel="stylesheet" href="/css/sparkles.css"><link rel="stylesheet" href="/css/modern.css"><link rel="stylesheet" href="/css/pages.css">
-  <style>:root { --accent-color: #4285f4; } .hero-badge { background:#4285f41a; border:1px solid #4285f440; color:#4285f4; }</style>
+  <style>
+/* Hallmark · v2.0.0 · floor fix · tech/gsc.html · theme: DaybyDay brand (Inter display, Source Serif humano, IBM Plex Mono en cifras; acento Google blue propio de la ficha) · shape: ficha de stack (breadcrumb + hero + casos + features + stack + CTA) · waived: R1 (Inter es la display de marca, BRAND-SPEC bloqueado) */
+/* crítica: P4 H4 E3 S3 R3 V4 · lo más flojo: E, cae la píldora "Stack · SEO" (54); el contexto de stack lo da el breadcrumb y el h1 */
+/* answered: 26b sin formularios en la página, estados :active/:disabled de nav y CTA cubiertos; 33 todos los svg decorativos con aria-hidden */
+    :root { --accent-color: #4285f4; }
+    /* Overrides de Floor para esta página */
+    html, body { overflow-x: clip; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent-color, var(--accent)); outline-offset: 2px; border-radius: 4px;
+    }
+    /* Separadores del footer legal sin caracteres pegados */
+    .footer-legal { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; }
+    .footer-legal a { margin: 0; }
+    /* 26b: estados de control */
+    button:disabled, a[aria-disabled="true"] { opacity: 0.5; cursor: not-allowed; }
+    .cta-primary:active, button:active:not(:disabled) { transform: translateY(1px); }
+  </style>
 </head>
 <body>
   
@@ -29,7 +45,7 @@
                 <a href="/lo-que-cubre.html#automation">Automation</a>
                 <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
                 <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
-                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo</a>
               </div>
               <div class="mega-section">
                 <div class="mega-section-title">Servicios</div>
@@ -63,11 +79,11 @@
         <li><a href="/contacto.html" class="nav-cta">Pedir auditoría</a></li>
       </ul>
       <button class="theme-toggle-btn" aria-label="Cambiar tema" title="Cambiar tema">
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
       </button>
       <button class="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
       </button>
     </div>
   </nav>
@@ -102,17 +118,15 @@
 
     <section class="hero hero-centered" style="padding-bottom:2rem;">
       <div class="container">
-        <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>Stack · SEO</div>
         <h1 class="h2-serif">Google Search Console como input estratégico</h1>
-        <p class="subtitle">No es una herramienta SEO suelta. GSC bien leído te dice qué demanda capturada está pagando tu paid sin necesidad y qué queries deberían ir a SEO orgánico.</p>
-        <div class="verbs-row"><span class="verb-pill"><span class="dot"></span>analizamos</span><span class="verb-separator">·</span><span class="verb-pill"><span class="dot"></span>ejecutamos</span><span class="verb-separator">·</span><span class="verb-pill"><span class="dot"></span>acompañamos</span></div>
+        <p class="subtitle">GSC revela qué demanda pagas dos veces y qué va a SEO.</p>
+        <div class="verbs-row"><span class="verb-pill">analizamos</span><span class="verb-pill">ejecutamos</span><span class="verb-pill">acompañamos</span></div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <div class="section-tag">Para qué sirve</div>
           <h2 class="h2-serif">Para qué te sirve</h2>
         </div>
         <div class="usecases">
@@ -135,12 +149,12 @@
 
     <section class="section">
       <div class="container">
-        <div class="section-header"><div class="section-tag">Qué hacemos con GSC</div><h2 class="h2-serif">Cuatro lecturas que cambian decisiones de paid</h2></div>
+        <div class="section-header"><h2 class="h2-serif">Cuatro lecturas que cambian decisiones de paid</h2></div>
         <div class="features-grid">
-          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 21l-4.35-4.35"/><circle cx="11" cy="11" r="8"/></svg></div><h3>Cruce branded vs paid Google Ads</h3><p>Qué tráfico branded estás ganando ya en orgánico y duplicando con paid. Decisión inmediata sobre cuánto presupuesto reducir.</p></div>
-          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 3v18h18"/></svg></div><h3>Queries de oportunidad</h3><p>Posiciones 5–15 con CTR &gt;1%. Son páginas que con un empuje SEO pasan a primera página y dejan de necesitar paid.</p></div>
-          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Cobertura técnica</h3><p>Sitemaps, indexación de productos, errores 404, redirects rotos en migraciones. Lo básico que casi nadie revisa.</p></div>
-          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg></div><h3>Core Web Vitals</h3><p>LCP, INP y CLS sobre URLs reales. La velocidad afecta a Quality Score de Google Ads y a conversión en directo.</p></div>
+          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><path d="M21 21l-4.35-4.35"/><circle cx="11" cy="11" r="8"/></svg></div><h3>Cruce branded vs paid Google Ads</h3><p>Qué tráfico branded estás ganando ya en orgánico y duplicando con paid. Decisión inmediata sobre cuánto presupuesto reducir.</p></div>
+          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><path d="M3 3v18h18"/></svg></div><h3>Queries de oportunidad</h3><p>Posiciones 5 a 15 con CTR &gt;1%. Son páginas que con un empuje SEO pasan a primera página y dejan de necesitar paid.</p></div>
+          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Cobertura técnica</h3><p>Sitemaps, indexación de productos, errores 404, redirects rotos en migraciones. Lo básico que casi nadie revisa.</p></div>
+          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg></div><h3>Core Web Vitals</h3><p>LCP, INP y CLS sobre URLs reales. La velocidad afecta a Quality Score de Google Ads y a conversión en directo.</p></div>
         </div>
       </div>
     </section>
@@ -162,14 +176,14 @@
         <div class="cta-box">
           <h2 class="h2-serif">¿Auditoría rápida de tu Search Console?</h2>
           <p>Diagnóstico gratis de 30 min, conmigo.</p>
-          <div class="hero-cta" style="justify-content:center;"><a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+          <div class="hero-cta" style="justify-content:center;"><a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer"><div class="container"><div class="footer-inner"><div><div class="footer-logo">DaybyDay Consulting · Madrid</div><p class="voice-human" style="font-style:italic;margin-top:0.5rem;">El crecimiento, día a día.</p></div><div class="footer-links"><a href="/problema.html">Problema</a><a href="/como-trabajamos.html">Cómo trabajamos</a><a href="/growth-partner.html">Growth Partner</a><a href="/logistics">Logistics</a><a href="/casos/">Casos</a><a href="/blog.html">Blog</a><a href="/contacto.html">Pedir auditoría</a></div></div><div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;"><p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Política de privacidad</a> · <a href="/cookies.html">Política de cookies</a> · <a href="/terminos.html">Términos</a></p>
-        <p class="footer-copy">© 2026 DayByDay Consulting · analizamos · ejecutamos · acompañamos</p></div></div></footer>
+  <footer class="footer"><div class="container"><div class="footer-inner"><div><div class="footer-logo">DaybyDay Consulting · Madrid</div><p class="voice-human" style="font-style:italic;margin-top:0.5rem;">El crecimiento, día a día.</p></div><div class="footer-links"><a href="/problema.html">Problema</a><a href="/como-trabajamos.html">Cómo trabajamos</a><a href="/growth-partner.html">Growth Partner</a><a href="/logistics">Logistics</a><a href="/casos/">Casos</a><a href="/blog.html">Blog</a><a href="/contacto.html">Pedir auditoría</a></div></div><div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;"><p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> <a href="/privacidad.html">Política de privacidad</a> <a href="/cookies.html">Política de cookies</a> <a href="/terminos.html">Términos</a></p>
+        <p class="footer-copy">© 2026 DayByDay Consulting. Analizamos, ejecutamos, acompañamos.</p></div></div></footer>
   <script src="/js/main.js"></script>
 </body>
 </html>
