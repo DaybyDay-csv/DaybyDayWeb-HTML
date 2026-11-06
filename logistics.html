@@ -93,13 +93,9 @@
     }
     .lg-logo-chip:hover { transform: translateY(-2px); border-color: var(--logo-chip-border-hover); }
     .lg-logo-chip img { max-height: 34px; max-width: 132px; width: auto; object-fit: contain; }
-    /* ECI: lockup legible (triángulo oficial + nombre en serif de la casa) */
-    .lg-logo-chip.chip-eci { gap: 0.5rem; padding-right: 1.55rem; }
-    .lg-logo-chip.chip-eci img { max-height: 26px; width: auto; }
-    .lg-logo-chip .wm-eci {
-      font-family: var(--font-human); font-weight: 600; font-size: 0.97rem;
-      letter-spacing: -0.005em; color: var(--eci-ink); white-space: nowrap;
-    }
+    /* ECI: logo oficial (triángulo + wordmark), a tamaño que se lee */
+    .lg-logo-chip.chip-eci { padding: 0.5rem 0.9rem; }
+    .lg-logo-chip.chip-eci img { max-height: 46px; width: auto; max-width: 150px; }
     /* ERPNext: icono oficial + wordmark tipográfico */
     .lg-logo-chip.chip-erpnext { gap: 0.5rem; }
     .lg-logo-chip.chip-erpnext .wm {
@@ -228,6 +224,11 @@
     .footer-legal { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; }
     .footer-legal a { margin: 0; }
 
+    /* Logo dentro de un h2: hereda el aire del titular, no lo rompe */
+    .h2-con-logo { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.45rem 0.7rem; }
+    .h2-logo { height: 0.78em; width: auto; display: inline-block; }
+    [data-theme="dark"] .h2-logo { filter: brightness(0) invert(1); }
+
     /* Mobile: menos aire muerto entre secciones (en desktop el ritmo largo funciona; en
        pantalla de 390px solo obliga a scrollear sin información nueva) */
     @media (max-width: 640px) {
@@ -248,7 +249,8 @@
       .lg-logo-row { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.6rem; width: 100%; max-width: none; margin: 0; }
       .lg-logo-chip { box-sizing: border-box; width: 100%; height: 62px; padding: 0.9rem 1rem; }
       .lg-logo-chip img { max-height: 30px; max-width: 140px; }
-      .lg-logo-chip.chip-eci img { max-height: 24px; }
+      .lg-logo-chip.chip-eci { padding: 0.4rem 0.8rem; }
+      .lg-logo-chip.chip-eci img { max-height: 42px; max-width: 190px; }
       .lg-logo-chip .wm-eci { font-size: 1rem; }
       .lg-logo-chip.chip-erpnext .wm { font-size: 1rem; }
       .lg-logo-chip .chip-tag { display: none; }
@@ -341,10 +343,9 @@
         <p class="lg-logos-label">Las piezas con las que operamos</p>
         <div class="lg-logo-row">
           <div class="lg-logo-chip" title="Mirakl, software de marketplace"><img src="/img/logistics/mirakl.svg" alt="Mirakl"></div>
-          <div class="lg-logo-chip chip-eci" title="El Corte Inglés, marketplace"><img src="/img/logistics/eci-mark.svg" alt=""><span class="wm-eci">El Corte Inglés</span></div>
+          <div class="lg-logo-chip chip-eci" title="El Corte Inglés, marketplace"><img src="/img/logistics/eci-logo.png" alt="El Corte Inglés"></div>
           <div class="lg-logo-chip" title="OneTime, partner de transporte"><img src="/img/logistics/onetime.svg" alt="OneTime"></div>
           <div class="lg-logo-chip chip-erpnext" title="ERPNext, el ERP"><img src="/img/logistics/erpnext.svg" alt="ERPNext" style="max-height:30px;"><span class="wm">ERPNext</span></div>
-          <div class="lg-logo-chip" title="Garett, cliente"><img src="/img/logistics/garett.png" alt="Garett" class="garett-logo"><span class="chip-tag">cliente</span></div>
         </div>
       </div>
     </section>
@@ -417,7 +418,7 @@
     <section class="lg-mirakl">
       <div class="container">
         <div style="text-align:center;">
-          <h2 class="h2-serif">Especialistas en Mirakl</h2>
+          <h2 class="h2-serif h2-con-logo">Especialistas en <img class="h2-logo" src="/img/logistics/mirakl.svg" alt="Mirakl"></h2>
           <p style="color:var(--text-muted);margin:0.6rem auto 0;max-width:560px;">El software que mueve los marketplaces de El Corte Inglés y otros grandes retailers europeos. Gestionamos todo el ciclo:</p>
         </div>
         <div class="lg-mirakl-grid">
@@ -459,9 +460,9 @@
     <section class="lg-trust">
       <div class="container">
         <div class="lg-trust-card">
-          <h2 class="h2-serif">Garett vende en El Corte Inglés.<br>Su fulfillment lo operamos nosotros.</h2>
+          <h2 class="h2-serif">Metimos a Garett en El Corte Inglés.</h2>
           <img src="/img/logistics/garett.png" alt="Garett">
-          <p>Integración con el marketplace, picking, envío y estados: <strong>el circuito completo</strong>. La publicidad de Garett es otro capítulo, <a class="lg-trust-link" href="/casos/garett">ver el caso de growth</a>.</p>
+          <p>Integración con Mirakl, picking, envío y estados: <strong>el circuito completo</strong>, del primer pedido a la última devolución. Su publicidad es otro capítulo: <a class="lg-trust-link" href="/casos/garett">ver el caso</a>.</p>
         </div>
       </div>
     </section>
