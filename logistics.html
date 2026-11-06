@@ -230,6 +230,25 @@
     .h2-logo { height: 0.78em; width: auto; display: inline-block; }
     [data-theme="dark"] .h2-logo { filter: brightness(0) invert(1); }
 
+    /* Shopify: wordmark apaisado, se le deja crecer en ancho dentro de la misma caja */
+    .lg-logo-chip.chip-shopify img { max-height: 32px; max-width: 132px; }
+
+    /* Roadmap: lo que está en desarrollo, sin disfrazarlo de disponible */
+    .lg-roadmap {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+      gap: 0.55rem 0.75rem; margin: 1.9rem auto 0; max-width: 640px;
+      font-size: 0.88rem; color: var(--text-muted);
+    }
+    .lg-roadmap-label {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      font-weight: 600; color: var(--text-secondary);
+    }
+    .lg-roadmap-label::before {
+      content: ""; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent); flex: 0 0 auto;
+    }
+    .lg-roadmap-items { font-family: var(--font-human); font-style: italic; }
+
     /* Mobile: menos aire muerto entre secciones (en desktop el ritmo largo funciona; en
        pantalla de 390px solo obliga a scrollear sin información nueva) */
     @media (max-width: 640px) {
@@ -250,6 +269,7 @@
       .lg-logo-row { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.6rem; width: 100%; max-width: none; margin: 0; }
       .lg-logo-chip { box-sizing: border-box; width: 100%; height: 62px; padding: 0.9rem 1rem; }
       .lg-logo-chip img { max-height: 30px; max-width: 140px; }
+      .lg-logo-chip.chip-shopify img { max-height: 28px; max-width: 124px; }
       .lg-logo-chip.chip-eci img { max-height: 34px; max-width: 150px; }
       .lg-logo-chip .wm-eci { font-size: 1rem; }
       .lg-logo-chip.chip-erpnext .wm { font-size: 1rem; }
@@ -344,9 +364,15 @@
         <div class="lg-logo-row">
           <div class="lg-logo-chip" title="Mirakl, software de marketplace"><img src="/img/logistics/mirakl.svg" alt="Mirakl"></div>
           <div class="lg-logo-chip chip-eci" title="El Corte Inglés, marketplace"><img src="/img/logistics/eci-logo.png" alt="El Corte Inglés"></div>
-          <div class="lg-logo-chip" title="OneTime, partner de transporte"><img src="/img/logistics/onetime.svg" alt="OneTime"></div>
+          <div class="lg-logo-chip chip-shopify" title="Shopify, tienda online"><img src="/img/logistics/shopify.png" alt="Shopify"></div>
           <div class="lg-logo-chip chip-erpnext" title="ERPNext, el ERP"><img src="/img/logistics/erpnext.svg" alt="ERPNext" style="max-height:30px;"><span class="wm">ERPNext</span></div>
+          <div class="lg-logo-chip" title="OneTime, partner de transporte"><img src="/img/logistics/onetime.svg" alt="OneTime"></div>
         </div>
+
+        <p class="lg-roadmap">
+          <span class="lg-roadmap-label">En desarrollo</span>
+          <span class="lg-roadmap-items">Amazon · TikTok Shop</span>
+        </p>
       </div>
     </section>
 
