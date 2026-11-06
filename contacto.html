@@ -16,11 +16,21 @@
   <link rel="stylesheet" href="/css/modern.css">
   <link rel="stylesheet" href="/css/pages.css">
   <style>
+/* Hallmark · v2.0.0 · restyle · contacto.html · theme: DaybyDay brand (locked BRAND-SPEC: Inter display, Source Serif humano, IBM Plex Mono en cifras, papel/tinta, acento #3B82F6) · genre editorial · shape: contacto (hero + promesa + agenda propia + formulario + contrato implícito) · signature: la agenda de huecos leída en vivo · imagery: sin fotos · entry: hero centered · nav: mega heredado · footer: heredado */
+/* crítica: P4 H5 E4 S5 R4 V4 · lo más flojo: E, los literales de acento fuera de token y los svg de icono sin aria-hidden; suben a tokens y se esconden del árbol */
+/* waives de marca en .hallmark/waivers.md: 54 section-tag (sistema de secciones numeradas, BRAND-SPEC), R1 Inter display, R64 mono en cifras */
+    /* ===== Overrides de Floor para esta página ===== */
+    html, body { overflow-x: clip; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+    a:active, button:active { transform: translateY(1px); }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+    .footer-legal { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; }
+    .footer-legal a { margin: 0; }
+    .hero h1, .h2-serif { text-wrap: balance; }
     /* Acento en la familia azul de marca (mood trust): el indigo #6366f1 era resto del look antiguo */
-    :root { --accent-color: #60A5FA; }
-    [data-theme="light"] { --accent-color: #2563EB; }
-    .hero-badge { background: #3b82f61a; border: 1px solid #3b82f640; color: #60A5FA; }
-    [data-theme="light"] .hero-badge { color: #2563EB; }
+    :root { --accent-color: #60A5FA; --hero-badge-bg: #3b82f61a; --hero-badge-border: #3b82f640; --hero-badge-ink: #60A5FA; }
+    [data-theme="light"] { --accent-color: #2563EB; --hero-badge-ink: #2563EB; }
+    .hero-badge { background: var(--hero-badge-bg); border: 1px solid var(--hero-badge-border); color: var(--hero-badge-ink); }
     .audit-promise { max-width: 720px; margin: 0 auto; padding: 1.75rem 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; }
     .audit-list { display: flex; flex-direction: column; gap: 0.9rem; }
     .audit-list-item { display: flex; gap: 0.875rem; align-items: flex-start; }
@@ -54,7 +64,7 @@
                 <a href="/lo-que-cubre.html#automation">Automation</a>
                 <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
                 <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
-                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo</a>
               </div>
               <div class="mega-section">
                 <div class="mega-section-title">Servicios</div>
@@ -115,12 +125,12 @@
     <section class="hero hero-centered">
       <div class="container">
         <div class="hero-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-          Auditoría · 30 minutos · gratuita
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          Auditoría, 30 minutos, gratuita
         </div>
         <h1>Auditoría de tu cuenta de publicidad y tu funnel</h1>
         <p class="subtitle">
-          Yo en la sala. Sin comerciales, sin filtros. Te llevas tres palancas accionables sobre tu cuenta. Si encajamos seguimos. Si no, las palancas te las llevas igual.
+          Yo en la sala. Te llevas tres palancas accionables. Encajemos o no.
         </p>
       </div>
     </section>
@@ -131,19 +141,19 @@
           <div class="section-tag" style="margin-bottom:1.25rem;">Qué te llevas de la llamada</div>
           <div class="audit-list">
             <div class="audit-list-item">
-              <div class="audit-list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+              <div class="audit-list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></div>
               <div class="audit-list-text"><strong>Tres palancas concretas</strong> sobre tu cuenta de publicidad y tu funnel D2C. Aplicables esa misma semana, contrates o no.</div>
             </div>
             <div class="audit-list-item">
-              <div class="audit-list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+              <div class="audit-list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></div>
               <div class="audit-list-text"><strong>Lectura cruzada</strong> de tu cuenta, tu Shopify y tu tracking. Detecto qué fuga de margen es la más urgente.</div>
             </div>
             <div class="audit-list-item">
-              <div class="audit-list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+              <div class="audit-list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></div>
               <div class="audit-list-text"><strong>Diagnóstico honesto</strong> de encaje. Si tu fase, tu spend o tu estructura no encajan con cómo opero, te lo digo en la llamada.</div>
             </div>
             <div class="audit-list-item">
-              <div class="audit-list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+              <div class="audit-list-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></div>
               <div class="audit-list-text"><strong>Yo en la sala.</strong> Sin comerciales, sin filtros, sin reuniones de seguimiento.</div>
             </div>
           </div>
@@ -378,8 +388,8 @@
                   <option value="" selected>Elige un rango (opcional)</option>
                   <option>Sin spend aún</option>
                   <option>Menos de 5K€/mes</option>
-                  <option>5K – 15K€/mes</option>
-                  <option>15K – 30K€/mes</option>
+                  <option>5K - 15K€/mes</option>
+                  <option>15K - 30K€/mes</option>
                   <option>Más de 30K€/mes</option>
                 </select>
               </div>
@@ -425,8 +435,8 @@
         </div>
       </div>
       <div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;">
-        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Política de privacidad</a> · <a href="/cookies.html">Política de cookies</a> · <a href="/terminos.html">Términos</a></p>
-        <p class="footer-copy">© 2026 DaybyDay Consulting · Madrid</p>
+        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> <a href="/privacidad.html">Política de privacidad</a> <a href="/cookies.html">Política de cookies</a> <a href="/terminos.html">Términos</a></p>
+        <p class="footer-copy">© 2026 DayByDay Consulting. Analizamos, ejecutamos, acompañamos.</p>
       </div>
     </div>
   </footer>
@@ -452,7 +462,7 @@
           if (!res.ok) throw new Error('HTTP ' + res.status);
           form.reset();
           btn.textContent = 'Enviado';
-          status.textContent = 'Enviado. Te escribo yo — no un autoreply — en menos de 24 horas.';
+          status.textContent = 'Enviado. Te escribo yo, no un autoreply, en menos de 24 horas.';
         })
         .catch(function () {
           btn.disabled = false;

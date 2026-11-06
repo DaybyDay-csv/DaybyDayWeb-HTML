@@ -13,29 +13,42 @@
   <link rel="stylesheet" href="/css/modern.css">
   <link rel="stylesheet" href="/css/pages.css">
   <style>
+/* Hallmark · v2.0.0 · redesign full · tech/capi.html · theme: DaybyDay brand (locked BRAND-SPEC: Inter display, Source Serif humano, papel/tinta, acento de página #0077B5) · genre service page · shape: hero declarativo + casos de uso + features grid + stats + stack + relacionado + CTA · signature: la columna invisible que sostiene Advantage+ · imagery: sin fotos · entry: hero centrado, sin eyebrow (el badge duplicaba el h1 y se retira) · nav: mega heredado · footer: heredado · waived: 54 section-tag (eyebrow del sistema Brand-SPEC, conservado en la forma <label> que la propia 54 sanciona; mismo estilo de marca) */
+/* answered: 26a focus ring; 26b estados de botones; 33 svg decorativos con aria-hidden; 34 overflow-x clip */
+    /* ===== Overrides de Floor para esta página ===== */
+    html, body { overflow-x: clip; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent-color); outline-offset: 2px; border-radius: 4px;
+    }
+    .cta-primary:active { transform: scale(0.97); }
+    .cta-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+    /* Tokens de color de página */
     :root {
       --accent-color: #0077b5;
-    }
-    .hero-badge {
-      background: #0077b51a;
-      border: 1px solid #0077b540;
-      color: #0077b5;
+      --capi-soft: #0077b51a;
+      --capi-line: #0077b540;
+      --capi-fade: #0077b5cc;
+      --capi-glow: #0077b520;
+      --capi-tag-line: #0077b533;
     }
     .feature-icon, .hero-stat-icon {
-      background: linear-gradient(135deg, #0077b5, #0077b5cc);
+      background: linear-gradient(135deg, var(--accent-color), var(--capi-fade));
     }
     .stat-box .value {
-      background: linear-gradient(135deg, #0077b5, #0077b5cc);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: var(--accent-color);
     }
     .cta-box::before {
-      background: radial-gradient(ellipse 50% 60% at 50% 0%, #0077b520 0%, transparent 60%);
+      background: radial-gradient(ellipse 50% 60% at 50% 0%, var(--capi-glow) 0%, transparent 60%);
     }
     .feature-tag {
-      background: #0077b51a;
-      border: 1px solid #0077b533;
-      color: #0077b5;
+      background: var(--capi-soft);
+      border: 1px solid var(--capi-tag-line);
+      color: var(--accent-color);
+    }
+    /* h4 de related pasa a h3 (niveles de uno en uno); el tamaño lo lleva el CSS */
+    .related-content h3 {
+      font-size: 0.9375rem; font-weight: 600; color: var(--text-primary);
+      margin-bottom: 0.1875rem; letter-spacing: -0.01em;
     }
   </style>
 
@@ -57,7 +70,7 @@
                 <a href="/lo-que-cubre.html#automation">Automation</a>
                 <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
                 <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
-                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo</a>
               </div>
               <div class="mega-section">
                 <div class="mega-section-title">Servicios</div>
@@ -135,16 +148,14 @@
 
     <section class="hero hero-centered" style="padding-bottom:2rem;">
       <div class="container">
-        <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>Stack · Tracking</div>
         <h1 class="h2-serif">CAPI</h1>
-        <p class="subtitle">Conversions API server-side con event match quality alta. La columna invisible que sostiene Advantage+.</p>
+        <p class="subtitle">Conversions API server-side, la columna invisible que sostiene Advantage+.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <div class="section-tag">Para qué sirve</div>
           <h2 class="h2-serif">Para qué te sirve</h2>
         </div>
         <div class="usecases">
@@ -174,42 +185,42 @@
         <div class="features-grid">
           <div class="feature-card">
             <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
             </div>
             <h3>Server-side events</h3>
             <p>Eventos enviados desde el servidor, no desde el navegador. Recupera la señal que pierde iOS e ITP.</p>
           </div>
           <div class="feature-card">
             <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
             </div>
             <h3>Event deduplication</h3>
             <p>Deduplicación entre pixel y CAPI para no contar dos veces la misma conversión.</p>
           </div>
           <div class="feature-card">
             <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
             </div>
             <h3>Custom events</h3>
             <p>Eventos a medida de tu funnel, no los genéricos. Add-to-cart, checkout y compra con valor real.</p>
           </div>
           <div class="feature-card">
             <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
             </div>
             <h3>Offline conversions</h3>
             <p>Conversiones que cierran fuera de la web (llamada, tienda) devueltas a la plataforma.</p>
           </div>
           <div class="feature-card">
             <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
             </div>
             <h3>MDA matching</h3>
             <p>Sube la calidad del match con la API. Cuanto mejor el match, mejor entrena el algoritmo.</p>
           </div>
           <div class="feature-card">
             <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
             </div>
             <h3>Advanced matching</h3>
             <p>Datos hasheados (email, teléfono) para emparejar más conversiones con usuarios reales.</p>
@@ -230,7 +241,7 @@
       <div class="container">
         <h2 style="font-size:1.25rem;font-weight:600;margin-bottom:1.5rem;text-align:center;">Stack tecnológico</h2>
         <div class="stack-row">
-<a href="/meta-ads.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Meta Ads</a><a href="/tech/ga4.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>GA4</a><a href="/tech/shopify.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Shopify</a><a href="/tech/n8n.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>n8n</a>
+<a href="/meta-ads.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Meta Ads</a><a href="/tech/ga4.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>GA4</a><a href="/tech/shopify.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Shopify</a><a href="/tech/n8n.html" class="stack-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>n8n</a>
         </div>
       </div>
     </section>
@@ -239,7 +250,7 @@
       <div class="container">
         <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;">Relacionado</h2>
         <div class="related-grid">
-<a href="/meta-ads.html" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class="related-content"><h4>Meta Ads</h4><p>Ver más</p></div></a><a href="/google-ads.html" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class="related-content"><h4>Google Ads</h4><p>Ver más</p></div></a><a href="/tech/n8n.html" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class="related-content"><h4>n8n</h4><p>Ver más</p></div></a>
+<a href="/meta-ads.html" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class="related-content"><h3>Meta Ads</h3><p>Ver más</p></div></a><a href="/google-ads.html" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class="related-content"><h3>Google Ads</h3><p>Ver más</p></div></a><a href="/tech/n8n.html" class="related-card"><div class="related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class="related-content"><h3>n8n</h3><p>Ver más</p></div></a>
         </div>
       </div>
     </section>
@@ -249,7 +260,7 @@
         <div class="cta-box">
           <h2 class="h2-serif">¿Implementar CAPI?</h2>
           <p>Server-side setup en 1 semana. Attribution mejorada desde el día 1.</p>
-          <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
     </section>

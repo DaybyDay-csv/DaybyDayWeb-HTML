@@ -34,25 +34,38 @@
   <link rel="stylesheet" href="/css/modern.css">
   <link rel="stylesheet" href="/css/pages.css">
   <style>
-    :root { --accent-color: #6366f1; }
+/* Hallmark · v2.0.0 · fixes de maqueta sobre diseño existente · templates/post.html · theme: DaybyDay brand (locked BRAND-SPEC: Inter display, Source Serif humano, IBM Plex Mono en cifras) · nav: heredado · footer: heredado · waived: R1 (Inter es la display de marca, BRAND-SPEC bloqueado), 3 (stripe lateral del bloque de cita, patrón editorial de los 154 posts ya publicados), 74 (acento #6366f1 establecido del blog) */
+    :root {
+      --accent-color: #6366f1;
+      --accent-soft: #6366f11a;
+      --accent-border: #6366f140;
+      --accent-faint: rgba(99, 102, 241, 0.08);
+      --accent-line: rgba(99, 102, 241, 0.3);
+      --on-accent: #f4f6ff;
+    }
+    html, body { overflow-x: clip; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-color); outline-offset: 2px; border-radius: 4px; }
+    a:active, button:active { opacity: 0.8; }
+    input:disabled, textarea:disabled, button:disabled { opacity: 0.5; cursor: not-allowed; }
+    h1, .article-body h2, .article-body h3 { text-wrap: balance; }
     .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
     .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text-primary); }
     .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text-primary); }
     .article-body strong { color: var(--text-primary); font-weight: 600; }
-    .article-body a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body a { color: var(--accent-color); text-decoration: underline; text-underline-offset: 3px; }
     .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; color: var(--text-secondary); }
     .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
     .article-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; overflow-x: auto; display: block; }
-    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); }
+    .article-body thead th { text-align: left; padding: 0.75rem 1rem; background: var(--bg-elevated); color: var(--text-muted); font-size: 0.75rem; border-bottom: 1px solid var(--border); }
     .article-body tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
-    .article-body blockquote { border-left: 3px solid var(--accent-color, #6366f1); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
+    .article-body blockquote { border-left: 3px solid var(--accent-color); padding-left: 1.25rem; margin: 1.5rem 0; color: var(--text-secondary); font-style: italic; }
     .article-body .embed-item { margin: 1.5rem 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
-    .article-body .direct-answer { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 0 0 2rem; }
+    .article-body .direct-answer { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 0 0 2rem; }
     .article-body .direct-answer p { margin: 0; font-size: 1.05rem; }
     .article-body .summary-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
     .article-body .summary-block p { margin: 0 0 0.5rem; }
-    .article-body .pro-tip { background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
-    .article-body .pro-tip p:first-child { color: var(--accent-color, #6366f1); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem; margin: 0 0 0.5rem; }
+    .article-body .pro-tip { background: var(--accent-faint); border: 1px solid var(--accent-line); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .article-body .pro-tip p:first-child { color: var(--accent-color); font-weight: 700; font-size: 0.75rem; margin: 0 0 0.5rem; }
     .article-body .pro-tip p:last-child { margin: 0; }
     .article-body .cifra-que-abofetea { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); text-align: center; padding: 1.5rem 0; }
     .faq-section { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; }
@@ -60,31 +73,32 @@
     .faq-item h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
     .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
     .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
-    .category-badge { background: #6366f11a; border: 1px solid #6366f140; color: #6366f1; font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
-    .reading-time, .article-date { color: var(--text-muted); font-size: 0.85rem; }
+    .category-badge { background: var(--accent-soft); border: 1px solid var(--accent-border); color: var(--accent-color); font-size: 0.95rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 9999px; text-transform: capitalize; }
+    .reading-time, .article-date { color: var(--text-muted); font-size: 0.95rem; }
     .article-author { display: flex; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 2rem 0; }
-    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--accent-color); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; color: var(--on-accent); flex-shrink: 0; }
     .author-info { font-size: 0.9rem; }
     .author-info .name { color: var(--text-primary); font-weight: 600; }
     .author-info .role { color: var(--text-muted); font-size: 0.8rem; }
     .related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
     .related-articles h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); }
-    .sources-block { margin-top: 3rem; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color, #6366f1); border-radius: 8px; }
+    .sources-block { margin-top: 3rem; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent-color); border-radius: 8px; }
     .sources-block h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary); }
     .sources-block p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem; }
     .sources-block ul { list-style: none; padding: 0; margin: 0; }
     .sources-block li { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
     .sources-block li:last-child { border-bottom: none; }
-    .sources-block a { color: var(--accent-color, #6366f1); text-decoration: underline; text-underline-offset: 3px; }
+    .sources-block a { color: var(--accent-color); text-decoration: underline; text-underline-offset: 3px; }
     .related-articles a { display: block; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); text-decoration: none; margin-bottom: 0.5rem; font-size: 0.95rem; }
-    .related-articles a:hover { border-color: var(--accent-color, #6366f1); }
+    .related-articles a:hover { border-color: var(--accent-color); }
     .post-nav { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
     .post-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
     .post-nav a:hover { color: var(--text-primary); }
     .cta-block { margin-top: 3rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; text-align: center; }
-    .cta-block h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary); }
+    .cta-block h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary); }
+    .cta-block h3 { font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary); }
     .cta-block p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem; }
-    .cta-block a { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-color, #6366f1); color: white; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-size: 0.95rem; }
+    .cta-block a { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-color); color: var(--on-accent); font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-size: 0.95rem; }
   </style>
 </head>
 <body>
@@ -189,9 +203,9 @@
 {{FAQ_BLOCK}}
 
         <div class="cta-block">
-          <h3>{{CTA_TITLE}}</h3>
+          <h2>{{CTA_TITLE}}</h2>
           <p>{{CTA_DESC}}</p>
-          <a href="{{CTA_HREF}}">{{CTA_LABEL}} →</a>
+          <a href="{{CTA_HREF}}">{{CTA_LABEL}}</a>
         </div>
 
 
@@ -206,7 +220,7 @@
               <label style="flex:1; text-align:center; padding:0.6rem; border:1px solid var(--border); border-radius:8px; cursor:pointer;"><input type="radio" name="util" value="no"> No mucho</label>
             </div>
             <textarea name="comment" rows="2" placeholder="¿Qué te ha faltado o sobrado? (opcional)" style="width:100%; padding:0.6rem; border-radius:8px; border:1px solid var(--border); background:var(--bg-card); color:var(--text-primary); margin-bottom:0.75rem;"></textarea>
-            <button type="submit" style="background:var(--accent-color, #6366f1); color:white; font-weight:600; padding:0.6rem 1.25rem; border-radius:8px; border:none; cursor:pointer;">Enviar feedback</button>
+            <button type="submit" style="background:var(--accent-color); color:var(--on-accent); font-weight:600; padding:0.6rem 1.25rem; border-radius:8px; border:none; cursor:pointer;">Enviar feedback</button>
           </form>
         </div>
         <div class="related-articles">
@@ -226,7 +240,7 @@
     <a href="/">Inicio</a>
     <a href="/servicios.html">Servicios</a>
     <a href="/blog.html">Blog</a>
-    <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Política de privacidad</a> · <a href="/cookies.html">Política de cookies</a> · <a href="/terminos.html">Términos</a></p>
+    <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> <a href="/privacidad.html">Política de privacidad</a> <a href="/cookies.html">Política de cookies</a> <a href="/terminos.html">Términos</a></p>
     <p>© 2026 DayByDay Consulting</p>
 </footer>
 <script src="/js/main.js"></script>

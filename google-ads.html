@@ -14,8 +14,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css"><link rel="stylesheet" href="/css/sparkles.css"><link rel="stylesheet" href="/css/modern.css"><link rel="stylesheet" href="/css/pages.css">
   <style>
+/* Hallmark · v2.0.0 · redesign polish · google-ads.html · theme: DaybyDay brand (locked BRAND-SPEC: Inter display, Source Serif humano, IBM Plex Mono en cifras, acento de página #4285F4) · genre editorial · shape: servicio (hero centrado + 3 secciones numeradas + stack + CTA papel) · signature: la segregación branded/no-branded como primer entregable · imagery: sin fotos, gráfica de línea · entry: hero centrado con badge de servicio · nav: heredado · footer: heredado · section-tag: sistema de marca BRAND-SPEC, se conserva */
+/* crítica: P4 H5 E4 S5 R4 V5 · lo más flojo: E, el badge del hero era un eyebrow suelto; ahora es un anuncio enlazado a Lo que cubre */
+    html, body { overflow-x: clip; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px;
+    }
+    h1, h2 { text-wrap: balance; }
+    .cta-primary:active, .cta-secondary:active, .btn-sketch:active, .nav-cta:active { transform: scale(0.97); }
+    button:disabled, [aria-disabled="true"] { opacity: 0.5; cursor: not-allowed; }
     :root { --accent-color: #4285f4; }
-    .hero-badge { background:#4285f41a; border:1px solid #4285f440; color:#4285f4; }
+    .hero-badge { background: color-mix(in srgb, var(--accent-color) 10%, transparent); border: 1px solid color-mix(in srgb, var(--accent-color) 25%, transparent); color: var(--accent-color); text-decoration: none; text-transform: none; letter-spacing: 0; }
     .lead-by { display:inline-flex;align-items:center;gap:0.5rem;margin-top:1rem;padding:0.35rem 0.75rem;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;font-size:0.78rem;color:var(--text-muted);letter-spacing:0.02em; }
     .lead-by strong { color:var(--text-secondary);font-weight:600; }
     .not-block { max-width:720px;margin:1.5rem auto 0;padding:1rem 1.25rem;background:var(--bg-card);border:1px solid var(--border);border-left:2px solid var(--text-muted);border-radius:8px;font-size:0.92rem;color:var(--text-muted); }
@@ -61,7 +70,7 @@
                 <a href="/lo-que-cubre.html#automation">Automation</a>
                 <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
                 <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
-                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo</a>
               </div>
               <div class="mega-section">
                 <div class="mega-section-title">Servicios</div>
@@ -132,10 +141,10 @@
 
     <section class="hero hero-centered" style="padding-bottom:2rem;">
       <div class="container">
-        <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>Paid media · Google</div>
+        <a class="hero-badge" href="/lo-que-cubre.html#paid-media"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>Paid media: Google</a>
         <h1 class="h2-serif">Google Ads sin mezclar captación y defensa de marca.</h1>
         <p class="subtitle">El ROAS de Google mezcla las dos. Separarlas es mi primer entregable.</p>
-        <span class="lead-by"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg> Lo opero yo. Cuando tu cuenta necesita lo que está fuera de mi núcleo — tracking server-side, flujos de email, automatización — lo construye mi sistema y lo reviso yo antes de que toque tu negocio.</span>
+        <span class="lead-by"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg> Lo opero yo. Cuando tu cuenta necesita lo que está fuera de mi núcleo, tracking server-side, flujos de email, automatización, lo construye mi sistema y lo reviso yo antes de que toque tu negocio.</span>
       </div>
     </section>
 
@@ -157,7 +166,7 @@
         <div class="section-header"><div class="section-tag">02 — Cómo lo operamos</div><h2 class="h2-serif">De la segregación branded al reporting de margen</h2></div>
         <div class="process-list">
           <div class="process-step"><div class="process-step-num voice-machine">01</div><div><h3>Segregación branded / no-branded</h3><p>Separamos las campañas que defienden marca de las que captan tráfico nuevo. Cada bloque recibe presupuesto y métricas distintas.</p></div></div>
-          <div class="process-step"><div class="process-step-num voice-machine">02</div><div><h3>Feed optimization en Merchant Center</h3><p>Titles, descriptions y categorización del feed. En Shopping, el <span class="voice-machine">70%</span> del rendimiento depende del feed — más que de las pujas.</p></div></div>
+          <div class="process-step"><div class="process-step-num voice-machine">02</div><div><h3>Feed optimization en Merchant Center</h3><p>Titles, descriptions y categorización del feed. En Shopping, el <span class="voice-machine">70%</span> del rendimiento depende del feed, más que de las pujas.</p></div></div>
           <div class="process-step"><div class="process-step-num voice-machine">03</div><div><h3>Estructura PMax con exclusiones</h3><p>Asset groups por intención, exclusión de búsqueda branded y limits que evitan que PMax canibalice Shopping puro.</p></div></div>
           <div class="process-step"><div class="process-step-num voice-machine">04</div><div><h3>Atribución multi-touch sobre CRM</h3><p>Google Click ID mapeado al pedido en Shopify y al lead en CRM. Reportamos asistencia + conversión real, no last-click de plataforma.</p></div></div>
           <div class="process-step"><div class="process-step-num voice-machine">05</div><div><h3>Reporting cruzado de margen</h3><p>Lo que de verdad queda por canal, cuánto tardas en recuperar un cliente y cuánto te deja con el tiempo. Comparado con lo que aporta Facebook y los otros canales.</p></div></div>
@@ -191,13 +200,13 @@
       <div class="container">
         <div class="cta-box">
           <h2 class="h2-serif">Pedir auditoría</h2>
-          <p>Auditoría de tu cuenta y tu funnel: el piloto cero. <span class="voice-machine">30 minutos</span>, gratis, conmigo. Traes acceso a tu cuenta de ads y a tu CRM — nada más. Sales con tres palancas accionables y una forma de medir si tienen efecto. Si encajamos, seguimos. Si no, las palancas te las llevas igual.</p>
+          <p>Auditoría de tu cuenta y tu funnel: el piloto cero. <span class="voice-machine">30 minutos</span>, gratis, conmigo. Traes acceso a tu cuenta de ads y a tu CRM: nada más. Sales con tres palancas accionables y una forma de medir si tienen efecto. Si encajamos, seguimos. Si no, las palancas te las llevas igual.</p>
           <div class="hero-cta" style="justify-content:center;">
-            <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             <a href="/como-trabajamos.html" class="btn-sketch sketch-hover" style="margin-left:.75rem;">Cómo trabajamos<svg class="sketch-circle" viewBox="0 0 200 64" preserveAspectRatio="none" aria-hidden="true"><path pathLength="100" d="M100,6 C156,3 193,14 192,31 C191,49 152,59 97,58 C43,57 8,50 8,31 C8,15 34,8 88,7 C142,6 178,14 186,26"/></svg></a>
             <div class="note-strip" aria-label="Notas de cómo trabajo">
               <div class="post-it" style="--tilt:-2.5deg;">Sin preparación previa: traes accesos y ya está.</div>
-              <div class="post-it" style="--tilt:1.5deg;">Sales con tres palancas — <span class="pin-mark">te las llevas igual.</span></div>
+              <div class="post-it" style="--tilt:1.5deg;">Sales con tres palancas: <span class="pin-mark">te las llevas igual.</span></div>
               <div class="post-it" style="--tilt:-1deg;">Si no encajamos, no pasa nada. De verdad.</div>
             </div>
           </div>
@@ -206,8 +215,8 @@
     </section>
   </main>
 
-  <footer class="footer"><div class="container"><div class="footer-inner"><div><div class="footer-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="22" height="22" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="22" height="22" alt="">DaybyDay Consulting · Madrid</div><p class="voice-human" style="font-style:italic;margin-top:0.5rem;">El crecimiento, día a día.</p></div><div class="footer-links"><a href="/problema.html">Problema</a><a href="/como-trabajamos.html">Cómo trabajamos</a><a href="/growth-partner.html">Growth Partner</a><a href="/logistics">Logistics</a><a href="/casos/">Casos</a><a href="/blog.html">Blog</a><a href="/contacto.html">Pedir auditoría</a></div></div><div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;"><p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Política de privacidad</a> · <a href="/cookies.html">Política de cookies</a> · <a href="/terminos.html">Términos</a></p>
-        <p class="footer-copy">© 2026 DayByDay Consulting · analizamos · ejecutamos · acompañamos</p></div></div></footer>
+  <footer class="footer"><div class="container"><div class="footer-inner"><div><div class="footer-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="22" height="22" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="22" height="22" alt="">DaybyDay Consulting · Madrid</div><p class="voice-human" style="font-style:italic;margin-top:0.5rem;">El crecimiento, día a día.</p></div><div class="footer-links"><a href="/problema.html">Problema</a><a href="/como-trabajamos.html">Cómo trabajamos</a><a href="/growth-partner.html">Growth Partner</a><a href="/logistics">Logistics</a><a href="/casos/">Casos</a><a href="/blog.html">Blog</a><a href="/contacto.html">Pedir auditoría</a></div></div><div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;"><p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> <a href="/privacidad.html">Política de privacidad</a> <a href="/cookies.html">Política de cookies</a> <a href="/terminos.html">Términos</a></p>
+        <p class="footer-copy">© 2026 DayByDay Consulting. Analizamos, ejecutamos, acompañamos.</p></div></div></footer>
   <script src="/js/main.js"></script>
 </body>
 </html>

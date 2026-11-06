@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>El proyecto que no podía esperar un presupuesto. — Evolut Fitkid · Desarrollos · DaybyDay Consulting</title>
-  <meta name="description" content="Evolut Fitkid: discovery pro bono y one-page para una escuela de FitKid en Madrid que capta por boca-oreja — con KPIs pactados de 40-60 leads al mes. En producción en evolutfitkid.com.">
+  <title>El proyecto que no podía esperar un presupuesto. Evolut Fitkid · Desarrollos · DaybyDay Consulting</title>
+  <meta name="description" content="Evolut Fitkid: discovery pro bono y one-page para una escuela de FitKid en Madrid que capta por boca-oreja, con KPIs pactados de 40-60 leads al mes. En producción en evolutfitkid.com.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.daybydayconsulting.com/desarrollos/evolutfitkid">
   <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/desarrollos/evolutfitkid">
@@ -16,13 +16,17 @@
   <link rel="stylesheet" href="/css/modern.css">
   <link rel="stylesheet" href="/css/pages.css">
   <style>
+/* Hallmark · v2.0.0 · redesign full · desarrollos/evolutfitkid.html · theme: DaybyDay brand (locked BRAND-SPEC: Inter display, Source Serif humano, IBM Plex Mono en cifras, papel/tinta, acento #3B82F6) · genre editorial · shape: caso de desarrollo (barra de vuelta, hero serif, bloques numerados, CTA) · signature: la barra "el proyecto que no podía esperar un presupuesto" · imagery: ninguna foto, SVG propia · entry: hero con h1 serif y sub meta · nav: heredado · footer: heredado · waived: 54 section-tag numerado (sistema Brand-SPEC bloqueado), 19 guion dentro de section-tag (separador del sistema de secciones) */
+/* crítica: P4 H5 E4 S5 R4 V4 · lo más flojo: E, tres labels trackeadas en hero y barra; pasan a frase sin tracking */
+    html, body { overflow-x: clip; }
+    .caso-h1, .caso-bloque h2, .cta-box h2 { text-wrap: balance; }
     /* Logo de marca: swap light/dark según data-theme (toggles main.js) */
     .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; }
     .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
     [data-theme="dark"] .logo-ink { display: none; }
     [data-theme="light"] .logo-blue { display: none; }
     /* Barra de desarrollo */
-    .caso-barra { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 1rem; padding: 1.1rem 0; border-bottom: 1px solid var(--border); font-family: var(--font-machine); font-variant-numeric: tabular-nums; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; }
+    .caso-barra { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 1rem; padding: 1.1rem 0; border-bottom: 1px solid var(--border); font-family: var(--font); font-variant-numeric: tabular-nums; font-size: 0.85rem; }
     .caso-barra a { color: var(--text-secondary); text-decoration: none; }
     .caso-barra a:hover, .caso-barra a:focus-visible { color: var(--text-primary); }
     .caso-barra-titulo { text-align: center; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -31,10 +35,13 @@
     .caso-hero .container { max-width: 820px; }
     .caso-hero .section-tag { margin-bottom: 1.75rem; }
     .caso-h1 { font-family: var(--font-human); font-weight: 600; font-size: clamp(2.6rem, 6.5vw, 4.4rem); line-height: 1.05; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
-    .caso-sub { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-muted); margin: 0; }
+    .caso-sub { font-family: var(--font); font-size: 0.85rem; color: var(--text-muted); margin: 0; }
     /* Botón externo: la web viva del cliente */
-    .ver-web { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1.75rem; font-family: var(--font-machine); font-variant-numeric: tabular-nums; font-size: 0.8rem; letter-spacing: 0.05em; color: var(--ink-blue); text-decoration: none; border: 1px dashed color-mix(in srgb, var(--ink-blue) 50%, transparent); padding: 0.6rem 1rem; transition: opacity 0.2s ease; }
+    .ver-web { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1.75rem; font-family: var(--font-machine); font-variant-numeric: tabular-nums; font-size: 0.85rem; color: var(--ink-blue); text-decoration: none; border: 1px dashed color-mix(in srgb, var(--ink-blue) 50%, transparent); padding: 0.6rem 1rem; transition: opacity 0.2s ease; }
     .ver-web:hover, .ver-web:focus-visible { opacity: 0.6; }
+    .ver-web:active { opacity: 0.6; }
+    button:active { transform: scale(0.98); }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
     /* Bloques narrativos */
     .caso-bloque { border-top: 1px solid color-mix(in srgb, var(--ink) 18%, transparent); padding: 3.25rem 0 3.5rem; }
     .caso-bloque .container { max-width: 820px; }
@@ -85,7 +92,7 @@
                 <a href="/lo-que-cubre.html#automation">Automation</a>
                 <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
                 <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
-                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo</a>
               </div>
               <div class="mega-section">
                 <div class="mega-section-title">Servicios</div>
@@ -119,11 +126,11 @@
         <li><a href="/contacto.html" class="nav-cta">Pedir auditoría</a></li>
       </ul>
       <button class="theme-toggle-btn" aria-label="Cambiar tema" title="Cambiar tema">
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42-1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42-1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
       </button>
       <button class="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
       </button>
     </div>
   </nav>
@@ -142,17 +149,17 @@
     <div class="container">
       <div class="caso-barra">
         <a href="/desarrollos/">← Todos los desarrollos</a>
-        <span class="caso-barra-titulo">El proyecto que no podía esperar un presupuesto. — Evolut Fitkid</span>
+        <span class="caso-barra-titulo">El proyecto que no podía esperar un presupuesto: Evolut Fitkid</span>
         <span aria-hidden="true"></span>
       </div>
     </div>
 
     <header class="caso-hero">
       <div class="container">
-        <span class="section-tag">Pro bono · Escuela deportiva infantil · En producción</span>
+        <span class="section-tag">Pro bono, escuela deportiva infantil, en producción</span>
         <h1 class="caso-h1">El proyecto que no podía esperar un presupuesto.</h1>
-        <p class="caso-sub voice-machine">Evolut Fitkid · Escuela deportiva infantil · evolutfitkid.com</p>
-        <a class="ver-web" href="https://www.evolutfitkid.com" target="_blank" rel="noopener noreferrer">Ver la web →</a>
+        <p class="caso-sub">Evolut Fitkid, escuela deportiva infantil, evolutfitkid.com</p>
+        <a class="ver-web" href="https://www.evolutfitkid.com" target="_blank" rel="noopener noreferrer">Ver la web</a>
       </div>
     </header>
 
@@ -160,7 +167,7 @@
       <div class="container">
         <span class="section-tag">01</span>
         <h2 class="h2-serif">La situación</h2>
-        <p class="caso-prosa">Una escuela de FitKid en Madrid que capta por boca-oreja y flyers. Sin web. Sin presupuesto de agencia — por eso fue pro bono.</p>
+        <p class="caso-prosa">Una escuela de FitKid en Madrid que capta por boca-oreja y flyers. Sin web. Sin presupuesto de agencia: por eso fue pro bono.</p>
       </div>
     </section>
 
@@ -185,7 +192,7 @@
         <span class="section-tag">04</span>
         <h2 class="h2-serif">El resultado</h2>
         <p class="caso-prosa">evolutfitkid.com en producción. La web vive en un builder moderno; la estructura, los textos y la puesta en marcha salieron de este discovery.</p>
-        <p class="caso-honesto">Próximo paso técnico: el dominio raíz sin www aún no responde — hay que terminar de apuntarlo.</p>
+        <p class="caso-honesto">Próximo paso técnico: el dominio raíz sin www aún no responde, hay que terminar de apuntarlo.</p>
       </div>
     </section>
 
@@ -194,14 +201,14 @@
         <div class="cta-box">
           <div class="section-tag">05 — Empieza por una prueba</div>
           <h2 class="h2-serif">Pedir auditoría</h2>
-          <p>30 minutos conmigo. Gratis. Sales con tres palancas concretas — te las llevas igual aunque no trabajemos juntos. Es el piloto cero: si los números te convencen, hablamos de montarlo.</p>
+          <p>30 minutos conmigo. Gratis. Sales con tres palancas concretas: te las llevas igual aunque no trabajemos juntos. Es el piloto cero: si los números te convencen, hablamos de montarlo.</p>
           <div class="hero-cta" style="justify-content:center;">
-            <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             <a href="/como-trabajamos.html" class="btn-sketch sketch-hover" style="margin-left:.75rem;">Cómo trabajamos<svg class="sketch-circle" viewBox="0 0 200 64" preserveAspectRatio="none" aria-hidden="true"><path pathLength="100" d="M100,6 C156,3 193,14 192,31 C191,49 152,59 97,58 C43,57 8,50 8,31 C8,15 34,8 88,7 C142,6 178,14 186,26"/></svg></a>
           </div>
           <div class="note-strip" aria-label="Notas de cómo trabajo">
             <div class="post-it" style="--tilt:-2.5deg;">Sin preparación previa: traes accesos y ya está.</div>
-            <div class="post-it" style="--tilt:1.5deg;">Sales con tres palancas — <span class="pin-mark">te las llevas igual.</span></div>
+            <div class="post-it" style="--tilt:1.5deg;">Sales con tres palancas: <span class="pin-mark">te las llevas igual.</span></div>
             <div class="post-it" style="--tilt:-1deg;">Si no encajamos, no pasa nada. De verdad.</div>
           </div>
         </div>
@@ -227,7 +234,7 @@
         </div>
       </div>
       <div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;">
-        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Política de privacidad</a> · <a href="/cookies.html">Política de cookies</a> · <a href="/terminos.html">Términos</a></p>
+        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> <a href="/privacidad.html">Política de privacidad</a> <a href="/cookies.html">Política de cookies</a> <a href="/terminos.html">Términos</a></p>
         <p class="footer-copy">© 2026 DaybyDay Consulting · Madrid</p>
       </div>
     </div>

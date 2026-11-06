@@ -17,13 +17,27 @@
   <link rel="stylesheet" href="/css/modern.css">
   <link rel="stylesheet" href="/css/pages.css">
   <style>
+/* Hallmark · v2.0.0 · redesign full · problema.html · theme: DaybyDay brand (locked BRAND-SPEC: Inter display, Source Serif humano, papel/tinta, acento de página #EF4444) · genre service page · shape: hero declarativo + patrones numerados + voces de founder + salida Growth Partner + acción 30 min + CTA · signature: la auditoría como método · imagery: sin fotos · entry: hero centrado, sin eyebrow (el badge duplicaba el h1 y se retira) · nav: mega heredado · footer: heredado · waived: 54 section-tag (eyebrow numerado del sistema Brand-SPEC, conservado en la forma <label> que la propia 54 sanciona; mismo estilo de marca) */
+/* answered: 26a focus ring; 26b estados de botones; 33 svg decorativos con aria-hidden; 34 overflow-x clip */
+    /* ===== Overrides de Floor para esta página ===== */
+    html, body { overflow-x: clip; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent-color); outline-offset: 2px; border-radius: 4px;
+    }
+    .cta-primary:active, .cta-secondary:active { transform: scale(0.97); }
+    .cta-primary:disabled, .cta-secondary:disabled { opacity: 0.5; cursor: not-allowed; }
+    /* Tokens de color de página */
     :root { --accent-color: #ef4444; }
-    .hero-badge { background: #ef44441a; border: 1px solid #ef444440; color: #f87171; }
     /* Logo de marca: swap light/dark según data-theme (toggles main.js) */
     .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; }
     .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
     [data-theme="dark"] .logo-ink { display: none; }
     [data-theme="light"] .logo-blue { display: none; }
+    /* h4 del action-box pasa a h3 (niveles de heading de uno en uno); el tamaño lo lleva el CSS */
+    .action-box h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.4rem; }
+    /* Separadores del footer legal sin caracteres pegados */
+    .footer-legal { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; }
+    .footer-legal a { margin: 0; }
   </style>
 </head>
 <body>
@@ -47,7 +61,7 @@
                 <a href="/lo-que-cubre.html#automation">Automation</a>
                 <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
                 <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
-                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo</a>
               </div>
               <div class="mega-section">
                 <div class="mega-section-title">Servicios</div>
@@ -119,13 +133,9 @@
 
     <section class="hero hero-centered">
       <div class="container">
-        <div class="hero-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
-          Lectura del problema
-        </div>
         <h1 class="voice-human">El ROAS de la cuenta sube y la caja no acompaña</h1>
         <p class="subtitle">
-          El reporting de plataforma y el reporting de negocio no son el mismo dato. Cuando se confunden, se toman decisiones sobre métricas que no mueven caja.
+          Reporting de plataforma y reporting de negocio: no son el mismo dato.
         </p>
       </div>
     </section>
@@ -143,7 +153,7 @@
     <section class="section section-dark">
       <div class="container">
         <div class="section-header">
-          <div class="section-tag">Tres patrones recurrentes</div>
+          <label class="section-tag">01 · Tres patrones recurrentes</label>
           <h2 class="h2-serif">Lo que aparece casi siempre en una auditoría</h2>
           <p>Tres puntos ciegos del reporting de publicidad que afectan al negocio.</p>
         </div>
@@ -152,7 +162,7 @@
             <div class="problem-num">01</div>
             <div class="problem-content">
               <h3>Reporting de plataforma sin margen de contribución</h3>
-              <p>La cuenta marca <span class="voice-machine">ROAS 4</span> — el ROAS es lo que la plataforma dice que ingresas por cada euro de publicidad. El Shopify, descontando coste de producto, envío, comisiones y devoluciones, marca otra cosa. El margen de contribución (lo que de verdad queda después de costes directos) no aparece por defecto en el dashboard.</p>
+              <p>La cuenta marca <span class="voice-machine">ROAS 4</span>: el ROAS es lo que la plataforma dice que ingresas por cada euro de publicidad. El Shopify, descontando coste de producto, envío, comisiones y devoluciones, marca otra cosa. El margen de contribución (lo que de verdad queda después de costes directos) no aparece por defecto en el dashboard.</p>
             </div>
           </div>
           <div class="problem-block">
@@ -176,25 +186,25 @@
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <div class="section-tag">El patrón emocional</div>
+          <label class="section-tag">02 · El patrón emocional</label>
           <h2 class="h2-serif">Lo que el fundador siente en la silla</h2>
           <p>Esto es lo que escucho en cada primera llamada antes de mirar un solo número.</p>
         </div>
         <div class="pillars-grid" style="max-width:980px;margin:0 auto;">
           <div class="pillar-card">
-            <div class="pillar-quote">"Estoy quemado de cambiar de agencia cada seis meses."</div>
+            <div class="pillar-quote">“Estoy quemado de cambiar de agencia cada seis meses.”</div>
             <div class="pillar-meta">Fatiga · operativa</div>
           </div>
           <div class="pillar-card">
-            <div class="pillar-quote">"Me hablan en ROAS y yo solo veo la caja."</div>
+            <div class="pillar-quote">“Me hablan en ROAS y yo solo veo la caja.”</div>
             <div class="pillar-meta">Desalineación · métricas</div>
           </div>
           <div class="pillar-card">
-            <div class="pillar-quote">"Cuando pregunto algo técnico, me devuelven una reunión con otro."</div>
+            <div class="pillar-quote">“Cuando pregunto algo técnico, me devuelven una reunión con otro.”</div>
             <div class="pillar-meta">Handoffs · sin un interlocutor</div>
           </div>
           <div class="pillar-card">
-            <div class="pillar-quote">"Pago como senior y me ejecuta un junior."</div>
+            <div class="pillar-quote">“Pago como senior y me ejecuta un junior.”</div>
             <div class="pillar-meta">Capa de servicio · invisible</div>
           </div>
         </div>
@@ -204,17 +214,19 @@
     <section class="section section-dark">
       <div class="container">
         <div class="section-header">
-          <div class="section-tag">La salida</div>
+          <label class="section-tag">03 · La salida</label>
           <h2 class="h2-serif">Operar como Growth Partner, no como agencia ni consultor</h2>
           <p>El modelo que aplico cambia tres cosas a la vez: con quién hablas, qué se mide y quién ejecuta.</p>
         </div>
         <div class="tagline-block">
           <p class="tagline-strong">
-            <b>Analizo</b> tu P&L, tus cohortes y tu cash-conversion en RAW · <b>Ejecuto</b> las palancas — y te lo dice la persona que después opera tu cuenta, no un comercial · <b>Acompaño</b> hasta el resultado.
+            <b>Analizo</b> tu P&L, tus cohortes y tu cash-conversion en RAW.<br>
+            <b>Ejecuto</b> las palancas, y te lo dice la persona que después opera tu cuenta, no un comercial.<br>
+            <b>Acompaño</b> hasta el resultado.
           </p>
         </div>
         <div class="hero-cta" style="justify-content:center;margin-top:2rem;">
-          <a href="/como-trabajamos.html" class="cta-primary">Ver cómo trabajamos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="/como-trabajamos.html" class="cta-primary">Ver cómo trabajamos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           <a href="/growth-partner.html" class="cta-secondary">Modelo Growth Partner</a>
         </div>
       </div>
@@ -224,11 +236,11 @@
       <div class="container">
         <div class="action-box paper-grid">
           <div class="action-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
           </div>
           <div>
             <div class="action-label">Action step · 30 min</div>
-            <h4>Comprueba si tienes el problema antes de contratarnos</h4>
+            <h3>Comprueba si tienes el problema antes de contratarnos</h3>
             <p>Abre tu Shopify. Coge los últimos <span class="voice-machine">90 días</span>. Calcula: ingreso bruto − COGS − envío − ad spend = margen. Divide ese margen entre número de clientes nuevos. Si el resultado es positivo y &gt; tu CAC, vas bien. Si es negativo, llamada con nosotros.</p>
           </div>
         </div>
@@ -241,7 +253,7 @@
           <h2 class="h2-serif">¿Tienes este problema?</h2>
           <p>Cuéntame cómo funciona tu operativa. Auditoría gratuita de 30 minutos. Conmigo.</p>
           <div class="hero-cta" style="justify-content:center;">
-            <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             <a href="/resultados.html" class="cta-secondary">Ver casos</a>
           </div>
         </div>
@@ -269,8 +281,8 @@
         </div>
       </div>
       <div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;">
-        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Política de privacidad</a> · <a href="/cookies.html">Política de cookies</a> · <a href="/terminos.html">Términos</a></p>
-        <p class="footer-copy">© 2026 DaybyDay Consulting · Madrid</p>
+        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> <a href="/privacidad.html">Política de privacidad</a> <a href="/cookies.html">Política de cookies</a> <a href="/terminos.html">Términos</a></p>
+        <p class="footer-copy">© 2026 DaybyDay Consulting. Analizamos, ejecutamos, acompañamos.</p>
       </div>
     </div>
   </footer>

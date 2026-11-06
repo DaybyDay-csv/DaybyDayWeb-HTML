@@ -15,7 +15,16 @@
   <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 
   <style>
+/* Hallmark · v2.0.0 · redesign full · tools/sistema-cfa-secuencia-ofertas-d2c/gracias.html · theme: DaybyDay brand (locked BRAND-SPEC: Inter display, Source Serif humano, papel/tinta, acento #3B82F6) · genre editorial · shape: long document (hero + ocho secciones de checklist + cierre con parte de caja) · signature: la checklist interactiva con casillas de tareas · imagery: ninguna foto, papel cuadriculado en el cierre · entry: hero stage centrado · nav: mega heredado · footer: heredado */
+/* crítica: P4 H5 E4 S5 R4 V5 · lo más flojo: E, el eyebrow máquina encima del título era puro anuncio; el título solo ya abre la página */
+/* Hallmark · dismissed 58 · el recurso es la checklist completa y el título es el nombre del sistema, sin recorte posible */
     /* Logo de marca: swap light/dark según data-theme (toggles main.js) */
+    html, body { overflow-x: clip; }
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+      outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px;
+    }
+    a:active, button:active { opacity: 0.85; }
+    button:disabled, input:disabled, select:disabled, textarea:disabled { opacity: 0.5; cursor: not-allowed; }
     .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; }
     .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
     [data-theme="dark"] .logo-ink { display: none; }
@@ -25,21 +34,13 @@
 
     .narrow { max-width: 780px; }
 
-    .eyebrow-machine {
-      font-family: var(--font-machine);
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.13em;
-      color: var(--ink-blue);
-      margin: 0 0 0.75rem;
-    }
-
     /* H1 serif */
     .hero h1.h2-serif {
       font-family: var(--font-human);
       font-weight: 600;
       font-size: clamp(1.9rem, 4vw, 2.8rem);
       line-height: 1.15;
+      text-wrap: balance;
       margin: 0.5rem 0 1.5rem;
       text-align: left;
     }
@@ -50,6 +51,7 @@
       font-family: var(--font-human);
       font-weight: 600;
       font-size: 1.5rem;
+      text-wrap: balance;
       color: var(--text-primary);
       margin: 0 0 1rem;
       padding-bottom: 0.6rem;
@@ -101,6 +103,7 @@
       color: color-mix(in srgb, var(--ink) 70%, transparent);
       margin: 0 0 1.4rem;
     }
+    .cta-caja .cta-primary { white-space: nowrap; }
   </style>
 </head>
 <body>
@@ -121,7 +124,7 @@
                 <a href="/lo-que-cubre.html#automation">Automation</a>
                 <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
                 <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
-                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo</a>
               </div>
               <div class="mega-section">
                 <div class="mega-section-title">Servicios</div>
@@ -183,7 +186,6 @@
 
     <section class="hero hero-centered">
       <div class="container narrow" style="text-align:left;">
-        <p class="eyebrow-machine">Tu recurso, sin vueltas:</p>
         <h1 class="h2-serif">Sistema CFA: Recupera tu CAC en 30 Días</h1>
       </div>
     </section>
@@ -344,7 +346,7 @@
         </div>
       </div>
       <div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;">
-        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Política de privacidad</a> · <a href="/cookies.html">Política de cookies</a> · <a href="/terminos.html">Términos</a></p>
+        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> <a href="/privacidad.html">Política de privacidad</a> <a href="/cookies.html">Política de cookies</a> <a href="/terminos.html">Términos</a></p>
         <p class="footer-copy">© 2026 DaybyDay Consulting · Madrid</p>
       </div>
     </div>

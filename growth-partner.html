@@ -17,14 +17,23 @@
   <link rel="stylesheet" href="/css/modern.css">
   <link rel="stylesheet" href="/css/pages.css">
   <style>
-    :root { --accent-color: #8b5cf6; }
-    .hero-badge { background: #8b5cf61a; border: 1px solid #8b5cf640; color: #a78bfa; }
+/* Hallmark · v2.0.0 · redesign polish · growth-partner.html · theme: DaybyDay brand (locked BRAND-SPEC: Inter display, Source Serif humano, IBM Plex Mono en cifras, acento de página #8B5CF6) · genre editorial · shape: manifiesto de servicio (hero + cifras + comparativa + 7 secciones numeradas + frase brújula + CTA) · signature: el piloto antes del contrato · imagery: sin fotos, gráfica de línea · entry: hero centrado · nav: heredado · footer: heredado · section-tag: sistema de marca BRAND-SPEC, se conserva */
+/* crítica: P4 H5 E4 S5 R4 V5 · lo más flojo: E, el badge del hero y los separadores de la fila de verbos eran decoración de máquina; el badge sale y los verbos se separan con gap */
+    html, body { overflow-x: clip; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px;
+    }
+    h1, h2 { text-wrap: balance; }
+    .cta-primary:active, .cta-secondary:active, .btn-sketch:active, .nav-cta:active { transform: scale(0.97); }
+    button:disabled, [aria-disabled="true"] { opacity: 0.5; cursor: not-allowed; }
+    :root { --accent-color: #8b5cf6; --accent-soft: #a78bfa; }
+    .hero-badge { background: color-mix(in srgb, var(--accent-color) 10%, transparent); border: 1px solid color-mix(in srgb, var(--accent-color) 25%, transparent); color: var(--accent-soft); }
     .bru-block {
       max-width: 820px;
       margin: 0 auto;
       padding: 3rem 2.5rem;
-      background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, transparent 70%), var(--bg-card);
-      border: 1px solid color-mix(in srgb, #8b5cf6 30%, transparent);
+      background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color) 8%, transparent) 0%, transparent 70%), var(--bg-card);
+      border: 1px solid color-mix(in srgb, var(--accent-color) 30%, transparent);
       border-radius: 20px;
       text-align: center;
       position: relative;
@@ -35,13 +44,11 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 2px;
-      background: linear-gradient(90deg, transparent, #a78bfa, transparent);
+      background: linear-gradient(90deg, transparent, var(--accent-soft), transparent);
     }
     .bru-eyebrow {
       font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: #a78bfa;
+      color: var(--accent-soft);
       font-weight: 700;
       margin-bottom: 1.25rem;
     }
@@ -82,7 +89,7 @@
                 <a href="/lo-que-cubre.html#automation">Automation</a>
                 <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
                 <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
-                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo</a>
               </div>
               <div class="mega-section">
                 <div class="mega-section-title">Servicios</div>
@@ -154,20 +161,12 @@
 
     <section class="hero hero-centered">
       <div class="container">
-        <div class="hero-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
-          Modelo Growth Partner
-        </div>
         <h1>Un socio sentado a tu lado, no un proveedor por horas</h1>
-        <p class="subtitle">
-          Opero como growth partner. Analizo el negocio, ejecuto las palancas y acompaño al fundador hasta el resultado. Yo en cada conversación.
-        </p>
+        <p class="subtitle">Opero como growth partner: analizo, ejecuto y acompaño hasta el resultado.</p>
         <div class="verbs-row">
-          <span class="verb-pill"><span class="dot"></span>analizo</span>
-          <span class="verb-separator">·</span>
-          <span class="verb-pill"><span class="dot"></span>ejecuto</span>
-          <span class="verb-separator">·</span>
-          <span class="verb-pill"><span class="dot"></span>acompaño</span>
+          <span class="verb-pill">analizo</span>
+          <span class="verb-pill">ejecuto</span>
+          <span class="verb-pill">acompaño</span>
         </div>
       </div>
     </section>
@@ -217,7 +216,7 @@
           <div class="compare-col highlight">
             <div class="compare-type">DayByDay</div>
             <h3>Growth Partner</h3>
-            <p>Analizo · ejecuto · acompaño. Hablas conmigo desde la primera llamada. Diseño SDD/PDD ad-hoc. Reporting de margen, no de ROAS.</p>
+            <p>Analizo, ejecuto, acompaño. Hablas conmigo desde la primera llamada. Diseño SDD/PDD ad-hoc. Reporting de margen, no de ROAS.</p>
             <span class="compare-action">Contigo del análisis al resultado</span>
           </div>
         </div>
@@ -232,23 +231,23 @@
         </div>
         <div class="pillars-grid">
           <div class="pillar-card">
-            <div class="pillar-quote">"Hablas conmigo desde la primera llamada."</div>
+            <div class="pillar-quote">“Hablas conmigo desde la primera llamada.”</div>
             <div class="pillar-meta">Sin filtros</div>
           </div>
           <div class="pillar-card">
-            <div class="pillar-quote">"Sin handoffs. Sin perfiles junior."</div>
+            <div class="pillar-quote">“Sin handoffs. Sin perfiles junior.”</div>
             <div class="pillar-meta">Sin handoffs</div>
           </div>
           <div class="pillar-card">
-            <div class="pillar-quote">"Del análisis al resultado, contigo."</div>
+            <div class="pillar-quote">“Del análisis al resultado, contigo.”</div>
             <div class="pillar-meta">Acompañamiento</div>
           </div>
           <div class="pillar-card">
-            <div class="pillar-quote">"Reporto margen de contribución, payback de CAC y LTV por cohorte. No ROAS plataforma."</div>
+            <div class="pillar-quote">“Reporto margen de contribución, payback de CAC y LTV por cohorte. No ROAS plataforma.”</div>
             <div class="pillar-meta">Métricas que importan</div>
           </div>
           <div class="pillar-card" style="grid-column: span 2;">
-            <div class="pillar-quote">"Si capitalizas un éxito antes de entender qué lo produjo, lo matas."</div>
+            <div class="pillar-quote">“Si capitalizas un éxito antes de entender qué lo produjo, lo matas.”</div>
             <div class="pillar-meta">Lo que aprendí</div>
           </div>
         </div>
@@ -268,7 +267,7 @@
             <div class="process-step-num voice-machine">01</div>
             <div>
               <h3>Medir primero</h3>
-              <p>El tracking se instala el día uno, antes que cualquier campaña — del tracking cuelga el porcentaje y el caso de éxito.</p>
+              <p>El tracking se instala el día uno, antes que cualquier campaña: del tracking cuelga el porcentaje y el caso de éxito.</p>
             </div>
           </div>
           <div class="process-step">
@@ -305,22 +304,22 @@
         </div>
         <div class="features-grid">
           <div class="feature-card">
-            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/></svg></div>
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/></svg></div>
             <h3>Mensualidad fija</h3>
             <p>Mensualidad fija con alcance cerrado. Tres meses mínimo para tener datos comparables entre periodos.</p>
           </div>
           <div class="feature-card">
-            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M23 6l-9.5 9.5-5-5L1 18"/></svg></div>
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><path d="M23 6l-9.5 9.5-5-5L1 18"/></svg></div>
             <h3>Modelo a éxito</h3>
             <p>Variable sobre métricas de negocio que pactamos. Solo cuando el caso lo permite y la medición está limpia.</p>
           </div>
           <div class="feature-card">
-            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2v4M12 18v4"/></svg></div>
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><path d="M12 2v4M12 18v4"/></svg></div>
             <h3>Retainer evolutivo</h3>
             <p>Base + variable. La base cubre operación; el variable se activa con hitos de crecimiento del negocio.</p>
           </div>
           <div class="feature-card">
-            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M9 12l2 2 4-4"/></svg></div>
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><path d="M9 12l2 2 4-4"/></svg></div>
             <h3>Trabajo específico</h3>
             <p>Proyecto cerrado con entregable definido: reconstrucción de cuenta, setup de analytics, diseño de agente AI, etc.</p>
           </div>
@@ -337,32 +336,32 @@
         </div>
         <div class="icp-grid" style="max-width:880px;margin:0 auto;">
           <div class="icp-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
             <div><div class="icp-label">Facturación anual</div><div class="icp-value voice-machine">200K – 3M€</div></div>
           </div>
           <div class="icp-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
             <div><div class="icp-label">Spend paid mensual</div><div class="icp-value"><span class="voice-machine">5K – 30K€</span> actual o potencial</div></div>
           </div>
           <div class="icp-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
             <div><div class="icp-label">Equipo interno</div><div class="icp-value">Sin senior de marketing in-house</div></div>
           </div>
           <div class="icp-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
             <div><div class="icp-label">Madurez de producto</div><div class="icp-value">Producto sólido, no en validación</div></div>
           </div>
           <div class="icp-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
             <div><div class="icp-label">Sector</div><div class="icp-value">D2C, marca física con línea B2C</div></div>
           </div>
           <div class="icp-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
             <div><div class="icp-label">Lo que necesita oír</div><div class="icp-value">Te trato como dueño, no como factura</div></div>
           </div>
         </div>
         <div style="text-align:center;margin-top:1.5rem;color:var(--text-muted);font-size:0.92rem;">
-          <strong style="color:var(--text-secondary);">Fuera de scope:</strong> empresas medianas con CMO en plantilla · startups Series A+ con paid senior interno · founders en validación de producto.
+          <strong style="color:var(--text-secondary);">Fuera de scope:</strong> empresas medianas con CMO en plantilla, startups Series A+ con paid senior interno, founders en validación de producto.
         </div>
       </div>
     </section>
@@ -418,7 +417,7 @@
         <h2 class="h2-serif" style="text-align:center;font-size:1.75rem;font-weight:700;margin:0.5rem 0 1.5rem;letter-spacing:-0.02em;">Lo que significa acompañar</h2>
         <div class="prose">
           <p>Acompañar no es estar disponible en Slack.</p>
-          <p>Acompañar es leer tu margen contigo cada mes y decirte cuándo escalar y cuándo parar. Es entrar en la reunión de banco si hace falta. Es revisar el pricing antes de meter una promoción. Es decirte "esto está funcionando pero todavía no sabemos por qué — no lo escalamos hasta saberlo".</p>
+          <p>Acompañar es leer tu margen contigo cada mes y decirte cuándo escalar y cuándo parar. Es entrar en la reunión de banco si hace falta. Es revisar el pricing antes de meter una promoción. Es decirte “esto está funcionando pero todavía no sabemos por qué, no lo escalamos hasta saberlo”.</p>
           <p>Acompañar es no soltar la decisión cuando se pone difícil.</p>
         </div>
       </div>
@@ -441,7 +440,7 @@
           <h2 class="h2-serif">Pedir auditoría</h2>
           <p>30 minutos, gratuita. Conmigo. Te llevas tres palancas accionables. Si encajamos seguimos. Si no, las palancas te las llevas igual.</p>
           <div class="hero-cta" style="justify-content:center;">
-            <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             <a href="/como-trabajamos.html" class="cta-secondary">Ver método</a>
           </div>
         </div>
@@ -469,7 +468,7 @@
         </div>
       </div>
       <div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;">
-        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Política de privacidad</a> · <a href="/cookies.html">Política de cookies</a> · <a href="/terminos.html">Términos</a></p>
+        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> <a href="/privacidad.html">Política de privacidad</a> <a href="/cookies.html">Política de cookies</a> <a href="/terminos.html">Términos</a></p>
         <p class="footer-copy">© 2026 DaybyDay Consulting · Madrid</p>
       </div>
     </div>

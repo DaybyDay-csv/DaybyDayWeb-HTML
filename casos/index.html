@@ -16,6 +16,17 @@
   <link rel="stylesheet" href="/css/modern.css">
   <link rel="stylesheet" href="/css/pages.css">
   <style>
+/* Hallmark · v2.0.0 · restyle · casos/index.html · theme: DaybyDay brand (locked BRAND-SPEC: Inter display, Source Serif humano, IBM Plex Mono en cifras, papel/tinta, acento #3B82F6) · genre editorial · shape: índice de casos (hero + filas gigantes estilo McCann) · signature: las filas de casos con logo, idea y estado · imagery: logos reales de clientes, ninguna foto · entry: hero left · nav: mega heredado · footer: heredado */
+/* crítica: P4 H5 E4 S5 R4 V4 · lo más flojo: E, las metas de fila en mayúsculas trackeadas y el 'Leer caso →' en ::after eran el tell de máquina; pasan a frase sin tracking y sin flecha */
+/* waives de marca en .hallmark/waivers.md: 54 section-tag (sistema de secciones numeradas, BRAND-SPEC), 19 en-dash de rango de fechas (2023–2026, correcto en español), R1 Inter display, R64 mono en cifras */
+    /* ===== Overrides de Floor para esta página ===== */
+    html, body { overflow-x: clip; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+    a:active, button:active { transform: translateY(1px); }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+    .footer-legal { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; }
+    .footer-legal a { margin: 0; }
+    .casos-h1 { text-wrap: balance; }
     /* Logo de marca: swap light/dark según data-theme (toggles main.js) */
     .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; }
     .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
@@ -28,11 +39,9 @@
     .casos-lista { margin-top: 3.25rem; border-top: 1px solid color-mix(in srgb, var(--ink) 18%, transparent); }
     .caso-fila { display: grid; grid-template-columns: 110px minmax(0, 1fr) auto; align-items: center; gap: 2rem; padding: 2.4rem 0; border-bottom: 1px solid color-mix(in srgb, var(--ink) 18%, transparent); text-decoration: none; transition: opacity 0.2s ease; }
     .caso-fila-main::after {
-      content: 'Leer caso →';
+      content: 'Leer caso';
       font-family: var(--font-machine);
       font-size: 0.78rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
       color: var(--text-muted);
       transition: color 0.2s ease, transform 0.2s var(--ease-out, ease);
     }
@@ -47,8 +56,8 @@
     .caso-logo-word { font-family: var(--font-human); font-weight: 600; font-size: 1.7rem; letter-spacing: -0.01em; color: var(--text-primary); }
     .caso-fila-main { display: flex; flex-direction: column; gap: 0.55rem; min-width: 0; }
     .caso-idea { font-size: clamp(1.6rem, 3.6vw, 2.4rem); line-height: 1.12; margin: 0; color: var(--text-primary); }
-    .caso-fila-meta { font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); }
-    .caso-estado { font-size: 0.62rem; padding-bottom: 3px; margin-bottom: 0; white-space: nowrap; }
+    .caso-fila-meta { font-size: 0.74rem; color: var(--text-muted); }
+    .caso-estado { font-size: 0.62rem; padding-bottom: 4px; margin-bottom: 0; white-space: nowrap; }
     @media (max-width: 720px) {
       .casos-hero { padding-top: 3.5rem; }
       .caso-fila { grid-template-columns: 64px minmax(0, 1fr); gap: 1.25rem; padding: 1.75rem 0; }
@@ -78,7 +87,7 @@
                 <a href="/lo-que-cubre.html#automation">Automation</a>
                 <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
                 <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
-                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo</a>
               </div>
               <div class="mega-section">
                 <div class="mega-section-title">Servicios</div>
@@ -135,7 +144,7 @@
     <header class="casos-hero">
       <div class="container" style="max-width:920px;">
         <h1 class="casos-h1">Los casos.</h1>
-        <p class="casos-sub">Seis historias con nombre propio. Las cifras salen del CRM de cada cliente o de sus plataformas — lo en curso se marca como en curso.</p>
+        <p class="casos-sub">Seis historias con nombre propio. Cifras de cada cliente. En curso, marcado.</p>
       </div>
     </header>
 
@@ -147,7 +156,7 @@
             <span class="caso-logo"><img src="/img/clients/garett.png" width="72" height="72" alt="" loading="lazy"></span>
             <span class="caso-fila-main">
               <span class="h2-serif caso-idea">Seis semanas.</span>
-              <span class="caso-fila-meta voice-machine">Garett España · Ecommerce D2C beauty-tech</span>
+              <span class="caso-fila-meta voice-machine">Garett España, Ecommerce D2C beauty-tech</span>
             </span>
             <span class="section-tag caso-estado">Activo</span>
           </a>
@@ -156,7 +165,7 @@
             <span class="caso-logo"><span class="caso-logo-mono" aria-hidden="true">NDA</span></span>
             <span class="caso-fila-main">
               <span class="h2-serif caso-idea">El caso que no puedo contar.</span>
-              <span class="caso-fila-meta voice-machine">Universidad privada · Educación superior high-ticket</span>
+              <span class="caso-fila-meta voice-machine">Universidad privada, Educación superior high-ticket</span>
             </span>
             <span class="section-tag caso-estado">Cliente mensual 2023–2026</span>
           </a>
@@ -165,7 +174,7 @@
             <span class="caso-logo"><img src="/img/clients/arasnet.png" width="72" height="72" alt="" loading="lazy"></span>
             <span class="caso-fila-main">
               <span class="h2-serif caso-idea">Tres negocios, un decisor.</span>
-              <span class="caso-fila-meta voice-machine">Aras Life Plus → Cartri → Garett · Ecommerce + automation</span>
+              <span class="caso-fila-meta voice-machine">Aras Life Plus → Cartri → Garett, Ecommerce + automation</span>
             </span>
             <span class="section-tag caso-estado">Histórico → Activo</span>
           </a>
@@ -174,7 +183,7 @@
             <span class="caso-logo"><img src="/img/clients/cartri.png" width="72" height="72" alt="" loading="lazy"></span>
             <span class="caso-fila-main">
               <span class="h2-serif caso-idea">La web que la campaña necesitaba.</span>
-              <span class="caso-fila-meta voice-machine">Cartri · Fabricante de pádel, D2C · Desarrollo web</span>
+              <span class="caso-fila-meta voice-machine">Cartri, Fabricante de pádel, D2C, Desarrollo web</span>
             </span>
             <span class="section-tag caso-estado">En curso</span>
           </a>
@@ -183,7 +192,7 @@
             <span class="caso-logo"><img src="/img/clients/globalthy.png" width="72" height="72" alt="" loading="lazy"></span>
             <span class="caso-fila-main">
               <span class="h2-serif caso-idea">Globalthy Growth.</span>
-              <span class="caso-fila-meta voice-machine">Globalthy · Salud privada, marketplace · Sistema de captación</span>
+              <span class="caso-fila-meta voice-machine">Globalthy, Salud privada, marketplace, Sistema de captación</span>
             </span>
             <span class="section-tag caso-estado">En curso</span>
           </a>
@@ -221,8 +230,8 @@
         </div>
       </div>
       <div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;">
-        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Política de privacidad</a> · <a href="/cookies.html">Política de cookies</a> · <a href="/terminos.html">Términos</a></p>
-        <p class="footer-copy">© 2026 DaybyDay Consulting · Madrid</p>
+        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> <a href="/privacidad.html">Política de privacidad</a> <a href="/cookies.html">Política de cookies</a> <a href="/terminos.html">Términos</a></p>
+        <p class="footer-copy">© 2026 DayByDay Consulting. Analizamos, ejecutamos, acompañamos.</p>
       </div>
     </div>
   </footer>

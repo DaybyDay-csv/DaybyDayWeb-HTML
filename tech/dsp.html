@@ -10,7 +10,22 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/theme.css"><link rel="stylesheet" href="/css/sparkles.css"><link rel="stylesheet" href="/css/modern.css"><link rel="stylesheet" href="/css/pages.css">
-  <style>:root { --accent-color: #8b5cf6; } .hero-badge { background:#8b5cf61a; border:1px solid #8b5cf640; color:#a78bfa; }</style>
+  <style>
+/* Hallmark · v2.0.0 · redesign full · tech/dsp.html · theme: DaybyDay brand (locked BRAND-SPEC: Inter display, Source Serif humano, papel/tinta, acento de página #8B5CF6) · genre service page · shape: hero declarativo + umbral de entrada + DSPs por plataforma + CTA · signature: el umbral de spend como filtro honesto · imagery: sin fotos · entry: hero centrado, sin eyebrow (el badge duplicaba el h1 y se retira) · nav: mega heredado · footer: heredado · waived: 54 section-tag (eyebrow del sistema Brand-SPEC, conservado en la forma <label> que la propia 54 sanciona; mismo estilo de marca), 74 acento violeta heredado del proyecto (pre-flight lo encontró en las páginas tech existentes) */
+/* answered: 26a focus ring; 26b estados de botones; 33 svg decorativos con aria-hidden; 34 overflow-x clip */
+    /* ===== Overrides de Floor para esta página ===== */
+    html, body { overflow-x: clip; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent-color); outline-offset: 2px; border-radius: 4px;
+    }
+    .cta-primary:active { transform: scale(0.97); }
+    .cta-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+    /* Tokens de color de página */
+    :root { --accent-color: #8b5cf6; }
+    /* Separadores del footer legal sin caracteres pegados */
+    .footer-legal { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; }
+    .footer-legal a { margin: 0; }
+  </style>
 </head>
 <body>
   
@@ -29,7 +44,7 @@
                 <a href="/lo-que-cubre.html#automation">Automation</a>
                 <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
                 <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
-                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo</a>
               </div>
               <div class="mega-section">
                 <div class="mega-section-title">Servicios</div>
@@ -102,16 +117,15 @@
 
     <section class="hero hero-centered" style="padding-bottom:2rem;">
       <div class="container">
-        <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>Stack · Programmatic</div>
         <h1 class="h2-serif">DSP · Programmatic display, CTV y audio</h1>
-        <p class="subtitle">DV360, The Trade Desk, Amazon DSP. Solo lo recomendamos cuando tu spend justifica la complejidad técnica y operativa — antes, te dejará dinero en la mesa.</p>
-        <div class="verbs-row"><span class="verb-pill"><span class="dot"></span>analizamos</span><span class="verb-separator">·</span><span class="verb-pill"><span class="dot"></span>ejecutamos</span><span class="verb-separator">·</span><span class="verb-pill"><span class="dot"></span>acompañamos</span></div>
+        <p class="subtitle">DV360, The Trade Desk, Amazon DSP: solo si el spend lo justifica.</p>
+        <div class="verbs-row"><span class="verb-pill">analizamos</span><span class="verb-pill">ejecutamos</span><span class="verb-pill">acompañamos</span></div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="section-header"><div class="section-tag">Cuándo DSP</div><h2 class="h2-serif">Si gastas menos de 20K€/mes, DSP no es para ti</h2></div>
+        <div class="section-header"><label class="section-tag">Cuándo DSP</label><h2 class="h2-serif">Si gastas menos de 20K€/mes, DSP no es para ti</h2></div>
         <div class="prose">
           <p>DSP añade capas de complejidad técnica (Floodlight, audiences, brand safety, viewability) que solo se rentabilizan cuando hay volumen. Por debajo de cierto spend, paid social y search te dan más margen con menos infraestructura.</p>
           <p>Cuando sí encaja: marca con awareness importante, presupuesto creativo de calidad, mix de canales que ya saturó Meta + Google y necesita upper-funnel real (CTV, audio, premium display).</p>
@@ -121,12 +135,12 @@
 
     <section class="section section-dark">
       <div class="container">
-        <div class="section-header"><div class="section-tag">Qué operamos</div><h2 class="h2-serif">DSPs principales y para qué</h2></div>
+        <div class="section-header"><label class="section-tag">Qué operamos</label><h2 class="h2-serif">DSPs principales y para qué</h2></div>
         <div class="features-grid">
-          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg></div><h3>DV360</h3><p>Google's DSP, ideal cuando ya operas Google Ads y necesitas activar inventario premium fuera del search/PMax.</p></div>
-          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></div><h3>The Trade Desk</h3><p>Independiente, fuerte en CTV (TV conectada) y audio. Programmatic premium con inventario cualificado.</p></div>
-          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 3v18h18"/></svg></div><h3>Amazon DSP</h3><p>Activar audiencias propias de Amazon fuera de Amazon. Solo si vendes en Amazon o si tu cliente solapa con el cliente Amazon Prime.</p></div>
-          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Tracking y atribución</h3><p>Floodlight + post-view + post-click. Cómo medir incrementalidad real cuando el canal no tiene click directo (CTV, audio).</p></div>
+          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg></div><h3>DV360</h3><p>Google’s DSP, ideal cuando ya operas Google Ads y necesitas activar inventario premium fuera del search/PMax.</p></div>
+          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></div><h3>The Trade Desk</h3><p>Independiente, fuerte en CTV (TV conectada) y audio. Programmatic premium con inventario cualificado.</p></div>
+          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><path d="M3 3v18h18"/></svg></div><h3>Amazon DSP</h3><p>Activar audiencias propias de Amazon fuera de Amazon. Solo si vendes en Amazon o si tu cliente solapa con el cliente Amazon Prime.</p></div>
+          <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Tracking y atribución</h3><p>Floodlight + post-view + post-click. Cómo medir incrementalidad real cuando el canal no tiene click directo (CTV, audio).</p></div>
         </div>
       </div>
     </section>
@@ -136,14 +150,14 @@
         <div class="cta-box">
           <h2 class="h2-serif">¿Validar si DSP encaja con tu marca?</h2>
           <p>Auditoría gratis de 30 min, conmigo. Si no encaja, te lo digo.</p>
-          <div class="hero-cta" style="justify-content:center;"><a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+          <div class="hero-cta" style="justify-content:center;"><a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer"><div class="container"><div class="footer-inner"><div><div class="footer-logo">DaybyDay Consulting · Madrid</div><p class="voice-human" style="font-style:italic;margin-top:0.5rem;">El crecimiento, día a día.</p></div><div class="footer-links"><a href="/problema.html">Problema</a><a href="/como-trabajamos.html">Cómo trabajamos</a><a href="/growth-partner.html">Growth Partner</a><a href="/logistics">Logistics</a><a href="/casos/">Casos</a><a href="/blog.html">Blog</a><a href="/contacto.html">Pedir auditoría</a></div></div><div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;"><p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Política de privacidad</a> · <a href="/cookies.html">Política de cookies</a> · <a href="/terminos.html">Términos</a></p>
-        <p class="footer-copy">© 2026 DayByDay Consulting · analizamos · ejecutamos · acompañamos</p></div></div></footer>
+  <footer class="footer"><div class="container"><div class="footer-inner"><div><div class="footer-logo">DaybyDay Consulting · Madrid</div><p class="voice-human" style="font-style:italic;margin-top:0.5rem;">El crecimiento, día a día.</p></div><div class="footer-links"><a href="/problema.html">Problema</a><a href="/como-trabajamos.html">Cómo trabajamos</a><a href="/growth-partner.html">Growth Partner</a><a href="/logistics">Logistics</a><a href="/casos/">Casos</a><a href="/blog.html">Blog</a><a href="/contacto.html">Pedir auditoría</a></div></div><div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;"><p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> <a href="/privacidad.html">Política de privacidad</a> <a href="/cookies.html">Política de cookies</a> <a href="/terminos.html">Términos</a></p>
+        <p class="footer-copy">© 2026 DayByDay Consulting. Analizamos, ejecutamos, acompañamos.</p></div></div></footer>
   <script src="/js/main.js"></script>
 </body>
 </html>

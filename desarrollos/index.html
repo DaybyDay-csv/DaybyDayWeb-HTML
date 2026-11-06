@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Los desarrollos web · DaybyDay Consulting</title>
-  <meta name="description" content="Los desarrollos web de DaybyDay Consulting: siete webs en producción — Douf, Cartri, Garett, Evolut Fitkid, Kueba Kitchen, content.fuel e Intermex Group. Cada proyecto enlaza a la web viva.">
+  <meta name="description" content="Los desarrollos web de DaybyDay Consulting: siete webs en producción, Douf, Cartri, Garett, Evolut Fitkid, Kueba Kitchen, content.fuel e Intermex Group. Cada proyecto enlaza a la web viva.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.daybydayconsulting.com/desarrollos/">
   <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/desarrollos/">
@@ -16,6 +16,10 @@
   <link rel="stylesheet" href="/css/modern.css">
   <link rel="stylesheet" href="/css/pages.css">
   <style>
+/* Hallmark · v2.0.0 · redesign full · desarrollos/index.html · theme: DaybyDay brand (locked BRAND-SPEC: Inter display, Source Serif humano, IBM Plex Mono en cifras, papel/tinta, acento #3B82F6) · genre editorial · shape: índice de desarrollos (hero serif + filas gigantes con logo, idea y badge externo) · signature: las filas gigantes de la lista, una por web · imagery: logos reales de clientes · entry: hero con h1 serif y sub meta · nav: heredado · footer: heredado */
+/* crítica: P4 H5 E4 S5 R4 V4 · lo más flojo: E, meta trackeada y flechas pegadas en los badges; pasan a frase sin tracking y sin flecha */
+    html, body { overflow-x: clip; }
+    .desarrollos-h1, .prose h2 { text-wrap: balance; }
     /* Logo de marca: swap light/dark según data-theme (toggles main.js) */
     .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; }
     .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
@@ -36,9 +40,12 @@
     .desarrollo-logo-word-italic { font-family: var(--font-human); font-style: italic; font-weight: 600; font-size: 1.35rem; letter-spacing: -0.01em; color: var(--text-primary); }
     .desarrollo-main { display: flex; flex-direction: column; gap: 0.55rem; min-width: 0; }
     .desarrollo-idea { font-size: clamp(1.6rem, 3.6vw, 2.4rem); line-height: 1.12; margin: 0; color: var(--text-primary); }
-    .desarrollo-meta { font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); }
-    .desarrollo-web { flex: 0 0 auto; font-family: var(--font-machine); font-variant-numeric: tabular-nums; font-size: 0.78rem; letter-spacing: 0.05em; color: var(--ink-blue); text-decoration: none; border: 1px dashed color-mix(in srgb, var(--ink-blue) 50%, transparent); padding: 0.55rem 0.9rem; white-space: nowrap; transition: opacity 0.2s ease; }
+    .desarrollo-meta { font-family: var(--font); font-size: 0.85rem; color: var(--text-muted); }
+    .desarrollo-web { flex: 0 0 auto; font-family: var(--font-machine); font-variant-numeric: tabular-nums; font-size: 0.85rem; color: var(--ink-blue); text-decoration: none; border: 1px dashed color-mix(in srgb, var(--ink-blue) 50%, transparent); padding: 0.55rem 0.9rem; white-space: nowrap; transition: opacity 0.2s ease; }
     .desarrollo-web:hover, .desarrollo-web:focus-visible { opacity: 0.6; }
+    .desarrollo-link:active, .desarrollo-web:active { opacity: 0.6; }
+    button:active { transform: scale(0.98); }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
     .desarrollos-cruce { font-family: var(--font-machine); font-variant-numeric: tabular-nums; font-size: 0.85rem; line-height: 1.7; color: var(--text-muted); margin: 3rem 0 0; }
     .desarrollos-cruce a { color: var(--ink-blue); text-decoration: none; }
     .desarrollos-cruce a:hover, .desarrollos-cruce a:focus-visible { text-decoration: underline; }
@@ -72,7 +79,7 @@
                 <a href="/lo-que-cubre.html#automation">Automation</a>
                 <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
                 <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
-                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo</a>
               </div>
               <div class="mega-section">
                 <div class="mega-section-title">Servicios</div>
@@ -106,11 +113,11 @@
         <li><a href="/contacto.html" class="nav-cta">Pedir auditoría</a></li>
       </ul>
       <button class="theme-toggle-btn" aria-label="Cambiar tema" title="Cambiar tema">
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42-1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42-1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
       </button>
       <button class="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
       </button>
     </div>
   </nav>
@@ -129,7 +136,7 @@
     <header class="desarrollos-hero">
       <div class="container" style="max-width:920px;">
         <h1 class="desarrollos-h1">Desarrollos web.</h1>
-        <p class="desarrollos-sub">Siete webs en producción, construidas o puestas en marcha por DaybyDay. Cada proyecto enlaza a la web viva.</p>
+        <p class="desarrollos-sub">Siete webs en producción, construidas por DaybyDay, enlazadas a la web viva.</p>
       </div>
     </header>
 
@@ -142,10 +149,10 @@
               <span class="desarrollo-logo"><img src="/img/clients/douf.png" width="72" height="72" alt="" loading="lazy"></span>
               <span class="desarrollo-main">
                 <span class="h2-serif desarrollo-idea">13,5 GB a 28 megas.</span>
-                <span class="desarrollo-meta voice-machine">Douf · Streetwear propio · Tienda vanilla</span>
+                <span class="desarrollo-meta">Douf, streetwear propio, tienda vanilla</span>
               </span>
             </a>
-            <a class="desarrollo-web" href="https://douf.es" target="_blank" rel="noopener noreferrer">douf.es →</a>
+            <a class="desarrollo-web" href="https://douf.es" target="_blank" rel="noopener noreferrer">douf.es</a>
           </div>
 
           <div class="desarrollo-fila">
@@ -153,10 +160,10 @@
               <span class="desarrollo-logo"><img src="/img/clients/cartri.png" width="72" height="72" alt="" loading="lazy"></span>
               <span class="desarrollo-main">
                 <span class="h2-serif desarrollo-idea">Una campaña, 23 commits.</span>
-                <span class="desarrollo-meta voice-machine">Cartri · Fabricante de pádel · Tema Shopify</span>
+                <span class="desarrollo-meta">Cartri, fabricante de pádel, tema Shopify</span>
               </span>
             </a>
-            <a class="desarrollo-web" href="https://cartri.com" target="_blank" rel="noopener noreferrer">cartri.com →</a>
+            <a class="desarrollo-web" href="https://cartri.com" target="_blank" rel="noopener noreferrer">cartri.com</a>
           </div>
 
           <div class="desarrollo-fila">
@@ -164,10 +171,10 @@
               <span class="desarrollo-logo"><img src="/img/clients/garett.png" width="72" height="72" alt="" loading="lazy"></span>
               <span class="desarrollo-main">
                 <span class="h2-serif desarrollo-idea">De Lovable a vender.</span>
-                <span class="desarrollo-meta voice-machine">Garett España · Ecommerce beauty-tech · Stripe</span>
+                <span class="desarrollo-meta">Garett España, ecommerce beauty-tech, Stripe</span>
               </span>
             </a>
-            <a class="desarrollo-web" href="https://xn--garettespaa-beb.es" target="_blank" rel="noopener noreferrer">garettespaña.es →</a>
+            <a class="desarrollo-web" href="https://xn--garettespaa-beb.es" target="_blank" rel="noopener noreferrer">garettespaña.es</a>
           </div>
 
           <div class="desarrollo-fila">
@@ -175,10 +182,10 @@
               <span class="desarrollo-logo"><img src="/img/clients/evolut.png" width="72" height="72" alt="" loading="lazy"></span>
               <span class="desarrollo-main">
                 <span class="h2-serif desarrollo-idea">El proyecto que no podía esperar un presupuesto.</span>
-                <span class="desarrollo-meta voice-machine">Evolut Fitkid · Escuela deportiva infantil · Pro bono</span>
+                <span class="desarrollo-meta">Evolut Fitkid, escuela deportiva infantil, pro bono</span>
               </span>
             </a>
-            <a class="desarrollo-web" href="https://www.evolutfitkid.com" target="_blank" rel="noopener noreferrer">evolutfitkid.com →</a>
+            <a class="desarrollo-web" href="https://www.evolutfitkid.com" target="_blank" rel="noopener noreferrer">evolutfitkid.com</a>
           </div>
 
           <div class="desarrollo-fila">
@@ -186,10 +193,10 @@
               <span class="desarrollo-logo"><img src="/img/clients/kueba.png" width="72" height="72" alt="" loading="lazy"></span>
               <span class="desarrollo-main">
                 <span class="h2-serif desarrollo-idea">La cocina antes del código.</span>
-                <span class="desarrollo-meta voice-machine">Kueba Kitchen · Restauración y catering · Discovery</span>
+                <span class="desarrollo-meta">Kueba Kitchen, restauración y catering, discovery</span>
               </span>
             </a>
-            <a class="desarrollo-web" href="https://www.kuebakitchen.com" target="_blank" rel="noopener noreferrer">kuebakitchen.com →</a>
+            <a class="desarrollo-web" href="https://www.kuebakitchen.com" target="_blank" rel="noopener noreferrer">kuebakitchen.com</a>
           </div>
 
           <div class="desarrollo-fila">
@@ -197,10 +204,10 @@
               <span class="desarrollo-logo"><img src="/img/clients/contentfuel-mark.svg" width="72" height="72" alt="" loading="lazy"></span>
               <span class="desarrollo-main">
                 <span class="h2-serif desarrollo-idea">De la ficha a la mesa.</span>
-                <span class="desarrollo-meta voice-machine">content.fuel · Contenido para marcas personales · Portal propio</span>
+                <span class="desarrollo-meta">content.fuel, contenido para marcas personales, portal propio</span>
               </span>
             </a>
-            <a class="desarrollo-web" href="https://content-fuel.com" target="_blank" rel="noopener noreferrer">content-fuel.com →</a>
+            <a class="desarrollo-web" href="https://content-fuel.com" target="_blank" rel="noopener noreferrer">content-fuel.com</a>
           </div>
 
           <div class="desarrollo-fila">
@@ -208,16 +215,16 @@
               <span class="desarrollo-logo"><img src="/img/clients/intermex.png" width="72" height="72" alt="" loading="lazy"></span>
               <span class="desarrollo-main">
                 <span class="h2-serif desarrollo-idea">Cifras con fuente.</span>
-                <span class="desarrollo-meta voice-machine">Intermex Group · Distribución B2B · Web corporativa</span>
+                <span class="desarrollo-meta">Intermex Group, distribución B2B, web corporativa</span>
               </span>
             </a>
-            <a class="desarrollo-web" href="https://intermexgroup.es" target="_blank" rel="noopener noreferrer">intermexgroup.es →</a>
+            <a class="desarrollo-web" href="https://intermexgroup.es" target="_blank" rel="noopener noreferrer">intermexgroup.es</a>
           </div>
 
         </div>
         <div class="prose" style="margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);">
           <h2 class="h2-serif" style="font-size:1.4rem;">Y más allá de webs: sistemas.</h2>
-          <p>Un <a href="/desarrollos/contentfuel" style="color:var(--ink-blue);text-decoration:none;">portal de producción de contenido para marcas</a>, una línea editorial con agentes que publica sola, un motor de blog que se escribe y se revisa con supervisión humana. Producto interno construido a medida, sobre infraestructura propia — lo mismo que sostiene esta web. Si tu operación necesita un sistema así, <a href="/contacto.html">háblamelo</a>.</p>
+          <p>Un <a href="/desarrollos/contentfuel" style="color:var(--ink-blue);text-decoration:none;">portal de producción de contenido para marcas</a>, una línea editorial con agentes que publica sola, un motor de blog que se escribe y se revisa con supervisión humana. Producto interno construido a medida, sobre infraestructura propia, lo mismo que sostiene esta web. Si tu operación necesita un sistema así, <a href="/contacto.html">háblamelo</a>.</p>
         </div>
         <p class="desarrollos-cruce">¿Buscas los casos de growth? <a href="/casos/">→ /casos/</a></p>
       </div>
@@ -242,7 +249,7 @@
         </div>
       </div>
       <div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;">
-        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Política de privacidad</a> · <a href="/cookies.html">Política de cookies</a> · <a href="/terminos.html">Términos</a></p>
+        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> <a href="/privacidad.html">Política de privacidad</a> <a href="/cookies.html">Política de cookies</a> <a href="/terminos.html">Términos</a></p>
         <p class="footer-copy">© 2026 DaybyDay Consulting · Madrid</p>
       </div>
     </div>

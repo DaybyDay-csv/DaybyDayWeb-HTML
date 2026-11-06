@@ -18,7 +18,16 @@
   <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 
   <style>
+/* Hallmark · v2.0.0 · redesign full · tools/matriz/index.html · theme: DaybyDay brand (locked BRAND-SPEC: Inter display, Source Serif humano, papel/tinta, acento #3B82F6) · genre editorial · shape: app screen (hero + parte de caja de descarga + pasos numerados + notas) · signature: el parte de caja de descarga con la versión y el .dmg · imagery: ninguna foto, papel cuadriculado y código · entry: hero stage centrado · nav: mega heredado · footer: heredado */
+/* crítica: P4 H5 E4 S5 R4 V5 · lo más flojo: E, los pasos en mayúsculas eran el único tic de plantilla; pasan a frase con el cuerpo */
+/* Hallmark · dismissed 58 · la página es el manual de instalación completo de la app: su materia es el contenido */
     /* Logo de marca: swap light/dark según data-theme (toggles main.js) */
+    html, body { overflow-x: clip; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px;
+    }
+    a:active, button:active { opacity: 0.85; }
+    button:disabled, input:disabled, select:disabled, textarea:disabled { opacity: 0.5; cursor: not-allowed; }
     .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; }
     .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
     [data-theme="dark"] .logo-ink { display: none; }
@@ -34,6 +43,7 @@
       font-weight: 600;
       font-size: clamp(2.2rem, 4.6vw, 3.2rem);
       line-height: 1.12;
+      text-wrap: balance;
       margin: 0.75rem 0 1rem;
     }
     .hero .subtitle { max-width: 680px; }
@@ -50,17 +60,18 @@
       display: inline-block;
       font-size: 0.74rem;
       font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.13em;
+      text-transform: none;
+      letter-spacing: 0;
       color: var(--text-muted);
       border-bottom: 1px solid color-mix(in srgb, var(--ink) 35%, transparent);
-      padding-bottom: 5px;
+      padding-bottom: 4px;
       margin-bottom: 1.1rem;
     }
     .step-card h2 {
       font-family: var(--font-human);
       font-weight: 600;
       font-size: 1.35rem;
+      text-wrap: balance;
       color: var(--text-primary);
       margin: 0 0 0.9rem;
     }
@@ -131,7 +142,7 @@
                 <a href="/lo-que-cubre.html#automation">Automation</a>
                 <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
                 <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
-                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo</a>
               </div>
               <div class="mega-section">
                 <div class="mega-section-title">Servicios</div>
@@ -194,10 +205,10 @@
     <section class="hero hero-centered">
       <div class="container narrow">
         <h1 class="h2-serif">Matriz, pizarra de tareas para Mac</h1>
-        <p class="subtitle" style="margin:0 auto 2rem;">Una pizarra para ordenar el día por proyectos y prioridad. La llevamos usando a diario internamente y la compartimos tal cual. App nativa para macOS, sin cuenta, sin servidor y sin suscripción: todo se guarda en tu Mac.</p>
+        <p class="subtitle" style="margin:0 auto 2rem;">Una pizarra para ordenar el día por proyectos y prioridad.</p>
         <div class="paper-grid download-wrap">
           <div class="parte-caja download-caja">
-            <div class="parte-caja-head">PARTE DE CAJA — DESCARGA MATRIZ</div>
+            <div class="parte-caja-head">Parte de caja, descarga Matriz</div>
             <div class="parte-caja-row"><span>Versión</span><span>2.3</span></div>
             <div class="parte-caja-row"><span>Actualizada</span><span>5 oct 2026</span></div>
             <div class="parte-caja-row"><span>Tamaño</span><span>1,6 MB</span></div>
@@ -214,7 +225,7 @@
       <div class="container narrow">
 
         <div class="step-card">
-          <div class="step-tag voice-machine">PASO 1 · INSTALAR</div>
+          <div class="step-tag voice-machine">Paso 1: instalar</div>
           <ol>
             <li>Abre el archivo Matriz.dmg que se descarga.</li>
             <li>Arrastra Matriz a la carpeta Aplicaciones, como cualquier app de Mac.</li>
@@ -225,7 +236,7 @@
         </div>
 
         <div class="step-card">
-          <div class="step-tag voice-machine">PASO 2 · EL PRIMER AVISO DE MACOS</div>
+          <div class="step-tag voice-machine">Paso 2: el primer aviso de macOS</div>
           <p style="color:var(--text-secondary);font-size:0.95rem;margin:0 0 0.9rem;">La app no pasa por la tienda de Apple, así que la primera vez macOS enseña un aviso. Se salta una sola vez:</p>
           <ol>
             <li>Intenta abrir Matriz. macOS dirá que no puede verificarla.</li>
@@ -235,7 +246,7 @@
         </div>
 
         <div class="step-card">
-          <div class="step-tag voice-machine">CÓMO FUNCIONA</div>
+          <div class="step-tag voice-machine">Cómo funciona</div>
           <ul>
             <li>Arrastra las tarjetas entre las zonas: <strong>3 prioridades hoy</strong> (lo que tiene que caer hoy, se numera solo), <strong>En ejecución</strong> (lo que estás haciendo ahora), la <strong>Matriz</strong> (Ejecutar / Programar / Delegar / Ignorar), <strong>Programado</strong> (con fecha) y <strong>Hecho</strong>.</li>
             <li>Un clic abre el detalle de una tarjeta: proyecto, fecha, notas y subtareas.</li>
@@ -245,18 +256,18 @@
         </div>
 
         <div class="step-card">
-          <div class="step-tag voice-machine">NOVEDADES · 5 OCT 2026</div>
+          <div class="step-tag voice-machine">Novedades, 5 oct 2026</div>
           <ul>
-            <li><strong>Estilo «liquid glass»</strong> — la barra, los paneles, los menús y los avisos estrenan el vidrio del iOS 26: canto luminoso, más desenfoque, un brillo que sigue al cursor y pulsación elástica en todos los controles. Las tarjetas se quedan limpias y legibles.</li>
-            <li><strong>En español o en inglés</strong> — toda la interfaz cambia con el botón ES/EN de la barra; la primera vez se ajusta sola al idioma de tu Mac.</li>
-            <li><strong>3 prioridades hoy</strong> — banda nueva arriba del todo: arrastra ahí lo que tiene que quedar hecho hoy sí o sí. Se numera por su orden y avisa en rojo si metes más de tres.</li>
-            <li><strong>En ejecución</strong> — la franja verde para lo que estás haciendo justo ahora, separado de lo que solo está planificado.</li>
+            <li><strong>Estilo «liquid glass»</strong>: la barra, los paneles, los menús y los avisos estrenan el vidrio del iOS 26: canto luminoso, más desenfoque, un brillo que sigue al cursor y pulsación elástica en todos los controles. Las tarjetas se quedan limpias y legibles.</li>
+            <li><strong>En español o en inglés</strong>: toda la interfaz cambia con el botón ES/EN de la barra; la primera vez se ajusta sola al idioma de tu Mac.</li>
+            <li><strong>3 prioridades hoy</strong>: banda nueva arriba del todo: arrastra ahí lo que tiene que quedar hecho hoy sí o sí. Se numera por su orden y avisa en rojo si metes más de tres.</li>
+            <li><strong>En ejecución</strong>: la franja verde para lo que estás haciendo justo ahora, separado de lo que solo está planificado.</li>
             <li>Si ya tenías tu pizarra, se coloca sola al abrir: no se pierde nada.</li>
           </ul>
         </div>
 
         <div class="step-card">
-          <div class="step-tag voice-machine">SI VENÍAS DE LA VERSIÓN EN CHROME</div>
+          <div class="step-tag voice-machine">Si venías de la versión en Chrome</div>
           <p style="color:var(--text-secondary);font-size:0.95rem;margin:0 0 0.9rem;">Si tenías la pizarra abierta en Chrome y quieres pasar esas tareas a la app:</p>
           <ol>
             <li>En Chrome abre el archivo exportar-matriz.html y descarga el JSON que genera.</li>
@@ -293,7 +304,7 @@
         </div>
       </div>
       <div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;">
-        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Política de privacidad</a> · <a href="/cookies.html">Política de cookies</a> · <a href="/terminos.html">Términos</a></p>
+        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> <a href="/privacidad.html">Política de privacidad</a> <a href="/cookies.html">Política de cookies</a> <a href="/terminos.html">Términos</a></p>
         <p class="footer-copy">© 2026 DaybyDay Consulting · Madrid</p>
       </div>
     </div>

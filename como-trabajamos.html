@@ -17,8 +17,21 @@
   <link rel="stylesheet" href="/css/modern.css">
   <link rel="stylesheet" href="/css/pages.css">
   <style>
-    :root { --accent-color: #6366f1; }
-    .hero-badge { background: #6366f11a; border: 1px solid #6366f140; color: #818cf8; }
+/* Hallmark · v2.0.0 · restyle · como-trabajamos.html · theme: DaybyDay brand (locked BRAND-SPEC: Inter display, Source Serif humano, IBM Plex Mono en cifras, papel/tinta, acento #3B82F6) · genre editorial · shape: método (hero + equipo + pilares + framework de 5 fases + CTA) · signature: el framework de cinco fases numeradas · imagery: sin fotos · entry: hero centered · nav: mega heredado · footer: heredado */
+/* crítica: P4 H5 E4 S4 R4 V4 · lo más flojo: E, el badge eyebrow del hero y los pills con punto y separador de punto medio eran el tell de máquina; el badge se quita y los pills quedan con su gap limpio */
+/* Hallmark · dismissed 74 · el acento indigo es el mood trust heredado de la página, no un swatch copiado ahora */
+/* waives de marca en .hallmark/waivers.md: 54 section-tag (sistema de secciones numeradas, BRAND-SPEC), 19 guion dentro de section-tag (separador del sistema), R1 Inter display, R64 mono en cifras */
+    /* ===== Overrides de Floor para esta página ===== */
+    html, body { overflow-x: clip; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+    a:active, button:active { transform: translateY(1px); }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+    .footer-legal { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; }
+    .footer-legal a { margin: 0; }
+    .hero h1, .section-header h2, .cta-box h2, .process-step h3 { text-wrap: balance; }
+    .cta-secondary { white-space: nowrap; }
+    :root { --accent-color: #6366f1; --hero-badge-bg: #6366f11a; --hero-badge-border: #6366f140; --hero-badge-ink: #818cf8; }
+    .hero-badge { background: var(--hero-badge-bg); border: 1px solid var(--hero-badge-border); color: var(--hero-badge-ink); }
     /* Logo de marca: swap light/dark según data-theme (toggles main.js) */
     .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; }
     .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
@@ -47,7 +60,7 @@
                 <a href="/lo-que-cubre.html#automation">Automation</a>
                 <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
                 <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
-                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo</a>
               </div>
               <div class="mega-section">
                 <div class="mega-section-title">Servicios</div>
@@ -119,20 +132,14 @@
 
     <section class="hero hero-centered">
       <div class="container">
-        <div class="hero-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
-          Método
-        </div>
         <h1>Trato directo con quien dirige</h1>
         <p class="subtitle">
-          Diseño y ejecución ad-hoc en cada cuenta. Analizo tu caso —paid media, estrategia, tecnología y automation, ajustado a la realidad de tu negocio, no a un playbook. Lo que se decide en la primera reunión es lo que se ejecuta. Sin intermediarios, sin delegados, sin perfiles junior.
+          Ad-hoc en cada cuenta. Decidido en la primera reunión, ejecutado. Sin intermediarios.
         </p>
         <div class="verbs-row">
-          <span class="verb-pill"><span class="dot"></span>analizo</span>
-          <span class="verb-separator">·</span>
-          <span class="verb-pill"><span class="dot"></span>ejecuto</span>
-          <span class="verb-separator">·</span>
-          <span class="verb-pill"><span class="dot"></span>acompaño</span>
+          <span class="verb-pill">analizo</span>
+          <span class="verb-pill">ejecuto</span>
+          <span class="verb-pill">acompaño</span>
         </div>
       </div>
     </section>
@@ -146,7 +153,7 @@
           <p>Diseño, ejecuto y reporto yo. Si llamas, descuelgo yo. Nada se pierde en el traspaso.</p>
         </div>
         <div class="prose" style="max-width:760px;margin:0 auto;">
-          <p>Estrategia y operación: yo. Producción audiovisual: mi productora asociada. Diseño: diseñador propio para cuando la demanda de creativos sube. Vídeo: editores para el volumen. Lo repetitivo: mis agentes de IA — revisados por mí. Y refuerzo técnico senior para problemas de gran escala si surgen.</p>
+          <p>Estrategia y operación: yo. Producción audiovisual: mi productora asociada. Diseño: diseñador propio para cuando la demanda de creativos sube. Vídeo: editores para el volumen. Lo repetitivo: mis agentes de IA, revisados por mí. Y refuerzo técnico senior para problemas de gran escala si surgen.</p>
           <p><strong>La persona que te vende es la que dirige todo.</strong></p>
         </div>
       </div>
@@ -161,19 +168,19 @@
         </div>
         <div class="pillars-grid">
           <div class="pillar-card">
-            <div class="pillar-quote">"Hablas conmigo desde la primera llamada."</div>
+            <div class="pillar-quote">“Hablas conmigo desde la primera llamada.”</div>
             <div class="pillar-meta">Sin filtros</div>
           </div>
           <div class="pillar-card">
-            <div class="pillar-quote">"Sin handoffs. Sin perfiles junior."</div>
+            <div class="pillar-quote">“Sin handoffs. Sin perfiles junior.”</div>
             <div class="pillar-meta">Sin handoffs</div>
           </div>
           <div class="pillar-card">
-            <div class="pillar-quote">"Del análisis al resultado, contigo."</div>
+            <div class="pillar-quote">“Del análisis al resultado, contigo.”</div>
             <div class="pillar-meta">Acompañamiento</div>
           </div>
           <div class="pillar-card">
-            <div class="pillar-quote">"Reporto margen de contribución, payback de CAC y LTV por cohorte. No ROAS plataforma."</div>
+            <div class="pillar-quote">“Reporto margen de contribución, payback de CAC y LTV por cohorte. No ROAS plataforma.”</div>
             <div class="pillar-meta">Métricas que importan</div>
           </div>
         </div>
@@ -193,7 +200,7 @@
             <div class="process-step-num voice-machine">01</div>
             <div>
               <h3>Diagnóstico: medir antes de tocar <span class="voice-machine">(semana 0)</span></h3>
-              <p>Llamada de <span class="voice-machine">30 minutos</span> conmigo. Lectura inicial de cuenta paid, Shopify y tracking. El tracking se instala el día uno — del tracking cuelga el porcentaje y el caso de éxito. Te devuelvo la palanca que mueve más caja a <span class="voice-machine">90 días</span>. Sin coste, sin compromiso.</p>
+              <p>Llamada de <span class="voice-machine">30 minutos</span> conmigo. Lectura inicial de cuenta paid, Shopify y tracking. El tracking se instala el día uno: del tracking cuelga el porcentaje y el caso de éxito. Te devuelvo la palanca que mueve más caja a <span class="voice-machine">90 días</span>. Sin coste, sin compromiso.</p>
             </div>
           </div>
           <div class="process-step">
@@ -249,7 +256,7 @@
       <div class="container">
         <div class="cta-box" style="background:var(--bg-card);">
           <div class="section-tag" style="position:relative;">05 — Lección Douf</div>
-          <h2 class="h2-serif" style="font-size:1.5rem;">"Si capitalizas un éxito antes de entender qué lo produjo, lo matas."</h2>
+          <h2 class="h2-serif" style="font-size:1.5rem;">“Si capitalizas un éxito antes de entender qué lo produjo, lo matas.”</h2>
           <p style="font-size:1rem;">Cuando una creatividad o un canal empieza a funcionar, el reflejo es escalarlo. Pero escalar sin entender por qué funciona destruye el resultado. Por eso analizo antes de ejecutar, ejecuto antes de escalar y acompaño antes de soltar.</p>
         </div>
       </div>
@@ -262,8 +269,8 @@
           <h2 class="h2-serif">Empezar por el diagnóstico</h2>
           <p>Auditoría gratuita de 30 minutos conmigo. Si no encajamos, te lo digo.</p>
           <div class="hero-cta" style="justify-content:center;">
-            <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-            <a href="/growth-partner.html" class="cta-secondary">Ver modelo Growth Partner</a>
+            <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="/growth-partner.html" class="cta-secondary" style="white-space:nowrap;">Ver modelo Growth Partner</a>
           </div>
         </div>
       </div>
@@ -290,8 +297,8 @@
         </div>
       </div>
       <div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;">
-        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Política de privacidad</a> · <a href="/cookies.html">Política de cookies</a> · <a href="/terminos.html">Términos</a></p>
-        <p class="footer-copy">© 2026 DaybyDay Consulting · Madrid</p>
+        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> <a href="/privacidad.html">Política de privacidad</a> <a href="/cookies.html">Política de cookies</a> <a href="/terminos.html">Términos</a></p>
+        <p class="footer-copy">© 2026 DayByDay Consulting. Analizamos, ejecutamos, acompañamos.</p>
       </div>
     </div>
   </footer>

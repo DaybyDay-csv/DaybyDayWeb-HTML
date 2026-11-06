@@ -22,7 +22,16 @@
   <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 
   <style>
+/* Hallmark · v2.0.0 · redesign full · tools/calculadora-mides/index.html · theme: DaybyDay brand (locked BRAND-SPEC: Inter display, Source Serif humano, papel/tinta, acento #3B82F6) · genre editorial · shape: app screen (calculadora: hero + dos paneles de controles + barras comparadas + pie) · signature: el resultado recalculado en vivo mientras mueves el slider · imagery: ninguna foto, todo construido en vivo · entry: hero stage centrado · nav: mega heredado · footer: heredado · waived: 54 section-tag (sistema Brand-SPEC bloqueado: eyebrow numerado del site) */
+/* crítica: P4 H5 E4 S5 R4 V5 · lo más flojo: E, la etiqueta de panel en mayúsculas era el único tic de plantilla; pasa a frase con el cuerpo */
     /* Logo de marca: swap light/dark según data-theme (toggles main.js) */
+    html, body { overflow-x: clip; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px;
+    }
+    a:active, button:active { opacity: 0.85; }
+    button:disabled, input:disabled, select:disabled, textarea:disabled { opacity: 0.5; cursor: not-allowed; }
+    :root { --calc-bar-ink: #FAF8F3; }
     .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; }
     .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
     [data-theme="dark"] .logo-ink { display: none; }
@@ -38,6 +47,7 @@
       font-weight: 600;
       font-size: clamp(2.1rem, 4.2vw, 3rem);
       line-height: 1.12;
+      text-wrap: balance;
       margin: 0.75rem 0 0.85rem;
     }
     .calc-sub { color: var(--text-secondary); font-size: 1.05rem; line-height: 1.65; max-width: 640px; margin: 0 0 0.75rem; }
@@ -53,11 +63,11 @@
       padding: 1.6rem 1.6rem 1.8rem;
     }
     .panel-head {
-      font-family: var(--font-machine);
+      font-family: var(--font);
       font-weight: 500;
       font-size: 0.74rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
+      text-transform: none;
+      letter-spacing: 0;
       color: var(--text-muted);
       border-bottom: 1px solid color-mix(in srgb, var(--ink) 30%, transparent);
       padding-bottom: 0.6rem;
@@ -110,8 +120,8 @@
     .bar-row { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.65rem; }
     .bar-row .cap { width: 118px; font-size: 0.72rem; color: var(--text-muted); text-align: right; flex: none; }
     .bar-track { flex: 1; height: 28px; background: color-mix(in srgb, var(--ink) 6%, transparent); border-radius: 4px; overflow: hidden; }
-    .bar-fill { height: 100%; transition: width .35s cubic-bezier(.2,.7,.2,1); display: flex; align-items: center; padding-left: 0.7rem; }
-    .bar-fill span { font-size: 0.78rem; color: #FAF8F3; white-space: nowrap; }
+    .bar-fill { height: 100%; display: flex; align-items: center; padding-left: 0.7rem; }
+    .bar-fill span { font-size: 0.78rem; color: var(--calc-bar-ink); white-space: nowrap; }
     .bars-note { font-size: 0.75rem; color: var(--text-muted); margin: 0.7rem 0 0; }
 
     /* Pie: nota técnica + reset */
@@ -122,7 +132,7 @@
     .calc-foot .foot-note { font-size: 0.75rem; line-height: 1.6; color: var(--text-muted); max-width: 640px; }
     .reset {
       background: none; border: 1px dashed color-mix(in srgb, var(--ink) 35%, transparent);
-      color: var(--text-secondary); font-size: 0.75rem; padding: 0.5rem 0.9rem; cursor: pointer;
+      color: var(--text-secondary); font-size: 0.75rem; padding: 0.5rem 0.9rem; cursor: pointer; white-space: nowrap;
       transition: border-color .2s ease, color .2s ease;
     }
     .reset:hover { border-color: var(--ink-blue); color: var(--text-primary); }
@@ -157,7 +167,7 @@
                 <a href="/lo-que-cubre.html#automation">Automation</a>
                 <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
                 <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
-                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo</a>
               </div>
               <div class="mega-section">
                 <div class="mega-section-title">Servicios</div>
@@ -215,7 +225,7 @@
       <div class="container calc-wrap">
         <div class="section-tag">Calculadora de retorno · Mides</div>
         <h1 class="h2-serif">Mueve los números, mira las cuentas</h1>
-        <p class="calc-sub">El mismo motor de la propuesta: presupuesto → clics → contactos → clientes. Cambia el presupuesto, el coste por clic o el ticket y mira cómo se mueve todo.</p>
+        <p class="calc-sub">El mismo motor de la propuesta: presupuesto → clics → contactos → clientes.</p>
         <span class="hand-note">Cifras conservadoras, no una promesa.</span>
 
         <div class="calc-grid">
@@ -246,7 +256,7 @@
               <div class="metric"><div class="n voice-machine" id="mCli">17</div><div class="l">clientes nuevos / mes</div></div>
               <div class="metric"><div class="n voice-machine" id="mCac">≈ 95 €</div><div class="l">coste por cliente (CAC)</div></div>
               <div class="hl parte-caja">
-                <div class="parte-caja-head"><span>RESULTADO — 12 MESES</span><span class="stamp stamp-go">GO</span></div>
+                <div class="parte-caja-head"><span>Resultado, 12 meses</span><span class="stamp stamp-go">GO</span></div>
                 <div class="parte-caja-row"><span>Clientes al año</span><span id="mYr">204</span></div>
                 <div class="parte-caja-row"><span>Facturación año 1</span><span id="mRev">61.200 €</span></div>
               </div>
@@ -270,7 +280,7 @@
 
         <div class="calc-foot">
           <div class="foot-note voice-machine">Modela la búsqueda en Google (donde hay dato real); Meta suma alcance por encima. Tasas conservadoras (4,2% de visita a contacto, 30% de contacto a cliente); el mes 1 fija tus números reales. Mides × DaybyDay.</div>
-          <button class="reset voice-machine" id="reset" type="button">Volver al ejemplo (1.600 € · 1,20 € · 300 €)</button>
+          <button class="reset voice-machine" id="reset" type="button">Volver al ejemplo (1.600 €, 1,20 €, 300 €)</button>
         </div>
       </div>
     </section>
@@ -294,7 +304,7 @@
         </div>
       </div>
       <div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;">
-        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Política de privacidad</a> · <a href="/cookies.html">Política de cookies</a> · <a href="/terminos.html">Términos</a></p>
+        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> <a href="/privacidad.html">Política de privacidad</a> <a href="/cookies.html">Política de cookies</a> <a href="/terminos.html">Términos</a></p>
         <p class="footer-copy">© 2026 DaybyDay Consulting · Madrid</p>
       </div>
     </div>

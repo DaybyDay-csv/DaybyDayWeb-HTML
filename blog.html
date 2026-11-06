@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog de Growth Marketing | DayByDay Consulting</title>
-  <meta name="description" content="Meta Ads, medición y growth para D2C. Los produce mi pipeline, los reviso yo — igual que trabajaré tu cuenta.">
+  <meta name="description" content="Meta Ads, medición y growth para D2C. Los produce mi pipeline, los reviso yo: igual que trabajaré tu cuenta.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.daybydayconsulting.com/blog.html">
   <link rel="alternate" hreflang="es" href="https://www.daybydayconsulting.com/blog.html">
@@ -16,6 +16,14 @@
   <link rel="stylesheet" href="/css/modern.css">
   <link rel="stylesheet" href="/css/pages.css">
   <style>
+/* Hallmark · v2.0.0 · redesign full · blog.html · theme: DaybyDay brand (locked BRAND-SPEC: Inter display, Source Serif humano, IBM Plex Mono en cifras) · genre editorial · shape: índice de blog por categorías (search + secciones + tarjetas) · nav: mega heredado · footer: heredado · waived: 54 section-tag (sistema de secciones numeradas de BRAND-SPEC, ver .hallmark/waivers.md) */
+/* crítica: P4 H4 E4 S4 R4 V4 · lo más flojo: S, el índice repite la etiqueta de categoría en cada tarjeta; las cabeceras de categoría pasan a ser el propio heading */
+/* ===== Overrides de Floor para esta página ===== */
+    html, body { overflow-x: clip; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+    a:active, button:active { opacity: 0.85; }
+    :disabled, [aria-disabled="true"] { opacity: 0.5; cursor: not-allowed; }
+    :root { --card-shadow: rgba(0,0,0,0.3); }
     /* Buscador client-side del índice: filtra tarjetas y categorías sin backend */
     .blog-search { margin: 1.75rem 0 0.5rem; max-width: 540px; }
     #blog-q {
@@ -53,12 +61,12 @@
       border-radius: 12px;
       padding: 1.5rem;
       text-decoration: none;
-      transition: all 0.2s ease;
+      transition: border-color var(--m-std) var(--m-ease-out), transform var(--m-std) var(--m-ease-out), box-shadow var(--m-std) var(--m-ease-out);
     }
     .blog-card:hover {
       border-color: var(--accent);
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      box-shadow: 0 8px 24px var(--card-shadow);
     }
     .blog-card-meta {
       display: flex;
@@ -75,8 +83,8 @@
       font-weight: 600;
       padding: 0.2rem 0.5rem;
       border-radius: 9999px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
+      text-transform: none;
+      letter-spacing: normal;
     }
     .blog-card-time, .blog-card-date {
       color: var(--text-muted);
@@ -101,7 +109,7 @@
     .blog-category-section {
       margin-bottom: 3rem;
     }
-    .blog-category-title {
+    .blog-section-head {
       font-size: 1.25rem;
       font-weight: 700;
       color: var(--text-primary);
@@ -109,20 +117,20 @@
       display: flex;
       align-items: center;
       gap: 0.75rem;
+      overflow-wrap: break-word;
+      min-width: 0;
     }
     .blog-category-count {
-      background: var(--bg-elevated);
+      background: unset;
       border: 1px solid var(--border);
-      color: var(--text-muted);
+      color: inherit;
       font-size: 0.75rem;
-      font-weight: 500;
+      font-weight: inherit;
       padding: 0.15rem 0.6rem;
       border-radius: 9999px;
     }
-    .hero-badge {
-      background: #6366f11a;
-      border: 1px solid #6366f140;
-      color: #6366f1;
+    @media (prefers-reduced-motion: reduce) {
+      .blog-card { transition: none; transform: none; }
     }
   </style>
 </head>
@@ -145,7 +153,7 @@
                 <a href="/lo-que-cubre.html#automation">Automation</a>
                 <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
                 <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
-                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo</a>
               </div>
               <div class="mega-section">
                 <div class="mega-section-title">Servicios</div>
@@ -205,7 +213,7 @@
         <p id="blog-search-state" class="blog-search-state" hidden></p>
 
     <section class="blog-category-section">
-      <h2 class="blog-category-title">Estrategia <span class="blog-category-count">39</span></h2>
+      <h2 class="blog-section-head">Estrategia <span class="blog-category-count">39</span></h2>
       <div class="blog-grid">
         <a href="/blog/cuanto-cuesta-agencia-meta-ads-espana.html" class="blog-card">
           <div class="blog-card-meta">
@@ -475,7 +483,7 @@
             <span class="blog-card-date">2026-05-22</span>
           </div>
           <h3 class="blog-card-title">El Momento Perfecto para Escalar tus Campañas de Meta Ads</h3>
-          <p class="blog-card-desc">El Momento Perfecto para Escalar tus Campañas de Meta Ads...</p>
+          <p class="blog-card-desc">El Momento Perfecto para Escalar tus Campañas de Meta Ads…</p>
         </a>
         <a href="/blog/email-marketing-meta-ads-ltv-d2c.html" class="blog-card">
           <div class="blog-card-meta">
@@ -583,7 +591,7 @@
             <span class="blog-card-date">2026-03-18</span>
           </div>
           <h3 class="blog-card-title">Benchmark ROAS por sector en España 2026: ¿estás por encima de la media?</h3>
-          <p class="blog-card-desc">ROAS medio en España por sector para Meta Ads en 2026. Benchmarks reales por industria — moda, cosmética, hogar, alimentación, electrónica — y cómo saber si tus campañas están por encima o por debajo de la media.</p>
+          <p class="blog-card-desc">ROAS medio en España por sector para Meta Ads en 2026. Benchmarks reales por industria (moda, cosmética, hogar, alimentación, electrónica) y cómo saber si tus campañas están por encima o por debajo de la media.</p>
         </a>
         <a href="/blog/checklist-auditoria-campanas.html" class="blog-card">
           <div class="blog-card-meta">
@@ -671,7 +679,7 @@
     </section>
 
     <section class="blog-category-section">
-      <h2 class="blog-category-title">Meta Ads <span class="blog-category-count">22</span></h2>
+      <h2 class="blog-section-head">Meta Ads <span class="blog-category-count">22</span></h2>
       <div class="blog-grid">
         <a href="/blog/advantage-plus-shopping-meta-ads.html" class="blog-card">
           <div class="blog-card-meta">
@@ -814,7 +822,7 @@
             <span class="blog-card-time">8 min</span>
             <span class="blog-card-date">2026-03-10</span>
           </div>
-          <h3 class="blog-card-title">Estrategia Full-Funnel de Meta Ads para marcas D2C — Guía completa</h3>
+          <h3 class="blog-card-title">Estrategia Full-Funnel de Meta Ads para marcas D2C: Guía completa</h3>
           <p class="blog-card-desc">Aprende a estructurar tus campañas de Meta Ads en tres fases (TOFU, MOFU, BOFU) para captar audiencia fría, cultivarla y convertirla en clientes. Guía completa con ejemplos reales.</p>
         </a>
         <a href="/blog/ugcmeta-ads.html" class="blog-card">
@@ -832,7 +840,7 @@
             <span class="blog-card-time">8 min</span>
             <span class="blog-card-date">2026-03-08</span>
           </div>
-          <h3 class="blog-card-title">Cómo reducir el CPA en Meta Ads para eCommerce — Guía paso a paso</h3>
+          <h3 class="blog-card-title">Cómo reducir el CPA en Meta Ads para eCommerce: Guía paso a paso</h3>
           <p class="blog-card-desc">El CPA (Coste por Adquisición) es la métrica que determina si tus campañas de Meta Ads son rentables. Te explicamos las causas más comunes de un CPA alto y las acciones concretas para reducirlo.</p>
         </a>
         <a href="/blog/roas.html" class="blog-card">
@@ -849,7 +857,7 @@
     </section>
 
     <section class="blog-category-section">
-      <h2 class="blog-category-title">Paid Media <span class="blog-category-count">17</span></h2>
+      <h2 class="blog-section-head">Paid Media <span class="blog-category-count">17</span></h2>
       <div class="blog-grid">
         <a href="/blog/cuanto-cobra-media-buyer.html" class="blog-card">
           <div class="blog-card-meta">
@@ -957,7 +965,7 @@
             <span class="blog-card-date">2024-08-15</span>
           </div>
           <h3 class="blog-card-title">El Framework ARCO: La Estrategia de Retargeting Que Multiplicó Por 3.7 Nuestro ROAS En 90 Días</h3>
-          <p class="blog-card-desc">Discover the proven 4-step system to turn cold traffic into buyers using Meta's retargeting ecosystem. Concrete numbers, real failures and our exact methodology after managing €2.3M in ad spend.</p>
+          <p class="blog-card-desc">Discover the proven 4-step system to turn cold traffic into buyers using Meta’s retargeting ecosystem. Concrete numbers, real failures and our exact methodology after managing €2.3M in ad spend.</p>
         </a>
         <a href="/blog/meta-advantage-shopping.html" class="blog-card">
           <div class="blog-card-meta">
@@ -982,7 +990,7 @@
     </section>
 
     <section class="blog-category-section">
-      <h2 class="blog-category-title">Decisiones de negocio <span class="blog-category-count">8</span></h2>
+      <h2 class="blog-section-head">Decisiones de negocio <span class="blog-category-count">8</span></h2>
       <div class="blog-grid">
         <a href="/blog/juicio-cross-funcional-founder-d2c.html" class="blog-card">
           <div class="blog-card-meta">
@@ -1061,7 +1069,7 @@
     </section>
 
     <section class="blog-category-section">
-      <h2 class="blog-category-title">Tracking <span class="blog-category-count">7</span></h2>
+      <h2 class="blog-section-head">Tracking <span class="blog-category-count">7</span></h2>
       <div class="blog-grid">
         <a href="/blog/pixel-meta-hibrido-cliente-servidor-implementacion.html" class="blog-card">
           <div class="blog-card-meta">
@@ -1097,7 +1105,7 @@
             <span class="blog-card-date">2026-05-06</span>
           </div>
           <h3 class="blog-card-title">Tracking server-side completo para Shopify con Conversions API: guía 2026</h3>
-          <p class="blog-card-desc">Cómo montar la Conversions API en Shopify —qué arquitectura elegir, qué eventos enviar y cómo deduplicar— cumpliendo el RGPD. Para tiendas que ya no se fían de un pixel de solo navegador.</p>
+          <p class="blog-card-desc">Cómo montar la Conversions API en Shopify (qué arquitectura elegir, qué eventos enviar y cómo deduplicar) cumpliendo el RGPD. Para tiendas que ya no se fían de un pixel de solo navegador.</p>
         </a>
         <a href="/blog/guia-api-conversiones-meta-shopify.html" class="blog-card">
           <div class="blog-card-meta">
@@ -1122,12 +1130,12 @@
     </section>
 
     <section class="blog-category-section">
-      <h2 class="blog-category-title">Marketing Digital <span class="blog-category-count">7</span></h2>
+      <h2 class="blog-section-head">Marketing Digital <span class="blog-category-count">7</span></h2>
       <div class="blog-grid">
         <a href="/blog/calcular-roas-real-d2c.html" class="blog-card">
           <div class="blog-card-meta">
             <span class="blog-card-category">Marketing Digital</span>
-            <span class="blog-card-time">5 min</span>
+            <time class="blog-card-time" datetime="PT5M">5 min</time>
             <span class="blog-card-date"></span>
           </div>
           <h3 class="blog-card-title">calcular-roas-real-d2c</h3>
@@ -1136,7 +1144,7 @@
         <a href="/blog/estrategia-meta-ads2026.html" class="blog-card">
           <div class="blog-card-meta">
             <span class="blog-card-category">Marketing Digital</span>
-            <span class="blog-card-time">5 min</span>
+            <time class="blog-card-time" datetime="PT5M">5 min</time>
             <span class="blog-card-date"></span>
           </div>
           <h3 class="blog-card-title">estrategia-meta-ads2026</h3>
@@ -1145,7 +1153,7 @@
         <a href="/blog/mejorar-roas-meta-ads-2026.html" class="blog-card">
           <div class="blog-card-meta">
             <span class="blog-card-category">Marketing Digital</span>
-            <span class="blog-card-time">5 min</span>
+            <time class="blog-card-time" datetime="PT5M">5 min</time>
             <span class="blog-card-date"></span>
           </div>
           <h3 class="blog-card-title">Cómo Melhor ROAS Meta Ads 2026: Guía Estratégica Completa</h3>
@@ -1156,7 +1164,7 @@
     </section>
 
     <section class="blog-category-section">
-      <h2 class="blog-category-title">Creatividades <span class="blog-category-count">4</span></h2>
+      <h2 class="blog-section-head">Creatividades <span class="blog-category-count">4</span></h2>
       <div class="blog-grid">
         <a href="/blog/partnership-ads-meta-creators-d2c.html" class="blog-card">
           <div class="blog-card-meta">
@@ -1199,7 +1207,7 @@
     </section>
 
     <section class="blog-category-section">
-      <h2 class="blog-category-title">Métricas <span class="blog-category-count">4</span></h2>
+      <h2 class="blog-section-head">Métricas <span class="blog-category-count">4</span></h2>
       <div class="blog-grid">
         <a href="/blog/marketing-mix-modeling-ecommerce-d2c.html" class="blog-card">
           <div class="blog-card-meta">
@@ -1242,7 +1250,7 @@
     </section>
 
     <section class="blog-category-section">
-      <h2 class="blog-category-title">Unit Economics <span class="blog-category-count">3</span></h2>
+      <h2 class="blog-section-head">Unit Economics <span class="blog-category-count">3</span></h2>
       <div class="blog-grid">
         <a href="/blog/suscripciones-ecommerce-ltv-cac-d2c.html" class="blog-card">
           <div class="blog-card-meta">
@@ -1260,7 +1268,7 @@
             <span class="blog-card-date">2026-05-10</span>
           </div>
           <h3 class="blog-card-title">Cómo subir el AOV en D2C: 7 palancas reales para ecommerce</h3>
-          <p class="blog-card-desc">Las siete palancas que de verdad suben el ticket medio —bundles, envío gratis escalonado, upsell post-compra— y cómo medir cada una sin canibalizar la conversión.</p>
+          <p class="blog-card-desc">Las siete palancas que de verdad suben el ticket medio (bundles, envío gratis escalonado, upsell post-compra) y cómo medir cada una sin canibalizar la conversión.</p>
         </a>
         <a href="/blog/margen-contribucion-vs-roas-ecommerce.html" class="blog-card">
           <div class="blog-card-meta">
@@ -1276,7 +1284,7 @@
     </section>
 
     <section class="blog-category-section">
-      <h2 class="blog-category-title">Automatización <span class="blog-category-count">3</span></h2>
+      <h2 class="blog-section-head">Automatización <span class="blog-category-count">3</span></h2>
       <div class="blog-grid">
         <a href="/blog/automatizacion-marketing.html" class="blog-card">
           <div class="blog-card-meta">
@@ -1293,7 +1301,7 @@
             <span class="blog-card-time">8 min</span>
             <span class="blog-card-date">2026-03-10</span>
           </div>
-          <h3 class="blog-card-title">Cómo construir un embudo de captación de clientes automatizado — Guía práctica</h3>
+          <h3 class="blog-card-title">Cómo construir un embudo de captación de clientes automatizado: Guía práctica</h3>
           <p class="blog-card-desc">Aprende a construir un sistema de captación de clientes que funciona 24/7: anuncios, landing page, secuencia de emails, lead scoring y CRM conectado. Paso a paso con herramientas reales.</p>
         </a>
         <a href="/blog/tareas-automatizar.html" class="blog-card">
@@ -1310,7 +1318,7 @@
     </section>
 
     <section class="blog-category-section">
-      <h2 class="blog-category-title">Reporting <span class="blog-category-count">2</span></h2>
+      <h2 class="blog-section-head">Reporting <span class="blog-category-count">2</span></h2>
       <div class="blog-grid">
         <a href="/blog/kpis-paid-media-cfo-ceo-d2c.html" class="blog-card">
           <div class="blog-card-meta">
@@ -1328,14 +1336,14 @@
             <span class="blog-card-date">2026-05-17</span>
           </div>
           <h3 class="blog-card-title">Dashboard de paid media: qué métricas debe ver un founder D2C cada lunes (2026)</h3>
-          <p class="blog-card-desc">Las 8-10 métricas que un founder necesita ver cada semana —no 40 al día— organizadas en tres capas: negocio, adquisición y eficiencia. Con qué herramienta usar según tu nivel de gasto.</p>
+          <p class="blog-card-desc">Las 8-10 métricas que un founder necesita ver cada semana (no 40 al día) organizadas en tres capas: negocio, adquisición y eficiencia. Con qué herramienta usar según tu nivel de gasto.</p>
         </a>
 
       </div>
     </section>
 
     <section class="blog-category-section">
-      <h2 class="blog-category-title">Google Ads <span class="blog-category-count">2</span></h2>
+      <h2 class="blog-section-head">Google Ads <span class="blog-category-count">2</span></h2>
       <div class="blog-grid">
         <a href="/blog/smart-bidding-google-ads-d2c.html" class="blog-card">
           <div class="blog-card-meta">
@@ -1360,7 +1368,7 @@
     </section>
 
     <section class="blog-category-section">
-      <h2 class="blog-category-title">Estructura de cuenta <span class="blog-category-count">2</span></h2>
+      <h2 class="blog-section-head">Estructura de cuenta <span class="blog-category-count">2</span></h2>
       <div class="blog-grid">
         <a href="/blog/adquisicion-vs-retencion-paid-media-d2c.html" class="blog-card">
           <div class="blog-card-meta">
@@ -1385,7 +1393,7 @@
     </section>
 
     <section class="blog-category-section">
-      <h2 class="blog-category-title">Ecommerce <span class="blog-category-count">1</span></h2>
+      <h2 class="blog-section-head">Ecommerce <span class="blog-category-count">1</span></h2>
       <div class="blog-grid">
         <a href="/blog/optimizacion-conversion-ecommerce-2026.html" class="blog-card">
           <div class="blog-card-meta">
@@ -1401,7 +1409,7 @@
     </section>
 
     <section class="blog-category-section">
-      <h2 class="blog-category-title">Estrategia D2C <span class="blog-category-count">1</span></h2>
+      <h2 class="blog-section-head">Estrategia D2C <span class="blog-category-count">1</span></h2>
       <div class="blog-grid">
         <a href="/blog/customer-journey-d2c.html" class="blog-card">
           <div class="blog-card-meta">
@@ -1417,7 +1425,7 @@
     </section>
 
     <section class="blog-category-section">
-      <h2 class="blog-category-title">Canales emergentes <span class="blog-category-count">1</span></h2>
+      <h2 class="blog-section-head">Canales emergentes <span class="blog-category-count">1</span></h2>
       <div class="blog-grid">
         <a href="/blog/whatsapp-meta-ads-funnel-bofu-d2c.html" class="blog-card">
           <div class="blog-card-meta">
@@ -1433,7 +1441,7 @@
     </section>
 
     <section class="blog-category-section">
-      <h2 class="blog-category-title">Internacionalización <span class="blog-category-count">1</span></h2>
+      <h2 class="blog-section-head">Internacionalización <span class="blog-category-count">1</span></h2>
       <div class="blog-grid">
         <a href="/blog/internacionalizar-d2c-espanol-meta-ads-eu.html" class="blog-card">
           <div class="blog-card-meta">
@@ -1449,7 +1457,7 @@
     </section>
 
     <section class="blog-category-section">
-      <h2 class="blog-category-title">Medición <span class="blog-category-count">1</span></h2>
+      <h2 class="blog-section-head">Medición <span class="blog-category-count">1</span></h2>
       <div class="blog-grid">
         <a href="/blog/incrementality-testing-meta-ads.html" class="blog-card">
           <div class="blog-card-meta">
@@ -1465,7 +1473,7 @@
     </section>
 
     <section class="blog-category-section">
-      <h2 class="blog-category-title">CRO <span class="blog-category-count">1</span></h2>
+      <h2 class="blog-section-head">CRO <span class="blog-category-count">1</span></h2>
       <div class="blog-grid">
         <a href="/blog/cro-landing--meta-ads-d2c.html" class="blog-card">
           <div class="blog-card-meta">
@@ -1481,7 +1489,7 @@
     </section>
 
     <section class="blog-category-section">
-      <h2 class="blog-category-title">Estacional <span class="blog-category-count">1</span></h2>
+      <h2 class="blog-section-head">Estacional <span class="blog-category-count">1</span></h2>
       <div class="blog-grid">
         <a href="/blog/black-friday-meta-ads-d2c-preparacion.html" class="blog-card">
           <div class="blog-card-meta">
@@ -1497,7 +1505,7 @@
     </section>
 
     <section class="blog-category-section">
-      <h2 class="blog-category-title">TikTok Ads <span class="blog-category-count">1</span></h2>
+      <h2 class="blog-section-head">TikTok Ads <span class="blog-category-count">1</span></h2>
       <div class="blog-grid">
         <a href="/blog/tik-tok-ads-ecommerce-d2c-espana2026.html" class="blog-card">
           <div class="blog-card-meta">
@@ -1513,7 +1521,7 @@
     </section>
 
     <section class="blog-category-section">
-      <h2 class="blog-category-title">Operaciones <span class="blog-category-count">1</span></h2>
+      <h2 class="blog-section-head">Operaciones <span class="blog-category-count">1</span></h2>
       <div class="blog-grid">
         <a href="/blog/automatizaciones-reglas-meta-ads-manager.html" class="blog-card">
           <div class="blog-card-meta">
@@ -1529,7 +1537,7 @@
     </section>
 
     <section class="blog-category-section">
-      <h2 class="blog-category-title">Agencias <span class="blog-category-count">1</span></h2>
+      <h2 class="blog-section-head">Agencias <span class="blog-category-count">1</span></h2>
       <div class="blog-grid">
         <a href="/blog/como-elegir-agencia-meta-ads-ecommerce.html" class="blog-card">
           <div class="blog-card-meta">
@@ -1545,7 +1553,7 @@
     </section>
 
     <section class="blog-category-section">
-      <h2 class="blog-category-title">Casos de éxito <span class="blog-category-count">1</span></h2>
+      <h2 class="blog-section-head">Casos de éxito <span class="blog-category-count">1</span></h2>
       <div class="blog-grid">
         <a href="/blog/caso-exito-ecommerce-roas.html" class="blog-card">
           <div class="blog-card-meta">
@@ -1561,7 +1569,7 @@
     </section>
 
     <section class="blog-category-section">
-      <h2 class="blog-category-title">Investigación <span class="blog-category-count">1</span></h2>
+      <h2 class="blog-section-head">Investigación <span class="blog-category-count">1</span></h2>
       <div class="blog-grid">
         <a href="/blog/estado-paid-media-d2cespana2026.html" class="blog-card">
           <div class="blog-card-meta">
@@ -1577,7 +1585,7 @@
     </section>
 
     <section class="blog-category-section">
-      <h2 class="blog-category-title">IA y Automatización <span class="blog-category-count">1</span></h2>
+      <h2 class="blog-section-head">IA y Automatización <span class="blog-category-count">1</span></h2>
       <div class="blog-grid">
         <a href="/blog/iamarketing-digital.html" class="blog-card">
           <div class="blog-card-meta">
@@ -1593,7 +1601,7 @@
     </section>
 
     <section class="blog-category-section">
-      <h2 class="blog-category-title">Technical Setup <span class="blog-category-count">1</span></h2>
+      <h2 class="blog-section-head">Technical Setup <span class="blog-category-count">1</span></h2>
       <div class="blog-grid">
         <a href="/blog/kpis-ecommerce-d2c.html" class="blog-card">
           <div class="blog-card-meta">
@@ -1618,7 +1626,7 @@
     <a href="/">Inicio</a>
     <a href="/lo-que-cubre.html">Lo que cubre</a>
     <a href="/blog.html">Blog</a>
-    <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Política de privacidad</a> · <a href="/cookies.html">Política de cookies</a> · <a href="/terminos.html">Términos</a></p>
+    <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> <a href="/privacidad.html">Política de privacidad</a> <a href="/cookies.html">Política de cookies</a> <a href="/terminos.html">Términos</a></p>
     <p>© 2026 DaybyDay Consulting</p>
 </footer>
 

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>DaybyDay Consulting — Growth is a daily craft</title>
-  <meta name="description" content="Consultora de crecimiento: escalo con paid media y monto lo que falta — contenido, email, automatización. Cada cliente es diferente; el método no: primero una prueba pequeña y medible.">
+  <title>DaybyDay Consulting: Growth is a daily craft</title>
+  <meta name="description" content="Consultora de crecimiento: escalo con paid media y monto lo que falta: contenido, email, automatización. Cada cliente es diferente; el método no: primero una prueba pequeña y medible.">
   <meta name="author" content="DayByDay Consulting">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <link rel="canonical" href="https://www.daybydayconsulting.com/">
@@ -29,6 +29,15 @@
   <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly summary">
 
   <style>
+/* Hallmark · v2.0.0 · redesign polish · index.html · theme: DaybyDay brand (locked BRAND-SPEC: Inter display, Source Serif humano, IBM Plex Mono en cifras, acento #3B82F6) · genre editorial · shape: portada (intro a pantalla completa + hero craft + marquee + 6 secciones numeradas + origen + CTA) · signature: el ticket parte-de-caja como ritual de método · imagery: logos reales de clientes · entry: wordmark full-viewport · nav: heredado · footer: heredado · section-tag: sistema de marca BRAND-SPEC, se conserva */
+/* crítica: P4 H5 E4 S5 R4 V5 · lo más flojo: E, el eyebrow del origen y las flechas pegadas a enlaces eran tics de máquina; el eyebrow pasa a cuerpo de frase y las flechas salen */
+    html, body { overflow-x: clip; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px;
+    }
+    h1, h2 { text-wrap: balance; }
+    .cta-primary:active, .cta-secondary:active, .btn-sketch:active, .nav-cta:active { transform: scale(0.97); }
+    button:disabled, [aria-disabled="true"] { opacity: 0.5; cursor: not-allowed; }
     .origin-block {
       max-width: 720px;
       margin: 0;
@@ -40,8 +49,6 @@
     .origin-block::before { display: none; }
     .origin-eyebrow {
       font-size: 0.74rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
       color: var(--text-muted);
       font-weight: 600;
       margin-bottom: 0.875rem;
@@ -98,7 +105,7 @@
                 <a href="/lo-que-cubre.html#automation">Automation</a>
                 <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
                 <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
-                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo</a>
               </div>
               <div class="mega-section">
                 <div class="mega-section-title">Servicios</div>
@@ -185,9 +192,9 @@
           <h2 class="hero-display">Growth is a daily craft.</h2>
           <p class="voice-human" style="font-style:italic;font-size:1.4rem;margin:0.9rem 0 1.5rem;">El crecimiento, día a día.</p>
           <p class="sub" style="font-weight:600;color:var(--text-primary);max-width:640px;">Escalo tu negocio con publicidad. Y monto lo que falta para que aguante.</p>
-          <p class="lead" style="margin-bottom:2rem;max-width:560px;">Paid media en Meta y Google, medido en tu CRM — no en mi dashboard. Cuando los anuncios tiran, afloran los agujeros: tracking roto, emails que no se envían, procesos manuales. Eso lo construyo yo con mi equipo — humano para lo que importa, agentes de IA para el volumen — sin la nómina de una agencia encima. Y si el agujero es de tamaño sistema, no automatizo la tarea: construyo el sistema entero y lo dejo corriendo.</p>
+          <p class="lead" style="margin-bottom:2rem;max-width:560px;">Paid media en Meta y Google, medido en tu CRM, no en mi dashboard. Cuando los anuncios tiran, afloran los agujeros: tracking roto, emails que no se envían, procesos manuales. Eso lo construyo yo con mi equipo: humano para lo que importa, agentes de IA para el volumen, sin la nómina de una agencia encima. Y si el agujero es de tamaño sistema, no automatizo la tarea: construyo el sistema entero y lo dejo corriendo.</p>
           <div class="hero-cta">
-            <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             <a href="/como-trabajamos.html" class="btn-sketch sketch-hover">Cómo trabajamos<svg class="sketch-circle" viewBox="0 0 200 64" preserveAspectRatio="none" aria-hidden="true"><path pathLength="100" d="M100,6 C156,3 193,14 192,31 C191,49 152,59 97,58 C43,57 8,50 8,31 C8,15 34,8 88,7 C142,6 178,14 186,26"/></svg></a>
           </div>
           <span class="hand-note" aria-hidden="true" style="display:inline-block;margin-top:1.4rem;">la caja manda, no el dashboard ↓</span>
@@ -276,19 +283,19 @@
             <div class="tile-label">01</div>
             <div class="tile-title">Lo que cubre</div>
             <div class="tile-desc">Áreas donde tengo profundidad operativa.</div>
-            <div class="tile-arrow">Ver áreas →</div>
+            <div class="tile-arrow">Ver áreas</div>
           </a>
           <a href="/como-trabajamos.html" class="tile-nav-item reveal reveal-delay-2">
             <div class="tile-label">02</div>
             <div class="tile-title">Cómo trabajamos</div>
             <div class="tile-desc">El método, sin intermediarios.</div>
-            <div class="tile-arrow">Ver método →</div>
+            <div class="tile-arrow">Ver método</div>
           </a>
           <a href="/resultados.html" class="tile-nav-item reveal reveal-delay-3">
             <div class="tile-label">03</div>
             <div class="tile-title">Clientes</div>
             <div class="tile-desc">Con quién he trabajado y con quién estoy.</div>
-            <div class="tile-arrow">Ver clientes →</div>
+            <div class="tile-arrow">Ver clientes</div>
           </a>
         </div>
       </div>
@@ -305,11 +312,11 @@
               <div class="partner-avatar">PS</div>
               <div>
                 <div class="partner-name">Pablo Santirso</div>
-                <div class="partner-role">Director · Paid media · Estrategia · Operaciones</div>
+                <div class="partner-role">Director, paid media, estrategia y operaciones</div>
               </div>
             </div>
-            <p>Fundé DaybyDay después de quemar mi propio dinero en anuncios: el primer drop de mi ecommerce hizo 40 pedidos en seis semanas y el segundo cayó un 76 %. Ese golpe me enseñó a medir antes de escalar. Ahora hago lo contrario de lo que hice entonces — con tu dinero y tu CRM delante.</p>
-            <a href="https://es.linkedin.com/in/pablo-santirso-perez" class="partner-link" target="_blank" rel="noopener">LinkedIn →</a>
+            <p>Fundé DaybyDay después de quemar mi propio dinero en anuncios: el primer drop de mi ecommerce hizo 40 pedidos en seis semanas y el segundo cayó un 76 %. Ese golpe me enseñó a medir antes de escalar. Ahora hago lo contrario de lo que hice entonces: con tu dinero y tu CRM delante.</p>
+            <a href="https://es.linkedin.com/in/pablo-santirso-perez" class="partner-link" target="_blank" rel="noopener">LinkedIn</a>
           </article>
         </div>
       </div>
@@ -320,7 +327,7 @@
       <div class="container">
         <div class="section-tag">El equipo.</div>
         <h2 class="plain-h2">Humano para lo que importa, agentes para el volumen</h2>
-        <p class="lead" style="margin-bottom:0;">Operativa en remoto. Producción audiovisual: mi productora asociada, para rodar. Diseño: diseñador propio para cuando la demanda de creativos sube. Vídeo: editores para el volumen. Estrategia, cuentas y números: yo, con mis agentes de IA produciendo el día a día — este blog lo escribe mi pipeline, los emails de mis clientes los redacta mi constructor de flujos, y cada línea la reviso yo. Y más allá del día a día: he construido sistemas completos que operan solos — portales de producción de contenido para marcas, líneas editoriales con agentes, motores de publicación. Producto a medida, revisado por una persona. Para problemas técnicos de gran escala, refuerzo senior.</p>
+        <p class="lead" style="margin-bottom:0;">Operativa en remoto. Producción audiovisual: mi productora asociada, para rodar. Diseño: diseñador propio para cuando la demanda de creativos sube. Vídeo: editores para el volumen. Estrategia, cuentas y números: yo, con mis agentes de IA produciendo el día a día: este blog lo escribe mi pipeline, los emails de mis clientes los redacta mi constructor de flujos, y cada línea la reviso yo. Y más allá del día a día: he construido sistemas completos que operan solos: portales de producción de contenido para marcas, líneas editoriales con agentes, motores de publicación. Producto a medida, revisado por una persona. Para problemas técnicos de gran escala, refuerzo senior.</p>
       </div>
     </section>
 
@@ -352,7 +359,7 @@
             <div class="pillar-meta">Que el cliente vuelva sin volver a pagarlo.</div>
           </div>
         </div>
-        <p class="lead" style="margin-top:2.5rem;">Entro por donde te duele — casi siempre paid — y monto las piezas que falten hasta que el sistema completo corre. ¿Vienes antes, solo con la idea y un presupuesto? Empezamos por el sondeo: te elijo las herramientas justas para saber si el mercado la quiere antes de gastar en grande.</p>
+        <p class="lead" style="margin-top:2.5rem;">Entro por donde te duele, casi siempre paid, y monto las piezas que falten hasta que el sistema completo corre. ¿Vienes antes, solo con la idea y un presupuesto? Empezamos por el sondeo: te elijo las herramientas justas para saber si el mercado la quiere antes de gastar en grande.</p>
       </div>
     </section>
 
@@ -426,7 +433,7 @@
             </li>
           </ol>
         </div>
-        <p class="loop-proof"><strong>Real:</strong> un marketplace de salud opera hoy Globalthy Growth — captación de pacientes validada etapa a etapa, con los criterios escritos antes de encender. <a href="#cta-final">Pedir auditoría</a></p>
+        <p class="loop-proof"><strong>Real:</strong> un marketplace de salud opera hoy Globalthy Growth: captación de pacientes validada etapa a etapa, con los criterios escritos antes de encender. <a href="#cta-final">Pedir auditoría</a></p>
       </div>
     </section>
 
@@ -482,14 +489,14 @@
         <div class="cta-box">
           <div class="section-tag">06 — Empieza por una prueba</div>
           <h2 class="h2-serif">Pedir auditoría</h2>
-          <p>30 minutos conmigo. Gratis. Sales con tres palancas concretas — te las llevas igual aunque no trabajemos juntos. Es el piloto cero: si los números te convencen, hablamos de montarlo.</p>
+          <p>30 minutos conmigo. Gratis. Sales con tres palancas concretas. Te las llevas igual aunque no trabajemos juntos. Es el piloto cero: si los números te convencen, hablamos de montarlo.</p>
           <div class="hero-cta" style="justify-content:center;">
-            <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
 
           <a href="/como-trabajamos.html" class="btn-sketch sketch-hover" style="margin-left:.75rem;">Cómo trabajamos<svg class="sketch-circle" viewBox="0 0 200 64" preserveAspectRatio="none" aria-hidden="true"><path pathLength="100" d="M100,6 C156,3 193,14 192,31 C191,49 152,59 97,58 C43,57 8,50 8,31 C8,15 34,8 88,7 C142,6 178,14 186,26"/></svg></a>
           <div class="note-strip" aria-label="Notas de cómo trabajo">
             <div class="post-it" style="--tilt:-2.5deg;">Sin preparación previa: traes accesos y ya está.</div>
-            <div class="post-it" style="--tilt:1.5deg;">Sales con tres palancas — <span class="pin-mark">te las llevas igual.</span></div>
+            <div class="post-it" style="--tilt:1.5deg;">Sales con tres palancas: <span class="pin-mark">te las llevas igual.</span></div>
             <div class="post-it" style="--tilt:-1deg;">Si no encajamos, no pasa nada. De verdad.</div>
           </div>
             <a href="/growth-partner.html" class="cta-secondary">Ver modelo Growth Partner</a>
@@ -510,7 +517,7 @@
             Quiso capitalizar el éxito antes de entender qué lo había producido. Ahí aprendió la regla que aplica hoy a cada cuenta:
           </p>
           <p class="origin-lesson">
-            "Si capitalizas un éxito antes de entender qué lo produjo, lo matas."
+            “Si capitalizas un éxito antes de entender qué lo produjo, lo matas.”
           </p>
           <p class="origin-text" style="margin-top:1.25rem;">
             Por eso fundó DaybyDay. Antes de mover una palanca: parar, mirar, entender qué funciona. Después, ejecutar.
@@ -538,7 +545,7 @@
         </div>
       </div>
       <div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
-        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Política de privacidad</a> · <a href="/cookies.html">Política de cookies</a> · <a href="/terminos.html">Términos</a></p>
+        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> <a href="/privacidad.html">Política de privacidad</a> <a href="/cookies.html">Política de cookies</a> <a href="/terminos.html">Términos</a></p>
         <p class="footer-copy">© 2026 DaybyDay Consulting · Madrid</p>
         <p class="footer-copy">contact@daybydayconsulting.com</p>
       </div>

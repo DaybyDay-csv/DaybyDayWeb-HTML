@@ -16,7 +16,17 @@
   <link rel="stylesheet" href="/css/modern.css">
   <link rel="stylesheet" href="/css/pages.css">
   <style>
+/* Hallmark · v2.0.0 · redesign full · terminos.html · theme: DaybyDay brand (locked BRAND-SPEC: Inter display, Source Serif humano, papel/tinta, acento #3B82F6) · genre editorial · shape: long document (título + fecha + diez bloques legales en una columna) · signature: la página legal sin ornamento, solo el texto y su fecha · imagery: ninguna, todo es texto · entry: hero wordmark centrado · nav: mega heredado · footer: heredado · waived: R1 (Inter es la display de marca, BRAND-SPEC bloqueado) */
+/* crítica: P4 H5 E4 S4 R5 V5 · lo más flojo: S, la cabecera no distingue esta página de otra legal; la fecha de actualización bajo el título la fija */
+/* Hallmark · dismissed 58 · la página es el texto legal completo: su materia es el contenido (patrón Long Document) */
     /* Logo de marca: swap light/dark según data-theme (toggles main.js) */
+    html, body { overflow-x: clip; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px;
+    }
+    a:active, button:active { opacity: 0.85; }
+    button:disabled, input:disabled, select:disabled, textarea:disabled { opacity: 0.5; cursor: not-allowed; }
+    .prose h2 { overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
     .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; }
     .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
     [data-theme="dark"] .logo-ink { display: none; }
@@ -53,7 +63,7 @@
                 <a href="/lo-que-cubre.html#automation">Automation</a>
                 <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
                 <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
-                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo</a>
               </div>
               <div class="mega-section">
                 <div class="mega-section-title">Servicios</div>
@@ -198,7 +208,7 @@
         </div>
       </div>
       <div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;">
-        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Política de privacidad</a> · <a href="/cookies.html">Política de cookies</a> · <a href="/terminos.html">Términos</a></p>
+        <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> <a href="/privacidad.html">Política de privacidad</a> <a href="/cookies.html">Política de cookies</a> <a href="/terminos.html">Términos</a></p>
         <p class="footer-copy">© 2026 DaybyDay Consulting · Madrid</p>
       </div>
     </div>
