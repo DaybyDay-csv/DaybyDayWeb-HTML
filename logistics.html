@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>DaybyDay Logistics — Fulfillment todo en uno para marketplaces</title>
+  <title>DaybyDay Logistics: fulfillment todo en uno para marketplaces</title>
   <meta name="description" content="Fulfillment integrado para marcas que venden en marketplaces. Recepción de pedidos Mirakl, picking, packaging y envío con OneTime. Nave en Madrid, ERPNext personalizado. Operamos el fulfillment de Garett en El Corte Inglés.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.daybydayconsulting.com/logistics">
@@ -18,52 +18,51 @@
   <link rel="stylesheet" href="/css/modern.css">
   <link rel="stylesheet" href="/css/pages.css">
   <style>
-    /* ===== DaybyDay Logistics — sub-marca con layout propio ===== */
-    .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; }
+/* Hallmark · v2.0.0 · redesign full · logistics.html · theme: DaybyDay brand (locked BRAND-SPEC: Inter display, Source Serif humano, papel/tinta, acento #3B82F6) · genre editorial · shape: pipeline (hero + logo wall + 5 nodos + pilares + mini-grid + confianza + CTA) · signature: el paquete que recorre el circuito pedido→entregado · imagery: logos reales (Mirakl, ECI, OneTime, ERPNext, Garett), ninguna foto · entry: hero stage centrado · nav: mega heredado + badge Logistics · footer: heredado · waived: R1 (Inter es la display de marca, BRAND-SPEC bloqueado), R7b (chip blanco neutro exigido por logo wall de terceros), 63 footer (componente compartido del site, patrón fijado aquí para propagar en el resto) */
+/* crítica: P4 H5 E4 S4 R4 V5 · lo más flojo: E, el pipeline sin eyebrow pierde el conteo de pasos; lo llevo dentro del título (h3 con número en el mismo renglón) */
+/* answered: 26b sin controles de formulario en la página; 33 todos los svg decorativos con aria-hidden */
+    /* ===== Overrides de Floor para esta página ===== */
+    html, body { overflow-x: clip; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px;
+    }
+    .lg-h1, .lg-flow-title h2, .lg-final-cta h2, .lg-trust-card h2 { text-wrap: balance; }
+
+    /* ===== DaybyDay Logistics: layout propio ===== */
+    .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; align-items: baseline; }
     .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
     [data-theme="dark"] .logo-ink { display: none; }
     [data-theme="light"] .logo-blue { display: none; }
     .logistics-badge {
-      font-family: var(--font-machine, 'IBM Plex Mono', monospace);
-      font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.16em;
-      padding: 3px 8px; border-radius: 4px;
-      background: var(--accent-soft, color-mix(in srgb, var(--ink-blue) 14%, transparent));
-      color: var(--ink-blue); font-weight: 500; margin-left: 0.25rem;
+      font-family: var(--font); font-size: 0.82rem; font-weight: 600;
+      color: var(--accent); letter-spacing: 0; margin-left: 0.35rem;
     }
 
     /* ===== Hero ===== */
-    .lg-hero { padding: 7.5rem 0 5rem; text-align: center; }
-    .lg-hero .lg-eyebrow {
-      display: inline-flex; align-items: center; gap: 0.6rem;
-      font-family: var(--font-machine, 'IBM Plex Mono', monospace);
-      font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.18em;
-      color: var(--text-muted); margin-bottom: 2rem;
-    }
-    .lg-eyebrow::before, .lg-eyebrow::after {
-      content: ""; width: 28px; height: 1px; background: var(--border-hover);
-    }
+    .lg-hero { padding: 7.5rem 0 4.5rem; text-align: center; }
     .lg-h1 {
       font-family: var(--font-display, 'Inter', sans-serif);
       font-weight: 800; font-size: clamp(2.4rem, 5.4vw, 4.1rem);
       line-height: 1.06; letter-spacing: -0.025em;
-      max-width: 880px; margin: 0 auto 1.75rem; color: var(--text-primary);
+      max-width: 880px; margin: 0 auto 1.6rem; color: var(--text-primary);
     }
-    .lg-h1 .accent { color: var(--ink-blue); }
+    .lg-h1 .accent { color: var(--accent); }
     .lg-sub {
       font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary);
-      max-width: 620px; margin: 0 auto 2.75rem;
+      max-width: 600px; margin: 0 auto 2.5rem;
     }
     .lg-sub strong { color: var(--text-primary); font-weight: 600; }
     .lg-cta { display: flex; justify-content: center; gap: 0.9rem; flex-wrap: wrap; }
     .lg-btn-primary {
       display: inline-flex; align-items: center; gap: 0.55rem;
-      background: var(--ink-blue); color: #fff; border: none;
+      background: var(--accent); color: var(--on-accent); border: none;
       padding: 0.9rem 1.6rem; border-radius: 8px;
       font-weight: 600; font-size: 0.95rem; text-decoration: none;
       transition: transform 120ms ease-out, filter 150ms ease;
     }
     .lg-btn-primary:active { transform: scale(0.97); }
     .lg-btn-primary:hover { filter: brightness(1.08); }
+    .lg-btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
     .lg-btn-ghost {
       display: inline-flex; align-items: center; gap: 0.5rem;
       color: var(--text-primary); text-decoration: none; font-weight: 500;
@@ -72,40 +71,40 @@
       transition: border-color 150ms ease, transform 120ms ease-out;
     }
     .lg-btn-ghost:active { transform: scale(0.97); }
-    .lg-btn-ghost:hover { border-color: var(--ink-blue); }
+    .lg-btn-ghost:hover { border-color: var(--accent); }
+    .lg-btn-ghost:disabled { opacity: 0.5; cursor: not-allowed; }
 
     /* ===== Logo wall (chips blancos, patrón ShipBob) ===== */
     .lg-logos { padding: 0 0 4.5rem; }
     .lg-logos-label {
-      text-align: center; font-family: var(--font-machine, 'IBM Plex Mono', monospace);
-      font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.2em;
-      color: var(--text-muted); margin-bottom: 1.6rem;
+      text-align: center; font-family: var(--font);
+      font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.6rem;
     }
+    :root { --logo-chip-bg: #fff; --logo-chip-border: color-mix(in srgb, var(--ink) 8%, transparent); --logo-chip-border-hover: color-mix(in srgb, var(--ink) 20%, transparent); --eci-green: #008657; --chip-ink: #14131A; --on-accent: #FAF8F3; }
     .lg-logo-row {
       display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch;
       gap: 0.9rem; max-width: 1120px; margin: 0 auto;
     }
     .lg-logo-chip {
       display: flex; align-items: center; justify-content: center;
-      background: #fff; border: 1px solid rgba(20,19,26,0.08);
+      background: var(--logo-chip-bg); border: 1px solid var(--logo-chip-border);
       border-radius: 10px; padding: 1.05rem 1.4rem; min-width: 122px; height: 64px;
       transition: transform 150ms ease-out, border-color 200ms ease;
     }
-    .lg-logo-chip:hover { transform: translateY(-2px); border-color: rgba(20,19,26,0.2); }
+    .lg-logo-chip:hover { transform: translateY(-2px); border-color: var(--logo-chip-border-hover); }
     .lg-logo-chip img { max-height: 34px; max-width: 132px; width: auto; object-fit: contain; }
-    /* ECI: logo oficial con texto blanco → necesita su verde de marca */
-    .lg-logo-chip.chip-eci { background: #008657; border-color: #008657; }
+    /* ECI: logo oficial con texto blanco, necesita su verde de marca */
+    .lg-logo-chip.chip-eci { background: var(--eci-green); border-color: var(--eci-green); }
     .lg-logo-chip.chip-eci img { max-height: 58px; }
     /* ERPNext: icono oficial + wordmark tipográfico */
     .lg-logo-chip.chip-erpnext { gap: 0.5rem; }
     .lg-logo-chip.chip-erpnext .wm {
-      font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1.05rem;
-      letter-spacing: -0.01em; color: #14131A;
+      font-family: var(--font); font-weight: 700; font-size: 1.05rem;
+      letter-spacing: -0.01em; color: var(--chip-ink);
     }
     .lg-logo-chip .chip-tag {
-      font-family: var(--font-machine, 'IBM Plex Mono', monospace);
-      font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase;
-      color: rgba(20,19,26,0.55); margin-left: 0.7rem; border-left: 1px solid rgba(20,19,26,0.12); padding-left: 0.7rem;
+      font-family: var(--font); font-size: 0.78rem;
+      color: color-mix(in srgb, var(--chip-ink) 55%, transparent); margin-left: 0.7rem; border-left: 1px solid color-mix(in srgb, var(--chip-ink) 12%, transparent); padding-left: 0.7rem;
       white-space: nowrap;
     }
     .lg-logo-chip img.garett-logo { mix-blend-mode: multiply; }
@@ -117,31 +116,30 @@
     .lg-flow-title .h2-serif { margin-bottom: 0.75rem; }
     .lg-flow-title p { color: var(--text-muted); font-size: 1rem; margin: 0; }
     .lg-pipeline {
+      container-type: inline-size;
       position: relative; display: grid;
       grid-template-columns: repeat(5, 1fr); gap: 0;
       margin: 4.5rem 0 1rem;
     }
-    /* línea del pipeline */
     .lg-pipeline::before {
       content: ""; position: absolute; top: 34px; left: 10%; right: 10%;
       height: 2px; background: var(--border-hover); z-index: 0;
     }
-    /* paquete animado recorriendo la línea */
     .lg-packet {
       position: absolute; top: 27px; left: 10%;
       width: 16px; height: 16px; border-radius: 4px; z-index: 2;
-      background: var(--ink-blue);
-      box-shadow: 0 0 0 4px color-mix(in srgb, var(--ink-blue) 18%, transparent);
+      background: var(--accent);
+      box-shadow: 0 0 0 4px var(--accent-soft);
       animation: lg-travel 7s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
       will-change: transform, opacity;
     }
     @keyframes lg-travel {
-      0%   { left: 10%; opacity: 0; }
-      6%   { opacity: 1; }
-      44%  { left: 50%; opacity: 1; }
-      56%  { left: 50%; opacity: 1; }
-      94%  { left: 90%; opacity: 1; }
-      100% { left: 90%; opacity: 0; }
+      0%   { transform: translateX(0); opacity: 0; }
+      6%   { transform: translateX(0); opacity: 1; }
+      44%  { transform: translateX(40cqw); opacity: 1; }
+      56%  { transform: translateX(40cqw); opacity: 1; }
+      94%  { transform: translateX(80cqw); opacity: 1; }
+      100% { transform: translateX(80cqw); opacity: 0; }
     }
     .lg-node { position: relative; z-index: 1; text-align: center; padding: 0 0.6rem; }
     .lg-node-icon {
@@ -150,21 +148,17 @@
       background: var(--bg-secondary); border: 2px solid var(--border-hover);
       transition: border-color 200ms ease, transform 150ms ease-out;
     }
-    .lg-node:hover .lg-node-icon { border-color: var(--ink-blue); transform: translateY(-3px); }
+    .lg-node:hover .lg-node-icon { border-color: var(--accent); transform: translateY(-3px); }
     .lg-node-icon svg { width: 26px; height: 26px; stroke: var(--text-primary); }
-    .lg-node-step {
-      font-family: var(--font-machine, 'IBM Plex Mono', monospace);
-      font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.18em;
-      color: var(--ink-blue); margin-bottom: 0.5rem;
-    }
     .lg-node h3 { font-size: 1.02rem; font-weight: 700; margin: 0 0 0.5rem; color: var(--text-primary); letter-spacing: -0.01em; }
+    .lg-node h3 .lg-node-num { margin-right: 0.3rem; }
     .lg-node p { font-size: 0.84rem; line-height: 1.5; color: var(--text-muted); margin: 0; }
     @media (max-width: 860px) {
       .lg-pipeline { grid-template-columns: 1fr; gap: 2.25rem; }
       .lg-pipeline::before { left: 34px; right: auto; top: 10%; bottom: 10%; width: 2px; height: auto; }
       .lg-node { display: grid; grid-template-columns: 68px 1fr; column-gap: 1.1rem; text-align: left; padding: 0; align-items: start; }
-      .lg-node-icon { margin: 0; grid-row: 1 / span 3; }
-      .lg-node-step, .lg-node h3, .lg-node p { grid-column: 2; }
+      .lg-node-icon { margin: 0; grid-row: 1 / span 2; }
+      .lg-node h3, .lg-node p { grid-column: 2; }
       .lg-packet { display: none; }
     }
 
@@ -177,10 +171,9 @@
       transition: transform 160ms ease-out, border-color 200ms ease;
     }
     .lg-pillar:hover { transform: translateY(-3px); border-color: var(--border-hover); }
-    .lg-pillar .pill-num {
-      font-family: var(--font-machine, 'IBM Plex Mono', monospace);
-      font-size: 0.65rem; letter-spacing: 0.16em; color: var(--ink-blue);
-      text-transform: uppercase; margin-bottom: 1.4rem; display: block;
+    .lg-pillar .pillar-label {
+      font-family: var(--font); font-size: 0.85rem; color: var(--accent);
+      margin-bottom: 1.4rem; display: block;
     }
     .lg-pillar h3 { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.015em; margin: 0 0 0.8rem; color: var(--text-primary); }
     .lg-pillar p { font-size: 0.92rem; line-height: 1.65; color: var(--text-secondary); margin: 0; }
@@ -189,15 +182,15 @@
 
     /* ===== Especialización Mirakl (mini-cards) ===== */
     .lg-mirakl { padding: 6.5rem 0; border-top: 1px solid var(--border); }
-    .lg-mirakl-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; max-width: 1060px; margin: 3.25rem auto 0; }
+    .lg-mirakl-grid { display: grid; grid-template-columns: 1.25fr 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; max-width: 1060px; margin: 3.25rem auto 0; }
     .lg-mini {
       background: var(--bg-primary); padding: 1.9rem 1.7rem;
       display: flex; flex-direction: column; gap: 0.7rem;
       transition: background 200ms ease;
     }
     .lg-mini:hover { background: var(--bg-secondary); }
-    .lg-mini svg { width: 22px; height: 22px; stroke: var(--ink-blue); }
-    .lg-mini h4 { font-size: 0.98rem; font-weight: 600; margin: 0; color: var(--text-primary); }
+    .lg-mini svg { width: 22px; height: 22px; stroke: var(--accent); }
+    .lg-mini h3 { font-size: 0.98rem; font-weight: 600; margin: 0; color: var(--text-primary); }
     .lg-mini span { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
     @media (max-width: 860px) { .lg-mirakl-grid { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 560px) { .lg-mirakl-grid { grid-template-columns: 1fr; } }
@@ -208,14 +201,14 @@
       max-width: 820px; margin: 0 auto; text-align: center;
       border: 1px solid var(--border); border-radius: 16px; padding: 3.5rem 2.5rem;
       background:
-        radial-gradient(ellipse 60% 80% at 50% 0%, color-mix(in srgb, var(--ink-blue) 7%, transparent), transparent),
+        radial-gradient(ellipse 60% 80% at 50% 0%, var(--accent-soft), transparent),
         var(--bg-secondary);
     }
     .lg-trust-card img { height: 42px; margin: 1.75rem auto; mix-blend-mode: multiply; opacity: 0.92; }
     [data-theme="dark"] .lg-trust-card img { mix-blend-mode: normal; filter: brightness(0) invert(1); opacity: 0.85; }
     .lg-trust-card p { font-size: 1.05rem; line-height: 1.7; color: var(--text-secondary); max-width: 540px; margin: 0 auto 1.1rem; }
     .lg-trust-card p strong { color: var(--text-primary); }
-    .lg-trust-link { color: var(--ink-blue); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+    .lg-trust-link { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
     .lg-trust-link:hover { text-decoration: underline; text-underline-offset: 3px; }
 
     /* ===== CTA final ===== */
@@ -227,6 +220,10 @@
     }
     .lg-final-cta p { color: var(--text-muted); margin: 0 0 2.5rem; font-size: 1.05rem; }
 
+    /* Separadores del footer legal sin caracteres pegados */
+    .footer-legal { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; }
+    .footer-legal a { margin: 0; }
+
     @media (prefers-reduced-motion: reduce) {
       .lg-packet { animation: none; opacity: 0; }
       .lg-pillar, .lg-node-icon, .lg-logo-chip { transition: none; }
@@ -236,7 +233,7 @@
 <body>
   <a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
-    <a href="/" class="nav-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="34" height="34" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="34" height="34" alt="">DaybyDay<span class="logistics-badge">Logistics</span></a>
+    <a href="/" class="nav-logo"><img src="/img/brand/logistics-symbol.svg" class="logo-ink" width="34" height="34" alt=""><img src="/img/brand/logistics-symbol-light.svg" class="logo-blue" width="34" height="34" alt="">DaybyDay<span class="logistics-badge">Logistics</span></a>
     <div class="nav-menu">
       <ul class="nav-links">
         <li class="nav-dropdown">
@@ -250,7 +247,7 @@
                 <a href="/lo-que-cubre.html#automation">Automation</a>
                 <a href="/lo-que-cubre.html#agentic-ai">Agentic AI</a>
                 <a href="/lo-que-cubre.html#estrategia">Estrategia</a>
-                <a href="/lo-que-cubre.html" class="highlight">Ver todo →</a>
+                <a href="/lo-que-cubre.html" class="highlight">Ver todo</a>
               </div>
               <div class="mega-section">
                 <div class="mega-section-title">Servicios</div>
@@ -285,45 +282,44 @@
         <li><a href="/contacto.html" class="nav-cta">Pedir auditoría</a></li>
       </ul>
       <button class="theme-toggle-btn" aria-label="Cambiar tema" title="Cambiar tema">
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
       </button>
       <button class="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
       </button>
     </div>
   </nav>
 
   <main id="main" class="page-wrapper">
 
-    <!-- HERO -->
+    <!-- Hero -->
     <section class="lg-hero">
       <div class="container">
-        <div class="lg-eyebrow">DaybyDay Logistics · Madrid</div>
         <h1 class="lg-h1">Fulfillment <span class="accent">todo en uno</span> para marketplaces.</h1>
-        <p class="lg-sub">Tu marca vende. Nosotros hacemos el resto: <strong>pedidos, picking, packaging y envío</strong> — integrados con Mirakl y El Corte Inglés, con ERPNext y OneTime.</p>
+        <p class="lg-sub">Tu marca vende. Nosotros hacemos el resto: <strong>pedidos, picking, packaging y envío</strong>.</p>
         <div class="lg-cta">
-          <a href="/contacto.html" class="lg-btn-primary">Hablemos de tu operación<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="/contacto.html" class="lg-btn-primary">Hablemos de tu operación<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           <a href="#como-funciona" class="lg-btn-ghost">Ver cómo funciona</a>
         </div>
       </div>
     </section>
 
-    <!-- LOGO WALL -->
+    <!-- Logo wall -->
     <section class="lg-logos">
       <div class="container">
-        <div class="lg-logos-label">Las piezas con las que operamos</div>
+        <p class="lg-logos-label">Las piezas con las que operamos</p>
         <div class="lg-logo-row">
-          <div class="lg-logo-chip" title="Mirakl — software de marketplace"><img src="/img/logistics/mirakl.svg" alt="Mirakl"></div>
-          <div class="lg-logo-chip chip-eci" title="El Corte Inglés — marketplace"><img src="/img/logistics/eci.svg" alt="El Corte Inglés"></div>
-          <div class="lg-logo-chip" title="OneTime — partner de transporte"><img src="/img/logistics/onetime.svg" alt="OneTime"></div>
-          <div class="lg-logo-chip chip-erpnext" title="ERPNext — ERP"><img src="/img/logistics/erpnext.svg" alt="ERPNext" style="max-height:30px;"><span class="wm">ERPNext</span></div>
-          <div class="lg-logo-chip" title="Garett — cliente"><img src="/img/logistics/garett.png" alt="Garett" class="garett-logo"><span class="chip-tag">Cliente</span></div>
+          <div class="lg-logo-chip" title="Mirakl, software de marketplace"><img src="/img/logistics/mirakl.svg" alt="Mirakl"></div>
+          <div class="lg-logo-chip chip-eci" title="El Corte Inglés, marketplace"><img src="/img/logistics/eci.svg" alt="El Corte Inglés"></div>
+          <div class="lg-logo-chip" title="OneTime, partner de transporte"><img src="/img/logistics/onetime.svg" alt="OneTime"></div>
+          <div class="lg-logo-chip chip-erpnext" title="ERPNext, el ERP"><img src="/img/logistics/erpnext.svg" alt="ERPNext" style="max-height:30px;"><span class="wm">ERPNext</span></div>
+          <div class="lg-logo-chip" title="Garett, cliente"><img src="/img/logistics/garett.png" alt="Garett" class="garett-logo"><span class="chip-tag">cliente</span></div>
         </div>
       </div>
     </section>
 
-    <!-- PIPELINE (el diagrama) -->
+    <!-- Pipeline: el diagrama -->
     <section class="lg-flow-section" id="como-funciona">
       <div class="container">
         <div class="lg-flow-wrap">
@@ -334,60 +330,52 @@
           <div class="lg-pipeline" role="list" aria-label="Flujo de fulfillment">
             <div class="lg-packet" aria-hidden="true"></div>
             <div class="lg-node" role="listitem">
-              <div class="lg-node-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M6 6h15l-1.5 9h-12z M6 6L5 3H2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.6"/><circle cx="18" cy="20" r="1.6"/></svg></div>
-              <div class="lg-node-step">01 · Marketplace</div>
-              <h3>Pedido en Mirakl</h3>
-              <p>Entra solo en el sistema. Sin copiar ni pegar.</p>
+              <div class="lg-node-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><path d="M6 6h15l-1.5 9h-12z M6 6L5 3H2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.6"/><circle cx="18" cy="20" r="1.6"/></svg></div>
+              <h3><span class="lg-node-num">1</span>Pedido en Mirakl</h3>
+              <p>Entra solo en el sistema, sin copiar ni pegar.</p>
             </div>
             <div class="lg-node" role="listitem">
-              <div class="lg-node-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M7 8V3h10v5" stroke-linecap="round"/><rect x="4" y="8" width="16" height="9" rx="1.5"/><path d="M7 17v3h10v-3" stroke-linecap="round"/></svg></div>
-              <div class="lg-node-step">02 · Etiqueta</div>
-              <h3>Etiqueta automática</h3>
-              <p>Se imprime al preparar el pedido. Transporte y tienda.</p>
+              <div class="lg-node-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><path d="M7 8V3h10v5" stroke-linecap="round"/><rect x="4" y="8" width="16" height="9" rx="1.5"/><path d="M7 17v3h10v-3" stroke-linecap="round"/></svg></div>
+              <h3><span class="lg-node-num">2</span>Etiqueta automática</h3>
+              <p>Se imprime al preparar el pedido, transporte y tienda.</p>
             </div>
             <div class="lg-node" role="listitem">
-              <div class="lg-node-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M21 8l-9-5-9 5v8l9 5 9-5z" stroke-linejoin="round"/><path d="M3 8l9 5 9-5M12 13v8" stroke-linecap="round"/></svg></div>
-              <div class="lg-node-step">03 · Nave</div>
-              <h3>Picking &amp; packing</h3>
-              <p>Se recoge y embala con embalaje neutro. Nave en Madrid.</p>
+              <div class="lg-node-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><path d="M21 8l-9-5-9 5v8l9 5 9-5z" stroke-linejoin="round"/><path d="M3 8l9 5 9-5M12 13v8" stroke-linecap="round"/></svg></div>
+              <h3><span class="lg-node-num">3</span>Picking y packing</h3>
+              <p>Se recoge y embala con embalaje neutro, en la nave de Madrid.</p>
             </div>
             <div class="lg-node" role="listitem">
-              <div class="lg-node-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M1 7h13v10H1z M14 10h5l3 3v4h-8" stroke-linejoin="round"/><circle cx="6" cy="17" r="1.8"/><circle cx="18" cy="17" r="1.8"/></svg></div>
-              <div class="lg-node-step">04 · Envío</div>
-              <h3>OneTime</h3>
+              <div class="lg-node-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><path d="M1 7h13v10H1z M14 10h5l3 3v4h-8" stroke-linejoin="round"/><circle cx="6" cy="17" r="1.8"/><circle cx="18" cy="17" r="1.8"/></svg></div>
+              <h3><span class="lg-node-num">4</span>OneTime</h3>
               <p>Salida diaria con nuestro partner de transporte.</p>
             </div>
             <div class="lg-node" role="listitem">
-              <div class="lg-node-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-              <div class="lg-node-step">05 · Cierre</div>
-              <h3>Entregado</h3>
-              <p>Estado sincronizado con el marketplace. Devoluciones incluidas.</p>
+              <div class="lg-node-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <h3><span class="lg-node-num">5</span>Entregado</h3>
+              <p>Estado sincronizado con el marketplace, devoluciones incluidas.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- TRES PILARES -->
+    <!-- Tres pilares -->
     <section class="lg-pillars">
       <div class="container">
         <div style="text-align:center;">
-          <h2 class="h2-serif">Un solo proveedor. Tres piezas.</h2>
+          <h2 class="h2-serif">Un solo proveedor, tres piezas</h2>
           <p style="color:var(--text-muted);margin:0.6rem auto 0;max-width:520px;">Lo que otros reparten entre tres contratos, lo operamos como un sistema.</p>
         </div>
         <div class="lg-pillar-grid">
           <div class="lg-pillar">
-            <span class="pill-num">01 — Operativa</span>
             <h3>Nave en Madrid</h3>
             <p>Recepción de mercancía, picking, packaging y expedición diaria desde Ventorro del Cano. <strong>Operativa física real</strong>, con control de inventario y registro de incidencias.</p>
           </div>
           <div class="lg-pillar">
-            <span class="pill-num">02 — Tecnología</span>
             <h3>ERPNext personalizado</h3>
             <p>Pedidos, stock, expediciones y estados en <strong>una sola plataforma</strong>, configurada para tu operación. Cada cliente tiene su propio ERP adaptado.</p>
           </div>
           <div class="lg-pillar">
-            <span class="pill-num">03 — Transporte</span>
             <h3>Partner OneTime</h3>
             <p>Envíos creados por API y cada cambio de estado <strong>recibido en tiempo real</strong>: enviado, incidencia, entregado, devolución.</p>
           </div>
@@ -395,7 +383,7 @@
       </div>
     </section>
 
-    <!-- ESPECIALIZACIÓN MIRAKL -->
+    <!-- Especialización Mirakl -->
     <section class="lg-mirakl">
       <div class="container">
         <div style="text-align:center;">
@@ -404,65 +392,64 @@
         </div>
         <div class="lg-mirakl-grid">
           <div class="lg-mini">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M6 6h15l-1.5 9h-12z M6 6L5 3H2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.6"/><circle cx="18" cy="20" r="1.6"/></svg>
-            <h4>Pedidos</h4>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><path d="M6 6h15l-1.5 9h-12z M6 6L5 3H2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.6"/><circle cx="18" cy="20" r="1.6"/></svg>
+            <h3>Pedidos</h3>
             <span>Aceptación por stock, sin cancelaciones evitables.</span>
           </div>
           <div class="lg-mini">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 4h16v5H4z M4 13h16v7H4z" stroke-linejoin="round"/><path d="M8 6.5h.01M8 16.5h.01"/></svg>
-            <h4>Stock sincronizado</h4>
-            <span>Inventario real en la web. Cero sobresventas.</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><path d="M4 4h16v5H4z M4 13h16v7H4z" stroke-linejoin="round"/><path d="M8 6.5h.01M8 16.5h.01"/></svg>
+            <h3>Stock sincronizado</h3>
+            <span>Inventario real en la web, cero sobresventas.</span>
           </div>
           <div class="lg-mini">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M7 8V3h10v5" stroke-linecap="round"/><rect x="4" y="8" width="16" height="9" rx="1.5"/><path d="M7 17v3h10v-3" stroke-linecap="round"/></svg>
-            <h4>Etiquetas</h4>
-            <span>Envío a domicilio y Click &amp; Collect de ECI.</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><path d="M7 8V3h10v5" stroke-linecap="round"/><rect x="4" y="8" width="16" height="9" rx="1.5"/><path d="M7 17v3h10v-3" stroke-linecap="round"/></svg>
+            <h3>Etiquetas</h3>
+            <span>Envío a domicilio y Click and Collect de ECI.</span>
           </div>
           <div class="lg-mini">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3" stroke-linecap="round"/></svg>
-            <h4>Tracking</h4>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3" stroke-linecap="round"/></svg>
+            <h3>Tracking</h3>
             <span>Estados en tiempo real, sin refrescar pantallas.</span>
           </div>
           <div class="lg-mini">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 12a9 9 0 1 0 3-6.7" stroke-linecap="round"/><path d="M3 4v5h5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 8v4l2.5 2.5" stroke-linecap="round"/></svg>
-            <h4>Devoluciones</h4>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7" stroke-linecap="round"/><path d="M3 4v5h5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 8v4l2.5 2.5" stroke-linecap="round"/></svg>
+            <h3>Devoluciones</h3>
             <span>Recogida gestionada y reembolso dentro de plazo.</span>
           </div>
           <div class="lg-mini">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke-linejoin="round"/></svg>
-            <h4>Mensajes ECI</h4>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke-linejoin="round"/></svg>
+            <h3>Mensajes ECI</h3>
             <span>Incidencias tipificadas, atendidas el mismo día.</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CONFIANZA -->
+    <!-- Confianza -->
     <section class="lg-trust">
       <div class="container">
         <div class="lg-trust-card">
-          <div class="lg-eyebrow" style="margin-bottom:0.5rem;">Quien ya opera con nosotros</div>
           <h2 class="h2-serif">Garett vende en El Corte Inglés.<br>Su fulfillment lo operamos nosotros.</h2>
           <img src="/img/logistics/garett.png" alt="Garett">
-          <p>Integración con el marketplace, picking, envío y estados — <strong>el circuito completo</strong>. La publicidad de Garett es otro capítulo: <a class="lg-trust-link" href="/casos/garett">ver el caso de growth</a>.</p>
+          <p>Integración con el marketplace, picking, envío y estados: <strong>el circuito completo</strong>. La publicidad de Garett es otro capítulo, <a class="lg-trust-link" href="/casos/garett">ver el caso de growth</a>.</p>
         </div>
       </div>
     </section>
 
-    <!-- CTA FINAL -->
+    <!-- CTA final -->
     <section class="lg-final-cta">
       <div class="container">
         <h2>Tu marca vende.<br>El resto lo hacemos nosotros.</h2>
         <p>Cuéntanos dónde vendes y cuántos pedidos mueves.</p>
         <div class="lg-cta">
-          <a href="/contacto.html" class="lg-btn-primary">Hablemos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="/contacto.html" class="lg-btn-primary">Hablemos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer"><div class="container"><div class="footer-inner"><div><div class="footer-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="22" height="22" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="22" height="22" alt="">DaybyDay Consulting · Madrid</div><p class="voice-human" style="font-style:italic;margin-top:0.5rem;">El crecimiento, día a día.</p></div><div class="footer-links"><a href="/problema.html">Problema</a><a href="/como-trabajamos.html">Cómo trabajamos</a><a href="/growth-partner.html">Growth Partner</a><a href="/logistics">Logistics</a><a href="/casos/">Casos</a><a href="/blog.html">Blog</a><a href="/contacto.html">Pedir auditoría</a></div></div><div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;"><p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Política de privacidad</a> · <a href="/cookies.html">Política de cookies</a> · <a href="/terminos.html">Términos</a></p>
-        <p class="footer-copy">© 2026 DayByDay Consulting · analizamos · ejecutamos · acompañamos</p></div></div></footer>
+  <footer class="footer"><div class="container"><div class="footer-inner"><div><div class="footer-logo"><img src="/img/brand/loop-symbol.svg" class="logo-ink" width="22" height="22" alt=""><img src="/img/brand/loop-symbol-blue.svg" class="logo-blue" width="22" height="22" alt="">DaybyDay Consulting · Madrid</div><p class="voice-human" style="font-style:italic;margin-top:0.5rem;">El crecimiento, día a día.</p></div><div class="footer-links"><a href="/problema.html">Problema</a><a href="/como-trabajamos.html">Cómo trabajamos</a><a href="/growth-partner.html">Growth Partner</a><a href="/logistics">Logistics</a><a href="/casos/">Casos</a><a href="/blog.html">Blog</a><a href="/contacto.html">Pedir auditoría</a></div></div><div style="border-top:1px solid var(--border);margin-top:2rem;padding-top:1.5rem;"><p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> <a href="/privacidad.html">Política de privacidad</a> <a href="/cookies.html">Política de cookies</a> <a href="/terminos.html">Términos</a></p>
+        <p class="footer-copy">© 2026 DayByDay Consulting. Analizamos, ejecutamos, acompañamos.</p></div></div></footer>
   <script src="/js/main.js"></script>
 </body>
 </html>
