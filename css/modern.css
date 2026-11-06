@@ -498,3 +498,17 @@
   transform: translateZ(0);
   transition: transform 0.1s ease-out;
 }
+
+/* ============================================
+   HALLMARK FLOOR (2026-11-06) — reglas 4, 6, 15 del Floor, una vez para todo el site
+   ============================================ */
+html, body { overflow-x: clip; }
+h1, h2, h3 { text-wrap: balance; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 2px;
+}
+/* Separadores del footer legal por gap, sin caracteres pegados (regla 63) */
+.footer-legal { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
