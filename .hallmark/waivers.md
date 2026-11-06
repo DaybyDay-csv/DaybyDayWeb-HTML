@@ -29,7 +29,7 @@ framework: es la cara de la marca, elegida y aprobada por Pablo (boards de 2026-
 
 ## 7b · Chips blancos de logos de terceros
 
-**Waived.** El logo wall muestra marcas ajenas (Mirakl, El Corte Inglés, OneTime, ERPNext) que solo
+**Waived.** El logo wall muestra marcas ajenas (Mirakl, El Corte Inglés, OnTime, ERPNext) que solo
 funcionan sobre blanco neutro. Teñir el chip hacia el acento alteraría los logos de terceros, que es
 peor que la regla que se salta.
 
