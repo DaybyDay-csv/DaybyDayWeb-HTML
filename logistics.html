@@ -80,7 +80,7 @@
       text-align: center; font-family: var(--font);
       font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.6rem;
     }
-    :root { --logo-chip-bg: #fff; --logo-chip-border: color-mix(in srgb, var(--ink) 8%, transparent); --logo-chip-border-hover: color-mix(in srgb, var(--ink) 20%, transparent); --eci-green: #008657; --chip-ink: #14131A; --on-accent: #FAF8F3; }
+    :root { --logo-chip-bg: #fff; --logo-chip-border: color-mix(in srgb, var(--ink) 8%, transparent); --logo-chip-border-hover: color-mix(in srgb, var(--ink) 20%, transparent); --eci-green: #008657; --eci-ink: #00704a; --chip-ink: #14131A; --on-accent: #FAF8F3; }
     .lg-logo-row {
       display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch;
       gap: 0.9rem; max-width: 1120px; margin: 0 auto;
@@ -93,9 +93,13 @@
     }
     .lg-logo-chip:hover { transform: translateY(-2px); border-color: var(--logo-chip-border-hover); }
     .lg-logo-chip img { max-height: 34px; max-width: 132px; width: auto; object-fit: contain; }
-    /* ECI: logo oficial con texto blanco, necesita su verde de marca */
-    .lg-logo-chip.chip-eci { background: var(--eci-green); border-color: var(--eci-green); }
-    .lg-logo-chip.chip-eci img { max-height: 58px; }
+    /* ECI: lockup legible (triángulo oficial + nombre en serif de la casa) */
+    .lg-logo-chip.chip-eci { gap: 0.5rem; padding-right: 1.55rem; }
+    .lg-logo-chip.chip-eci img { max-height: 26px; width: auto; }
+    .lg-logo-chip .wm-eci {
+      font-family: var(--font-human); font-weight: 600; font-size: 0.97rem;
+      letter-spacing: -0.005em; color: var(--eci-ink); white-space: nowrap;
+    }
     /* ERPNext: icono oficial + wordmark tipográfico */
     .lg-logo-chip.chip-erpnext { gap: 0.5rem; }
     .lg-logo-chip.chip-erpnext .wm {
@@ -224,6 +228,32 @@
     .footer-legal { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; }
     .footer-legal a { margin: 0; }
 
+    /* Mobile: menos aire muerto entre secciones (en desktop el ritmo largo funciona; en
+       pantalla de 390px solo obliga a scrollear sin información nueva) */
+    @media (max-width: 640px) {
+      .lg-hero { padding: 5.25rem 0 3rem; }
+      .lg-h1 { font-size: clamp(2rem, 8.5vw, 2.75rem); }
+      .lg-sub { font-size: 1.05rem; margin-bottom: 2rem; }
+      .lg-logos { padding-bottom: 3rem; }
+      .lg-flow-section, .lg-pillars, .lg-mirakl, .lg-trust { padding: 3.75rem 0; }
+      .lg-pipeline { margin-top: 3rem; }
+      .lg-final-cta { padding: 4.25rem 0 3.5rem; }
+      .lg-final-cta h2 { font-size: 1.85rem; }
+      .lg-trust-card { padding: 2.5rem 1.5rem; }
+      .lg-trust-card h2 { font-size: 1.55rem; }
+      .lg-logo-chip { padding: 0.9rem 1.1rem; height: 58px; min-width: 0; }
+      /* Logo wall a rejilla exacta: con flex, el chip ancho del ECI desbordaba la fila */
+      /* Una columna: apilados se leen como cinco piezas distintas; en rejilla de dos,
+         el hueco entre dos chips blancos se pierde y parecen un solo bloque. */
+      .lg-logo-row { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.6rem; width: 100%; max-width: none; margin: 0; }
+      .lg-logo-chip { box-sizing: border-box; width: 100%; height: 62px; padding: 0.9rem 1rem; }
+      .lg-logo-chip img { max-height: 30px; max-width: 140px; }
+      .lg-logo-chip.chip-eci img { max-height: 24px; }
+      .lg-logo-chip .wm-eci { font-size: 1rem; }
+      .lg-logo-chip.chip-erpnext .wm { font-size: 1rem; }
+      .lg-logo-chip .chip-tag { display: none; }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .lg-packet { animation: none; opacity: 0; }
       .lg-pillar, .lg-node-icon, .lg-logo-chip { transition: none; }
@@ -233,7 +263,7 @@
 <body>
   <a href="#main" class="skip-link">Saltar al contenido principal</a>
 <nav class="main-nav">
-    <a href="/" class="nav-logo"><img src="/img/brand/logistics-symbol.svg" class="logo-ink" width="34" height="34" alt=""><img src="/img/brand/logistics-symbol-light.svg" class="logo-blue" width="34" height="34" alt="">DaybyDay<span class="logistics-badge">Logistics</span></a>
+    <a href="/" class="nav-logo"><img src="/img/brand/logistics-symbol-sm.svg" class="logo-ink" width="34" height="34" alt=""><img src="/img/brand/logistics-symbol-sm-light.svg" class="logo-blue" width="34" height="34" alt="">DaybyDay<span class="logistics-badge">Logistics</span></a>
     <div class="nav-menu">
       <ul class="nav-links">
         <li class="nav-dropdown">
@@ -311,7 +341,7 @@
         <p class="lg-logos-label">Las piezas con las que operamos</p>
         <div class="lg-logo-row">
           <div class="lg-logo-chip" title="Mirakl, software de marketplace"><img src="/img/logistics/mirakl.svg" alt="Mirakl"></div>
-          <div class="lg-logo-chip chip-eci" title="El Corte Inglés, marketplace"><img src="/img/logistics/eci.svg" alt="El Corte Inglés"></div>
+          <div class="lg-logo-chip chip-eci" title="El Corte Inglés, marketplace"><img src="/img/logistics/eci-mark.svg" alt=""><span class="wm-eci">El Corte Inglés</span></div>
           <div class="lg-logo-chip" title="OneTime, partner de transporte"><img src="/img/logistics/onetime.svg" alt="OneTime"></div>
           <div class="lg-logo-chip chip-erpnext" title="ERPNext, el ERP"><img src="/img/logistics/erpnext.svg" alt="ERPNext" style="max-height:30px;"><span class="wm">ERPNext</span></div>
           <div class="lg-logo-chip" title="Garett, cliente"><img src="/img/logistics/garett.png" alt="Garett" class="garett-logo"><span class="chip-tag">cliente</span></div>

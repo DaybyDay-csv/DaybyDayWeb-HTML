@@ -38,6 +38,35 @@
     h1, h2 { text-wrap: balance; }
     .cta-primary:active, .cta-secondary:active, .btn-sketch:active, .nav-cta:active { transform: scale(0.97); }
     button:disabled, [aria-disabled="true"] { opacity: 0.5; cursor: not-allowed; }
+    /* Segunda línea de negocio en el hero: fulfillment. Discreta, con el sistema de papel. */
+    .hero-logistics {
+      display: inline-flex; align-items: center; gap: 0.85rem;
+      margin-top: 1.75rem; padding: 0.85rem 1.1rem;
+      border: 1px solid var(--border-hover); border-radius: 8px;
+      text-decoration: none; color: inherit;
+      transition: border-color 160ms ease, transform 140ms ease-out;
+      max-width: 100%;
+    }
+    .hero-logistics:hover { border-color: var(--accent); }
+    .hero-logistics:active { transform: scale(0.985); }
+    .hero-logistics-mark { flex: 0 0 auto; width: 34px; height: 34px; }
+    .hero-logistics-text { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
+    .hero-logistics-name {
+      font-weight: 700; font-size: 0.95rem; letter-spacing: -0.01em; color: var(--text-primary);
+    }
+    .hero-logistics-desc {
+      font-family: var(--font-human); font-style: italic; font-size: 0.92rem; color: var(--text-muted);
+      overflow-wrap: break-word;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-logistics, .hero-logistics:hover { transition: none; transform: none; }
+    }
+    @media (max-width: 560px) {
+      .hero-logistics { align-items: flex-start; padding: 0.8rem 0.95rem; }
+      .hero-logistics-mark { width: 30px; height: 30px; }
+      .hero-logistics-name { font-size: 0.9rem; }
+      .hero-logistics-desc { font-size: 0.87rem; }
+    }
     .origin-block {
       max-width: 720px;
       margin: 0;
@@ -197,6 +226,13 @@
             <a href="/contacto.html" class="cta-primary">Pedir auditoría<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             <a href="/como-trabajamos.html" class="btn-sketch sketch-hover">Cómo trabajamos<svg class="sketch-circle" viewBox="0 0 200 64" preserveAspectRatio="none" aria-hidden="true"><path pathLength="100" d="M100,6 C156,3 193,14 192,31 C191,49 152,59 97,58 C43,57 8,50 8,31 C8,15 34,8 88,7 C142,6 178,14 186,26"/></svg></a>
           </div>
+          <a class="hero-logistics" href="/logistics">
+            <img class="hero-logistics-mark logo-ink" src="/img/brand/logistics-symbol-sm.svg" alt="" aria-hidden="true"><img class="hero-logistics-mark logo-blue" src="/img/brand/logistics-symbol-sm-light.svg" alt="" aria-hidden="true">
+            <span class="hero-logistics-text">
+              <span class="hero-logistics-name">DaybyDay Logistics</span>
+              <span class="hero-logistics-desc">Si vendes en marketplaces, hacemos el fulfillment desde nuestra nave</span>
+            </span>
+          </a>
           <span class="hand-note" aria-hidden="true" style="display:inline-block;margin-top:1.4rem;">la caja manda, no el dashboard ↓</span>
         </div>
         <div class="hero-art" aria-hidden="true">
