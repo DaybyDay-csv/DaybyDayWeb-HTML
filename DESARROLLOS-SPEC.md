@@ -3,9 +3,9 @@
 Patrón visual: igual que /casos/ (filas gigante McCann en el índice, narrativa 01-04 en cada proyecto, parte de caja con lo verificable). Diferencia clave: cada proyecto ENLAZA a la web viva del cliente (botón/badge "Ver la web →" con URL externa + target=_blank rel=noopener). Honestidad ante todo: donde el build no fue de DayByDay, se dice.
 
 ## Índice /desarrollos/index.html
-- H1: "Desarrollos web." (serif) + sub mono: "Siete webs en producción, construidas o puestas en marcha por DaybyDay. Cada proyecto enlaza a la web viva."
+- H1: "Desarrollos web." (serif) + sub mono: "Ocho webs en producción, construidas o puestas en marcha por DaybyDay. Cada proyecto enlaza a la web viva."
 - Filas gigante (estilo casos/index): logo/wordmark + NOMBRE DE PROYECTO en serif + cliente/sector en mono + badge externo "douf.es →" en mono azul.
-- Orden: Douf, Cartri, Garett, Evolut Fitkid, Kueba, content.fuel, Intermex Group.
+- Orden: Douf, Cartri, Garett, Evolut Fitkid, Kueba, content.fuel, Intermex Group, Danylo Dolgov (wordmark de texto: sin logo elegido aún, no se usa una propuesta no aprobada).
 - Al final: línea cruzada: "¿Buscas los casos de growth? → /casos/"
 
 ## Los 5 proyectos (copy listo)
@@ -73,3 +73,12 @@ Patrón visual: igual que /casos/ (filas gigante McCann en el índice, narrativa
 - casos/index.html: al final, línea cruzada → /desarrollos/ ("¿Buscas los desarrollos web? Cinco webs en producción →").
 - desarrollos/index.html: línea cruzada → /casos/.
 - NO tocar el nav global (no cabe más; el índice se descubre desde home y desde casos).
+
+### 8. desarrollos/danylo.html · "El portfolio que se gestiona solo." — DANYLO DOLGOV (danylodolgov.com)
+- Eyebrow: CLIENTE · FILMMAKER DE LUJO · EN PRODUCCIÓN (13-nov-2026)
+- 01 La situación: "Danylo graba para el sector lujo: yates, villas, coches, eventos privados. Su material era lo mejor que tenía — y su portfolio lo enseñaba a tiro pequeño, con márgenes, en listas que no sostenían el nivel de lo que se ve dentro. Y cada proyecto nuevo pasaba por mí: añadir uno era un despliegue, no una subida."
+- 02 El objetivo: "Que el material se viera como lo ve su cliente final: a pantalla completa, sin adornos. Y que Danylo publicara solo — sin depender de nadie, ni de mí."
+- 03 Qué construimos: "Rebuild con referencias Preymaker/Sturge Toth (reel donde el título entra con el scroll y lo corta el siguiente; inercia medida; transiciones que respetan el «reducir movimiento»; vídeo por dispositivo). Catálogo en Supabase + panel propio: añade proyectos, sube material, edita y reordena — se ve al instante. Drive→web en ~2 min con textos por visión. Formulario → WhatsApp con el brief redactado (call incluida si la piden)."
+- 04 (parte de caja + GO): "15 proyectos en producción · 39 piezas de media · publicar sin despliegues · Drive→web ~2 min · 0 toques míos para añadir un proyecto" + "En producción en Cloudflare Pages: danylodolgov.com. Pendiente en su mesa: la elección de logo."
+- Botón externo: "Ver la web → https://danylodolgov.com"
+- Cifras: todas verificadas del propio proyecto (catálogo Supabase 13-nov).
