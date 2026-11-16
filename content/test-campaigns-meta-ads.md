@@ -2,7 +2,7 @@
 title: "Testar Campañas en Meta Ads: Presupuesto y Plazos"
 h1: "Cómo Testar Nuevas Campañas en Meta Ads: Sistema de Experimentación 2026"
 slug: test-campaigns-meta-ads
-meta_desc: "Te contamos cuánto invertir por test en Meta Ads, cuándo pararlo y cómo leer los datos. Ejemplos reales de campañas gestionadas por nuestro equipo."
+meta_desc: "Cuánto invertir por test en Meta Ads, cuándo pararlo y cómo leer los datos. Con ejemplos reales de campañas que hemos gestionado."
 canonical: "https://www.daybydayconsulting.com/blog/test-campaigns-meta-ads"
 category: "Meta Ads"
 article_date: "2026-05-24"
