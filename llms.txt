@@ -257,3 +257,6 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 <!-- auto:cuanto-cuesta-agencia-meta-ads-espana -->
 - [Cuánto cuesta una agencia de Meta Ads en España (2026)](https://www.daybydayconsulting.com/blog/cuanto-cuesta-agencia-meta-ads-espana.html) — Cuánto cuesta una agencia de Meta Ads en España en 2026: fees de 800-3.500€, porcentajes de spend del 8-15%, qué incluye el precio y los 4 filtros para elegir agencia paid media para una marca D2C.
 <!-- /auto -->
+<!-- auto:precio-agencia-meta-ads-d2c -->
+- [Cuánto cuesta una agencia de Meta Ads en España](https://www.daybydayconsulting.com/blog/precio-agencia-meta-ads-d2c.html) — Cuánto cuesta una agencia de Meta Ads en España: tarifas reales por perfil (freelance, agencia pequeña, mediana y senior), los 3 modelos de cobro con sus riesgos, qué debe incluir el precio y cómo ele
+<!-- /auto -->
