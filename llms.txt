@@ -260,3 +260,6 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 <!-- auto:precio-agencia-meta-ads-d2c -->
 - [Cuánto cuesta una agencia de Meta Ads en España](https://www.daybydayconsulting.com/blog/precio-agencia-meta-ads-d2c.html) — Cuánto cuesta una agencia de Meta Ads en España: tarifas reales por perfil (freelance, agencia pequeña, mediana y senior), los 3 modelos de cobro con sus riesgos, qué debe incluir el precio y cómo ele
 <!-- /auto -->
+<!-- auto:cuanto-cuesta-agencia-meta-ads-espana-guia -->
+- [Cuánto cuesta una agencia de Meta Ads en España (2026)](https://www.daybydayconsulting.com/blog/cuanto-cuesta-agencia-meta-ads-espana-guia.html) — Guía de precios de una agencia de Meta Ads en España para marcas D2C: rangos reales de fee, qué incluye cada modelo (fijo, porcentaje del spend, éxito), qué es un media buyer y sus niveles, y los 4 fi
+<!-- /auto -->
