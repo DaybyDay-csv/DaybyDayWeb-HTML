@@ -263,3 +263,6 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 <!-- auto:cuanto-cuesta-agencia-meta-ads-espana-guia -->
 - [Cuánto cuesta una agencia de Meta Ads en España (2026)](https://www.daybydayconsulting.com/blog/cuanto-cuesta-agencia-meta-ads-espana-guia.html) — Guía de precios de una agencia de Meta Ads en España para marcas D2C: rangos reales de fee, qué incluye cada modelo (fijo, porcentaje del spend, éxito), qué es un media buyer y sus niveles, y los 4 fi
 <!-- /auto -->
+<!-- auto:vender-joyeria-online-2026 -->
+- [Cómo vender joyería online en 2026: guía del fundador](https://www.daybydayconsulting.com/blog/vender-joyeria-online-2026.html) — Guía para vender joyería online en 2026: qué canal priorizar (Meta primero, Google y TikTok después), qué margen de contribución exigir (55-70%), con qué presupuesto empezar y los 4 filtros para decid
+<!-- /auto -->
