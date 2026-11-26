@@ -281,3 +281,6 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 <!-- auto:retargeting-perfumeria-del-carrito-al-recuerdo -->
 - [Retargeting de perfumería: del carrito al recuerdo](https://www.daybydayconsulting.com/blog/retargeting-perfumeria-del-carrito-al-recuerdo.html) — Retargeting perfumería: guía operativa para pasar del carrito abandonado al recuerdo de marca. Los 5 estímulos del recuerdo, ventanas y frecuencias, caso real y plan de 30 minutos.
 <!-- /auto -->
+<!-- auto:ugc-beauty-ads-videos-semana -->
+- [UGC para devices: cuántos vídeos por semana necesitas](https://www.daybydayconsulting.com/blog/ugc-beauty-ads-videos-semana.html) — Cuántos vídeos UGC por semana necesita una marca de beauty devices para escalar sus ads: mínimo operativo de 3-5 vídeos semanales repartidos en 2-3 ángulos, regla de 1 vídeo por cada 1.000€ de spend s
+<!-- /auto -->
