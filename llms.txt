@@ -269,3 +269,6 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 <!-- auto:agencia-meta-ads-joyeria -->
 - [Agencia Meta Ads para joyerías: 5 preguntas antes de firmar](https://www.daybydayconsulting.com/blog/agencia-meta-ads-joyeria.html) — Agencia Meta Ads para joyerías: los 5 filtros antes de firmar contrato. Por qué el ticket alto y el ciclo de consideración largo rompen el playbook estándar de eCommerce, qué métricas debe reportar la
 <!-- /auto -->
+<!-- auto:crecimiento-perfumeria-email -->
+- [Cómo una marca de fragancias pasa de 200K a 1M con email](https://www.daybydayconsulting.com/blog/crecimiento-perfumeria-email.html) — Cómo una marca de fragancias pasa de 200K a 1M con email: los 4 flujos imprescindibles, la recompra temporalizada según el ciclo de consumo del perfume, el LTV por cohorte como brújula y la secuencia 
+<!-- /auto -->
