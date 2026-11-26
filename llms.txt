@@ -266,3 +266,6 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 <!-- auto:vender-joyeria-online-2026 -->
 - [Cómo vender joyería online en 2026: guía del fundador](https://www.daybydayconsulting.com/blog/vender-joyeria-online-2026.html) — Guía para vender joyería online en 2026: qué canal priorizar (Meta primero, Google y TikTok después), qué margen de contribución exigir (55-70%), con qué presupuesto empezar y los 4 filtros para decid
 <!-- /auto -->
+<!-- auto:agencia-meta-ads-joyeria -->
+- [Agencia Meta Ads para joyerías: 5 preguntas antes de firmar](https://www.daybydayconsulting.com/blog/agencia-meta-ads-joyeria.html) — Agencia Meta Ads para joyerías: los 5 filtros antes de firmar contrato. Por qué el ticket alto y el ciclo de consideración largo rompen el playbook estándar de eCommerce, qué métricas debe reportar la
+<!-- /auto -->
