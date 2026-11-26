@@ -278,3 +278,6 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 <!-- auto:agencia-meta-ads-clinicas -->
 - [Agencia Meta Ads para clínicas: 6 dominios clave](https://www.daybydayconsulting.com/blog/agencia-meta-ads-clinicas.html) — Qué debe dominar una agencia de Meta Ads para clínicas: compliance sanitario en creatividades, funnel de consulta (no de carrito), medicación de CAC real por tratamiento, creatividades que responden d
 <!-- /auto -->
+<!-- auto:retargeting-perfumeria-del-carrito-al-recuerdo -->
+- [Retargeting de perfumería: del carrito al recuerdo](https://www.daybydayconsulting.com/blog/retargeting-perfumeria-del-carrito-al-recuerdo.html) — Retargeting perfumería: guía operativa para pasar del carrito abandonado al recuerdo de marca. Los 5 estímulos del recuerdo, ventanas y frecuencias, caso real y plan de 30 minutos.
+<!-- /auto -->
