@@ -272,3 +272,6 @@ No hablamos a: empresas medianas con CMO en plantilla, startups Series A+ con pa
 <!-- auto:crecimiento-perfumeria-email -->
 - [Cómo una marca de fragancias pasa de 200K a 1M con email](https://www.daybydayconsulting.com/blog/crecimiento-perfumeria-email.html) — Cómo una marca de fragancias pasa de 200K a 1M con email: los 4 flujos imprescindibles, la recompra temporalizada según el ciclo de consumo del perfume, el LTV por cohorte como brújula y la secuencia 
 <!-- /auto -->
+<!-- auto:landing-beauty-device-que-convierte -->
+- [Landing de beauty device: los 6 elementos que convierten](https://www.daybydayconsulting.com/blog/landing-beauty-device-que-convierte.html) — Landing de beauty device que convierte: los 6 elementos obligatorios (prueba visual arriba, precio con contexto, prueba social, objeciones respondidas, un solo CTA, velocidad). Con checklist de audito
+<!-- /auto -->
